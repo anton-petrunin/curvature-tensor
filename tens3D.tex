@@ -1,0 +1,3164 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{kusochek}
+\usepackage{eucal}
+\usepackage{xcolor}
+\usepackage{bm}
+
+\begin{document}
+\title{Curvature tensor of smoothable Alexandrov spaces.}
+\author{LP}
+\maketitle
+
+\tableofcontents
+
+\newcommand{\M}{\mathcal M} 
+\newcommand{\A}{\mathcal A} 
+\newcommand{\SMA}{\mathcal{SMA}} 
+\newcommand{\SAA}{\mathcal{SAA}} 
+\newcommand{\ccto}{\stackrel{C^1_{Alex}}{\longrightarrow}}
+\newcommand{\cto}{\stackrel{C}{\longrightarrow}}
+\newcommand{\x}{\mathfrak x}
+\newcommand{\X}{\mathfrak X}
+
+\section{Introduction}
+\subsection{Main result and corollaries}
+
+By Alexandrov space we  mean ``finite dimensional Alexandrov space with curvature bounded   below''. 
+By Riemannian manifold we  mean complete Riemannian manifold. 
+
+We consider here an important class of 
+ Alexandrov spaces, namely, limits of Riemannian manifolds. We call such spaces smoothable:
+\begin{rdef}{Definition} An $m$-dimensional Alexandrov space $A$ is called \emph{smoothable}
+if it can be presented as a Gromov--Hausdorff limit by a non-collapsing sequence of Riemannian manifolds $M_n$ with $\sec M_n\ge\kappa$ for some fixed $\kappa\in\RR$ (here, $\sec$ denotes sectional curvature).
+
+
+
+Given a smoothable Alexandrov space $A$,
+a sequence of Riemannian manifolds $M_n$ as above
+together with a sequence of approximations $a_n\:M_n\to A$
+will be called \emph{smoothing} of $A$
+(briefly $M_n\smooths{} A$, or $M_n\smooths{a_n} A$).
+\end{rdef}
+
+\begin{rdef}{Remarks}
+\begin{itemize}
+\item
+It follows from Perelman stability theorem (see \cite{PerStab}, \cite{KapStab})
+that for sufficiently large $n$  we can take approximations
+to be homeomorphisms $a_n^{hom}: M_n\to A$.
+\item
+In particular this implies that smoothable Alexanrdov space is a complete
+metric manifold without boundary.
+
+\end{itemize}
+\end{rdef}
+
+In this paper we introduce a notion of a curvature tensor for 
+smoothable Alexandrov spaces, our main result is \ref{main}.
+However
+the invariant description of 
+a curvature as a
+ "measure valued tensor"
+ requires a number of technical definitions
+( in particular we need 
+ an analog of tensor calculus for Alexandrov spaces).
+In this section we formulate the main
+result in a different way, using the following curvature description:
+
+\begin{rdef}{Definition}
+Let $M$ be an $m$-dimensional
+manifold. For
+a point $p\in M$ and vectors
+$v_1,\dots, v_{m-2}\in T_pM$
+we define a
+\emph{co-sectional curvature} 
+by the formula
+$$K^M(v_1\wedge\dots\wedge v_{m-2})=|v_1\wedge\dots\wedge v_{m-2}|^2\cdot K_\sigma,$$
+where
+$K_\sigma$ is the sectional curvature of $M$ at $p$ on
+the plane orthogonal to 
+$v_1,\dots, v_{m-2}$.
+
+\end{rdef}
+We need
+an analog of $C^1$-convergent sequence
+of functions
+for Alexandrov spaces -
+Alexandrov smooth
+(?) test sequence of functions (see Definition~\ref{}).
+
+\begin{thm}{Main theorem - light edition}
+Let  $A$  be a smoothable Alexandrov space with homeomorphism
+ approximations
+$M_n\smooths{a_n^{hom}} A$. Let
+ $f^1_n\to f^1,\dots,f^{m-2}_n\to f^{m-2}$
+ be arbitrary
+ $(m-2)$-collection of
+ test sequences. 
+ %We associate with this collection a sequence of functions $k_n: M_n\to \R$ defined by
+ %$$k_n=|\nabla f^1\wedge\dots\wedge\nabla f^{m-2}_n|^2\cdot  K^{\nabla f^1\wedge\dots\wedge\nabla f^{m-2}_n}({M_n})$$
+Then \linebreak
+$a_n^{hom}\# K^{M_n}({\nabla f^1_n\wedge\dots\wedge\nabla f^{m-2}_n})$ weakly converges to some measure $k$ on $A$ (here $\#$ is a push forward of measures).
+
+\end{thm}
+
+
+
+\medskip
+
+
+Let us state some corollaries of the main theorem \ref{main}.
+
+In case when the limit space is a compact Riemannian mainfold the situation is simpler,
+as one can see from the following formulation.
+
+\begin{thm}{Corollary}{\bf ?!!!AP}
+Assume $M_n\smooths{} M$ and $M=(M,g)$ is a compact Riemannian manifold.
+Then for all large $n$,
+one can choose diffeomorphisms ({\bf ?!!!}) $f_n\:M\to M_n$,
+so that the Riemannian metric $g_n$ induced by $f_n$ on $M$ converges to $g$.
+Moreоver, given smooth vector fields $X,Y,Z,T$ on $M$, the functions $g_n(R_n(X,Y)Z,T)$ weakly converge to $g(R(X,Y)Z,T)$.
+\end{thm}
+In particular,
+if $M$ is a Riemannian manifold,
+$M_n\smooths{} M$,
+and for each $n$ the curvature tensor at each point of $M_n$
+belong to a convex $\op{SO}(m)$-symmetric set $Q$ of curvature tensors
+then curvature tensor of $M$ belongs to $Q$ pointwise.
+(For example, one could take $Q$ to be the set of positive curvature operators.)
+
+\begin{thm}{Corollary}\label{CorSc}
+
+ Let we have smoothing via homeomorphisms $M_n\smooths{a_n^{hom}} A$.
+Then $a_n^{hom}\#\Sc_{M_n}$ weakly converge to some measure $\mu$ on $A$.
+(Here, $\Sc$ denotes scalar curvature
+and $\#$ stays for pushforward of measures.)
+\end{thm}
+\begin{rdef}{ Remark}
+
+
+
+Note, that as it follows from Theorem~\ref{scPet} ( \cite{petrunin-SC}),
+one can always pass to a subsequence of $M_n$ to make $a_n^{hom}\#\Sc_{M_n}$ converge.
+Thus, the point is that the limit does not depend on the sequence.
+In particular, one can define the scalar curvature of smoothable Alexandrov space as the measure $\mu$ above and this definition does not depend on the choice of smoothing.
+\end{rdef}
+\begin{thm}{Corollary}\label{CorUniform}
+Given $\kappa\in\RR$
+and $D,v,\eps>0$,
+there is $\delta=\delta(\kappa,D,v,\eps)>0$ such that
+if $M$ and $M'$ be two Riemannian manifolds such that
+\begin{enumerate}
+\item $\sec M$, $\sec M'\ge \kappa$  ,
+\item $\vol M$, $\vol M'>v$,
+\item $\diam M$, $\diam M'\le D$
+\item $\GHdist(M,M')<\delta$
+(Here $\GHdist$ stays for Gromov--Hausdorff distance.)
+\end{enumerate}
+then
+$$\l|\int\limits_{M}\Sc_M-\int\limits_{M'}\Sc_{M'}\r|<\eps.$$
+
+\end{thm}
+
+Indeed,  
+the set of manifolds $M$ with
+$\sec M\ge \kappa$ and  $\diam M\le D$
+ is pre-compact w.r.t. Gromov--Hausdorff metric and any 
+ Cauchy sequence converges without collapse to some 
+ Alexandrov space, due to the lower bound on the volumes.
+Then \ref{CorUniform} follows from \ref{CorSc}
+because of uniform continuity  of continuous function on compactum.
+
+
+
+
+\subsection{Localization. Notation for classes of convergent spaces}
+Our main theorem is  a local result
+and for our proof
+ we need formally more strong, local version of our theorem
+ (when reducing higher dimensions to 3 or 2 dimension we deal with level sets of concave
+ function, which have structure of Alexandrov space only locally).
+ Here we describe this local structure. We also
+  introduce uniform notation for classes of Alexandrov spaces with local structure
+ and complete spaces.
+% We can write all our proofs for spaces with lower bound on curvature $\kappa=-1$, so we  define our classes with this curvature bounds.
+ 
+ 
+ 
+ Let $B_r(O)\subset \R^m$ denotes a ball of radius $r$
+ and center at $O$.
+ 
+ 
+ 
+ Let 
+$\rho: B_R(O)\times B_R(O)\to\R_+$ be intrinsic
+locally Alexandrov metric. By locally Alexandrov we mean that  any point
+has a neighborhood such that any triangle with vertexes in this neighborhood
+satisfy 
+Alexandrov comparison with curvature $\ge -1$.
+We call this metric metric {\it an admissible Alexandrov metric.}
+If in addition this
+metric is locally isometric to a Riemannian
+manifold  then we
+call this metric
+an admissible Riemannian metric.
+Suppose that for some $0<r<R/3$
+we have the following.
+Distances between any two points in
+$B_{r}(O)$
+ are realized by  length of
+ shortest paths in
+ $B_{2r}(O)$ and 
+ for all triangles with vertexes  in
+$B_{r}(O)$
+ Alexandrov comparison with curvature $\ge -1$
+  hold. We call this metric
+{\it an admissible Alexandrov metric on  $B_R(O)$ with a core $B_r(O)$.}
+  If in addition this
+metric is locally isometric to Riemannian
+manifold with sectional curvature $\ge -1$, then we
+call this metric
+{\it an admissible Riemannian metric on  $B_R(O)$ with a core $B_r(O)$.}
+
+
+We say that a metric space $X$
+is {\it an admissible Alexandrov domain} or {\it an admissible  Riemannian domain} correspondingly
+ if there exists an admissible Alexandrov  or an admissible Riemannian metric    $\rho$ on $B_R(O)$
+ with a core $B_r(O)$ such  that
+$X$
+is isometric to
+$(B_{r}(O),\rho)$.
+
+We denote by
+$\A$ the union of class of Alexandrov spaces with curvature $\ge -1$
+and a class of admissible Alexandrov domains.
+
+We denote by
+$\M$ the union of
+a class of Riemannian manifolds
+with sectional curvature $\ge -1$
+and a class of  admissible Riemannian domains.
+
+
+Let $\{A_n\}_{n=1}^\infty$, $A$ be metric spaces and $a_n:A_n\to A$
+homeomorphisms. We will write
+{$\boldsymbol {(A_n, A,  a_n)\in\mathcal{SAA}}$} in one of the following two cases:
+
+1) 
+$A_n$ and $A$  are
+admissible Alexandrov domains such that for some 
+$R>r>0$ the following holds. 
+Each of these spaces can be presented as  
+a core $B_r(O)$ of some admissible Alexandrov metric
+ on $B_R(0)$ and these admissible Alexandrov metrics
+ converge. Homeomorphisms
+ $a_n$ come from identification  $A_n$ and $A$ with
+$B_{r}(0)$. 
+   
+2) $A_n$ and $A$ are Alexandrov spaces with curvature bounded below by
+$-1$ and $A_n\GHto A$ via homeomorphisms
+$a_n: A_n\to A$.
+
+%Let $(M_n, A,  a_n)\in\mathcal{SAA}$ and all $M_n$ are locally isometric
+%to Riemannian manifold with sectional curvature $\ge -1$. In this case we write
+%$(M_n, A,  a_n)\in\mathcal{SMA}$
+
+Let $\{M_n\}_{n=1}^\infty$, $A$ be metric spaces and $a_n:M_n\to A$
+homeomorphisms. We will write
+$\boldsymbol {(M_n, A,  a_n)\in\mathcal{SMA}}$ in one of the following two cases:
+
+1) 
+$M_n$ are admissible Riemannian domain and $A$  is
+admissible Alexandrov domain such that for some 
+$R>r>0$ the following holds. 
+Each of $M_n$ can be presented as  
+a core $B_r(O)$ of some admissible Riemannian metric
+ on $B_R(0)$
+and $A$ as
+a core $B_r(O)$ of some admissible Alexandrov metric
+ on $B_R(0)$ and these admissible Riemannian metrics
+ converge to this admissible Alexandrov metric. Homeomorphisms
+ $a_n$ come from identification  $A_n$ and $A$ with
+$B_{r}(0)$. 
+   
+   2) $M_n$
+are complete Riemannian manifolds with sectional curvature $\ge -1$,
+ $A$ is Alexandrov spaces with curvature bounded below by
+$-1$ and $M_n\GHto A$ via homeomorphisms
+$a_n: M_n\to A$.
+   
+
+
+\subsection{ Background }
+{\bf Analysis on Alexandrov spaces}
+
+Our proof relies on
+Perelman theory of
+  $DC$ functions on Alexandrov spaces (\cite{PerDC}).
+ There is a $DC$ chart in a neighborhood 
+ of any regular point in Alexandrov space,
+metric tensor 
+is of bounded variation
+in this  chart and
+Cristophel symbols are signed Radon measure.
+We modify this theory slightly to adjust
+it for sequences of spaces. (section~\ref{sec:DC}, section~\ref{sec:metr-con}).
+ 
+
+{\bf Curvature and measure}
+
+It is known that curvature of $2$-dimensional Alexandrov space
+is a signed Radon measure and for any smoothing
+by Riemanian manifolds
+the intrinsic curvature of the sequence 
+weakly converges to this measure (see for example Reshetnyak).
+This is exactly the statement of our
+ Main theorem in dimension $2$.
+ Our proof of the Main theorem for higher dimensions is based on  
+this statement.
+
+The second important thing we use is 
+the uniform boundness of curvature  for manifolds provided by
+the following Petrunin's theorem (\cite{petrunin-SC}) and
+the corollary. This implies
+that any sequence of "curvature measures" contains 
+a weakly converging subsequence, so
+to prove a weak convergence of such a sequence
+it is sufficient to prove that any two partial limits coinside.
+
+\begin{thm}{Theorem}\label{scPet}
+Let $M$ be a complete Riemannian m-manifold with sectional
+curvature $ \ge -1$. Then for any $p \in M$, $r<1$
+$$\int_{B_r(p)} \Sc\le Const(m)r^{m-2},$$
+where $B_r(p)$ denotes the ball of radius $r$ centered at $p\in M$ and $\Sc$ is a scalar curvature
+of M.
+\end{thm}
+
+\begin{thm}{Remark}\label{rem:scPet}
+The theorem remains true if we replace a complete Riemannian 
+manifold by local Riemanian manifold $M$ and $r<\min\{diam M, 1\}$.
+The proof in
+\cite{petrunin-SC}
+works also for this case.
+
+\end{thm}
+
+The straightforward consequence is the following:
+
+\begin{thm}{Corollary}\label{Kbound}
+Let $M$ be a complete Riemannian m-manifold with sectional
+curvature $K_{\sigma} \ge -1$ or
+local Riemanian manifold  and $r<\min\{diam M, 1\}$.
+We denote $K_{max}(x)=\sup_{\sigma\subset T_xM} |K_\sigma|$
+for any point $x\in M$. Then for any $p\in M$,
+
+$$\int_{B_r(p)} K_{max}\le Const(m)r^{m-2}.$$
+
+
+\end{thm}
+
+
+\section{Functions, tensors and convergence for Alexandrov spaces}
+
+\medskip
+In this section we give definitions necessary for the formulation 
+of the main theorem.
+
+%Everywhere in this section $M_n, A, a_n)$
+
+%$A_n\GHto A$ is a converging sequence of Alexandrov spaces
+%with a fixed approximation sequence $a_n:A_n\to A$. 
+
+
+%Let $A$ be a finite dimensional Alexandrov space with curvature bounded below.
+ 
+\subsection{Continuous functions and the dual space of measures}
+
+Let us denote by $C(A)$  the space of continuous functions on $A$
+with a compact support and supplied by a uniform norm.
+We denote by $C^*(A)$ 
+the space of continuous linear functionals on $C(A)$   with weak topology.
+It is known that this space coincide with a
+space of signed Radon measures.
+We call elements of $C^*(A)$ just \emph{measures}.
+We  denote by $<h|f>$ the value of $h\in C^*(A)$ on $f\in C(A)$.
+\emph{Weak convergence} of measures $m_n\in C^*(A)$ 
+to $m\in C^*(A)$ (we denote it $m_n  \rightharpoonup m$) means that for
+any
+$f\in C(A)$ the sequence $<m_n|f>\to <m|f>$.
+
+For a given
+$(A_n, A, a_n)\in \SAA$ 
+ %approximation  sequence $a_n:A_n\to A$
+ we define convergence of functions
+ and measures as follows.
+We say that  a sequence $f_n\in C(A_n)$
+uniformly converges to $f\in C(A)$ and write
+$f_n\stackrel{C}{\rightarrow}f$
+if $| f_n   \circ a_n^{-1}-f|\to 0$.
+We say that  a sequence
+of measures 
+$m_n\in C^*(A_n)$ weakly
+converges to $m\in C^*(A)$
+$\rightharpoonup$
+if for pushforward measures $m_n\circ a_n^{-1}\rightharpoonup m$.
+
+
+
+
+%We will denote by $<h|f>$ the value of $h\in C^*(A)$ on $f\in C(A)$.
+
+\subsection{ Smooth structure}
+Let $A\in \A$
+and $(M_n, A, a_n)\in\SMA$.
+
+
+Let us fix small $r>0$
+$p\in A$
+and define smoothed distance function as $$d=\widetilde{dist}_{B_r(p)} =\oint_{B_r(p)} \dist_{x}dx.$$ 
+ 
+ We can define lifting of this function if fix
+  some lifting sequence of points $M_n\ni p_n\to p\in A$ by the same formula:
+$$d_n=\widetilde{dist}_{B_r(p_n)}$$
+
+Now we define vector fields convergent as good as gradients of smoothed distance
+functions. We say that a sequence of vector fields
+$v_n$ on $M_n$ \emph{converges} if for
+every point  $x \in A$, any smoothed distance function
+$ d= \widetilde{dist}_{B_r(p_n)}$ and its liftings
+$d_n = \widetilde{dist}_{B_r(p_n)}$ there is a neighborhood $U \ni x$ and a
+ constant $c > 0$, so that for
+every sequence of points $M_n\ni  y_n\to y\in U$
+$$\limsup_{n\to\infty} <\nabla d_n,v_n>(y_n)-
+ \liminf_{n\to\infty} <\nabla d_n,v_n>(y_n)\le$$
+ $$c(\limsup_{n\to\infty} |\nabla d_n|(y_n)-
+ \liminf_{n\to\infty} |\nabla d_n|(y_n)).
+ $$
+ 
+ 
+ We say that a sequence of 
+ $C^1$ functions $f_n:M_n\to\R$
+ $C^1$-converges in Alexandrov sence % to $f:A\to\R$
+ and write $f_n\ccto f$
+ if $f_n\cto f$ and
+  the sequence $\nabla f_n$ converges.
+ 
+ 
+ 
+  We say that a function $f:A\to\R$
+ is Alexandrov smooth
+( $f\in C^1_{Aex}$)
+ if there sequence of smooth functions $f_n:M_n\to\R$
+such that
+ $f_n\ccto f$.
+ 
+ In \ref{} we prove that smoothed distance functions itself are
+ Alexandrov smooth.
+ 
+ \begin{thm}{Remark}
+ It is possible to define a notion of a smooth function
+ also for nonsmoothable Alexandrov space, 
+ but it would be technically comlicated while we don't formally need this.
+ It also can be proved that definition doesn't depend on smoothing
+ sequence, we also skip this.
+ In addition all examples of smooth functions we know comes as
+ compositions of smoothed distance function.
+  
+ \end{thm}
+ 
+\subsection{Tensors}
+
+
+\begin{rdef} {Definition}\label{def:mestens}
+Let $A\in \A$.
+A \emph{vector measure } $\mathfrak{v}$  on $A$
+is a continuous linear map
+$\mathfrak{v}\:C^1_{Aex}(A)\to C^*(A)$ which satisfies
+chain rule;
+i.e. for any collection  $f_1,f_2,\dots,f_\kay \in C^1_{Aex}$
+and a smooth function $\phi\:\RR^\kay\to\RR$ we have
+$$\mathfrak{v}(\phi(f_1,f_2,\dots,f_n))
+=
+\sum_{i=1}^n (\partial_i\phi)(f_1,f_2,\dots,f_n)\cdot\mathfrak{v}(f_i)$$
+where $\partial_i$ denotes partial derivatives in $\RR^n$.
+
+Analogousely, we define (contravariant) measure tensor field.
+A \emph{measure tensor } $\mathfrak{t}$ of valence $\kay$ on $A$ is a multilinear map of $\kay$ variables in $C^1_{Aex}(A)$ with values in $C^*( A)$ which satisfies chain rule in each of the arguments.
+
+
+\end{rdef}
+
+
+
+
+
+
+
+
+
+\begin{rdef} {Definition}
+Assume $\mathfrak{t}_n$ is a sequence of uniformly 
+bounded  measure tensors on $M_n$  and $\mathfrak{t}$ is a
+measure tensor on $A$,
+all of the same valence $\kay$.
+We say that $\mathfrak{t}_n$ weakly conveges to  $\mathfrak{t}$
+(briefly $\mathfrak{t}_n\rightharpoonup\mathfrak{t}$) if for arbitrary $\kay$
+sequences that
+$C^1$-converge in Alexandrov sence
+$f_{i,n}\to f_i, i=1,\dots,\kay$, the measures $\mathfrak{t}_n(f_{1,n},f_{2,n},\dots,f_{\kay,n})$ weakly converge to $\mathfrak{t}(f_{1},f_{2},\dots,f_{\kay})$.
+\end{rdef}
+
+% \begin{thm}{Corollary}\label{limitTensor}
+
+\section {Curvature measure tensor and Main theorem}
+
+The curvature of a smoothable $m$-dimensional Alexandrov space $A$
+will be described using a tensor distribution $\mathfrak{q}=\mathfrak{q}_A$ of valence $2\cdot(m-2)$.
+Our Main theorem claims the weak convergence
+of this tensors if we have a smoothing $M_n\GHto A$.
+Let us start with a two dimensional case, 
+in this case the statement of the Main theorem is a well known fact and
+we use it as a base of our proof. 
+
+ \subsection{Two dimensional case}
+
+In particular case, if $m=2$ the valence of $\mathfrak{q}$ is $0$;
+in this case $\mathfrak{q}$ coinsides
+ with the curvature measure --- the stadard way to describe curvature of surfaces, 
+(see, for example \cite{Resh}).
+For a smooth surface a density of this curvature measure w.r.t. the area measure
+is   a Gauss (intrinsic) curvature.
+The statement of our Main theorem in this case, i.e. 
+continuity of these measures under Gromov-Hausdorf convergence
+is also well known.   
+
+
+\subsection{Higher dimensional case}
+\parbf{Curvature measure.}
+
+For an $m$-dimensional Riemannian manifold $M$
+its curvature % $\mathfrak{q}_M$
+ is a smooth tensor field.
+It can be described using the field of curvature operator
+ $\Rm_M\:(\bigwedge^2\T)M\to (\bigwedge^2\T)M$.
+
+We define curvature measure tensor
+$\mathfrak{q}_M$ (in the sence of Definition~\ref{def:mestens}) as follows.
+ For smooth functions
+ $f_i,g_i:M\to\R, i=1,\dots, m-2$
+with compact supports (i.e. test functions)
+ we define $\mathfrak{q}_M(f_1,f_2,\dots,f_{m-2},g_1,g_2,\dots,g_{m-2})$
+to be  the measure with a density
+ ${q}_M(\nabla f_1,\nabla f_2,\dots,\nabla f_{m-2},\nabla g_1,\nabla g_2,\dots,\nabla g_{m-2}): M\to\R$
+w.r.t. $d Vol$, which is given by:
+\begin{multline*}
+{q}_M(\nabla f_1,\nabla f_2,\dots,\nabla f_{m-2},\nabla g_1,\nabla g_2,\dots,\nabla g_{m-2})
+=
+\\
+= d Vol (
+\Rm_M(*(\nabla f_1\wedge \nabla f_2\wedge\dots\wedge \nabla f_{m-2}))\wedge\nabla g_1\wedge \nabla g_2\wedge\dots\wedge \nabla g_{m-2}),
+\end{multline*}
+where ${*}\:(\bigwedge^{m-2}\T)M\to(\bigwedge^2\T)M$ is the  Hodge star operator.
+
+\begin{rdef}{Remark}\label{K=q}
+Let note that in the case if $f_i=g_i$, for $i=1,\dots,m-2$
+we have:
+% can express $q_M$ using co-sectional curvature: 
+$$q_M(\nabla f_1,\nabla f_2,\dots,f_{m-2},\nabla f_1,\nabla f_2,\dots,\nabla f_{m-2})=K^M(\nabla f_1,\dots,\nabla f_{m-2}).$$
+
+
+Hence
+sectional curvatures of $M$ can  be computed using the tensor
+$\mathfrak{q}_M$.
+Also the density $q_M$ is defined by the sectional curavature,
+because of the symmetry:
+$${q}_M(\nabla f_1,\dots,\nabla f_{m-2},\nabla g_1,\dots,\nabla g_{m-2})=
+{q}_M(\nabla g_1,\dots,\nabla g_{m-2},\dots,\nabla f_1,\dots,\nabla f_{m-2}).$$
+Therefore measure tensor $\mathfrak{q}_M$
+gives an equivalent description of curvature of Riemannian manifold.
+\end{rdef}
+Now we can formulate our main result:
+  
+\begin{thm}{Main theorem}\label{main}
+Let  $A$  be a smoothable Alexandrov space with approximations
+$M_n\smooths{a_n} A$ then $\mathfrak{q}_{M_n}\rightharpoonup \mathfrak{q}_A$ 
+for some measure tensor $\mathfrak{q}_A$ on $A$.
+\end{thm}
+
+\begin{thm}{Main theorem (local)}\label{mainloc}
+Let  $(M_n, A, {a_n})\in\SMA$, then $\mathfrak{q}_{M_n}\rightharpoonup \mathfrak{q}_A$ 
+for some measure tensor $\mathfrak{q}_A$ on $A$.
+\end{thm}
+
+
+\subsection{Definition of curvature tensor for a smoothable Alexandrov space  }
+Main theorem~\ref{main} imply that
+ curvature measure tensor can be
+correctly defined for
+any smoothable Alexandrov space
+as a weak limit of cuvature tensors of any smoothing sequence.
+
+\section{Plan of the proof}
+
+     
+\subsection{Proof}
+ 
+Let $(M_n, A, a_n)\in \SMA$.
+
+
+Because of the symmetry 
+$${q}_M(f_1,f_2,\dots,f_{m-2},g_1,g_2,\dots,g_{m-2})=
+{q}_M(g_1,g_2,\dots,g_{m-2},\dots,f_1,f_2,\dots,f_{m-2})$$  
+it is sufficient
+to  prove of the weak convergence 
+of measures 
+$$\mathfrak{q}_{M_n}(f_{1,n},\dots,f_{m-2,n},f_{1,n},\dots,f_{m-2,n})$$
+with densities
+$$r_n
+=
+{q}_{M_n}(f_{1,n},\dots,f_{m-2,n},f_{1,n},\dots,f_{m-2,n})
+\:M_n\to\RR$$
+for any collection of $m-2$ smooth sequences
+$f_{i,n}\:M_n\to\RR$,  $i\in\{1,2,\dots,m-2\}$,
+such that
+$f_{i,n}\ccto f_i   $.
+
+Recall that
+$${q}_{M_n}(f_{1,n},\dots,f_{m-2,n},f_{1,n},\dots,f_{m-2,n})(x)=
+|\nabla f_{1,n}(x)\wedge\dots \wedge\nabla f_{m-2,n}(x)|^2\cdot K_\sigma, $$
+where $K_\sigma $ is the sectional curvature at $x\in M_n$
+on a plane orthogonal to 
+$\nabla f_{1,n}(x)\wedge\dots \wedge\nabla f_{m-2,n}(x)$.
+Since gradients are bounded the
+Corollary~\ref{Kbound} of Petrunin's theorem (\cite{petrunin-SC})
+implies that
+ for any point $p\in M_n$ and $r<1$,
+$$\int\limits_{B_r(p)}|r_n|\le \Const\cdot r^{m-2}.\eqlbl{sc-pet}$$
+ 
+This boundness of measures
+is the crucial point for our proof.
+Firstly this makes possible
+ passing to a subsequence of $M_n$ such that
+measures with densities $r_n$  converges.
+So, we verify 
+ that if $\mathfrak{r}_1$ and $\mathfrak{r}_2$ are two such partial limits 
+for different subsequences then $\mathfrak{r}_1=\mathfrak{r}_2$.
+To do this
+we partition $A$ into three subsets $A^\circ$, $A'$ and $A''$ and separately prove that $\mathfrak{r}_1$ and $\mathfrak{r}_2$ coincide on each of these subsets (claims~\ref{A''}, \ref{A'} and \ref{A^0}).
+The partition is constructed as follows
+\begin{enumerate}
+\item $A^\circ=\set{x\in A}{\T_x\ \text{is isometric to}\  \RR^m}$ --- the set of regular points.
+\item $A'=\set{x\in A\backslash A^{\circ}}{\T_x\ \text{is isometric to}\  \RR^{m-2}\times \Cone^2}$ the set of singular points of codimension two.
+\item $A''$ --- the rest, i.e. $A''=A\backslash (A^{\circ}\cup A')$ the set of singular points of codimension three and larger.
+\end{enumerate}
+
+
+ Proofs for $A'$ and $A''$ (for exact formulation see \ref{A''}, \ref{A'} and for proofs \ref{sec:cone},
+ \ref{sec:blow}, \ref{sec:codim2}, \ref{sec:codim3})
+ are self-contained and don't differ for local and global theorems and for different dimensions.
+  For the set  $A^\circ$  we use a sort of induction which includes local version of Main
+  theorem (for plan see \ref{sec:A0} and proof \ref{sec:regular}).
+  
+  Passing to partial limits
+ $\mathfrak{r}_1$, $\mathfrak{r}_2$
+is convenient for formulations, but in the prove we don't pass to
+convergent subsequences, but verify weak convergence of
+measures in the sense of definition \ref{deltaconv1}.
+While there is still
+the point in the proof where we strongly rely on uniform boundness 
+of measures: we prove convergence of integrals 
+not for all continuos functions as a test functions, but
+only for
+smooth functions (this works because of Lemma~\ref{smoothmeasure}).   
+
+
+
+
+\subsection{The set $A''$ of  singularities of higher codimension }
+According to \cite[???]{BGP}, the $(m-2)$-hausdorff measure of $A''$ vanishes.
+Thus, from \ref{sc-pet}, we get
+
+\begin{thm}{Claim}\label{A''}
+$\mathfrak{r}_1|_{A''}\equiv\mathfrak{r}_2|_{A''}\equiv0$.
+\end{thm}
+
+\subsection{The set $A'$ of codimension 2 singularities  }
+Consider function $\omega\:A\to\RR$ defined as
+$$\omega(p)=2\cdot\pi\cdot\l(1-\frac{\vol\Sigma_p}{\vol\SS^{m-1}}\r).$$
+Clearly $\omega|_{A^\circ}\equiv0$, further according to \cite[??? and ???]{BGP}, the
+functioin $\omega\:A\to\RR$ is ???-semicontinuous.
+If $p\in A'$, i.e. $\T_p=\RR^{m-2}\times \Cone^2_p$, then the total angle of $\Cone^2_x$ is equla to $2\pi-\omega(x)$.
+
+Given an array of Alexandrov smooth
+sequences $\bm{f}=(f_1,f_2,\dots,f_{m-2})$, and $x\in A''$
+one can consider the restriction of differential $\d_x\bm{f}=(\d_xf_1,\d_xf_2,\dots,\d_xf_{m-2})\:\T_x\to \RR^{m-2}$ to $\RR^{m-2}\times 0\in \RR^m\times\Cone^2_x=\T_x$.
+If this restriction is linear, define $\theta_x(f_1,f_2,\dots,f_{m-2})$ the square of its determinant.
+
+Further, let us denote by $h_\alpha$ the $\alpha$-dimensional Hausdorff measure.
+
+\begin{thm}{Claim}\label{A'}
+Measures
+$\mathfrak{r}_1$ and
+$\mathfrak{r}_2$ are
+ absolutely continuous with respect to
+ $h_{m-2}$ (this follows from \ref{sc-pet}). 
+ Moreover,
+ if we take restriction on $A'$ for measures
+ the density for both
+ $\mathfrak{r}_1$ and
+$\mathfrak{r}_2$ will be the same, namely 
+$ \omega(x)\cdot\theta_x(f_1,f_2,\dots,f_{m-2})$
+ for any point $x\in A'$, i.e. for any subset $X\subset A'$
+ 
+ $$\int_Xd\mathfrak{r}_1=\int_Xd\mathfrak{r}_2=\int_X
+\omega(x)\cdot\theta_x(f_1,f_2,\dots,f_{m-2}) d h_{m-2} $$
+ 
+  
+ %$\mathfrak{r}_1|_{A'}=\mathfrak{r}_2|_{A'}=\omega(x)\cdot\theta_x(f_1,f_2,\dots,f_{m-2})\cdot h_{m-2}|_{A'}$.
+\end{thm}
+
+We first prove this claim in the partial case, $A=\Cone\times\RR^{m-2}$
+(section \ref{sec:cone}); then extend it by rescaling and passage to the limit (section \ref{sec:blow}).
+
+\subsection{The set $A^\circ$  of regular points }\label{sec:A0}
+This is the most difficult case.
+
+We recall that
+$$A^{\circ}=\bigcap_{\delta>0} A^\delta,$$
+where $A^\delta$ denotes the set of $\delta$-strained points of $A$.
+Then to show that
+$\mathfrak{r}_1|_{A^o}\equiv\mathfrak{r}_2|_{A^o}$
+it is enough to show the following
+
+\begin{thm}{Lemma}\label{A^0}
+Let $\nu=|\mathfrak{r}_1-\mathfrak{r}_2|$.
+Then for any $x\in A^\circ$, there is a neighbourhood $U_x\ni x$ such that
+$$\nu({A^\delta\cap U_x})\le \Const\cdot\delta$$
+for some fixed $\Const\in\RR$, independent of $\delta$.
+\end{thm}
+ 
+The proof uses reduction to lower dimensions as follows.
+ We use Main theorem (local) for dimension 2 (which is well known) as a base step.
+ Then we proof  Lemma~\ref{A^0} for dimension 3.
+ Then we obtain Main theorem (local) for dimension 3.
+ Then we reduce general case of Lemma~\ref{A^0} to 
+   the Local theorem for dimension 3. 
+    
+ 
+Let note that the lemma asserts 
+weak $ c\delta$-convergence 
+of measures with densities $r_n$ on $A^\delta\cap U_x$ in the sense
+of definition~\ref{deltaconv2},  but  in the proof
+we don't pass to patial limits and
+verify convergence for smooth function as a test function
+(Lemma~\ref{smoothmeasure}).
+ 
+ 
+
+  Now we sketch the proof of this lemma in dimension 3. 
+  For a given smooth sequence $f_n\to f$
+  we need to prove 
+  weak  $c\delta$-convergence
+of
+$q_n(\nabla f_n, \nabla f_n)dVol_n$ 
+ on ${A^\delta\cap U_x}$. 
+ 
+ For Riemannian manifold $M$
+we  introduce a quadratic
+form Strange curvature:  $Str(w,w)=\Sc\cdot |w|^2-Ric(w,w)$,
+which in dimension 3 completely defines curvature tensor.
+Namely, for 6 vectors $v_i$ in general position we have:
+$$q(w, w)=\sum _{i=1}^{6}\alpha_i(w,w)\Str(v_i,v_i),\eqlbl{R=Str}$$
+where $\alpha_i(w,w)$ depends on scalar products.
+In such a way we reduce the proof of weak  $c\delta$-convergence
+of
+$q_n(\nabla f_n, \nabla f_n)dVol_n$
+to the proof of weak $c\delta$-convergence of 
+$\Str(\nabla g^i_n, \nabla g^i_n)dVol_n$ 
+on
+${A^\delta\cap U_x}$
+curvature for 6 converging sequences $g^i_n\ccto g$
+with gradients $\nabla g^i$ in general position near $p$ .
+ 
+ 
+ So our main technical ingredient is convergence of Strange curvature,
+ let us describe this in more details.
+ 
+ We are deal with a special type of $C^1_{Alex}$-converging sequences 
+  - Nice sequences which are defined locally (see Definition~\ref{def:Nice} ).
+  
+  \begin{thm}{Lemma}\label{Str(v,v)}
+  For any $p\in A^0$ and $v\in T_pA$
+  there is a neighborhood $V_p$ and a Nice sequence 
+  $g_n:a_n^{-1}(V_p)\to\R$, $g:V_p\to\R$,
+    $g_n\ccto g$,
+   such that measures $\Str(\nabla g_n, \nabla g_n)dVol_n$
+  weakly $c\delta$-converges on
+  ${A^\delta\cap V_p}$  and $d_pf$
+  is arbitrary close to $-\<v,\cdot\>$.
+  
+  \end{thm}
+  
+  
+ For the proof of this lemma we use 
+ expression for Strange curvature for Riemannian 
+ manifold,
+namely
+ a Bochner-type formula \ref{Bochner}
+(section~\ref{sec:Bochner}).
+
+To prove convergence of
+integrals in this
+ formula (section \ref{sec:str}) we use
+special chart with common domain for all the sequence and the limit space
+ around a  point $p\in A^0$
+-
+a
+Nice common chart (see definition in section\ref{sec:Nice}).
+This are
+homeomorphism
+$\mathfrak X:U\to\Omega\subset\R^3$
+and diffeomorphisms
+$\mathfrak X_n:U_n\to\Omega\subset\R^3$.
+This common chart is a generalization of Perelman $DC$-chart 
+(\cite{PerDC}) for a given Alexandrov space to the case
+of a given smoothing sequence converging to Alexandrov space.
+This makes possible to apply 
+the technique of
+$DC$ (difference concave) functions in $\R^3$ (sections~\ref{sec:DC}, \ref{sec:metr-con}).
+Here we rely on
+ ( generalized for the case of  sequences)
+ results from
+\cite{PerDC}, which assert that
+a  components of
+metric tensor are $BV$ (bounded variation) in the charts and Cristoffel simbols
+are signed Radon measures.
+
+
+The  other thing we use here
+is the convergence of 
+Gauss curvature in
+$2$-dimensional case
+($2$-dimensional smoothable Alexandrov
+spaces arise as level sets of concave functions.) 
+
+Let note also that error $c\delta$ on $A^\delta$
+ arises only because
+of $c\delta$-convergence of  norms of  gradients of $C^1_{Alex}$-convergent sequences,
+these norms
+appear  when we express $3$-volume  via $2$-volume of level sets.
+
+
+
+ 
+The proof of Lemma~\ref{A^0} for higher dimensions
+relies on the Main theorem (local version) for dimension 3.
+
+\section{Tools}
+\subsection{Bochner formula}
+\label{sec:Bochner}
+Here we rewrite Bochner formula, in such a way that each term has geometric meaning.
+Let $M$ be Riemannian $m$-manifold and $f\:M\to\R$ be a smooth function without critical points on an open domain $\Omega\i M$.
+Assume $\phi\:\Omega\to\R$ be a smooth function with compact support.
+Set $u=\nabla f/|\nabla f|$.
+Let us define $\Int_f(x)$ (or just $Int$) to be scalar curvature of the level set $L_x=f^{-1}(f(x))$ at $x\in L_x\i M$.
+Set
+\begin{enumerate}
+ \item $\kappa_1(x)\le\kappa_2(x)\le\dots\le\kappa_{m-1}(x)$ the principle curvatures of $L_x$ at $x$;
+ \item $H=H(x)=\kappa_1+\kappa_2+\dots+\kappa_{m-1}$ is mean curvature of $L_x$ at $x$
+\item $G=G(x)=2\sum_{i<j}\kappa_i\cdot\kappa_j$ is the extrinsic term
+ in the Gauss formula for $\Int_f(x)$.
+\end{enumerate}
+Then the following formula of Bochner type holds:
+$$\int\limits_\Omega \phi\cdot \Str(u)
+=
+\int\limits_\Omega \l[H\cdot\<u,\nabla\phi\>- \<\nabla\phi,\nabla_u u\> \r]+
+\int\limits_\Omega \phi\cdot \Int(u)\eqlbl{Bochner}$$
+This identity will be refered further as \emph{Bochner formula}.
+%$$\int\limits_\Omega \phi\cdot (G-\Ric(u,u))=
+%\int\limits_\Omega \l[H\cdot\<u,\nabla\phi\>- \<\nabla\phi,\nabla_u u\> \r] $$
+
+\parit{Proof.}
+Let us write Bochner formula for field
+$u$:  {\bf ref??}
+$$D^2u-\nabla^*\nabla u=\Ric(u)$$
+Now let us integrate
+\begin{align*}
+\int\limits_\Omega\phi\cdot\l[\<D u,D u\>-\<D^2 u, u\>\r]
+&=
+\int\limits_\Omega\<\nabla\phi{.}u,D u\>
+=
+\\
+&=
+-\int\limits_\Omega\l[H\cdot\<\nabla\phi,u\>- \<\nabla\phi,\nabla_u u\> \r],
+\end{align*}
+here ``${.}$'' denotes Kliford multipliccation.
+Since $| u|\equiv 1$, we have $\<\nabla_{\nabla\phi}  u, u\>=0$.
+Therefore
+$$\int\limits_\Omega\phi\cdot\l[\<\nabla u,\nabla u\>-\<\nabla^*\nabla u, u\>\r]
+=
+\int\limits_\Omega\<\nabla_{\nabla\phi}  u, u\>=0,$$
+where $\<\nabla u,\nabla u\>=\sum_i\<\nabla_{b_i} u,\nabla_{b_i} u\>$ for an orthonormal basis $\{b_i\}$ ---
+clearly, this expression does not depend on choice of $\{b_i\}$.
+
+Therefore
+\begin{align*}
+\int\limits_\Omega 2\cdot\phi \cdot G
+&=\int\limits_\Omega\phi\cdot(\<D u,D u\>-\<\nabla u,\nabla u\>)
+=
+\\
+&=
+\int\limits_\Omega \phi\cdot \Ric(u,u) -\int H\cdot\l[\<u,\nabla\phi\>- \<\nabla\phi,\nabla_u u\> \r].
+\end{align*}
+
+% {\bf ? coefficient 2 ?}
+
+Then applying Gauss identity $\Int=G+(\Sc-2\Ric(u,u)$
+we obtain
+\ref{Bochner}.
+
+\subsection{ Auxiliary spaces  and functions}
+
+
+\subsubsection{Nice functions}\label{sec:Nice}
+\begin{thm}{Definition}\label{def:Nice}
+
+Let $(M_n, A, a_n)\in \mathcal{SA}$,
+$V\subset A$ be an open set
+and $V_n=(a_n)^{-1}(V)$.
+We say that a sequence
+of smooth functions
+$f_n:V\to\R$ 
+converging $f_n\ccto f:V\to\R$
+is
+\emph{ a Nice sequence}
+if all
+ $f_n$ are uniformly strictly concave . 
+
+\end{thm}
+
+
+\begin{thm}{Definition}
+Let $A\in \A$ and $U\subset A$ be an open set.
+Let
+$ f^1, \dots , f^k:U\to\R$ be a  collection
+ of semiconcave functions.
+ The map
+ $F=(f^1, \dots , f^k):U\to\R^k$ is called \emph{$\varepsilon$-tight} 
+ if
+$$\sup_{x \in, i\neq j}\{ d_xf_i(\nabla_xf_j)\}<-\varepsilon.$$
+\end{thm}
+
+\begin{thm}{Definition}
+Let $(M_n, A, a_n)\in \mathcal{SA}$,
+$V\subset A$ be an open set
+and $V_n=(a_n)^{-1}(V)$.
+A sequence of tight maps
+$F_n=(f_n^1,\dots,f_n^m):V_n\to\R^m$
+is
+\emph{a Nice sequence of tight maps}
+converging to
+$F=(f^1,\dots,f^m)$
+if the following two conditions hold:
+
+1)
+$f_n^i \to f^i$,
+is
+a
+ Nice sequence
+ for all $i\in\{1,\dots, m\}$
+
+2) there exists  a
+Nice sequence 
+$f_n^0\to f^0$ and $\varepsilon_0>0$
+such that
+$f^0, f^1,\dots,f^m$ is
+$\varepsilon_0$-tight collection and 
+$f_n^0, f_n^1,\dots,f_n^m$ are
+$\varepsilon_0$-tight collections for all $n$. 
+
+\end{thm}
+
+
+\begin{thm}{ Proposition}
+Let $(M_n, A, a_n)\in \mathcal{SA}$,
+$V\subset A$ be an open  set
+and $V_n=(a_n)^{-1}(V)$.
+Let $F_n=(f_n^1,\dots,f_n^m):V_n\to\R^m$
+be a Nice   sequence  of tight maps
+converging
+to $F=(f^1,\dots,f^m)$.
+Then for any $p\in V$ there is an open neighborhood $V^p\subset V $
+such that
+$F|_{V^p}$ is a bi-Lipschitz  homeomorhism onto the image,
+all  $F_n|_{(a_n)^{-1}(V^p)}$ are diffeomorhisms with uniform on $n$ bi-Lipschitz 
+constant.
+
+\end{thm}
+
+For the proof see \cite{petrunin-SC}.
+
+It follows that in notation of proposition for any open $\Omega$ such that $\overline\Omega\subset F(V_p)$
+we have ${F_n((a_n)^{-1}(V^p))}\supset \Omega $ for large $n$
+and the sequence of homeomorhisms
+$$\widetilde{a_n}=F_n\circ F^{-1}|_{F_n^{-1}(\Omega)}:F_n^{-1}(\Omega)\to F^{-1}(\Omega)$$
+is an approximation of 
+$F^{-1}(\Omega)$
+equivalent to the initial approximation $a_n$.
+
+In this case we call a sequence of
+diffeomorphisms $F_n|_{F_n^{-1}(\Omega)}\to\Omega$
+together with a homeomorphism $F|_{F^{-1}(\Omega)}\to\Omega$
+\emph{a Nice common chart sequence}.
+
+ Further we 
+ use the following notation for domain and functions in
+ Nice common chart sequences 
+ 
+$$ \mathfrak X=(\mathfrak x^1,\dots,\mathfrak x^m): U\to\Omega,$$
+$$\mathfrak X_n=(\mathfrak x^1_n,\dots,\mathfrak x_n^m):U_n\to\Omega,$$
+
+   (i.e.  $U=F^{-1}(\Omega), U_n=F_n^{-1}(\Omega),
+ \mathfrak X=F|_{F^{-1}(\Omega)}, \mathfrak X_n=F_n|_{F_n^{-1}(\Omega)}$).
+
+
+\subsubsection{Existence of Nice sequences and Nice common chart sequences }
+
+  
+ \begin{thm}{Lemma}
+ Let $(M_n, A, a_n)\in \SMA $.
+ For any
+ $p\in A$, $v\in T_pA$,
+ $\varepsilon>0$
+ there is a neighborhood $U\ni p$
+ and a
+ Nice sequence
+ $f_n: a_n^{-1}(U)\to \R$
+ $f_n\ccto f$
+such that $d_pf$  is arbitrary close to $ <v,\cdot>$.
+ \end{thm}
+ 
+ The proof will be in Appendix.
+ 
+
+\begin{thm}{Lemma}\label{existenseTight}
+Let $(M_n, A, a_n)\in \SMA $.
+ Let
+ $p\in A$ and $v_0, v_1,\dots,v_m\in T_pA$
+ be such that $\angle(v_i, v_j)>\pi/2+\varepsilon$ for $i\neq j$ and some
+ $\varepsilon>0$. Then
+ there exists
+ a Nice common chart sequence
+$F_n=(f_n^1,\dots,f_n^m):U_n\to\R^m$
+with a limit chart
+ $F=(f^1,\dots,f^m):U\to\R^m$,
+ such that 
+ $U\ni p$
+and differentials $d_p f^i$ for $i=1, 2,\dots, m$
+ can be made arbitrary close to $-\<v_i,\cdot\>$.
+ 
+ 
+ \end{thm}
+ 
+ 
+ The proof will be in Appendix.
+ 
+ \subsubsection{     Main property of a NICE common chart.                          }\label{Cc}
+
+
+
+
+We use
+Nice coordinate chart sequence when
+we prove convergence of Strange curvature
+in a neighborhood of a regular point (section~\ref{sec:str}) .
+The only thing that we use formally after 
+passing to coordinate expression is the following fact about 
+metric tensors in coordinate.
+Components of metric tensors $g_{ij}^n$
+in common Nice coordinates
+are of uniformly bounded variation ($BV$) and converges  point-wise
+to
+limit component of metric tensor $g_{ij}$  outside
+image of singularity  set (see Appendix, Theorem~\ref{metricBV}). 
+This is a modification for a smoothing sequence of the G. Perelman
+result, that components of metric tensor of Alexandrov space are of bounded
+variation in $DC$-chart (see \cite{PerDC}).
+Our computation in charts rely only on this fact  and a theory of
+$BV$-functions in $\R^n$ (see Appendix) .
+
+ 
+\section{Proof of Lemma~\ref{A^0} for dimension 3}\label{sec:regular}
+\subsection{Convergence of Strange curvature for dimension 3}\label{sec:str}
+
+In this section we prove
+Lemma~\ref{Str(v,v)}
+the main technical ingredient for
+Lemmma~ \ref{A^0} in the three dimensional case.
+%As it was mentioned, for $3$-dimensional case Strange curvature tensor defines curvature tensor (\ref{R=Str}). 
+
+In the next lemma we prove weak
+$\delta$-convergence on $A^\de$
+ of Strange curvature 
+for one of the coordinate
+sequences   in 
+a Nice common chart collection.
+For any vector $v\in TpA$
+we can complete it to  a  collection of $4$ vectors in $T_pA$
+with strictly obtuse angles between each other and
+ than apply Lemma~\ref{existenseTight} to obtain a Nice common chart
+collection, such that in the limit chart
+$\mathfrak X=(\mathfrak x^1,\mathfrak x^2,\mathfrak x^3):V_n\to\Omega$
+the differential
+$d_p\mathfrak x_1$ is arbitrary close to $-\<v,\cdot\>$.
+Let also note that in view of
+Corollary~\ref{Kbound}
+Lemma~\ref{smoothmeasure}
+could be applied for measures $\Str(u_n, u_n)dVol_n$ and hence
+Lemma~\ref{Str(v,v)} can be reduced to
+the 
+ Lemma~\ref{lemma:maincoord} below.
+ 
+ Let note that instead of  normalized gradients of coordinate functions  we 
+could take normalized gradients of arbitrary Nice sequence, the proof would be almost 
+the same. We take coordinate function only for convenience to have 
+natural common $2$-coordinates on level sets that we need in the proof of
+\ref{Int-alm-conv}.
+
+\begin{thm}{Srange curvature lemma} \label{lemma:maincoord}
+Let
+$$\mathfrak X_n=(\mathfrak x_n^1,\mathfrak x_n^2,\mathfrak x_n^3):V_n\to\Omega,\qquad
+\mathfrak X=(\mathfrak x^1,\mathfrak x^2,\mathfrak x^3):V\to\Omega$$
+be a Nice common chart
+collection around $p\in V$,
+ we denote by $u_n=\nabla  \mathfrak x_n^1/|\nabla\mathfrak x_n^1|$.
+
+Then there are open set $\Omega^*\ni \mathfrak X(p)$ and $c>0$
+such that
+for any
+smooth function $\phi\:\Omega\to\R$
+ with compact support
+$\supp \varphi \subset \Omega^*\cap\mathfrak X (A^\delta)$ and $|\varphi|\le 1$
+ the following holds 
+ for the lifting
+ $\psi_n=\mathfrak X_n\circ \varphi_n$: 
+$$\limsup_{n\to\infty} \int\limits_{V_n}\Str_n(u_n)\psi_ndVol_n-
+\liminf_{n\to\infty} \int\limits_{V_n}\Str_n(u_n)\psi_ndVol_n<c \delta.$$
+
+
+\end{thm}
+We want to apply Bochner formula \ref{Bochner}
+to the functions $\mathfrak x^1_n$.
+So we denote by
+   $\Int_n=\Int_n(x)$ (correspondently $H_n=H_n(x)$)   an intrinsic curvature
+ (correspondently mean curvature) of the level set
+$(\mathfrak x^1_n)^{-1}(\mathfrak x^1_n(x))$ at $x\in  V_n$.
+Applying Bochner formula,
+we can reduce the proof of the 
+Lemma~\ref{lemma:maincoord} to the following two lemmas:
+
+\begin{thm}{Lemma}\label{H-converges}
+Let
+$$\mathfrak X_n=(\mathfrak x_n^1,\mathfrak x_n^2,\mathfrak x_n^3):V_n\to\Omega,\qquad
+\mathfrak X=(\mathfrak x^1,\mathfrak x^2,\mathfrak x^3):V\to\Omega$$
+be a Nice common chart
+collection, 
+we denote by
+$u_n=\nabla  \mathfrak x_n^1/|\nabla\mathfrak x_n^1|$.
+Then 
+for any
+smooth function $\phi\:\Omega\to\R$
+ with compact support
+%$\supp \varphi \subset \Omega\cap\mathfrak X (A^\delta)$ %and $|\varphi|\le 1$
+and its lifting $\psi_n=\mathfrak X_n\circ \varphi_n$
+the sequence
+$$\int\limits_{V_n} \l[H_n\<\nabla\psi_n,u_n\>- \<\nabla\psi_n,\nabla_{u_n} u_n\> \r]dVol_n$$
+converges.
+\end{thm}
+
+
+\begin{thm}{Lemma}\label{Int-alm-conv}
+Let
+$$\mathfrak X_n=(\mathfrak x_n^1,\mathfrak x_n^2,\mathfrak x_n^3):V_n\to\Omega,\qquad
+\mathfrak X=(\mathfrak x^1,\mathfrak x^2,\mathfrak x^3):V\to\Omega$$
+be a Nice common chart
+collection, a point $p\in V$
+and
+we denote by
+$u_n=\nabla  \mathfrak x_n^1/|\nabla\mathfrak x_n^1|$.
+Then
+ there are open set $\Omega^*\ni \mathfrak X(p)$ and $c>0$ such that
+  the following holds.
+  
+For any smooth function
+$\phi\:\Omega\to\R$  with compact support
+$\supp \varphi \subset \Omega^*\cap\mathfrak X (A^\delta)$ and $|\varphi|\le 1$,
+we have for its lifting
+ $\psi_n=\mathfrak X_n\circ \varphi_n$:
+
+$$\limsup_{n\to\infty} \int\limits_{V_n}\Int_n\psi_ndVol_n-\liminf_{n\to\infty} \int\limits_{V_n}\Int_n\psi_ndVol_n<c \delta.$$
+\end{thm}
+
+\parit{Proof of \ref{H-converges}.}
+
+We rewrite
+$$\int\limits_{V_n} \<u_n,\nabla\psi_n\> H_ndVol_n
+=
+\int\limits_{V_n} \<u_n,\nabla\psi_n\> \div u_ndVol_n
+$$
+
+Let us denote by $(u^1_n, u^2_n, u^3_n)$
+coordinates of $u_n$,
+by $g_{ij,n}$ components of metric tensor of $M_n$ in $\Omega$ and
+ rewrite the integral in $\Omega$:
+
+$$\int\limits_{\Omega} \Bigl(\sum_{i=1}^3u_n^i \frac{\partial \phi}{\partial x_i}\Bigr)
+\sum_{i=1}^3\Bigl(\partial u_n^i/ \partial x^i +u^i_n\partial \log \sqrt {\det (g_{ij,n})}/\partial x^i\Bigr)
+\sqrt {\det (g_{ij,n})}dx^1\wedge dx^2\wedge dx^3$$
+
+Now by Theorem~\ref{metricBV}
+$g_{i j,n}, g^{ij}_n\in  \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)$
+and
+$g_{ii,n}$ are bounded away from $0$.
+We also have by definition  of $u_n$ that
+$(u^1_n, u^2_n, u^3_n)=(1, g^{12}_n/g^{11}_n, g^{13}_n/g^{11}_n)$,
+hence 
+${u^i_n}\in  \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)$.
+
+Then applying
+theorem~\ref{thm-D}, theorem~\ref{thm-CM}) and
+theorem~\ref{thm-A} we get
+
+\begin{itemize}
+
+\item $\partial \log \sqrt {\det (g_{ij,n})}/\partial x^i\in \aleph_0^{seq}(\Omega,S_\Omega)$
+
+ \item $\frac{\partial u_n^i}{\partial x_i}\in \aleph_0^{seq}(\Omega,S_\Omega)$
+ 
+ \end{itemize} 
+ 
+ and by above
+ 
+  \begin{itemize}
+  
+  \item ${u^i_n}\in  \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)\subset\op{C_0^{seq}}(\Omega,S_\Omega,\RR)$ 
+ 
+ \item $g_{i j,n}\in   \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)\subset \op{C_0^{seq}}(\Omega,S_\Omega,\RR)$
+ 
+  \end{itemize}
+  
+Then applying theorem~\ref{thm-CM})
+we get under integral a sum of elements from $\aleph_0^{seq}(\Omega,S_\Omega)$
+multiplied by $\frac{\partial \phi}{\partial x_i}$ (which are smooth functions with compact support).
+       This gives convergence of the integral by definition of  $\aleph_0^{seq}(\Omega,S_\Omega)$.
+              
+
+Further for the second integral % (see claim~\ref{cl:funDC})
+we have
+$$\int\limits_{M_n}\<\nabla\psi_n,\nabla_{u_n} u_n\>dVol_n=$$
+ $$\int\limits_{\Omega}  \sum_{i,j,k}u^i_n \frac{\partial \phi}{\partial x_k}
+ \biggl(\frac{\partial u^k_n}{\partial x_i} +\frac{1}{2}u^j_n\sum_s
+ \biggl(\frac{\partial g_{ js,n}}{\partial x_i}+\frac{\partial g_{si,n}}{\partial x_j}-\frac{\partial g_{i j,n}}{\partial x_s}\biggr) g^{ks}_n\biggr)\cdot \sqrt{\op{det}(g_{i j,n})}dx^1\wedge dx^2\wedge dx^3$$ 
+ 
+ Then as above for the first integral
+ applying
+theorem~\ref{thm-D}, theorem~\ref{thm-CM}) and
+theorem~\ref{thm-A}  
+ we  get under the integral a sum of elements from $\aleph_0^{seq}(\Omega,S_\Omega)$
+  multiplied by $\frac{\partial \phi}{\partial x_i}$. Then the integral converges and the lemma follows.
+  
+  \qeds
+
+
+\parit{Proof of \ref{Int-alm-conv}.}
+We
+can assume that $\mathfrak X(p)=(0,0,0)$ and here we denote by 
+$B_s(O)\subset \R^2$ a ball  in coordinate $2$-plane of radius $r$ and center in the origin.
+Let $R>0$, $h>0$ be sufficiently small numbers such that a cylinder 
+$[-h,h]\times B_R(O)
+\subset\Omega \subset\R\times\R^2$.
+We want to regard level sets of functions $\mathfrak x_1$ parametrized by $\mathfrak x_2, \mathfrak x_3$
+and approximate them by  level sets of  $\mathfrak x^n_1$ parametrized by $\mathfrak x^n_2, \mathfrak x^n_3$.
+This level sets have a natural structure of ``admissible smoothing'', next we describe this formally.
+
+For $s\in [0, R]$ and $t\in [-h, h]$
+we denote restricted level sets by
+$L^s_{t}=(\mathfrak x^1)^{-1}(t)\cap (\mathfrak x^2, \mathfrak x^3)^{-1}(B_s(O))$ and
+$L^s_{t,n}=(\mathfrak x_n^1)^{-1}(t)\cap (\mathfrak x_n^2, \mathfrak x_n^3)^{-1}(B_s(O))$. 
+We assume $L^R_{t}$ and $L^R_{t,n}$
+to be equipped with induced intrinsic metrics while $L^s_{t}$ and $L^s_{t,n}$ with corresponding restrictions
+of these metrics.
+
+
+
+
+For $t\in [-h,h]$
+we denote by
+$\rho_t, \rho_{t,n}: B_R(O)\times B_R(O)\to\R$
+ metrics pushforwarded with  maps
+ $\mathfrak X|_{L^R_t}: L^R_t \to   \{t\}\times B_R(O)\xrightarrow{proj} B_R(O)$ and
+ $\mathfrak X_n|_{L^R_{t,n}}: L^R_{t,n} \to   \{t\}\times B_R(O)\xrightarrow{proj} B_R(O)$
+ respectively. 
+ 
+ 
+
+
+Metrics $\rho_{t,n}$ comes from level sets of concave functions in manifolds with
+sectional curvatures   $\ge-1$ hence by Gauss theorem theirs sectional curvatures are  $\ge-1$.
+Hence $\rho_{t,n}$ are
+good Riemannian
+metrics on $B_R(O)$.
+It can be proved the same way as in
+\cite{AKP} 
+(relying on \cite{petrunin-QG}, Theorem~1.2)
+that 
+$\rho_{t,n}$ converges to  $\rho_{t,n}$.
+Hence $\rho_t$ are good Alexandrov
+metrics on $B_R(O)$.
+This metrics are continuous
+for $t\in [-h, h]$ hence we can find unique $r>0$
+such that all
+these metrics have   a core $B_r(O)$. 
+Then for all $t\in [-h,h]$
+$L_t^r$ are  local Alexandrov spaces
+$L_{t,n}^r$ are "local Riemannian manifolds".
+
+
+Let $a_{t,n}: L_{t,n}^r\to L_t^r$ be identity map then    $(L_{t,n}^r, L_t^r, a_n)\in\SMA$.
+
+%We can also assume that $\diam (B_r^{\rho_t})<1$ for all $t\in(-h,h)$. 
+
+
+Now we set 
+$\Omega^*=(-h, h)\times B_r(O)$,
+$V_n^*=(\mathfrak X_n)^{-1}(\Omega^*)$.
+Then for any smooth function $\varphi:\Omega\to\R$ with
+$supp(\varphi)\subset\Omega^*$
+and its lifting $\psi_n=\varphi\circ \mathfrak X_n$
+we have that $supp(\psi_n)\subset V^*$
+and
+ we can 
+rewrite
+$$ \int\limits_{V_n}\Int_n(x)\psi_n(x)dVol_n(x)=\int\limits_{V_n^*}\Int_n(x)\psi_n(x)dVol_n(x)
+=\int\limits_{-h}^{h} d t\int\limits_{ L_{t,n}^r}
+ \frac{\psi_n(x)}{|\nabla \mathfrak x_n^1(x)|}\Int_n(x)d S_n^t(x),$$
+ where $ S_n^t$ is the $2$-volume on $ L_{t,n}^r$.
+ 
+ For any $t\in[-h,h]$ we have
+  $(L_{t,n}^r, L_t^r, a_n)\in\SMA$
+and Main theorem (local version ref??) for dimension $2$ can be applied.
+ Hence $\Int_n(x)dS_n^t(x)$ weakly converges to some measure on $B_r(O)$.
+ We also have by  Remark~\ref{rem:scPet} that
+$\int\limits_{ L_t^n}
+ |\Int_n(x)|dS_n^t(x)\le D$ for some $D$ independent on $t$.
+ The function ${\psi_n}/{|\nabla \mathfrak x_n|}$
+$c\de$-almost converges (see claims~\ref{claim:smoothgrad}, \ref{cor:scalprod}).
+So for all $t\in[a,b]$ we have
+$$\limsup_{n\to\infty}\int\limits_{L_t^n} \frac{\psi_n(x)}{|\nabla \mathfrak x_n^1(x)|}\Int_n(x)dS_n^t(x)-
+\liminf_{n\to\infty}\int\limits_{L_t^n} \frac{\psi_n(x)}{|\nabla \mathfrak x_n^1(x)|}\Int_n(x)dS_n^t(x)
+\le c D\delta.$$
+\qeds
+
+\subsection{Proof of Lemma~\ref{A^0}.}\label{sec:3dim}
+
+In this section we 
+express curvature tensor 
+via Strange curvature
+ to prove Lemma~\ref{A^0}.
+
+\subsubsection {The form ${Str} Q$ associated with quadratic form $Q$ }
+
+Given a quadratic form $Q\:\R^3\times\R^3\to\R$, we
+define a quadratic form
+$\Str Q:\R^3\times\R^3\to\R$ by
+$$\Str Q(v,v)=2Q(v,v)+Q(v^\bot_1)+Q(v^\bot_2)=Q(v)+|v|^2\cdot\Tr Q,$$
+where $v,v^\bot_1,v^\bot_2$ are mutually orthogonal and
+ theirs norm equals $|v|$.
+ We note that $Q$ can be reconstructed from $\Str Q$:
+ $$Q(v,v)=\Str Q(v,v)-|v|^2\Tr \Str Q/4.\eqlbl{Q}$$
+ \subsubsection{Vectors in general position}
+
+We say that $6$ vectors 
+ $w_1,\dots,w_6\in\R^3$ are 
+  \emph{in general position}
+if any quadratic form $Q:\R^3\times \R^3\to\R$
+can be computed from values $Q(w_k, w_k), k=1,\dots,6.$ 
+ This property depends only on the set of coordinates of this vectors
+ in any basis. 
+ Let us describe this formally.
+ We fix a basis $e_1,e_2,e_3$ and
+ denote coordinate matrix
+ by $W=(w_k^i)_{i,k=1}^{3,6}\subset \R^{3\times 6}$, so
+ $w_k=w_k^ie_i$  for $ k=1,\dots,6$.
+  Let $A_W\in\R^{6\times 6}$ be matrix with rows 
+  $((w_k^1)^2, (w_k^2)^2,(w_k^3)^2,2w_k^2w_k^3, 2w_k^1w_k^3, 2w_k^1w_k^2)$,  
+  we define for any quadratic form $Q:V\times V\to\R$  columns
+ $$B_Q=(Q(e_1,e_1), Q(e_2,e_2) Q(e_3, e_3), Q(e_2, e_3), Q(e_1,e_3), Q(e_1e_2))^T $$
+ and $C_Q({w_1,\dots,w_6})=(Q(w_1),\dots, Q(w_6))^T$.
+ Then $w_1,\dots, w_6$ are in general position iff $\det A\neq 0$; in this case we also have that
+ for any $Q$ $$ B_Q=(A_W)^{-1} C_Q(w_1,\dots,w_6).\eqlbl{B=AC}$$
+ Now we rewrite this in the form that we will use. For
+  an array 
+ $W=(w^i_k)_{i=1,k=1}^{3,6}\subset \R^3\times\R^{6}$
+ of coordinates for $6$ vectors in general position 
+ we define 
+ correspondences $W\mapsto s_{ij}^k(W)$ for $i, j=1,2,3$, $k=1,\dots, 6$ as follows:
+ $$s_{11}^k=((A_W)^{-1})_{k1} \quad s_{22}^k=((A_W)^{-1})_{k2} \quad s_{33}^k=((A_W)^{-1})_{k3}$$
+ $$s_{23}^k=((A_W)^{-1})_{k4}\quad s_{13}^k=((A_W)^{-1})_{k5}\quad s_{13}^k=((A_W)^{-1})_{k6}.$$
+ Then \ref{B=AC}
+ can be rewriten as
+$$Q(e_i,e_j)=\sum_{k=1}^{6}s_{ij}^k(W)Q(w_k^m e_m,w_k^m e_m), \quad i,j\in\{1,2,3\}.\eqlbl{Qij}$$
+So we obtain the following
+
+\begin{thm}{Lemma}\label{Sijk}
+Every $s_{ij}^k$ regarded as a
+function on the subset of coordinates in $\R^{3\times 6} $ in general position
+is a rational function, in particular it is
+locally Lipschitz.
+
+\end{thm}
+
+
+\subsubsection{Proof} 
+
+
+
+
+
+Let us fix Nice common chart sequence
+$\mathfrak X_n =(\mathfrak x^1_n, \mathfrak x^2_n,\mathfrak x^3_n):U_n\to\Omega$,
+$\mathfrak X =(\mathfrak x^1, \mathfrak x^2,\mathfrak x^3):U\to\Omega$.
+Let us denote coordinate frame
+$e_{1n}=\nabla \mathfrak x^1_n, e_{2n}=\nabla \mathfrak x^2_n,e_{3n}=\nabla \mathfrak x^3_n$
+ and $e_{1}=\nabla \mathfrak x^1, e_{2}=\nabla \mathfrak x^2,e_{3}=\nabla \mathfrak x^3$. Let
+${w^*}_1,\dots,{w^*}_6\in T_pA=\R^3$ 
+be vectors in general position, we
+denote their coordinates ${w^*}_k={w^*}_k^ie_i$
+we can choose 6 Nice sequences $f^1_n\to f^1,\dots, f^6_n\to f^6$ around $p$, such that
+$\nabla f^1,\dots,\nabla f^6$ are sufficiently close to
+${w^*}_1,\dots,{w^*}_6$
+and
+that
+measures $\Str(\nabla f^k_n, \nabla f^k_n)dVol_n$ weakly $c\delta$-converges
+on $V\cap A^\delta$ for $k=1,\dots,6$ (by Lemma~ \ref{Str(v,v)})
+ Let us denote
+$w_{kn}=\nabla_nf^k_n$ and expression
+in the frame
+$w_{kn}= w_{kn}^i e_{in}$,
+$W_n=(w_{kn}^i)_{i,k=1}^{3,6}$.
+Then
+taking $U, U_n$ sufficiently
+small  so that for all $y\in U_n$ coordinates
+$w_{in}^k(y)\in \R^{3\times 6}$ are in a neighborhood 
+of $ {w^*}_i^k\in \R^{3\times 6}$, where
+corresponding functions $s_{ij}^k$ are Lipschitz (cf. Lemma~\ref{Sijk}).
+
+
+
+
+%From???we obtain thatmeasures $\Str(\nabla f^k_n, \nabla f^k_n)dVol_n$ weakly $c\delta$-converges on $V\cap A^\delta$ for $k=1,\dots,6$. 
+Then applying \ref{Qij} we get that 
+$$\Str(e_{in},e_{jn})=\sum s_{ij}^k(W_n)\Str(w_{kn}, w_{kn})=\sum s_{ij}^k(W_n)\Str(\nabla f^k_n, \nabla f^k_n) .   $$
+We know that $w_{kn}^i$ are 
+$c\delta$-converging
+on $V\cap A^\delta$ (\ref{ }) and $s_{ij}^k$ are Lipschitz (on the domain where applied),
+hence components of Strange curvature
+$\Str_n(e_{in},e_{jn})dVol_n$
+ weakly $c\delta$-converges
+on $V\cap A^\delta$. 
+
+We also know that $g^{ij}_n$ are
+$c\delta$ converging on $V\cap A^\delta$ hence 
+$\operatorname{Tr}\Str_ndVol_n=g^{ij}_n\Str_n(e_{in},e_{jn})dVol_n$
+weakly $c\delta$-converges
+on $V\cap A^\delta$.
+
+Then applying \ref{Q} we get 
+$$q((w_{kn}, w_{kn})=
+\Str_n(w_{kn}, w_{kn})-(\sum_{i,j=1}^3 g_{ij,n}w^i_{kn} w^j_{kn})\operatorname{Tr}\Str_n$$
+ and  measures
+ $q((w_{kn}, w_{kn})dVol_n$
+  weakly $c\delta$-converges
+on $V\cap A^\delta$.
+
+Then applying again \ref{Qij} we get that 
+$$q(e_{in},e_{jn})=\sum s_{ij}^k(W_n)q(w_{kn}, w_{kn})=\sum s_{ij}^k(W_n)q(\nabla f^k_n, \nabla f^k_n) .   $$
+
+Then as above we can obtain that
+$q((e_{in}, e_{jn})dVol_n$
+  weakly $c\delta$-converges
+on $V\cap A^\delta$.
+
+Now let $f_n\ccto f$ be arbitrary $C^1_{Alex}$-converging sequence. For
+decomposition $\nabla f_n =\sum \alpha^i_ne_{i,n}$,
+we have that $ \alpha^i_n$
+$c\delta$-converges
+on $V\cap A^\delta$. Then measures
+$q(\nabla f_n, \nabla f_n)dVol_n=
+\sum \alpha^i_n \alpha^j_n q((e_{in}, e_{jn})dVol_n$
+weakly $c\delta$-converges
+on $V\cap A^\delta$.
+
+\qeds
+
+
+
+
+
+
+
+
+
+
+\section{The case when the limit space is a cone}\label{sec:cone}
+
+Here is the proof for the case when $\omega<3\pi/2$,
+we have problems with $\omega\ge 3\pi/2$.
+\subsection{Limit measure tensor, sketch of the proof }
+
+Let us denote by $\Cone_\omega$ the two-dimensional cone with total angle
+ $2\cdot\pi-\omega$ and apex $p$.
+
+In this section we consider Alexandrov space $A=\Cone_\omega\times\RR^{m-2}$
+and a smoothing $M_n\smooths{} \Cone_\omega\times\RR^{m-2}$ with the
+additional property, that $\sec M_n\ge -\eps_n$ for some positive $\eps_n\to 0$.
+For this case we proof the version of Main theorem (Claim~\ref{CurvCone}),
+ where we specify the limit curvature
+measure tensor.
+To formulate this statement we need some constructions that we describe roughly here,
+the exact formulations are in next subsection. 
+
+We fix orthonormal frame in the regular factor of the tangent space in the origin:
+ $a_1,\dots,a_{m-2}\in\{p\}\times\R^{m-2}\subset T_p\Cone_\omega\times\RR^{m-2}
+ =\Cone_\omega\times\RR^{m-2}$,  this basis can be extended to  the parallel
+vector fields
+$a_1(x),\dots,a_{m-2}(x)\in T_x\Cone_\omega\times\RR^{m-2}$. This vector fields
+can be lifted in some natural (but non unique) way (Lemma~\ref{lem:existhoriz})
+to  
+vector fields
+$a_{1,n}(x),\dots,a_{m-2,n}(x)\in T_xM_n$.
+These vector fields define distribution on $M_n$ which is approximately
+parallel to singularity, we call
+vectors in this distribution "vertical" and   for any vector $v\in T_xM_n$
+we denote by
+$\mathring {v}$
+the orthogonal projection onto this distribution
+and call it "vertical part" of $v$.
+It can be proved (Lemma~\ref{}) that for sequence of
+convergent vector fields
+$v_n: M_n\to TM_n$ 
+theirs vertical parts $\mathring v_n$ converge in some sense to vertical
+vector field 
+$\mathring v$ on
+$\Cone_\omega\times\RR^{m-2}$. The main result of this section is
+the following:
+
+
+\begin{thm}{Claim} \label{CurvCone}
+In the above condition and notation let
+$v_{1,n}, \dots, v_{m-2,n}$
+be  vector fields on $M_n$ such that their vertical parts 
+converge
+ and
+$\mathring {v}_1, \mathring {v}_2, \dots,  \mathring {v}_{m-2}$ denote
+ corresponding limits of these
+vertical parts. 
+Then
+measures
+$q_{M_n}(v_{1,n}, \dots, v_{m-2,n}, v_{1,n},\dots, v_{m-2,n})\cdot dVol_n$
+weakly converge
+to the measure
+ $$\omega\cdot|\mathring {v}_1\wedge \mathring {v}_2\wedge\dots\wedge  \mathring {v}_{m-2}|^2\cdot d\nu$$
+ where $d\nu$ denotes measure that is equal to $(m-2)$-dimensional volume on $\{p\}\times\R^{m-2}\i \Cone_\omega\times\RR^{m-2}$ and vanishes outside this set.
+ 
+  \end{thm}
+
+It is convenient here instead of curvature form $q$ regard quadratic form
+$$Q: (\Lambda^{m-2} T)M \times (\Lambda^{m-2} T)M\to\R$$ by
+$Q(v_1\wedge\dots\wedge v_{m-2}, w_1\wedge\dots\wedge w_{m-2})
+=q(v_1,\dots,v_{m-2},w_1\dots,w_{m-2})$.
+We denote
+$E_n=a_{1,n}\wedge\dots\wedge a_{m-2,n}$.
+
+There is the two technical analytic ingredients in our prove. 
+The first one is that measures
+$Q(E_n, E_n)dVol_n$ weakly converge
+to the measure
+$\omega\cdot d\nu$. The second is that for any bounded 
+continuous field $W_n: M_n\to (\Lambda^{m-2} T)M$ such that
+$W_n\perp E_n$ measures
+$Q(W_n, W_n)dVol_n$ weakly converges to zero measure.
+Then we can deduce that
+$Q(E_n, W_n)dVol_n$ weakly converges to zero measure.
+This follows from the quadratic form symmetry and the fact that
+every partial weak limit of
+$Q(tE_n+W_n,tE_n+W_n)dVol_n$ is bounded below by zero measure,
+(because of condition $\sec M_n\ge -\eps_n$).
+
+Now we have all information about tensor $Q$. For 
+sequences of
+ convergent vector fields 
+ $ {v}_1, {v}_2, \dots,   {v}_{m-2}$ on $M_n$ let
+$V_n= {v}_1\wedge {v}_2\wedge \dots\wedge   {v}_{m-2}\in (\Lambda^{m-2} T)M$,
+we can decompose $V_n=\alpha_n E_n+W_n$, where $W_n\perp E_n$.
+Then
+ $Q(V_n, V_n)= \alpha_n^2Q(E_n, E_n)+2\alpha_n Q(E_n, W_n)+Q(W_n, W_n)$
+ and $\alpha_n\to|\mathring {v}_1\wedge \mathring {v}_2\wedge\dots\wedge  \mathring {v}_{m-2}|$. Then the claim follows.
+ 
+ \subsection{Vertical and horizontal directions}
+ 
+ \subsubsection{Horizontal functions}
+ 
+ Let unit vector
+$a\in \{O\}\times\R^{m-2}\subset T_pCone\times\R^{m-2}$
+
+$$f^a(y)=\lim_{t\to+\infty}\dist_{p+ta}(y)-t$$
+
+This function can be approximated by Perelman type functions
+which become concave on every compact set.
+We denote them by
+$f^a_n$.
+
+\subsubsection{Vertical and horizontal vector fields, limit projection on vertical direction }
+
+Let us fix orthonormal frame $a_1,\dots, a_{m-2}\in \{O\}\times\R^{m-2}\subset T_pCone\times\R^{m-2}$ and let $f^{a_i}: A\to\R$, $f^{a_i}_n:M_n\to\R$ be functions defined above.
+
+
+Let $w_n$ 
+be a sequence of vector fields
+on $M_n$.
+We say that \emph{vertical parts of $w_n$ converges}
+if $\<w_n, \nabla f^{a_i}_n\>$ converges to
+some constant 
+$\<w, a_i\>$  for all $i=1,\dots,m-2$.
+In this case
+we denote
+$\mathring{w}=\<w, a_1\>a_1+\dots+\<w,a_{m-2}\>a_{m-2}$
+and call it limit of vertical parts of $w_n$.
+
+
+
+
+We call a sequence of
+vector fields $w_n$ on $M_n$ \emph{vertical at infinity} if
+$|w_n-(\<w_n, \nabla f^{a_1}_n\>+\dots+\<w_n,\nabla f^{a_{m-2}}_n\>)|\to 0$.
+
+We call a sequence of
+vector fields $w_n$ on $M_n$ \emph{horizontal at infinity} if
+$\<w_n, \nabla f^{a_i}_n\>\to 0$ for all $i\in\{ 1,\dots,m-2\}$.
+
+
+\subsubsection{Vertical functions}
+ Let unit vector
+$b\in T_pCone\times\{O\}\subset T_pCone\times\R^{m-2}$
+
+$$f^b(y)=\lim_{t\to+\infty}\dist_{p+tb}(y)-t$$
+
+This function can be approximated by Perelman type functions
+which become concave on every compact set.
+We denote them by
+$f^b_n$.
+
+ 
+ 
+ \subsection{Sectional curvature   vanishes in vertical directions}
+ 
+ Let unit vector
+$b\in T_pCone\times\{O\}\subset T_pCone\times\R^{m-2}$
+
+$$f^b(y)=\lim_{t\to+\infty}\dist_{p+tb}(y)-t$$
+
+This function can be approximated by Perelman type functions
+which become concave on every compact set.
+We denote them by
+$f^b_n$.
+
+We set  $u_n=\nabla f^b_n/|\nabla f^b_n|$.
+Let us  denote by $\Int_n(x)$  the scalar curvature of the level set
+ $(f^b_n)^{-1}(f^b_n(x))$ at $x\in  M_n$  and by
+  $G_n(x)$ the Gauss curvature of  $(f^b_n)^{-1}(f^b_n(x))$ at $x$.
+  Let  us define $\Sc_n^\top(v,v)=\Sc_n-2\Ric_n(v,v)$.
+  Then $\Sc_n^\top(u_n, u_n)$  is the average of sectional curvature
+  in 2-planes tangent to level sets $(f^b_n)^{-1}(f^b_n(x))$.
+Then sectional curvature on such  2-planes  is bounded by
+ $\Sc_n^\top(u_n, u_n)+o_{n\to \infty}(1)$ because
+of lower curvature bound on infinity.
+In the next lemma we prove that 
+$\Sc_n^\top(u_n, u_n)$
+vanishes at infinity around singularity near $p$.
+
+ \begin{thm}{Lemma}
+ Let $$\X_n=(\x_n^1,\x_n^2,\dots, \x_n^m):U_n\to\Omega$$
+ $$\X=(\x^1,\x^2,\dots, \x^m):U_n\to\Omega$$
+ be a Nice common chart
+ such that $\x_n^1=f_n^b$, $\x^1=f^b$.
+ There exist
+ $O\in\Omega^*\subset \Omega$ and $c>0$
+ such that for any $\varepsilon>0$ and 
+ %continuous function $\varphi:\Omega\to\R$ with $|\varphi|\le 1$ and
+ $U_n^\varepsilon=(F_n)^{-1}( \Omega^*\cap ((-\varepsilon,\varepsilon)\times\R^{m-1})  )$
+  %$\supp\varphi\subset\Omega^*\cap ((-\varepsilon,\varepsilon)\times\R^{m-1})$
+we have $$\limsup_{n\to\infty}\int_{U_n^\varepsilon}
+| Sc_n^\top(u_n,u_n)| dVol_n\le c\varepsilon .$$
+ %where $\psi_n=\varphi\circ F_n: U_n\to\R$.
+ 
+ 
+\end{thm}
+ \parit{Proof.}
+ We can assume $\Omega$ to be of the form 
+ $\Omega=(-h,h)\times B_R^{\R^{m-1}}(0)$.
+ For every $t\in(-h,h)$ level set
+ $L_{t}=(\x^1)^{-1}(t)$ has a structure of a good Alexandrov metric
+ with a smoothing $L_{t,n}=(\x^1)^{-1}(t)$. For sufficiently small
+ $r>0$ for every $t\in(-h,h)$  $L_t$ has a core $L_t^*=(\X)^{-1}(\{t\}\times B_r^{\R^{m-1}}(0))$.
+ Then for $L_{t,n}^*=(\X_n)^{-1}(\{t\}\times B_r^{\R^{m-1}}(0))$
+ we can write $(L_{t,n}^*,L_t^*,id_n)\in\SMA$, where $id_n$ is the inclusion.
+  We take $\Omega^*= (-h,h)\times B_r^{\R^{m-1}}(0)$.
+ 
+ By Gauss theorem we have $Sc_n^{\top}=Int_n-G_n$ and by restriction on sectional
+ curvature
+ $Sc_n^{\top}\ge -2(m-1)\varepsilon_n$, where $\varepsilon_n\to 0$.
+   Now since $G\ge 0$
+ we have
+ $$ \limsup_{n\to\infty}\int_{U_n^\varepsilon}| Sc^\top(u,u)| dVol_n\le
+ \limsup_{n\to\infty}\int_{U_n^\varepsilon}| Int_n| dVol_n. $$
+ 
+ We rewrite
+$$ \int_{U_n^\varepsilon}| Int_n| dVol_n =
+\int_{-\varepsilon}^\varepsilon\int_{L^*_{t,n}}\frac{|Int_n|}{|\nabla \x^1_n|}dS_n,$$
+where
+  We can assume $r$ to be sufficiently small, so that all $L^*_{t,n}$ have diameter
+  $\le 1$, then 
+ for all $L_{t,n}$ Petrunin's theorem
+on upper bound  of scalar curvature can be applied 
+(Theorem~\ref{scPet} and Remark~\ref{rem:scPet}). Now since $|\nabla \x^1_n|>1/2$
+for large $n$
+we have
+$$\int_{-\varepsilon}^\varepsilon\int_{L^*_{t,n}}\frac{|Int_n|}{|\nabla \x^1_n|}dS_n\le
+const(m)\cdot\varepsilon$$ 
+ and Lemma follows. \qeds
+ 
+ 
+ 
+ 
+ \begin{thm}{ Corollary}\label{verticalK}
+
+Let  $u_n$ be continuos bounded vertical vector fields on $M_n$ and 
+$v_n$ be continuous bounded
+vector fields. Then
+ measures 
+$K_{u_n\wedge v_n}dVol_n$
+ weakly converge to $0$ measure on
+ $A=\Cone_\omega\times\RR^{m-2}$.
+  \end{thm}
+  
+  \subsection{Sectional curvature converges in horisontal directions}
+ 
+ Let $f^a$, $f^a_n\to f^a$
+ be  horizontal functions defined above, let
+ $u_n=\nabla f_n/|\nabla f_n|$.
+ 
+ \begin{thm}{Lemma}\label{horizon}
+ In the above condition and notations
+ $\Str_n(u_n, u_n) dVol_n$ weakly converges to some measure
+ on some open $U\ni p$.
+ \end{thm}
+ 
+ Let $$\X_n=(\x_n^1,\x_n^2,\dots, \x_n^m):U_n\to\Omega$$
+ $$\X=(\x^1,\x^2,\dots, \x^m):U_n\to\Omega$$
+ be a Nice common chart
+ such that $\x_n^1=f_n^a$, $\x^1=f^a$. 
+ Then weak convergence of
+ $\Str_n(u_n, u_n) dVol_n$ can be proved as 
+ Lemma~\ref{lemma:maincoord} (which is reduced to Lemma~\ref{H-converges}
+ and Lemma~\ref{Int-alm-conv}). 
+Let note that error $c\delta$ appears only in Lemma~\ref{Int-alm-conv}
+ because of $c\delta$-convergence of $1/|\nabla\x^1_n|$.
+   In our case we know that $|\nabla f_n^a|=|\nabla \x^1_n|$
+ converges and bounded from $0$, hence  $1/|\nabla\x^1_n|$
+ converges and we obtain convergence of all integrals.
+   
+   \begin{thm}{Corollary}
+   
+   Let $a_1,\dots, a_{m-2}\in \{O\}\times\R^{m-2}\subset T_pCone\times\R^{m-2}$ be an orthonormal frame and  $f^{a_i}: A\to\R$, $f^{a_i}_n:M_n\to\R$  horizontal functions defined above. Then
+   $q(\nabla f^{a_1}_n,\dots, \nabla f^{a_{m-2}}_n,\nabla f^{a_1}_n,\dots, \nabla f^{a_{m-2}}_n)dVol_n$ weakly converges on some open $U\ni p$.
+   \end{thm}
+   
+   Follows from Lemma~\ref{horizon},
+    definition of $\Str$,
+   Lemma~\ref{verticalK} and boundness of Scalar curvature. \qeds
+  
+  
+  \subsection{General case, proof of}
+  
+  
+  Here is our main claim, the proof is in the end of this subsection.
+
+\begin{thm}{Claim}\label{cl:vfcone}
+Suppose  that lower bound of sectional
+curvature of $M_n$ tends to $0$.
+Let we have sequences of  vector
+fields $v_n^1,\dots,v_n^{m-2}$ on $U_n$
+so that theirs vertical parts
+converges and corespondent limit projections
+$\mathring{v}^1, \mathring{v}^2,\dots,\mathring{v}^{m-2}$
+are linearly independent.
+Then  $R_n(v_n^1\wedge\cdots\wedge v_n^{m-2})$
+weakly converges to some signed measure
+$R^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge \mathring{v}^{m-2}}=\omega(x)\cdot|\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge \mathring{v}^{m-2}|^2\cdot h_{m-2}$.
+
+\end{thm}
+\begin{thm}{Sublemma}\label{lemq}
+Let for sequences of vectors $a_n, v_n\in V_n$ and quadratic forms $Q_n$
+we have:
+1)$ Q_n(a_n)\to 0$
+2)$ Q_n(v_n)<C$, for some constant $C$
+3) for every constant $c \liminf Q_n(c a_n+v_n)\ge 0,$
+then $$\lim Q_n(a_n, v_n)=0,$$
+in particular
+$$\lim Q_n(c a_n+v_n)-Q_n(v_n)=0.$$
+\end{thm}
+
+\parit{Proof of \ref{cl:vfcone}}
+
+We take lifting of ``vertical'' subspace
+$V_n^\bot=Lin(\nabla f_n^{\mathring{v}^1},\dots,\nabla f_n^{\mathring{v}^{m-2}})$,
+its orthogonal $V_n^\top$ and decomposition
+$v_n^i=(v_n^i)^\bot+(v_n^i)^\top$.
+We can regard $R_n$ as quadratic form on  $\Lambda^{m-2}(\T_x M_n)$.
+Then
+$$R_n((v_n^1\wedge\cdots\wedge v_n^{m-2})
+=R_n((v_n^1)^\bot\wedge\cdots\wedge (v_n^{m-2})^\bot+\lambda_n^\top),$$
+where  $\lambda_n^\top$ is a sum of
+ simple $(m-2)$-vectors, each of those include $(v_n^i)^\top\wedge\dots$
+for some $i$.
+Vectors $(v_n^i)^\top$ are ``horizontal''
+hence $R_n((v_n^i)^\top\wedge\dots)\to 0$ because of lemma~\ref{lem:vert} and
+condition $\lim R_n\ge 0$.
+ By lemma~\ref{lem:horiz}
+$R_n(\nabla f_n^{\mathring{v}^1}\wedge\dots\wedge \nabla f_n^{\mathring{v}^{m-2}})$
+converges, also
+$|\nabla f_n^{\mathring{v}^1}\wedge\dots\wedge \nabla f_n^{\mathring{v}^{m-2}}
+-(v_n^1)^\bot\wedge\cdots\wedge (v_n^{m-2})|^\bot\to 0$
+hence
+$R_n((v_n^1)^\bot\wedge\cdots\wedge (v_n^{m-2})^\bot)$ converges.
+Now we can apply lemma~\ref{lemqq} and obtain convergence
+of
+$R_n((v_n^1\wedge\cdots\wedge v_n^{m-2})$.
+\qeds
+
+\subsection{Proof of details}\label{subs:prd}
+
+\begin{thm}{Lemma}\label{lem:exost}
+We can find finite set of vectors $a^i\in \Cone$
+and small $c>0$ with the following property:
+If $f^i$ is corresponding functions from lemma~\ref{lem:perp}
+and $f^i_n$ are theirs liftings
+then for every point $x\in M_n$
+there are $i,j$, so that
+$\angle (\nabla f^i_n(x), \nabla f^j_n(x))>c$.
+\end{thm}
+\begin{proof}
+AP promised to write this.
+\end{proof}
+\begin{thm}{Lemma}\label{lem:horiz2dim}
+Let $w^1_n, w^2_n$ be uniformly bounded sequences of
+``horizontal'' vectors and angle between them is uniformly
+bounded away from zero. Then
+for every ``horizontal'' sequence $w_n$
+its projection onto space orthogonal to $Lin\<w^1_n,w^2_n\>$
+tends to zero. Moreover
+there are two bounded sequences of coefficient
+ $\alpha_n, \beta_n$ so that
+$|w_n-(\alpha_n w^1_n+\beta_n w^2_n)|\to 0$.
+\end{thm}
+Now since sequences $\nabla f^i_n(x)$
+are ``horizontal'' we can combine
+Corrollary 2 (\ref{lem:0basis}), lemma~\ref{lem:exost}
+and lemma~\ref{lem:horiz2dim} to obtain
+lemma~\ref{lem:vert}.
+
+
+\parit{Proof of \ref{lem:horiz}}
+Suppose that vectors $a^1,\dots,a^{m-2}$ from lemma~\ref{lem:horiz}
+are orthonormal, we choose and fix some sequences of unite vector
+fields $w^1_n,w^2_n$ that are orthogonal to each other
+and to $u^i_n$ for $1\le i\le m-2$.
+Then
+$$\Str_n(u^1_n)=2R(u^1_n\wedge\dots\wedge u^{m-2}_n)+\lambda_n+o_{n\to\infty}(1)$$
+where $\lambda_n$ is the sum of items of the form
+$c R(w^i\wedge\dots)$, where $c,i\in\{1,2\}$,
+each of them tends to zero by lemma~\ref{lem:vert} because $w^i_n$ are ``horizontal''.
+Now convergence of $\Str_n(u^1_n)$ (by sublemma~\ref{lem:strCone})
+implies convergence of $R(u^1_n\wedge\dots\wedge u^{m-2}_n)$.
+The case of general vectors $a^1,\dots,a^{m-2}$ can be
+reduced to this one, because corespondent wedge products
+coinside up to a constant.
+\qeds
+
+\section{Blow-up at $m-2$ singularity}\label{sec:blow}
+
+Assume $M_n$ is a smoothing of Alexandrov space $A$;
+i.e. $M_n$ is a non-collapsing sequence of Riemannian manifolds
+with curvature $\ge\kappa$ for some $\kappa\in\RR$ and
+$M_n\GHto A$.
+
+Note that given $p\in A$,
+one can allways find a sequence $\lambda_n$
+which converge to infinity so slow that
+$(\lambda_n M_n,p_n)\GHto \T_p A$.
+In other words, $\lambda_n M_n$ is a smoothing of $\T_pA$;
+further this new smoothing will be called a \emph{blow-up smoothing} at $p$.
+
+We will use blow-up smoothg to invesigate behavior of curvature near points $p\in A'$.
+In this case $\T_p\iso\Cone\times \RR^{m-2}$.
+
+
+
+
+
+
+\begin{thm}{Construction}\label{constr}
+Fix $\lambda_n\to\infty$. There is $\varepsilon_n\to 0$ so that
+
+$$\GHdist(h_{\lambda_n}B^A_{R_n}(p), B^{\T_p A}_{\lambda_n R_n}(p))\le\varepsilon_n/2$$
+
+There is a monotonic function
+ $k(n)\:N\to N$
+so that for every $l\ge k(n)$
+$$\GHdist(h_{\lambda_n}B^{M_l}_{1}(p), B^{\T_p A}_{\lambda_n}(p))\le\varepsilon_n/2.$$
+
+Then for every  $k'(n)\ge k(n)$ we have
+$$\lambda_n M_{k'(n)}\GHto (\T_p A, p)=(\RR^{m-2}\times \Cone_x^2,x).$$
+\end{thm}
+For every $\lambda>0$ we supply manifold $\lambda M_n$
+with vector fields
+$\bar v_n^i=1/\lambda(d h_{\lambda}v_n^i)$. We will write shortly
+$R_{\lambda M_n}=R_{\lambda M_n}(\bar v_n^1\wedge\dots\wedge\bar v_n^{m-2})$
+
+\begin{thm}{Lemma}\label{l:convVCone}
+Let vector field $v_n$ on $M_n$
+converges with respect to Gromov--Hausdorff
+convergence $M_n\GHto A$.
+Fix $\lambda_n\to\infty$.
+There is a monotonic function
+ $k(n)\:N\to N$ so that  for every  $k'(n)\ge k(n)$
+ we have that
+$$\lambda_n M_{k'(n)}\GHto (\T_p A, p)=(\RR^{m-2}\times \Cone_x^2,x)$$
+and
+vertical parts of $\bar v_n$ converge.
+\end{thm}
+
+\begin{thm}{Claim}\label{cl:convVCone}
+Let vector field $v_n$ on $M_n$
+converges with respect to Gromov--Hausdorff
+convergence $M_n\GHto A$.
+Fix $\lambda_n\to\infty$.
+There is a monotonic function
+ $k(n)\:N\to N$ so that  for every  $k'(n)\ge k(n)$
+ we have that
+$$\lambda_n M_{k'(n)}\GHto (\T_p A, p)=(\RR^{m-2}\times \Cone_x^2,x)$$
+and
+$R_{\lambda_n M_{k'(n)}}$
+weakly converges to $R^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge \mathring{v}^{m-2}}_p$,
+where $\mathring{v}^i$ are limits of vertical parts of $\bar v_n$.
+\end{thm}
+
+\parit{Proof.} By the lemma~\ref{l:convVCone} we can apply claim \ref{cl:vfcone}.
+\qeds
+
+
+
+
+\subsection{Proof of \ref{l:convVCone}}
+
+Let sequence of Alexandrov spaces converges
+$(N_n,p_n)\GHto (A,p)$.
+ Let $A$ contains a line $\RR_a\subset A$
+ with direction
+$a\in \T_p A$.
+We say that a sequence of points  $x_n\in N_n$
+converges $x_n\GHto\RR_a^{+\infty}$ if
+there are sequences $R_n\to\infty,\varepsilon_n\to 0$
+so that
+$$\GHdist(B^{N_n}_{R_n}(p_n), B^{A}_{R_n}(p))\le\varepsilon_n$$
+and there is a sequence $t_n\to+\infty$,
+so that
+$t_n a\le R_n+2$ and
+ for $a_n=t_n a\in \RR_a\subset A$
+we have
+$\GHdist(x_n,a_n)\le\varepsilon_n$.
+We say that a sequence of points  $y_n\in N_n$
+converges in weak sense $y_n\GHwto\RR_a^{+\infty}$ if
+$|p_n y_n|\to \infty$ and
+for some sequence
+$x_n\GHto\RR_a^{+\infty}$ we have $\angle (x_n p_n y_n)\to 0$.
+
+\begin{thm}{Lemma}\label{lem:angle}
+Let we have two sequences $x_n, y_n\GHwto\RR_a^{+\infty}$,
+and  sequence $q_n\in N_n$ is uniformly bounded, i.e. $|p_n q_n|<c$,
+than $\angle (x_n q_n y_n)\to 0$.
+\end{thm}
+
+
+
+
+\begin{thm}{Lemma} \label{lem:vconvergLoc}
+Let $M_n\GHto A$ and vector fields $v_n$ converges.
+Let sequence $\lambda_n\to\infty$.
+Let vector $a\in \T_p A$
+and for sequences $q_s, q_s'$
+we have $\angle (a,\dir{p}{q_s})<\varepsilon_s$,
+ $\angle (-a,\dir{p}{q'_s})<\varepsilon_s$.
+There is a  limit product $\<v,a\>$
+with the following properties:
+there is a constant $c>0$,
+a function $k\: N\to N$,
+ sequences
+$M_i\ni q_{n,i}\to q_n$, $\varepsilon_n\to 0$
+and
+so that for   all $n$
+$$\<v,a\>- c\cdot \varepsilon_n
+\le
+\inf_{i\ge k(n)}\inf_{x\in B_{1/\lambda_n}^{M_i}(p_i)} \< v_i,\dir{x}{q_{n,i}}\>
+\le
+\sup_{i\ge k(n)}\sup_{x\in B_{1/\lambda_n}^{M_i}(p_i)}  \< v_i,\dir{x}{q_{n,i}}\>\le
+\<v,a\>+
+ c\cdot \varepsilon_n$$
+and for any function $s(n)>k(n)$
+$$h_{\lambda_n}( q_{n,s(n)})\GHwto\RR_a^{+\infty}.$$
+
+\end{thm}
+
+\parit{Proof.}
+We know, that $(\lambda_n A, p)\GHto (\T_p A, p)=(\RR^{m-2}\times \Cone_x^2,x)$.
+There is a sequence $\tilde q_s, \tilde q_s' \in B_1^A(p)$,
+ sequence $\tilde \varepsilon_s\to 0$, constant $c$ so that the following holds:
+%$$h_{\lambda_n}(\tilde q_n)\GHwto\RR_a^{+\infty}$$
+%$$h_{\lambda_n}(\tilde q_n')\GHwto\RR_{-a}^{+\infty}$$
+$$\angle(a,\dir{\tilde q_s}{p})\ge\pi- \varepsilon_s/2$$
+ $$\angle(\tilde q_s p\tilde q_s')\ge\pi- \varepsilon_s/2$$
+and shortest paths $p\tilde q_s$, $p\tilde q_s'$ are unique.
+%For any such sequences holds: for any$p^0\in B_{1/\lambda_n}(p)$we have
+We can find monotonic sequence $r_s\to 0$ so that $|p\tilde q_s|/r_s\to\infty$
+for any $p^0\in B_{r_s}(p)$
+and for any approximating sequences
+$M_i\ni q_{s,i}\to \tilde q_s$, $p^0_i\to p^0$ we have by property~\ref{convvf}
+$$\limsup_{i\to\infty}  \< v_i,\dir{p_i}{\tilde q_{s,i}}\> -c\varepsilon_k\le
+\liminf_{i\to\infty}  \<v_i,\dir{p^0_i}{\tilde q_{k,i}}\>\le\limsup_{i\to\infty}  \< v_i,\dir{p^0_i}{\tilde q_{k,i}}\>
+\le\liminf_{i\to\infty}  \<v_i,\dir{p_i}{\tilde q_{k,i}}\> +c\varepsilon_k .
+$$
+We know that $$\angle(\tilde q_{t_1}p\tilde q_{t_2})\le\varepsilon_s$$ for $t_1, t_2>s$.
+Hence (taking other sequences $\varepsilon_k$ and costant $c$)
+we can find ``limit constant'' $\<v,a\>$ so that
+ $$\<v,a\>-c\varepsilon_k\le
+\liminf_{i\to\infty}
+\<v_i,\dir{p^0_i}{\tilde q_{k,i}}\>\le\limsup_{i\to\infty}  \< v_i,\dir{p^0_i}{\tilde q_{k,i}}\>
+\le\<v,a\> +c\varepsilon_k(*).$$
+
+Let
+$$k(n)=\max\set{t\in N}{\forall s\ge n\quad 1/\lambda_s<r_t}$$
+We set $q_n:=\tilde q_{k(n)}$.
+By construction $h_{\lambda_n}( q_n)\GHwto\RR_a^{+\infty}$
+and the estimate $(*)$ implies that we can find appropriate function $k(n)$.
+\qeds
+
+
+\parit{Proof of \ref{l:convVCone}.}
+We take $k(n)=\max$ of that from \ref{constr}
+and lemma~\ref{lem:vconvergLoc},
+sequences
+$M_i\ni q_{n,i}\to q_n$ from  lemma~\ref{lem:vconvergLoc}.
+Let $k'(n)\ge k(n)$.
+We regard convergence
+$$\lambda_n M_{k'(n)}\GHto (\T_p A, p)=(\RR^{m-2}\times \Cone_x^2,x)$$
+then $y_n=h_{\lambda_n}(q_{n, k'(n)})\GHto \R_a^{+\infty} $.
+Let sequence $\lambda_n M_{k'(n)}\ni x_n\to x\in \RR^{m-2}\times \Cone_x^2$.
+By definition we know that
+ $\<v_n,\dir{x}{y}\>=\<\bar v_n, \dir{h_{\lambda_n}(x)}{h_{\lambda_n}(y )}\>$
+for any $x,y\in M_n$
+hence lemma~\ref{lem:vconvergLoc} implies that
+$$\<v,a\>-c\varepsilon_n\le\<\bar v_n,\dir{x_n}{y_n}\>\le\<v,a\>+c\varepsilon_n.$$
+Let also regard some
+$a_n\GHto \R_a^{+\infty} $ from construction of $f_a$ in \ref{???}.
+By lemma \ref{lem:angle}
+$\angle (a_n p_n y_n)\to 0$.
+Hence
+$$\<\bar v_n,\dir{x_n}{a_n}\>\to\<v,a\>.$$
+\qeds
+
+\section{Proof of claim~\ref{A'}}\label{sec:codim2}
+\subsection{Locally two partitial limits approximately coinside.}
+\begin{thm}{Claim}\label{cl:convLocCodim2}
+Let sequence of manifolds $M_n\GHto A$,
+$R_n$ weakly converges to $R^o$,
+point $p\in A^{m-2}$. Then
+for every  $r_n\to 0$
+
+$(1/r_n)^{m-2}R^i(B_{r_n}(p))\to R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge \mathring{v}^{m-2}}(B_{1}(p))$
+
+\end{thm}
+
+Before the prove we give the following general lemma:
+
+\begin{thm}{Lemma}
+Let $p $ be the measure on $K$.
+Let we have convergence of Alexandrov spaces $K_i\GHto K$
+  and for  any space of the sequence there is smoothing $N_{in}\to  K_i$.
+Let for every $i$ measures $p_{in}$ on $N_{in}$ weakly
+converge to measure $p_i$ on $K_i$.
+Suppose there is a function $k(i)$ so that
+for every $k'\ge k$ we
+have $N_{i k'(i)}\GHto K$ and
+$p_{i k'(i)}$ weakly converges to $p$ (*).
+Then $p_i$ weakly converges to $p$.
+
+\end{thm}
+
+\parit{Proof.} Standart argument - diagonal subsequence. \qeds
+
+ \parit{Proof of \ref{cl:convLocCodim2}.}
+In our case: set $\lambda_n=1/r_n$,
+for homothety $h_\lambda\:A\to \lambda A$ and measure
+$p$ on $A$ we denote $p^\lambda$ the pullback (pushforward?) on  $\lambda A$.
+
+
+$K={\T_p A}$, $p=R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge
+\mathring{v}^{m-2}}$,  $K_i={\lambda_i A}$,
+$N_{in}=\lambda_i M_n$. The function $k(i)$ is
+from \ref{cl:convVCone} above.
+$p_{in}={\lambda_i}^{m-2}(R_n)^{\lambda_i}$
+$p_i={\lambda_i}^{m-2}(R^0)^{\lambda_i}$.
+Because of \ref{cl:convVCone} condition (*) of this lemma foolfilled.
+
+By previous lemma we obtain that
+${\lambda_i}^{m-2}(R^0)^{\lambda_i}$ weakly converges to measure
+$R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge
+\mathring{v}^{m-2}}$.
+Because measure $R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge
+\mathring{v}^{m-2}}$ is special? as  it is
+we have ${\lambda_i}^{m-2}(R^0)^{\lambda_i}(B_1^{\lambda_i}(p))\to R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge \mathring{v}^{m-2}}(B_{1}(p))$.
+Since $(R^0)^{\lambda_i}(B_1^{\lambda_i}(p))=R^0(B_{1/\lambda_i}^{M_i}(p)$
+the claim follows.
+\qeds
+
+Let $R^1, R^2$ be two weak limits
+of  $R(v^1_n\wedge\dots\wedge v^{m-2}_n )$.
+
+\begin{thm}{Claim}\label{cl:R12loc}
+
+
+1) Suppose $p\in A^{m-2}$ be so that $R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge \mathring{v}^{m-2}}\neq 0$, i.e.
+$\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge \mathring{v}^{m-2}\neq 0$
+Then
+ $$R^1(B_{r}(p))/R^2(B_{r}(p))\xrightarrow{r\to 0} 1$$
+and
+$$\frac{(r_2)^{m-2}R^i(B_{r_1}(p))}{(r_1)^{m-2}R^i(B_{r_2}(p))}\xrightarrow{r_1, r_2\to 0} 1, \qquad i=1, 2,$$
+in particular for sufficiently small $r>0$
+we have
+$$ R^i(B_{2r}(p))<2\cdot 2^{m-2}(R^i(B_r(p)),\qquad i=1, 2.$$
+
+2) Suppose $p\in A'$ be so that $R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge \mathring{v}^{m-2}}= 0$.
+Then for every $\epsilon>0$ there is $r_0>0$ so that
+for $r<r_0$
+$$ R_i(B_{r}(p))<\epsilon\cdot r^{m-2},\qquad i=1, 2.$$
+\end{thm}
+
+\parit{Proof.} Simple consequence of \ref{cl:convLocCodim2} \qeds
+
+\subsection{Completion of the proof.}
+The set $A'$ has $\sigma$-finite $(m-2)$ Hausdorff measure,
+hence in what follows we can assume all subsets of $A'$ to
+be of finite $(m-2)$ Hausdorff measure.
+We subdivide $A'=A'^1\cup A'^0$, here
+$$A'^1=\set{x\in A'}{R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge
+\mathring{v}^{m-2}}(x)\neq 0},
+\quad
+A'^0=\set{x\in A'}{R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge
+\mathring{v}^{m-2}}(x)= 0}$$
+and prove that
+$R^1|_{A'^1}=R^2|_{A'^1}$ and $R^i(A'^0)=0$.
+
+Let $K\subset A'^1$ be a measurable set.
+For every $\varepsilon>0$
+ by \cite[2.2.2]{federer} there exists open set $W\supset K$ with
+$R^i(W)\le R^i(A)+\varepsilon$.
+For every $x\in A'^1$  by claim~\ref{cl:R12loc} (1)
+   we can choose $r_0(x)$ sufficiently
+small
+so that for $r<r_0(x)$ we have
+$R_1(B_r(x))/R_2(B_r(x))=1\pm \epsilon$ and
+$ R^i(B_{2r}(p))<2\cdot 2^{m-2}(R_i(B_r(p)),\qquad i=1, 2$.
+The set $F=B_r(x)$ for $x\in A'^1, r<r_0(x), B_r(x)\subset W$ is
+$R^i$-adequate by  \cite[2.8.7]{federer}.
+So we can choose countable (disjoint?!!) subfamily $G\subset F$, such that
+$$R^i(W\setminus\cup G)=0.  $$
+Then obviously
+we have
+$$|R^1(K)-R^2(K)|\le (R^1(K)+R^2(K)+1)\epsilon,$$
+this proves that $R^1|_{A'^1}=R^2|_{A'^1}$.
+
+Let $K\subset A'^0$ be a measurable set. We know that
+$R^i_-(A')=0$ than for every $\varepsilon>0$
+ by \cite[2.2.2]{federer} we find open set $W\supset K$ with
+$R^i_-(W)\le \varepsilon$.
+For every $x\in A'^0$  by claim~\ref{cl:R12loc} (2)
+   we can choose $r_0(x)$ sufficiently
+small
+so that for $r<r_0(x)$ we have
+$ R^i(B_{r}(p))<\epsilon\cdot r^{m-2}.$
+We set
+$$K^{r_*}
+=
+\set{x\in K}{r_0(x)\le r_*\ \text{and}\  dist(x,A\setminus W)>r_* },$$
+obviously
+$K=\cup_{r_*}K^{r_*}$. Let $h^{m-2}(K^{r_*})=c<\infty$.
+We can choose approximating covering for Hausdorff measure of $K^{r_*}$:
+$$\cup_k B_{r_k}(x_k)\supset K^{r_*}, r_i<r_*\  \text{and}\
+\sum_k r_k^{m-2}< c+\varepsilon,$$
+then $$\sum_k (R^i B_{r_k}(x_k))<\epsilon\cdot(c+1).$$
+Since
+$\cup_k B_{r_k}(x_k)\subset W$ we have
+$R^i(\cup_k B_{r_k}(x_k))<\epsilon\cdot(c+2)$.
+Hence $R^i(K^{r_*})<\epsilon\cdot(c+3)$.
+
+\section{Proof of claim~\ref{A''}}\label{sec:codim3}
+
+\begin{thm} {Lemma}
+There is a constant $c$, so that
+$$R^i(K)\le c\cdot h_{m-2}(K)$$ for every
+measurable set $K$ with $h_{m-2}(K)<\infty$.
+\end{thm}
+
+\parit{Proof.}
+Follows from \cite[???]{petrunin-SC}.
+\qeds
+
+In \cite{BGP} it is proved the following
+\begin{thm}{Claim}
+$dim_H(A\setminus A(m-2,\de) )\le n-3$
+\end{thm}
+Hence $h_{m-2}(A'')=0$, the claim~\ref{A''} follows.
+
+
+\newpage
+
+\section {  APPENDIX}
+
+\section{Gromov Hausdorf function and measure convergence}
+
+\begin{rdef} {Definition}\label{deltaconv1}
+Let $A$ be topological manifold and $D\subset A$ an open set. We say that a
+sequence of
+signed Radon measures $\mu_n$ on $A$
+weakly $\delta$-converges to measure $\mu$ on $D$ if 
+for any continuos function
+$f:A\to\R$ with compact  $\supp f\subset D$ and $|f|\le 1$ we have
+$\int_A fd\mu_n \to \int_A fd\mu\pm\delta$.
+\end{rdef}
+
+For the sequence of uniformly bounded measures this definition is equivalent
+to the folowing.
+
+\begin{rdef} {Definition}\label{deltaconv2}Let $U\subset A$ be an open subset. We say that  a sequence 
+of measures $h_n\in C^*(A_n)$  
+weakly $\delta$-converges on the set 
+$U$ if for any two partial
+limits
+$h_1, h_2$
+of $h_n$
+and
+$\nu=|h_1-h_2|$
+we have $\nu(U)\le \delta$.
+
+\end{rdef}
+
+\begin{rdef} {Definition}
+Let $(A_n,\rho_n)$, $(A,\rho)$ be  metric spaces,
+we say that a sequence of homeomorphisms $a_n:D_n\to D$ is an approximation
+if
+$\rho_n(a_n^{-1}(x), a_n^{-1}(y))\to\rho (x,y)$ for all $x,y\in D$.
+
+
+\end{rdef}
+
+\begin{rdef} {Definition}Let $A_n$, $A$ be  metric spaces
+$ D_n, D_n'\subset A_n$, $D\subset A$
+let
+$a_n: D_n\to D$ and
+$a_n':D_n'\to D$ be approximations.
+We say that $a_n$ is equivalent to $a_n'$ if
+$\rho_n(a_n^{-1}(x), a_n'^{-1}(x))\to 0$ for all $x\in D$. 
+\end{rdef}
+
+\begin{thm}{Lemma}
+Let $A_n$, $A$ be  metric spaces
+$ D_n, D_n'\subset A_n$, $D\subset A$
+let
+$a_n: D_n\to D$ and
+$a_n':D_n'\to D$ be equivalent approximations. Then
+$\mu_n$ weakly $\delta$-converges to $\mu$ on $D$ w.r.t. $a_n:D_n\to D$
+iff 
+$\mu_n$ weakly $\delta$-converges to $\mu$ on $D$ w.r.t. $a_n':D'_n\to D$.
+\end{thm}
+
+
+\begin{thm}{Lemma}\label{smoothmeasure}
+Let open $\Omega\subset\R^n$ and
+$\mu_n$ be a  uniformly bounded sequence of signed Radon measures
+on $\Omega$.
+ Suppose that for any function 
+$\varphi \in C^\infty(\Omega)$ with compact support and
+$|\varphi|\le 1$ the sequence
+ $\int_A \varphi d\mu_n$ $\delta$-converges.
+ Then $\mu_n$ weakly $\delta$-converge.
+\end{thm}
+
+
+  \begin{rdef}{Remark}
+  The condition of uniform boundness is important.
+  Otherwise {\bf??}   
+  \end{rdef}
+
+\begin{rdef} {Definition}
+
+We say that a sequence of continuous functions $f_n\: A_n\to\RR$
+$\delta$-converges to a continuous function $f\:A\to\RR$
+on $U\subset A$
+ if supports of $f_n$ are uniformly bounded
+and for any sequence of points $x_n\to x\in U$ we have that: %\nolinebreak
+$\limsup f_n(x_n)+\liminf f_n(x_n)-\delta\le 2f(x)\le\limsup f_n(x_n)+\liminf f_n(x_n)+\delta.$
+\end{rdef}
+
+  
+  
+
+
+\section{Special functions on Alexandrov space}
+\subsection{
+Alexandrov-smooth functions and their level sets}
+\begin{rdef}{Definitions} For an Alexandrov space $A$ we define
+\emph{refinement} to be
+closed sets:
+$A(\delta)\subset A^{c\de}$.
+
+%Let$B\subset A$ $f:B\to \R$.$f$ is \emph{$c$-smooth} w.r.t. the refinement $A(\de)$if $d_xf$ is $c\delta$-linear for $x\in A(\delta)$
+
+\end{rdef}
+\begin{rdef}{Addendum to definition}
+\emph{$c$-Alexandrov smooth} function
+%if it is $c$-smooth w.r.t. $A(\delta)=A^\delta$on a compact set.
+\end{rdef}
+
+\begin{thm}{Lemma}\label{multidelta}
+1) Let
+$f_1,f_2,\dots,f_l$ be $c$-Alexandrov smooth tight collection (see??)
+then for $N_t=f_1^{-1}(0)\cap f_2^{-1}(0)\cap\dots\cap f^{-1}_l(0)$
+we have $N_t^{c_1\delta}\supset A^\delta\cap N_t$.
+
+2) Let $v_n$ be tangent to $N_t^n$ and $c_2\delta$-converging
+on $(N^{t_0})^\delta$
+for any sequence $t_n\to t_0$ w.r.t. the corresponding $GH$-convergence 
+$N_{t_n}^n\GHto N_{t_n}$.
+Then 
+$v_n$ is $c_3\delta$-convergent 
+w.r.t. the  $GH$-convergence 
+$M_n\GHto A$.
+
+\end{thm}
+
+\begin{thm}{Claim}\label{claim:smoothgrad}
+Let $f\:U\to \RR$ be smooth simple function
+and $f_n$ be its lifting.
+Then  gradients
+$\nabla f_n$ ``converges'' for smoothing $M_n\GHto A$.
+\end{thm}
+
+Let we have   $M_n\GHto A$  a noncollapsing sequence, $\dim M_n=\dim A=m$.
+\begin{thm}{Claim}\label{lem:scalprod}
+Let vector fields $v_n, w_n$ ``converges'' then for every compact
+set $K\subset A$ there is a constant $c>0$ so that
+$\<v_n, w_n\>$ $c\de$-converges on $A^\de\cap K$.
+\end{thm}
+In particular we have
+\begin{thm}{Corollary}\label{cor:scalprod}
+Let vector fields $v_n^1,\dots, v_n^m, v_n$ be
+uniformly bounded, ``converging''
+ and $m$-sets of vectors
+$v_n^1,\dots, v_n^m$ are uniformly linearly independent,
+i.e. $\det(\<v_n^i, v_n^j\>)>c_0$
+for some constant $c_0$.
+Then for coefficient of decomposition
+of $v_n=\alpha_n^1 v_n^1+\dots+\alpha_n^m v_n^m$
+ and for every compact
+set $K\subset A$ there is a constant $c>0$ so that
+$\alpha_n^i$ $c\de$-converges on $A^\de\cap K$.
+\end{thm}
+
+
+
+\subsection{Properties of ``convergent''  vector fields, Equivalent definition}
+\begin{thm}{Property}\label{convvf}
+
+Let vector
+field $v_n$ converges.Then for every compact $K\in A$ there is a constant $c>0$ so
+that for every points $p, x, q\in K$,
+%so that minimizing geodesics $[p x], [x q]$ are unique,
+ and approximating sequences
+ $p_n, x_n, q_n\in M_n$ so that geodesics
+$[x_n q_n], [x_n p_n]$ converges to
+$[x q], [x p]$ then
+$$\limsup_{n\to\infty}  \< v_n,\dir{x_n}{q_n}\>-
+\liminf_{n\to\infty}  \<v_n,\dir{x_n}{q_n}\>
+\le $$
+$$ c\cdot |x q|\cdot (\pi-\angle(p x q)).$$
+\end{thm}
+
+\parit{Proof.}
+We just take function $\widetilde{\dist}_{B_r(q)}$ for
+sufficiently small $r$ and  note that
+$(\limsup_{n\to\infty}  |\nabla f_n(y_n)|-
+\liminf_{n\to\infty}  |\nabla f_n(y_n)|)\le c(\pi-\angle(p x q))$.
+\qeds
+
+
+
+\subsection{Properties of "Alexandrov smooth" functions.}
+
+\begin{thm}{Claim}
+ Let $f_n\to f$ be a NICE Test sequence.
+ Then there is a constant $c>0$,
+ so that for every $x\in A^\delta$ the level set
+ $L_x=f^{-1}(x)$ is $c\delta$-strained at $x$.
+ 
+ \end{thm}
+ 
+ 
+\begin{thm}{Definition}
+$\delta_0$-smooth
+\end{thm}
+
+
+
+ \begin{thm}{Claim}
+ Let $f_n\to f$ be a NICE Test sequence
+and $g$
+be an Alexandrov smooth Lipshitz
+function. 
+ Then there is a constant $c>0$,
+ so that for every $x\in A^\delta$ 
+ the restriction
+ $g|_{L_x}$ to the
+ the level set
+ $L_x=f^{-1}(x)$ is $c\delta$-smooth at $x$
+ as a function on Alexandrov space $L_x$.
+ 
+ \end{thm}
+ 
+ \begin{thm}{Claim}
+ Let $T$ be a cone of nonnegative curvature
+ and $d:T\to\R$ a concave function that is homogeneous
+ on the rays.
+ 
+ \end{thm}
+
+
+\begin{thm}{Claim}\label{claim:projection}
+Let vector
+field $v_n$ converges.
+Let $N\subset A$ be smoothable convex hypersurface
+and $M_n\supset N_n\GHto N$ converging sequence of smooth convex
+hypersurfaces. Then projections of vector fields $v_n^\top$ on $N_n$
+converges with respect to $N_n\GHto N$.
+\end{thm}
+\begin{thm}{Claim}\label{claim:smoothgrad}
+Let $f\:U\to \RR$ be smooth simple function
+and $f_n$ be its lifting.
+Then  gradients
+$\nabla f_n$ ``converges'' for smoothing $M_n\GHto A$.
+\end{thm}
+Let we have   $M_n\GHto A$  a noncollapsing sequence, $\dim M_n=\dim A=m$.
+\begin{thm}{Claim}\label{lem:scalprod}
+Let vector fields $v_n, w_n$ ``converges'' then for every compact
+set $K\subset A$ there is a constant $c>0$ so that
+$\<v_n, w_n\>$ $c\de$-converges on $A^\de\cap K$.
+\end{thm}
+In particular we have
+\begin{thm}{Corollary}\label{cor:scalprod}
+Let vector fields $v_n^1,\dots, v_n^m, v_n$ be
+uniformly bounded, ``converging''
+ and $m$-sets of vectors
+$v_n^1,\dots, v_n^m$ are uniformly linearly independent,
+i.e. $\det(\<v_n^i, v_n^j\>)>c_0$
+for some constant $c_0$.
+Then for coefficient of decomposition
+of $v_n=\alpha_n^1 v_n^1+\dots+\alpha_n^m v_n^m$
+ and for every compact
+set $K\subset A$ there is a constant $c>0$ so that
+$\alpha_n^i$ $c\de$-converges on $A^\de\cap K$.
+\end{thm}
+\begin{thm}{Claim}
+Let  $f\:U\to \RR$ be a smoothed simple concave function on
+the bounded domain $U$,
+$x\in U$ be a point and level
+set $f^{-1}(f(x))=N$. Then there is a constant $c>0$
+so that $A^\de\cap N\subset N^{\de}$.
+\end{thm}
+
+
+\subsection{Existence of Nice sequences and Nice tight map sequences }
+
+Simple function $f: A\to \R$  
+is a function that can be presented as
+$$f=\sum_{i=1}^N \oint_{B_\varepsilon(q^i)} \phi \circ \dist_{x}dx$$
+for some $q^1,\dots,q^N\in A$,  $\varepsilon>0$ 
+and a concave increasing function
+$\phi$.
+
+Simple functions are 
+ liftable in a natural way. Namely,
+for a given sequence of Alexandrov spaces $A_n\GHto A$
+ for every $q^i$ one can
+   take a sequence $A_n\ni q^i_n\to q^i$
+   and define
+ $$f_n=\sum_{i=1}^N \oint_{B_\varepsilon(q^i_n)} \phi \circ \dist_{x}dx.$$
+ 
+  
+ \begin{thm}{Proposition}
+ For any
+ $p\in A$, $v\in T_pA$,
+ $\varepsilon>0$
+ there is a neighborhood $U\ni p$
+ and a simple function 
+ $$f=\sum_{i=1}^N \oint_{B_\varepsilon(q_i)} \phi \circ \dist_{x}dx$$
+ such that
+
+ 1) $\sup_{x\in \cup_{i=1}^N B_\varepsilon({q_i})}\angle(\uparrow_p^x, v) $ is arbitrary
+ small  and $d_pf$  is arbitrary close to $ <v,\cdot>$
+ 
+ 2) $f$ is Alexandrov smooth
+ for any lifting
+ 1) $f, f_n$ strictly concave
+ \end{thm}
+ 
+ 
+ 
+ tight
+ 
+ simple
+ tight
+ 
+ For any $v_1,$
+ there exists Nice tight map.
+ 
+ 
+ We can define lifting of this function if fix
+  some lifting sequence of points $M_n\ni p_n\to p\in A$ by the same formula:
+$$d_n=\widetilde{dist}_{B_r(p_n)}$$
+
+
+
+\begin{thm}{Theorem}
+For any 
+$p\in A^{0.001}$
+and a tight collection of %strongly linearly independent 
+vectors 
+$v_0, v_1,\dots,v_m$ there exists
+$U\ni p$ and a Nice
+tight collection of sequences
+$f^0_n\to f^0, f^1_n\to f^1,\dots,f^m_n\to f^m$
+with differentials $d_p f^i$
+ arbitrary close to $-\<v_i,\cdot\>$.
+ 
+ 
+ \end{thm}
+ 
+
+
+\subsection{  Functions }
+
+
+
+ \begin{rdef}{Definition}
+A function $f:A\to\R$
+is called a  \emph{simple function}
+if there exist
+ a finite set of points
+$q_1, q_2,\dots,q_N\in A$
+and
+a $\lambda$-concave function
+ $\Theta:\R^N\to\R$,
+such that  
+ $f=\Theta(\dist^2_{q_1},\dots,\dist^2_{q_N})$.
+\end{rdef}
+
+\begin{rdef}{Definition}
+A function $f:A\to\R$
+is called a  \emph{simple smooth  function}
+if there are
+ simple function
+$\Theta(\dist^2_{q_1},\dots,\dist^2_{q_N})$
+and $h>0$, such that
+\begin{equation}\label{simplefun}
+f=\oint_{B_h(q^1)\times B_h(q^2)\times\cdots\times B_h(q^N)} \Theta(\dist^2_{x_1},\dots,\dist^2_{x_N})dx_1dx_2\dots dx_N
+\end{equation}
+\end{rdef}
+
+ 
+\begin{rdef}{Definition}
+For a given simple smooth function $f:A\to \R$
+$$f=\oint_{B_h(q^1)\times B_h(q^2)\times\cdots\times B_h(q^N)} \Theta(\dist^2_{x_1},\dots,\dist^2_{x_N})dx_1dx_2\dots dx_N.$$
+and a sequence of Alexandrov spaces $A_n\GHto A$
+we define
+ a \emph{simple lifting} of $f$ to be a sequence of functions
+$f_n:A_n\to \R$, such that there are
+sequences of points $q_n^1,q_n^2,\dots,q_n^N\in A_n$,
+such that
+$q_n^1\to q^1, q_n^2\to q^2, \dots, q^N_n\to q^N$
+and
+$$f_n=\oint_{B_h(q^1_n)\times B_h(q^2_n)\times\cdots\times B_h(q^N_n)} \Theta(\dist^2_{x_1},\dots,\dist^2_{x_N})dx_1dx_2\dots dx_N.$$
+
+\end{rdef}
+
+\begin{rdef}{Definition}
+We say that a  simple smooth function $f:A\to \R$
+is Nice in $B_r(p)$ for $p\in A$ and $r>0$
+ if it is strictly concave ($\lambda$-concave for $\lambda<0$),
+Alexandrov smooth
+on $B_r(p)$
+and this two condition are open w.r.t. $GH$-convergence. Namely for any
+$A_n\GHto A$, $p_n\to p$, $\varepsilon>0$ and for any simple lifting $f_n\to f$ 
+for $n$ large enough $f_n$ is $\lambda+\varepsilon$-concave and
+Alexandrov smooth in $B_r(p_n)$.
+
+\end{rdef}
+
+\begin{thm}{Existence of a Nice function}
+For a given $p\in A^0$
+and $v\in T_pA$ 
+there exists 
+a  simple smooth function $f:A\to \R$  and $r>0$
+such that $f$
+is Nice in $B_r(p)$
+and $d_pf(\cdot)$
+is sufficiently
+close to $-\<v,\cdot\>$.
+
+\end{thm}
+
+
+\begin{thm}{Concave smoothing (After Green-Wu and Alexander-Kapovich-Petrunin)  }
+Here we describe a $C^\infty$-smoothing in the class of $\lambda$-concave functions. 
+
+
+Let us fix $r>0$ and
+consider semi-concave functions $f:B_{2r}(p)\to \R$ defined on
+balls in Riemannian manifolds $B_{2r}\subset M$.
+There is a one-parametric (parametrized by $\varepsilon\in(0,1]$)
+ family of correspondences $f\mapsto f_\varepsilon$,
+where $f_\varepsilon:B_{2r}\to\R$ is a $C^\infty$ function,
+with the following properties.
+
+1) $|f-f_{\varepsilon}|(x)<C\varepsilon$, where the constant $C$ is uniform for different manyfolds and functions,
+if we assume uniform bound on sectional curvatures of balls and on Lipshitz constant
+for functions.
+
+2) suppose that Riemannian metrics on $B_{2r}^{M_n}(p_n)$
+$C^\infty$-converge to a Riemannian metric $B_{2r}^M(p)$ 
+and $f_n$ $C^0$-converge to $f$, then
+
+(i) $(f_n)_\varepsilon$ $C^0$ converges to $f_\varepsilon$ on $B_r^M(p)$
+
+(ii) if $f$ and $f_n$ are $\lambda$-concave, then
+$\lim_{\varepsilon\to 0} \sup_{n,\gamma} (f_n\circ \gamma)_\varepsilon ''\le \lambda$
+
+ We
+call this fixed ones and forever a correspondence $GW+AKP(\varepsilon)$-smoothing.
+\end{thm}
+
+\begin{rdef}{Definition}
+Let    a simple smooth function
+$f:A\to\R$ be 
+ Nice in $B_{2r}(p)$,
+a sequence of Riemannian manifolds $M_n\GHto A$
+and $p_n\to p$.
+We say that sequence of $C^\infty$ 
+functions
+$f_n: B_{2r}^{M_n}(p_n)\to \R$
+converging to $f$
+is {\emph a  Nice lifting of $f$}
+if for some $\lambda<0$
+ $f_n$ are $\lambda$-concave  for sufficiently large $n$.
+
+\end{rdef}
+
+{\bf Existence of Nice sequence} 
+
+For any simple smooth function
+$f:A\to\R$
+ Nice in $B_{2r}(p)$, a sequence of Riemannian manifolds $M_n\GHto A$
+and $p_n\to p$
+there exists  a Nice lifting
+$f_n: B_{2r}^{M_n}(p_n)\to \R$.
+
+\parit{Construction.}
+We construct
+Nice lifting as follows.
+Let $g_n:M_n\to \R$
+be some simple
+lifting  of $f$, then for some $\lambda<0$, $N>0$
+ for sufficienly large $n>N$
+functions $g_n$ are $\lambda$-concave. 
+Then for every $n>N$ we apply to the function $f_n$
+ $GW+AKP(\varepsilon)$-smoothing for $\varepsilon=\varepsilon_n$
+sufficiently small, so  that $(g_n)_{\varepsilon_n}$ is
+$\lambda/2$-concave and $|g_n-(g_n)_{\varepsilon_n}|< 1/n$.
+Then we take $f_n=(g_n)_{\varepsilon_n}$.
+
+\section{DC in domain of $\R^n$.}\label{sec:DC}
+
+In this section we give simplest calculations for  a class of function sequences on domain in $\RR^m$ 
+ that arise as coordinate expressions of Test sequences. 
+ We follow Perelman generalizing theory (\cite{}) for sequences
+ of $DC$-functions.
+ 
+Let fix $\Omega\i \RR^m$  an open bounded domain
+and
+ $S_\Omega\subset\Omega\subset\R^m $ subset of
+zero $(m-1)$-Hausdorff measure $h_{m-1}(S_\Omega)=0$.
+%, this will be referred as a subset of {\it singularities}.
+
+
+\subsubsection{Functions}
+We denote by  $\op{DC_0}(\Omega,S_\Omega)$ a class of
+ $\DC$-function, such  that are continuously differentiable on
+$\Omega\setminus S_\Omega$.
+
+
+We denote by $\op{C_0}(\Omega,S_\Omega)$ a set of bounded functions
+$f\:\Omega\to\RR$, which are continuous on $\Omega\setminus S_\Omega$.
+
+
+We recall that a measurable function $f\:\RR^m\to \RR$ is of
+bounded variation
+ ($f\in\op{BV}(\Omega,\RR)$) if there is a real constant $c$,
+such that  the inequality
+$$\int\limits_\Omega f\cdot D_i\phi
+\le
+ c\cdot\sup_{x\in\Omega}|\phi(x)|$$
+holds
+for any $i$ and any smooth function $\phi\:\Omega\to \RR$ with compact support.
+
+
+
+We denote by $\op{BV_0}(\Omega,S_\Omega)$ a set of bounded functions
+$f\:\Omega\to\RR$, which are continuous on $\Omega\setminus S_\Omega$.
+
+
+We say that a signed Radon measure $\mu$ is in
+$\aleph_0(\Omega,S_\Omega)$ if $\mu(S_\Omega)=0$.
+
+
+
+\subsubsection{Sequences}
+Let $h_n:\Omega\to\R$ be a sequence of $C^1$-differentiable $DC$-functions that
+$DC$-converges to the function $h$ and in addition
+$h\in \op{DC_0}(\Omega,S_\Omega)$. In this case we will write 
+$$(h_n,h)\in \op{DC_0^{seq}}(\Omega,S_\Omega).$$
+
+Let $h_n:\Omega\to\R$ be a sequence of $C^0$-functions
+% with uniformly bounded supports 
+that
+C-converges  to the function $h$
+ on
+$\Omega\setminus S_\Omega$.
+ %and in addition $h\in \op{C_0}(\Omega,S_\Omega)$. 
+In this case we will write 
+$$(h_n,h)\in \op{C_0^{seq}}(\Omega,S_\Omega).$$
+
+Let $h_n:\Omega\to\R$ be a sequence of $C^0$-functions
+with uniformly bounded variations
+and  $h:\Omega\to\R$ be a 
+function so that
+ that $h_n$
+C-converges  to the function $h$
+ on the set where $h$ is continuous.
+  In this case we will write 
+$$(h_n,h)\in \op{CBV^{seq}}(\Omega).$$
+
+Let $h_n:\Omega\to\R$ be a sequence of $C^0$-functions
+with uniformly bounded variations
+that
+C-converges  to a function $h$
+ on 
+ $\Omega\setminus S_\Omega$.
+  In this case we will write 
+$$(h_n,h)\in \op{BV_0^{seq}}(\Omega,S_\Omega).$$
+
+For  a sequence of signed Radon measure $\mu_n$
+that converges weakly to the measure $\mu\in\aleph_0(\Omega,S_\Omega)$
+ we will write
+$$(\mu_n,\mu)\in\aleph_0^{seq}(\Omega,S_\Omega).$$
+
+
+\subsubsection{Operations}
+It is known that
+partial derivative of $DC$ functions are of bounded variation
+and the second are signed Radon measures, 
+the correspondent properties for $DC$ - sequences 
+are given following theorem.
+\begin{thm}{Theorem}\label{thm-D}
+(1) If     $( f_n, f)\in\op{DC_0^{seq}}(\Omega,S_\Omega)$ 
+then for every $i$ the partial derivative (defined almost everywhere)
+we have
+$$\biggl(\frac{\partial f_n}{\partial x_n^i}, \frac{\partial f}{\partial x^i}\biggr)\in\op{BV_0^{seq}}(\Omega,S_\Omega).$$
+(2) 
+ If     $( f_n, f)\in\op{BV_0^{seq}}(\Omega,S_\Omega)$ 
+then for every $i$ for the partial derivative (defined as measures)
+we have
+$$\biggl(\frac{\partial f_n}{\partial x_n^i}, \frac{\partial f}{\partial x^i}\biggr)\in\aleph_0^{seq}(\Omega,S_\Omega).$$
+
+\end{thm}
+We can  multiply $C_0$ functions by $\aleph_0$ measures and
+obtain again $\aleph_0$ measures, the correspondent statement
+for sequences is the following:
+\begin{thm}{Theorem}\label{thm-CM}
+Let $f_n, f\in\op{C_0^{seq}}(\Omega,S_\Omega)$,
+measures $g_n, g\in\aleph_0(\Omega,S_\Omega)$,
+then
+$$(f_n\cdot g_n,f\cdot g)\in\aleph_0^{seq}(\Omega,S_\Omega).$$
+\end{thm}
+The class of $BV_0$ and $C_0$ functions and sequences is closed under analytic expression as
+says the following theorem:
+\begin{thm}{Theorem}\label{thm-A}
+Let sequences $(f^1_n,f^1),\dots,(f^k_n, f^k) \in \op{BV_0^{seq}(C_0^{seq})}(\Omega,S_\Omega)$,
+and $A$ be  $C^\infty$-function well defined in a small neighborhood of
+$(f^1,\dots,f^k)(\Omega)$.
+Then $$(A(f^1_n,\dots,f^k_n), A(f^1,\dots,f^k))\in\op{BV_0^{seq}(C_0^{seq})}(\Omega,S_\Omega).$$
+\end{thm}
+
+
+\subsection{proof dc,bv,etc.}
+
+\parit{Proof of \ref{thm-CM}.}
+We need to check that
+$\int_{\Omega}f_n\cdot g_n h$ converges
+for any smooth function $h$ with compact support.
+Denote by $S^\delta$ the set where $f$ has jumps of size $\ge\delta$.
+Since it is compact and $g(S^\delta)=0$ there exists open set
+$V\supset S^\delta$ so that
+ $g(clos V)<\delta$ for large $n$.
+Since $f$ has no jumps of size $>\de$ on $\Omega\setminus K\supset \Omega\setminus close V$
+we can find a  continuous function
+$\bar f$  so that $\bar f h$ is $2\de$-close to $f h$ on
+ $\Omega\setminus close V$.
+Then $$\int_{\Omega}\bar f g_n h\to\int_\Omega\bar f g h$$
+because $g_n$ weakly converges to $g$.
+We know that $f_n h\ddto{2\de} \bar f h$ on $\Omega\setminus V$
+because of compactness of $\supp f_n h\subset \supp h$,
+hence $|\bar f h-f_n h|\le 4\de$ on $\Omega\setminus V$ for large $n$;
+now because of uniform bound for $g_n$ we have
+$$|\int_{\Omega\setminus V}\bar f g_n h-\int_{\Omega\setminus V} f_n g_n h|<C\de.$$
+We also know that $g_n( V)<\delta$ for large $n$,
+hence because of uniform bound for $f_n h$ we have
+$$|\int_{V}\bar f g_n h-\int_V f_n g_n h|<C\de.$$
+Hence $\int_{\Omega }f_n g_n h$ for every $\de>0$
+$4C\de$-converges.
+
+\parit{Proof of \ref{thm-A}.}
+We can prove even more, the expression for partial derivative:
+$$D_i A(f^1,\dots,f^k)=\sum \frac{\partial A}{\partial x_k}(f^1,\dots,f^k)D_if^k.$$
+It is sufficient to proof for any smooth $\phi$
+$$\int A(f^1,\dots,f^k)D_i\phi=\int \sum \frac{\partial A}{\partial x_k}(f^1,\dots,f^k)D_if^k\phi.$$
+This equation is hold for smooth functions, then apply theorem~\ref{thm-CM}.
+
+
+\section{DC-coordinates for Alexandrov space}
+
+\subsection{Nice functions in coordinates}
+
+A sequence of convergent convex functions in $U_n\subset M_n$ rewrited
+in Nice coordinates became a sequence of $DC$-functions (difference concave).
+A sequence of smooth functions  in $U_n\subset M_n$
+which $C^1_{Alex}$-converges
+rewrited
+in Nice coordinates became a sequence of smooth functions 
+
+
+
+Let $f_n:U_n\to\R$ be
+a sequence of concave functions and
+$f_n\stackrel{C}{\rightarrow}f:U\to\R$.
+Then 
+$(\widetilde {f_n}, \widetilde {f})\in DC(\Omega)$.
+
+Let $f_n:U_n\to\R$ be
+a sequence of smooth functions and
+$f_n\stackrel{C^1_{Alex}}{\rightarrow}f:U\to\R$.
+Then $\partial_i \widetilde {f}$ is correctly defined
+and continuous on
+$\Omega\setminus \mathfrak X(S)$
+and
+$\partial_i \widetilde {f_n}$
+uniformly converges to
+$\partial_i \widetilde {f}$
+on
+$\Omega\setminus \mathfrak X(S)$
+
+for a Nice sequence
+$(\widetilde {f_n}, \widetilde {f})\in DC_0(\Omega, \mathfrak X(S))$.
+
+
+\subsection{Metric tensor and connection in coordinates.}\label{sec:metr-con}
+
+\begin{thm}{Theorem}\label{metricBV}
+Let
+$\mathfrak X_n:U_n\to\Omega$,
+$\mathfrak X:U\to\Omega$ be a Nice common chart.
+Denote by $g_{ij,n}$ coordinates of metric tensor in this chart
+and by $g^{ij}_n$ coordinates of the inverse matrix. 
+Then
+$g_{ij,n}\in BV_0^{seq}(\Omega)$
+and
+$g^{ij}_n\in BV_0^{seq}(\Omega)$.
+In particular
+$\det(g_{ij,n})$ and
+$\det(g^{ij}_n)$ are bounded and bounded away from 0.
+
+\end{thm}
+
+\begin{thm}{Perelman's Lemma on metric tensor}\label{lem:metric-tensor}
+
+Let $M_n\GHto A$ be a noncollapsing sequence and $\{F_n\}, F$ be a common chart.
+Then
+the metric tensor $g$ for chart $F$ is well defined in
+$F(A^\circ)=\Omega\setminus\Omega_S $
+and its components $g_{i j}$ are in $BV_0(\Omega,\Omega_S)$.
+
+Moreover, components of  metric tensors $g_{i j, n}$  of $M_n$
+regarded on $\Omega$ are $BV_0(\Omega,\Omega_S)$ converging to $g_{i j}$.
+\end{thm}
+
+Let $x_n:U_n\to\Omega$, $x:U\to\Omega$ be common smoothed
+distance chart.
+For any vector field
+$v_n:U_n\to TU_n$  its coordinate are well defined
+on $\Omega$, and for vector field $v:U\to \Omega$
+its coordinate are well defined
+on  $\Omega\setminus\Omega_S $, we denote this coordinates
+$\widetilde{v_n^i}=dx^i_n(v_n), \quad\widetilde {v^i}=dx^i(v)$.
+ 
+Since sequences  transition functions are $DC_0$
+(and hence theirs partial derivatives are in $BV_0$) 
+ it follows that if coordinates of sequence of vector fields is
+in $BV$ or in $C_0$ in one smoothed distance chart,
+then the same holds for another one. 
+
+\begin{thm}{Perelman's Lemma on connection}\label{lem:connection}
+Let
+$A$ be Alexandrov space with singularity set
+$S$,
+ $\delta>0$ be sufficiently small,
+ open set $U\subset A^\delta$
+let $x:U\to\Omega$ be a smoothed distance chart, $S_\Omega=x(S)$
+and
+ $u, v, w$ be bounded vector fields on $U$,
+so that $\widetilde{u^i}, \widetilde{w^i}\in\op{C_0}(\Omega,S_\Omega)$
+and
+$\widetilde{v^i}\in\op{BV_0}(\Omega,S_\Omega)$
+then connection can be correctly defined as measure
+$\langle\nabla_{u}v, w\rangle_g\in\aleph_0(\Omega,S_\Omega)$ by
+the formula in coordinates:
+$$\sum_{i,j,k}u^i w^j\biggl(\frac{\partial v^k}{\partial x_i}g_{k j}+\frac{1}{2}v^k\biggl(
+\frac{\partial g_{i j}}{\partial x_k}+\frac{\partial g_{k j}}{\partial x_i}-\frac{\partial g_{i k}}{\partial x_j}\biggr)\biggr)\cdot \op{det}(g_{i j})^{1/2}$$ 
+
+Furthermore, assume
+we have a noncollapsing  sequence of manifolds  $M_n\GHto A$,
+ and
+$x_n:U_n\to\Omega$, $x:U\to\Omega$
+is common smoothed
+distance chart
+so that $U\subset A^\delta$.
+Let $u_n, v_n, w_n$ be uniformly bounded vector fields on $U_n\subset M_n$
+and $u,v,w$ be limit vector fields on $U\subset A$ in a sense  
+that
+ $(\widetilde{u_n^i}\widetilde{u^i}), (\widetilde{w_n^i},\widetilde{w^i})\in\op{C_0^{seq}}(\Omega,S_\Omega)$
+and
+$(\widetilde{v_n^i},\widetilde{v^i})\in\op{BV_0^{seq}}(\Omega,S_\Omega)$,
+then measures
+$\langle\nabla_{u_n}v_n, w_n\rangle_{g_n}$
+weakly converges to
+$\langle\nabla_{u}v, w\rangle_g$ and
+$$\bigl(\langle\nabla_{u_n}v_n, w_n\rangle_{g_n},\langle\nabla_{u}v, w\rangle_g\bigr)\in\aleph_0^{seq}(\Omega,S_\Omega).
+$$
+
+\end{thm}
+
+
+\section{Sketch of the proof of Lemma~\ref{A^0} for higher dimensions}
+We 
+ prove the $c\delta$-convergence
+ of co-sectional curvature 
+in a small neighborhood 
+for a number of $(m-2)$-collections of Test sequences,
+so that a curvature tensor can be reconstructed 
+as a linear combination.
+So we prove firstly the convergence
+for a given $(m-2)$-collection of Test sequences.
+
+%Let a point $x_0\in A^0$ and a neighborhood $U\ni x_0 $ be sufficiently small.
+We fix a tight collection of
+Nice sequences of functions $g_n^1,\dots, g_n^{m-2}$    on
+small converging neighborhoods $U_n$          
+and regard а "foliation"  of $U^n$ into $2$-dimensional manifolds, that are
+ intersections of the level sets,
+ for every $t=(t_1,\dots,t_{m-2})\in (g_n^1,\dots, g_n^{m-2})(U_n)\subset\R^{m-2}$    
+  we denote these manifolds by
+ $K^t_n=(g_n^1)^{-1}(t_1)\cap\dots\cap (g_n^{m-2})^{-1}(t_{m-2})$
+ and by $Int_n^t$ theirs intrinsic curvature. ({\bf?} 
+ or sometimes  we use  notation $K_n^x$ for intersection of the level sets containing point $x\in U_n$).
+ 
+ 
+ 
+ We know that
+ $\sec K^t_n \ge\kappa$
+  (see \ref{convexinconvex}) and $K_n^t \GHto K^t$(for any fixed $t$), hence 
+  $K^t$ is an Alexandrov space with curvature bounded below by 
+  $\kappa$ and measures with densities $Int^t_n$ w.r.t. areas
+  weakly converge by Gauss-Bonnet formula to some measure on $K^t$.
+  So to prove weak $c\delta$-convergence of sectional curvature 
+  along $K^t_n$
+   it is sufficient  
+   to estimate weak $c\delta$-convergence of the
+ full Gauss curvature of $K^t_n$ in $U_n$ (because of Gauss theorem).
+  
+  We prove this convergence in two steps:  
+  
+ 1) We prove firstly 
+ weak $c\delta$-convergence of
+ determinant second  fundamental form of $K^t_n$ w.r.t. some 
+ normal field.
+ We denote the $3$-dimensional submanifolds
+ $N^{t_2,\dots,t_{m-2}}_n=g_2^{-1}(t_2)\cap\dots\cap g_{m-2}^{-1}(t_{m-2})$, then
+ by \ref{convexinconvex}  the restrictions of $g_n^1$ onto $N_n^x$ are concave   functions
+ with level sets
+ $K_n^x$. 
+ We have by \ref{convexinconvex} 
+  $\sec N^{t}_n\ge\kappa$ and
+ $N_n^t\GHto N^t$, sequence $g^\#_n=g^1_n|_{N_n}$ is
+ Nice {\bf (?!!)},   hence Main theorem can be applied for this sequence.
+ So measures with densities  
+ $R^{N_n}(\nabla g^\#_n)$ w.r.t $3$-dimensional volume
+ weakly converge.
+We also  know that measures with densities $Int^t_n$ w.r.t. 
+$3$-dimensional volume
+  weakly $c\delta$-converge (see Claim~\ref{Int-alm-conv}), hence
+   applying   Gauss theorem
+    we obtain  weak $c\delta$-convergence 
+    for measures with densities $G^{K\subset N}$
+    w.r.t.       $3$-dimensional volume.
+    Let note that
+    $\cdot G^{K\subset N}=\frac{1}{|w|^2}G^{K\subset U,w}$, where $w$
+    is the projection of $\nabla g^1_n$ onto tangent  
+    space of $N^t_n$, that is the orthogonal complement to
+    $\nabla g^2_n,\dots,\nabla g^{m-2}_n$. 
+    So we have weak $c\delta$-convergence 
+of         the determinant of the 
+second fundamental form w.r.t. normal fields $w_n$, which depends only on
+gradients $\nabla g^1_n,\dots,\nabla g^{m-2}_n$. 
+       
+  2)We use Remark~\ref{concavelinear}
+and change  linearly  $(m-2)$-collection of sequences of functions.
+ By the Remark, the
+    $2$-dimensional intersection sets  $K_n$
+    don't change, but gradients and consequently 
+     normal fields $w_n$ change linearly.
+   In this way  we can prove
+    $c\delta$-convergence 
+of         the determinant of the 
+second fundamental form for $K_n$ w.r.t.  different normal fields.     
+ Finely we note that for sufficiently many (namely (m-2)(m-3)/2 {\bf?})
+  normal fields in general position
+  we can express the     
+    full Gauss curvature of $2$-dimensional surface 
+      in correspondent "relative Gauss curvatures".
+
+
+
+\begin{thm}{Remark} \label{concavelinear}
+Let 
+$g_1,\dots,g_l$ be a collection of concave functions
+and coefficients 
+$\alpha_1,\dots,\alpha_l \ge0$, then the function
+$\alpha_1g_1+\dots+\alpha_lg_l$ is concave.
+Let $(\alpha_{ij})_{i,j=1}^l$ be a nondegenerate
+matrix , then the intersection of all ($l$) level sets
+for the collection $f_1,\dots,f_l$
+coincides  
+ (for appropriate parameters) with  the intersection of $l$ level sets
+for the collection
+ $\alpha_{11}g_1+\dots+\alpha_{1l}g_l$,\dots,  $\alpha_{l1}g_1+\dots+\alpha_{ll}g_l$.
+ \end{thm}
+\begin{thm}{Lemma} \label{convexinconvex}
+
+Let 
+$g_1,\dots,g_l$ be a tight collection of smooth concave functions on a Riemannian manifold $M$.
+Let denote the intersection of level sets
+$L_s=(g^1)^{-1}(t_1)\cap\dots\cap (g_n^{s})^{-1}(t_{s})$ for $s=1,\dots, l$,
+then the restriction of
+$g^{s+1}$ onto $L_s$
+is a smooth concave function.  In particular
+$L_{s+1}$ is a smooth 
+locally convex
+submanifold in $L_s$ for $s=1,\dots, l$. 
+Therefore if we have lower curvature bound
+$\sec M \ge\kappa$
+then
+$\sec L_s \ge\kappa$
+for
+$s=1,\dots, m-2$.
+\end{thm}
+\begin{thebibliography}{52}
+\bibitem[AKP]{AKP} Alexander, S.; Kapovitch, V.; Petrunin A.
+An optimal lower curvature bound for convex hypersurfaces in Riemannian manifolds.
+
+
+\bibitem[AZ]{AZ}Aleksandrov, A.D. and Zalgaller, V.A. [1962]: Two-dimensional manifolds of bounded curvature.
+Tr. Mat. Inst. Steklova 63. English transl.: Intrinsic geometry of surfaces. Trans!. Math. Monographs
+15, Am. Math. Soc. (1967), Zb1.l22,170
+
+
+\bibitem[BN]{BN}Berestovskij, V.N.; Nikolaev, I.G.
+Multidimensional generalized Riemannian spaces. (English. Russian original)
+Geometry. IV. Non-regular Riemannian geometry. Encycl. Math. Sci. 70, 168-243 (1993); translation from Itogi Nauki Tekh., Ser. Sovrem. Probl. Mat., Fundam. Napravleniya 70, 190-272 (1992).
+
+
+\bibitem[BGP]{BGP} Burago, Yu.; Gromov, M.; Perelman, G., \textit{A. D. Aleksandrov spaces
+with curvatures bounded below.} (Russian)  Uspekhi Mat. Nauk  47  (1992),  no.
+2(284), 3--51, 222;  a bad translation in  Russian Math. Surveys  47  (1992),  no. 2, 1--58
+\bibitem[Federer]{federer}Federer, H., \textit{Geometric measure theory} ???
+\bibitem[OS] {OS}Otsu, Shioa
+
+\bibitem[Per91]{PerStab} G. Perelman. \textit{Alexandrov spaces with curvatures bounded from below II. preprint}, (1991).
+\bibitem[Perelman]{PerDC} G. Perelman. \textit{DC structure on Alexandrov space}
+
+\bibitem[Petrunin-QG]{petrunin-QG} Petrunin, A., \textit{Applications of quasigeodesics
+and gradient curves.}
+
+\bibitem[Petrunin-SC]{petrunin-SC} Petrunin, A., \textit{An upper bound for curvature integral.} ???
+\bibitem[Petrunin07]{petrunin-conc} Petrunin, A., \textit{Semiconcave functions in Alexandrov’s geometry}
+
+
+
+
+\bibitem[Reshetnyak]{Resh} \textit{ Two-dimensional manifolds of bounded curvature} // Geometry-4: Non-Regular Riemannian Geometry. — Berlin, 1993. — P. 3-163, 245-250. — (Encyclopaedia of Math. Sci.; 70). 
+
+\bibitem[Kapovitch]{KapStab}Vitali Kapovitch \textit{Perelman's Stability Theorem.}
+\end{thebibliography}
+ \end{document}
+
+Решетняк Ю. Г., Двумерные многообразия ограниченной кривизны, Итоги науки и техники. Современные проблемы математики. Фундаментальные направления. Т. 70 (1989), 7-189.
+
+Научная библиотека диссертаций и авторефератов disserCat http://www.dissercat.com/content/skleivanie-rimanovykh-mnogoobrazii-s-kraem#ixzz3PZY6zKdR
+
+ 
