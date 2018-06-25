@@ -1,8 +1,5 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage{kusochek}
-\usepackage{eucal}
-\usepackage{xcolor}
-\usepackage{bm}
 
 \begin{document}
 \title{Curvature tensor of smoothable Alexandrov spaces.}
@@ -11,14 +8,6 @@
 
 \tableofcontents
 
-\newcommand{\M}{\mathcal M} 
-\newcommand{\A}{\mathcal A} 
-\newcommand{\SMA}{\mathcal{SMA}} 
-\newcommand{\SAA}{\mathcal{SAA}} 
-\newcommand{\ccto}{\stackrel{C^1_{Alex}}{\longrightarrow}}
-\newcommand{\cto}{\stackrel{C}{\longrightarrow}}
-\newcommand{\x}{\mathfrak x}
-\newcommand{\X}{\mathfrak X}
 
 \section{Introduction}
 \subsection{Main result and corollaries}
@@ -787,29 +776,17 @@ with gradients $\nabla g^i$ in general position near $p$ .
  We are deal with a special type of $C^1_{Alex}$-converging sequences 
   - Nice sequences which are defined locally (see Definition~\ref{def:Nice} ).
   
-  \begin{thm}{Lemma}\label{Str(v,v)}
-  For any $p\in A^0$ and $v\in T_pA$
-  there is a neighborhood $V_p$ and a Nice sequence 
-  $g_n:a_n^{-1}(V_p)\to\R$, $g:V_p\to\R$,
-    $g_n\ccto g$,
-   such that measures $\Str(\nabla g_n, \nabla g_n)dVol_n$
-  weakly $c\delta$-converges on
-  ${A^\delta\cap V_p}$  and $d_pf$
-  is arbitrary close to $-\<v,\cdot\>$.
-  
-  \end{thm}
+\begin{thm}{Lemma}\label{Str(v,v)}
+For any $p\in A^\circ$ and $v\in T_pA$
+there is a neighborhood $V_p$ and a Nice sequence $g_n:a_n^{-1}(V_p)\to\R$, $g:V_p\to\R$, $g_n\ccto g$, such that measures $\Str(\nabla g_n, \nabla g_n)dVol_n$ weakly $c\delta$-converges on ${A^\delta\cap V_p}$  and $d_pf$ is arbitrary close to $-\<v,\cdot\>$.
+\end{thm}
   
   
- For the proof of this lemma we use 
- expression for Strange curvature for Riemannian 
- manifold,
-namely
- a Bochner-type formula \ref{Bochner}
+For the proof of this lemma we use expression for Strange curvature for Riemannian  manifold,
+namely a Bochner-type formula \ref{Bochner}
 (section~\ref{sec:Bochner}).
 
-To prove convergence of
-integrals in this
- formula (section \ref{sec:str}) we use
+To prove convergence of integrals in this formula (section \ref{sec:str}) we use
 special chart with common domain for all the sequence and the limit space
  around a  point $p\in A^0$
 -
@@ -861,13 +838,16 @@ Here we rewrite Bochner formula, in such a way that each term has geometric mean
 Let $M$ be Riemannian $m$-manifold and $f\:M\to\R$ be a smooth function without critical points on an open domain $\Omega\i M$.
 Assume $\phi\:\Omega\to\R$ be a smooth function with compact support.
 Set $u=\nabla f/|\nabla f|$.
-Let us define $\Int_f(x)$ (or just $Int$) to be scalar curvature of the level set $L_x=f^{-1}(f(x))$ at $x\in L_x\i M$.
+Let us define $\Int_f(x)$ (or just $\Int$) to be scalar curvature of the level set $L_x=f^{-1}(f(x))$ at $x\in L_x\i M$.
 Set
 \begin{enumerate}
  \item $\kappa_1(x)\le\kappa_2(x)\le\dots\le\kappa_{m-1}(x)$ the principle curvatures of $L_x$ at $x$;
  \item $H=H(x)=\kappa_1+\kappa_2+\dots+\kappa_{m-1}$ is mean curvature of $L_x$ at $x$
 \item $G=G(x)=2\sum_{i<j}\kappa_i\cdot\kappa_j$ is the extrinsic term
- in the Gauss formula for $\Int_f(x)$.
+ in the Gauss formula for $\Int_f(x)$. Since the sectional curvature in the tangent direction to $L_x$ at $x$ can be written as $\tfrac12\cdot \Sc(x)-\Ric(u)$, the Gauss formula can be written as
+\[\Int_f(x)=G(x)+\tfrac12\cdot \Sc(x)-\Ric(u).\] 
+\item Let us define the strange curvature as
+\[\Str(u)=\Sc(x)-\Ric(u);\] in other words $\Str(u)$ is the sum of Ricci curvature in the direction of $u$ and twice the sectional curvature in the sectional direction normal to $u$.
 \end{enumerate}
 Then the following formula of Bochner type holds:
 $$\int\limits_\Omega \phi\cdot \Str(u)
@@ -875,12 +855,12 @@ $$\int\limits_\Omega \phi\cdot \Str(u)
 \int\limits_\Omega \l[H\cdot\<u,\nabla\phi\>- \<\nabla\phi,\nabla_u u\> \r]+
 \int\limits_\Omega \phi\cdot \Int(u)\eqlbl{Bochner}$$
 This identity will be refered further as \emph{Bochner formula}.
-%$$\int\limits_\Omega \phi\cdot (G-\Ric(u,u))=
-%\int\limits_\Omega \l[H\cdot\<u,\nabla\phi\>- \<\nabla\phi,\nabla_u u\> \r] $$
+$$\int\limits_\Omega \phi\cdot (G-\Ric(u,u))=
+\int\limits_\Omega \l[H\cdot\<u,\nabla\phi\>- \<\nabla\phi,\nabla_u u\> \r] $$
 
 \parit{Proof.}
-Let us write Bochner formula for field
-$u$:  {\bf ref??}
+Let us write Bochner formula \cite[8.3]{lawson-michelsohn} for field
+$u$ 
 $$D^2u-\nabla^*\nabla u=\Ric(u)$$
 Now let us integrate
 \begin{align*}
@@ -913,7 +893,7 @@ Therefore
 
 % {\bf ? coefficient 2 ?}
 
-Then applying Gauss identity $\Int=G+(\Sc-2\Ric(u,u)$
+Then applying Gauss identity $\Int=G+\Sc-2\Ric(u,u)$
 we obtain
 \ref{Bochner}.
 
@@ -1200,7 +1180,6 @@ $$\limsup_{n\to\infty} \int\limits_{V_n}\Int_n\psi_ndVol_n-\liminf_{n\to\infty} 
 \end{thm}
 
 \parit{Proof of \ref{H-converges}.}
-
 We rewrite
 $$\int\limits_{V_n} \<u_n,\nabla\psi_n\> H_ndVol_n
 =
@@ -1339,9 +1318,14 @@ we have that $supp(\psi_n)\subset V^*$
 and
  we can 
 rewrite
-$$ \int\limits_{V_n}\Int_n(x)\psi_n(x)dVol_n(x)=\int\limits_{V_n^*}\Int_n(x)\psi_n(x)dVol_n(x)
-=\int\limits_{-h}^{h} d t\int\limits_{ L_{t,n}^r}
- \frac{\psi_n(x)}{|\nabla \mathfrak x_n^1(x)|}\Int_n(x)d S_n^t(x),$$
+\begin{align*}
+\int\limits_{V_n}\Int_n(x)\psi_n(x)dVol_n(x)&=\int\limits_{V_n^*}\Int_n(x)\psi_n(x)dVol_n(x)
+=
+\\
+&=\int\limits_{-h}^{h} d t\int\limits_{ L_{t,n}^r}
+ \frac{\psi_n(x)}{|\nabla \mathfrak x_n^1(x)|}\Int_n(x)d S_n^t(x),
+\end{align*}
+
  where $ S_n^t$ is the $2$-volume on $ L_{t,n}^r$.
  
  For any $t\in[-h,h]$ we have
@@ -1512,8 +1496,8 @@ on $V\cap A^\delta$.
 
 \section{The case when the limit space is a cone}\label{sec:cone}
 
-Here is the proof for the case when $\omega<3\pi/2$,
-we have problems with $\omega\ge 3\pi/2$.
+Here is the proof for the case when $\omega>3\pi/2$,
+we have problems with $\omega\le 3\pi/2$.
 \subsection{Limit measure tensor, sketch of the proof }
 
 Let us denote by $\Cone_\omega$ the two-dimensional cone with total angle
@@ -3118,6 +3102,7 @@ $\sec L_s \ge\kappa$
 for
 $s=1,\dots, m-2$.
 \end{thm}
+
 \begin{thebibliography}{52}
 \bibitem[AKP]{AKP} Alexander, S.; Kapovitch, V.; Petrunin A.
 An optimal lower curvature bound for convex hypersurfaces in Riemannian manifolds.
@@ -3131,6 +3116,8 @@ Tr. Mat. Inst. Steklova 63. English transl.: Intrinsic geometry of surfaces. Tra
 \bibitem[BN]{BN}Berestovskij, V.N.; Nikolaev, I.G.
 Multidimensional generalized Riemannian spaces. (English. Russian original)
 Geometry. IV. Non-regular Riemannian geometry. Encycl. Math. Sci. 70, 168-243 (1993); translation from Itogi Nauki Tekh., Ser. Sovrem. Probl. Mat., Fundam. Napravleniya 70, 190-272 (1992).
+
+\bibitem[LM]{lawson-michelsohn} Lawson, H. Blaine, and Marie-Louise Michelsohn. \emph{Spin geometry}, 1989.
 
 
 \bibitem[BGP]{BGP} Burago, Yu.; Gromov, M.; Perelman, G., \textit{A. D. Aleksandrov spaces

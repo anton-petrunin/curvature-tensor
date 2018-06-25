@@ -1,0 +1,108 @@
+\section{Bochner formula}
+\label{sec:Bochner}
+
+In this section we will rewrite the Bochner formula, in such a way that each term has geometric meaning.
+
+Let $M$ be Riemannian $m$-manifold and $f\:M\to\R$ be a smooth function without critical points on an open domain $\Omega\i M$.
+Assume $\phi\:\Omega\to\R$ be a smooth function with compact support.
+Set $u=\nabla f/|\nabla f|$.
+Let us define $\Int_f(x)$ (or just $\Int$) to be scalar curvature of the level set $L_x=f^{-1}(f(x))$ at $x\in L_x\i M$.
+Set
+\begin{enumerate}
+ \item $\kappa_1(x)\le\kappa_2(x)\le\dots\le\kappa_{m-1}(x)$ the principle curvatures of $L_x$ at $x$;
+ \item $H_f=H_f(x)=\kappa_1+\kappa_2+\dots+\kappa_{m-1}$ is mean curvature of $L_x$ at $x$
+\item $G_f=G_f(x)=2\sum_{i<j}\kappa_i\cdot\kappa_j$ is the extrinsic term
+ in the Gauss formula for $\Int_f(x)$. 
+\end{enumerate}
+
+Let us define the strange curvature as
+\[\Str(u)=\Sc-\<\Ric(u),u\>,\]
+where $\Sc$ and $\Ric$ denote scalar and Ricci curvature correspondingly.
+
+\begin{thm}{Bochner's formula}\label{thm:bochner-formula}
+Let $M$ be an $m$-dimensional Riemannian manifold,
+$f\:M\to\R$ be a smooth function without critical points on an open domain $\Omega\subset M$ and $u=\nabla f/|\nabla f|$.
+Assume $\phi\:\Omega\to\R$ is a smooth function with compact support.
+Then 
+$$\int\limits_\Omega \phi\cdot \Str(u)
+=
+\int\limits_\Omega \l[H\cdot\<u,\nabla\phi\>- \<\nabla\phi,\nabla_u u\> \r]+
+\int\limits_\Omega \phi\cdot \Int_f.
+\eqlbl{Bochner}$$
+\end{thm}
+
+In the proof of the main result we will 
+
+
+\parit{Proof.}
+Assume $b_1,\dots, b_m$ is an orthonormal frame such that $b_m=u$, 
+then 
+\[\Sc-2\cdot \<\Ric(u),u\>=2\cdot \sum_{i<j<m} \sec(b_i\wedge b_j).\] 
+Therefore the Gauss formula can be written as
+\[
+\begin{aligned}
+\Int_f&=G_f+\Sc-2\cdot \<\Ric(u),u\>=
+\\
+&=G_f+\Str(u)+ \<\Ric(u),u\>.
+\end{aligned}
+\eqlbl{eq:gauss}
+\]
+
+We can choose the frame $b_i$ so that $b_m=u$ and such that $b_i$ points in the principle directions of the level set $L_x$ for $i<m$.
+Note that $\<\nabla_u u,u\>=0$, therefore
+\begin{align*}
+Du&=\sum_{i} b_i\bullet  \nabla_{b_i}u=
+\\
+&=\sum_{i<m}\kappa_i\cdot  b_i\bullet  b_i+u\bullet  \nabla_{u}u=
+\\
+&=
+\sum_{i=1}^{m}\kappa_i+u\wedge\nabla_{u}u=H+u\wedge\nabla_{u}u,
+\end{align*}
+here ``$\,\bullet \,$'' denotes the Clifford multiplication.
+Applying again that $\<\nabla_u u,u\>=0$, we get that
+$$ \langle Du,Du \rangle=
+\l(\sum_{i<m}\kappa_i\r)^2+|\nabla_{u}u|^2=H_f^2+|\nabla_{u}u|^2.$$
+On the other hand
+$$\nabla u=\sum_{i<m}\kappa_i\cdot b_i\otimes b_i+\nabla_u u\otimes u,$$
+hence
+$$\langle\nabla u,\nabla u\rangle =
+\sum_{i<m}\kappa_i^2+|\nabla_{u}u|^2.$$
+
+Therefore
+$$\langle D u,D u\rangle-\langle \nabla u,\nabla u \rangle =2\cdot\sum_{i<j}\kappa_i\cdot\kappa_j=G_f.$$
+
+Further,
+\begin{align*}
+\int\limits_\Omega\phi\cdot\l[\<D u,D u\>-\<D^2 u, u\>\r]
+&=
+\int\limits_\Omega\<\nabla\phi\bullet u,D u\>
+=
+\\
+&=
+-\int\limits_\Omega\l[H\cdot\<\nabla\phi,u\>- \<\nabla\phi,\nabla_u u\> \r],
+\end{align*}
+here ``$\bullet $'' denotes Kliford's multiplication.
+
+Since $| u|\equiv 1$, we have $\<\nabla_{\nabla\phi}  u, u\>=0$.
+Therefore
+$$\int\limits_\Omega\phi\cdot\l[\<\nabla u,\nabla u\>-\<\nabla^*\nabla u, u\>\r]
+=
+\int\limits_\Omega\<\nabla_{\nabla\phi}  u, u\>=0.$$
+
+Let us write Bochner formula \cite[8.3]{lawson-michelsohn} for field $u$:
+$$D^2u-\nabla^*\nabla u=\Ric(u);$$
+in particular, 
+$$\phi\cdot \<D^2u,u\>-\phi\cdot \<\nabla^*\nabla u,u\>=\phi\cdot \<\Ric(u),u\>.\eqlbl{eq:prebochner}$$
+Integrating \ref{eq:prebochner}, using the given calculations we get that
+\begin{align*}
+\int\limits_\Omega \phi \cdot G_f
+&=\int\limits_\Omega\phi\cdot(\<D u,D u\>-\<\nabla u,\nabla u\>)
+=
+\\
+&=\int\limits_\Omega \phi\cdot \Ric(u,u) 
+-
+\int\limits_\Omega H_f\cdot\l[\<u,\nabla\phi\>- \<\nabla\phi,\nabla_u u\> \r].
+\end{align*}
+
+It remains to apply the Gauss formula \ref{eq:gauss}.
+\qeds

@@ -1,6 +1,9 @@
 \usepackage{amsmath,amssymb,amsthm,pifont}
 \usepackage{bm}%makes better bold font in math
 \usepackage{hyperref}
+\usepackage{eucal}
+\usepackage{xcolor}
+
 
 \newcounter{thm}[section]
 \renewcommand{\thethm}{\thesection.\arabic{thm}}
@@ -60,6 +63,7 @@
 \def\dim{\operatorname{dim}}
 \newcommand*\dir[2]{{\uparrow}_{\hskip-0.15em[{#1}{#2}]}^{\hspace{-0.1ex}\circ}}
 \def\div{\mathop{\rm div}}
+\def\Dom{\mathop{\rm Dom}}
 \def\dist{\operatorname{dist}}
 \def\kay{\text{\rlap{$\bar{\text{\phantom{n}}}$}{$k$}}}
 \def\pack{\operatorname{pack}}
@@ -103,6 +107,15 @@
 \def\DC{\mathrm{DC\,}}
 \newcommand{\testto}{\stackrel{test}{\longrightarrow}}
 \newcommand*{\set}[2]{\l\{\,\l.{#1}\vphantom{#2}\,\r|\,{#2}\,\r\}}
+
+\newcommand{\M}{\mathcal M} 
+\newcommand{\A}{\mathcal A} 
+\newcommand{\SMA}{\mathcal{SMA}} 
+\newcommand{\SAA}{\mathcal{SAA}} 
+\newcommand{\ccto}{\stackrel{C^1_{Alex}}{\longrightarrow}}
+\newcommand{\cto}{\stackrel{C}{\longrightarrow}}
+\newcommand{\x}{\mathfrak x}
+\newcommand{\X}{\mathfrak X}
 
 \newcommand*{\zz}[1]{#1\nobreak\discretionary{}%
             {\hbox{$\mathsurround=0pt #1$}}{}}

@@ -1,0 +1,35 @@
+\section{Rough convergence}
+\label{sec:rough-convergence}
+
+Assume $f$ is a semiconcave function defined on an open subset $\Dom f$ of Alexandrov space $A$.
+For a point $p\in \Dom f$ set 
+\[\delta_f(p)=\limsup_{x\to p}\{|\nabla_x f|-|\nabla_p f|\}.\]
+The value $\delta_f(p)$ should be considered as a measure of nonsmoothness of the function $\tfrac{f}{|\nabla_p f|}$ at $p$.
+Namely we say that a function $f$ is \emph{differentiabale} at $p\in\Dom f$
+if $d_pf$ is a linear function of $\T_p$, that is, $d_pf$ is concave and convex at the same time.
+In this case %???ref
+\[|\nabla_p f|=\limsup_{x\to p}\{|\nabla_x f|\]
+or equvaently $\delta_f(p)=0$.
+In particular, $\delta_f(p)=0$ almost everywhere. %???ref
+
+
+In this section we will use the Bochner formula (\ref{thm:bochner-formula}) to prove the following weaker version of the main theorem.
+It tells that the two partial limits of strange curvature are close to each other. 
+
+\begin{thm}{Proposition}
+Let $(M_n)$ be a sequence of $m$-dimensional Riemannian manifolds with curvature $\ge\kappa$
+that converges to an Alexandrov space $A$ without collapse.
+Assume a sequence of points $p_n\in M_n$ converges to a point $p\in A$ 
+and $f_n$ is a sequence of concave functions without critical points defined in $B(p_n,r)_{M_n}$ that converge to a function $f$ defined in  $B(p,r)_{A}$.
+Set $u_n=\nabla f_n/|\nabla f_n|$.  
+
+Consier the sequence of measure $\mu_n=\Str(u_n)\cdot \vol$ in $B(p_n,r)_{M_n}$.
+Assume $\mu_n$ has two partial limits $\mu$ and $\nu$ on $B(p,r)_{A}$.
+Then 
+\[|\mu(S)-\nu(S)|
+<
+(\tfrac{\delta_f}{|\nabla f|}\cdot\mu)(S),\]
+where $S\subset B(p,r)_{A}$ is any Borel set; we assume that $\frac{\delta_f}{|\nabla f|}=\infty$ at the points where $|\nabla f|=0$.
+\end{thm}
+
+
