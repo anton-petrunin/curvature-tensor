@@ -1,18 +1,16 @@
 \section{Gauss curvature}
 \label{sec:gauss}
 
-Let us formulate a baby case of theorem.
-The proof of Theorem ??? is just as hard, 
-but the formulation is simpler and it might have independent interest.
-
-\begin{thm}{Baby theorem}
-Let $M$ be a 3-dimensional manifold with nonnegative sectional curvature.
+\begin{thm}{Theorem}\label{thm:lens}
+Let $\eps$ be a sufficiently small positive number and 
+$M$ be a 3-dimensional manifold with nonnegative sectional curvature.
 Assume two smooth discs $\Delta_1$ and $\Delta_2$ in $M$ bound a convex set and meet the the common boundary at angle at most $\varepsilon$.
-
-Then the integral of Gauss curvature along $\Delta_1$ does not exceed $10\cdot \eps^2$ for all sufficiently small $\eps>0$.
+Then 
+\[\int_{\Delta_1}k_1\cdot k_2\le 10\cdot \eps^2,\]
+where $k_1,k_2$ denote the principle curvatures of $\Delta_1$.
 \end{thm}
 
-\begin{thm}{Lemma}
+\begin{thm}{Lemma}\label{lem:bochner}
 Assume $\Omega$ is a compact domain with smooth boundary $\partial \Omega$ in a 2-dimensional Riemannian manifold with nonnegaive curvature
 and $f$ is a smooth concave function that vanish on $\partial \Omega$.
 Then
@@ -48,10 +46,10 @@ Then
 \det(\Hess f)&=\lambda_1\cdot\lambda_2.
 \end{align*}
 Therefore 
-\[\det(\Hess f)
+\[2\cdot\det(\Hess f)
 =|\Delta f|^2
 -|\mathrm{Hess}f|^2.\] 
-Whence the formula in Proposition~\ref{prop:bochner-dirichle} can be simplified the following way:
+It follows that the formula in Proposition~\ref{prop:bochner-dirichle} can be simplified the following way:
 \[\int\limits_\Omega 
 2\cdot\det(\mathrm{Hess}f)
 =\int\limits_\Omega 
@@ -61,28 +59,47 @@ K\cdot|\nabla f|^2
 \kappa\cdot|\nabla f|^2,\]
 where $\kappa$ denotes the geodesic curvature of $\partial \Omega$ and $K$ the curvature of the manifold; the sign of $\kappa$ is chosen so that $\kappa\ge 0$ if $\Omega$ is convex.
 
-By Gauss--Bonnet formula, we get that
+Since $f$ is concave, smooth and vanish on the boundary of $\Omega$,
+by Morse lemma, the closure $\bar\Omega$ is a disc.
+Therefore, by Gauss--Bonnet formula, we get that
 \[\int_\Omega K+\int_{\partial\Omega}\kappa=2\cdot\pi.\]
 Therefore 
 \[\int\limits_\Omega 
 \det(\mathrm{Hess}f)
 \le\pi\cdot\sup_{x\in\Omega}|\nabla_x f|^2.\]
 
-Finally note that since $f$ is concave, 
+Given $x\in\Omega$ consider the geodesic $\gamma$ starting in $x$ in the direction of $-\nabla_xf$.
+Since $f$ is concave, $|\nabla_yf|>|\nabla_xf|$ for any $y\in \gamma\backslash\{x\}$.
+Whence the maximum of $|\nabla_xf|$ is admitted only on the boundary.
+That is,
 \[\sup_{x\in\partial\Omega}|\nabla_x f|^2=\sup_{x\in\Omega}|\nabla_x f|^2,\]
-hence the statement.
+hence the result.
 \qeds
 
 
 \parit{Proof.}
+We will construct a convex function $f\:\Delta_1\to \RR$ with the following properties:
+$2\cdot\det(\mathrm{Hess}f)\ge k_1\cdot k_2$,
+$f(x)=0$ and
+$\nabla_x f<\eps$ for any $x\in \partial\Delta_1$.
+
+Note that once the function $f$ is constructed, the theorem~\ref{thm:lens} will follow from Lemma~\ref{lem:bochner}.
+
+
 Let $f$ be the restriction of $\dist_{\Delta_2}$ on $\Delta_1$.
-Note that $f\:\Delta_1\to \RR$ is concave function, 
-it vanish on the boundary of $\Delta_1$,
-$|\nabla_x f|\le \eps$ for any $x\in \partial \Delta_1$
-and 
-\[\langle\nu,\nabla_x f\rangle\ge \cos\eps,\]
-for any $x\in\Delta_1$,
-where $\nu$ denotes the outer unit normal vector to $\Delta_1$. 
+By assumption $f\:\Delta_1\to \RR$ vanish on the boundary $\partial\Delta_1$
+and
+$|\nabla_x f|\le \eps$ for any $x\in \partial \Delta_1$.
+Let us show that
+\begin{enumerate}[(i)]
+\item $\langle\nu,\nabla_x f\rangle\ge \cos\eps$,
+for any $x\in\Delta_1$, where $\nu$ denotes the outer unit normal vector to $\Delta_1$. 
+\item $f\:\Delta_1\to \RR$ is concave function,
+\end{enumerate}
+
+
+
+
 
 
 \qeds
