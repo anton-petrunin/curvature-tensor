@@ -78,86 +78,48 @@ hence the result.
 
 
 \parit{Proof.}
-We will construct a convex function $f\:\Delta_1\to \RR$ with the following properties:
-$2\cdot\det(\mathrm{Hess}f)\ge k_1\cdot k_2$,
-$f(x)=0$ and
-$\nabla_x f<\eps$ for any $x\in \partial\Delta_1$.
+Denote by $L$ the set (lens) bounded by $\Delta_1$ and $\Delta_2$.
+Let us show that the function $f=\dist_{\Delta_2}$ is concave in $L$.
 
-Note that once the function $f$ is constructed, the theorem~\ref{thm:lens} will follow from Lemma~\ref{lem:bochner}.
+Given $p\in L$ denote by $\bar p$ a closest point in $\Delta_2$.
+The angle between the geodesic $[\bar pp]$ and any direction in $\Delta_1$ has to be at least $\tfrac\pi2$; otherwise one could decrease the distance $|p-\bar p|$ by moving $\bar p$ in such direction.
+If $\bar p\in\partial \Delta_2$ then by assumption the angle to one of such directions has to be smaller than $\eps$, which contradicts the assumption if $\eps<\tfrac\pi2$.
 
+In the remaining case $\bar p\not\in\partial \Delta_2$, by second variation formula, $f$ admits an upper barrier at $p$;
+that is, given $\eps>0$, there is a smooth function $h$ defined in a neighborhood of $p$ such that $h''\le \eps$ and
+$h(x)\ge f(x)$ if $h(x)$ is defined and the equality holds for $x=p$.
+The latter implies that $f$ is concave.
 
-Let $f$ be the restriction of $\dist_{\Delta_2}$ on $\Delta_1$.
-By assumption $f\:\Delta_1\to \RR$ vanish on the boundary $\partial\Delta_1$
-and
-$|\nabla_x f|\le \eps$ for any $x\in \partial \Delta_1$.
-Let us show that
-\begin{enumerate}[(i)]
-\item $\langle\nu,\nabla_x f\rangle\ge \cos\eps$,
-for any $x\in\Delta_1$, where $\nu$ denotes the outer unit normal vector to $\Delta_1$. 
-\item $f\:\Delta_1\to \RR$ is concave function,
-\end{enumerate}
+Next note that the restriction $\bar f=f|_{\Delta_1}$ is concave.
+Indeed, since $L$ is convex any geodesic $[p\bar p]\subset L$ for any $p\in \Delta_1$.
+It follows that $f$ increase in the direction of $\nu$; that is 
+\[df(\nu)\ge0.\eqlbl{nuf>=0}\]
+Since $f$ is concave, so is $\bar f$.
 
-
-
-
-
-
-\qeds
-
-
-
-\begin{thm}{Theorem}
-Let $S$ be a convex surface in a three-dimensional Riemannian manifold $M$.
-Denote by $\nu$ the normal vector to $S$ in the outward direction.
-Assume $f$ is a function defined in a neigborhood of $S$ such that 
-$\langle \nabla f,\nu\rangle$
-\end{thm}
-
-
-
-\begin{thm}{Theorem}
-Let $M$ be a 3-dimensional manifold with sectional curvature at least $\kappa$ and $L$ be a smooth convex surface in $M$ with boundary, denote by $n$ the field of unit normal vectors on $L$ that points outside of the convex region that $L$ cuts from $M$.
-Assume there is a smooth concave function $f$ such that $f$ vanish at the boundary $\partial L$,
-the gradient $\<\nabla f,n\>\ge 1$ at any point of $L$.
-Then the integral of Gauss curvature on $L$ does not exceed???
-\end{thm}
-
-We will need an other integral reformation of Bochner's identity.
-
-\begin{thm}{Bound on determinant of Hessian}
-Let $g$ be a Riemannian metric with nonnegative curvature on the 2-dimensional disc $\DD$.
-Assume $f\:\DD\zz\to \RR$ is a smooth concave function that vanish on the boundary $\partial \DD$.
-Then 
-\[\int_\DD \det(\Hess f)\le \pi\cdot \sup\{|\nabla f|\}. \]
-\end{thm}
-
-\parit{Proof.}
-By relative Bochner's formula, we have
-\[\int_\DD(\Delta f)^2-|\Hess f|^2-K\cdot |\nabla f|^2=\int_{\partial\DD} \kappa\cdot |\nabla f|^2,\]
-where $K$ denotes the curvature of $g$ and $\kappa$ --- geodesic curvature of $\partial\DD$.
-
-If $\lambda_1\le \lambda_2$ denote the eigenvalues of $\Hess f$,
-then 
-\[\Delta f=\lambda_1+\lambda_2\quad\text{and}\quad |\Hess f|^2=\lambda_1^2+\lambda_2^2;\]
-Therefore 
+Denote by $\nu$ the orthonormal vector field to $\Delta_1$ pointing outside $L$.
+Note that 
+\[df(\nu)\ge \cos\eps.\eqlbl{nuf}\]
+Indeed, if at some point $p\in \Delta_1$ the inequality \ref{nuf} does not hold,
+then for some unit vector $u$ tangent to $\Delta_1$ at $p$ we have 
+\[df(u)<-\sin\eps.\]
+Consider the unit speed geodesic $\gamma$ in $\Delta_1$ starting from $p$ in the direction $u$.
+Since $f$ is concave, the inequality \ref{nuf>=0} implies that $t\mapsto f\circ\gamma(t)$ is concave and therefore function $t\mapsto (f\circ\gamma)'(t)$ is nonincreasing.
+Whence at the moment $t_{{\max}}$, 
+when $\gamma$ hits the boundary $\partial\Delta_1$,
+we have that 
 \begin{align*}
-(\Delta f)^2-|\Hess f|^2&=2\cdot\lambda_1\cdot \lambda_2=
-\\
-&=2\cdot\det(\Hess f).
+(f\circ\gamma)'(t_{{\max}})&\le(f\circ\gamma)'(0)=
+\\&=df(u)<
+\\&<-\sin\eps.
 \end{align*}
+It follows that, $\gamma$ hits the common boundary $\partial\Delta_2=\partial\Delta_1$ at the angle larger than $\eps$ to $\Delta_2$.
+The latter contradicts the assumption.
 
-Since $f$ is concave and vanish on $\partial\DD$, the disc $\DD$ has convex boundary, that is, $\kappa\ge 0$.
-Further, from by Gauss--Bonnet formula, we get that
-\[\int_\DD K+\int_{\partial\DD} \kappa =2\cdot \pi.\]
-Whence, 
-\begin{align*}
-\int_\DD 2\cdot(\det\Hess f)
-&=
-\int_\DD K\cdot |\nabla f|^2
-+
-\int_{\partial\DD} \kappa\cdot |\nabla f|^2\le 
-\\
-&\le 2\cdot \pi \cdot \sup\{\,|\nabla_x f|^2\,\},
-\end{align*}
-hence the result. 
-\qeds
+If $\bar f$ is smooth, then \ref{nuf} implies that 
+\[\Hess f\ge \cos\eps\cdot \mathrm{I\!I},\]
+where $\mathrm{I\!I}$ denotes the second fundamental form of $\Delta_1$.
+In particular,
+\[\det[\Hess f]\ge (\cos\eps)^2\cdot\k_1\cdot k_2.\]
+In this case, applying Lemma~\ref{lem:bochner} we get the needed estimate.
+
+In case if $\bar f$ is not smooth, one can apply smoothing as in ... and pass to the limit to conclude the same.\qeds

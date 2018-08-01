@@ -1,0 +1,58 @@
+
+
+
+\begin{thm}{Theorem}
+Let $S$ be a convex surface in a three-dimensional Riemannian manifold $M$.
+Denote by $\nu$ the normal vector to $S$ in the outward direction.
+Assume $f$ is a function defined in a neigborhood of $S$ such that 
+$\langle \nabla f,\nu\rangle$
+\end{thm}
+
+
+
+\begin{thm}{Theorem}
+Let $M$ be a 3-dimensional manifold with sectional curvature at least $\kappa$ and $L$ be a smooth convex surface in $M$ with boundary, denote by $n$ the field of unit normal vectors on $L$ that points outside of the convex region that $L$ cuts from $M$.
+Assume there is a smooth concave function $f$ such that $f$ vanish at the boundary $\partial L$,
+the gradient $\<\nabla f,n\>\ge 1$ at any point of $L$.
+Then the integral of Gauss curvature on $L$ does not exceed???
+\end{thm}
+
+We will need an other integral reformation of Bochner's identity.
+
+\begin{thm}{Bound on determinant of Hessian}
+Let $g$ be a Riemannian metric with nonnegative curvature on the 2-dimensional disc $\DD$.
+Assume $f\:\DD\zz\to \RR$ is a smooth concave function that vanish on the boundary $\partial \DD$.
+Then 
+\[\int_\DD \det(\Hess f)\le \pi\cdot \sup\{|\nabla f|\}. \]
+\end{thm}
+
+\parit{Proof.}
+By relative Bochner's formula, we have
+\[\int_\DD(\Delta f)^2-|\Hess f|^2-K\cdot |\nabla f|^2=\int_{\partial\DD} \kappa\cdot |\nabla f|^2,\]
+where $K$ denotes the curvature of $g$ and $\kappa$ --- geodesic curvature of $\partial\DD$.
+
+If $\lambda_1\le \lambda_2$ denote the eigenvalues of $\Hess f$,
+then 
+\[\Delta f=\lambda_1+\lambda_2\quad\text{and}\quad |\Hess f|^2=\lambda_1^2+\lambda_2^2;\]
+Therefore 
+\begin{align*}
+(\Delta f)^2-|\Hess f|^2&=2\cdot\lambda_1\cdot \lambda_2=
+\\
+&=2\cdot\det(\Hess f).
+\end{align*}
+
+Since $f$ is concave and vanish on $\partial\DD$, the disc $\DD$ has convex boundary, that is, $\kappa\ge 0$.
+Further, from by Gauss--Bonnet formula, we get that
+\[\int_\DD K+\int_{\partial\DD} \kappa =2\cdot \pi.\]
+Whence, 
+\begin{align*}
+\int_\DD 2\cdot(\det\Hess f)
+&=
+\int_\DD K\cdot |\nabla f|^2
++
+\int_{\partial\DD} \kappa\cdot |\nabla f|^2\le 
+\\
+&\le 2\cdot \pi \cdot \sup\{\,|\nabla_x f|^2\,\},
+\end{align*}
+hence the result. 
+\qeds
