@@ -4,7 +4,7 @@
 \begin{thm}{Theorem}\label{thm:lens}
 Let $\eps$ be a sufficiently small positive number and 
 $M$ be a 3-dimensional manifold with nonnegative sectional curvature.
-Assume two smooth discs $\Delta_1$ and $\Delta_2$ in $M$ bound a convex set and meet the the common boundary at angle at most $\varepsilon$.
+Assume two smooth discs $\Delta_1$ and $\Delta_2$ in $M$ bound a convex set and meet the common boundary at angle at most $\varepsilon$.
 Then 
 \[\int_{\Delta_1}k_1\cdot k_2\le 10\cdot \eps^2,\]
 where $k_1,k_2$ denote the principle curvatures of $\Delta_1$.
@@ -49,7 +49,8 @@ Therefore
 \[2\cdot\det(\Hess f)
 =|\Delta f|^2
 -|\mathrm{Hess}f|^2.\] 
-It follows that the formula in Proposition~\ref{prop:bochner-dirichle} can be simplified the following way:
+
+Since $\Omega$ is two-dimensional, the calculations above and Proposition~\ref{prop:bochner-dirichle} imply that
 \[\int\limits_\Omega 
 2\cdot\det(\mathrm{Hess}f)
 =\int\limits_\Omega 
@@ -81,9 +82,11 @@ hence the result.
 Denote by $L$ the set (lens) bounded by $\Delta_1$ and $\Delta_2$.
 Let us show that the function $f=\dist_{\Delta_2}$ is concave in $L$.
 
-Given $p\in L$ denote by $\bar p$ a closest point in $\Delta_2$.
-The angle between the geodesic $[\bar pp]$ and any direction in $\Delta_1$ has to be at least $\tfrac\pi2$; otherwise one could decrease the distance $|p-\bar p|$ by moving $\bar p$ in such direction.
-If $\bar p\in\partial \Delta_2$ then by assumption the angle to one of such directions has to be smaller than $\eps$, which contradicts the assumption if $\eps<\tfrac\pi2$.
+Given $p\in L$ denote by $\bar p$ a closest point in $\Delta_2$;
+since $L$ is concave, geodesic $[\bar pp]$ lies in $L$.
+The angle between the geodesic $[\bar pp]$ and any direction in $\Delta_1$ has to be at least $\tfrac\pi2$; otherwise one could decrease the distance $|p-\bar p|$ by moving $\bar p$ in such a direction.
+
+If $\bar p\in\partial \Delta_2$, then by assumption the angle to one of such directions has to be smaller than $\eps$, which contradicts the assumption if $\eps<\tfrac\pi2$.
 
 In the remaining case $\bar p\not\in\partial \Delta_2$, by second variation formula, $f$ admits an upper barrier at $p$;
 that is, given $\eps>0$, there is a smooth function $h$ defined in a neighborhood of $p$ such that $h''\le \eps$ and
@@ -91,13 +94,16 @@ $h(x)\ge f(x)$ if $h(x)$ is defined and the equality holds for $x=p$.
 The latter implies that $f$ is concave.
 
 Next note that the restriction $\bar f=f|_{\Delta_1}$ is concave.
-Indeed, since $L$ is convex any geodesic $[p\bar p]\subset L$ for any $p\in \Delta_1$.
-It follows that $f$ increase in the direction of $\nu$; that is 
-\[df(\nu)\ge0.\eqlbl{nuf>=0}\]
-Since $f$ is concave, so is $\bar f$.
-
 Denote by $\nu$ the orthonormal vector field to $\Delta_1$ pointing outside $L$.
-Note that 
+Since $L$ is convex any geodesic $[p\bar p]\subset L$ for any $p\in \Delta_1$.
+It follows that $f$ increase in the direction of $\nu$; that is 
+\[df(\nu)\ge0.
+\eqlbl{nuf>=0}\] 
+Any geodesic in $\Delta_1$ curves in the direction of $-\nu$;
+by \ref{nuf>=0}, 
+since $f$ is concave, so is $\bar f$. %???
+
+Next let us show that
 \[df(\nu)\ge \cos\eps.\eqlbl{nuf}\]
 Indeed, if at some point $p\in \Delta_1$ the inequality \ref{nuf} does not hold,
 then for some unit vector $u$ tangent to $\Delta_1$ at $p$ we have 
@@ -119,7 +125,8 @@ If $\bar f$ is smooth, then \ref{nuf} implies that
 \[\Hess f\ge \cos\eps\cdot \mathrm{I\!I},\]
 where $\mathrm{I\!I}$ denotes the second fundamental form of $\Delta_1$.
 In particular,
-\[\det[\Hess f]\ge (\cos\eps)^2\cdot\k_1\cdot k_2.\]
+\[\det[\Hess f]\ge (\cos\eps)^2\cdot k_1\cdot k_2.\]
 In this case, applying Lemma~\ref{lem:bochner} we get the needed estimate.
 
-In case if $\bar f$ is not smooth, one can apply smoothing as in ... and pass to the limit to conclude the same.\qeds
+In case if $\bar f$ is not smooth, one can apply smoothing by convolution as it done in ??? and pass to the limit to conclude the same.
+\qeds
