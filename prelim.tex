@@ -1,0 +1,22 @@
+\section{Preliminaries}
+
+Let $A$ be an $m$-dimensional Alexandrov space and $p\in A$ and $\xi\in\Sigma_p$ is a direction at $p$.
+A function $f\:A\to \RR$ is called differentiable in direction $\xi$ if there is a real number $a$ such that for any sequence of geodesics $[px_n]$ such that $x_n\to p$ and $\dir{p}{x_n}{}\to \xi$ we have
+\[\frac{f(x_n)-f(p)}{|x_n-p|}\to a\quad\text{as}\quad n\to\infty.\]
+In this case we write $a=d_pf(\xi)$.
+
+The partially defined function $d_pf\:\Sigma_p\to\RR$ can be exteded as a positive homogeneus function to a subcone of the tangent cone $\T_p$
+\[d_pf(\lambda\cdot\xi)=\lambda\cdot\xi f.\]
+The obtained partially defined function $d_pf\:\T_p\to\RR$ is called \emph{differential} of $f$ at $p$.
+
+Given a point $p\in A$, denote by $\L_p$ the maximal linear subspace of the tangent cone $\T_p$ at $p$;
+in other words $\L_p$ is the maximal subcone of $\T_p$ that is isometric to a Euclidean space.
+
+Recall that according to ???, for almost all points of $A$ the linear subspace $\L_p$ is $m$-dimesional.
+A general Alexandrov space might have points with linear subspace $\L_p$ of all dimesnins $\le m$;
+a convex polhedron proved an example --- a point in the interior of $k$-dimesnional face has $k$-dimesnionallinear subspace.
+
+
+A function $f\:A\to\RR$ is called differentable at $p$ if the differential $d_pf$ is defined and linear on $L_p$;
+that is, there is a linear function $\phi\:\L_p\to \RR$ such that for any curve $\alpha$ in $A$ that starts from $p$ with velocity vector $v\in \L_p$ we have $\phi(v)=(f\circ\alpha)'(0)$.
+
