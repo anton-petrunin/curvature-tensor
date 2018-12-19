@@ -15,7 +15,7 @@ Assume $\Omega$ is a compact domain with smooth boundary $\partial \Omega$ in a 
 and $f$ is a smooth concave function that vanish on $\partial \Omega$.
 Then
 \[\int\limits_\Omega 
-\det(\mathrm{Hess}f)
+\det(\Hess f)
 \le\pi\cdot\sup_{x\in\partial\Omega}|\nabla_x f|^2.\]
 
 \end{thm}
@@ -28,7 +28,7 @@ Assume $\Omega$ is a compact domain with smooth boundary $\partial \Omega$ in a 
 and $f$ is a smooth function that vanish on $\partial \Omega$.
 Then
 \[\int\limits_\Omega |\Delta f|^2
--|\mathrm{Hess}f|^2
+-|\Hess f|^2
 -\langle\mathrm{Ric}(\nabla f),\nabla f\rangle
 =\int\limits_{\partial\Omega}
 H\cdot|\nabla f|^2,\]
@@ -41,18 +41,18 @@ Then
 \begin{align*}
 \trace(\Hess f)&=\Delta f=\lambda_1+\lambda_2,
 \\
-|\mathrm{Hess}f|^2&=\lambda_1^2+\lambda_2^2,
+|\Hess f|^2&=\lambda_1^2+\lambda_2^2,
 \\
 \det(\Hess f)&=\lambda_1\cdot\lambda_2.
 \end{align*}
 Therefore 
 \[2\cdot\det(\Hess f)
 =|\Delta f|^2
--|\mathrm{Hess}f|^2.\] 
+-|\Hess f|^2.\] 
 
 Since $\Omega$ is two-dimensional, the calculations above and Proposition~\ref{prop:bochner-dirichle} imply that
 \[\int\limits_\Omega 
-2\cdot\det(\mathrm{Hess}f)
+2\cdot\det(\Hess f)
 =\int\limits_\Omega 
 K\cdot|\nabla f|^2
 +
@@ -67,12 +67,12 @@ Therefore, by Gauss--Bonnet formula, we get that
 \[\int_\Omega K+\int_{\partial\Omega}\kappa=2\cdot\pi.\]
 Therefore 
 \[\int\limits_\Omega 
-\det(\mathrm{Hess}f)
+\det(\Hess f)
 \le\pi\cdot\sup_{x\in\Omega}|\nabla_x f|^2.\]
 
 Given $x\in\Omega$ consider the geodesic $\gamma$ starting in $x$ in the direction of $-\nabla_xf$.
 Since $f$ is concave, $|\nabla_yf|>|\nabla_xf|$ for any $y\in \gamma\backslash\{x\}$.
-Whence the maximum of $|\nabla_xf|$ is admitted only on the boundary.
+Whence the maximum of $|\nabla_yf|$ is admitted only on the boundary.
 That is,
 \[\sup_{x\in\partial\Omega}|\nabla_x f|^2=\sup_{x\in\Omega}|\nabla_x f|^2,\]
 hence the result.
@@ -81,20 +81,23 @@ hence the result.
 
 \parit{Proof.}
 Denote by $L$ the set (lens) bounded by $\Delta_1$ and $\Delta_2$.
+
 Let us show that the function $f=\dist_{\Delta_2}$ is concave in $L$.
 
-Given $p\in L$ denote by $\bar p$ a closest point in $\Delta_2$;
-since $L$ is concave, geodesic $[\bar pp]$ lies in $L$.
-The angle between the geodesic $[\bar pp]$ and any direction in $\Delta_1$ has to be at least $\tfrac\pi2$; otherwise one could decrease the distance $|p-\bar p|$ by moving $\bar p$ in such a direction.
+Given $p\in L$ denote by $\bar p$ a closest point in $\Delta_2$.
+Since $L$ is convex, geodesic $[\bar pp]$ lies in $L$.
+The angle between the geodesic $[\bar pp]$ and any direction of $\Delta_1$ at $\bar p$ has to be at least $\tfrac\pi2$; otherwise one could decrease the distance $|p-\bar p|$ by moving $\bar p$ in such a direction.
 
-If $\bar p\in\partial \Delta_2$, then by assumption the angle to one of such directions has to be smaller than $\eps$, which contradicts the assumption if $\eps<\tfrac\pi2$.
+If $\bar p\in\partial \Delta_2$, then by assumption the angle to one of such directions has to be smaller than $\eps$;
+the latter contradicts the assumption since $\eps<\tfrac\pi2$.
 
 In the remaining case $\bar p\not\in\partial \Delta_2$, by second variation formula, $f$ admits an upper barrier at $p$;
 that is, given $\eps>0$, there is a smooth function $h$ defined in a neighborhood of $p$ such that $h''\le \eps$ and
 $h(x)\ge f(x)$ if $h(x)$ is defined and the equality holds for $x=p$.
 The latter implies that $f$ is concave.
 
-Next note that the restriction $\bar f=f|_{\Delta_1}$ is concave.
+Let us show now that the restriction $\bar f=f|_{\Delta_1}$ is concave.
+
 Denote by $\nu$ the orthonormal vector field to $\Delta_1$ pointing outside $L$.
 Since $L$ is convex any geodesic $[p\bar p]\subset L$ for any $p\in \Delta_1$.
 It follows that $f$ increase in the direction of $\nu$; that is 
@@ -131,3 +134,96 @@ In this case, applying Lemma~\ref{lem:bochner} we get the needed estimate.
 
 In case if $\bar f$ is not smooth, one can apply smoothing by convolution and pass to the limit to conclude the same.
 \qeds
+
+\section{Gauss curvature estimate}
+
+\begin{thm}{Theorem}
+Let $f$, $h$ be a pair of strongly convex smooth 1-Lipschitz functions defined on an open set of a 3-dimensional Riemannian manifold.
+Suppose that (1)
+\[\<\nabla f,\nabla h\>+1<\eps\] 
+for some fixed positive $\eps<\tfrac12$
+and (2) for some for some and $a,b\in \RR$the set
+\[L_{a,b}=\set{p\in M}{f(p)=a, h(p)\ge b}\]
+is compact.
+Let us denote by $k_1(p)\le k_2(p)$ the principle curvatures of $L_{a,b}$ at a point $p\in L_{a,b}$ and by
+$G(p)=k_1(p)\cdot k_2(p)$ its Gauss curvature.
+Then 
+\[\int_{L_{a,b}}G\le 100\cdot\eps.
+\eqlbl{intG<100eps}\]
+
+\end{thm}
+
+\parit{Proof.}
+Equip $L_{a,b}$ with unit normal vector field $n=\tfrac{\nabla f}{|\nabla f|}$.
+Let $S_p\:\T_pL_{a,b}\zz\to \T_pL_{a,b}$ be the corresponding shape operator, so $S_p\:v\mapsto\nabla_vn$.
+Since $f$ is concave, we have that 
+\[\langle S_p(v),v\rangle\ge \delta\cdot|v|^2\]
+for a fixed value $\delta>0$ and any tangent vector $v\in \T_pL_{a,b}$. 
+
+Note that the restriction of $u=h|_{L_{a,b}}$ is strongly convex.
+Moreover 
+\[\Hess_pu(v,v)\ge (1-\eps)\cdot \langle S_p(v),v\rangle\eqlbl{Hess=<shape}\]
+for any $p\in L_{a,b}$ and $v\in\T_pL_{a,b}$
+
+Indeed, consider the geodesic $\gamma$ in $L_{a,b}$ such $\gamma(0)=p$ and $\gamma'(0)=v$.
+Set $a=\gamma''(t)$.
+Note that 
+\begin{align*}
+a&=-\langle S_p(v),v\rangle \cdot n,
+\intertext{Since $h$ is is strongly convex, $\Hess_p h\ge 0$; therefore}
+(\Hess_pu)(v,v)&=(\Hess_p h)(v,v)+\langle \nabla_p h,a\rangle\ge
+\\
+&\ge-\tfrac{\langle\nabla_p h,\nabla_p f\rangle}{|\nabla_p f|}\cdot\langle S_p(v),v\rangle.
+\end{align*}
+By the assumption 
+\[-\tfrac{\langle\nabla_p h,\nabla_p f\rangle}{|\nabla_p f|}>1-\eps;\]
+whence \ref{Hess=<shape} follows.
+
+Since $\langle S_p(v),v\rangle\ge 0$ and $\eps<\tfrac12$, \ref{Hess=<shape} implies that 
+\[4\cdot \det(\Hess_pu)\ge G_p\eqlbl{eq:det>=G}\]
+for any $p\in L_{a,b}$.
+
+Denote by  $\lambda_1(p),\lambda_2(p)$ the eigenvalues of  $\Hess_p u$, so
+\begin{align*}
+\trace(\Hess u)&=\Delta u=\lambda_1+\lambda_2,
+\\
+|\Hess u|^2&=\lambda_1^2+\lambda_2^2,
+\\
+\det(\Hess u)&=\lambda_1\cdot\lambda_2.
+\end{align*}
+Therefore 
+\[2\cdot\det(\Hess u)
+=|\Delta u|^2
+-|\Hess u|^2.\] 
+
+Since $L_{a,b}$ is two-dimensional, by Proposition~\ref{prop:bochner-dirichle} we get that
+\[\int\limits_{L_{a,b}} 
+2\cdot\det(\Hess u)
+=\int\limits_{L_{a,b}} 
+K\cdot|\nabla u|^2
++
+\int\limits_{\partial L_{a,b}}
+\kappa\cdot|\nabla u|^2,\]
+where $\kappa\ge 0$ is the geodesic curvature of $\partial L_{a,b}$
+and $K$ is the curvature of $L_{a,b}$.
+
+Since $u$ is convex and vanish on the boundary of $L_{a,b}$,
+it has unique critical point, which is its minimum.
+By Morse lemma,  $L_{a,b}$ is a disc.
+Therefore, by Gauss--Bonnet formula, we get that
+\[\int_{L_{a,b}} K+\int_{\partial{L_{a,b}}}\kappa=2\cdot\pi.\]
+Whence 
+\[\int\limits_{L_{a,b}} 
+\det(\Hess u)
+\le\pi\cdot\sup_{p\in{L_{a,b}}}|\nabla_p u|^2.\]
+
+Note that $\nabla_p u$ is projection of $\nabla_ph$ to $\T_pL_{a,b}$;
+Therefore
+\[|\nabla_p u|^2=|\nabla_p h|^2-\langle\nabla_p h,n\rangle^2\le 1-(1-\eps)^2<2\cdot\eps.\]
+It follows that 
+\[\int\limits_{L_{a,b}} 
+\det(\Hess u)
+\le2\cdot \pi\cdot\eps.\]
+Applying \ref{eq:det>=G}, we obtain \ref{intG<100eps}.
+\qeds
+
