@@ -142,8 +142,8 @@ Let $f$, $h$ be a pair of strongly convex smooth 1-Lipschitz functions defined o
 Suppose that (1)
 \[\<\nabla f,\nabla h\>+1<\eps\] 
 for some fixed positive $\eps<\tfrac12$
-and (2) for some for some and $a,b\in \RR$the set
-\[L_{a,b}=\set{p\in M}{f(p)=a, h(p)\ge b}\]
+and (2) for some $a,b\in \RR$, the set
+\[L_{a,b}=\set{p\in M}{f(p)=a, h(p)\le b}\]
 is compact.
 Let us denote by $k_1(p)\le k_2(p)$ the principle curvatures of $L_{a,b}$ at a point $p\in L_{a,b}$ and by
 $G(p)=k_1(p)\cdot k_2(p)$ its Gauss curvature.
@@ -156,7 +156,7 @@ Then
 \parit{Proof.}
 Equip $L_{a,b}$ with unit normal vector field $n=\tfrac{\nabla f}{|\nabla f|}$.
 Let $S_p\:\T_pL_{a,b}\zz\to \T_pL_{a,b}$ be the corresponding shape operator, so $S_p\:v\mapsto\nabla_vn$.
-Since $f$ is concave, we have that 
+Since $f$ is strongly convex, we have that 
 \[\langle S_p(v),v\rangle\ge \delta\cdot|v|^2\]
 for a fixed value $\delta>0$ and any tangent vector $v\in \T_pL_{a,b}$. 
 
