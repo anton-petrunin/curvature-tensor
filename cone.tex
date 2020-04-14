@@ -3,23 +3,68 @@
 Let $M$ be a 3-dimensional Riemannian manifold.
 Given a smooth function $f$ denote, denote by $L_c$ the level set of $f$;
 that is,
-\[L_c=\set{x\in M}{f(x)=c}.\]
+\[L_{f=c}=\set{x\in M}{f(x)=c}.\]
 If $L_c$ is a smooth surfaces in a neighborhood of $x\in L_c$,
 then denote $k_1(x)\le k_2(x)$ the principle curvatures of $L_c$ at $x$
-and set $G(x)=k_1(x)\cdot k_2(x)$.
+and set 
+\begin{align*}
+G_f(x)&=k_1(x)\cdot k_2(x),
+\\
+H_f(x)&=k_1(x)+ k_2(x).
+\end{align*}
+
 
 \begin{thm}{Theorem}
 Let $M_n$ be a sequence of $3$-dimensional Riemannian manifolds
 and $f_n\: M_n\to \RR$ be a sequence of strongly concave functions.
 Assume $M_n\to A$ and $f_n\to f\:A\to \RR$ as $n\to \infty$.
-Suppose that $f$ is affine; that is $f$ is convex and concave at the same time.
-Then $G_{f_n}$ weakly converges to zero.
+Suppose that $f$ is affine; that is, $f$ is convex and concave at the same time.
+Then $G_{f_n}$ and $H_{f_n}$ weakly converge to zero.
 \end{thm}
 
 \parit{Proof.}
-Fix $x\in A$.
-It is sufficient to show that for any $\eps>0$ there is 
+Fix $p\in A$; set $a=f(p)$.
+By \cite{LS}, a neighborhood of $p$ can be embedded into product $\RR\times A'$ where $A'$ is another Alexandrov space and $f$ is the first coordinate function.
 
-It is sufficient to show that given $\eps>0$ and $p\in L_c\subset A$ there is $\delta>0$
+Let us apply Perelman's construction of strongly concave function in a neighborhod of $p$ for points lying almost above $p$ in the product $A'\times \RR$.
+This can be done in such a way that the obtained strongly concave function $h\:A\to \RR$ has maximum at $p$ in the set $f(x)\ge a$ and
+is close to $-f$.
+The latter means that
+given $\eps>0$, we can assume that 
+\[\<\nabla f,\nabla h\>+1<\eps,\]
+$h$ is $(-\eps)$-concave.
 
+Choose $b<h(p)$ so that the set 
+\[W=\set{x\in A}{f(x)=a, h(x)\le b}\]
+is compact.
+Set $\ell=\length\partial W$.
+
+Denote by $h_n$ the liftings of $h$ to $M_n$; since $h$ is given by Perelman's construction we can assume that they are $(-\eps)$-concave for all large~$n$.
+Set 
+\begin{align*}
+W_n&=\set{x\in A}{f_n(x)=a, h_n(x)\le b},
+\\
+\ell_n&=\length\partial W_n.
+\end{align*}
+
+Note that the set $W_n$ is compact for large $n$ and $\ell_n\to \ell$ as $n\to\infty$.
+The latter statement can be checked directly,
+or one can apply \cite[Theorem 1.2]{petrunin-GC} for the sequence 
+\[A_n=\set{x\in M_n}{f_n(x)\ge a,\, h_n(x)\ge b}.\]
+Applying \ref{thm:extimage-of-G-and-H}, we get that 
+\begin{align*}
+\int_{W_n}G_{f_n}&\le 100\cdot\eps,
+\\
+\int_{W_n}H_{f_n}&\le 10\cdot \sqrt{\eps}\cdot \ell_n.
+\end{align*}
+
+Set $L_{a,n}=\set{}{}$
+Fix sufficiently small $r>0$.
+Observe that the value $\eps$ above can be chosen arbitrary close to $0$.
+Further the value $b$ can be chosen so that $W_n\supset B(p,r)\cap L_{f_n=a}$.
+It follows that the integrals of $G_{f_n}$ and $H_{f_n}$ over $B(p,r)\cap L_{f_n=a}$ converge to zero as $n\to\infty$.
+
+Since $f_n$ is convex, and close to an affine function,
+its gradient is bounded away from zero for all large $n$.
+By the coarea formula, the statement follows.
 \qeds
