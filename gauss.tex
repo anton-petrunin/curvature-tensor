@@ -3,7 +3,7 @@
 \begin{thm}{Theorem}\label{thm:extimage-of-G-and-H}
 Let $f$, $h$ be a pair of strongly convex smooth 1-Lipschitz functions defined on an open set of a 3-dimensional Riemannian manifold.
 Suppose that (1)
-\[\<\nabla f,\nabla h\>+1<\eps\] 
+\[|\nabla (f+h)|<\eps\cdot|\nabla f|\quad\text{and}\quad |\nabla f|\ge 1\] 
 for some fixed positive $\eps<\tfrac12$
 and (2) for some $a,b\in \RR$, the set
 \[W_{a,b}=\set{p\in M}{f(p)=a, h(p)\le b}\]
@@ -54,11 +54,11 @@ a&=-\langle S_p(v),v\rangle \cdot n,
 \intertext{Since $h$ is is strongly convex, $\Hess_p h\ge 0$; therefore}
 (\Hess_pu)(v,v)&=(\Hess_p h)(v,v)+\langle \nabla_p h,a\rangle\ge
 \\
-&\ge-\tfrac{\langle\nabla_p h,\nabla_p f\rangle}{|\nabla_p f|}\cdot\langle S_p(v),v\rangle.
+&\ge-\tfrac{\langle\nabla_p h,\nabla_p f\rangle}{|\nabla_p f|}\cdot\langle S_p(v),v\rangle\ge
+\\
+&\ge (1-\eps)\cdot|\nabla_p f|\cdot\langle S_p(v),v\rangle.
 \end{align*}
-By the assumption 
-\[-\tfrac{\langle\nabla_p h,\nabla_p f\rangle}{|\nabla_p f|}>1-\eps;\]
-whence \ref{Hess=<shape} follows.
+Since $\nabla f\ge 1$, \ref{Hess=<shape} follows.
 
 Since $\langle S_p(v),v\rangle\ge 0$ and $\eps<\tfrac12$, the inequality \ref{Hess=<shape} implies that 
 \[4\cdot \det(\Hess_pu)\ge G(p)

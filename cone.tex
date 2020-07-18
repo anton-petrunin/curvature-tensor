@@ -1,70 +1,54 @@
 \section{Cone}
 
 Let $M$ be a 3-dimensional Riemannian manifold.
-Given a smooth function $f$ denote, denote by $L_c$ the level set of $f$;
+Given a smooth function $f$ denote, denote by $L_{(f=c)}$ the level set of $f$;
 that is,
-\[L_{f=c}=\set{x\in M}{f(x)=c}.\]
-If $L_c$ is a smooth surfaces in a neighborhood of $x\in L_c$,
-then denote $k_1(x)\le k_2(x)$ the principle curvatures of $L_c$ at $x$
+\[L_{(f=c)}=\set{x\in M}{f(x)=c}.\]
+If $L_{(f=c)}$ is a smooth surfaces in a neighborhood of $x\in L_{(f=c)}$,
+then denote $k_1(x)\le k_2(x)$ the principle curvatures of $L_{(f=c)}$ at $x$
 and set 
 \begin{align*}
 G_f(x)&=k_1(x)\cdot k_2(x),
 \\
-H_f(x)&=k_1(x)+ k_2(x).
+H_f(x)&=k_1(x)+ k_2(x);
 \end{align*}
-
+that is, $G_f(x)$ and $H_f(x)$ are Gauss and mean curvature of $L_{(f=c)}$ at $x$.
 
 \begin{thm}{Theorem}
 Let $M_n$ be a sequence of $3$-dimensional Riemannian manifolds
 and $f_n\: M_n\to \RR$ be a sequence of strongly concave functions.
-Assume $M_n\to A$ and $f_n\to f\:A\to \RR$ as $n\to \infty$.
-Suppose that $f$ is affine; that is, $f$ is convex and concave at the same time.
+Suppose that $\sec M_n\ge -\tfrac1n$ for each $n$, $M_n\zz\to \RR\times A$ without collapsing and $f_n$ converges to the $\RR$-coordinate in $\RR\times A$ as $n\to \infty$.
 Then $G_{f_n}$ and $H_{f_n}$ weakly converge to zero.
 \end{thm}
 
 \parit{Proof.}
-Fix $p\in A$; set $a=f(p)$.
-By \cite{LS}, a neighborhood of $p$ can be embedded into product $\RR\times A'$ where $A'$ is another Alexandrov space and $f$ is the first coordinate function.
+Choose $p\in \RR\times A$; set $a=f(p)$.
 
-Let us apply Perelman's construction of strongly concave function in a neighborhod of $p$ for points lying almost above $p$ in the product $A'\times \RR$.
-This can be done in such a way that the obtained strongly concave function $h\:A\to \RR$ has maximum at $p$ in the set $f(x)\ge a$ and
-is close to $-f$.
-The latter means that
-given $\eps>0$, we can assume that 
-\[\<\nabla f,\nabla h\>+1<\eps,\]
-$h$ is $(-\eps)$-concave.
+By theorem of Artem Nepechiy \cite{Nepechiy},
+there is a $(-2)$-concave function $\rho$ defined in an $r$-neighborhood of $p$ such that $\rho(x)=-|p-x|^2+o(|p-x|^2)$.
+Moreover, the function $\rho$ is \emph{liftable};
+that is, there is a sequence of $(-2)$-concave $\rho_n\:M_n\to\RR$ that converges to $\rho$.
 
-Choose $b<h(p)$ so that the set 
-\[W=\set{x\in A}{f(x)=a, h(x)\le b}\]
-is compact.
-Set $\ell=\length\partial W$.
+Consider a point $q\in \RR\times A$ above $p$; that is, its $\RR$-coordinate of is larger and its $A$-coordinate is the same.
+If $\RR$-coordinate of $q$ is large then $\dist_q+f$ is $\lambda$-concave for small $\lambda>0$ and it has a nonstrict minimum at $p$.
+Therefore, given $\lambda>0$, we can find $q$ so that the sum $s=f+\dist_q+\lambda\cdot \rho$ is $(-\lambda)$-concave and has strict maximum at $p$.
+Moreover
+\[-\lambda\cdot|p-x|_A^2\ge s(x)-s(p)\ge -\tfrac12\cdot\lambda\cdot|p-x|_A^2\]
+and therefore
+\[|\nabla_xs|\le 10\cdot\lambda\cdot|p-x|_A
+\eqlbl{O(p-x)}\]
+if $|p-x|_A$ is sufficiently small; say if $|p-x|_A\le \tfrac r{10}$.
 
-Denote by $h_n$ the liftings of $h$ to $M_n$; since $h$ is given by Perelman's construction we can assume that they are $(-\eps)$-concave for all large~$n$.
-Set 
-\begin{align*}
-W_n&=\set{x\in A}{f_n(x)=a, h_n(x)\le b},
-\\
-\ell_n&=\length\partial W_n.
-\end{align*}
-
-Note that the set $W_n$ is compact for large $n$ and $\ell_n\to \ell$ as $n\to\infty$.
-The latter statement can be checked directly,
-or one can apply \cite[Theorem 1.2]{petrunin-GC} for the sequence 
-\[A_n=\set{x\in M_n}{f_n(x)\ge a,\, h_n(x)\ge b}.\]
-Applying \ref{thm:extimage-of-G-and-H}, we get that 
-\begin{align*}
-\int_{W_n}G_{f_n}&\le 100\cdot\eps,
-\\
-\int_{W_n}H_{f_n}&\le 10\cdot \sqrt{\eps}\cdot \ell_n.
-\end{align*}
-
-Set $L_{a,n}=\set{}{}$
-Fix sufficiently small $r>0$.
-Observe that the value $\eps$ above can be chosen arbitrary close to $0$.
-Further the value $b$ can be chosen so that $W_n\supset B(p,r)\cap L_{f_n=a}$.
-It follows that the integrals of $G_{f_n}$ and $H_{f_n}$ over $B(p,r)\cap L_{f_n=a}$ converge to zero as $n\to\infty$.
-
-Since $f_n$ is convex, and close to an affine function,
-its gradient is bounded away from zero for all large $n$.
-By the coarea formula, the statement follows.
+Choose a sequence of points $q_n\in M_n$ that converges to $q$ and set $h_n=\dist_{q_n}+\lambda\cdot \rho_n$;
+this is a sequence of liftings of $h=\dist_q+\lambda\cdot \rho$. 
+Observe that \ref{O(p-x)} implies that the first condition in \ref{thm:extimage-of-G-and-H} is met for all large $n$ in an $\tfrac r2$-neighborhod of $p_n$ with $\eps=10\cdot\lambda\cdot r$.
+Moreover one can choose $b$ so that the second condition is satisfied and $B_n=B(p_n,r/10)\cap L_{(f=a)}\subset W_{a,b}$.
+Applying \ref{thm:extimage-of-G-and-H}, we get that for any $\delta>0$, we have 
+\[
+\int_{B_n}G_{f_n}<\delta,
+\quad\text{and}\quad
+\int_{B_n}H_{f_n}<\delta.
+\]
+for all large $n$.
+It remains to integrate the obtained inequalities by $a$ and pass to a limit as $n\to\infty$.
 \qeds
