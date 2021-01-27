@@ -132,6 +132,10 @@ Let $M$ be an $m$-dimensional Riemannian manifold,
 $f\:M\to\R$ be a smooth function without critical points on an open domain $\Omega\subset M$ and $u=\nabla f/|\nabla f|$.
 Assume $\phi\:\Omega\to\R$ is a smooth function with compact support.
 Then 
+\[\int\limits_\Omega \phi\cdot \langle \Ric u,u\rangle =
+\int\limits_\Omega [\phi \cdot G_f+H_f\cdot\<u,\nabla\phi\>-\<\nabla\phi,\nabla_u u\>]
+\]
+and, therefore,
 $$\int\limits_\Omega \phi\cdot \Str(u)
 =
 \int\limits_\Omega \l[H\cdot\<u,\nabla\phi\>- \<\nabla\phi,\nabla_u u\> \r]+
@@ -207,9 +211,9 @@ Integrating \ref{eq:prebochner}, using the given calculations we get that
 &=\int\limits_\Omega\phi\cdot(\<D u,D u\>-\<\nabla u,\nabla u\>)
 =
 \\
-&=\int\limits_\Omega \phi\cdot \Ric(u,u) 
+&=\int\limits_\Omega (\phi\cdot \Ric(u,u) 
 -
-\int\limits_\Omega H_f\cdot\<u,\nabla\phi\>- \<\nabla\phi,\nabla_u u\> .
+H_f\cdot\<u,\nabla\phi\>+ \<\nabla\phi,\nabla_u u\>).
 \end{align*}
 
 It remains to apply the Gauss formula \ref{eq:gauss}.
