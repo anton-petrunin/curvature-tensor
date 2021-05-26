@@ -6,8 +6,42 @@
 \usepackage{xcolor}
 \usepackage{enumerate}
 
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,
+%slovak,
+german,
+%french,
+english]{babel}
+
+\usepackage[
+sorting=nyt,
+bibencoding=auto,
+backend=biber,
+maxnames=10,
+%babel=other,
+autolang=other,
+doi=false,
+url=false,
+style=numeric-comp,
+isbn=false]{biblatex}
+\usepackage{csquotes}
+\AtEveryBibitem{\clearlist{language}}
+\AtEveryBibitem{\clearlist{note}}
+\renewbibmacro{in:}{}
+\renewcommand*{\bibfont}{\small}
+\addbibresource{library.bib}
+
+\usepackage{hyperref}
+%\usepackage[notref,notcite,color]{showkeys}
 \hypersetup{colorlinks=true,citecolor=black,linkcolor=black,anchorcolor=black,filecolor=black,menucolor=black,urlcolor=black
 }
+
+\DeclareFieldFormat{postnote}{#1}
+\DeclareFieldFormat{multipostnote}{#1}
+\DeclareFieldFormat{pages}{#1}
+%removes p. in the cites
+
 
 \newcounter{thm}[section]
 \renewcommand{\thethm}{\thesection.\arabic{thm}}
@@ -91,7 +125,7 @@
 \def\SS{\mathbb{S}}
 \def\T{\text{\rm T}}
 \def\L{\text{\rm L}}
-\def\df{\buildrel \mathrm{def} \over{=\!\!=}}
+\def\df{\mathrel{:=}}
 \def\parit#1{\medskip\noindent{\it #1}}
 \def\parbf#1{\medskip\noindent{\bf #1}}
 \def\qeds{\qed\par\medskip}
@@ -170,7 +204,7 @@
 \newcommand*{\@numform}[1]%
 {\ifcase #1\or \ding{202}\or \ding{203}\or \ding{204}\or \ding{205}\or \ding{206}\or \ding{207}\or \ding{208}\or \ding{209}\or \ding{210}\or \ding{211}\else\@ctrerr \fi}
 %EQNUMBER
-\newcounter{eqtn} %[section]
+\newcounter{eqtn}[section]
 \renewcommand{\@eqnnum}{\theeqtn}
 \renewcommand{\theeqtn}{\numform{eqtn}}
 \newcommand{\eqlbl}[1]{\refstepcounter{eqtn}\eqno\text{\numform{eqtn}\label{#1}}}

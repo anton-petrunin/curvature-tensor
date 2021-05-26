@@ -53,13 +53,25 @@ for all large $n$.
 It remains to integrate the obtained inequalities by $a$ and pass to a limit as $n\to\infty$.
 \qeds
 
-\begin{thm}{Corollary}
+\begin{thm}{Corollary}\label{cor:Ricci}
 Suppose that $M_n\to  \RR\times A$ and $f_n\: M_n\to \RR$ be as in \ref{thm:HG-converge}.
 Set $u_n=\tfrac{\nabla f_n}{|\nabla f_n|}$.
-Then $\langle \Ric u_n,u_n\rangle$ weakly converges to zero.
+Then 
+
+\begin{enumerate}[(i)]
+\item\label{cor:Ricci:Ricci} $\langle \Ric u_n,u_n\rangle$ weakly converges to zero.
+\item\label{cor:Ricci:vw}
+Let $v_n$ and $w_n$ are sequences of uniformly bounded, continuous vector fields on $M_n$.
+Suppose that $\langle v_n,u_n\rangle$ and $\langle w_n,u_n\rangle$ converge uniformly as $n\to \infty$ to some constants $a$ and $b$ respectively.
+Then 
+\[q(v_n,w_n)\rightharpoonup a\cdot b\cdot \mathcal{H}_1\oplus \kappa,\]
+where $\kappa$ is the curvature measure on $A$.
+
+\end{enumerate}
+
 \end{thm}
 
-\parit{Proof.}
+\parit{Proof; (\ref{cor:Ricci:Ricci}).}
 Passing to a subsequence if nesessary, we can assume weak convergence $\langle \Ric u_n,u_n\rangle\rightharpoonup\mu$ to a measure $\mu$ on $A$.
 Since $\sec M_n\ge -\tfrac1n$, we have that $\mu\ge 0$.
 Therefore it is sufficient to show that $\mu\le 0$.
@@ -104,6 +116,34 @@ Finally observe that the needed sequence exists ---
 one can take 
 \[\phi_n=(\sigma\circ \dist_q)\cdot \psi\cdot f_n\]
 for appropriately chosen fixed mollifiers $\sigma,\psi\:\RR\to \RR$.
+
+\parit{(\ref{cor:Ricci:vw}).}
+Since $G_{f_n}\rightharpoonup 0$, we get that curvature measure of level sets of $f_n$ weakly converges to the curvaure of $A$.
+It follows that 
+\[q(u_n,u_n)\rightharpoonup \mathcal{H}_1\oplus \kappa.\]
+
+Suppose $v'_n\perp u_n$ for all $n$.
+Part (\ref{cor:Ricci:Ricci}) implies that  $q(v'_n,v'_n)\rightharpoonup 0$.
+
+Fix $t\in \RR$.
+Since the lower bound on sectional curvature of $M_n$ converges to $0$, any partial weak limit of $q(v'_n+t\cdot w_n,v'_n+t\cdot w_n)$ is nonnegative.
+It follows that 
+\[q(v'_n, w_n)\rightharpoonup 0\] for any sequence of fields $v'_n,w_n$ such that $v'_n\perp u_n$.
+
+Consider the vector fields $v_n',w_n'$ such that 
+\begin{align*}
+v'_n&\perp u_n,
+&
+v_n&=a_n\cdot u_n+v_n',
+\\
+w'_n&\perp u_n,
+&
+w_n&=b_n\cdot u_n+w_n'.
+\end{align*}
+Since $q$ is bilinear, we get that
+\[q(v_n,w_n)=q(v_n',w_n) + a_n\cdot [q(u_n,w_n')+ b_n\cdot q(u_n,u_n)].\]
+By assumption, that $a_n=\langle u_n,v_n\rangle $ and $b_n=\langle u_n,w_n\rangle$ uniformly converge to $a$ and $b$ respectively.
+Whence the statement follows.
+ 
+
 \qeds
-
-
