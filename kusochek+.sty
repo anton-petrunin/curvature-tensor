@@ -1,3 +1,12 @@
+\usepackage{kusochek+}
+\usepackage{eucal}
+\usepackage{xcolor}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{calligra}
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\usepackage{enumerate}
+
 \usepackage[intlimits]{amsmath}
 \usepackage{amssymb,amsthm,pifont}
 \usepackage{bm}%makes better bold font in math
@@ -5,43 +14,17 @@
 \usepackage{eucal}
 \usepackage{xcolor}
 \usepackage{enumerate}
+\usepackage{kusochek+}
+\usepackage{eucal}
+\usepackage{xcolor}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{calligra}
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
 
-\usepackage[T2A,T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[russian,
-%slovak,
-german,
-%french,
-english]{babel}
 
-\usepackage[
-sorting=nyt,
-bibencoding=auto,
-backend=biber,
-maxnames=10,
-%babel=other,
-autolang=other,
-doi=false,
-url=false,
-style=numeric-comp,
-isbn=false]{biblatex}
-\usepackage{csquotes}
-\AtEveryBibitem{\clearlist{language}}
-\AtEveryBibitem{\clearlist{note}}
-\renewbibmacro{in:}{}
-\renewcommand*{\bibfont}{\small}
-\addbibresource{library.bib}
-
-\usepackage{hyperref}
-%\usepackage[notref,notcite,color]{showkeys}
 \hypersetup{colorlinks=true,citecolor=black,linkcolor=black,anchorcolor=black,filecolor=black,menucolor=black,urlcolor=black
 }
-
-\DeclareFieldFormat{postnote}{#1}
-\DeclareFieldFormat{multipostnote}{#1}
-\DeclareFieldFormat{pages}{#1}
-%removes p. in the cites
-
 
 \newcounter{thm}[section]
 \renewcommand{\thethm}{\thesection.\arabic{thm}}
@@ -52,7 +35,7 @@ isbn=false]{biblatex}
 \par\medskip}
 
 \def\rem#1{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \arabic{section}.\arabic{thm}. #1.}
-\sf \ %\ignorespaces
+\ %\ignorespaces
 }
 
 
@@ -92,22 +75,20 @@ isbn=false]{biblatex}
 \newcommand{\de}{\delta}
 \def\op{\operatorname}
 \def\Cone{\operatorname{Cone}}
-\def\Const{\text{\rm Const}}
 \def\area{\operatorname{area}}
 \def\vol{\operatorname{vol}}
 \def\diam{\operatorname{diam}}
 \def\codim{\operatorname{codim}}
 \def\d{\bm{d}}
 \def\dim{\operatorname{dim}}
-\newcommand*\dir[2]{{\uparrow}_{\hskip-0.15em[{#1}{#2}]}}
+\newcommand*\dir[2]{{\uparrow}_{\hskip-0.15em[{#1}{#2}]}^{\hspace{-0.1ex}\circ}}
 \def\div{\mathop{\rm div}}
 \def\trace{\mathop{\rm trace}}
 \def\Dom{\mathop{\rm Dom}}
 \def\dist{\operatorname{dist}}
 \def\Hess{\operatorname{Hess}}
 \def\kay{\text{\rlap{$\bar{\text{\phantom{n}}}$}{$k$}}}
-\def\lip{\operatorname{\rm lip}}
-\def\length{\operatorname{\rm length}\nolimits}
+\def\length{\operatorname{length}}
 \def\pack{\operatorname{pack}}
 \def\Ric{\operatorname{Ric}}
 \def\Rm{\operatorname{Rm}}
@@ -117,15 +98,13 @@ isbn=false]{biblatex}
 \def\Tr{\operatorname{Tr}}
 \def\supp{\operatorname{supp}}
 \def\DD{\mathbb{D}}
-\def\II{\mathrm{I{\hskip-.1em}I}}
 \def\R{\mathbb{R}}
 \def\RR{\mathbb{R}}
 \def\LT{\Lambda\!\mathrm{T}}
 \def\NN{\mathbb{N}}
 \def\SS{\mathbb{S}}
 \def\T{\text{\rm T}}
-\def\L{\text{\rm L}}
-\def\df{\mathrel{:=}}
+\def\df{\buildrel \mathrm{def} \over{=\!\!=}}
 \def\parit#1{\medskip\noindent{\it #1}}
 \def\parbf#1{\medskip\noindent{\bf #1}}
 \def\qeds{\qed\par\medskip}
@@ -154,12 +133,24 @@ isbn=false]{biblatex}
 \newcommand{\testto}{\stackrel{test}{\longrightarrow}}
 \newcommand*{\set}[2]{\l\{\,\l.{#1}\vphantom{#2}\,\r|\,{#2}\,\r\}}
 
+\newcommand{\Test}{\operatorname{Test}}
+\newcommand{\Al}{\mathcal{A}lex} 
+\newcommand{\All}{\mathcal{A}lex_{loc}} 
+\newcommand{\DAl}{\mathcal{DA}lex}
+\newcommand{\DM}{\mathcal{DM}}
+\newcommand{\rcd}{\operatorname{RCD}}
+\newcommand{\dccto}{\stackrel{DC_{Alex}}{\longrightarrow}}
+\newcommand{\cccto}{\stackrel{C^0_c}{\longrightarrow}}
+\newcommand{\C}{\mathfrak{C}}
+\newcommand{\vv}{\mathfrak{v}}
+\newcommand{\ep}{\varepsilon}
+
 \newcommand{\M}{\mathcal M} 
-\newcommand{\A}{\mathcal A} 
 \newcommand{\SMA}{\mathcal{SMA}} 
 \newcommand{\SAA}{\mathcal{SAA}} 
-\newcommand{\ccto}{\stackrel{C^1_{Alex}}{\longrightarrow}}
+\newcommand{\ccto}{\stackrel{ rC^{1}}{\longrightarrow}}
 \newcommand{\cto}{\stackrel{C}{\longrightarrow}}
+\newcommand{\cdto}{\stackrel{C^1}{\longrightarrow}}
 \newcommand{\x}{\mathfrak x}
 \newcommand{\X}{\mathfrak X}
 
@@ -167,7 +158,7 @@ isbn=false]{biblatex}
             {\hbox{$\mathsurround=0pt #1$}}{}}
 \let\oldcdot\cdot
 \def\cdot{{\hskip0.5pt\zz\oldcdot\hskip0.5pt}}
-
+\def\const{\mathrm{const}}
 
 
 

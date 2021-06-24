@@ -1,0 +1,814 @@
+\section{Details}
+
+\subsection{Bochner formula}\label{sec:bochner}
+
+
+We will need few integral formulas based on the Bochner formula.
+We made these calculations based on \cite[Chapter II]{lawson-michelsohn}.
+First let us state the Bochner formula for function with Dirichlet boundary condition.
+
+\begin{thm}{Proposition}\label{prop:bochner-dirichle-old}
+Assume $\Omega$ is a compact domain with smooth boundary $\partial \Omega$ in a Riemannian manifold
+and $f$ is a smooth function that vanish on $\partial \Omega$.
+Then
+\[\int\limits_\Omega |\Delta f|^2
+-|\mathrm{Hess}f|^2
+-\langle\mathrm{Ric}(\nabla f),\nabla f\rangle
+=\int\limits_{\partial\Omega}
+H\cdot|\nabla f|^2,\]
+where $H$ denotes mean curvature of $\partial \Omega$.
+\end{thm}
+ 
+\begin{thm}{Corollary}
+Assume $\Omega$ is a compact domain with smooth boundary $\partial \Omega$ in a 2-dimensional Riemannian manifold with nonnegaive curvature
+and $f$ is a smooth concave function that vanish on $\partial \Omega$.
+Then
+\[\int\limits_\Omega 
+\det(\mathrm{Hess}f)
+\le\pi\cdot\sup_{x\in\partial\Omega}|\nabla_x f|^2.\]
+
+\end{thm}
+
+
+
+
+In this section we give necessary versions of the Bochner formula.
+The calculations are based on \cite[Chapter II]{lawson-michelsohn}.
+We use Riemannian metric to identify differential forms and multivector fields on $M$.
+Therefore the statement about differential forms can be also formulated in terms of multivector fields and the other way around.
+
+
+Let $M$ be a Riemannian manifold.
+Denote by $\nabla$ the Levi-Cevitta connection on $M$.
+The bundle $\LT M$ of multivectors over $M$ is equipped with Clifford product, denoted by $\,\bullet \,$.
+We will denote by $e_i$ is an orthonormal frame at a point; the following definitions will not depend on its choice.
+
+\parbf{Laplasians.}
+The Dirac operator on differential forms forms will be denoted by $D$;
+it is defined as
+\[D=\sum_i e_i\bullet \nabla_{e_i}.\]
+Its square 
+\[D^2=\sum_i e_i\bullet e_j\bullet \nabla^2_{e_i,e_j}\]
+is called Hodge laplacian.
+
+The Dirac operator if \emph{formally self-adjoint}, in particular,
+\[\int_M \langle D^2\phi,\psi\rangle=\int_M \langle D\phi,D\psi\rangle\]
+for any two vector fields $\phi$ and $\psi$ with compact support.
+
+Further, define the connection laplacian
+\[\nabla^*\nabla\phi =-\sum_i\nabla^2_{e_i,e_i}\phi\]
+and the gradient
+\[\nabla \phi=\sum e_i\otimes \nabla_{e_i}\phi.\]
+
+For the connection laplacian we also have the identity
+\[\int_M \langle \nabla^*\nabla\phi,\psi\rangle
+=
+\int_M \langle \nabla\phi,\nabla\psi\rangle.\]
+If $\phi$ anad $\psi$ have support in the domain where the frame is defined, then the right handside can be written as 
+\[\int_M \langle \nabla\phi,\nabla\psi\rangle=\sum_i\int_M\langle \nabla_{e_i}\phi,\nabla_{e_i}\psi\rangle;\]
+using the a partition of unity, one can use the latter expression to redefine the left hand side. 
+
+\parbf{Bochner formula.}
+The difference $D^2-\nabla^*\nabla$ between two laplasians described above is a 0-order differential operator which can be written in terms of curvature.
+For a vector field $v$, the formula is 
+\[D^2v-\nabla^*\nabla v=\Ric(v).\]
+
+Using the identities above, the formula can be written in an integral form
+\[\int_M \langle Dv,Dw\rangle -\langle \nabla v,\nabla w\rangle=\langle \Ric(v),w\rangle\]
+In particular, if $w=\phi \cdot v$ for a smooth function $\phi$;
+we get
+\[\int_M \langle Dv,D(\phi\cdot v)\rangle -\langle \nabla v,\nabla(\phi\cdot v) \rangle=\phi\cdot\langle \Ric(v), v\rangle,\]
+or, equivalently
+\[\int_M \phi\cdot(\langle Dv,D v\rangle -\langle \nabla v,\nabla v \rangle)
++
+\int_M (\langle Dv,\nabla \phi \bullet v\rangle -\langle \nabla v,\nabla v \rangle)
+=
+\phi\cdot\langle \Ric(v), v\rangle,\]
+\parbf{Relative formulas.}
+For a domain $\Omega$ with boundary $\partial \Omega$, the formula above takes form
+\[\int_\Omega (\langle D^2\phi,\psi\rangle- \langle D\phi,D\psi\rangle)
+=
+\int_{\partial \Omega}\langle \nu\bullet D\phi,\psi\rangle,\]
+where $\nu$ is the outer normal field on $\partial \Omega$.
+
+The square $D^2$ of the Dirac operator is called Hodge laplacian.
+
+
+For a domain $\Omega$ with boundary $\partial \Omega$, the formula above takes form
+\[\int_\Omega (\langle \nabla^*\nabla\phi,\psi\rangle-\langle \nabla\phi,\nabla\psi\rangle)
+=
+\int_{\partial \Omega}\langle \nabla_\nu \phi,\psi\rangle,\]
+where $\nu$ is the outer normal field on $\partial \Omega$.
+
+The Bochner's identity for a vector field $u$ can be written as
+\[D^2 u-\nabla^*\nabla u=\Ric(u).\]
+relates the Dirac's laplasian $D^2$ and the connection laplasian $\nabla^*\nabla$
+
+In this section we will write an integral version of the Bochner formula \cite[8.3]{lawson-michelsohn}
+\[D^2-\nabla^*\nabla=\Ric\]
+in such a way that each term has geometric meaning.
+
+
+Further $\nabla^*\nabla=-\sum_i\nabla^2_{e_i,e_i}$ is the connection Laplacian.
+
+
+
+Let $M$ be Riemannian $m$-manifold and $f\:M\to\R$ be a smooth function without critical points on an open domain $\Omega\i M$.
+Assume $\phi\:\Omega\to\R$ be a smooth function with compact support.
+Set $u=\nabla f/|\nabla f|$.
+Let us define $\Int_f(x)$ (or just $\Int$) to be scalar curvature of the level set $L_x=f^{-1}(f(x))$ at $x\in L_x\i M$.
+Set
+\begin{enumerate}
+ \item $\kappa_1(x)\le\kappa_2(x)\le\dots\le\kappa_{m-1}(x)$ the principle curvatures of $L_x$ at $x$;
+ \item $H_f=H_f(x)=\kappa_1+\kappa_2+\dots+\kappa_{m-1}$ is mean curvature of $L_x$ at $x$
+\item $G_f=G_f(x)=2\sum_{i<j}\kappa_i\cdot\kappa_j$ is the extrinsic term
+ in the Gauss formula for $\Int_f(x)$. 
+\end{enumerate}
+
+Let us define the strange curvature as
+\[\Str(u)=\Sc-\<\Ric(u),u\>,\]
+where $\Sc$ and $\Ric$ denote scalar and Ricci curvature correspondingly.
+
+\begin{thm}{Bochner's formula}\label{thm:bochner-formula}
+Let $M$ be an $m$-dimensional Riemannian manifold,
+$f\:M\to\R$ be a smooth function without critical points on an open domain $\Omega\subset M$ and $u=\nabla f/|\nabla f|$.
+Assume $\phi\:\Omega\to\R$ is a smooth function with compact support.
+Then 
+$$\int\limits_\Omega \phi\cdot \Str(u)
+=
+\int\limits_\Omega \l[H\cdot\<u,\nabla\phi\>- \<\nabla\phi,\nabla_u u\> \r]+
+\int\limits_\Omega \phi\cdot \Int_f.
+\eqlbl{Bochner}$$
+\end{thm}
+
+In the proof of the main result we will 
+
+
+\parit{Proof.}
+Assume $b_1,\dots, b_m$ is an orthonormal frame such that $b_m=u$, 
+then 
+\[\Sc-2\cdot \<\Ric(u),u\>=2\cdot \sum_{i<j<m} \sec(b_i\wedge b_j).\] 
+Therefore the Gauss formula can be written as
+\[
+\begin{aligned}
+\Int_f&=G_f+\Sc-2\cdot \<\Ric(u),u\>=
+\\
+&=G_f+\Str(u)+ \<\Ric(u),u\>.
+\end{aligned}
+\eqlbl{eq:gauss}
+\]
+
+We can choose the frame $b_i$ so that $b_m=u$ and such that $b_i$ points in the principle directions of the level set $L_x$ for $i<m$.
+Note that $\<\nabla_u u,u\>=0$, therefore
+\begin{align*}
+Du&=\sum_{i} b_i\bullet  \nabla_{b_i}u=
+\\
+&=\sum_{i<m}\kappa_i\cdot  b_i\bullet  b_i+u\bullet  \nabla_{u}u=
+\\
+&=
+\sum_{i=1}^{m}\kappa_i+u\wedge\nabla_{u}u=H+u\wedge\nabla_{u}u,
+\end{align*}
+here ``$\,\bullet \,$'' denotes the Clifford multiplication.
+Applying again that $\<\nabla_u u,u\>=0$, we get that
+$$ \langle Du,Du \rangle=
+\l(\sum_{i<m}\kappa_i\r)^2+|\nabla_{u}u|^2=H_f^2+|\nabla_{u}u|^2.$$
+On the other hand
+$$\nabla u=\sum_{i<m}\kappa_i\cdot b_i\otimes b_i+\nabla_u u\otimes u,$$
+hence
+$$\langle\nabla u,\nabla u\rangle =
+\sum_{i<m}\kappa_i^2+|\nabla_{u}u|^2.$$
+
+Therefore
+$$\langle D u,D u\rangle-\langle \nabla u,\nabla u \rangle =2\cdot\sum_{i<j}\kappa_i\cdot\kappa_j=G_f.$$
+
+Further,
+\begin{align*}
+\int\limits_\Omega\phi\cdot\l[\<D u,D u\>-\<D^2 u, u\>\r]
+&=
+\int\limits_\Omega\<\nabla\phi\bullet u,D u\>
+=
+\\
+&=
+-\int\limits_\Omega\l[H\cdot\<\nabla\phi,u\>- \<\nabla\phi,\nabla_u u\> \r],
+\end{align*}
+here ``$\bullet $'' denotes Kliford's multiplication.
+
+Since $| u|\equiv 1$, we have $\<\nabla_{\nabla\phi}  u, u\>=0$.
+Therefore
+$$\int\limits_\Omega\phi\cdot\l[\<\nabla u,\nabla u\>-\<\nabla^*\nabla u, u\>\r]
+=
+\int\limits_\Omega\<\nabla_{\nabla\phi}  u, u\>=0.$$
+
+Let us write Bochner formula \cite[8.3]{lawson-michelsohn} for field $u$:
+$$D^2u-\nabla^*\nabla u=\Ric(u);$$
+in particular, 
+$$\phi\cdot \<D^2u,u\>-\phi\cdot \<\nabla^*\nabla u,u\>=\phi\cdot \<\Ric(u),u\>.\eqlbl{eq:prebochner}$$
+Integrating \ref{eq:prebochner}, using the given calculations we get that
+\begin{align*}
+\int\limits_\Omega \phi \cdot G_f
+&=\int\limits_\Omega\phi\cdot(\<D u,D u\>-\<\nabla u,\nabla u\>)
+=
+\\
+&=\int\limits_\Omega \phi\cdot \Ric(u,u) 
+-
+\int\limits_\Omega H_f\cdot\<u,\nabla\phi\>- \<\nabla\phi,\nabla_u u\> .
+\end{align*}
+
+It remains to apply the Gauss formula \ref{eq:gauss}.
+\qeds
+
+
+\subsection{Gauss and mean curvature estimate}
+
+\begin{thm}{Theorem}\label{thm:extimage-of-G-and-H}
+Let $f$, $h$ be a pair of strongly convex smooth 1-Lipschitz functions defined on an open set of a 3-dimensional Riemannian manifold.
+Suppose that (1)
+\[|\nabla (f+h)|<\eps\cdot|\nabla f|\quad\text{and}\quad |\nabla f|\ge 1\] 
+for some fixed positive $\eps<\tfrac12$
+and (2) for some $a,b\in \RR$, the set
+\[W_{a,b}=\set{p\in M}{f(p)=a, h(p)\le b}\]
+is compact.
+Denote by $k_1(p)\le k_2(p)$ the principle curvatures of $W_{a,b}$ at a point $p\in W_{a,b}$.
+Let $H(p)=k_1(p)+ k_2(p)$ and
+$G(p)=k_1(p)\cdot k_2(p)$ its mean and Gauss curvatures.
+Then
+\[\int_{W_{a,b}}G\le 100\cdot\eps
+\eqlbl{intG<100eps}\]
+and 
+\[\int_{W_{a,b}}H\le 10\cdot \sqrt{\eps}\cdot \length(\partial{W_{a,b}}).
+\eqlbl{intH<eps}\]
+\end{thm}
+
+The proof is based on the 2-dimesional case  following statement,
+which is the integral Bochner formula written for function with Dirichlet boundary condition.
+
+\begin{thm}{Proposition}\label{prop:bochner-dirichle}
+Assume $\Omega$ is a compact domain with smooth boundary $\partial \Omega$ in a Riemannian manifold
+and $f$ is a smooth function that vanish on $\partial \Omega$.
+Then
+\[\int\limits_\Omega |\Delta f|^2
+-|\Hess f|^2
+-\langle\mathrm{Ric}(\nabla f),\nabla f\rangle
+=\int\limits_{\partial\Omega}
+H\cdot|\nabla f|^2,\]
+where $H$ denotes mean curvature of $\partial \Omega$.
+\end{thm}
+
+\parit{Proof.}
+Equip $W_{a,b}$ with unit normal vector field $n=\tfrac{\nabla f}{|\nabla f|}$.
+Let $S_p\:\T_pW_{a,b}\zz\to \T_pW_{a,b}$ be the corresponding shape operator, so $S_p\:v\mapsto\nabla_vn$.
+Since $f$ is strongly convex, we have that 
+\[\langle S_p(v),v\rangle\ge \delta\cdot|v|^2\]
+for a fixed value $\delta>0$ and any tangent vector $v\in \T_pW_{a,b}$. 
+
+Note that the restriction of $u=h|_{W_{a,b}}$ is strongly convex.
+Moreover 
+\[\Hess_pu(v,v)\ge (1-\eps)\cdot \langle S_p(v),v\rangle\eqlbl{Hess=<shape}\]
+for any $p\in W_{a,b}$ and $v\in\T_pW_{a,b}$.
+
+Indeed, consider the geodesic $\gamma$ in $W_{a,b}$ such $\gamma(0)=p$ and $\gamma'(0)=v$.
+Set $a=\gamma''(t)$.
+Note that 
+\begin{align*}
+a&=-\langle S_p(v),v\rangle \cdot n,
+\intertext{Since $h$ is is strongly convex, $\Hess_p h\ge 0$; therefore}
+(\Hess_pu)(v,v)&=(\Hess_p h)(v,v)+\langle \nabla_p h,a\rangle\ge
+\\
+&\ge-\tfrac{\langle\nabla_p h,\nabla_p f\rangle}{|\nabla_p f|}\cdot\langle S_p(v),v\rangle\ge
+\\
+&\ge (1-\eps)\cdot|\nabla_p f|\cdot\langle S_p(v),v\rangle.
+\end{align*}
+Since $\nabla f\ge 1$, \ref{Hess=<shape} follows.
+
+Since $\langle S_p(v),v\rangle\ge 0$ and $\eps<\tfrac12$, the inequality \ref{Hess=<shape} implies that 
+\[4\cdot \det(\Hess_pu)\ge G(p)
+\eqlbl{eq:det>=G}\]
+and
+\[-2\cdot \Delta u\ge H(p)
+\eqlbl{eq:trace>=H}\]
+for any $p\in W_{a,b}$.
+
+Denote by  $\lambda_1(p),\lambda_2(p)$ the eigenvalues of  $\Hess_p u$, so
+\begin{align*}
+\trace(\Hess u)&=\Delta u=\lambda_1+\lambda_2,
+\\
+|\Hess u|^2&=\lambda_1^2+\lambda_2^2,
+\\
+\det(\Hess u)&=\lambda_1\cdot\lambda_2.
+\end{align*}
+Therefore 
+\[2\cdot\det(\Hess u)
+=|\Delta u|^2
+-|\Hess u|^2.\] 
+
+Since $W_{a,b}$ is two-dimensional, by Proposition~\ref{prop:bochner-dirichle} we get that
+\[\int\limits_{W_{a,b}} 
+2\cdot\det(\Hess u)
+=\int\limits_{W_{a,b}} 
+K\cdot|\nabla u|^2
++
+\int\limits_{\partial W_{a,b}}
+\kappa\cdot|\nabla u|^2,\]
+where $\kappa\ge 0$ is the geodesic curvature of $\partial W_{a,b}$
+and $K$ is the curvature of $W_{a,b}$.
+
+Since $u$ is convex and vanish on the boundary of $W_{a,b}$,
+it has unique critical point, which is its minimum.
+By Morse lemma,  $W_{a,b}$ is a disc.
+Therefore, by Gauss--Bonnet formula, we get that
+\[\int_{W_{a,b}} K+\int_{\partial{W_{a,b}}}\kappa=2\cdot\pi.\]
+Whence 
+\[\int\limits_{W_{a,b}} 
+\det(\Hess u)
+\le\pi\cdot\sup_{p\in{W_{a,b}}}|\nabla_p u|^2.\]
+
+Note that $\nabla_p u$ is projection of $\nabla_ph$ to $\T_pW_{a,b}$.
+Therefore
+\begin{align*}
+|\nabla_p u|^2&=|\nabla_p h|^2-\langle\nabla_p h,n\rangle^2\le
+\\
+&\le1-(1-\eps)^2<
+\\
+&<2\cdot\eps.
+\end{align*}
+It follows that 
+\[\int\limits_{W_{a,b}} 
+\det(\Hess u)
+\le2\cdot \pi\cdot\eps.\]
+Applying \ref{eq:det>=G}, we obtain \ref{intG<100eps}.
+
+Similarly,  by the divergence theorem, we get that
+\[-\int\limits_{W_{a,b}} \Delta u=\int\limits_{\partial{W_{a,b}}} |\nabla u|.\]
+Whence \ref{eq:trace>=H} implies 
+\[\int\limits_{W_{a,b}} H\le 10\cdot \sqrt{\eps}\cdot \length(\partial{W_{a,b}}).\]
+\qeds
+
+ 
+ 
+ 
+ 
+\subsection{ Convergent vector fields}
+
+\begin{thm}{Proposition}
+Let $f_n$ be a sequence of $C^1$-smooth $\lambda$-concave functions
+and
+$f_n\to f$.
+Suppose that for any compact $K$ there is $c>0$ such that
+$d_x(\xi)+d_x(\eta)\le c(\pi-\angle(\xi,\eta))$
+for $x\in K$ and $\xi, \eta\in \Sigma_x$.
+Then $f_n$ roughly $C^1$-converge to $f$. 
+\end{thm}
+
+Fix some convergent directions $\xi_n\to\xi_0$ and
+corresponding sequences of points
+$x_n\to x_0$, $y_n\to y_0$
+such that  $\xi_i=\uparrow_{x_i}^{y_i}$ for $i\in\mathbb N\cup\{0\}$.
+There exists $z_0 \in U$ such that for $\eta=\uparrow_x^z$ 
+we have
+$\angle(\xi,\eta)\ge \pi-3\delta(\xi)/2$.
+We choose some sequence 
+$U_n\ni z_n\to z_0$
+and denote
+$\eta_n=\uparrow_{x_n}^{z_n}$,
+then for large $n$ we have $\angle(\xi_n,\eta_n)\ge \pi-2\delta(\xi)$.
+Let us denote by $V_x$ be the set of points that can be joint with $x$
+by a unique geodesic. For $i\in\mathbb N\cup\{0\}$ and
+$q\in V_{x_i}$ we have $|d_{x_i} \dist_q(\xi_i)+d_{x_i} \dist_q(\eta_i)|\le 4\de$ by first
+variation formula.
+Since Hausdorff dimension of $A\setminus V_x\le n-1$ we also obtain
+that
+$|d_{x_i} \widetilde\dist_{p_i,r}(\xi_i)+d_{x_i} \widetilde\dist_{p_i,r}(\eta_i)|\le 4\de(\xi) (*)$.
+Since functions
+$\widetilde\dist_{p_i,r}$ are uniformly semiconcave converging to
+$\widetilde\dist_{p,r}$ we have
+$\liminf d_{x_n}\widetilde\dist_{p_n,r}(\xi_n)\ge d_{x_0}\widetilde\dist_{p_0,r}(\xi_0)$ and $\liminf d_{x_n}\widetilde\dist_{p_n,r}(\eta_n)\ge d_{x_0}\widetilde\dist_{p_0,r}(\eta_0)$.
+Together with $(*)$ this gives
+\begin{align*}
+ d_{x_0}\widetilde\dist_{p_0,r}(\xi_0)+8\de\ge
+\limsup d_{x_n}\widetilde\dist_{p_n,r}(\xi_n)\ge\\
+\ge
+\liminf d_{x_n}\widetilde\dist_{p_n,r}(\xi_n)\ge d_{x_0}\widetilde\dist_{p_0,r}(\xi_0)-8\de.
+\end{align*}
+
+
+
+
+
+\begin{thm}{Proposition}
+Any test sequence roughly $C^1$-converges.
+\end{thm}
+It is sufficient to show  that functions
+$\widetilde{\dist}_{p_n,r}(t) =\oint_{B_r(p_n)} \dist_{s}(t)d\vol(s)$
+roughly $C^1$-converge to $\widetilde{\dist}_{p_0,r}(t)$.
+
+Fix some convergent directions $\xi_n\to\xi_0$ and
+corresponding sequences of points
+$x_n\to x_0$, $y_n\to y_0$
+such that  $\xi_i=\uparrow_{x_i}^{y_i}$ for $i\in\mathbb N\cup\{0\}$.
+There exists $z_0 \in U$ such that for $\eta=\uparrow_x^z$ 
+we have
+$\angle(\xi,\eta)\ge \pi-3\delta(\xi)/2$.
+We choose some sequence 
+$U_n\ni z_n\to z_0$
+and denote
+$\eta_n=\uparrow_{x_n}^{z_n}$,
+then for large $n$ we have $\angle(\xi_n,\eta_n)\ge \pi-2\delta(\xi)$.
+Let us denote by $V_x$ be the set of points that can be joint with $x$
+by a unique geodesic. For $i\in\mathbb N\cup\{0\}$ and
+$q\in V_{x_i}$ we have $|d_{x_i} \dist_q(\xi_i)+d_{x_i} \dist_q(\eta_i)|\le 4\de$ by first
+variation formula.
+Since Hausdorff dimension of $A\setminus V_x\le n-1$ we also obtain
+that
+$|d_{x_i} \widetilde\dist_{p_i,r}(\xi_i)+d_{x_i} \widetilde\dist_{p_i,r}(\eta_i)|\le 4\de(\xi) (*)$.
+Since functions
+$\widetilde\dist_{p_i,r}$ are uniformly semiconcave converging to
+$\widetilde\dist_{p,r}$ we have
+$\liminf d_{x_n}\widetilde\dist_{p_n,r}(\xi_n)\ge d_{x_0}\widetilde\dist_{p_0,r}(\xi_0)$ and $\liminf d_{x_n}\widetilde\dist_{p_n,r}(\eta_n)\ge d_{x_0}\widetilde\dist_{p_0,r}(\eta_0)$.
+Together with $(*)$ this gives
+\begin{align*}
+ d_{x_0}\widetilde\dist_{p_0,r}(\xi_0)+8\de\ge
+\limsup d_{x_n}\widetilde\dist_{p_n,r}(\xi_n)\ge\\
+\ge
+\liminf d_{x_n}\widetilde\dist_{p_n,r}(\xi_n)\ge d_{x_0}\widetilde\dist_{p_0,r}(\xi_0)-8\de.
+\end{align*}
+
+\begin{thm}{Definition}
+We say that sequence of vector fields $v_n$ on $U_n$
+converges if for any compact $K$ there is $c>0$ such that
+for any $x\in K$ and convergent sequence of directions $\xi_n\to\xi_0\in \Sigma_x$ we have
+$\limsup \<v_n,\xi_n\>-\liminf \<v_n,\xi_n\>\le c\delta(\xi)$.
+
+
+
+\end{thm}
+
+\begin{thm}{Remark}
+A sequence $f_n$ of $C^1$ functions roughly $C^1$-converges
+iff $\nabla f_n$ converges.
+
+\end{thm}
+
+
+\begin{thm}{Claim}\label{lem:scalprod}
+Let vector fields $v_n, w_n$ converge, then for every compact
+set $K\subset A$ there is a constant $c>0$ so that
+$\<v_n, w_n\>$ $c\de$-converges on $A^\de\cap K$.
+\end{thm}
+
+\parit{Proof}
+For $x\in A^\delta$ fix $\delta$-orthogonal basis
+
+
+
+
+
+In particular we have
+\begin{thm}{Corollary}\label{cor:cdeltacoeff}
+Let vector fields $v_n^1,\dots, v_n^m, v_n$ be
+uniformly bounded, converging
+ and $m$-sets of vectors
+$v_n^1,\dots, v_n^m$ be uniformly linearly independent,
+i.e. $\det(\<v_n^i, v_n^j\>)>c_0$
+for some constant $c_0$.
+Then for coefficient of decomposition
+of $v_n=\alpha_n^1 v_n^1+\dots+\alpha_n^m v_n^m$
+ and for every compact
+set $K\subset A$ there is a constant $c>0$ so that
+$\alpha_n^i$ $c\de$-converges on $A^\de\cap K$.
+\end{thm}
+
+\section{DC calculus.}\label{sec:DC}
+
+This section is based on the paper of Perelman \cite{PerDC}.
+We define DC-functions, their relatives, and related convergences.
+(DC stands for \emph{difference of convex} functions.)
+
+\subsection{Functions}
+
+Let $\Omega$ be an open bounded domain in $\RR^m$
+and $S_\Omega\subset\Omega\subset\R^m $ subset of
+zero $(m-1)$-Hausdorff measure; that is, $h_{m-1}(S_\Omega)=0$.
+%The set $S$  will be referred as a subset of {\it singularities}.
+
+We denote by  $\op{DC_0}(\Omega,S_\Omega)$ a class of
+ $\DC$-function, such  that are continuously differentiable on
+$\Omega\setminus S_\Omega$.
+
+We denote by $\op{C_0}(\Omega,S_\Omega)$ a set of bounded functions
+$f\:\Omega\to\RR$, which are continuous on $\Omega\setminus S_\Omega$.
+
+Recall that a measurable function $f\:\RR^m\to \RR$ has bounded variation
+ (briefly $f\in\op{BV}(\Omega)$) if there is  $c>0$,
+such that  the inequality
+$$\int\limits_\Omega f\cdot D_i\phi
+\le
+ c\cdot\sup_{x\in\Omega}|\phi(x)|$$
+holds
+for any $i$ and any smooth function $\phi\:\Omega\to \RR$ with compact support.
+
+Let $\op{BV_0}(\Omega,S_\Omega)\subset \op{BV}(\Omega)$ be the subset of bounded functions that are continuous on $\Omega\setminus S_\Omega$.
+
+
+We say that a signed Radon measure $\mu$ is in
+$\aleph_0(\Omega,S_\Omega)$ if $\mu(S_\Omega)=0$.
+
+
+
+\subsection{Sequences}
+Let $h_n:\Omega\to\R$ be a sequence of continuous functions that
+converges to the function $h_0\in DC(\Omega)$.
+We will write 
+$$(h_n,h_0)\in \op{DC^{seq}}(\Omega)$$
+if
+there are sequences of concave functions $f_n,g_n$ converging to
+$f_0,g_0$, such that 
+$h_0=f_0-g_0$.
+
+Suppose in addition that 
+$f_n,g_n$ are  continuously differentiable in
+$\Omega\setminus S_\Omega$ for $n=0,1,2,\dots$.
+In this case we will write 
+$$(h_n,h)\in \op{DC_0^{seq}}(\Omega,S_\Omega).$$
+
+
+
+Let $h_n:\Omega\to\R$ be a sequence of
+uniformly bounded continuous 
+functions
+% with uniformly bounded supports 
+that
+converges  to the function $h\in \op{C_0}(\Omega,S_\Omega)$
+ on
+$\Omega\setminus S_\Omega$.
+In this case we will write 
+$$(h_n,h)\in \op{C_0^{seq}}(\Omega,S_\Omega).$$
+
+Let $h_n:\Omega\to\R$ be a sequence of uniformly bounded functions
+with uniformly bounded variations
+that
+almost everywhere converges  to a function $h_0\in\op{BV}(\Omega)$.
+ Suppose that for any $i$ there are
+ almost everywhere converging  sequences
+ $f_n, g_n$ with uniformly bounded variations
+  such that 
+ $h_n=f_n- g_n$ and
+ $\partial_i f_n$,
+ $\partial_i  g_n$ are
+ nonnegative Radon measures.
+  In this case we will write 
+$$(h_n,h)\in \op{BV^{seq}}(\Omega,S_\Omega).$$
+
+If in addition $f_n, g_n\in\op{C_0}(\Omega,S_\Omega)$ for
+$n\ge 0$ we
+will write 
+$$(h_n,h_0)\in \op{BV_0^{seq}}(\Omega,S_\Omega).$$
+
+
+
+
+%Let $h_n:\Omega\to\R$ be a sequence of $C^0$-functions with uniformly bounded variations and  $h:\Omega\to\R$ be a  function so that that $h_n$C-converges  to the function $h$on the set where $h$ is continuous.  In this case we will write $$(h_n,h)\in \op{CBV^{seq}}(\Omega).$$
+
+Let $\mu_n$ be
+  a sequence of uniformly bounded
+signed Radon measure  such that
+$\mu_n=\mu_n^+-\mu_n^-$
+for some
+sequences of nonnegative Radon measures
+that converge weakly to measures $\mu^+,
+\mu^-\in\aleph_0(\Omega,S_\Omega)$.
+Let $\mu=\mu^+-\mu^-$,
+we will write
+$$(\mu_n,\mu)\in\aleph_0^{seq}(\Omega,S_\Omega).$$
+
+
+\subsection{Operations}
+
+It is known that
+the first partial derivative of a $DC$ function has bounded variation
+and the second partial derivative are signed Radon measures.
+The corresponding properties for sequences are given in the following lemma:
+
+\begin{thm}{Lemma}\label{thm-D}
+
+(1) If $( f_n, f)\in\op{DC_0^{seq}}(\Omega,S_\Omega)$,
+then for every $i$ the partial derivative (defined almost everywhere)
+we have
+$$\biggl(\frac{\partial f_n}{\partial x_n^i}, \frac{\partial f}{\partial x^i}\biggr)\in\op{BV_0^{seq}}(\Omega,S_\Omega).$$
+
+(2) 
+ If     $( f_n, f)\in\op{BV_0^{seq}}(\Omega,S_\Omega)$, 
+then for every $i$ for the partial derivative (defined as measures)
+we have
+$$\biggl(\frac{\partial f_n}{\partial x_n^i}, \frac{\partial f}{\partial x^i}\biggr)\in\aleph_0^{seq}(\Omega,S_\Omega).$$
+
+\end{thm}
+
+We can  multiply $C_0$ functions by $\aleph_0$ measures and
+obtain again $\aleph_0$ measures, the corresponding statement
+for sequences is the following:
+
+\begin{thm}{Lemma}\label{thm-CM}
+Let $f_n, f\in\op{C_0^{seq}}(\Omega,S_\Omega)$,
+measures $g_n, g\in\aleph_0(\Omega,S_\Omega)$,
+then
+$$(f_n\cdot g_n,f\cdot g)\in\aleph_0^{seq}(\Omega,S_\Omega).$$
+\end{thm}
+
+The class of $\op{BV_0}$ and $C_0$ functions and sequences is closed under analytic expression as
+says the following theorem:
+\begin{thm}{Lemma}\label{thm-A}
+Let sequences $(f^1_n,f^1),\dots,(f^k_n, f^k) \in \op{BV_0^{seq}(C_0^{seq})}(\Omega,S_\Omega)$,
+and $A$ be  $C^\infty$-function well defined in a small neighborhood of
+$(f^1,\dots,f^k)(\Omega)$.
+Then $$(A(f^1_n,\dots,f^k_n), A(f^1,\dots,f^k))\in\op{BV_0^{seq}(C_0^{seq})}(\Omega,S_\Omega).$$
+\end{thm}
+
+
+\section{ Functions }
+ \begin{thm}{Proposition}\label{NiceFunctions}
+ Let   
+	$M_n\in\M_{\ge -1}^n$,
+	$M_n\GHto A$ , $ x\in A^0$, $M_n\ni x_n\to x$
+	and $U\ni x$
+	be a good domain for this convergence.
+ For any
+  $v\in T_xA$,
+ $\varepsilon>0$
+ there is  $r>0$
+ and a
+  sequence of smooth strictly concave functions
+ $f_n: B_r(x_n)\to \R$, roughly $C^1$-convergent to a function 
+ $ f:B_r(x)\to\R$,
+such that $d_xf$  is arbitrary close to $ <v,\cdot>$.
+ \end{thm}
+  
+ 
+\section{DC-coordinates for Alexandrov space}
+
+\subsection{Existense of Nice common chart}\label{NiceChartProof}
+Here should be the proof of 
+Proposition~\ref{Prop:chart}.
+\subsection{Metric tensor  in coordinates}\label{sec:metr-con}
+
+\begin{thm}{Theorem (Metric tensor in Nice common chart)}\label{metricBV}
+Let
+$\mathfrak X_n:U_n\to\Omega$,
+$\mathfrak X:U\to\Omega$ be a Nice common chart.
+Denote by $g_{ij,n}$ coordinates of metric tensor in this chart
+and by $g^{ij}_n$ coordinates of the inverse matrix. 
+Then
+$g_{ij,n}\in BV_0^{seq}(\Omega)$
+and
+$g^{ij}_n\in BV_0^{seq}(\Omega)$.
+Moreover, $\det(g_{ij,n})$ and $\det(g^{ij}_n)$ are bounded and bounded away from 0.
+
+\end{thm}
+
+
+
+
+For the proof of this theorem we define a class of $DC$-convergent sequences with some additional restriction,
+that allow to take limits of derivatives.
+ this will be applied to sequences of distance functions
+in coordinates.
+Let $h_n:\Omega\to\R$ be a sequence of $C^0$ functions that
+converges to the function $h_0\in DC(\Omega)$.
+We shall write
+$(h_n, h_0)\in DC_+^{seq}(\Omega)$
+if
+there are sequences of concave functions $f_n,g_n\in C^0(\Omega)$ converging to
+$f_0,g_0$, such that 
+$h_0=f_0-g_0$ and in addition $f_n$ and $g_n$
+are  differentiable at all points
+from $\Omega\setminus S_\Omega$ where $h_n$ is
+differentiable for $n=0,1,2\dots$.
+
+ 
+ 
+\begin{thm}{Lemma}\label{DC+}
+	Let
+$(h_n, h_0)\in DC_+^{seq}(\Omega)$
+and $h_n$ be
+differentiable at
+$x_n$ for $n=0,1,2\dots$.
+Then $d_{x_n}h_n\to d_{x_0}h_0$. 
+
+
+\end{thm}
+
+{\it Proof of the Theorem~\ref{metricBV} }
+As it is shown in \cite{PerDC} Section 4.2
+that if $\Omega$ is sufficiently small chart around a regular point,
+for appropriate $p_i\in U$ in general position, $N=m(m+1)/2$ and rational function $Q$ components of metric tensor can be expressed as:
+
+$$g_{ij}=Q\left( \frac{\partial (d_{p_1}\circ \X^{-1})}{\partial x_1},\dots,
+\frac{\partial (d_{p_1}\circ \X^{-1})}{\partial x_m},\dots,
+\frac{\partial (d_{p_N}\circ \X^{-1})}{\partial x_1},\dots,
+\frac{\partial (d_{p_N}\circ \X^{-1})}{\partial x_m}\right)
+$$
+
+$$g_{ij}^n=Q\left( \frac{\partial (d_{p_1^n}\circ \X_n^{-1})}{\partial x_1},\dots,
+\frac{\partial (d_{p_1^n}\circ \X_n^{-1})}{\partial x_m},\dots,
+\frac{\partial (d_{p_N^n}\circ \X_n^{-1})}{\partial x_1},\dots,
+\frac{\partial (d_{p_N^n}\circ \X_n^{-1})}{\partial x_m}\right).
+$$
+
+It can be obtained using arguments similar to \cite{PerDC} Section 3, that 
+$(d_{p_i^n}\circ \X_n^{-1}, d_{p_i}\circ \X^{-1})\in DC_+^{seq}(\Omega)$,
+then in particular
+$(g^{ij}_n, g^{ij})\in BV^{seq}(\Omega)$.
+Now it suffices to show that for any sequence of points
+ $ q_n\to q\in \Omega\setminus S_\Omega $ the sequence 
+$g_{ij}^n(q_n)\to g_{ij}(q)$. 
+For a point $p$ in $U$ or $U_n$ we denote by $V_p$ points
+with only one minimizing geodesic to $p$.
+Let note that
+$d_{p}\circ \X^{-1}$ is $C^1$ on $\X(V_p)$
+in a weak sense of \cite{OS} (Section 1.5) and
+$d_{p}\circ \X_n^{-1}$ is $C^1$ on $\X_n(V_p)$.
+
+
+
+Then by Lemma~\ref{DC+} for $U_n\ni p^n\to p\in U$ and
+$q_n\in\X(V_{p_n})$ such that $q_n\to q\in \X(V_p)$
+we have
+$\frac{\partial (d_{p^n}\circ \X_n^{-1})}{\partial x_i}(q_n)\to
+\frac{\partial (d_{p}\circ \X^{-1})}{\partial x_i}(q)$.
+
+Now for a given sequence of points $ q_n\to q\in \Omega\setminus S_\Omega $ 
+we can choose points $p_i^n$ and $p_i$
+in the expression for metric tensor
+ in such a way 
+that
+$q_n\in\X(V_{p_i^n})$ and $q\in \X(V_{p_i})$.
+
+\qeds
+
+
+
+
+
+\begin{thebibliography}{52}
+
+\bibitem[AKP]{AKP} Alexander, S.; Kapovitch, V.; Petrunin A.
+An optimal lower curvature bound for convex hypersurfaces in Riemannian manifolds.
+
+
+\bibitem[AZ]{AZ}Aleksandrov, A.D. and Zalgaller, V.A. [1962]: Two-dimensional manifolds of bounded curvature.
+Tr. Mat. Inst. Steklova 63. English transl.: Intrinsic geometry of surfaces. Trans!. Math. Monographs
+15, Am. Math. Soc. (1967), Zb1.l22,170
+
+
+\bibitem[BN]{BN}Berestovskij, V.N.; Nikolaev, I.G.
+Multidimensional generalized Riemannian spaces. (English. Russian original)
+Geometry. IV. Non-regular Riemannian geometry. Encycl. Math. Sci. 70, 168-243 (1993); translation from Itogi Nauki Tekh., Ser. Sovrem. Probl. Mat., Fundam. Napravleniya 70, 190-272 (1992).
+
+
+\bibitem[BGP]{BGP} Burago, Yu.; Gromov, M.; Perelman, G., \textit{A. D. Aleksandrov spaces
+with curvatures bounded below.} (Russian)  Uspekhi Mat. Nauk  47  (1992),  no.
+2(284), 3--51, 222;   translation in  Russian Math. Surveys  47  (1992),  no. 2, 1--58
+\bibitem[Federer]{federer}
+Federer, Herbert (1969), \textit{Geometric measure theory}, series Die Grundlehren der mathematischen Wissenschaften, Band 153, New York: Springer-Verlag New York Inc., pp. xiv+676, ISBN 978-3-540-60656-7, MR 0257325
+
+\bibitem[G]{G}
+Nicola Gigli,
+Riemann curvature tensor on RCD spaces and possible applications https://arxiv.org/pdf/1902.02282.pdf
+
+\bibitem[G1]{G1}
+Nicola Gigli,
+Non-smooth differential geometry, to appear on Mem. Amer. Math. Soc..
+Preprint, arXiv:1407.0809, 2014.
+
+\bibitem[GMS]{GMS}
+Nicola Gigli ? Andrea Mondino ? Giuseppe Savar´e ?
+Convergence of pointed non-compact metric measure spaces
+and stability of Ricci curvature bounds and heat flows
+
+
+
+\bibitem[H]{H} Bang-Xian Han, 
+Ricci tensor on $RCD^*(K, N)$ spaces.
+
+\bibitem[Kap]{KapStab} Kapovitch, Vitali Perelman's stability theorem. Surveys in differential geometry. Vol. XI, 103–136, Surv. Differ. Geom., 11, Int. Press, Somerville, MA, 2007.
+
+\bibitem[LawMich]{lawson-michelsohn}Lawson, H. and Michelsohn, M.
+\textit{Spin geometry}
+
+\bibitem[L] {L} John Lott,\textit{
+Ricci measure for some singular Riemannian metrics}
+Math. Ann. (2016) 365:449-471.
+
+\bibitem[OS] {OS}   Otsu, Y.,  Shioya, T. (1994)
+The Riemannian structure of Alexandrov spaces. Journal of Differential Geometry, 39(3), 629-658
+
+\bibitem[Per91]{PerStab} G. Perelman. \textit{Alexandrov spaces with curvatures bounded from below II. preprint}, (1991).
+
+\bibitem[PerDC]{PerDC} G. Perelman. \textit{DC structure on Alexandrov space}
+
+\bibitem[Pet-QG]{petrunin-QG} Petrunin, A., \textit{Applications of quasigeodesics
+and gradient curves.}
+
+\bibitem[Pet-SC]{petrunin-SC} Petrunin, A., \textit{An upper bound for curvature integral.} April 2009St Petersburg Mathematical Journal 20(2):255-265
+\bibitem[Pet-Conc]{petrunin-conc} Petrunin, A., \textit{Semiconcave functions in Alexandrovs geometry}
+
+\end{thebibliography}

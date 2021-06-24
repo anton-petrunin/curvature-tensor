@@ -1,4 +1,4 @@
-\section{Cone}
+\section{Singularities of codimension 2}
 
 Let $M$ be a 3-dimensional Riemannian manifold.
 Given a smooth function $f$ denote, denote by $L_{(f=c)}$ the level set of $f$;
@@ -58,7 +58,7 @@ Suppose that $M_n\to  \RR\times A$ and $f_n\: M_n\to \RR$ be as in \ref{thm:HG-c
 Set $u_n=\tfrac{\nabla f_n}{|\nabla f_n|}$.
 Then 
 
-\begin{enumerate}[(i)]
+\begin{enumerate}
 \item\label{cor:Ricci:Ricci} $\langle \Ric u_n,u_n\rangle$ weakly converges to zero.
 \item\label{cor:Ricci:vw}
 Let $v_n$ and $w_n$ are sequences of uniformly bounded, continuous vector fields on $M_n$.
@@ -105,10 +105,10 @@ Similarly, to prove the second convergence in \ref{eq:3->0}, it is sufficient to
 
 To prove the last convergence in \ref{eq:3->0}, note that \ref{lem:smooth-covergence} implies weak convergence
 $|\nabla u|\rightharpoonup0$ away from the singular locus.
-This observation is used to control the term $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>$ at the points far the singular locus of $A$ --- we only need to assume that $|\nabla\phi_n|$ is bounded.
+This observation is used to control the term $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>$ at the points far from the singular locus of $A$ --- we only need to assume that $|\nabla\phi_n|$ is bounded.
 
 Further, since $|u_n|=1$, we have $\nabla_{u_n} u_n\perp \nabla f_n$.
-Therefore if $\nabla \phi_n$ is proportional to $\nabla f_n$ at some point, then $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>=0$ at this point.
+Therefore if $\nabla \phi_n$ is proportional to $\nabla f_n$ at some point, then at this point we have $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>=0$.
 This observation makes it possible to choose $\phi_n$ so that the term $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>$ vanish around the singular locus of $A$.
 Namely in addition to the above conditions on $\phi_n$ we have to assume that the identity $\phi_n=\psi\circ f_n$ holds at the points of $M_n$ that are sufficiently close to the singular locus of $A$.
 
@@ -147,3 +147,5 @@ Whence the statement follows.
  
 
 \qeds
+
+

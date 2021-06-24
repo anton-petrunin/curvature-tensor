@@ -1,0 +1,302 @@
+\section{Formulations}
+
+In this section we give definitions necessary for a precise formulation 
+of the main theorem.
+For simplicity  we will always assume that the lower
+curvature bound in main theorem is  $-1$;
+applying rescaling, we can get the general curvature bound.
+
+We denote by
+$\Al^m$ the class of m-dimensional Alexandrov's spaces
+with curvature $\ge -1$.
+
+Suppose a sequence $A_n\in \Al^m$ Gromov--Hausdorff converges without collapse to some
+$A\in \Al^m$.
+Denote by $a_n\:A_n\to A$ the Hausdorff approximations.
+By Perelman stability theorem (see \cite{PerStab}, \cite{KapStab}) we can assume that $a_n$ is a homeomorphism for all sufficiently large $n$.
+Everywhere further by GH-convergence we mean 
+Gromov--Hausdorff converges without collapse and the Hausdorff approximations are assumed to be homeomorphisms.
+
+
+We say that $A\in \Al^m$ is \emph{smoothable}
+if it can be presented as a Gromov--Hausdorff limit by a non-collapsing sequence of Riemannian manifolds $M_n$ with $\sec M_n\ge-1$.
+Given a smoothable Alexandrov space $A$,
+a sequence of Riemannian manifolds $M_n$ as above
+together with a sequence of homeomorphism approximations $a_n\:M_n\to A$
+will be called \emph{smoothing} of $A$
+(briefly $M_n\smooths{} A$, or $M_n\smooths{a_n} A$).
+By the stability theorem that any smoothable Alexandrov space is a topological manifold without boundary.
+
+
+
+%Everywhere in this section $M_n, A, a_n)$
+
+%$A_n\GHto A$ is a converging sequence of Alexandrov spaces
+%with a fixed approximation sequence $a_n:A_n\to A$. 
+
+
+%Let $A$ be a finite dimensional Alexandrov space with curvature bounded below.
+ 
+ 
+ 
+\subsection{Weak convergence of measures}
+
+In this section we give formal definition of weak convergence of measures
+that we use.
+For more detailed definitions and terminology we refer to
+\cite{GMS}.
+For a Hausdorff topological space $X$ let
+$\mathfrak M(X)$ be the space of signed Radon measures on $X$.
+%and $C(X)$ space of continuous functions on $X$
+%with a uniform norm. If $X$ is compact  then 
+%$\mathfrak M(X)$ is the dual space for $C(X)$
+% (by Riesz-Markov-Kakutani representation theorem).
+%Now  definition given below
+% of weak convergence
+%of measures for not necessary compact Hausdorff space
+%(that rigorously is a kind of local weak convergence.)
+We denote by $C_c(X)\subset C(X)$  the space of continuous functions on $X$
+with a compact support. 
+
+We  denote by $\langle m|f\rangle $ the value of
+$m\in\mathfrak M(X)$
+ on $f\in C_c(X)$.
+ We say that measures $m_n\in \mathfrak M(X)$ 
+\emph{weakly converge} to
+to $m\in \mathfrak M(X)$ (briefly
+$m_n\rightharpoonup m$)
+if $\langle m_n|f\rangle \to \langle m|f\rangle $ for
+any
+$f\in C_c(A)$.
+
+For a given  sequence $A_n\GHto A$
+we define weak convergence of  measures from
+$\mathfrak M(A_n)$
+by identification of all spaces via homeomorphism
+approximations $a_n\:A_n\to A$.
+
+Equivalently, the weak convergence can be defined using uniform convergence of functions.
+We say that  a sequence $f_n\in C_c(A_n)$
+\emph{uniformly converges} to $f\in C_c(A)$
+if 
+\[\sup_x\{\,|f_n\circ a_n^{-1}(x)-f(x)|\,\}\to 0.\]
+Then  $m_n\rightharpoonup m$
+if for any sequence $f_n\in C_c(A_n)$
+with uniformly bounded supports and
+uniformly converging to $f\in C_c(A)$
+we have $\langle m_n|f_n\rangle \to \langle m|f\rangle $.
+
+%We will denote by $\langle h|f\rangle $ the value of $h\in C^*(A)$ on $f\in C(A)$.
+
+\subsection{Test functions}
+In this section we introduce a class of test functions
+which we use
+to define  a notion of measure valued tensor.
+
+Let $A\in \Al^m$, distance between $x,y\in A$ is denoted by $|x-y|$,
+distance function  by $\dist_x(y)=|x-y|$.
+
+
+
+Given $A_n, A\in \Al^m$,  $A_n\GHto A$,
+we can naturally lift a distance function $\dist_p$ to $A_n$.
+We have to choose a convergent sequence $p_n\to p$ and take the
+sequence $\dist_{p_n}$.
+Let us fix small $r>0$,
+$p\in A$
+and define smoothed distance function as 
+$$\widetilde{\dist}_{p,r} =\oint_{B_r(p)} \dist_{x}dx.$$ 
+We can approximate this function by
+$\widetilde{\dist}_{p_n,r}:A_n\to [0,\infty)  $
+ choosing
+  some  sequence $A_n\ni p_n\to p\in A$.
+
+We say that $f$ is a test function
+and write $f\in \Test(A)$ if it can be expressed by the formula
+$$f=\varphi( \widetilde{\dist}_{p_1,r_1}, \widetilde{\dist}_{p_2,r_2},\dots,   \widetilde{\dist}_{p_N,r_N}),$$
+where $\varphi:[0,\infty)^N\to\R$ is  $C^1$ function.
+If for some sequences of points $A_n\ni p_{k,n}\to p_k\in A$
+and $C^1$ functions   
+$\varphi_n\cdto \varphi$ we have
+$$f_n=\varphi_n( \widetilde{\dist}_{p_1,r_1}, \widetilde{\dist}_{p_2,r_2},\dots,   \widetilde{\dist}_{p_N,r_N}),$$
+we will say that $f_n$ is a test sequence converging to $f$ and write
+$(f_n,f)\zz\in \Test(A_n,A)$ or $f_n\testto f$.
+
+Let us note that
+test functions form an algebra and a
+partition of unity can be formed by test functions.
+On a smooth Riemannian manifold test functions
+are exactly $C^1$-functions.
+Indeed, around any point one can take a
+smoothed distance 
+coordinate chart, express $C^1$-function in these 
+coordinates and then apply partition of unity. 
+ 
+ 
+\subsection{Tensors}
+
+
+\begin{rdef} {Definition}\label{def:mestens}
+Let $A\in \Al^m$ and $\mathfrak M(A)$
+denotes the set of signed Radon measures on $A$.
+A \emph{measure-valued vector field} $\mathfrak{v}$  on $A$
+is a  continuous (with respect to test convergence) linear map
+$\mathfrak{v}\:\Test(A)\to \mathfrak M(A)$ which satisfies a
+chain rule;
+i.e. for any collection  $f_1,f_2,\dots,f_\kay \in \Test(A)$
+and a smooth function $\phi\:\RR^\kay\to\RR$ we have
+$$\mathfrak{v}(\phi(f_1,f_2,\dots,f_n))
+=
+\sum_{i=1}^n (\partial_i\phi)(f_1,f_2,\dots,f_n)\cdot\mathfrak{v}(f_i)$$
+where $\partial_i$ denotes partial derivatives in $\RR^n$.
+
+Analogously, we define (contravariant) measure-valued tensor field.
+A \emph{measure-valued tensor field} $\mathfrak{t}$ of valence $\kay$ on $A$ is a multilinear map of $\kay$ variables in $\Test(A)$ with values in $\mathfrak M(A)$ which satisfies chain rule in each of the arguments.
+\end{rdef}
+
+Let us note, that smooth vector field on Riemannian manifold can be described this way (for
+$\kay=1$) "vector field as derivation".
+For $\kay=1$ in the case when $A$ is an $m$-dimensional Riemannian manifold measure-valued vector field $\mathfrak{v}$  in coordinates
+ $x_1,\dots,x_m$
+is defined by $m$ components, these are measures $(\mu_1,\dots, \mu_{m})=(\vv(x_1),\dots,\vv(x_m))$;
+these components transform by contravariant rule under change
+ of coordinates. The map from the definition of measure-valued vector field is
+ $\mathfrak{v}(f)=\sum_{i=1}^m\frac{\partial f}{\partial x_i}\cdot \mu_i$.
+ Similarly for arbitrary $\kay$ measure-valued tensor field of valence $\kay$ 
+ is defined by $m^\kay$ components 
+ $\mu_{{i_1},\dots,{i_\kay}}=\vv(x_{i_1},\dots,x_{i_\kay})$
+ and
+ $\mathfrak{v}(f)=\sum
+ \frac{\partial f}{\partial x_{i_1}}\frac{\partial f}{\partial x_{i_2}}\dots\frac{\partial f}{\partial x_{i_k}}
+ \cdot \mu_{{i_1},\dots,{i_\kay}}$.
+A smooth contravariant tensor field can be presented as a measure-valued tensor field if we multiply each component by the volume measure.
+
+Let us mention some basic properties that follow 
+from the definition.
+Firstly, if $f_i=\const$  for some $i\in\{1,\dots,\kay\}$ 
+then $\mathfrak{v}(f_1,\dots,f_\kay)=0.$
+Let us show it for $\kay=1$; the general case can be done the same way.
+Note that the chain rule implies the
+product rule:
+$\mathfrak{v}(fg)=\mathfrak{v}(f)g+f\mathfrak{v}(g)$.
+Therefore $\vv(1)=\vv(1^2)=2\vv(1)=0$ and hence
+$\vv(c\cdot 1)=c\cdot\vv(1)=0$.
+
+
+
+Also the notion is local,
+i.e. if $f_i|_{U}=\operatorname{const}$
+for some open $U\subset A$ and some $i\in\{1,\dots,\kay\}$ 
+ then $\mathfrak{v}(f_1,\dots,f_\kay)|_U=0.$
+By above it suffices to show
+for the case when $\operatorname{const}=0$.
+Assume for simplicity  $\kay=1$. 
+For arbitrary compact $K\subset U$  let
+us take test function $g:A\to\R$ such that
+$\supp g\subset U$ and $g|_K=1$. Then applying product rule
+ $0=\vv(fg)=f\vv(g)+g\vv(f)$ yields 
+$\vv(f)|_K=0$ hence 
+ the result.
+ 
+
+
+
+
+Now we define a weak convergence of measure-valued tensor field.
+
+\begin{rdef} {Definition}
+Let $M_n\smooths{} A$ be a smoothing.
+Assume that $\mathfrak{t}_n$ is a sequence of %uniformly bounded
+ measure-valued tensor fields on $M_n$  and $\mathfrak{t}$ is a
+measure-valued tensor field on $A$,
+all of the same valence $\kay$.
+We say that $\mathfrak{t}_n$ weakly converges to  $\mathfrak{t}$
+(briefly $\mathfrak{t}_n\rightharpoonup\mathfrak{t}$) if for arbitrary $\kay$
+test sequences 
+$f_{i,n}\testto f_i, i=1,\dots,\kay$, the measures $\mathfrak{t}_n(f_{1,n},f_{2,n},\dots,f_{\kay,n})$ weakly converge to $\mathfrak{t}(f_{1},f_{2},\dots,f_{\kay})$.
+\end{rdef}
+
+\subsection{Dual curvature tensor}
+
+The curvature of Riemannian manifold $M$ usually described by tensor of valence 4 that will be denoted by $\Rm$.
+We will use \emph{dual curvature tensor} --- 
+a curvature tensor written in a dual form that is denoted by $q$;
+it is a tensor field of valence $2\cdot(m-2)$ defined the following way.
+
+Set
+\begin{multline*}
+q(\nabla f_1,\dots,\nabla f_{m-2},\nabla g_1,\dots,\nabla g_{m-2})
+=
+\\
+= 
+\Rm(*(\nabla f_1\wedge\dots\wedge \nabla f_{m-2})), *(\nabla g_1\wedge\dots\wedge \nabla g_{m-2})),
+\end{multline*}
+where ${*}\:(\bigwedge^{m-2}\T)M\to(\bigwedge^2\T)M$ is the  Hodge star operator.
+In this definition we may assume that $f_1,\dots,f_{m-2},g_1,\dots,g_{m-2}:M\to\R$ are smooth functions; however, everywhere further it will be used only for test functions.
+
+In addition we will need a measure-valued version of $q$ denoted by $\mathfrak{q}$;
+it will be called \emph{dual measure-valued curvature tensor}.
+Namely, the measure-valued tensor field with density
+\[q(\nabla f_1,\dots,\nabla f_{m-2},\nabla g_1,\dots,\nabla g_{m-2}): M\to\R\]
+will be denoted by $\mathfrak{q}(f_1,\dots,f_{m-2},g_1,\dots,g_{m-2})$.
+
+
+\parbf{Remarks.}
+The described dual form of curvature tensor behaves better in the limit.
+For example in the 2-dimensional case the valence of $\mathfrak{q}$ is $0$;
+in this case $\mathfrak{q}$ coincides with the curvature measure --- the standard way to describe curvature of surfaces, 
+(see, for example \cite{R}).
+For a smooth surface the density of this curvature measure with respect to the area measure
+is its Gauss curvature.
+The statement of our main theorem in this case, i.e. 
+stability of these measures under smoothing
+is well-known \cite[Theorem 8.4.2]{R}, \cite{AZ}.
+
+
+Note that in the case if $f_i=g_i$, for $i=1,\dots,m-2$
+we have:
+% can express $q$ using co-sectional curvature: 
+$$q(\nabla f_1,\dots,\nabla f_{m-2},\nabla f_1,\dots,\nabla f_{m-2})=|\nabla f_{1,n}(x)\wedge\dots \wedge\nabla f_{m-2,n}(x)|^2\cdot K^M_\sigma, $$
+where $K^M_\sigma $ is the sectional curvature at $x\in M_n$
+on a plane $\sigma$ orthogonal to $(m-2)$-vector
+$\nabla f_{1,n}(x)\wedge\zz\dots \wedge\nabla f_{m-2,n}(x)$.
+Hence, the sectional curvatures of $M$ (and therefore its curvature tensor) can  be computed using the tensor
+$\mathfrak{q}$.
+Also the density $q$ is defined by the sectional curvature,
+because of the symmetry:
+$${q}(\nabla f_1,\dots,\nabla f_{m-2},\nabla g_1,\dots,\nabla g_{m-2})=
+{q}(\nabla g_1,\dots,\nabla g_{m-2},\nabla f_1,\dots,\nabla f_{m-2}).$$
+Therefore measure tensor $\mathfrak{q}$
+gives an equivalent description of curvature of Riemannian manifold.
+
+
+\subsection{Partition into three sets}
+
+Let $A$ be a 3-dimensional Alexandrov space without boundary. 
+Let us partition $A$ into three subsets $A^\circ$, $A'$ and $A''$:
+\begin{itemize}
+\item $A^\circ$ is the set of regular points in $A$; that is, the set of points with tangent cone isometric to the Euclidean space.
+\item $A'$ --- the set of points in $A\backslash A^\circ$ with a line in their tangent space; that is, for any $p\in A'$, the tangent space $\T_p$ is isometric to the product of the real line and a two-dimensional cone with total angle $\theta(p)<2\cdot \pi$.
+\item $A''$ --- the remaining set; this is the set of points with tangent space that does not contain a line.
+\end{itemize}
+According to \cite{li-naber}, $A'$ is countably 1-rectifiable and $A''$ is a countable set. 
+
+Observe that the set of regular points $A^\circ$ can be presented as
+$$A^{\circ}=\bigcap_{\delta>0} A^\delta,$$
+where $A^\delta$ denotes the set of $\delta$-strained points of $A$.
+
+Consider the measure $\omega$ on $A'$ defined by
+\[\omega=(2\cdot\pi-\theta)\cdot \mathcal{H}_1,\eqlbl{eq:omega}\]
+where $\mathcal{H}_\alpha$ denotes $\alpha$-dimensional Hausdorff measure.
+Let us extend $\omega$ to the whole space by setting $\omega(S)=\omega(S\cap A')$ for any Borel set $S\subset A$.
+
+The function $\theta$ can be extended to the whole $A$ by setting
+\[\theta(p)=2\cdot\pi\cdot \tfrac{\area \Sigma_p}{\area \mathbb{S}^2}\] for any $p\in A'$.
+According to \cite[7.14]{BGP}, $\theta\:A\to \RR$ is upper-semicontinuous.
+The right-hand side of the last equality vanish in $A^\circ$.
+Further since $\mathcal{H}_1(A'')=0$, the measure $\omega$ could be also defined as a measure on whole $A$ that is defined by~\ref{eq:omega}.
+
+Suppose $p\in A'$.
+Choose a unit \emph{vertical} vector $u(p)\in \T_p$;
+that is, $u(p)$ in the $\RR$-factor of $\T_p$.
+Note that $u$ is uniquely defined up to sign.

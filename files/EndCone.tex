@@ -1,0 +1,56 @@
+
+\subsection{Completion of the proof.}
+The set $A'$ has $\sigma$-finite $(m-2)$ Hausdorff measure,
+hence in what follows we can assume all subsets of $A'$ to
+be of finite $(m-2)$ Hausdorff measure.
+We subdivide $A'=A'^1\cup A'^0$, here
+$$A'^1=\set{x\in A'}{R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge
+\mathring{v}^{m-2}}(x)\neq 0},
+\quad
+A'^0=\set{x\in A'}{R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge
+\mathring{v}^{m-2}}(x)= 0}$$
+and prove that
+$R^1|_{A'^1}=R^2|_{A'^1}$ and $R^i(A'^0)=0$.
+
+Let $K\subset A'^1$ be a measurable set.
+For every $\varepsilon>0$
+ by \cite[2.2.2]{federer} there exists open set $W\supset K$ with
+$R^i(W)\le R^i(A)+\varepsilon$.
+For every $x\in A'^1$  by claim~\ref{cl:R12loc} (1)
+   we can choose $r_0(x)$ sufficiently
+small
+so that for $r<r_0(x)$ we have
+$R_1(B_r(x))/R_2(B_r(x))=1\pm \epsilon$ and
+$ R^i(B_{2r}(p))<2\cdot 2^{m-2}(R_i(B_r(p)),\qquad i=1, 2$.
+The set $F=B_r(x)$ for $x\in A'^1, r<r_0(x), B_r(x)\subset W$ is
+$R^i$-adequate by  \cite[2.8.7]{federer}.
+So we can choose countable (disjoint?!!) subfamily $G\subset F$, such that
+$$R^i(W\setminus\cup G)=0.  $$
+Then obviously
+we have
+$$|R^1(K)-R^2(K)|\le (R^1(K)+R^2(K)+1)\epsilon,$$
+this proves that $R^1|_{A'^1}=R^2|_{A'^1}$.
+
+Let $K\subset A'^0$ be a measurable set. We know that
+$R^i_-(A')=0$ than for every $\varepsilon>0$
+ by \cite[2.2.2]{federer} we find open set $W\supset K$ with
+$R^i_-(W)\le \varepsilon$.
+For every $x\in A'^0$  by claim~\ref{cl:R12loc} (2)
+   we can choose $r_0(x)$ sufficiently
+small
+so that for $r<r_0(x)$ we have
+$ R^i(B_{r}(p))<\epsilon\cdot r^{m-2}.$
+We set
+$$K^{r_*}
+=
+\set{x\in K}{r_0(x)\le r_*\ \text{and}\  dist(x,A\setminus W)>r_* },$$
+obviously
+$K=\cup_{r_*}K^{r_*}$. Let $h^{m-2}(K^{r_*})=c<\infty$.
+We can choose approximating covering for Hausdorff measure of $K^{r_*}$:
+$$\cup_k B_{r_k}(x_k)\supset K^{r_*}, r_i<r_*\  \text{and}\
+\sum_k r_k^{m-2}< c+\varepsilon,$$
+then $$\sum_k (R^i B_{r_k}(x_k))<\epsilon\cdot(c+1).$$
+Since
+$\cup_k B_{r_k}(x_k)\subset W$ we have
+$R^i(\cup_k B_{r_k}(x_k))<\epsilon\cdot(c+2)$.
+Hence $R^i(K^{r_*})<\epsilon\cdot(c+3)$.

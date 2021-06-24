@@ -1,0 +1,84 @@
+
+\section{Common chart and metric tensor}
+
+The main tool for the proof
+of Lemma~\ref{A^0} for dimension 3
+is DC-calculus in  charts near regular point
+with common domain for the smoothing sequence and the
+limit space. For DC-calculus in domain in $\R^n$
+we refer Appendix (Section~\ref{sec:DC}).
+In the next Proposition we 
+state the existence of a common chart with 
+properties that allow to apply these calculus.
+The proof is given in \ref{NiceChartProof}.
+
+\begin{thm}{ Proposition}\label{Prop:chart}
+	There exists $\delta_0>0$, such that for $\delta<\delta_0$
+	the following hold.	
+	Let   
+	$M_n\in\M_{\ge -1}^m$,
+	$M_n\GHto A$ , $ p\in A^\delta$
+	and $B_r (p)$
+	be a good domain for this convergence.
+	For some open
+	$\Omega\subset \R^m$, open 
+	neighborhood $U\subset B_r (p)$ of $p$
+	and $U_n\GHto U$ 
+	there exist a
+	sequence of
+	diffeomorphisms $\mathfrak X_n=(\x_{1,n},\dots,\x_{m,n}):U_n\to\Omega$
+	converging to a homeomorphism 	$\mathfrak X=(\x_{1},\dots,\x_{m}):U\to\Omega$ with 
+	the following properties.
+	
+	\begin{enumerate}[label=\alph*. ]
+	
+	%\addtocounter{enumi}{2}
+	\item\label{obtuse}
+
+ Every coordinate sequence $\x_{i,n}$ is a sequence of smooth concave functions roughly $C^1$-converging to $\x_i$. Gradients
+	$\nabla\x_{i,n}$ and $\nabla\x_{j,n}$ form strictly obtuse angles,
+	bounded from $\pi$ and $\pi/2$ for
+	$i\neq j$. 
+	\item $\mathfrak X_n, \mathfrak X$ are bi-Lipschitz 
+	with uniform  bi-Lipschitz 
+	constant
+	
+\item\label{metric} 
+	There exists a continuous Riemannian metric
+	$g$ on $\Omega\setminus S_\Omega$ which locally 
+	realizes distance on $U$, where
+	$S_\Omega=\mathfrak X(U\cap A\setminus A^0)$.
+	This metric tensor 
+	(defined almost everywhere on $\Omega$)
+	is of bounded variation
+	on $\Omega$. 
+	
+\item\label{metricseq}
+	Let $g_{ij,n}$ be coordinates of metric tensor of $M_n$ 
+	in the chart $\X_n$. 
+	Then
+	$(g_{ij,n}, g_{ij})\in BV_0^{seq}(\Omega, S_\Omega)$.
+	Moreover, $\det(g_{ij,n})$ is bounded and bounded away from 0.
+	
+	
+	\item\label{funktioninchart}
+	For any
+	sequence
+	of concave smooth functions
+	$f_n:B_{r_n}(p_n)\to\R$ 
+	which roughly $C^1$-converges to  $f:B_r(p )\to\R$ we have for its coordinate
+	expression
+	$(f_n\circ\X_n^{-1}, f\circ\X^{-1})\in DC_0^{seq}(\Omega, S_\Omega)$
+	
+	\end{enumerate}
+\end{thm}
+
+\begin{thm}{Definition}
+	We call the sequence of
+	diffeomorphisms $\mathfrak X_n:U_n\to\Omega$
+	together with a homeomorphism 	$\mathfrak X:U\to\Omega$
+	defined in
+Proposition~\ref{Prop:chart}
+a {\emph Nice common chart} around $p$.
+
+\end{thm}

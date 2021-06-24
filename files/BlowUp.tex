@@ -1,0 +1,267 @@
+
+
+\section{Blow-up at $m-2$ singularity}\label{sec:blow}
+
+Assume $M_n\smooths{} A$ is a smoothing of Alexandrov space $A$.
+Note that given $p\in A$,
+one can always find a sequence $\lambda_n$
+which converge to infinity so slow that
+$(\lambda_n M_n,p_n)\smooths{} \T_p A$;
+that is, $\lambda_n M_n$ is a smoothing of $\T_pA$.
+This new smoothing will be called a \emph{blow-up smoothing} at $p$.
+
+We will use blow-up smoothing to study behavior of curvature near points $p\in A'$.
+In this case $\T_p\iso\Cone\times \RR^{m-2}$.
+
+
+
+
+
+
+\begin{thm}{Construction}\label{constr}
+Fix $\lambda_n\to\infty$. There is $\varepsilon_n\to 0$ so that
+
+$$\GHdist(h_{\lambda_n}B^A_{R_n}(p), B^{\T_p A}_{\lambda_n R_n}(p))\le\varepsilon_n/2$$
+
+There is a monotonic function
+ $k(n)\:N\to N$
+so that for every $l\ge k(n)$
+$$\GHdist(h_{\lambda_n}B^{M_l}_{1}(p), B^{\T_p A}_{\lambda_n}(p))\le\varepsilon_n/2.$$
+
+Then for every  $k'(n)\ge k(n)$ we have
+$$\lambda_n M_{k'(n)}\smooths{} (\T_p A, p)=(\RR^{m-2}\times \Cone_x^2,x).$$
+\end{thm}
+For every $\lambda>0$ we supply manifold $\lambda M_n$
+with vector fields
+$\bar v_n^i=1/\lambda(d h_{\lambda}v_n^i)$. We will write shortly
+$R_{\lambda M_n}=R_{\lambda M_n}(\bar v_n^1\wedge\dots\wedge\bar v_n^{m-2})$
+
+\begin{thm}{Lemma}\label{l:convVCone}
+Let vector field $v_n$ on $M_n$
+converges with respect to Gromov--Hausdorff
+convergence $M_n\GHto A$.
+Fix $\lambda_n\to\infty$.
+There is a monotonic function
+ $k(n)\:N\to N$ so that  for every  $k'(n)\ge k(n)$
+ we have that
+$$\lambda_n M_{k'(n)}\GHto (\T_p A, p)=(\RR^{m-2}\times \Cone_x^2,x)$$
+and
+vertical parts of $\bar v_n$ converge.
+\end{thm}
+
+\begin{thm}{Claim}\label{cl:convVCone}
+Let vector field $v_n$ on $M_n$
+converges with respect to Gromov--Hausdorff
+convergence $M_n\GHto A$.
+Fix $\lambda_n\to\infty$.
+There is a monotonic function
+ $k(n)\:N\to N$ so that  for every  $k'(n)\ge k(n)$
+ we have that
+$$\lambda_n M_{k'(n)}\GHto (\T_p A, p)=(\RR^{m-2}\times \Cone_x^2,x)$$
+and
+$R_{\lambda_n M_{k'(n)}}$
+weakly converges to $R^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge \mathring{v}^{m-2}}_p$,
+where $\mathring{v}^i$ are limits of vertical parts of $\bar v_n$.
+\end{thm}
+
+\parit{Proof.} By Lemma~\ref{l:convVCone} we can apply claim \ref{cl:vfcone}.
+\qeds
+
+
+
+
+\subsection{Proof of \ref{l:convVCone}}
+
+Let sequence of Alexandrov spaces converges
+$(N_n,p_n)\GHto (A,p)$.
+ Let $A$ contains a line $\RR_a\subset A$
+ with direction
+$a\in \T_p A$.
+We say that a sequence of points  $x_n\in N_n$
+converges $x_n\GHto\RR_a^{+\infty}$ if
+there are sequences $R_n\to\infty,\varepsilon_n\to 0$
+so that
+$$\GHdist(B^{N_n}_{R_n}(p_n), B^{A}_{R_n}(p))\le\varepsilon_n$$
+and there is a sequence $t_n\to+\infty$,
+so that
+$t_n a\le R_n+2$ and
+ for $a_n=t_n a\in \RR_a\subset A$
+we have
+$\GHdist(x_n,a_n)\le\varepsilon_n$.
+We say that a sequence of points  $y_n\in N_n$
+converges in weak sense $y_n\GHwto\RR_a^{+\infty}$ if
+$|p_n y_n|\to \infty$ and
+for some sequence
+$x_n\GHto\RR_a^{+\infty}$ we have $\angle (x_n p_n y_n)\to 0$.
+
+\begin{thm}{Lemma}\label{lem:angle}
+Let we have two sequences $x_n, y_n\GHwto\RR_a^{+\infty}$,
+and  sequence $q_n\in N_n$ is uniformly bounded, i.e. $|p_n q_n|<c$,
+than $\angle (x_n q_n y_n)\to 0$.
+\end{thm}
+
+
+
+
+\begin{thm}{Lemma} \label{lem:vconvergLoc}
+Let $M_n\GHto A$ and vector fields $v_n$ converges.
+Let sequence $\lambda_n\to\infty$.
+Let vector $a\in \T_p A$
+and for sequences $q_s, q_s'$
+we have $\angle (a,\dir{p}{q_s})<\varepsilon_s$,
+ $\angle (-a,\dir{p}{q'_s})<\varepsilon_s$.
+There is a  limit product $\<v,a\>$
+with the following properties:
+there is a constant $c>0$,
+a function $k\: N\to N$,
+ sequences
+$M_i\ni q_{n,i}\to q_n$, $\varepsilon_n\to 0$
+and
+so that for   all $n$
+$$\<v,a\>- c\cdot \varepsilon_n
+\le
+\inf_{i\ge k(n)}\inf_{x\in B_{1/\lambda_n}^{M_i}(p_i)} \< v_i,\dir{x}{q_{n,i}}\>
+\le
+\sup_{i\ge k(n)}\sup_{x\in B_{1/\lambda_n}^{M_i}(p_i)}  \< v_i,\dir{x}{q_{n,i}}\>\le
+\<v,a\>+
+ c\cdot \varepsilon_n$$
+and for any function $s(n)>k(n)$
+$$h_{\lambda_n}( q_{n,s(n)})\GHwto\RR_a^{+\infty}.$$
+
+\end{thm}
+
+\parit{Proof.}
+We know, that $(\lambda_n A, p)\GHto (\T_p A, p)=(\RR^{m-2}\times \Cone_x^2,x)$.
+There is a sequence $\tilde q_s, \tilde q_s' \in B_1^A(p)$,
+ sequence $\tilde \varepsilon_s\to 0$, constant $c$ so that the following holds:
+%$$h_{\lambda_n}(\tilde q_n)\GHwto\RR_a^{+\infty}$$
+%$$h_{\lambda_n}(\tilde q_n')\GHwto\RR_{-a}^{+\infty}$$
+$$\angle(a,\dir{\tilde q_s}{p})\ge\pi- \varepsilon_s/2$$
+ $$\angle(\tilde q_s p\tilde q_s')\ge\pi- \varepsilon_s/2$$
+and shortest paths $p\tilde q_s$, $p\tilde q_s'$ are unique.
+%For any such sequences holds: for any$p^0\in B_{1/\lambda_n}(p)$we have
+We can find monotonic sequence $r_s\to 0$ so that $|p\tilde q_s|/r_s\to\infty$
+for any $p^0\in B_{r_s}(p)$
+and for any approximating sequences
+$M_i\ni q_{s,i}\to \tilde q_s$, $p^0_i\to p^0$ we have by property~\ref{convvf}
+$$\limsup_{i\to\infty}  \< v_i,\dir{p_i}{\tilde q_{s,i}}\> -c\varepsilon_k\le
+\liminf_{i\to\infty}  \<v_i,\dir{p^0_i}{\tilde q_{k,i}}\>\le\limsup_{i\to\infty}  \< v_i,\dir{p^0_i}{\tilde q_{k,i}}\>
+\le\liminf_{i\to\infty}  \<v_i,\dir{p_i}{\tilde q_{k,i}}\> +c\varepsilon_k .
+$$
+We know that $$\angle(\tilde q_{t_1}p\tilde q_{t_2})\le\varepsilon_s$$ for $t_1, t_2>s$.
+Hence (taking other sequences $\varepsilon_k$ and costant $c$)
+we can find ``limit constant'' $\<v,a\>$ so that
+ $$\<v,a\>-c\varepsilon_k\le
+\liminf_{i\to\infty}
+\<v_i,\dir{p^0_i}{\tilde q_{k,i}}\>\le\limsup_{i\to\infty}  \< v_i,\dir{p^0_i}{\tilde q_{k,i}}\>
+\le\<v,a\> +c\varepsilon_k(*).$$
+
+Let
+$$k(n)=\max\set{t\in N}{\forall s\ge n\quad 1/\lambda_s<r_t}$$
+We set $q_n:=\tilde q_{k(n)}$.
+By construction $h_{\lambda_n}( q_n)\GHwto\RR_a^{+\infty}$
+and the estimate $(*)$ implies that we can find appropriate function $k(n)$.
+\qeds
+
+
+\parit{Proof of \ref{l:convVCone}.}
+We take $k(n)=\max$ of that from \ref{constr}
+and lemma~\ref{lem:vconvergLoc},
+sequences
+$M_i\ni q_{n,i}\to q_n$ from  lemma~\ref{lem:vconvergLoc}.
+Let $k'(n)\ge k(n)$.
+We regard convergence
+$$\lambda_n M_{k'(n)}\GHto (\T_p A, p)=(\RR^{m-2}\times \Cone_x^2,x)$$
+then $y_n=h_{\lambda_n}(q_{n, k'(n)})\GHto \R_a^{+\infty} $.
+Let sequence $\lambda_n M_{k'(n)}\ni x_n\to x\in \RR^{m-2}\times \Cone_x^2$.
+By definition we know that
+ $\<v_n,\dir{x}{y}\>=\<\bar v_n, \dir{h_{\lambda_n}(x)}{h_{\lambda_n}(y )}\>$
+for any $x,y\in M_n$
+hence lemma~\ref{lem:vconvergLoc} implies that
+$$\<v,a\>-c\varepsilon_n\le\<\bar v_n,\dir{x_n}{y_n}\>\le\<v,a\>+c\varepsilon_n.$$
+Let also regard some
+$a_n\GHto \R_a^{+\infty} $ from construction of $f_a$ in \ref{???}.
+By lemma \ref{lem:angle}
+$\angle (a_n p_n y_n)\to 0$.
+Hence
+$$\<\bar v_n,\dir{x_n}{a_n}\>\to\<v,a\>.$$
+\qeds
+
+\section{Proof of claim~\ref{A'}}\label{sec:codim2}
+\subsection{Locally two partitial limits approximately coinside.}
+\begin{thm}{Claim}\label{cl:convLocCodim2}
+Let sequence of manifolds $M_n\GHto A$,
+$R_n$ weakly converges to $R^o$,
+point $p\in A^{m-2}$. Then
+for every  $r_n\to 0$
+
+$(1/r_n)^{m-2}R^i(B_{r_n}(p))\to R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge \mathring{v}^{m-2}}(B_{1}(p))$
+
+\end{thm}
+
+Before the prove we give the following general lemma:
+
+\begin{thm}{Lemma}
+Let $p $ be the measure on $K$.
+Let we have convergence of Alexandrov spaces $K_i\GHto K$
+  and for  any space of the sequence there is smoothing $N_{in}\to  K_i$.
+Let for every $i$ measures $p_{in}$ on $N_{in}$ weakly
+converge to measure $p_i$ on $K_i$.
+Suppose there is a function $k(i)$ so that
+for every $k'\ge k$ we
+have $N_{i k'(i)}\GHto K$ and
+$p_{i k'(i)}$ weakly converges to $p$ (*).
+Then $p_i$ weakly converges to $p$.
+
+\end{thm}
+
+\parit{Proof.} Standart argument - diagonal subsequence. \qeds
+
+ \parit{Proof of \ref{cl:convLocCodim2}.}
+In our case: set $\lambda_n=1/r_n$,
+for homothety $h_\lambda\:A\to \lambda A$ and measure
+$p$ on $A$ we denote $p^\lambda$ the pullback (pushforward?) on  $\lambda A$.
+
+
+$K={\T_p A}$, $p=R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge
+\mathring{v}^{m-2}}$,  $K_i={\lambda_i A}$,
+$N_{in}=\lambda_i M_n$. The function $k(i)$ is
+from \ref{cl:convVCone} above.
+$p_{in}={\lambda_i}^{m-2}(R_n)^{\lambda_i}$
+$p_i={\lambda_i}^{m-2}(R^0)^{\lambda_i}$.
+Because of \ref{cl:convVCone} condition (*) of this lemma foolfilled.
+
+By previous lemma we obtain that
+${\lambda_i}^{m-2}(R^0)^{\lambda_i}$ weakly converges to measure
+$R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge
+\mathring{v}^{m-2}}$.
+Because measure $R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge
+\mathring{v}^{m-2}}$ is special? as  it is
+we have ${\lambda_i}^{m-2}(R^0)^{\lambda_i}(B_1^{\lambda_i}(p))\to R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge \mathring{v}^{m-2}}(B_{1}(p))$.
+Since $(R^0)^{\lambda_i}(B_1^{\lambda_i}(p))=R^0(B_{1/\lambda_i}^{M_i}(p)$
+the claim follows.
+\qeds
+
+Let $R^1, R^2$ be two weak limits
+of  $R(v^1_n\wedge\dots\wedge v^{m-2}_n )$.
+
+\begin{thm}{Claim}\label{cl:R12loc}
+
+
+1) Suppose $p\in A^{m-2}$ be so that $R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge \mathring{v}^{m-2}}\neq 0$, i.e.
+$\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge \mathring{v}^{m-2}\neq 0$
+Then
+$$R^1(B_{r}(p))/R^2(B_{r}(p))\xrightarrow{r\to 0} 1$$
+and
+$$\frac{(r_2)^{m-2}R^i(B_{r_1}(p))}{(r_1)^{m-2}R^i(B_{r_2}(p))}\xrightarrow{r_1, r_2\to 0} 1, \qquad i=1, 2,$$
+in particular for sufficiently small $r>0$
+we have
+$$ R^i(B_{2r}(p))<2\cdot 2^{m-2}(R^i(B_r(p)),\qquad i=1, 2.$$
+
+2) Suppose $p\in A'$ be so that $R_p^{\mathring{v}^1\wedge \mathring{v}^2\wedge\dots\wedge \mathring{v}^{m-2}}= 0$.
+Then for every $\epsilon>0$ there is $r_0>0$ so that
+for $r<r_0$
+$$ R_i(B_{r}(p))<\epsilon\cdot r^{m-2},\qquad i=1, 2.$$
+\end{thm}
+
+\parit{Proof.} Simple consequence of \ref{cl:convLocCodim2} \qeds

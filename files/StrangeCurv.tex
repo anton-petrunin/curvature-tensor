@@ -1,0 +1,339 @@
+\section{Strange curvature convergence}
+
+Let $M$ be a Riemannian manifold.
+We define a $(0,2)$ tensor  $ \Str$  by
+$$\Str(w,w)=\Sc\cdot |w|^2-\Ric(w,w), \quad w\in TM$$
+and call it {\it Strange curvature} tensor or just Strange curvature.
+ 
+ In this section we prove a 
+convergence of Strange curvature 
+in $3$-dimensional case
+in the following sense.
+
+\begin{thm} {Proposition}\label{strconvergence}
+Let $M_n\in\M_{\ge -1}^3$,
+	$M_n\GHto A$ , $x\in A^\delta$
+	and $B_r (x)$
+	be a good domain for this convergence.
+	
+Let $M_n\ni x_n \to x\in A^0$ and
+ $f_n\in C^\infty(B_r(x_n))$ be a
+ sequence of concave functions such that
+$f_n\ccto f $, suppose in addition that 
+$1/c\le|\nabla f_n|\le c$ and set $u_n=\nabla f_n/|\nabla f_n|$.
+Then for sufficiently small $r_0>0$
+and some constant $ C>0$  the following holds.
+
+% Let us denote $u_n=\nabla f/|\nabla f|$.
+Consider
+a sequence of measures 
+$m_n=
+\Str\left(
+u_n, u_n\right) \cdot \vol_n$
+on $B_{r_0}(x_n)$ and
+suppose $\tau_1, \tau_2\in \mathfrak M(B_{r_0}(x))$ be two partial
+weak limits of $m_n$.
+Then we have
+$|\tau_1(S)-\tau_2(S)| \le
+C\delta $ for every $S\subset A^\delta \cap B_{r_0}(x)$.
+
+\end{thm}
+
+
+The proof relies on \ref{thm:bochner-formula},
+it provides the following integral expression
+for Strange curvature
+$$\int\limits_\Omega \phi\cdot \Str(u_n, u_n)
+=\int\limits_\Omega \phi\cdot \Int_n+
+\int\limits_\Omega \l[H_n\cdot\<u_n,\nabla\phi\>- \<\nabla\phi,\nabla_{u_n} u_n\> \r],
+\eqlbl{Bochner}$$
+where 
+\begin{itemize}
+\item $H_n(x)$ --- the mean curvature of the level set $f_n^{-1}(f_n(x))$,
+\item $\Int_n(x)$ --- the scalar curvature of  $f_n^{-1}(f_n(x))$.
+\end{itemize}
+ 
+This formula reduces the Proposition~\ref{strconvergence} to the two lemmas below,
+each lemma provides the convergence an integral term in the right-hand-side of \ref{Bochner}.
+We prove the convergence of the first integral in a sense of $C\delta$-convergence of measures:
+
+
+\begin{thm} {Lemma}\label{Int}
+In condition of Proposition~\ref{strconvergence}
+for sufficiently small $r_0>0$
+and some constant $ C>0$  the following holds.
+
+% Let us denote $u_n=\nabla f/|\nabla f|$.
+For any two partial
+weak limits $\tau_1, \tau_2\in \mathfrak M(B_{r_0}(x))$  of 
+measures $\Int_n\cdot \vol_n$ on $B_{r_0}(x_n)$
+we have
+$|\tau_1(S)-\tau_2(S)| \le
+C\delta $ for every $S\subset A^\delta \cap B_{r_0}(x)$.
+
+\end{thm}
+
+The proof of this lemma
+ uses 
+convergence of curvature measures
+$\Int_n\cdot \vol_n$
+on $2$-dimensional 
+smoothing sequence (level  sets of concave functions$f_n$ are
+locally in $\DM^3$).
+The error $C\delta$ arises 
+because  sequence of functions $|\nabla f_n|$ is 
+only
+ $C\delta$-convergent   on $A^\delta$.
+
+
+
+
+ 
+The next lemma is related to the convergence of the second integral, the proof uses
+$DC$-calculus in a Nice common chart. 
+
+
+\begin{thm}{Lemma}\label{HnablaU}
+In condition of Proposition~\ref{strconvergence}
+let $\mathfrak X_n:U_n\to\Omega$
+and
+$\mathfrak X:U_x\to\Omega$
+be a Nice common chart around $x$. 
+We fix some smooth function with compact support
+$\psi\in C^\infty_0(\Omega)$ and denote by
+$\phi_n=\psi\circ\mathfrak X_n$. Then
+
+$$
+\int\limits_{U_n} \l[H_{f_n}\cdot\<u_n,\nabla\phi_n\>- \<\nabla\phi_n,\nabla_{u_n} u_n\> \r]
+\eqlbl{Bochner}$$
+converges.
+
+\end{thm}
+
+
+\parit{Proof of Lemma~\ref{HnablaU}.}
+We rewrite
+$$\int\limits_{V_n} \<u_n,\nabla\psi_n\> H_nd\vol_n
+=
+\int\limits_{V_n} \<u_n,\nabla\psi_n\> \div u_nd \vol_n
+$$
+
+Let us rewrite the integral in $\Omega$:
+$$\int\limits_{\Omega}
+\Bigl(\sum_{i=1}^3u_n^i \tfrac{\partial \phi}{\partial x_i}\Bigr)
+\sum_{i=1}^3
+\Bigl(\tfrac{\partial u_n^i}{\partial x^i} +u^i_n\tfrac{\partial \log \sqrt {\det (g_{ij,n})}}{\partial x^i}\Bigr)
+\sqrt {\det (g_{ij,n})}dx^1\wedge dx^2\wedge dx^3$$
+
+Now by Proposition~\ref{Prop:chart}.\ref{metric}
+$g_{i j,n}, g^{ij}_n\in  \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)$
+and
+$\det g_{ij,n}$ are bounded away from $0$.
+We also have
+$$u_n^i=\frac{g^{ij}\frac{\partial (f\circ \X_n^{-1})}{ \partial x_j}}
+{\sqrt{g^{jk}\frac{\partial (f\circ \X_n^{-1})}{\partial x_j }\frac{\partial (f\circ \X_n^{-1})}{\partial x_k}}}.$$
+By Proposition~\ref{Prop:chart}.\ref{funktioninchart}
+ $f_n\circ\X_n^{-1}\in DC_0^{seq}(\Omega, S_\Omega)$
+hence 
+${u^i_n}\in  \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)$.
+
+Then applying lemmas~\ref{thm-D}, \ref{thm-CM}, and \ref{thm-A} we get
+
+\begin{itemize}
+
+\item $\partial \log \sqrt {\det (g_{ij,n})}/\partial x^i\in \aleph_0^{seq}(\Omega,S_\Omega)$
+
+\item $\frac{\partial u_n^i}{\partial x_i}\in \aleph_0^{seq}(\Omega,S_\Omega)$
+ 
+\end{itemize} 
+ 
+ and by above
+ 
+  \begin{itemize}
+  
+  \item ${u^i_n}\in  \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)\subset\op{C_0^{seq}}(\Omega,S_\Omega,\RR)$ 
+ 
+ \item $g_{i j,n}\in   \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)\subset \op{C_0^{seq}}(\Omega,S_\Omega,\RR)$
+ 
+  \end{itemize}
+  
+  Then applying Lemma~\ref{thm-CM}
+  we get under integral the sum of elements from $\aleph_0^{seq}(\Omega,S_\Omega)$
+  multiplied by $\frac{\partial \phi}{\partial x_i}$ --- smooth functions with compact support.
+       This gives convergence of the integral by definition of  $\aleph_0^{seq}(\Omega,S_\Omega)$.
+              
+
+Further, for the second integral % (see claim~\ref{cl:funDC})
+we have
+$$\int\limits_{M_n}\<\nabla\psi_n,\nabla_{u_n} u_n\>d\vol_n=$$
+ $$\int\limits_{\Omega}  \sum_{i,j,k}u^i_n \frac{\partial \phi}{\partial x_k}
+ \biggl(\frac{\partial u^k_n}{\partial x_i} +\frac{1}{2}u^j_n\sum_s
+ \biggl(\frac{\partial g_{ js,n}}{\partial x_i}+\frac{\partial g_{si,n}}{\partial x_j}-\frac{\partial g_{i j,n}}{\partial x_s}\biggr) g^{ks}_n\biggr)\cdot \sqrt{\op{det}(g_{i j,n})}dx^1\wedge dx^2\wedge dx^3$$ 
+ 
+For the first integral,
+ applying
+lemmas~\ref{thm-D}, \ref{thm-CM}, and \ref{thm-A} we get under the integral sequence from $\aleph_0^{seq}(\Omega,S_\Omega)$ multiplied by smooth function with compact support $\frac{\partial \phi}{\partial x_i}$. Then the integral converges and the lemma follows.
+\qeds
+
+
+\parit{Proof of Lemma~\ref{Int}.}
+Any point  in an Alexandrov space
+has a convex neighborhood (\cite{convexity}) and by
+construction  it can be lifted  to a smoothing sequence.
+So let 
+$V\subset A$ be an open  convex
+neighborhood of $x$ and
+$ V_n\subset M_n$
+be open convex sets such that
+$V_n  \dto{GH}   V$.
+
+We set $f_0:=f$, $h:=\sup |f_n|<\infty$
+and denote 
+$$L_{t,n}=f_n^{-1}(t)\cap V_n,\qquad
+C_{t,n}=f_n^{-1}[t,h]\cap \bar V_n.$$
+ Now we want to show that local version of
+Main theorem  for dimension 2 can be applied to small subsets of $L_{t,n}$ with some uniform estimates.
+
+
+
+For every $t$ and $n\ge 0$, the set $C_{t,n}$ is a convex subset in Alexandrov space 
+ and hence is an Alexandrov space 
+ with curvature $\ge -1$.
+For any $t_n\to t^*$ we have that
+$C_{t_n,n}     \dto{GH}    C_{t^*,0} $. 
+Then boundaries  $\partial C_{t_n,n}  $
+  converge to $\partial C_{t^*,0}  $ in
+Gromov--Hausdorff sense and then by  
+  \cite{petrunin-QG} (Theorem 1.2)
+ $\partial C_{t_n, n}  $ equipped with inner metric
+ $\rho^{\partial C_{t_n,n}}$ converge to
+ $\partial C_{t^*,0}  $ with inner metric
+ $\rho^{\partial C_{t^*,0}}$.
+ 
+ 
+ It follows from \cite{AKP} that
+ for $n\ge 1$
+  (since $C_{t,n}$ are
+ convex subsets in a Riemannian manifolds with curvature $\ge -1$)
+  the boundary
+$(\partial C_{t,n}, \rho^{\partial C_{t_n,n}}) $ is
+an Alexandrov space 
+ with curvature $\ge -1$. Hence the limit
+$(\partial C_{t^*,0}, \rho^{\partial C_{t^*,0}}) $ is
+an Alexandrov space 
+ with curvature $\ge -1$.
+
+Let $\rho_{t,n}$ be induced inner metric on $L_{t,n}$,
+then $\rho_{t,n}$ locally coincide with
+$\rho^{\partial C_{t,n}}$ and hence 
+for any $t^*$ and $t_n\to t_*$
+$(L_{t_n,n}, \rho_{t_n,n})\dto{GH} (L_{t_*,0},\rho_{t^*,0} )$.
+Note that since $(L_{t,n}, \rho_{t,n})\in\M_{\ge -1}^m$
+we obtained
+local smoothing sequences. It remains to find good inner
+subsets for these smoothings.
+
+Let  note that since 
+$\partial C_{t^*,0}$
+is an extremal subset for
+$C_{t^*,0}$
+ the inner metric
+$ \rho^{\partial C_{t^*,0}} $ is bi-Lipschitz to
+the metric restricted from $A$ to
+$\partial C_{t^*,0}$.
+It follows that
+we can take $r$ sufficiently small
+such that for all $t$ and
+$U_{t,n}=L_{t,n}\cap B_{r}(x_n)$
+we will have
+$\diam_{\rho_{t,n}} U_{t,n}\le 1/10 \dist   (U_{t,n},\partial C_{t,n}\setminus L_{t,n})$. Then for
+all $y\in U_{t,n}$ closed balls
+$\overline {B^{L_{t,n}}_{5\diam_{\rho_{t,n}} U_{t,n}}}(y) $ are compact.
+Hence every $U_{t,0}$ is a good inner subset for 
+smoothing  $L_{t,n}\to L_{t,0}$
+and local version of Main theorem for dimension 2
+can be applied to this set.
+
+Now we fix some
+$\phi\in C^0_c(B_r(x)\cap A^\delta) $ and
+$\phi_n\in C^0_c(B_r(x_n)) $,
+such that
+$\phi_n\cccto\phi$.
+
+
+$$ \int\limits_{B_r(x_n)}\Int_n(s)\phi_n(s)d\vol_n(s)
+=\int\limits_{-h}^{h} d t\int\limits_{ U_{t,n}}
+ \frac{\phi_n(s)}{|\nabla f_n(s)|}\Int_n(s)d S_n^t(s),$$
+ where $ S_n^t$ is the $2$-volume on $ L_{t,n}$.
+ For any $t\in[-h,h]$ we have
+ $L_{t,0}\in\DAl^m$,
+$L_{t,n}\in\DM^m$,
+$L_{t,n}\dto{GH} L_{t,0}$
+ and $U_{t,0}$ is good inner set for this smoothing.
+Then local version of Main theorem  for dimension $2$ can be applied.
+ Hence $\Int_n(x)dS_n^t(x)$ weakly converges to some measure on $U_{t,n}$.
+ From 
+compactness  $\sup_{t} \diam U_{t,n}<\infty$.
+ Then by  Corollary~\ref{Kbound} 
+$\int\limits_{ L_t^n}
+ |\Int_n(x)|dS_n^t(x)\le c_1$ for some $c_1$ independent on $t$. We know that
+ $\operatorname{supp}(\phi/{|\nabla  f_n|})\in C^0_c(B_r(x)) $
+and the sequence
+  ${\phi_n}/{|\nabla  f_n|}$
+$c_2\de$-converges on $A^\delta$ 
+for some $c_2>0$
+(see claim~\ref{lem:scalprod}).
+Then for all $t$ we have
+$$\limsup_{n\to\infty}\int\limits_{U_{t,n}} \frac{\phi_n(x)}
+{|\nabla f_n(x)|}\Int_n(x)dS_n^t(x)-
+\liminf_{n\to\infty}\int\limits_{U_{t,n}} \frac{\phi_n(x)}{|\nabla f_n(x)|}\Int_n(x)dS_n^t(x)
+\le c_1c_2\delta.$$
+
+Hence
+
+$$
+\limsup_{n\to\infty}
+ \int\limits_{B_r(x_n)}\Int_n(s)\phi_n(s)d\vol_n(s)-
+\liminf_{n\to\infty}
+ \int\limits_{B_r(x_n)}\Int_n(s)\phi_n(s)d\vol_n(s)
+\le 2hc_1c_2\delta.$$
+\qeds
+
+\parit{Proof of Proposition~\ref{strconvergence}.}
+We take a Nice common chart 
+$\mathfrak{X}_n:U_n\to\Omega$ and
+$\mathfrak{X}:U\to\Omega$ around $x$.
+We can assume 
+that $U\subset B_{r_0}(x)$ where $r_0$ is 
+from conclusion of Lemma~\ref{Int}.
+
+
+Let us define sequences 
+$L_n, L_n^1, L_n^2:C^\infty_0(\X(U\cap A^\delta))\to \R$
+of continuous linear operators
+
+$$L_n(\psi)=
+\int\limits_{U_n}(\psi\circ\mathfrak X_n )\cdot \Str(u_n, u_n)=
+\int\limits_{U_n} \phi_n\cdot \Str(u_n, u_n)
+$$
+
+$$L_n^1(\psi)=
+\int\limits_{U_n} \phi_n\cdot \Int_n,
+\qquad L_n^2(\psi)=
+\int\limits_{U_n}
+ \l[H_n\cdot\<u_n,\nabla\phi_n\>- \<\nabla\phi_n,\nabla_{u_n} u_n\> \r].$$
+
+Then \ref{Bochner} implies that $L_n=L_n^1+L_n^2$.
+It follows from
+Lemma~\ref{Int} that 
+$L^1_n(\psi)$ $c\delta$-converges for any $\psi\in C^\infty_0(\X(U\cap A^\delta))$.
+From Lemma~\ref{HnablaU} we have that
+$L^2_n(\psi)$ converges for any $\psi\in C^\infty_0(\X(U\cap A^\delta))$.
+It follows from Corollary~\ref{Kbound}  that operators $L_n$
+are uniformly bounded with respect to the uniform norm and by above
+$L_n(\psi)$ $c\delta$-converges for any $\psi\in C^\infty_0(\X(U\cap A^\delta))$.
+Then the sequence $L_n$ regarded as a sequence 
+of measures weakly $c\delta$ converges to some 
+measure.
+Proposition~\ref{strconvergence} follows.
+\qeds

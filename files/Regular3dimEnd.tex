@@ -1,0 +1,113 @@
+\section{Completion of the proof near regular
+set in dimension 3}
+In this section we 
+ prove Lemma~\ref{A^0} for 3-dimensional case.
+
+\subsection{Vectors in general position}
+
+We say that  vectors 
+ $w_1,\dots,w_{N(N-1)/2}\in\R^N$ are 
+  \emph{in general position}
+if any quadratic form $Q:\R^N\times \R^N\to\R$
+can be computed from the values $Q(w_k, w_k), k=1,\dots,N.$ 
+More formally,
+there are rational functions $s_{ij}^k:(R^{N(N-1)})^N\to [-\infty,\infty]$
+such that
+ if we fix basis $e_1,\dots, e_N\in \R^N$
+ and take vectors $w_s=w_s^ie_t$ for $s=1,\dots,\frac{N(N-1)}{2}$,
+ then for any quadratic form $Q$ we can formally express its coordinates as:
+$$Q(e_i,e_j)=\sum_{k=1}^{N(N-1)}s_{ij}^k(w_s^t)Q(w_k,w_k). \eqlbl{Qij}$$
+Vectors are  in general position iff 
+$s_{ij}^k(w_s^t)<\infty$ for all $i,j\in \{1,\dots, N\}$
+and
+$k\in \{1,\dots, N(N-1)/2\}$.
+
+We need further the following observation:
+since 
+$s_{ij}^k$ are rational functions
+any array of vectors in general position has a small
+neighbourhood where $s_{ij}^k$ are Lipschitz.
+
+\subsection{Proof} 
+
+Let us fix Nice common chart sequence
+\[\mathfrak X_n =(\mathfrak x^1_n, \mathfrak x^2_n,\mathfrak x^3_n):U_n\to\Omega,\quad
+\mathfrak X =(\mathfrak x^1, \mathfrak x^2,\mathfrak x^3):U\to\Omega.\]
+Set
+\begin{align*}
+e_{1n}&=\nabla \mathfrak x^1_n,
+&e_{2n}&=\nabla \mathfrak x^2_n,
+&e_{3n}&=\nabla \mathfrak x^3_n
+\\
+e_{1}&=\nabla \mathfrak x^1,
+&e_{2}&=\nabla \mathfrak x^2,
+&e_{3}&=\nabla \mathfrak x^3.
+\end{align*}
+ 
+Let
+${w^*}_1,\dots,{w^*}_6\in T_pA=\R^3$ 
+be vectors in general position, with
+coordinate expressions ${w^*}_k=\sum_i{w^*}_k^ie_i$.
+By Proposition~\ref{NiceFunctions}
+we can choose 6 smooth sequences of concave functions $f^1_n\ccto f^1,\dots, f^6_n\ccto f^6$ around $p$, such that
+$\nabla f^1,\dots,\nabla f^6$ are sufficiently close to
+${w^*}_1,\dots,{w^*}_6$
+and we can assume $U$ to be sufficiently small such
+that
+measures $\Str(\nabla f^k_n, \nabla f^k_n)d\vol_n$ weakly $c\delta$-converges
+on $U\cap A^\delta$ for $k=1,\dots,6$ (by Proposition~\ref{strconvergence}).
+ Let us denote
+$w_{k,n}=\nabla_nf^k_n$ and expression
+in the frame
+$w_{k,n}= w_{k,n}^i e_{i,n}$.
+Then
+taking $U, U_n$ sufficiently
+small  so that for all $y\in U_n$ coordinates
+$w_{i, n}^k(y)\in \R^{3\times 6}$ are in a neighborhood 
+of $ {w^*}_i^k\in \R^{3\times 6}$, where
+corresponding functions $s_{ij}^k$ in \ref{Qij} are Lipschitz.
+Then applying \ref{Qij} we get that 
+$$\Str(e_{i,n},e_{j,n})=\sum_{k=1}^6 s_{ij}^k(w_{s,n}^t)\Str(w_{k,n}, w_{k,n})=\sum_{k=1}^6 s_{ij}^k(w_{s,n}^t)\Str(\nabla f^k_n, \nabla f^k_n).   $$
+We know that $w_{s,n}^t$ are 
+$c\delta$-converging
+on $U\cap A^\delta$ (Corollary~\ref{cor:cdeltacoeff}) and $s_{ij}^k$ are Lipschitz,
+hence components of Strange curvature
+$\Str_n(e_{i,n},e_{j,n})d\vol_n$
+ weakly $c\delta$-converges
+on $U\cap A^\delta$. 
+
+Let note, that for $3$-dimensional manifold 
+curvature tensor $q$ can be expressed via Strange curvature and
+for $M_n$ we have:
+ $$q_{M_n}(v,v)=\Str_n(v,v)-|v|^2\Tr \Str_n/4.\eqlbl{Q}$$
+Hence
+$$q((w_{k,n}, w_{k,n})=
+\Str_n(w_{k,n}, w_{k,n})-(\sum_{i,j=1}^3 g_{ij,n}w^i_{k,n} w^j_{k,n})\operatorname{Tr}\Str_n$$
+
+We know that $g^{ij}_n$ are
+$c\delta$ converging on $U\cap A^\delta$ (Lemma~\ref{lem:scalprod}) then measures
+$\operatorname{Tr}\Str_nd\vol_n=g^{ij}_n\Str_n(e_{i,n},e_{j,n})d\vol_n$
+and  hence
+ $q((w_{k,n}, w_{k,n})d\vol_n$
+weakly $c\delta$-converges
+on $U\cap A^\delta$.
+ 
+
+Then applying again \ref{Qij} we get that 
+$$q(e_{i,n},e_{j,n})=\sum_{k=1}^6 s_{ij}^k(w_{s,n}^t)q(w_{kn}, w_{k,n})=\sum_{k=1}^6  s_{ij}^k(w_{s,n}^t)q(\nabla f^k_n, \nabla f^k_n) .   $$
+Then as above we can obtain that
+$q((e_{i,n}, e_{j,n})d\vol_n$
+  weakly $c\delta$-converges
+on $U\cap A^\delta$.
+
+Now let $f_n\ccto f$ be arbitrary roughly $C^1$-converging sequence. For
+decomposition $\nabla f_n =\sum \alpha^i_ne_{i,n}$,
+we have that $ \alpha^i_n$
+$c\delta$-converges
+on $U\cap A^\delta$. Then measures
+$q(\nabla f_n, \nabla f_n)d\vol_n=
+\sum \alpha^i_n \alpha^j_n q((e_{i,n}, e_{j,n})d\vol_n$
+weakly $c\delta$-converges
+on $U\cap A^\delta$.
+
+\qeds
