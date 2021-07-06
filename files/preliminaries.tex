@@ -1,6 +1,6 @@
-\section{Formulations}
+\part{Formulations}
 
-In this section we give definitions necessary for a precise formulation 
+In this part we give definitions necessary for a precise formulation 
 of the main theorem.
 For simplicity  we will always assume that the lower
 curvature bound in main theorem is  $-1$;
@@ -39,7 +39,7 @@ By the stability theorem that any smoothable Alexandrov space is a topological m
  
  
  
-\subsection{Weak convergence of measures}
+\section{Weak convergence of measures}
 
 In this section we give formal definition of weak convergence of measures
 that we use.
@@ -69,11 +69,12 @@ if $\langle m_n|f\rangle \to \langle m|f\rangle $ for
 any
 $f\in C_c(A)$.
 
+
 For a given  sequence $A_n\GHto A$
-we define weak convergence of  measures from
-$\mathfrak M(A_n)$
+we define weak convergence $m_n\rightharpoonup m$ of measures $m_n$ on $A_n$ to a measure $m$ on $A$
 by identification of all spaces via homeomorphism
 approximations $a_n\:A_n\to A$.
+If the condition $\langle m_n|f\rangle \to \langle m|f\rangle $ holds for only for functions $f$ with support in an open subset $\Omega\subset A$, then we say that $m_n$ \emph{weakly converges to $m$ in $\Omega$}.
 
 Equivalently, the weak convergence can be defined using uniform convergence of functions.
 We say that  a sequence $f_n\in C_c(A_n)$
@@ -88,7 +89,7 @@ we have $\langle m_n|f_n\rangle \to \langle m|f\rangle $.
 
 %We will denote by $\langle h|f\rangle $ the value of $h\in C^*(A)$ on $f\in C(A)$.
 
-\subsection{Test functions}
+\section{Test functions and their convergence}
 In this section we introduce a class of test functions
 which we use
 to define  a notion of measure valued tensor.
@@ -102,10 +103,10 @@ Given $A_n, A\in \Al^m$,  $A_n\GHto A$,
 we can naturally lift a distance function $\dist_p$ to $A_n$.
 We have to choose a convergent sequence $p_n\to p$ and take the
 sequence $\dist_{p_n}$.
-Let us fix small $r>0$,
-$p\in A$
-and define smoothed distance function as 
-$$\widetilde{\dist}_{p,r} =\oint_{B_r(p)} \dist_{x}dx.$$ 
+
+Choose $r>0$ and $p\in A$.
+Let us define \emph{smoothed distance function} as 
+$$\widetilde{\dist}_{p,r} =\oint_{B(p,r)} \dist_{x}dx.$$ 
 We can approximate this function by
 $\widetilde{\dist}_{p_n,r}:A_n\to [0,\infty)  $
  choosing
@@ -122,9 +123,10 @@ $$f_n=\varphi_n( \widetilde{\dist}_{p_1,r_1}, \widetilde{\dist}_{p_2,r_2},\dots,
 we will say that $f_n$ is a test sequence converging to $f$ and write
 $(f_n,f)\zz\in \Test(A_n,A)$ or $f_n\testto f$.
 
-Let us note that
-test functions form an algebra and a
+\parbf{Remarks.}
+Test functions form an algebra and a
 partition of unity can be formed by test functions.
+
 On a smooth Riemannian manifold test functions
 are exactly $C^1$-functions.
 Indeed, around any point one can take a
@@ -133,7 +135,7 @@ coordinate chart, express $C^1$-function in these
 coordinates and then apply partition of unity. 
  
  
-\subsection{Tensors}
+\section{Tensors}
 
 
 \begin{rdef} {Definition}\label{def:mestens}
@@ -216,7 +218,7 @@ test sequences
 $f_{i,n}\testto f_i, i=1,\dots,\kay$, the measures $\mathfrak{t}_n(f_{1,n},f_{2,n},\dots,f_{\kay,n})$ weakly converge to $\mathfrak{t}(f_{1},f_{2},\dots,f_{\kay})$.
 \end{rdef}
 
-\subsection{Dual curvature tensor}
+\section{Dual curvature tensor}
 
 The curvature of Riemannian manifold $M$ usually described by tensor of valence 4 that will be denoted by $\Rm$.
 We will use \emph{dual curvature tensor} --- 
@@ -270,7 +272,7 @@ Therefore measure tensor $\mathfrak{q}$
 gives an equivalent description of curvature of Riemannian manifold.
 
 
-\subsection{Partition into three sets}
+\section{Partition into three sets}
 
 Let $A$ be a 3-dimensional Alexandrov space without boundary. 
 Let us partition $A$ into three subsets $A^\circ$, $A'$ and $A''$:
@@ -286,15 +288,15 @@ $$A^{\circ}=\bigcap_{\delta>0} A^\delta,$$
 where $A^\delta$ denotes the set of $\delta$-strained points of $A$.
 
 Consider the measure $\omega$ on $A'$ defined by
-\[\omega=(2\cdot\pi-\theta)\cdot \mathcal{H}_1,\eqlbl{eq:omega}\]
-where $\mathcal{H}_\alpha$ denotes $\alpha$-dimensional Hausdorff measure.
+\[\omega=(2\cdot\pi-\theta)\cdot \haus_1,\eqlbl{eq:omega}\]
+where $\haus_\alpha$ denotes $\alpha$-dimensional Hausdorff measure.
 Let us extend $\omega$ to the whole space by setting $\omega(S)=\omega(S\cap A')$ for any Borel set $S\subset A$.
 
 The function $\theta$ can be extended to the whole $A$ by setting
 \[\theta(p)=2\cdot\pi\cdot \tfrac{\area \Sigma_p}{\area \mathbb{S}^2}\] for any $p\in A'$.
 According to \cite[7.14]{BGP}, $\theta\:A\to \RR$ is upper-semicontinuous.
 The right-hand side of the last equality vanish in $A^\circ$.
-Further since $\mathcal{H}_1(A'')=0$, the measure $\omega$ could be also defined as a measure on whole $A$ that is defined by~\ref{eq:omega}.
+Further since $\haus_1(A'')=0$, the measure $\omega$ could be also defined as a measure on whole $A$ that is defined by~\ref{eq:omega}.
 
 Suppose $p\in A'$.
 Choose a unit \emph{vertical} vector $u(p)\in \T_p$;

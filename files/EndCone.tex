@@ -20,9 +20,9 @@ For every $x\in A'^1$  by claim~\ref{cl:R12loc} (1)
    we can choose $r_0(x)$ sufficiently
 small
 so that for $r<r_0(x)$ we have
-$R_1(B_r(x))/R_2(B_r(x))=1\pm \epsilon$ and
-$ R^i(B_{2r}(p))<2\cdot 2^{m-2}(R_i(B_r(p)),\qquad i=1, 2$.
-The set $F=B_r(x)$ for $x\in A'^1, r<r_0(x), B_r(x)\subset W$ is
+$R_1(B(x,r))/R_2(B(x,r))=1\pm \epsilon$ and
+$ R^i(B(p,2r))<2\cdot 2^{m-2}(R_i(B(p,r)),\qquad i=1, 2$.
+The set $F=B(x,r)$ for $x\in A'^1, r<r_0(x), B(x,r)\subset W$ is
 $R^i$-adequate by  \cite[2.8.7]{federer}.
 So we can choose countable (disjoint?!!) subfamily $G\subset F$, such that
 $$R^i(W\setminus\cup G)=0.  $$
@@ -39,7 +39,7 @@ For every $x\in A'^0$  by claim~\ref{cl:R12loc} (2)
    we can choose $r_0(x)$ sufficiently
 small
 so that for $r<r_0(x)$ we have
-$ R^i(B_{r}(p))<\epsilon\cdot r^{m-2}.$
+$ R^i(B(p,r))<\epsilon\cdot r^{m-2}.$
 We set
 $$K^{r_*}
 =
@@ -47,10 +47,10 @@ $$K^{r_*}
 obviously
 $K=\cup_{r_*}K^{r_*}$. Let $h^{m-2}(K^{r_*})=c<\infty$.
 We can choose approximating covering for Hausdorff measure of $K^{r_*}$:
-$$\cup_k B_{r_k}(x_k)\supset K^{r_*}, r_i<r_*\  \text{and}\
+$$\cup_k B(x_k,r_k)\supset K^{r_*}, r_i<r_*\  \text{and}\
 \sum_k r_k^{m-2}< c+\varepsilon,$$
-then $$\sum_k (R^i B_{r_k}(x_k))<\epsilon\cdot(c+1).$$
+then $$\sum_k (R^i B(x_k,r_k))<\epsilon\cdot(c+1).$$
 Since
-$\cup_k B_{r_k}(x_k)\subset W$ we have
-$R^i(\cup_k B_{r_k}(x_k))<\epsilon\cdot(c+2)$.
+$\cup_k B(x_k,r_k)\subset W$ we have
+$R^i(\cup_k B(x_k,r_k))<\epsilon\cdot(c+2)$.
 Hence $R^i(K^{r_*})<\epsilon\cdot(c+3)$.

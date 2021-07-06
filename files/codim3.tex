@@ -1,31 +1,8 @@
-\section{Singularities of codimension 3}
+\section{Singularities of codimension 3}\label{sec:codmi=3}
 
-Let $M$ be an $m$-dimensional Riemannian manifold
-Set
-\[K_{max}(x)=\sup |K_\sigma|\]
-where $\sigma$ runs along all sectional directions at $x\in M$.
-The following statement is a direct corollary of the main result in \cite{petrunin-SC}:
-
-\begin{thm}{Corollary}\label{cor:Kmax}
-Let $M$ be an $m$-dimensional Riemannian manifold with sectional curvature bounded below by $-1$.
-Then there a constant $\const(m)$ such that
-$$\int_{B(p,r)_M} K_{max}\le \const(m)\cdot r^{m-2}.$$
-for any $r<1$.
-\end{thm}
 
 \parit{Proof of part \ref{prop:3parts:codim3} in Proposition~\ref{prop:3parts}.}
-Observe that there is a constant $\const(m)$ such that 
-\[
-\begin{aligned}
-|q_n(\nabla f_1,&\dots,\nabla f_{m-2},\nabla g_1,\dots,\nabla g_{m-2})|
-\\
-&\le 
-\const(m)\cdot K_{max}\cdot|\nabla f_1\wedge\dots\wedge\nabla f_{m-2}|\cdot |\nabla g_1\wedge\dots\wedge\nabla g_{m-2}|
-\end{aligned}
-\eqlbl{q=<K}
-\]
-
 According to \cite[10.6]{BGP}, $A''$ has vanishing $(m-2)$-dimensional Hausdorff measure;
 that is, $A''$ can be covered by a countable family of balls $B(x_i,r_i)$ such that $\sum r_i^{m-2}$ is arbitrary small.
-Therefore \ref{cor:Kmax} and \ref{q=<K} imply the statement.
+Therefore \ref{cor:Kmax} and Corollary~\ref{cor:Kmax} imply the statement.
 \qeds

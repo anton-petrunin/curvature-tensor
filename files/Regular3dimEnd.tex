@@ -1,113 +1,186 @@
-\section{Completion of the proof near regular
-set in dimension 3}
-In this section we 
- prove Lemma~\ref{A^0} for 3-dimensional case.
+\subsection{3D case of \ref{prop:3parts}(\ref{prop:3parts:reg})}
+In this section we prove Lemma~\ref{A^0} for 3-dimensional case.
 
-\subsection{Vectors in general position}
-
-We say that  vectors 
- $w_1,\dots,w_{N(N-1)/2}\in\R^N$ are 
-  \emph{in general position}
-if any quadratic form $Q:\R^N\times \R^N\to\R$
-can be computed from the values $Q(w_k, w_k), k=1,\dots,N.$ 
-More formally,
-there are rational functions $s_{ij}^k:(R^{N(N-1)})^N\to [-\infty,\infty]$
+Vectors $w_1,\dots,w_{m(m-1)/2}\in\R^m$ are \emph{in general position}
+if the vectors $w_i\otimes w_i$ form a basis in $\RR^{m\cdot(m-1)/2}$ --- the symmetric square of $\RR^m$.
+In this case any quadratic form $Q$ on $\R^m$
+can be computed from the values 
+\[Q(w_1, w_1),\dots,Q(w_{m(m-1)/2}, w_{m(m-1)/2}).\] 
+More precisely, there are rational functions 
+$s_1,\dots,s_{m(m-1)/2}$ that take $\tfrac{m(m-1)}2$ vectors in $\R^m$ and returns a quadratic form on $\R^m$
 such that
- if we fix basis $e_1,\dots, e_N\in \R^N$
- and take vectors $w_s=w_s^ie_t$ for $s=1,\dots,\frac{N(N-1)}{2}$,
- then for any quadratic form $Q$ we can formally express its coordinates as:
-$$Q(e_i,e_j)=\sum_{k=1}^{N(N-1)}s_{ij}^k(w_s^t)Q(w_k,w_k). \eqlbl{Qij}$$
-Vectors are  in general position iff 
-$s_{ij}^k(w_s^t)<\infty$ for all $i,j\in \{1,\dots, N\}$
-and
-$k\in \{1,\dots, N(N-1)/2\}$.
+$$Q=\sum_{k=1}^{m(m-1)/2}s_k(w_1,\dots,w_{m(m-1)/2})\cdot Q(w_k,w_k).
+\eqlbl{Qij}$$
 
-We need further the following observation:
-since 
-$s_{ij}^k$ are rational functions
-any array of vectors in general position has a small
-neighbourhood where $s_{ij}^k$ are Lipschitz.
+Note that the vectors $w_1,\dots,w_{m(m-1)/2}\in\R^m$  are  in general position if and only if 
+$s_k(w_1,\dots,w_{m(m-1)/2})$ are finite for all $k$.
+Since 
+$s_k$ are rational functions we get the following:
 
-\subsection{Proof} 
+\begin{thm}{Observation.}\label{obs:genpos}
+Suppose that vectors $w_1,\dots,w_{m(m-1)/2}\in\R^m$ are in general position.
+Then the functions $s_1,\dots,s_{m(m-1)/2}$ are Lipschitz in a neighborhood of $(w_1,\dots,w_{m(m-1)/2})\in (\R^m)^{m(m-1)/2}$.
+\end{thm}
 
-Let us fix Nice common chart sequence
-\[\mathfrak X_n =(\mathfrak x^1_n, \mathfrak x^2_n,\mathfrak x^3_n):U_n\to\Omega,\quad
-\mathfrak X =(\mathfrak x^1, \mathfrak x^2,\mathfrak x^3):U\to\Omega.\]
-Set
+
+\parit{Proof of \ref{A^0}.} 
+Choose a nice common chart in
+\[M_n\supset U_n\to\Omega,
+\quad\text{and}\quad
+A_n\supset U\to\Omega.\]
+Let us use it to identify tangent spaces of $M_n$ and $A$ with $\RR^3$.
+ 
+Choose vectors $w_1,\dots,w_6\in \R^3$  in general position.
+We can choose 6 sequences of test concave functions $f^1_n\testto f^1,\dots, f^6_n\testto f^6$, such that
+$\nabla f^1,\zz\dots,\nabla f^6$ are sufficiently close to
+$w_1,\dots,w_6$.
+We can assume $U$ to be sufficiently small, so by Proposition~\ref{strconvergence}
+the measures $\Str(\nabla f^k_n, \nabla f^k_n)\cdot\vol_n$ weakly $\delta$-converges
+on $U\cap A^\delta$ for $k=1,\dots,6$.
+
+By \ref{obs:genpos}, the functions $s_i$ are Lipschitz in a neighborhood of $(w_1,\dots,w_6)\zz\in (\R^3)^6$.
+Applying \ref{Qij}, we get that 
 \begin{align*}
-e_{1n}&=\nabla \mathfrak x^1_n,
-&e_{2n}&=\nabla \mathfrak x^2_n,
-&e_{3n}&=\nabla \mathfrak x^3_n
-\\
-e_{1}&=\nabla \mathfrak x^1,
-&e_{2}&=\nabla \mathfrak x^2,
-&e_{3}&=\nabla \mathfrak x^3.
+\Str
+&=
+\sum_{k=1}^6 s_k(\nabla f^1_n,\dots \nabla f^6_n)\cdot\Str(\nabla f^k_n,\nabla f^k_n).
 \end{align*}
- 
-Let
-${w^*}_1,\dots,{w^*}_6\in T_pA=\R^3$ 
-be vectors in general position, with
-coordinate expressions ${w^*}_k=\sum_i{w^*}_k^ie_i$.
-By Proposition~\ref{NiceFunctions}
-we can choose 6 smooth sequences of concave functions $f^1_n\ccto f^1,\dots, f^6_n\ccto f^6$ around $p$, such that
-$\nabla f^1,\dots,\nabla f^6$ are sufficiently close to
-${w^*}_1,\dots,{w^*}_6$
-and we can assume $U$ to be sufficiently small such
-that
-measures $\Str(\nabla f^k_n, \nabla f^k_n)d\vol_n$ weakly $c\delta$-converges
-on $U\cap A^\delta$ for $k=1,\dots,6$ (by Proposition~\ref{strconvergence}).
- Let us denote
-$w_{k,n}=\nabla_nf^k_n$ and expression
-in the frame
-$w_{k,n}= w_{k,n}^i e_{i,n}$.
-Then
-taking $U, U_n$ sufficiently
-small  so that for all $y\in U_n$ coordinates
-$w_{i, n}^k(y)\in \R^{3\times 6}$ are in a neighborhood 
-of $ {w^*}_i^k\in \R^{3\times 6}$, where
-corresponding functions $s_{ij}^k$ in \ref{Qij} are Lipschitz.
-Then applying \ref{Qij} we get that 
-$$\Str(e_{i,n},e_{j,n})=\sum_{k=1}^6 s_{ij}^k(w_{s,n}^t)\Str(w_{k,n}, w_{k,n})=\sum_{k=1}^6 s_{ij}^k(w_{s,n}^t)\Str(\nabla f^k_n, \nabla f^k_n).   $$
-We know that $w_{s,n}^t$ are 
-$c\delta$-converging
-on $U\cap A^\delta$ (Corollary~\ref{cor:cdeltacoeff}) and $s_{ij}^k$ are Lipschitz,
-hence components of Strange curvature
-$\Str_n(e_{i,n},e_{j,n})d\vol_n$
- weakly $c\delta$-converges
-on $U\cap A^\delta$. 
+Hence the measure $\Str_n(e_{i},e_{j})\cdot\vol_n$ are weakly $\delta$-converging for all $i$ and $j$,
+where $e_1,\dots,e_3$ is the standard basis in $\RR^3$.
 
-Let note, that for $3$-dimensional manifold 
-curvature tensor $q$ can be expressed via Strange curvature and
-for $M_n$ we have:
- $$q_{M_n}(v,v)=\Str_n(v,v)-|v|^2\Tr \Str_n/4.\eqlbl{Q}$$
-Hence
-$$q((w_{k,n}, w_{k,n})=
-\Str_n(w_{k,n}, w_{k,n})-(\sum_{i,j=1}^3 g_{ij,n}w^i_{k,n} w^j_{k,n})\operatorname{Tr}\Str_n$$
+By Lemma~\ref{lem:scalprod}, the sequence metric tensors $g_n$ of $M_n$ on $\Omega$ is uniforly $\delta$-converging.
+Since the following equality
+\[\operatorname{Tr}\Str_n=g^{ij}_n\Str_n(e_{i},e_{j})\cdot \sqrt {\det (g_{ij,n})}\]
+holds almost everywhere, we get that the sequence of measures $\operatorname{Tr}\Str_n\cdot\vol_n$ is weakly $\delta$-converging.
 
-We know that $g^{ij}_n$ are
-$c\delta$ converging on $U\cap A^\delta$ (Lemma~\ref{lem:scalprod}) then measures
-$\operatorname{Tr}\Str_nd\vol_n=g^{ij}_n\Str_n(e_{i,n},e_{j,n})d\vol_n$
-and  hence
- $q((w_{k,n}, w_{k,n})d\vol_n$
-weakly $c\delta$-converges
-on $U\cap A^\delta$.
- 
+Note, that for $3$-dimensional manifold we have
+$$q_n(v,v)=\Str_n(v,v)-|v|^2\Tr \Str_n/4.\eqlbl{Q}$$
+Hence the measures $q_n(e_i, e_j)\cdot\vol_3$ are weakly $\delta$-converging for all $i$ and $j$.
 
-Then applying again \ref{Qij} we get that 
-$$q(e_{i,n},e_{j,n})=\sum_{k=1}^6 s_{ij}^k(w_{s,n}^t)q(w_{kn}, w_{k,n})=\sum_{k=1}^6  s_{ij}^k(w_{s,n}^t)q(\nabla f^k_n, \nabla f^k_n) .   $$
-Then as above we can obtain that
-$q((e_{i,n}, e_{j,n})d\vol_n$
-  weakly $c\delta$-converges
-on $U\cap A^\delta$.
-
-Now let $f_n\ccto f$ be arbitrary roughly $C^1$-converging sequence. For
-decomposition $\nabla f_n =\sum \alpha^i_ne_{i,n}$,
-we have that $ \alpha^i_n$
-$c\delta$-converges
-on $U\cap A^\delta$. Then measures
-$q(\nabla f_n, \nabla f_n)d\vol_n=
-\sum \alpha^i_n \alpha^j_n q((e_{i,n}, e_{j,n})d\vol_n$
-weakly $c\delta$-converges
-on $U\cap A^\delta$.
-
+Finally, according to ??? the components $\alpha^k_{n,i}$ of $\nabla f^k_n$ are uniformly $\delta$-converging.
+The result follows since
+\[q(\nabla f^k_n, \nabla f^k_n)=
+\sum \alpha^k_{n,i} \alpha^k_{n,j} q(e_{i}, e_{j})\]
+almost everywhere, here $e_1,\dots,e_3$ denotes the standard basis in $\RR^3$.
 \qeds
+
+\subsection{Sketch of the proof of Lemma~\ref{A^0} for higher dimensions}
+We prove the $\delta$-convergence of dual curvature tensor in a small neighborhood 
+for a number of $(m-2)$-collections of test sequences,
+so that a curvature tensor can be reconstructed 
+as a linear combination.
+So we prove firstly the convergence
+for a given $(m-2)$-collection of test sequences.
+
+%Let a point $x_0\in A^0$ and a neighborhood $U\ni x_0 $ be sufficiently small.
+We fix a tight collection of
+Nice sequences of functions $g_n^1,\dots, g_n^{m-2}$    on
+small converging neighborhoods $U_n$          
+and regard а "foliation"  of $U^n$ into $2$-dimensional manifolds, that are
+ intersections of the level sets,
+ for every $t=(t_1,\dots,t_{m-2})\in (g_n^1,\dots, g_n^{m-2})(U_n)\subset\R^{m-2}$    
+  we denote these manifolds by
+ $K^t_n=(g_n^1)^{-1}(t_1)\cap\dots\cap (g_n^{m-2})^{-1}(t_{m-2})$
+ and by $Int_n^t$ theirs intrinsic curvature. ({\bf?} 
+ or sometimes  we use  notation $K_n^x$ for intersection of the level sets containing point $x\in U_n$).
+ 
+ 
+ 
+ We know that
+ $\sec K^t_n \ge\kappa$
+  (see \ref{convexinconvex}) and $K_n^t \GHto K^t$(for any fixed $t$), hence 
+  $K^t$ is an Alexandrov space with curvature bounded below by 
+  $\kappa$ and measures with densities $Int^t_n$ w.r.t. areas
+  weakly converge by Gauss-Bonnet formula to some measure on $K^t$.
+  So to prove weak $\delta$-convergence of sectional curvature 
+  along $K^t_n$
+   it is sufficient  
+   to estimate weak $\delta$-convergence of the
+ full Gauss curvature of $K^t_n$ in $U_n$ (because of Gauss theorem).
+  
+  We prove this convergence in two steps:  
+  
+ 1) We prove firstly 
+ weak $\delta$-convergence of
+ determinant second  fundamental form of $K^t_n$ w.r.t. some 
+ normal field.
+ We denote the $3$-dimensional submanifolds
+ $N^{t_2,\dots,t_{m-2}}_n=g_2^{-1}(t_2)\cap\dots\cap g_{m-2}^{-1}(t_{m-2})$, then
+ by \ref{convexinconvex}  the restrictions of $g_n^1$ onto $N_n^x$ are concave   functions
+ with level sets
+ $K_n^x$. 
+ We have by \ref{convexinconvex} 
+  $\sec N^{t}_n\ge\kappa$ and
+ $N_n^t\GHto N^t$, sequence $g^\#_n=g^1_n|_{N_n}$ is
+ Nice {\bf (?!!)},   hence Main theorem can be applied for this sequence.
+ So measures with densities  
+ $R^{N_n}(\nabla g^\#_n)$ w.r.t $3$-dimensional volume
+ weakly converge.
+We also  know that measures with densities $Int^t_n$ w.r.t. 
+$3$-dimensional volume
+  weakly $\delta$-converge (see Claim~\ref{Int-alm-conv}), hence
+   applying   Gauss theorem
+    we obtain  weak $\delta$-convergence 
+    for measures with densities $G^{K\subset N}$
+    w.r.t.       $3$-dimensional volume.
+    Let note that
+    $\cdot G^{K\subset N}=\frac{1}{|w|^2}G^{K\subset U,w}$, where $w$
+    is the projection of $\nabla g^1_n$ onto tangent  
+    space of $N^t_n$, that is the orthogonal complement to
+    $\nabla g^2_n,\dots,\nabla g^{m-2}_n$. 
+    So we have weak $\delta$-convergence 
+of         the determinant of the 
+second fundamental form w.r.t. normal fields $w_n$, which depends only on
+gradients $\nabla g^1_n,\dots,\nabla g^{m-2}_n$. 
+       
+  2)We use Remark~\ref{concavelinear}
+and change  linearly  $(m-2)$-collection of sequences of functions.
+ By the Remark, the
+    $2$-dimensional intersection sets  $K_n$
+    don't change, but gradients and consequently 
+     normal fields $w_n$ change linearly.
+   In this way  we can prove
+    $\delta$-convergence 
+of         the determinant of the 
+second fundamental form for $K_n$ w.r.t.  different normal fields.     
+ Finely we note that for sufficiently many (namely (m-2)(m-3)/2 {\bf?})
+  normal fields in general position
+  we can express the     
+    full Gauss curvature of $2$-dimensional surface 
+      in correspondent "relative Gauss curvatures".
+
+
+
+\begin{thm}{Remark} \label{concavelinear}
+Let 
+$g_1,\dots,g_l$ be a collection of concave functions
+and coefficients 
+$\alpha_1,\dots,\alpha_l \ge0$, then the function
+$\alpha_1g_1+\dots+\alpha_lg_l$ is concave.
+Let $(\alpha_{ij})_{i,j=1}^l$ be a nondegenerate
+matrix , then the intersection of all ($l$) level sets
+for the collection $f_1,\dots,f_l$
+coincides  
+ (for appropriate parameters) with  the intersection of $l$ level sets
+for the collection
+ $\alpha_{11}g_1+\dots+\alpha_{1l}g_l$,\dots,  $\alpha_{l1}g_1+\dots+\alpha_{ll}g_l$.
+ \end{thm}
+\begin{thm}{Lemma} \label{convexinconvex}
+
+Let 
+$g_1,\dots,g_l$ be a tight collection of smooth concave functions on a Riemannian manifold $M$.
+Let denote the intersection of level sets
+$L_s=(g^1)^{-1}(t_1)\cap\dots\cap (g_n^{s})^{-1}(t_{s})$ for $s=1,\dots, l$,
+then the restriction of
+$g^{s+1}$ onto $L_s$
+is a smooth concave function.  In particular
+$L_{s+1}$ is a smooth 
+locally convex
+submanifold in $L_s$ for $s=1,\dots, l$. 
+Therefore if we have lower curvature bound
+$\sec M \ge\kappa$
+then
+$\sec L_s \ge\kappa$
+for
+$s=1,\dots, m-2$.
+\end{thm}

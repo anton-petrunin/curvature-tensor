@@ -1,6 +1,4 @@
-\section{Details}
-
-\subsection{Bochner formula}\label{sec:bochner}
+\section{Bochner formula}\label{sec:bochner}
 
 
 We will need few integral formulas based on the Bochner formula.
@@ -218,130 +216,7 @@ It remains to apply the Gauss formula \ref{eq:gauss}.
 \qeds
 
 
-\subsection{Gauss and mean curvature estimate}
 
-\begin{thm}{Theorem}\label{thm:extimage-of-G-and-H}
-Let $f$, $h$ be a pair of strongly convex smooth 1-Lipschitz functions defined on an open set of a 3-dimensional Riemannian manifold.
-Suppose that (1)
-\[|\nabla (f+h)|<\eps\cdot|\nabla f|\quad\text{and}\quad |\nabla f|\ge 1\] 
-for some fixed positive $\eps<\tfrac12$
-and (2) for some $a,b\in \RR$, the set
-\[W_{a,b}=\set{p\in M}{f(p)=a, h(p)\le b}\]
-is compact.
-Denote by $k_1(p)\le k_2(p)$ the principle curvatures of $W_{a,b}$ at a point $p\in W_{a,b}$.
-Let $H(p)=k_1(p)+ k_2(p)$ and
-$G(p)=k_1(p)\cdot k_2(p)$ its mean and Gauss curvatures.
-Then
-\[\int_{W_{a,b}}G\le 100\cdot\eps
-\eqlbl{intG<100eps}\]
-and 
-\[\int_{W_{a,b}}H\le 10\cdot \sqrt{\eps}\cdot \length(\partial{W_{a,b}}).
-\eqlbl{intH<eps}\]
-\end{thm}
-
-The proof is based on the 2-dimesional case  following statement,
-which is the integral Bochner formula written for function with Dirichlet boundary condition.
-
-\begin{thm}{Proposition}\label{prop:bochner-dirichle}
-Assume $\Omega$ is a compact domain with smooth boundary $\partial \Omega$ in a Riemannian manifold
-and $f$ is a smooth function that vanish on $\partial \Omega$.
-Then
-\[\int\limits_\Omega |\Delta f|^2
--|\Hess f|^2
--\langle\mathrm{Ric}(\nabla f),\nabla f\rangle
-=\int\limits_{\partial\Omega}
-H\cdot|\nabla f|^2,\]
-where $H$ denotes mean curvature of $\partial \Omega$.
-\end{thm}
-
-\parit{Proof.}
-Equip $W_{a,b}$ with unit normal vector field $n=\tfrac{\nabla f}{|\nabla f|}$.
-Let $S_p\:\T_pW_{a,b}\zz\to \T_pW_{a,b}$ be the corresponding shape operator, so $S_p\:v\mapsto\nabla_vn$.
-Since $f$ is strongly convex, we have that 
-\[\langle S_p(v),v\rangle\ge \delta\cdot|v|^2\]
-for a fixed value $\delta>0$ and any tangent vector $v\in \T_pW_{a,b}$. 
-
-Note that the restriction of $u=h|_{W_{a,b}}$ is strongly convex.
-Moreover 
-\[\Hess_pu(v,v)\ge (1-\eps)\cdot \langle S_p(v),v\rangle\eqlbl{Hess=<shape}\]
-for any $p\in W_{a,b}$ and $v\in\T_pW_{a,b}$.
-
-Indeed, consider the geodesic $\gamma$ in $W_{a,b}$ such $\gamma(0)=p$ and $\gamma'(0)=v$.
-Set $a=\gamma''(t)$.
-Note that 
-\begin{align*}
-a&=-\langle S_p(v),v\rangle \cdot n,
-\intertext{Since $h$ is is strongly convex, $\Hess_p h\ge 0$; therefore}
-(\Hess_pu)(v,v)&=(\Hess_p h)(v,v)+\langle \nabla_p h,a\rangle\ge
-\\
-&\ge-\tfrac{\langle\nabla_p h,\nabla_p f\rangle}{|\nabla_p f|}\cdot\langle S_p(v),v\rangle\ge
-\\
-&\ge (1-\eps)\cdot|\nabla_p f|\cdot\langle S_p(v),v\rangle.
-\end{align*}
-Since $\nabla f\ge 1$, \ref{Hess=<shape} follows.
-
-Since $\langle S_p(v),v\rangle\ge 0$ and $\eps<\tfrac12$, the inequality \ref{Hess=<shape} implies that 
-\[4\cdot \det(\Hess_pu)\ge G(p)
-\eqlbl{eq:det>=G}\]
-and
-\[-2\cdot \Delta u\ge H(p)
-\eqlbl{eq:trace>=H}\]
-for any $p\in W_{a,b}$.
-
-Denote by  $\lambda_1(p),\lambda_2(p)$ the eigenvalues of  $\Hess_p u$, so
-\begin{align*}
-\trace(\Hess u)&=\Delta u=\lambda_1+\lambda_2,
-\\
-|\Hess u|^2&=\lambda_1^2+\lambda_2^2,
-\\
-\det(\Hess u)&=\lambda_1\cdot\lambda_2.
-\end{align*}
-Therefore 
-\[2\cdot\det(\Hess u)
-=|\Delta u|^2
--|\Hess u|^2.\] 
-
-Since $W_{a,b}$ is two-dimensional, by Proposition~\ref{prop:bochner-dirichle} we get that
-\[\int\limits_{W_{a,b}} 
-2\cdot\det(\Hess u)
-=\int\limits_{W_{a,b}} 
-K\cdot|\nabla u|^2
-+
-\int\limits_{\partial W_{a,b}}
-\kappa\cdot|\nabla u|^2,\]
-where $\kappa\ge 0$ is the geodesic curvature of $\partial W_{a,b}$
-and $K$ is the curvature of $W_{a,b}$.
-
-Since $u$ is convex and vanish on the boundary of $W_{a,b}$,
-it has unique critical point, which is its minimum.
-By Morse lemma,  $W_{a,b}$ is a disc.
-Therefore, by Gauss--Bonnet formula, we get that
-\[\int_{W_{a,b}} K+\int_{\partial{W_{a,b}}}\kappa=2\cdot\pi.\]
-Whence 
-\[\int\limits_{W_{a,b}} 
-\det(\Hess u)
-\le\pi\cdot\sup_{p\in{W_{a,b}}}|\nabla_p u|^2.\]
-
-Note that $\nabla_p u$ is projection of $\nabla_ph$ to $\T_pW_{a,b}$.
-Therefore
-\begin{align*}
-|\nabla_p u|^2&=|\nabla_p h|^2-\langle\nabla_p h,n\rangle^2\le
-\\
-&\le1-(1-\eps)^2<
-\\
-&<2\cdot\eps.
-\end{align*}
-It follows that 
-\[\int\limits_{W_{a,b}} 
-\det(\Hess u)
-\le2\cdot \pi\cdot\eps.\]
-Applying \ref{eq:det>=G}, we obtain \ref{intG<100eps}.
-
-Similarly,  by the divergence theorem, we get that
-\[-\int\limits_{W_{a,b}} \Delta u=\int\limits_{\partial{W_{a,b}}} |\nabla u|.\]
-Whence \ref{eq:trace>=H} implies 
-\[\int\limits_{W_{a,b}} H\le 10\cdot \sqrt{\eps}\cdot \length(\partial{W_{a,b}}).\]
-\qeds
 
  
  
@@ -398,7 +273,7 @@ Together with $(*)$ this gives
 Any test sequence roughly $C^1$-converges.
 \end{thm}
 It is sufficient to show  that functions
-$\widetilde{\dist}_{p_n,r}(t) =\oint_{B_r(p_n)} \dist_{s}(t)d\vol(s)$
+$\widetilde{\dist}_{p_n,r}(t) =\oint_{B(p_n,r)} \dist_{s}(t)\cdot\vol(s)$
 roughly $C^1$-converge to $\widetilde{\dist}_{p_0,r}(t)$.
 
 Fix some convergent directions $\xi_n\to\xi_0$ and
@@ -452,7 +327,7 @@ iff $\nabla f_n$ converges.
 \begin{thm}{Claim}\label{lem:scalprod}
 Let vector fields $v_n, w_n$ converge, then for every compact
 set $K\subset A$ there is a constant $c>0$ so that
-$\<v_n, w_n\>$ $c\de$-converges on $A^\de\cap K$.
+$\<v_n, w_n\>$ $\delta$-converges on $A^\de\cap K$.
 \end{thm}
 
 \parit{Proof}
@@ -469,12 +344,12 @@ uniformly bounded, converging
  and $m$-sets of vectors
 $v_n^1,\dots, v_n^m$ be uniformly linearly independent,
 i.e. $\det(\<v_n^i, v_n^j\>)>c_0$
-for some constant $c_0$.
+for some constant $c_0>0$.
 Then for coefficient of decomposition
 of $v_n=\alpha_n^1 v_n^1+\dots+\alpha_n^m v_n^m$
  and for every compact
 set $K\subset A$ there is a constant $c>0$ so that
-$\alpha_n^i$ $c\de$-converges on $A^\de\cap K$.
+$\alpha_n^i$ $\delta$-converges on $A^\de\cap K$.
 \end{thm}
 
 \section{DC calculus.}\label{sec:DC}
@@ -487,7 +362,7 @@ We define DC-functions, their relatives, and related convergences.
 
 Let $\Omega$ be an open bounded domain in $\RR^m$
 and $S_\Omega\subset\Omega\subset\R^m $ subset of
-zero $(m-1)$-Hausdorff measure; that is, $h_{m-1}(S_\Omega)=0$.
+zero $(m-1)$-Hausdorff measure; that is, $\haus_{m-1}(S_\Omega)=0$.
 %The set $S$  will be referred as a subset of {\it singularities}.
 
 We denote by  $\op{DC_0}(\Omega,S_\Omega)$ a class of
@@ -628,32 +503,32 @@ Then $$(A(f^1_n,\dots,f^k_n), A(f^1,\dots,f^k))\in\op{BV_0^{seq}(C_0^{seq})}(\Om
  \begin{thm}{Proposition}\label{NiceFunctions}
  Let   
 	$M_n\in\M_{\ge -1}^n$,
-	$M_n\GHto A$ , $ x\in A^0$, $M_n\ni x_n\to x$
+	$M_n\GHto A$ , $ x\in A^\circ$, $M_n\ni x_n\to x$
 	and $U\ni x$
 	be a good domain for this convergence.
  For any
-  $v\in T_xA$,
+  $v\in \T_xA$,
  $\varepsilon>0$
  there is  $r>0$
  and a
   sequence of smooth strictly concave functions
- $f_n: B_r(x_n)\to \R$, roughly $C^1$-convergent to a function 
- $ f:B_r(x)\to\R$,
+ $f_n: B(x_n,r)\to \R$, roughly $C^1$-convergent to a function 
+ $ f:B(x,r)\to\R$,
 such that $d_xf$  is arbitrary close to $ <v,\cdot>$.
  \end{thm}
   
  
 \section{DC-coordinates for Alexandrov space}
 
-\subsection{Existense of Nice common chart}\label{NiceChartProof}
+\subsection{Existense of nice common chart}\label{NiceChartProof}
 Here should be the proof of 
 Proposition~\ref{Prop:chart}.
 \subsection{Metric tensor  in coordinates}\label{sec:metr-con}
 
-\begin{thm}{Theorem (Metric tensor in Nice common chart)}\label{metricBV}
+\begin{thm}{Theorem (Metric tensor in nice common chart)}\label{metricBV}
 Let
 $\mathfrak X_n:U_n\to\Omega$,
-$\mathfrak X:U\to\Omega$ be a Nice common chart.
+$\mathfrak X:U\to\Omega$ be a nice common chart.
 Denote by $g_{ij,n}$ coordinates of metric tensor in this chart
 and by $g^{ij}_n$ coordinates of the inverse matrix. 
 Then
@@ -686,14 +561,12 @@ differentiable for $n=0,1,2\dots$.
  
  
 \begin{thm}{Lemma}\label{DC+}
-	Let
+Let
 $(h_n, h_0)\in DC_+^{seq}(\Omega)$
 and $h_n$ be
 differentiable at
 $x_n$ for $n=0,1,2\dots$.
 Then $d_{x_n}h_n\to d_{x_0}h_0$. 
-
-
 \end{thm}
 
 {\it Proof of the Theorem~\ref{metricBV} }
@@ -748,67 +621,4 @@ $q_n\in\X(V_{p_i^n})$ and $q\in \X(V_{p_i})$.
 
 
 
-\begin{thebibliography}{52}
 
-\bibitem[AKP]{AKP} Alexander, S.; Kapovitch, V.; Petrunin A.
-An optimal lower curvature bound for convex hypersurfaces in Riemannian manifolds.
-
-
-\bibitem[AZ]{AZ}Aleksandrov, A.D. and Zalgaller, V.A. [1962]: Two-dimensional manifolds of bounded curvature.
-Tr. Mat. Inst. Steklova 63. English transl.: Intrinsic geometry of surfaces. Trans!. Math. Monographs
-15, Am. Math. Soc. (1967), Zb1.l22,170
-
-
-\bibitem[BN]{BN}Berestovskij, V.N.; Nikolaev, I.G.
-Multidimensional generalized Riemannian spaces. (English. Russian original)
-Geometry. IV. Non-regular Riemannian geometry. Encycl. Math. Sci. 70, 168-243 (1993); translation from Itogi Nauki Tekh., Ser. Sovrem. Probl. Mat., Fundam. Napravleniya 70, 190-272 (1992).
-
-
-\bibitem[BGP]{BGP} Burago, Yu.; Gromov, M.; Perelman, G., \textit{A. D. Aleksandrov spaces
-with curvatures bounded below.} (Russian)  Uspekhi Mat. Nauk  47  (1992),  no.
-2(284), 3--51, 222;   translation in  Russian Math. Surveys  47  (1992),  no. 2, 1--58
-\bibitem[Federer]{federer}
-Federer, Herbert (1969), \textit{Geometric measure theory}, series Die Grundlehren der mathematischen Wissenschaften, Band 153, New York: Springer-Verlag New York Inc., pp. xiv+676, ISBN 978-3-540-60656-7, MR 0257325
-
-\bibitem[G]{G}
-Nicola Gigli,
-Riemann curvature tensor on RCD spaces and possible applications https://arxiv.org/pdf/1902.02282.pdf
-
-\bibitem[G1]{G1}
-Nicola Gigli,
-Non-smooth differential geometry, to appear on Mem. Amer. Math. Soc..
-Preprint, arXiv:1407.0809, 2014.
-
-\bibitem[GMS]{GMS}
-Nicola Gigli ? Andrea Mondino ? Giuseppe Savar´e ?
-Convergence of pointed non-compact metric measure spaces
-and stability of Ricci curvature bounds and heat flows
-
-
-
-\bibitem[H]{H} Bang-Xian Han, 
-Ricci tensor on $RCD^*(K, N)$ spaces.
-
-\bibitem[Kap]{KapStab} Kapovitch, Vitali Perelman's stability theorem. Surveys in differential geometry. Vol. XI, 103–136, Surv. Differ. Geom., 11, Int. Press, Somerville, MA, 2007.
-
-\bibitem[LawMich]{lawson-michelsohn}Lawson, H. and Michelsohn, M.
-\textit{Spin geometry}
-
-\bibitem[L] {L} John Lott,\textit{
-Ricci measure for some singular Riemannian metrics}
-Math. Ann. (2016) 365:449-471.
-
-\bibitem[OS] {OS}   Otsu, Y.,  Shioya, T. (1994)
-The Riemannian structure of Alexandrov spaces. Journal of Differential Geometry, 39(3), 629-658
-
-\bibitem[Per91]{PerStab} G. Perelman. \textit{Alexandrov spaces with curvatures bounded from below II. preprint}, (1991).
-
-\bibitem[PerDC]{PerDC} G. Perelman. \textit{DC structure on Alexandrov space}
-
-\bibitem[Pet-QG]{petrunin-QG} Petrunin, A., \textit{Applications of quasigeodesics
-and gradient curves.}
-
-\bibitem[Pet-SC]{petrunin-SC} Petrunin, A., \textit{An upper bound for curvature integral.} April 2009St Petersburg Mathematical Journal 20(2):255-265
-\bibitem[Pet-Conc]{petrunin-conc} Petrunin, A., \textit{Semiconcave functions in Alexandrovs geometry}
-
-\end{thebibliography}

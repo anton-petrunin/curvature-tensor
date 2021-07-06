@@ -3,7 +3,7 @@
   
 
 
-\subsection{Formulation}
+\section{Formulation}
   
 \begin{thm}{Main theorem}\label{main}
 Let $M_n\smooths{} A$ be a smoothing of Alexandrov space $A$.
@@ -11,9 +11,42 @@ Then $\mathfrak{q}_n\rightharpoonup \mathfrak{q}$, where $\mathfrak{q}_n$ denote
 and $\mathfrak{q}$ is some for some measure-valued tensor on $A$.
 \end{thm}
 
+\section{Plan of the proof}
+
+Let $M$ be an $m$-dimensional Riemannian manifold
+Set
+\[K_{max}(x)=\sup |K_\sigma|\]
+where $\sigma$ runs along all sectional directions at $x\in M$.
+The following statement is a direct corollary of the main result in \cite{petrunin-SC}:
+
+\begin{thm}{Corollary}\label{cor:Kmax}
+Let $M$ be an $m$-dimensional Riemannian manifold with sectional curvature bounded below by $-1$.
+Then there a constant $\const(m)$ such that
+$$\int_{B(p,r)_M} K_{max}\le \const(m)\cdot r^{m-2}.$$
+for any $r<1$.
+\end{thm}
+
+Observe that there is a constant $\const(m)$ such that 
+\[
+\begin{aligned}
+|q_n(\nabla f_1,&\dots,\nabla f_{m-2},\nabla g_1,\dots,\nabla g_{m-2})|
+\\
+&\le 
+\const(m)\cdot K_{max}\cdot|\nabla f_1\wedge\dots\wedge\nabla f_{m-2}|\cdot |\nabla g_1\wedge\dots\wedge\nabla g_{m-2}|
+\end{aligned}
+\eqlbl{q=<K}
+\]
+Therefore \ref{cor:Kmax} and \ref{q=<K} imply the following:
+
+\begin{thm}{Claim}\label{clm:weak-partial-limit}
+Given a smoothing $M_n\smooths{} A$ and a sequence of test function $f_{i,n},g_{i,n}\:M_n\to \RR$ such that 
+$f_{i,n}\testto f_i\:A\to \RR$ and $g_{i,n}\testto g_i\:A\to \RR$ the sequence of measures 
+$\mathfrak{q}_n(f_{1,n},\dots f_{m-2,n},g_{1,n},\dots, g_{m-2,n})$ has a weakly converging subsequence.
+\end{thm}
+
 By Perelman's stability theorem $A$ is a topological manifold.
 In particular, $A$ has no boundary.
-Therefore the theorem follows from the following more exact formulation.
+Together with Claim~\ref{clm:weak-partial-limit} it implies that the theorem follows from the following more exact formulation.
 
 \begin{thm}{Proposition}\label{prop:3parts}
 Let $M_n$ be a sequence of $3$-dimensional Riemannian manifolds such that $M_n\zz\to A$ without collapsing.
@@ -24,16 +57,14 @@ Then the following statements hold:
 \item\label{prop:3parts:codim3} Measures $\mu_1$ and $\mu_2$ vanish on $A''$; that is, 
 \[\mu_i|_{A''}=0\]
 for $i=1,2$.
+
 \item\label{prop:3parts:codim2} Measures $\mu_1$ and $\mu_2$ satisfy the following equation:
 \[\mu_i|_{A'}=\omega\cdot |dh(u)|^2\]
 for $i=1,2$.
 where $u=u(p)$ is a choice of vertical unit vectors at any point $p\in A'$;
-\item For any $\delta>0$, measures $\mu_1$ and $\mu_2$ approximately coinside on $A^\delta$;
-namely, for any bounded set $\Omega\subset A$ there is a constant $\const$ such that 
-\[(\mu_1-\mu_2)(\Omega\cap A^\delta)\le \const\cdot \delta.\]
-In particular, we have
-\[\mu_1|_{A^\circ}=\mu_2|_{A^\circ}.\]
+
+\item\label{prop:3parts:reg} $\mu_1|_{A^\circ}=\mu_2|_{A^\circ}$.
 \end{enumerate}
 \end{thm}
 
-Each part of the proposition will be proved separately.
+The three parts of the proposition will be proved in sections \ref{sec:codmi=3}, \ref{sec:codmi=2}, and \ref{sec:ref} respectively.

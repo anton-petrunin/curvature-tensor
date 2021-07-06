@@ -1,45 +1,48 @@
+\subsection{Proof of \ref{prop:3parts}(\ref{prop:3parts:codim3})}
+
+Suppose $M$ is 3-dimensional.
 According to \cite{li-naber}, $A'$ is countably 1-rectifiable and $A''$ is a countable set. 
 
 Consider the measure $\omega$ on $A'$ defined by
-\[\omega=(2\cdot\pi-\theta)\cdot \mathcal{H}_1,\eqlbl{eq:omega}\]
-where $\mathcal{H}_\alpha$ denotes $\alpha$-dimensional Hausdorff measure.
+\[\omega=(2\cdot\pi-\theta)\cdot \haus_1,\eqlbl{eq:omega}\]
+where $\haus_\alpha$ denotes $\alpha$-dimensional Hausdorff measure.
 Let us extend $\omega$ to the whole space by setting $\omega(S)=\omega(S\cap A')$ for any Borel set $S\subset A$.
 
 The function $\theta$ can be extended to the whole $A$ by setting
 \[\theta(p)=2\cdot\pi\cdot \tfrac{\area \Sigma_p}{\area \mathbb{S}^2}\] for any $p\in A'$.
 According to \cite[7.14]{BGP}, $\theta\:A\to \RR$ is upper-semicontinuous.
 The right-hand side of the last equality vanish in $A^\circ$.
-Further since $\mathcal{H}_1(A'')=0$, the measure $\omega$ could be also defined as a measure on whole $A$ that is defined by \ref{eq:omega}.
+Further since $\haus_1(A'')\zz=0$, the measure $\omega$ could be also defined as a measure on whole $A$ that is defined by \ref{eq:omega}.
 
 \parit{Proof of part \ref{prop:3parts:codim2} in Proposition~\ref{prop:3parts}.}
-Let us split $\mu$ into negative and positive part $\mu=\mu^+-\mu^-$:
+Let us split $\mu$ into negative and positive part $\mu=\mu^+-\mu^-$; that is,
 \[\mu^\pm(X)\df\sup\set{\pm\mu(Y)}{Y\subset X}.\]
 Since the sectional curvature of $M_n$ is bounded below, we get that $\mu^-$ has bounded density; in other words $\mu^-$ is regular measure on $A$.
 Since $A'$ has vanishing volume, we get $\mu^-(A')=0$.
 
 Set $\nu=\mu|_{A'}$; from above we have $\nu\ge 0$.
-By \cite{petrunin-SC}, $\nu$ is a regular with respect to $\mathcal{H}_1$ on $A'$.
+By \cite{petrunin-SC}, $\nu$ is a regular with respect to $\haus_1$ on $A'$.
 Therefore it is sufficient to show that 
 \[|d_ph(u)|^2\cdot (2\pi-\theta)\]
-is the $\mathcal{H}_1$-density of $\nu$
-at $\mathcal{H}_1$-almost all $p\in A'$.
+is the $\haus_1$-density of $\nu$
+at $\haus_1$-almost all $p\in A'$.
 
 Since $A'$ is countably 1-rectifiable \cite{li-naber}, we can cover it by a countable number of images of Lipschitz maps $s_i\:\mathbb{I}_i\to A$, where $\mathbb{I}_i$ is a real interval for each $i$.
-Since $s_i$ and $h\circ s_i$ are Lipschits for any $i$, for $\mathcal{H}_1$-almost all $p\in A'$ we can choose $s_i$ such that $p\in s_i(x)$ for some $x\in \mathbb{I}_i$.
+Since $s_i$ and $h\circ s_i$ are Lipschitz for any $i$, for $\haus_1$-almost all $p\in A'$ we can choose $s_i$ such that $p\in s_i(x)$ for some $x\in \mathbb{I}_i$.
 By Rademacher's theorem we can assume that $s_i$ and $h\circ s_i$ are differentiable at $x$.
-Moreover we can assume that $d_xs_i=\lambda\cdot u$ for some $\lambda\ne 0$ and the $\mathcal{H}_1$-density of $\nu$ at $p$ is defined.
+Moreover we can assume that $d_xs_i=\lambda\cdot u$ for some $\lambda\ne 0$ and the $\haus_1$-density of $\nu$ at $p$ is defined.
 
 Shifting and scaling the interval $\mathbb{I}_i$, we may assume that $x=0$ and $\lambda=1$.
 In this case $|d_ph(u)|=|d_0(h\circ s_i)|$.
 
-Note that we can choose a sequence of points $p_n\in M_n$ and a sequence of factors $c_n\to \infty$ such that $(c_n\cdot M_n,p_n)$ converges to to the tangent space~$\T_p$.
+Note that we can choose a sequence of points $p_n\in M_n$ and a sequence of factors $c_n\to \infty$ such that $(c_n\cdot M_n,p_n)$ converges to the tangent space~$\T_p$.
 Since $p\in A'$, the space $\T_p$ is a product space $\RR\times K_p$, where $K_p$ is a 2-dimensional cone with total angle $\theta(p)$.
 
 Let $f_n\:c_n\cdot M_n\to \RR$ be as in \ref{thm:HG-converge} and $u_n=\nabla f_n/|\nabla f_n|$.
 Consider the sequence of functions $\hat h_n\:c_n\cdot M_n\to \RR$ defined by 
 \[\hat h_n(x)=c_n\cdot(h_n(x)-h_n(p_n)).\]
 Note that $\langle\nabla \hat h_n,u_n\rangle$ uniformly converges to  $|d_0(h\circ s_i)|$.
-By \ref{cor:Ricci}(\ref{cor:Ricci:vw}), the sequence of measures $q(\nabla\hat h_n, \nabla\hat h_n)$ on $c_n\cdot M_n\to \RR$ weakly converges to $\mathcal{H}_1\otimes\kappa $ on $\T_p\zz=\RR\times K_p$, 
+By \ref{cor:Ricci}(\ref{cor:Ricci:vw}), the sequence of measures $q(\nabla\hat h_n, \nabla\hat h_n)$ on $c_n\cdot M_n\to \RR$ weakly converges to $\haus_1\otimes\kappa $ on $\T_p\zz=\RR\times K_p$, 
 where $\kappa$ is the curvature measure of $K_p$; 
 the measure $\kappa$ is supported at the tip $o$ of $K_p$
 and $\kappa\{o\}=2\cdot \pi-\theta(p)$.
@@ -48,5 +51,5 @@ Observe that
 \[q(\nabla\hat h_n, \nabla\hat h_n)[B(p_n,1)_{c_n\cdot M_n}]
 =
 c_n\cdot q(\nabla h_n, \nabla h_n)[B(p_n,\tfrac1{c_n})_{M_n}]\]
-Whence $2\cdot \pi-\theta(p)$ is the $\mathcal{H}_1$-density of $\nu$ at $p$ as required.
+Whence $2\cdot \pi-\theta(p)$ is the $\haus_1$-density of $\nu$ at $p$ as required.
 \qeds

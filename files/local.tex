@@ -1,0 +1,154 @@
+\section{Local version of the main theorem}\label{sec:local}
+
+\subsection{Locally defined Alexandrov space structure}
+
+\begin{rdef}{Definition}
+Let $A$ be a metric space. 
+We say that an open  $U\subset A$
+is a \emph{strongly inner domain} if
+for some 
+$R>0$ we have
+$U\subset B(x,R)$
+and $\overline{B}(x_n,10R)$ is compact.
+
+\end{rdef}
+
+\begin{rdef}{Definition}
+We say that
+ a locally compact inner metric space $A$
+is an \emph{ Alexandrov region}
+any point has a neighborhood where Alexandrov
+comparison for curvature $\ge -1$ holds.
+We say that $U\subset A$
+is an \emph{ Alexandrov domain}
+ if $U$ is 
+ a strongly inner domain.
+
+\end{rdef}
+
+It is possible to show  that 
+Toponogov comparison holds for sets with local structure of Alexandrov space and most of arguments and constructions for Alexandorov spaces could be applied to Alexandrov domain.
+In particular we need main result from
+ \cite{petrunin-SC}, where complete manifold can be replaced by 
+strongly inner domain in a possibly open manifold. 
+ 
+ 
+ 
+ Next we describe smoothing for Alexandrov domains.
+ We denote by
+$\M_{\ge -1}^m$ a class of $m$-dimensional Riemannian 
+manifolds without boundary, but possibly non-complete, with sectional curvature bounded
+from below by $-1$.
+
+\begin{rdef}{Definition}
+Let sequence
+$M_n\in\M_{\ge -1}^m$ (with corresponding intrinsic metric)
+converges in Gromov--Hausdorff sense to some metric space $A$.
+We say that an open $U\subset A$ is \emph{good} with respect to this convergence
+ if
+$\dim U=m$ and for some 
+$R>0$, $M_n\ni x_n\to x\in A$ we have
+$U\subset B(x,R)$
+and ${B(x_n,R)}$ is a strongly inner domain in
+$ M_n$
+. 
+\end{rdef}
+ Let note that in this case $B(x,10R)$ is Alexandrov region
+ and $U$ is an Alexandrov domain.
+ 
+ We will say that open $U_n\subset M_n$
+approximates good subset $U$ and write $U_n\to U$
+if $U_n\GHto U$ and for any $p\in U$ there is $M_n\ni p_n\to p$
+and $r>0$ such that $B(p_n,r)\subset U_n$.
+ 
+ \subsection{Rough $C^1$ structure }\label{sec:rC}
+ 
+ 
+Let $f$ be a continuous semiconcave function defined on an open subset of Alexandrov space $A$.
+Given $p\in \Dom f$, set 
+\begin{align*}
+\mathfrak{a}_f(p)&=\limsup_{x\to p}\frac{f(x)-f(p)}{|x-p|},
+&
+\mathfrak{b}_f(p)&=\limsup_{x\to p}\frac{f(p)-f(x)}{|p-x|}.
+\end{align*}
+Note that $\mathfrak{a}_f(p)=|\nabla_pf|$.
+
+
+
+Recall that a function $f$ defined on Alexandrov space is called differentable at $p\in \Dom f$ if its differential at $p$ is a linear function;
+that is, $d_pf\:\T_p\to\RR$ is concave and convex at the same time.
+
+\begin{thm}{Claim} Let $f$ be a continuous semiconcave function defined on an open subset of Alexandrov space $A$.
+Then  $f$ is differentiable at $p\in\Dom f$ if and only if $\mathfrak{a}_f(p)=\mathfrak{b}_f(p)$.
+\end{thm}
+
+
+
+
+
+\begin{thm}{Definition}
+We say that a continuous semiconcave function $f$  defined
+on an open subset $U$ of an Alexandrov space $A$
+is \emph { roughly smooth}
+and write $f\in rC^1(U)$
+if 
+for any compact $K\subset A$ there
+is a constant $c(K)>0$, such that
+$|\mathfrak{a}_f(p)-\mathfrak{b}_f(p)|< c(K)   $
+for $p\in A^\delta\cap K$.
+\end{thm}
+
+\begin{thm}{Proposition}\label{prop:ab}
+Let $A_n\to A$ be a convergence of Alexandrov spaces with uniform lower curvature bound
+and $f_n$ be a sequence of continuous $\lambda$-concave functions defined on open domains in  $A_n$ that converges to a function $f$ defined on open domains in  $A$.
+
+Then for any sequence of points $A_n\ni p_n\to p\in A$ we have
+that 
+\[\liminf_{n\to\infty}|\nabla_{p_n}f_n|\ge \mathfrak{a}_{f}(p)\]
+and 
+\[\limsup_{n\to\infty}|\nabla_{p_n}f_n|\le \mathfrak{b}_{f}(p)\]
+
+In particular, if $f$ is differentiable at $p$, then 
+\[\lim_{n\to\infty}|\nabla_{p_n}f_n|= |\nabla_{p}f|\]
+
+
+and for   roughly smooth function $f$
+and $p\in K$ we have
+\[
+\limsup_{n\to\infty}|\nabla_{p_n}f_n|-
+\liminf_{n\to\infty}|\nabla_{p_n}f_n|
+\le c(K)\delta. \]
+ 
+
+\end{thm}
+
+
+
+
+%Let    $M_n\in\M_{\ge -1}^m$,
+% $M_n\GHto A$  and  $U\subset A$ be a good domain for this convergence.
+
+
+ 
+ 
+ 
+ \subsection{Local version of the main theorem }\label{sec:loc}
+ 
+ 
+\begin{thm}{Main theorem (local)}\label{mainloc}
+Let   
+$M_n\in\M_{\ge -1}^m$,
+$M_n\GHto A$, 
+  $U\subset A$ be a good domain for this convergence
+  and $U_n\to U$.
+  Let sequences $f_{1,n},\dots,f_{m-2,n},\\ g_{1,n},\dots,g_{m-2,n}\in C^1(U_n)$ 
+ converge to
+   $f_1,\dots, f_{m-2}, g_1,\dots, g_{m-2}\in rC^1(U)$ correspondingly.
+Then measures 
+$${q}_M(\nabla f_{1,n},\nabla f_{2,n},\dots,\nabla f_{m-2,n},
+\nabla g_{1,n},\nabla g_{2,n},\dots,\nabla g_{m-2,n})\cdot\vol_m$$ weakly converges to some
+measure on $U$.
+\end{thm}
+
+Theorem~\ref{main} could be reduced to the local version
+in view of Lemma~\ref{testrC}.

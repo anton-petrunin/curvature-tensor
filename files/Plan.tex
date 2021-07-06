@@ -1,388 +1,47 @@
-\section{Regular points}
+\section{Regular points}\label{sec:ref}
 
-\subsection{Partition into three subsets}
- Let   
-$M_n\in\M_{\ge -1}^m$,
-$M_n\GHto A$ 
-and  $U\subset A$ is a good domain for this convergence.
-Because of the symmetry 
- of curvature tensor it is sufficient
-to  prove  the weak convergence 
-of measures 
-$\mathfrak{q}_{M_n}(f_{1,n},\dots,f_{m-2,n},f_{1,n},\dots,f_{m-2,n})$
-with densities
-$$\omega_n
-=
-{q}_{M_n}(f_{1,n},\dots,f_{m-2,n},f_{1,n},\dots,f_{m-2,n})
-\:M_n\to\RR$$
-for any collection of  sequences
-$f_{i,n}\in C^1(M_n)$,  $i\in\{1,2,\dots,m-2\}$,
-such that
-$f_{i,n}\ccto f_i  \in rC^1(A) $. Let us fix such a collection
-and keep the notation $\omega_n$ for densities above.
-Recall that
-$${q}_{M_n}(f_{1,n},\dots,f_{m-2,n},f_{1,n},\dots,f_{m-2,n})(x)=
-|\nabla f_{1,n}(x)\wedge\dots \wedge\nabla f_{m-2,n}(x)|^2\cdot K_\sigma, $$
-where $K_\sigma $ is the sectional curvature at $x\in M_n$
-on a plane orthogonal to 
-$\nabla f_{1,n}(x)\wedge\dots \wedge\nabla f_{m-2,n}(x)$.
-Since gradients are bounded the
-Corollary~\ref{Kbound} 
-implies that
- for any point $p\in M_n$ and $r<1$,
-$$\int\limits_{B_r(p)}|\omega_n|d\vol_n\le \const\cdot r^{m-2},\eqlbl{sc-pet}$$
-i.e.  locally measures  $\omega_nd\vol_n$ are uniformly bounded.
-This boundness of measures
-is the crucial point for our proof.
-Firstly this makes possible
- passing to a subsequence of $M_n$ such that
-measures  $\omega_nd\vol_n$  weakly converge.
-Now
-let $\mathfrak{r}_1, \mathfrak{r}_2\in\mathfrak M(A)$ be two weak partial limits, we want to show that $\mathfrak{r}_1=\mathfrak{r}_2$.
-To do this
-we partition $A$ into three subsets $A^\circ$, $A'$ and $A''$ and separately prove that $\mathfrak{r}_1$ and $\mathfrak{r}_2$ coincide on each of these subsets (claims~\ref{A''}, \ref{A'} and \ref{A^0}).
-The partition is constructed as follows
+\begin{thm}{Definitions}\label{def:delta-converge}
+Consider a smoothing $M_n\smooths{} A$.
+
+A sequence of measures $\nu_n$ defined on $M_n$ is called \emph{weakly $\delta$-converging}
+if the following conditions hold:
 \begin{enumerate}
-\item $A^\circ=\set{x\in A}{\T_x\ \text{is isometric to}\  \RR^m}$ --- the set of regular points.
-\item $A'=\set{x\in A\backslash A^{\circ}}{\T_x\ \text{is isometric to}\  \RR^{m-2}\times \Cone^2}$ the set of singular points of codimension two.
-\item $A''$ --- the rest, i.e. $A''=A\backslash (A^{\circ}\cup A')$ the set of singular points of codimension three and larger.
+ \item Every subsequence of $\nu_n$ has a weak partial limit.
+ \item For any two weak partial limits $\mu_1$ and $\mu_2$ of $\nu_n$ and any bounded set $\Omega\subset A$ there is a constant $\const$ such that 
+\[|(\mu_1-\mu_2)(S)|\le \const\cdot \delta\]
+for any Borel set $S\subset \Omega\cap A^\delta$.
 \end{enumerate}
 
+A sequence of functions $f_n$ defined on $M_n$ is called \emph{uniformly $\delta$-converging}
+if the following conditions hold:
+\begin{enumerate}
+ \item Every subsequence of $f_n$ has a partial uniform limit.
+ \item For any two uniform partial limits $h_1$ and $h_2$ of $f_n$ and any bounded set $\Omega\subset A$ there is a constant $\const$ such that 
+\[|h_1(x)-h_2(x)|\le\const\cdot \delta\]
+for any $x\in \Omega\cap A^\delta$.
+\end{enumerate}
 
- Proofs for $A'$ and $A''$ (for exact formulation see \ref{A''}, \ref{A'})
- are self-contained and don't differ  for different dimensions.
-  For the set  $A^\circ$  we use a sort of induction (for plan see \ref{sec:A0} ).
-  
-  Passing to partial limits
- $\mathfrak{r}_1$, $\mathfrak{r}_2$
-is convenient for formulations and on the last step of the proof. In the proof we don't pass to
-convergent subsequences, but verify weak convergence of
-measures directly.
-While there is still
-the point (in the proof of Lemma~\ref{A^0}) where we strongly rely on uniform boundness 
-of measures: we prove convergence of integrals 
-not for all continuous functions as a test functions, but
-only for
-smooth functions, i.e. we prove convergence in the sense 
-of distributions. Then we  obtain weak
-convergence  provided by the uniform boundedness of measures.   
-
-
-
-
-\subsection{The set $A''$ of  singularities of higher codimension }
-According to \cite[10.6]{BGP}, the $(m-2)$-hausdorff measure of $A''$ vanishes.
-Thus, from \ref{sc-pet}, we get
-
-\begin{thm}{Claim}\label{A''}
-$\mathfrak{r}_1|_{A''}\equiv\mathfrak{r}_2|_{A''}\equiv0$.
 \end{thm}
 
-\subsection{The set $A'$ of codimension 2 singularities  }
-Consider function $\omega\:A\to\RR$ defined as
-$$\omega(p)=2\cdot\pi\cdot\l(1-\frac{\vol\Sigma_p}{\vol\SS^{m-1}}\r).$$
-%Clearly $\omega|_{A^\circ}\equiv0$, further 
-According to \cite[7.14]{BGP}, the
-function $\omega\:A\to\RR$ is lower-semicontinuous.
-If $p\in A'$, i.e. $\T_p=\RR^{m-2}\times \Cone^2_p$, then the total angle of $\Cone^2_x$ is equal to $2\pi-\omega(x)$.
+Observe that if $f_n$ is uniformly $\delta$-converging and $\nu_n$ is weakly $\delta$-converging,
+then $f_n\cdot \nu_n$ is weakly $\delta$-converging.
 
-Remind that we have a  collection of 
-sequences $f_1^n,f_2^n,\dots,f_{m-2}^n$,  $C^1$-converging in Alexandrov sense.
-For $x\in A''$ the tangent cone splits as
-$\T_xA=\RR^{m-2}\times \Cone$.  
-$C^1$-convergence implies in particular 
-that 
-in some sense there exists  a "limit projection" of $\nabla f_i^n$ onto $\RR^{m-2}$-factor for all $i\in \{1, 2, \dots, m-2\}$
-(for exact statement see ??). We denote these projections by
-$(\nabla f_i)^\bot(x)\in\RR^{m-2}\times \{O\}\subset T_xA$
-and define $\theta_x(f_1,f_2,\dots,f_{m-2})=
-|(\nabla f_1)^\bot \wedge (\nabla f_2)^\bot\wedge\dots
-  \wedge (\nabla f_{m-2})^\bot|^2$. 
-
-We denote by $h_\alpha$ the $\alpha$-dimensional Hausdorff measure. Measures
-$\mathfrak{r}_1$ and
-$\mathfrak{r}_2$ are
- absolutely continuous with respect to
- $h_{m-2}$ (this follows from \ref{sc-pet}).
-Moreover,
-densities of
- $\mathfrak{r}_1$ and
-$\mathfrak{r}_2$
-coincide on $A'$ and equal 
-$ \omega(x)\cdot\theta_x(f_1,f_2,\dots,f_{m-2})$:
-\begin{thm}{Claim}\label{A'}
- 
-For any subset $X\subset A'$
- 
- $$\int_Xd\mathfrak{r}_1=\int_Xd\mathfrak{r}_2=\int_X
-\omega(x)\cdot\theta_x(f_1,f_2,\dots,f_{m-2}) d h_{m-2} $$
- 
-  
- %$\mathfrak{r}_1|_{A'}=\mathfrak{r}_2|_{A'}=\omega(x)\cdot\theta_x(f_1,f_2,\dots,f_{m-2})\cdot h_{m-2}|_{A'}$.
-\end{thm}
-
-Firstly we prove this claim in the particular case, when
-the limit Alexandrov space is a cone of the form $A=\Cone\times\RR^{m-2}$. Then for general $A$ we blow up the 
-neighborhood of  $x\in A'$ and apply result for a cone.
-
-\subsection{The set $A^\circ$  of regular points }\label{sec:A0}
-This part of the proof is the most technical.
-We recall that the set of regular points can be presented as
-$$A^{\circ}=\bigcap_{\delta>0} A^\delta,$$
-where $A^\delta$ denotes the set of $\delta$-strained points of $A$.
-Then to show that
-$\mathfrak{r}_1|_{A^o}\equiv\mathfrak{r}_2|_{A^o}$
-it is enough to show the following
+Since 
+\[A^\circ=\bigcap_{\delta>0}A^\delta,\]
+part \ref{prop:3parts:reg} of \ref{prop:3parts} follows from the next lemma.
 
 \begin{thm}{Lemma}\label{A^0}
-Let $\nu=|\mathfrak{r}_1-\mathfrak{r}_2|$.
-Then for any $x\in A^\circ$, there is a neighbourhood $U_x\ni x$ such that
-$$\nu({A^\delta\cap U_x})\le \const\cdot\delta$$
-for some fixed $\const\in\RR$, independent of $\delta$.
+Let $M_n\smooths{} A$ and $\lambda,L\in\RR$.
+Suppose $h_n\:M_n\to\RR$ be a sequence of $\lambda$-concave $L$-Lipscitz smooth functions that converges to a function $h\:A\to R$.
+Then the sequence of measures $q_{M_n}(\nabla h_n,\nabla h_n)$ is \emph{$\delta$-converging}.
 \end{thm}
 
+The 3-dimensional case is the main part of its the proof.
+First, we introduce nice chart --- a common parametrisation of the limit space and approximating sequence.
+Using nice charts, we prove $\delta$-convergence of the so called \emph{strange curvature tenor}.
+Here we essentially use a Bochner-type formula that gives an expression for strange curvature \ref{thm:bochner-formula}.
+Further we show that $\delta$-convergence of strange curvature implies $\delta$-convergence of dual curvature tensor.
 
-We prove firstly Lemma~\ref{A^0} for dimension 3. In the proof
-we use the main theorem (local) for dimension 2. 
- Then we go through the proof and obtain the main theorem (local) for dimension 3.
- Then we reduce higher dimensional case of Lemma~\ref{A^0} to 
-   the main theorem (local) for dimension 3. 
-    
- 
-%Let note that the lemma asserts 
-%weak $ c\delta$-convergence 
-%of measures with densities $r_n$ on $A^\delta\cap U_x$ in the sense
-%of definition~\ref{deltaconv2},  but  in the proof we don't pass to patial limits and verify convergence for smooth function as a test function (Lemma~\ref{smoothmeasure}).
- 
- 
-
-  Now we sketch the proof of this lemma in dimension 3. 
- For the proof
- we introduce 
- a new tensor 
- for Riemannian manifold $M$ and call it
- Strange curvature:  $Str(w,w)=\Sc\cdot |w|^2-Ric(w,w)$, $w\in TM$.
- In 3-dimensional case
- Strange curvature
-  completely defines curvature tensor
-  and we reduce the proof of convergence of curvature tensor
-  on $A^\delta$ to the convergence of Strange curvature.
- For the proof of this convergence we use 
- expression for Strange curvature for Riemannian 
- manifold,
-namely
- a Bochner-type formula \ref{Bochner}.
-
-To prove convergence of
-integrals in this
- formula  we use
-special charts with common domain $\Omega$ for all the sequence and the limit space
- around a  point $x\in A^0$.
-These charts are special
-diffeomorphisms
-$\mathfrak X_n:U_n\to\Omega\subset\R^3$, $U_n\subset M_n$ and
-homeomorphism
-$\mathfrak X:U_x\to\Omega\subset\R^3$, $U_x\subset A$.
-Here we  generalize methods introduced in
-\cite{PerDC}.  In  this paper G. Perelman 
-constructed $DC$-atlas ($DC$=difference concave)
-for Alexandrov space and developed calculus for
-$DC$-functions. We adjust these for a sequence
-of manifolds converging to Alexandrov space.
-
-
-
- 
-The proof of Lemma~\ref{A^0} for higher dimensions
-relies on the main theorem (local version) for dimension 3.
-
-
-
-\subsection{Locally defined Alexadrov space structure }
-
-\begin{rdef}{Definition}
-Let $A$ be a metric space. 
-We say that an open  $U\subset A$
-is a \emph{strongly inner domain} if
-for some 
-$R>0$ we have
-$U\subset B_R(x)$
-and $\overline{B_{10R}(x_n)}$ is compact.
-
-\end{rdef}
-
-\begin{rdef}{Definition}
-We say that
- a locally compact inner metric space $A$
-is an \emph{ Alexandrov region}
-any point has a neighborhood where Alexandrov
-comparison for curvature $\ge -1$ holds.
-We say that $U\subset A$
-is an \emph{ Alexandrov domain}
- if $U$ is 
- a strongly inner domain.
-
-\end{rdef}
-
-It is possible to show  that 
-Toponogov comparison holds for sets with local structure of Alexandrov space and most of arguments and constructions for Alexandorov spaces could be applied to Alexandrov domain.
-In particular we need main result from
- \cite{petrunin-SC}, where complete manifold can be replaced by 
-strongly inner domain in a possibly open manifold. 
- 
- 
- 
- Next we describe smoothing for Alexandrov domains.
- We denote by
-$\M_{\ge -1}^m$ a class of $m$-dimensional Riemannian 
-manifolds without boundary, but possibly non-complete, with sectional curvature bounded
-from below by $-1$.
-
-\begin{rdef}{Definition}
-Let sequence
-$M_n\in\M_{\ge -1}^m$ (with corresponding intrinsic metric)
-converges in Gromov--Hausdorff sense to some metric space $A$.
-We say that an open $U\subset A$ is \emph{good} with respect to this convergence
- if
-$\dim U=m$ and for some 
-$R>0$, $M_n\ni x_n\to x\in A$ we have
-$U\subset B_R(x)$
-and ${B_{R}(x_n)}$ is a strongly inner domain in
-$ M_n$
-. 
-\end{rdef}
- Let note that in this case $B_{10R}(x)$ is Alexandrov region
- and $U$ is an Alexandrov domain.
- 
- We will say that open $U_n\subset M_n$
-approximates good subset $U$ and write $U_n\to U$
-if $U_n\GHto U$ and for any $p\in U$ there is $M_n\ni p_n\to p$
-and $r>0$ such that $B_r(p_n)\subset U_n$.
- 
- \subsection{Rough $C^1$ structure }\label{sec:rC}
- 
- 
-Let $f$ be a continuous semiconcave function defined on an open subset of Alexandrov space $A$.
-Given $p\in \Dom f$, set 
-\begin{align*}
-\mathfrak{a}_f(p)&=\limsup_{x\to p}\frac{f(x)-f(p)}{|x-p|},
-&
-\mathfrak{b}_f(p)&=\limsup_{x\to p}\frac{f(p)-f(x)}{|p-x|}.
-\end{align*}
-Note that $\mathfrak{a}_f(p)=|\nabla_pf|$.
-
-
-
-Recall that a function $f$ defined on Alexandrov space is called differentable at $p\in \Dom f$ if its differential at $p$ is a linear function;
-that is, $d_pf\:\T_p\to\RR$ is concave and convex at the same time.
-
-\begin{thm}{Claim} Let $f$ be a continuous semiconcave function defined on an open subset of Alexandrov space $A$.
-Then  $f$ is differentiable at $p\in\Dom f$ if and only if $\mathfrak{a}_f(p)=\mathfrak{b}_f(p)$.
-\end{thm}
-
-
-
-
-
-\begin{thm}{Definition}
-
-We say that a continuous semiconcave function $f$  defined
-on an open subset $U$ of an Alexandrov space $A$
-is \emph { roughly smooth}
-and write $f\in rC^1(U)$
-if 
-for any compact $K\subset A$ there
-is a constant $c(K)>0$, such that
-$|\mathfrak{a}_f(p)-\mathfrak{b}_f(p)|< c(K)   $
-for $p\in A^\delta\cap K$.
-\end{thm}
-
-\begin{thm}{Proposition}\label{prop:ab}
-Let $A_n\to A$ be a convergence of Alexandrov spaces with uniform lower curvature bound
-and $f_n$ be a sequence of continuous $\lambda$-concave functions defined on open domains in  $A_n$ that converges to a function $f$ defined on open domains in  $A$.
-
-Then for any sequence of points $A_n\ni p_n\to p\in A$ we have
-that 
-\[\liminf_{n\to\infty}|\nabla_{p_n}f_n|\ge \mathfrak{a}_{f}(p)\]
-and 
-\[\limsup_{n\to\infty}|\nabla_{p_n}f_n|\le \mathfrak{b}_{f}(p)\]
-
-In particular, if $f$ is differentiable at $p$, then 
-\[\lim_{n\to\infty}|\nabla_{p_n}f_n|= |\nabla_{p}f|\]
-
-
-and for   roughly smooth function $f$
-and $p\in K$ we have
-\[
-\limsup_{n\to\infty}|\nabla_{p_n}f_n|-
-\liminf_{n\to\infty}|\nabla_{p_n}f_n|
-\le c(K)\delta. \]
- 
-
-\end{thm}
-
-
-
-
-%Let    $M_n\in\M_{\ge -1}^m$,
-% $M_n\GHto A$  and  $U\subset A$ be a good domain for this convergence.
-
-
- 
- 
- 
- \subsection{Local version of the main Theorem }\label{sec:loc}
- 
- 
-\begin{thm}{Main theorem (local)}\label{mainloc}
-Let   
-$M_n\in\M_{\ge -1}^m$,
-$M_n\GHto A$, 
-  $U\subset A$ be a good domain for this convergence
-  and $U_n\to U$.
-  Let sequences $f_{1,n},\dots,f_{m-2,n},\\ g_{1,n},\dots,g_{m-2,n}\in C^1(U_n)$ 
- converge to
-   $f_1,\dots, f_{m-2}, g_1,\dots, g_{m-2}\in rC^1(U)$ correspondingly.
-Then measures 
-$${q}_M(\nabla f_{1,n},\nabla f_{2,n},\dots,\nabla f_{m-2,n},
-\nabla g_{1,n},\nabla g_{2,n},\dots,\nabla g_{m-2,n})d\vol_m$$ weakly converges to some
-measure on $U$.
-\end{thm}
-
-Theorem~\ref{main} could be reduced to the local version
-in view of Lemma~\ref{testrC}.
-
-
-\subsection{Measures are uniformly bounded}
-Our proof strongly relies on the following result from
-\cite{petrunin-SC}.
-\begin{thm}{Theorem}\label{scPet}
-Let $M$ be a complete Riemannian m-manifold with sectional
-curvature $ \ge -1$. Then for any $p \in M$, $r<1$
-$$\int_{B_r(p)} \Sc\le \const(m)\cdot r^{m-2},$$
-where $B_r(p)$ denotes the ball of radius $r$ centered at $p\in M$ and $\Sc$ is a scalar curvature
-of M.
-\end{thm}
-
-This result can be proved in the same way for
-strongly inner subsets in $M\in\M_{\ge -1}^m$.
-We denote by $K_{max}(x)=\sup_{\sigma\subset T_xM} |K_\sigma|$
-for any point $x\in M$.
-The straightforward consequence that we need is the following:
-
-\begin{thm}{Corollary}\label{Kbound}
-Let $M\in\M_{\ge -1}^m$ ,
-$U\subset M$ is a strongly inner domain and
- $r<\min\{\diam U, 1\}$.
- Then for any $p\in U$,
-
-$$\int_{B_r^M(p)} K_{max}\le \const(m)\cdot r^{m-2}.$$
-
-
-\end{thm}
-
-
-
-
-
-
+The proof in higher dimensions is done by induction on dimension.
+It relies on a local version of the main theorem described in Section~\ref{sec:local}.
+This version of theorem deals with a minor technical issue that the formulation of main theorem is global --- it use test functions and their convergence that changes if we pass to a smaller domain. 
