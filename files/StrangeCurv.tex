@@ -1,4 +1,4 @@
-\subsection{Convergence of strange curvature}
+\subsection{Strange curvature}
 
 Suppose $M$ is a 3-dimensional Riemannian manifold.
 \emph{Strange curvature tensor} $\Str$ on $M$ is a bilinear that is uniquely defined by
@@ -27,7 +27,7 @@ Set $u_n=\nabla f_n/|\nabla f_n|$.
 Then for sufficiently small $r_0>0$ the measures 
 $m_n=
 \Str\left(
-u_n, u_n\right) \cdot \vol_n$ are weakly $\delta$-converging in $B(x,r_0)$.
+u_n, u_n\right) \cdot \vol_n$ are weakly delta-converging in $B(x,r_0)$.
 
 \end{thm}
 
@@ -37,7 +37,7 @@ each lemma provides the convergence of an integral term in the right-hand-side o
 \begin{thm} {Lemma}\label{Int}
 In condition of Proposition~\ref{strconvergence}
 for sufficiently small $r_0>0$
-and some constant $ C>0$  the following holds the mearures $\Int_n\cdot \vol_n$ is $\delta$-converging in $B(x,r_0)$.
+and some constant $ C>0$  the following holds the mearures $\Int_n\cdot \vol_n$ is delta-converging in $B(x,r_0)$.
 \end{thm}
 
 The proof of this lemma uses 
@@ -45,93 +45,9 @@ convergence of curvature measures
 $\Int_n\cdot \vol_2$
 on  the 2-dimension level sets of concave functions $f_n$ and coarea formula.
 The factor $|\nabla f_n|$ appears in the coarea formula;
-since the sequence $|\nabla f_n|$ is only $\delta$-convergent, we get that only $\delta$-convergence of $\Int_n\cdot \vol_n$.
- 
-The following lemma is related to the convergence of the second integral in \ref{Bochner}, the proof uses
-$DC$-calculus in a nice common chart. 
+since the sequence $|\nabla f_n|$ is only delta-convergent, we get that only delta-convergence of $\Int_n\cdot \vol_n$.
 
-\begin{thm}{Lemma}\label{HnablaU}
-In condition of Proposition~\ref{strconvergence}
-let $\mathfrak X_n:U_n\to\Omega$
-and
-$\mathfrak X:U_x\to\Omega$
-be a nice common chart around $x$. 
-We fix some smooth function with compact support
-$\psi\in C^\infty_0(\Omega)$ and denote by
-$\phi_n=\psi\circ\mathfrak X_n$. Then
-
-$$
-\int\limits_{U_n} \l[H_n\cdot\<u_n,\nabla\phi_n\>- \<\nabla\phi_n,\nabla_{u_n} u_n\> \r]
-\eqlbl{Bochner}$$
-converges, where $H_n$ as in  \ref{Bochner}.
-
-\end{thm}
-
-
-\parit{Proof of \ref{HnablaU}.}
-Note that $H_n=\div u_n$.
-Let us rewrite the integral in $\Omega$:
-$$\int\limits_{\Omega}
-\Bigl(\sum_{i=1}^3u_n^i \tfrac{\partial \phi}{\partial x_i}\Bigr)
-\sum_{i=1}^3
-\Bigl(\tfrac{\partial u_n^i}{\partial x^i} +u^i_n\tfrac{\partial \log \sqrt {\det (g_{ij,n})}}{\partial x^i}\Bigr)
-\sqrt {\det (g_{ij,n})}dx^1\wedge dx^2\wedge dx^3$$
-
-Now by Proposition~\ref{Prop:chart}.\ref{metric}
-$g_{i j,n}, g^{ij}_n\in  \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)$
-and
-$\det g_{ij,n}$ are bounded away from $0$.
-We also have
-$$u_n^i=\frac{g^{ij}\frac{\partial (f\circ \X_n^{-1})}{ \partial x_j}}
-{\sqrt{g^{jk}\frac{\partial (f\circ \X_n^{-1})}{\partial x_j }\frac{\partial (f\circ \X_n^{-1})}{\partial x_k}}}.$$
-By Proposition~\ref{Prop:chart}.\ref{funktioninchart}
- $f_n\circ\X_n^{-1}\in DC_0^{seq}(\Omega, S_\Omega)$
-hence 
-${u^i_n}\in  \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)$.
-
-Then applying lemmas~\ref{thm-D}, \ref{thm-CM}, and \ref{thm-A} we get
-
-\begin{itemize}
-
-\item $\partial \log \sqrt {\det (g_{ij,n})}/\partial x^i\in \aleph_0^{seq}(\Omega,S_\Omega)$
-
-\item $\frac{\partial u_n^i}{\partial x_i}\in \aleph_0^{seq}(\Omega,S_\Omega)$
- 
-\end{itemize} 
- 
- and by above
- 
-  \begin{itemize}
-  
-  \item ${u^i_n}\in  \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)\subset\op{C_0^{seq}}(\Omega,S_\Omega,\RR)$ 
- 
- \item $g_{i j,n}\in   \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)\subset \op{C_0^{seq}}(\Omega,S_\Omega,\RR)$
- 
-  \end{itemize}
-  
-Then applying Lemma~\ref{thm-CM} we get under integral the sum of elements from $\aleph_0^{seq}(\Omega,S_\Omega)$ multiplied by $\frac{\partial \phi}{\partial x_i}$ --- smooth functions with compact support.
-This gives convergence of the integral by definition of  $\aleph_0^{seq}(\Omega,S_\Omega)$.
-              
-
-Further, for the second integral % (see claim~\ref{cl:funDC})
-we have
-\begin{align*}
-\int\limits_{M_n}&\<\nabla\psi_n,\nabla_{u_n} u_n\>\cdot\vol_n=\\
-&=\int\limits_{\Omega}  \sum_{i,j,k}u^i_n \frac{\partial \phi}{\partial x_k}
-\biggl(\frac{\partial u^k_n}{\partial x_i} +\tfrac{1}{2}u^j_n\sum_s
-\biggl(\frac{\partial g_{ js,n}}{\partial x_i}+\frac{\partial g_{si,n}}{\partial x_j}-\frac{\partial g_{i j,n}}{\partial x_s}\biggr) g^{ks}_n\biggr)\cdot 
-\\
-&\quad\cdot\sqrt{\op{det}(g_{i j,n})}\cdot dx^1\wedge dx^2\wedge dx^3.
-\end{align*}
-
-
-For the first integral,
- applying
-lemmas~\ref{thm-D}, \ref{thm-CM}, and \ref{thm-A} we get under the integral sequence from $\aleph_0^{seq}(\Omega,S_\Omega)$ multiplied by smooth function with compact support $\frac{\partial \phi}{\partial x_i}$. Then the integral converges and the lemma follows.
-\qeds
-
-
-\parit{Proof of Lemma~\ref{Int}.}
+\parit{Proof.}
 Any point  in an Alexandrov space
 has a convex neighborhood \cite{petrunin-conc} and by
 construction  it can be lifted  to a smoothing sequence.
@@ -231,15 +147,97 @@ The function $\phi/{|\nabla  f_n|}$ has support in
  $B(x,r)$
 and the sequence
   ${\phi_n}/{|\nabla  f_n|}$
-is uniformly $\delta$-converges on $A^\delta$ 
+is uniformly delta-converges on $A^\delta$ 
 (see claim~\ref{lem:scalprod}).
 Therefore for all $t$ we have $\frac{\phi_n(x)}
-{|\nabla f_n(x)|}\Int_n(x)\cdot \vol_2$ weakly $\delta$-converges in $U_{t}$ for any $t$.
-Therefore, by \ref{eq:Int-coarea}, $\Int_n\phi_n(s)\cdot \vol_3$ weakly $\delta$-converges in $B(x,r)$.
+{|\nabla f_n(x)|}\Int_n(x)\cdot \vol_2$ weakly delta-converges in $U_{t}$ for any $t$.
+Therefore, by \ref{eq:Int-coarea}, $\Int_n\phi_n(s)\cdot \vol_3$ weakly delta-converges in $B(x,r)$.
+\qeds
+
+The following lemma is related to the convergence of the second integral in \ref{Bochner}, the proof uses
+$DC$-calculus in a common chart. 
+
+\begin{thm}{Lemma}\label{HnablaU}
+In condition of Proposition~\ref{strconvergence}
+let $\mathfrak X_n:U_n\to\Omega$
+and
+$\mathfrak X:U_x\to\Omega$
+be a common chart around $x$. 
+We fix some smooth function with compact support
+$\psi\in C^\infty_0(\Omega)$ and denote by
+$\phi_n=\psi\circ\mathfrak X_n$. Then
+
+$$
+\int\limits_{U_n} \l[H_n\cdot\<u_n,\nabla\phi_n\>- \<\nabla\phi_n,\nabla_{u_n} u_n\> \r]
+\eqlbl{Bochner}$$
+converges, where $H_n$ as in  \ref{Bochner}.
+
+\end{thm}
+
+\parit{Proof.}
+Note that $H_n=\div u_n$.
+Let us rewrite the integral in $\Omega$:
+$$\int\limits_{\Omega}
+\Bigl(\sum_{i=1}^3u_n^i \tfrac{\partial \phi}{\partial x_i}\Bigr)
+\sum_{i=1}^3
+\Bigl(\tfrac{\partial u_n^i}{\partial x^i} +u^i_n\tfrac{\partial \log \sqrt {\det (g_{ij,n})}}{\partial x^i}\Bigr)
+\sqrt {\det (g_{ij,n})}dx^1\wedge dx^2\wedge dx^3$$
+
+By \ref{Prop:chart}(\ref{metric}), we have
+$g_{i j,n}, g^{ij}_n\in  \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)$
+and
+$\det g_{ij,n}$ are bounded away from $0$.
+We also have
+$$u_n^i=\frac{g^{ij}\frac{\partial (f\circ \X_n^{-1})}{ \partial x_j}}
+{\sqrt{g^{jk}\frac{\partial (f\circ \X_n^{-1})}{\partial x_j }\frac{\partial (f\circ \X_n^{-1})}{\partial x_k}}}.$$
+By Proposition~\ref{Prop:chart}.\ref{funktioninchart}
+ $f_n\circ\X_n^{-1}\in DC_0^{seq}(\Omega, S_\Omega)$
+hence 
+${u^i_n}\in  \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)$.
+
+Then applying lemmas~\ref{thm-D}, \ref{thm-CM}, and \ref{thm-A} we get
+
+\begin{itemize}
+
+\item $\partial \log \sqrt {\det (g_{ij,n})}/\partial x^i\in \aleph_0^{seq}(\Omega,S_\Omega)$
+
+\item $\frac{\partial u_n^i}{\partial x_i}\in \aleph_0^{seq}(\Omega,S_\Omega)$
+ 
+\end{itemize} 
+ 
+ and by above
+ 
+  \begin{itemize}
+  
+  \item ${u^i_n}\in  \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)\subset\op{C_0^{seq}}(\Omega,S_\Omega,\RR)$ 
+ 
+ \item $g_{i j,n}\in   \op{BV_0^{seq}}(\Omega,S_\Omega,\RR)\subset \op{C_0^{seq}}(\Omega,S_\Omega,\RR)$
+ 
+  \end{itemize}
+  
+Then applying Lemma~\ref{thm-CM} we get under integral the sum of elements from $\aleph_0^{seq}(\Omega,S_\Omega)$ multiplied by $\frac{\partial \phi}{\partial x_i}$ --- smooth functions with compact support.
+This gives convergence of the integral by definition of  $\aleph_0^{seq}(\Omega,S_\Omega)$.
+              
+
+Further, for the second integral % (see claim~\ref{cl:funDC})
+we have
+\begin{align*}
+\int\limits_{M_n}&\<\nabla\psi_n,\nabla_{u_n} u_n\>\cdot\vol_n=\\
+&=\int\limits_{\Omega}  \sum_{i,j,k}u^i_n \frac{\partial \phi}{\partial x_k}
+\biggl(\frac{\partial u^k_n}{\partial x_i} +\tfrac{1}{2}u^j_n\sum_s
+\biggl(\frac{\partial g_{ js,n}}{\partial x_i}+\frac{\partial g_{si,n}}{\partial x_j}-\frac{\partial g_{i j,n}}{\partial x_s}\biggr) g^{ks}_n\biggr)\cdot 
+\\
+&\quad\cdot\sqrt{\op{det}(g_{i j,n})}\cdot dx^1\wedge dx^2\wedge dx^3.
+\end{align*}
+
+
+For the first integral,
+ applying
+lemmas~\ref{thm-D}, \ref{thm-CM}, and \ref{thm-A} we get under the integral sequence from $\aleph_0^{seq}(\Omega,S_\Omega)$ multiplied by smooth function with compact support $\frac{\partial \phi}{\partial x_i}$. Then the integral converges and the lemma follows.
 \qeds
 
 \parit{Proof of Proposition~\ref{strconvergence}.}
-We take a nice common chart 
+We take a common chart 
 $\mathfrak{X}_n:U_n\to\Omega$ and
 $\mathfrak{X}:U\to\Omega$ around $x$.
 We can assume 
@@ -265,14 +263,14 @@ $$L_n^1(\psi)=
 Then \ref{Bochner} implies that $L_n=L_n^1+L_n^2$.
 It follows from
 Lemma~\ref{Int} that 
-$L^1_n(\psi)$ $\delta$-converges for any $\psi\in C^\infty_0(\X(U\cap A^\delta))$.
+$L^1_n(\psi)$ delta-converges for any $\psi\in C^\infty_0(\X(U\cap A^\delta))$.
 From Lemma~\ref{HnablaU} we have that
 $L^2_n(\psi)$ converges for any $\psi\in C^\infty_0(\X(U\cap A^\delta))$.
 It follows from Corollary~\ref{Kbound}  that operators $L_n$
 are uniformly bounded with respect to the uniform norm and by above the sequence 
-$L_n(\psi)$ is weakly  $\delta$-converging for any $\psi\in C^\infty_0(\X(U\cap A^\delta))$.
+$L_n(\psi)$ is weakly  delta-converging for any $\psi\in C^\infty_0(\X(U\cap A^\delta))$.
 Then the sequence $L_n$ regarded as a sequence 
-of measures weakly $\delta$-converges to some 
+of measures weakly delta-converges to some 
 measure.
 Proposition~\ref{strconvergence} follows.
 \qeds

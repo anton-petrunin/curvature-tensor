@@ -1,17 +1,14 @@
 \usepackage[intlimits]{amsmath}
 \usepackage{amssymb,amsthm,pifont}
-\usepackage{enumerate}
 \usepackage{bm}%makes better bold font in math
 \usepackage{hyperref}
 \usepackage{eucal}
 \usepackage{xcolor}
-\usepackage{kusochek+}
-\usepackage{eucal}
-\usepackage{xcolor}
 \usepackage{bm}
 
-\usepackage{calligra}
-\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+
+
+\usepackage{enumerate}
 
 
 \hypersetup{colorlinks=true,citecolor=black,linkcolor=black,anchorcolor=black,filecolor=black,menucolor=black,urlcolor=black
@@ -76,19 +73,18 @@
 \def\div{\mathop{\rm div}}
 \def\trace{\mathop{\rm trace}}
 \def\Dom{\mathop{\rm Dom}}
-\def\dist{\operatorname{dist}}
-\def\Hess{\operatorname{Hess}}
+\def\dist{\operatorname{\rm dist}}
+\def\Hess{\operatorname{\rm Hess}}
 \def\haus{\operatorname{\rm haus}}
-\def\kay{\text{\rlap{$\bar{\text{\phantom{n}}}$}{$k$}}}
-\def\length{\operatorname{length}}
-\def\pack{\operatorname{pack}}
-\def\Ric{\operatorname{Ric}}
-\def\Rm{\operatorname{Rm}}
-\def\Sc{\operatorname{Sc}}
-\def\Int{\operatorname{Int}}
-\def\Str{\operatorname{Str}}
-\def\Tr{\operatorname{Tr}}
-\def\supp{\operatorname{supp}}
+\def\length{\operatorname{\rm length}}
+\def\pack{\operatorname{\rm pack}}
+\def\Ric{\operatorname{\rm Ric}}
+\def\Rm{\operatorname{\rm Rm}}
+\def\Sc{\operatorname{\rm Sc}}
+\def\Int{\operatorname{\rm Int}}
+\def\Str{\operatorname{\rm Str}}
+\def\Tr{\operatorname{\rm Tr}}
+\def\supp{\operatorname{\rm supp}}
 \def\DD{\mathbb{D}}
 \def\R{\mathbb{R}}
 \def\RR{\mathbb{R}}
@@ -125,7 +121,6 @@
 \newcommand{\testto}{\stackrel{\tiny\rm test}{\longrightarrow}}
 \newcommand*{\set}[2]{\l\{\,\l.{#1}\vphantom{#2}\,\r|\,{#2}\,\r\}}
 
-\newcommand{\Test}{\operatorname{Test}}
 \newcommand{\Al}{\mathcal{A}lex} 
 \newcommand{\All}{\mathcal{A}lex_{loc}} 
 \newcommand{\DAl}{\mathcal{DA}lex}
@@ -152,8 +147,8 @@
 \def\cdot{{\hskip0.5pt\zz\oldcdot\hskip0.5pt}}
 \def\const{\mathrm{const}}
 
-
-
+\newcommand*{\angk}[3]{\tilde\measuredangle(#1\,{}^{#2}_{#3}\hspace{-0.2ex})}
+\newcommand*{\hinge}[3]{[#1\,{}^{#2}_{#3}]}
 
 
 

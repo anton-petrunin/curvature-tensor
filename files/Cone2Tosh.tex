@@ -4,15 +4,19 @@
 
 \begin{thm}{Theorem}\label{thm:extimage-of-G-and-H}
 Let $f$, $h$ be a pair of strongly convex smooth 1-Lipschitz functions defined on an open set of a 3-dimensional Riemannian manifold.
-Suppose that (1)
-\[|\nabla (f+h)|<\eps\cdot|\nabla f|\quad\text{and}\quad |\nabla f|\ge 1\] 
-for some fixed positive $\eps<\tfrac12$
-and (2) for some $a,b\in \RR$, the set
+Suppose that
+\begin{enumerate}[(i)]
+\item $|\nabla f|\ge 1$ and
+\[|\nabla (f+h)|<\eps\cdot|\nabla f|\] 
+for some fixed positive $\eps<\tfrac12$;
+\item for some $a,b\in \RR$, the set
 \[W_{a,b}=\set{p\in M}{f(p)=a, h(p)\le b}\]
 is compact.
-Denote by $k_1(p)\le k_2(p)$ the principle curvatures of $W_{a,b}$ at a point $p\in W_{a,b}$.
-Let $H(p)=k_1(p)+ k_2(p)$ and
-$G(p)=k_1(p)\cdot k_2(p)$ its mean and Gauss curvatures.
+\end{enumerate}
+Denote by $k_1(p)\le k_2(p)$, 
+$H(p)\zz=k_1(p)+ k_2(p)$
+and
+$G(p)=k_1(p)\cdot k_2(p)$, the principle, mean, and Gauss curvatures of $W_{a,b}$ at $p$.
 Then
 \[\int_{W_{a,b}}G\le 100\cdot\eps
 \eqlbl{intG<100eps}\]
@@ -36,7 +40,7 @@ H\cdot|\nabla f|^2,\]
 where $H$ denotes mean curvature of $\partial \Omega$.
 \end{thm}
 
-\parit{Proof.}
+\parit{Proof of \ref{thm:extimage-of-G-and-H}.}
 Equip $W_{a,b}$ with unit normal vector field $n=\tfrac{\nabla f}{|\nabla f|}$.
 Let $S_p\:\T_pW_{a,b}\zz\to \T_pW_{a,b}$ be the corresponding shape operator, so $S_p\:v\mapsto\nabla_vn$.
 Since $f$ is strongly convex, we have that 
@@ -136,17 +140,17 @@ If the level set $L_c$ is a smooth surface in a neighborhood of $x\in L_c$,
 then denote by $k_1(x)\le k_2(x)$ the principle curvatures of $L_c$ at $x$.
 In this case, set 
 \begin{align*}
-G_f(x)&=k_1(x)\cdot k_2(x),
+G(x)&=k_1(x)\cdot k_2(x),
 \\
-H_f(x)&=k_1(x)+ k_2(x);
+H(x)&=k_1(x)+ k_2(x);
 \end{align*}
-that is, $G_f(x)$ and $H_f(x)$ are Gauss and mean curvature of $L_c$ at $x$.
+that is, $G(x)$ and $H(x)$ are Gauss and mean curvature of $L_c$ at $x$.
 
 \begin{thm}{Theorem}\label{thm:HG-converge}
 Let $M_n$ be a sequence of $3$-dimensional Riemannian manifolds
 and $f_n\: M_n\to \RR$ be a sequence of strongly concave functions.
 Suppose that $\sec M_n\ge -\tfrac1n$ for each $n$, $M_n\zz\to \RR\times A$ without collapsing and $f_n$ converges to the $\RR$-coordinate in $\RR\times A$ as $n\to \infty$.
-Then $G_{f_n}$ and $H_{f_n}$ weakly converge to zero.
+Then $G_n$ and $H_n$ (the Gauss and mean curvatures of the level sets of $f_n$) weakly converge to zero.
 \end{thm}
 
 \parit{Proof.}
@@ -158,7 +162,7 @@ Moreover, the function $\rho$ is \emph{liftable};
 that is, there is a sequence of $(-2)$-concave $\rho_n\:M_n\to\RR$ that converges to $\rho$.
 
 Consider a point $q\in \RR\times A$ above $p$; that is, its $\RR$-coordinate is larger and its $A$-coordinate is the same.
-If $\RR$-coordinate of $q$ is large then $\dist_q+f$ is $\lambda$-concave for small $\lambda>0$ and it has a nonstrict minimum at $p$.
+If $\RR$-coordinate of $q$ is large, then $\dist_q+f$ is $\lambda$-concave for small $\lambda>0$ and it has a nonstrict minimum at $p$.
 Therefore, given $\lambda>0$, we can find $q$ so that the sum $s=f+\dist_q+\lambda\cdot \rho$ is $(-\lambda)$-concave and has strict maximum at $p$.
 Moreover
 \[-\lambda\cdot|p-x|_A^2\ge s(x)-s(p)\ge -\tfrac12\cdot\lambda\cdot|p-x|_A^2\]
@@ -173,9 +177,9 @@ Observe that \ref{O(p-x)} implies that the first condition in \ref{thm:extimage-
 Moreover, one can choose $b$ so that the second condition is satisfied and $B_n=B(p_n,r/10)\cap L_a\subset W_{a,b}$.
 Applying \ref{thm:extimage-of-G-and-H}, we get that for any $\delta>0$, we have 
 \[
-\int_{B_n}G_{f_n}<\delta,
+\int_{B_n}G_n<\delta,
 \quad\text{and}\quad
-\int_{B_n}H_{f_n}<\delta.
+\int_{B_n}H_n<\delta.
 \]
 for all large $n$.
 It remains to integrate the obtained inequalities by $a$ and pass to a limit as $n\to\infty$.
@@ -186,7 +190,7 @@ Suppose that $M_n\to  \RR\times A$ and $f_n\: M_n\to \RR$ be as in \ref{thm:HG-c
 Set $u_n=\tfrac{\nabla f_n}{|\nabla f_n|}$.
 Then 
 
-\begin{enumerate}
+\begin{enumerate}[(i)]
 \item\label{cor:Ricci:Ricci} $\langle \Ric u_n,u_n\rangle$ weakly converges to zero.
 \item\label{cor:Ricci:vw}
 Let $v_n$ and $w_n$ are sequences of uniformly bounded, continuous vector fields on $M_n$.
@@ -206,7 +210,7 @@ Therefore it is sufficient to show that $\mu\le 0$.
 
 By \ref{thm:bochner-formula} we have that the following equality
 \[\int\limits_\Omega \phi_n\cdot \langle \Ric u_n,u_n\rangle =
-\int\limits_\Omega [\phi_n \cdot G_{f_n}+H_{f_n}\cdot\<u_n,\nabla\phi_n\>-\<\nabla\phi_n,\nabla_{u_n} {u_n}\>]
+\int\limits_\Omega [\phi_n \cdot G_n+H_n\cdot\<u_n,\nabla\phi_n\>-\<\nabla\phi_n,\nabla_{u_n} {u_n}\>]
 \]
 holds for any function $\phi_n$ with compact support on $M_n$,
 assuming that all expressions in the formula have sense.
@@ -216,9 +220,9 @@ with compact support
 that converge to a $\phi\:A\to \RR$ such that (1) $\phi$ is unit in a neighborhood of a given point $p\in A$ and (2) we have a control the three terms on the right hand side of the formula; that is, we have the following weak convergences:
 \[
 \begin{aligned}
-\phi_n \cdot G_{f_n}&\rightharpoonup 0,
+\phi_n \cdot G_n&\rightharpoonup 0,
 &
-H_{f_n}\cdot\<u_n,\nabla\phi_n\>&\rightharpoonup 0,
+H_n\cdot\<u_n,\nabla\phi_n\>&\rightharpoonup 0,
 &
 \<\nabla\phi_n,\nabla_{u_n} {u_n}\>&\rightharpoonup 0.
 \end{aligned}
@@ -247,7 +251,7 @@ Indeed, one can take
 for appropriately chosen fixed mollifiers $\sigma,\psi\:\RR\to \RR$.
 
 \parit{(\ref{cor:Ricci:vw}).}
-Since $G_{f_n}\rightharpoonup 0$, we get that curvature measure of level sets of $f_n$ weakly converges to the curvaure of $A$.
+Since $G_n\rightharpoonup 0$, we get that curvature measure of level sets of $f_n$ weakly converges to the curvaure of $A$.
 It follows that 
 \[q(u_n,u_n)\rightharpoonup \haus_1\oplus \kappa.\]
 

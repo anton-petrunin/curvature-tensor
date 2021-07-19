@@ -62,7 +62,7 @@ For the connection laplacian we also have the identity
 \[\int_M \langle \nabla^*\nabla\phi,\psi\rangle
 =
 \int_M \langle \nabla\phi,\nabla\psi\rangle.\]
-If $\phi$ anad $\psi$ have support in the domain where the frame is defined, then the right handside can be written as 
+If $\phi$ and $\psi$ have support in the domain where the frame is defined, then the right handside can be written as 
 \[\int_M \langle \nabla\phi,\nabla\psi\rangle=\sum_i\int_M\langle \nabla_{e_i}\phi,\nabla_{e_i}\psi\rangle;\]
 using the a partition of unity, one can use the latter expression to redefine the left hand side. 
 
@@ -313,8 +313,6 @@ converges if for any compact $K$ there is $c>0$ such that
 for any $x\in K$ and convergent sequence of directions $\xi_n\to\xi_0\in \Sigma_x$ we have
 $\limsup \<v_n,\xi_n\>-\liminf \<v_n,\xi_n\>\le c\delta(\xi)$.
 
-
-
 \end{thm}
 
 \begin{thm}{Remark}
@@ -327,7 +325,7 @@ iff $\nabla f_n$ converges.
 \begin{thm}{Claim}\label{lem:scalprod}
 Let vector fields $v_n, w_n$ converge, then for every compact
 set $K\subset A$ there is a constant $c>0$ so that
-$\<v_n, w_n\>$ $\delta$-converges on $A^\de\cap K$.
+$\<v_n, w_n\>$ delta-converges on $A^\de\cap K$.
 \end{thm}
 
 \parit{Proof}
@@ -342,14 +340,14 @@ In particular we have
 Let vector fields $v_n^1,\dots, v_n^m, v_n$ be
 uniformly bounded, converging
  and $m$-sets of vectors
-$v_n^1,\dots, v_n^m$ be uniformly linearly independent,
-i.e. $\det(\<v_n^i, v_n^j\>)>c_0$
+$v_n^1,\dots, v_n^m$ be uniformly linearly independent;
+that is, $\det(\<v_n^i, v_n^j\>)>c_0$
 for some constant $c_0>0$.
 Then for coefficient of decomposition
 of $v_n=\alpha_n^1 v_n^1+\dots+\alpha_n^m v_n^m$
  and for every compact
 set $K\subset A$ there is a constant $c>0$ so that
-$\alpha_n^i$ $\delta$-converges on $A^\de\cap K$.
+$\alpha_n^i$ delta-converges on $A^\de\cap K$.
 \end{thm}
 
 \section{DC calculus.}\label{sec:DC}
@@ -384,8 +382,8 @@ for any $i$ and any smooth function $\phi\:\Omega\to \RR$ with compact support.
 Let $\op{BV_0}(\Omega,S_\Omega)\subset \op{BV}(\Omega)$ be the subset of bounded functions that are continuous on $\Omega\setminus S_\Omega$.
 
 
-We say that a signed Radon measure $\mu$ is in
-$\aleph_0(\Omega,S_\Omega)$ if $\mu(S_\Omega)=0$.
+We say that a signed Radon measure $\mathfrak m$ is in
+$\aleph_0(\Omega,S_\Omega)$ if $\mathfrak m(S_\Omega)=0$.
 
 
 
@@ -443,17 +441,17 @@ $$(h_n,h_0)\in \op{BV_0^{seq}}(\Omega,S_\Omega).$$
 
 %Let $h_n:\Omega\to\R$ be a sequence of $C^0$-functions with uniformly bounded variations and  $h:\Omega\to\R$ be a  function so that that $h_n$C-converges  to the function $h$on the set where $h$ is continuous.  In this case we will write $$(h_n,h)\in \op{CBV^{seq}}(\Omega).$$
 
-Let $\mu_n$ be
+Let $\mathfrak m_n$ be
   a sequence of uniformly bounded
 signed Radon measure  such that
-$\mu_n=\mu_n^+-\mu_n^-$
+$\mathfrak m_n=\mathfrak m_n^+-\mathfrak m_n^-$
 for some
 sequences of nonnegative Radon measures
-that converge weakly to measures $\mu^+,
-\mu^-\in\aleph_0(\Omega,S_\Omega)$.
-Let $\mu=\mu^+-\mu^-$,
+that converge weakly to measures $\mathfrak m^+,
+\mathfrak m^-\in\aleph_0(\Omega,S_\Omega)$.
+Let $\mathfrak m=\mathfrak m^+-\mathfrak m^-$,
 we will write
-$$(\mu_n,\mu)\in\aleph_0^{seq}(\Omega,S_\Omega).$$
+$$(\mathfrak m_n,\mathfrak m)\in\aleph_0^{seq}(\Omega,S_\Omega).$$
 
 
 \subsection{Operations}
@@ -520,15 +518,15 @@ such that $d_xf$  is arbitrary close to $ <v,\cdot>$.
  
 \section{DC-coordinates for Alexandrov space}
 
-\subsection{Existense of nice common chart}\label{NiceChartProof}
+\subsection{Existense of common chart}\label{NiceChartProof}
 Here should be the proof of 
 Proposition~\ref{Prop:chart}.
 \subsection{Metric tensor  in coordinates}\label{sec:metr-con}
 
-\begin{thm}{Theorem (Metric tensor in nice common chart)}\label{metricBV}
+\begin{thm}{Theorem (Metric tensor in a common chart)}\label{metricBV}
 Let
 $\mathfrak X_n:U_n\to\Omega$,
-$\mathfrak X:U\to\Omega$ be a nice common chart.
+$\mathfrak X:U\to\Omega$ be a common chart.
 Denote by $g_{ij,n}$ coordinates of metric tensor in this chart
 and by $g^{ij}_n$ coordinates of the inverse matrix. 
 Then

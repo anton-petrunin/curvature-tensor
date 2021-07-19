@@ -1,14 +1,8 @@
-
-
-  
-
-
 \section{Formulation}
   
 \begin{thm}{Main theorem}\label{main}
 Let $M_n\smooths{} A$ be a smoothing of Alexandrov space $A$.
-Then $\mathfrak{q}_n\rightharpoonup \mathfrak{q}$, where $\mathfrak{q}_n$ denoted the dual measure-valued curvature tensor of $M_n$
-and $\mathfrak{q}$ is some for some measure-valued tensor on $A$.
+Then there is a measure-valued tensor $\mathfrak{q}$ on $A$ such that $\mathfrak{q}_n\rightharpoonup \mathfrak{q}$, where $\mathfrak{q}_n$ denotes the dual measure-valued curvature tensor of $M_n$.
 \end{thm}
 
 \section{Plan of the proof}
@@ -20,19 +14,22 @@ where $\sigma$ runs along all sectional directions at $x\in M$.
 The following statement is a direct corollary of the main result in \cite{petrunin-SC}:
 
 \begin{thm}{Corollary}\label{cor:Kmax}
+Given an integer $m\ge 0$, there is a constant $\const(m)$ such that the following holds.
+
 Let $M$ be an $m$-dimensional Riemannian manifold with sectional curvature bounded below by $-1$.
-Then there a constant $\const(m)$ such that
+If for some $r<1$ the closed ball $\bar B(p,2\cdot r)_M$ is compact,
+then 
 $$\int_{B(p,r)_M} K_{max}\le \const(m)\cdot r^{m-2}.$$
-for any $r<1$.
+
 \end{thm}
 
-Observe that there is a constant $\const(m)$ such that 
+Observe that there is another constant $\const(m)$ such that 
 \[
 \begin{aligned}
-|q_n(\nabla f_1,&\dots,\nabla f_{m-2},\nabla g_1,\dots,\nabla g_{m-2})|
+|q_n(X_1,&\dots,X_{m-2},Y_1,\dots,Y_{m-2})|
 \\
 &\le 
-\const(m)\cdot K_{max}\cdot|\nabla f_1\wedge\dots\wedge\nabla f_{m-2}|\cdot |\nabla g_1\wedge\dots\wedge\nabla g_{m-2}|
+\const(m)\cdot K_{max}\cdot|X_1\wedge\dots\wedge X_{m-2}|\cdot |Y_1\wedge\dots\wedge Y_{m-2}|
 \end{aligned}
 \eqlbl{q=<K}
 \]
@@ -44,26 +41,27 @@ $f_{i,n}\testto f_i\:A\to \RR$ and $g_{i,n}\testto g_i\:A\to \RR$ the sequence o
 $\mathfrak{q}_n(f_{1,n},\dots f_{m-2,n},g_{1,n},\dots, g_{m-2,n})$ has a weakly converging subsequence.
 \end{thm}
 
-By Perelman's stability theorem $A$ is a topological manifold.
+By Perelman's stability theorem, the limit space $A$ is a topological manifold.
 In particular, $A$ has no boundary.
-Together with Claim~\ref{clm:weak-partial-limit} it implies that the theorem follows from the following more exact formulation.
+Together with Claim~\ref{clm:weak-partial-limit} it implies that the main theorem \ref{main} follows from the following statement.
 
 \begin{thm}{Proposition}\label{prop:3parts}
-Let $M_n$ be a sequence of $3$-dimensional Riemannian manifolds such that $M_n\zz\to A$ without collapsing.
-Suppose $h_n\:M_n\to\RR$ be a sequence of $\lambda$-concave $L$-Lipscitz smooth functions that converges to a function $h\:A\to R$.
-Let $\mu_1$ and $\mu_2$ be a weak partial limits of the sequence of measures $q_{M_n}(\nabla h_n,\nabla h_n)$ on $A$.
+Let $M_n\smooths{} A$ and $\dim M_n=m$ for any $n$.
+Suppose $h_{1,n},\dots, h_{m-2,n}\:M_n\to\RR$ is a sequence of test functions
+such that $h_{i,n}\zz\testto  h_i\:A\to \RR$ for each $i$.
+Let $\mathfrak m_1$ and $\mathfrak m_2$ be two measures on $A$ that are a weak partial limits of the sequence of measures $\mathfrak{q}_n(\nabla h_{1,n},\zz\dots, \nabla h_{m,n},\nabla h_{1,n},\zz\dots, \nabla h_{m,n})$ on $M_n$.
 Then the following statements hold:
-\begin{enumerate}
-\item\label{prop:3parts:codim3} Measures $\mu_1$ and $\mu_2$ vanish on $A''$; that is, 
-\[\mu_i|_{A''}=0\]
+\begin{enumerate}[(i)]
+\item\label{prop:3parts:codim3} Measures $\mathfrak m_1$ and $\mathfrak m_2$ vanish on $A''$; that is, 
+\[\mathfrak m_i|_{A''}=0\]
 for $i=1,2$.
 
-\item\label{prop:3parts:codim2} Measures $\mu_1$ and $\mu_2$ satisfy the following equation:
-\[\mu_i|_{A'}=\omega\cdot |dh(u)|^2\]
-for $i=1,2$.
-where $u=u(p)$ is a choice of vertical unit vectors at any point $p\in A'$;
+\item\label{prop:3parts:codim2} Measures $\mathfrak m_1$ and $\mathfrak m_2$ satisfy the following equation:
+\[\mathfrak m_i|_{A'}=\omega\cdot |d h_{1,n}\wedge\dots\wedge d h_{m,n}(u)|^2\]
+for $i=1,2$,
+where $u=u(p)$ is a choice of unit $(m-2)$-vector at any point $p\in A'$ in the vertical direction of $\T_p=\Cone\times \RR^{m-2}$;
 
-\item\label{prop:3parts:reg} $\mu_1|_{A^\circ}=\mu_2|_{A^\circ}$.
+\item\label{prop:3parts:reg} $\mathfrak m_1|_{A^\circ}=\mathfrak m_2|_{A^\circ}$.
 \end{enumerate}
 \end{thm}
 

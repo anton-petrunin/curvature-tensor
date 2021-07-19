@@ -1,47 +1,107 @@
 \section{Regular points}\label{sec:ref}
 
-\begin{thm}{Definitions}\label{def:delta-converge}
-Consider a smoothing $M_n\smooths{} A$.
+\subsection{Common chart and delta-convergence}
 
-A sequence of measures $\nu_n$ defined on $M_n$ is called \emph{weakly $\delta$-converging}
+Choose a smoothing $M_n\smooths{} A$ of an $m$-dimensional Alexandrov space $A$.
+Let $p\in A$ be a point of rank $m$; that is, there are $m+1$ points $a_0,\dots, a_m\in A$ such that 
+$\angk p{a_i}{a_j}>\tfrac\pi2$ for all $i\ne j$.
+
+Recall that we can choose a small $r>0$ and finite set of points $A_i$ near $a_i$ and a smooth concave increasing real-to-real function $\phi$ defined on an open interval such that the function
+\[f_i=\sum_{x\in A_i}\phi\circ\widetilde{\dist}_{a_i,r}\]
+is defined in a neighborhood $U\ni p$ and strongly concave.
+
+Since $r$ is small and $A_i$ is near $a_i$ we get that the functions $f_0, \dots, f_m$ are tight in $U$.
+In particular, the map $U\to\RR^m$ defined by $x\mapsto (f_1(x),\dots,f_m(x))$ is a coordinate system in $U$.
+
+The presented construction can be naturally lifted to $M_n$.
+As a result we obtain a chart of an open set $U_n\subset M_n$.
+Passing to smaller sets we may assume that $U$ and each $U_n$ is mapped to a fixed open set $\Omega\subset\RR^m$ for all large $n$.
+Further we assume that it holds for all $n$; it could be achieved by cutting off the beginning of the sequence $M_n$.
+
+The obtained collection charts $\bm{x}\: U_n\to \Omega$ and $\bm{x}\: U\to \Omega$ will be called \emph{common chart} at $p$.
+
+The part \ref{prop:3parts}(\ref{prop:3parts:reg}) will be reduced to certain estimates in one common chart that will be used to identify points of $\Omega$, $M_n$ and $A$.
+We will use index $n$ or skip it to indicate that the calculations are performed in $M_n$ or $A$ respectively.
+For example, given a function $f\:\Omega\to \RR$, we denote by $\nabla_nf$ the gradient of the function $f\circ \bm{x}$ in $M_n$.
+
+Recall that $A^\delta$ denotes the set of $\delta$-strained points in $A$.
+For a fixed common chart $\bm{x}$ we will use notation $A^\delta$ also for the image $\bm{x}(A^\delta)$.
+
+\begin{thm}{Definitions}\label{def:delta-converge}
+Choose a common chart with range $\Omega\subset \RR^m$ for a smoothing $M_n\smooths{} A$.
+
+A sequence of measures $\mathfrak n_n$ defined on $\Omega$ is called \emph{weakly delta-converging}
 if the following conditions hold:
 \begin{enumerate}
- \item Every subsequence of $\nu_n$ has a weak partial limit.
- \item For any two weak partial limits $\mu_1$ and $\mu_2$ of $\nu_n$ and any bounded set $\Omega\subset A$ there is a constant $\const$ such that 
-\[|(\mu_1-\mu_2)(S)|\le \const\cdot \delta\]
+ \item Every subsequence of $\mathfrak n_n$ has a weak partial limit.
+ \item For any $\eps>0$ there is $\delta>0$ such that for any two weak partial limits $\mathfrak m_1$ and $\mathfrak m_2$ of $\mathfrak n_n$ we have  
+\[|(\mathfrak m_1-\mathfrak m_2)(S)|<\eps\]
 for any Borel set $S\subset \Omega\cap A^\delta$.
 \end{enumerate}
 
-A sequence of functions $f_n$ defined on $M_n$ is called \emph{uniformly $\delta$-converging}
+A sequence of functions $f_n$ defined on $\Omega$ is called \emph{uniformly delta-converging}
 if the following conditions hold:
 \begin{enumerate}
  \item Every subsequence of $f_n$ has a partial uniform limit.
- \item For any two uniform partial limits $h_1$ and $h_2$ of $f_n$ and any bounded set $\Omega\subset A$ there is a constant $\const$ such that 
-\[|h_1(x)-h_2(x)|\le\const\cdot \delta\]
+ \item For any $\eps>0$ there is $\delta>0$ such that for any two uniform partial limits $h_1$ and $h_2$ of $f_n$  such that 
+\[|h_1(x)-h_2(x)|<  \eps\]
 for any $x\in \Omega\cap A^\delta$.
 \end{enumerate}
 
 \end{thm}
 
-Observe that if $f_n$ is uniformly $\delta$-converging and $\nu_n$ is weakly $\delta$-converging,
-then $f_n\cdot \nu_n$ is weakly $\delta$-converging.
+Observe that if $f_n$ is uniformly delta-converging and $\mathfrak n_n$ is weakly delta-converging,
+then $f_n\cdot \mathfrak n_n$ is weakly delta-converging.
 
-Since 
-\[A^\circ=\bigcap_{\delta>0}A^\delta,\]
-part \ref{prop:3parts:reg} of \ref{prop:3parts} follows from the next lemma.
+The proof of \ref{prop:3parts}(\ref{prop:3parts:reg}) relies on the following lemma.
 
 \begin{thm}{Lemma}\label{A^0}
-Let $M_n\smooths{} A$ and $\lambda,L\in\RR$.
-Suppose $h_n\:M_n\to\RR$ be a sequence of $\lambda$-concave $L$-Lipscitz smooth functions that converges to a function $h\:A\to R$.
-Then the sequence of measures $q_{M_n}(\nabla h_n,\nabla h_n)$ is \emph{$\delta$-converging}.
+Choose a common chart of a smoothing $M_n\smooths{} A$ and a component $\Rm_{ijsr,n}$ the curvature tensor of $M_n$.
+Then $\Rm_{ijsr,n}\cdot \vol$ is a weakly  delta-converging sequence of measures.
 \end{thm}
 
-The 3-dimensional case is the main part of its the proof.
-First, we introduce nice chart --- a common parametrisation of the limit space and approximating sequence.
-Using nice charts, we prove $\delta$-convergence of the so called \emph{strange curvature tenor}.
-Here we essentially use a Bochner-type formula that gives an expression for strange curvature \ref{thm:bochner-formula}.
-Further we show that $\delta$-convergence of strange curvature implies $\delta$-convergence of dual curvature tensor.
+The following proposition lists the properties of the common charts.
 
-The proof in higher dimensions is done by induction on dimension.
-It relies on a local version of the main theorem described in Section~\ref{sec:local}.
-This version of theorem deals with a minor technical issue that the formulation of main theorem is global --- it use test functions and their convergence that changes if we pass to a smaller domain. 
+\begin{thm}{ Proposition}\label{Prop:chart}
+Suppose $\bm{x}_n\: U_n\to \Omega$ and $\bm{x}\: U\to \Omega$ is a common chart of a smoothing $M_n\smooths{} A$.
+
+\begin{enumerate}[(a)]
+
+%\addtocounter{enumi}{2}
+\item\label{obtuse}
+The coordinates $x_i$ are tight concave function in $M_n$ and $A$;
+in addition, $x_i$ smooth in $M_n$.
+
+\item The charts are bi-Lipschitz  with uniform  bi-Lipschitz 
+constants.
+
+\item\label{metric} 
+Denote by $S_\Omega$ the image of singular locus of $A$ in $\Omega$.
+There exists a continuous Riemannian metric
+$g$ on $\Omega\setminus S_\Omega$ which locally 
+realizes distance on $U$, where
+$S_\Omega=\mathfrak X(U\cap A\setminus A^\circ)$.
+This metric tensor 
+(defined almost everywhere on $\Omega$)
+is of bounded variation
+on $\Omega$. 
+
+\item\label{metricseq}
+Let $g_{ij,n}$ be coordinates of metric tensor of $M_n$ 
+in the chart $\X_n$. 
+Then
+$(g_{ij,n}, g_{ij})\in BV_0^{seq}(\Omega, S_\Omega)$.
+Moreover, $\det(g_{ij,n})$ is bounded and bounded away from 0.
+
+
+\item\label{funktioninchart}
+For any
+sequence
+of concave smooth functions
+$f_n:B(p_n,r_n)\to\R$ 
+which roughly $C^1$-converges to  $f:B(p,r)\to\R$ we have for its coordinate
+expression
+$(f_n\circ\X_n^{-1}, f\circ\X^{-1})\in DC_0^{seq}(\Omega, S_\Omega)$
+
+\end{enumerate}
+\end{thm}
