@@ -22,10 +22,10 @@ Let us denote by $\Sc$ the scalar curvature of Riemannian manifold.
 
 \begin{thm}{Corollary}\label{cor:Sc}
 In the assumption of the main theorem,
-the measures $\Sc\cdot \vol_m$ on $M_n$ weakly converges to a locally finite signed measure $\mathfrak m$  on $A$.
+the measures $\Sc\cdot \vol^m$ on $M_n$ weakly converges to a locally finite signed measure $\mathfrak m$  on $A$.
 
 In particular, if $A$ is compact, then the sequence
-\[s_n=\int_{M_n}\Sc \cdot\vol_m\]
+\[s_n=\int_{M_n}\Sc \cdot\vol^m\]
 converges.
 \end{thm}
 
@@ -36,8 +36,7 @@ let us describe some of them:
 The measure $\mathfrak m$ vanish on any subset of $A$ with vanishing $(m-2)$-dimensional Hausdorff measure.
 In particular, the $\mathfrak m$-measure of the set of singularities
 of codimension $\ge 3$ vanishes.
-
-he measure can be explicitely described 
+The measure can be explicitely described 
 on the set $A'$ of singularities
 of codimension $2$. That is, the set $A'\subset A$
 contains all points $x$ with tangent space
@@ -45,8 +44,9 @@ $T_xA=\R^{m-2}\times \C$
 where $\C$ is a $2$-dimensional cone
 with the total angle $2\pi-\omega(x)$.
 Then 
-$$\mathfrak m|_{A'}=\omega\cdot \haus_{m-2},$$
-where $\haus_{m-2}$ denotes $(m-2)$-dimensional Hausdorff measure.
+$$\mathfrak m|_{A'}=\omega\cdot \vol^{m-2},$$
+where $\vol^{m-2}$ denotes $(m-2)$-dimensional Hausdorff measure;
+the latter follows from \ref{prop:3parts:codim2+}.
 
 
 Note that the limit tensor of the sequence depends only on $A$ and does not depend on the choice of the sequence $M_n$.
@@ -70,6 +70,9 @@ was studied in far more general settings of
 for some singular  spaces as well \cite{L}.
 Curvature tensor for  $\rcd$-spaces was defined by Nicola Gigli \cite{G}.
 It is expected that our definitions agree.
+Let us also mention that Elia Bruè, Aaron Naber, and Daniele Semola \cite{BNS} constructed harmonic coordinates in a neighborhood of regular point of $\rcd$-space (in particular, Alexandrov space).
+It is known that in Riemannian manifolds harmonic coordinates provide the atlas best smooth class of the metric tensor; so it is expected that they will play an important role in analysis on Alexandrov spaces.  
+
 
 The precise geometric meaning of our curvature tensor is not quite clear. 
 In particular, we do not know the answer to the following question which is closely related to imposed in \cite[Conjecture~1.1]{G}.

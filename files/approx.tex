@@ -1,100 +1,89 @@
 \subsection{3-dimensional case}
 
 
+\parit{Proof of the 3-dimensional case in \ref{prop:3parts:codim2+}.}
+Suppose $M_n\smooths{}A$ and $\dim A=3$.
 According to \cite{li-naber}, $A'$ is countably 1-rectifiable and $A''$ is a countable set. 
 
-Consider the measure $\omega$ on $A'$ defined by
-\[\omega=(2\cdot\pi-\theta)\cdot \haus_1,\eqlbl{eq:omega}\]
-where $\haus_\alpha$ denotes $\alpha$-dimensional Hausdorff measure.
-Let us extend $\omega$ to the whole space by setting $\omega(S)=\omega(S\cap A')$ for any Borel set $S\subset A$.
-
-The function $\theta$ can be extended to the whole $A$ by setting
-\[\theta(p)=2\cdot\pi\cdot \tfrac{\area \Sigma_p}{\area \mathbb{S}^2}\] for any $p\in A'$.
-According to \cite[7.14]{BGP}, $\theta\:A\to \RR$ is upper-semicontinuous.
-The right-hand side of the last equality vanish in $A^\circ$.
-Further since $\haus_1(A'')\zz=0$, the measure $\omega$ could be also defined as a measure on whole $A$ that is defined by \ref{eq:omega}.
-
-\parit{Proof of the 3-dimensional case in \ref{prop:3parts}(\ref{prop:3parts:codim2}).}
 Let us split $\mathfrak m$ into negative and positive part $\mathfrak m=\mathfrak m^+-\mathfrak m^-$; that is,
 \[\mathfrak m^\pm(X)\df\sup\set{\pm\mathfrak m(Y)}{Y\subset X}.\]
 Since the sectional curvature of $M_n$ is bounded below, we get that $\mathfrak m^-$ has bounded density; in other words $\mathfrak m^-$ is regular measure on $A$.
 Since $A'$ has vanishing volume, we get $\mathfrak m^-(A')=0$.
 
 Set $\mathfrak n=\mathfrak m|_{A'}$; from above we have $\mathfrak n\ge 0$.
-By \cite{petrunin-SC}, $\mathfrak n$ is a regular with respect to $\haus_1$ on $A'$.
+By \cite{petrunin-SC}, $\mathfrak n$ is a regular with respect to $\vol^1$ on $A'$.
 Therefore it is sufficient to show that 
 \[|d_ph(u)|^2\cdot (2\pi-\theta)\]
-is the $\haus_1$-density of $\mathfrak n$
-at $\haus_1$-almost all $p\in A'$.
+is the $\vol^1$-density of $\mathfrak n$
+at $\vol^1$-almost all $p\in A'$.
 
-Since $A'$ is countably 1-rectifiable \cite{li-naber}, we can cover it by a countable number of images of Lipschitz maps $s_i\:\mathbb{I}_i\to A$, where $\mathbb{I}_i$ is a real interval for each $i$.
-Since $s_i$ and $h\circ s_i$ are Lipschitz for any $i$, for $\haus_1$-almost all $p\in A'$ we can choose $s_i$ such that $p\in s_i(x)$ for some $x\in \mathbb{I}_i$.
+Since $A'$ is countably 1-rectifiable \cite{li-naber}, we can cover it by a countable number of images of Lipschitz maps $s_i\:\mathbb{I}_i\to A$, where $\mathbb{I}_i$ is a real interval for each~$i$.
+Since $s_i$ and $h\circ s_i$ are Lipschitz for any $i$, for $\vol^1$-almost all $p\in A'$ we can choose $s_i$ such that $p\in s_i(x)$ for some $x\in \mathbb{I}_i$.
 By Rademacher's theorem we can assume that $s_i$ and $h\circ s_i$ are differentiable at $x$.
-Moreover we can assume that $d_xs_i=\lambda\cdot u$ for some $\lambda\ne 0$ and the $\haus_1$-density of $\mathfrak n$ at $p$ is defined.
+Moreover we can assume that $d_xs_i=\lambda\cdot u$ for some $\lambda\ne 0$ and the $\vol^1$-density of $\mathfrak n$ at $p$ is defined.
 
 Shifting and scaling the interval $\mathbb{I}_i$, we may assume that $x=0$ and $\lambda=1$.
 In this case $|d_ph(u)|=|d_0(h\circ s_i)|$.
 
-Note that we can choose a sequence of points $p_n\in M_n$ and a sequence of factors $c_n\to \infty$ such that $(c_n\cdot M_n,p_n)$ converges to the tangent space~$\T_p$.
-Since $p\in A'$, the space $\T_p$ is a product space $\RR\times K_p$, where $K_p$ is a 2-dimensional cone with total angle $\theta(p)$.
+Note that we can choose a sequence of points $p_n\in M_n$ and a sequence of factors $c_n\to \infty$ such that $(c_n\cdot M_n,p_n)$ converges to the tangent space~$\T_pA$.
+Since $p\in A'$, the space $\T_p$ is a product space $\Cone(\theta)\times\RR$, where $\Cone(\theta)$ is a 2-dimensional cone with total angle $\theta(p)$.
 
 Let $f_n\:c_n\cdot M_n\to \RR$ be as in \ref{thm:HG-converge} and $u_n=\nabla f_n/|\nabla f_n|$.
 Consider the sequence of functions $\hat h_n\:c_n\cdot M_n\to \RR$ defined by 
 \[\hat h_n(x)=c_n\cdot(h_n(x)-h_n(p_n)).\]
 Note that $\langle\nabla \hat h_n,u_n\rangle$ uniformly converges to  $|d_0(h\circ s_i)|$.
-By \ref{cor:Ricci}(\ref{cor:Ricci:vw}), the sequence of measures $q(\nabla\hat h_n, \nabla\hat h_n)$ on $c_n\cdot M_n\to \RR$ weakly converges to $\haus_1\otimes\kappa $ on $\T_p\zz=\RR\times K_p$, 
-where $\kappa$ is the curvature measure of $K_p$; 
-the measure $\kappa$ is supported at the tip $o$ of $K_p$
+By \ref{cor:Ricci}(\ref{cor:Ricci:vw}), the sequence of measures $\qm(\hat h_n, \hat h_n)$ on $c_n\cdot M_n\to \RR$ weakly converges to $\vol^1\otimes\kappa $ on $\T_p\zz=\Cone(\theta)\times\RR$, 
+where $\kappa$ is the curvature measure of $\Cone(\theta)$; 
+the measure $\kappa$ is supported at the tip $o$ of $\Cone(\theta)$
 and $\kappa\{o\}=2\cdot \pi-\theta(p)$.
 
 Observe that 
-\[q(\nabla\hat h_n, \nabla\hat h_n)[B(p_n,1)_{c_n\cdot M_n}]
+\[\qm(\hat h_n, \hat h_n)[B(p_n,1)_{c_n\cdot M_n}]
 =
-c_n\cdot q(\nabla h_n, \nabla h_n)[B(p_n,\tfrac1{c_n})_{M_n}]\]
-Whence $2\cdot \pi-\theta(p)$ is the $\haus_1$-density of $\mathfrak n$ at $p$ as required.
+c_n\cdot \qm(h_n, h_n)[B(p_n,\tfrac1{c_n})_{M_n}]\]
+Whence $2\cdot \pi-\theta(p)$ is the $\vol^1$-density of $\mathfrak n$ at $p$ as required.
 \qeds
 
 \subsection{General case}
 
-The proof of the higher-dimensional case use the 3-dimensional case and the following proposition.
 
 Suppose $M_n\smooths{} \Cone(\theta)\times \RR^{m-2}$, where $\Cone(\theta)$ denotes the two-dimensional cone with total angle $\theta<2\cdot\pi$ around the tip.
-In this section we will show that the sectional curvatures of $M_n$ in the vertical direction of $\Cone(\theta)\times \RR^{m-2}$ weakly converge to zero;
+We will show that the sectional curvatures of $M_n$ in the vertical direction of $\Cone(\theta)\times \RR^{m-2}$ weakly converge to zero;
 an exact statement is given in the following proposition.
 
 \begin{thm}{Proposition}\label{prop:vert-vert}
 Let $M_n$ be a sequence of $m$-dimensional Riemannian manifolds
 and $f_n,h_n\: M_n\to \RR$ be sequences of strongly concave functions.
-Suppose that $\sec M_n\ge -\tfrac1n$ for each $n$, $M_n\smooths{} \RR^{m-2}\times \Cone(\theta)$ and $f_n$ and $h_n$ converges vertical affine functions  $f,h\:\RR^{m-2}\times \Cone(\theta)\to \RR$ as $n\to \infty$; that is, $f$ and $h$ can be obtained as compositions of the projection to $\RR^{m-2}$ and an affine function on $\RR^{m-2}$.
-Then the measures $K(\nabla f_n,\nabla h_n)\cdot\vol_m$ on $M_n$ weakly converge to zero-measure on $\Cone(\theta)$;
+Suppose that $\sec M_n\ge -\tfrac1n$ for each $n$, $M_n\smooths{} \Cone(\theta)\times\RR^{m-2} $ and $f_n$ and $h_n$ converges vertical affine functions  $f,h\:\RR^{m-2}\times \Cone(\theta)\to \RR$ as $n\to \infty$; that is, $f$ and $h$ can be obtained as compositions of the projection to $\RR^{m-2}$ and an affine function on $\RR^{m-2}$.
+Then the measures $K(\nabla f_n\wedge\nabla h_n)\cdot\vol^m$ on $M_n$ weakly converge to zero-measure on $\Cone(\theta)$;
 here $K(\nabla f_n\wedge\nabla h_n)$ denotes sectional curvature in the direction of $\nabla f_n\wedge\nabla h_n$.
 \end{thm}
 
-Before the proof we need to introduce notation and prove one lemma.
+The higher-dimensional case of \ref{prop:3parts:codim2+} is proved using use the 3-dimensional case and the proposition.
 
 Let $\Sigma$ be a convex surface in a Riemannian manifold $M$.
 Suppose $x$ is a smooth point of $\Sigma$; that is the tangent hyperplane $H_x$ of $\Sigma$ is defined at $x$;
 denote by $e_1,\dots,e_{m-1}$ an orthonormal basis of $H_p$.
 Set 
-\[\widetilde\Sc_\Sigma(x)= \sum_{i,j} K(e_i\wedge e_j)\]
+\[\Sc^\top_\Sigma(x)= \sum_{i,j} K(e_i\wedge e_j)\]
 where $K(e_i\wedge e_j)$ denotes the sectional curvature in the direction of $e_i\wedge e_j$.
 In other words, 
-\[\widetilde\Sc_\Sigma=\Sc-2\cdot\Ric(u,u),\]
-where $u$ is the unit normal vector to $\Sigma$.
+\[\Sc^\top_\Sigma=\Sc-2\cdot\Ric(n_\Sigma,n_\Sigma),\]
+where $n_\Sigma$ is the unit normal vector to $\Sigma$.
 
 \begin{thm}{Lemma}\label{lem:nonsmooth-convex}
 Let $\Sigma$ be a strongly convex surface in a Riemannian manifold with curvature $\ge -1$.
 Suppose that for some point $p\in \Sigma$ and $r<1$ the closed ball $\bar B(p,2\cdot r)$ in the intrinsic metric of $\Sigma$ is compact.
 
 Then 
-\[\int_{x\in B(p,r)}\widetilde\Sc_\Sigma(x)\cdot \vol_{m-1}\le (m-1)\cdot(m-2)\cdot\const(m-1)\cdot r^{m-3},\]
+\[\int_{x\in B(p,r)}\Sc^\top_\Sigma(x)\cdot \vol^{m-1}\le (m-1)\cdot(m-2)\cdot\const(m-1)\cdot r^{m-3},\]
 where $\const(m-1)$ is the constant in \ref{cor:Kmax}.
 \end{thm}
 
 \parit{Proof.} If $\Sigma$ is smooth then the inequality follows from \ref{cor:Kmax} and the fact that sectional curvature of manifold cannot exceed sectional curvature of its convex hypersurface in the same direction.
 
 In general case, the surface $\Sigma$ can be approximated by a smooth convex surface;
-this can be done applying the Green-Wu smoothing procedure; compare to \cite{AKP-buyalo}
+this can be done applying the Green-Wu smoothing procedure; compare to \cite{AKP-buyalo}.
 It remains to pass to the limit.
 \qeds
 
@@ -104,22 +93,22 @@ Consider the functions $s_i=...$ and their liftings $s_{i,n}$ to $M_n$.
 
 Note that for almost all points $x\in M_n$ sufficiently close to $p$ 
 we can choose one of the functions $s_i$ such that $d_xs_i$ is linear and $|d_xs_i|>\tfrac12$.
+Indeed, ...
 
 Set $\Sigma_{i,n}=\Sigma_{i,n}(c)=\set{x\in M_n}{s_{i,n}(x)=c}$;
-Applying \ref{lem:nonsmooth-convex} and coarea formula we get that the sum integral curvatures of $M_n$ in the directions of $\Sigma_{i,n}$ at $x$ at the subsets where $|d_xs_i|>\tfrac12$ converges to zero as $n\to 0$.
-
-It remains to show that at almost all $x$ at least one of the tangent directions of $\Sigma_i$ is close to the sectional direction $\nabla f_n\wedge\nabla h_n$.
-Since $|d_xs_i|>\tfrac12$ it is sufficient to show that the values $\langle \nabla s_{i,n},\nabla f_n\rangle$ and $\langle \nabla s_{i,n},\nabla h_n\rangle$ are small...
+Note that \ref{lem:nonsmooth-convex} and the coarea formula we get that the sum integral curvatures of $M_n$ in the directions of $\Sigma_{i,n}$ at $x$ at the subsets where $|d_xs_i|>\tfrac12$ converges to zero as $n\to 0$.
+Note that the latter condition implies that least one of the tangent directions of $\Sigma_i$ is close to the sectional direction $\nabla f_n\wedge\nabla h_n$.
+Hence the statement follows.
 \qeds
 
 
-\parit{Proof of the general case in \ref{prop:3parts}(\ref{prop:3parts:codim2}).}
+\parit{Proof of the general case of \ref{prop:3parts:codim2+}.}
 Let us choose a sequences of strongly concave functions $f_{1,n},\dots f_{m-2,n}\: M_n\to \RR$ that converge to vertical affine functions $f_1,\dots,f_n\to \Cone(\theta)\times \RR^{m-2}$ with orthonormal gradients.
 
 Note that the fields $e_{1,n}=\nabla f_1,\dots,e_{m-2,n}=\nabla f_{m-2}$ are nearly orthonormal;
 in particular they are linear independent for all large $n$.
 Let us add two fields $e_{m-1,n}$ and $e_{m,n}$  so that $e_{1,n},\dots e_{m,n}$ form a nearly orthonormal frame in $M_n$;
-that is, $\lim\langle e_{i,n}, e_{j,n}\rangle\to 0$ for $i\ne j$ and $\lim\langle e_{i,n}, e_{i,n}\rangle\to 1$ for any $i$.
+that is, $\langle e_{i,n}, e_{j,n}\rangle\to 0$ for $i\ne j$ and $\langle e_{i,n}, e_{i,n}\rangle\to 1$ for any $i$ as $n\to\infty$.
 
 Observe that \ref{prop:vert-vert} implies that $K(e_i\wedge e_j)\cdot\vol\rightharpoonup 0$ if $i,j\le m-2$.
 
@@ -129,8 +118,17 @@ We can apply the induction hypothesis to the level surfaces of $f_{1,n}$.
 Since the curvature of convex hypersurface is larger that the curvature of the ambient manifold in the same direction we get the statement for $i\ne 1$.
 Applying the same argument for the level surfaces of $f_{2,n}$, we get the result.
 
-Now let us show that $K(e_{m-1}\wedge e_m)\cdot\vol_m\rightharpoonup \kappa\oplus h_{m-2}$...
+Now let us show that $K(e_{m-1}\wedge e_m)\cdot\vol^m\rightharpoonup \kappa\oplus h_{m-2}$.
+Consider the level sets $L_n$ defined by $f_{1,n}=c_1,\dots,f_{m-2,n}=c_{m-2}$.
+Note that $L_n\smooths{} \Cone(\theta)$.
+Applying the 2-dimensional case to $L_n$ and the coarea formula we get that curvatures of $L_n$ weakly converge to $\kappa\oplus h_{m-2}$.
+It remains to show that extra term in the Gauss formula for curvature of $L_n$ weakly converges to zero; 
+in other words the difference between curvature of $L_n$ and sectional curvature of $M_n$ in the direction tangent to $L_n$ weakly converges to zero.
 
-The same argument as in \ref{cor:Ricci} shows that $\langle\Rm(e_i,e_j)e_q,e_r\rangle\cdot\vol_m\rightharpoonup0$ is at least one of the indices $i,j,q,r$ is at most $m-2$.
+In dimension 3, the latter follows from the 3-dimensional case.
+To prove the general case we apply 3-dimensional case to the 3-dimensional level sets dafined by $m-3$ equations from the following $m-2$ equations defining $L$.
+(The same argument written is used in the proof of \ref{A^0} and it is written with more details.)
+
+The same argument as in \ref{cor:Ricci} shows that $\langle\Rm(e_i,e_j)e_q,e_r\rangle\cdot\vol^m\rightharpoonup0$ is at least one of the indices $i,j,q,r$ is at most $m-2$.
 The latter statement implies the result.
 \qeds

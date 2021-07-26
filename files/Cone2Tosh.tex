@@ -1,5 +1,29 @@
 \section{Singularities of codimension 2}\label{sec:codmi=2}
 
+Consider the measure $\omega$ on $A'$ defined by
+\[\omega=(2\cdot\pi-\theta)\cdot \vol^{m-2},\eqlbl{eq:omega}\]
+where $\vol^\alpha$ denotes $\alpha$-dimensional Hausdorff measure normalized as volume;
+that is, we assume that $m$-dimensional unit cube has unit $m$-dimensional Hausdorff measure.
+Let us extend $\omega$ to the whole space by setting $\omega(S)=\omega(S\cap A')$ for any Borel set $S\subset A$.
+
+The function $\theta$ can be extended to the whole $A$ by setting
+\[\theta(p)=2\cdot\pi\cdot \tfrac{\vol^{m-1} \Sigma_p}{\vol^{m-1} \mathbb{S}^{m-1}}.\]
+According to \cite[7.14]{BGP}, $\theta\:A\to \RR$ is upper-semicontinuous.
+The right-hand side of the last equality vanish in $A^\circ$.
+Further since $\vol^1(A'')=0$, the measure $\omega$ could be also defined as a measure on whole $A$ that is defined by~\ref{eq:omega}.
+
+Note that \ref{prop:3parts}(\ref{prop:3parts:codim2}) follows from the following more exact statement;
+it will be proved in this section.
+
+\begin{thm}{Proposition}\label{prop:3parts:codim2+}
+Let $\mathfrak m$ be one of two limit measures $\mathfrak m_i$ in \ref{prop:3parts}.
+Then
+\[\mathfrak m|_{A'}=\omega\cdot |d h_{1,n}\wedge\dots\wedge d h_{m,n}(u)|^2,\]
+where $u=u(p)$ is a choice of unit $(m-2)$-vector at any point $p\in A'$ in the vertical direction of $\T_p=\Cone(\theta)\times \RR^{m-2}$;
+\end{thm}
+
+
+
 \subsection{Gauss and mean curvature estimates}
 
 \begin{thm}{Theorem}\label{thm:extimage-of-G-and-H}
@@ -196,15 +220,15 @@ Then
 Let $v_n$ and $w_n$ are sequences of uniformly bounded, continuous vector fields on $M_n$.
 Suppose that $\langle v_n,u_n\rangle$ and $\langle w_n,u_n\rangle$ converge uniformly as $n\to \infty$ to some constants $a$ and $b$ respectively.
 Then 
-\[q(v_n,w_n)\rightharpoonup a\cdot b\cdot \haus_1\oplus \kappa,\]
-where $\kappa$ is the curvature measure on $A$ and $\haus_1$ is 1-dimensional Haudorff mearure on $\RR$.
+\[\Qm(v_n,w_n)\rightharpoonup a\cdot b\cdot \vol^1\oplus \kappa,\]
+where $\kappa$ is the curvature measure on $A$ and $\vol^1$ is 1-dimensional Haudorff mearure on $\RR$.
 
 \end{enumerate}
 
 \end{thm}
 
 \parit{Proof; (\ref{cor:Ricci:Ricci}).}
-Passing to a subsequence if nesessary, we can assume weak convergence $\langle \Ric u_n,u_n\rangle\cdot\vol_m$ to a measure $\mu$ on $A$.
+Passing to a subsequence if nesessary, we can assume weak convergence $\langle \Ric u_n,u_n\rangle\cdot\vol^m$ to a measure $\mu$ on $A$.
 Since $\sec M_n\ge -\tfrac1n$, we have that $\mu\ge 0$.
 Therefore it is sufficient to show that $\mu\le 0$.
 
@@ -253,15 +277,15 @@ for appropriately chosen fixed mollifiers $\sigma,\psi\:\RR\to \RR$.
 \parit{(\ref{cor:Ricci:vw}).}
 Since $G_n\rightharpoonup 0$, we get that curvature measure of level sets of $f_n$ weakly converges to the curvaure of $A$.
 It follows that 
-\[q(u_n,u_n)\rightharpoonup \haus_1\oplus \kappa.\]
+\[\qm(u_n,u_n)\rightharpoonup \vol^1\oplus \kappa.\]
 
 Suppose $v'_n\perp u_n$ for all $n$.
-Part (\ref{cor:Ricci:Ricci}) implies that  $q(v'_n,v'_n)\rightharpoonup 0$.
+Part (\ref{cor:Ricci:Ricci}) implies that  $\qm(v'_n,v'_n)\rightharpoonup 0$.
 
 Fix $t\in \RR$.
-Since the lower bound on sectional curvature of $M_n$ converges to $0$, any partial weak limit of $q(v'_n+t\cdot w_n,v'_n+t\cdot w_n)$ is nonnegative.
+Since the lower bound on sectional curvature of $M_n$ converges to $0$, any partial weak limit of $\qm(v'_n+t\cdot w_n,v'_n+t\cdot w_n)$ is nonnegative.
 It follows that 
-\[q(v'_n, w_n)\rightharpoonup 0\] for any sequence of fields $v'_n,w_n$ such that $v'_n\perp u_n$.
+\[\Qm(v'_n, w_n)\rightharpoonup 0\] for any sequence of fields $v'_n,w_n$ such that $v'_n\perp u_n$.
 
 Consider the vector fields $v_n',w_n'$ such that 
 \begin{align*}
@@ -273,8 +297,8 @@ w'_n&\perp u_n,
 &
 w_n&=b_n\cdot u_n+w_n'.
 \end{align*}
-Since $q$ is bilinear, we get that
-\[q(v_n,w_n)=q(v_n',w_n) + a_n\cdot [q(u_n,w_n')+ b_n\cdot q(u_n,u_n)].\]
+Since $\Qm$ is bilinear, we get that
+\[\Qm(v_n,w_n)=\Qm(v_n',w_n) + a_n\cdot [\Qm(u_n,w_n')+ b_n\cdot \Qm(u_n,u_n)].\]
 By assumption, that $a_n=\langle u_n,v_n\rangle $ and $b_n=\langle u_n,w_n\rangle$ uniformly converge to $a$ and $b$ respectively.
 Whence the statement follows.
 \qeds

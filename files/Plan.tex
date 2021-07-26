@@ -10,7 +10,7 @@ Recall that we can choose a small $r>0$ and finite set of points $A_i$ near $a_i
 \[f_i=\sum_{x\in A_i}\phi\circ\widetilde{\dist}_{a_i,r}\]
 is defined in a neighborhood $U\ni p$ and strongly concave.
 
-Since $r$ is small and $A_i$ is near $a_i$ we get that the functions $f_0, \dots, f_m$ are tight in $U$.
+Since $r$ is small and $A_i$ is near $a_i$ we get that the functions $f_0, \dots, f_m$ are tight in $U$; see the definition in \cite{petrunin-conc}.
 In particular, the map $U\to\RR^m$ defined by $x\mapsto (f_1(x),\dots,f_m(x))$ is a coordinate system in $U$.
 
 The presented construction can be naturally lifted to $M_n$.
@@ -18,23 +18,27 @@ As a result we obtain a chart of an open set $U_n\subset M_n$.
 Passing to smaller sets we may assume that $U$ and each $U_n$ is mapped to a fixed open set $\Omega\subset\RR^m$ for all large $n$.
 Further we assume that it holds for all $n$; it could be achieved by cutting off the beginning of the sequence $M_n$.
 
-The obtained collection charts $\bm{x}\: U_n\to \Omega$ and $\bm{x}\: U\to \Omega$ will be called \emph{common chart} at $p$.
-
-The part \ref{prop:3parts}(\ref{prop:3parts:reg}) will be reduced to certain estimates in one common chart that will be used to identify points of $\Omega$, $M_n$ and $A$.
+The obtained collection charts $U_n\to \Omega$ and $U\to \Omega$ will be called \emph{common chart} at $p$.
+It will be used to identify points of $\Omega$, $M_n$ and $A$; 
+in addition we will use it to identify the tangent spaces $\T M_n$ and $\T A$ with $\RR^m$.
+For example, we will use the same notation for function $M_n\to \RR$ and its composition $\Omega\to \RR$ with the inverse of the chart $U_n\to \Omega$.
 We will use index $n$ or skip it to indicate that the calculations are performed in $M_n$ or $A$ respectively.
 For example, given a function $f\:\Omega\to \RR$, we denote by $\nabla_nf$ the gradient of the function $f\circ \bm{x}$ in $M_n$.
 
 Recall that $A^\delta$ denotes the set of $\delta$-strained points in $A$.
-For a fixed common chart $\bm{x}$ we will use notation $A^\delta$ also for the image $\bm{x}(A^\delta)$.
+For a fixed common chart $\bm{x}$ we will use notation $A^\delta=A^\delta_\Omega$ also for the image $\bm{x}(A^\delta)$.
+
+The part \ref{prop:3parts}(\ref{prop:3parts:reg}) will be reduced to certain estimates in one common chart that
 
 \begin{thm}{Definitions}\label{def:delta-converge}
-Choose a common chart with range $\Omega\subset \RR^m$ for a smoothing $M_n\smooths{} A$.
+Let $M_n\smooths{} A$, $\dim A=m$;
+choose a common chart with range $\Omega\subset \RR^m$.
 
-A sequence of measures $\mathfrak n_n$ defined on $\Omega$ is called \emph{weakly delta-converging}
+A sequence of measures $(\mathfrak n_n)$ defined on $\Omega$ is called \emph{weakly delta-converging}
 if the following conditions hold:
 \begin{enumerate}
- \item Every subsequence of $\mathfrak n_n$ has a weak partial limit.
- \item For any $\eps>0$ there is $\delta>0$ such that for any two weak partial limits $\mathfrak m_1$ and $\mathfrak m_2$ of $\mathfrak n_n$ we have  
+ \item Every subsequence of $(\mathfrak n_n)$ has a weak partial limit.
+ \item For any $\eps>0$ there is $\delta>0$ such that for any two weak partial limits $\mathfrak m_1$ and $\mathfrak m_2$ of $(\mathfrak n_n)$ we have  
 \[|(\mathfrak m_1-\mathfrak m_2)(S)|<\eps\]
 for any Borel set $S\subset \Omega\cap A^\delta$.
 \end{enumerate}
@@ -50,26 +54,26 @@ for any $x\in \Omega\cap A^\delta$.
 
 \end{thm}
 
-Observe that if $f_n$ is uniformly delta-converging and $\mathfrak n_n$ is weakly delta-converging,
+\begin{thm}{Observation}\label{obs:delta-weak-uniform}
+If $f_n$ is uniformly delta-converging and $\mathfrak n_n$ is weakly delta-converging,
 then $f_n\cdot \mathfrak n_n$ is weakly delta-converging.
-
-The proof of \ref{prop:3parts}(\ref{prop:3parts:reg}) relies on the following lemma.
-
-\begin{thm}{Lemma}\label{A^0}
-Choose a common chart of a smoothing $M_n\smooths{} A$ and a component $\Rm_{ijsr,n}$ the curvature tensor of $M_n$.
-Then $\Rm_{ijsr,n}\cdot \vol$ is a weakly  delta-converging sequence of measures.
 \end{thm}
+
+
+
+
 
 The following proposition lists the properties of the common charts.
 
 \begin{thm}{ Proposition}\label{Prop:chart}
-Suppose $\bm{x}_n\: U_n\to \Omega$ and $\bm{x}\: U\to \Omega$ is a common chart of a smoothing $M_n\smooths{} A$.
+Let $M_n\smooths{} A$, $\dim A=m$, and
+$\bm{x}\: U_n\zz\to \Omega$ and $\bm{x}\: U\zz\to \Omega$ is a common chart.
 
 \begin{enumerate}[(a)]
 
 %\addtocounter{enumi}{2}
 \item\label{obtuse}
-The coordinates $x_i$ are tight concave function in $M_n$ and $A$;
+The coordinates functions $x_i$ are tight concave function in $M_n$ and $A$;
 in addition, $x_i$ smooth in $M_n$.
 
 \item The charts are bi-Lipschitz  with uniform  bi-Lipschitz 
@@ -79,19 +83,13 @@ constants.
 Denote by $S_\Omega$ the image of singular locus of $A$ in $\Omega$.
 There exists a continuous Riemannian metric
 $g$ on $\Omega\setminus S_\Omega$ which locally 
-realizes distance on $U$, where
-$S_\Omega=\mathfrak X(U\cap A\setminus A^\circ)$.
-This metric tensor 
-(defined almost everywhere on $\Omega$)
-is of bounded variation
+realizes distance on $A$.
+Moreover, $g$ has bounded variation
 on $\Omega$. 
 
 \item\label{metricseq}
-Let $g_{ij,n}$ be coordinates of metric tensor of $M_n$ 
-in the chart $\X_n$. 
-Then
-$(g_{ij,n}, g_{ij})\in BV_0^{seq}(\Omega, S_\Omega)$.
-Moreover, $\det(g_{ij,n})$ is bounded and bounded away from 0.
+$(g_{ij,n}, g_{ij})\in BV_0^{seq}(\Omega, S_\Omega)$, where $g_n$ is the metric tensor of $M_n$ on $\Omega$.
+Moreover, $\det(g_n)$ is bounded and bounded away from 0.
 
 
 \item\label{funktioninchart}
@@ -101,7 +99,79 @@ of concave smooth functions
 $f_n:B(p_n,r_n)\to\R$ 
 which roughly $C^1$-converges to  $f:B(p,r)\to\R$ we have for its coordinate
 expression
-$(f_n\circ\X_n^{-1}, f\circ\X^{-1})\in DC_0^{seq}(\Omega, S_\Omega)$
+$(f_n\circ\bm{x}^{-1}, f\circ\bm{x}^{-1})\in DC_0^{seq}(\Omega, S_\Omega)$
 
 \end{enumerate}
 \end{thm}
+
+\subsection{Test convergence}
+
+\begin{thm}{Lemma}\label{lem:test-delta}
+Let $M_n\smooths{} A$, $\dim A=m$;
+choose a common chart with range $\Omega\subset \RR^m$.
+Let $f_n\: M_n\to\RR$ be a sequence of test function such that $f_n\testto f\:A\to \RR$.
+Then 
+\begin{enumerate}[(i)]
+\item\label{lem:test-delta-f} $f_n$ uniformly converges to $f$ on $\Omega$
+\item\label{lem:test-delta|nabla|} $|\nabla f_n|$ uniformly delta-converges on $\Omega$
+\item\label{lem:test-delta-partial} $\partial_if_n$ are delta-converging to the corresponding components of $\partial_i f$ in $\Omega$;
+here $\partial_1,\dots,\partial_m$ denote the partial derivatives on $\Omega\subset \RR^m$.
+\end{enumerate}
+
+\end{thm}
+
+\parit{Proof.} Part (\ref{lem:test-delta-f}) is trivial; let us show part (\ref{lem:test-delta-partial}).
+
+Note that for any point $p\in A$ and almost all points $y,z\in A$ the following holds:
+for any sequence of points $p_n,y_n,z_n\in M_n$ such that $p_n$, $y_n$, and $z_n$ converge to $p$, $y$, and $z$ respectively we have
+\[\measuredangle \hinge{p_n}{y_n}{z_n}\to \measuredangle \hinge{p}{y}{z}.\]
+
+Note that if $\T_p$ is Euclidean, then the latter implies that 
+\[\langle d_p\widetilde\dist_{y_n,r},d_p\widetilde\dist_{z_n,r}\rangle\to \langle d_p\widetilde\dist_{y,r},d_p\widetilde\dist_{z,r}\rangle\]
+for \emph{any} choice of sequences $p_n$, $y_n$, and $z_n$ that converge to $p$, $y$, and $z$ respectively.
+The later implies that 
+\[\langle d_pf_n,d_ph_n\rangle\to \langle d_pf,d_ph\rangle\]
+if $f_n,h_n\:M_n\to\RR$ are sequences of test functions such that $f_n\testto f$ and $h_n\testto h$.
+
+Note that the partial derivatives $\partial_if_n$ at a regular point $p$ can be expressed in terms of $\langle d_pf_n,d_px_j\rangle_n$ and $\langle d_px_j,d_px_k\rangle_n$, where $x_1,\dots,x_m$ are the coordinate functions of the chart.
+Therefore we get that $\partial_if_n$ converge at any regular point.
+
+Finally observe that if $p$ is a $\delta$-strained point for sufficiently small $\delta>0$,
+then the calculations above go thru with a small error.
+Whence the statement follows.
+
+\parit{(\ref{lem:test-delta|nabla|}).}
+Note that $|\nabla f_n|$ can be expressed from $\langle d_px_j,d_px_k\rangle_n$ and $\partial_if_n$.
+Since these quantities delta-converging so is $|\nabla f_n|$.
+\qeds
+
+\subsection{Key lemma}
+
+The proof of the following statement will take the remaining part of Section \ref{sec:ref}.
+Here we will show that \ref{prop:3parts}(\ref{prop:3parts:reg}) follows from this lemma.
+
+\begin{thm}{Key lemma}\label{A^0}
+Choose a common chart of a smoothing $M_n\smooths{} A$.
+Suppose that $\Omega\subset \RR^m$ is the range of the common chart.
+Choose a component $\Rm_{ijsr,n}$ the curvature tensor of $M_n$ in $\Omega$.
+Then $\Rm_{ijsr,n}\cdot \vol^m_n$ is a weakly delta-converging sequence of measures.
+\end{thm}
+
+\parit{Proof of \ref{prop:3parts}(\ref{prop:3parts:reg}) modulo \ref{lem:test-delta} and \ref{A^0}.}
+Recalled that components of $\qm_n$ can be expressed from the components of $\Rm_n$.
+Therefore the key lemma implies delta-convergence of components of $\qm_n$.
+
+Choose sequences of test functions $f_{1,n},\dots,f_{m-2,n},h_{1,n},\zz\dots,h_{m-2,n}$ on $M_n$ that test-converge to $f_{1},\dots,f_{m-2},h_{1},\dots,h_{m-2}\:A\to \RR$.
+By \ref{lem:test-delta}, we have delta-convergence of the partial derivatives $\partial_if_{j,n}$ and 
+$\partial_ih_{j,n}$ to $\partial_if_{j}$ and 
+$\partial_ih_{j}$ respectively.
+The measures $\qm_n(f_{1,n},\dots,f_{m-2,n},h_{1,n},\zz\dots,h_{m-2,n})$ 
+as a linear combination of the components of $\qm_n$ with coefficients that expressed in terms of $\partial_if_{j,n}$.
+By \ref{obs:delta-weak-uniform}, it follows that the sequence of measures 
+\[\mathfrak m_n=\qm_n(f_{1,n},\dots,f_{m-2,n},h_{1,n},\zz\dots,h_{m-2,n})\]
+is delta-converging.
+
+Finally recall that 
+\[A^\circ=\bigcap_{\delta>0}A^\delta.\]
+Therefore delta-convergence of $\qm_n(f_{1,n},\dots,f_{m-2,n},h_{1,n},\zz\dots,h_{m-2,n})$ implies \ref{prop:3parts}(\ref{prop:3parts:reg}).
+\qeds

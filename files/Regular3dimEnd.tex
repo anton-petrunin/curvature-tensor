@@ -35,7 +35,7 @@ We can choose 6 sequences of test concave functions $f^1_n\testto f^1,\dots, f^6
 $\nabla f^1,\zz\dots,\nabla f^6$ are sufficiently close to
 $w_1,\dots,w_6$.
 We can assume $U$ to be sufficiently small, so by Proposition~\ref{strconvergence}
-the measures $\Str(\nabla f^k_n, \nabla f^k_n)\cdot\vol_n$ weakly delta-converges
+the measures $\Str_n(\nabla f^k_n, \nabla f^k_n)\cdot\vol^3_n$ weakly delta-converges
 on $U\cap A^\delta$ for $k=1,\dots,6$.
 
 By \ref{obs:genpos}, the functions $s_i$ are Lipschitz in a neighborhood of $(w_1,\dots,w_6)\zz\in (\R^3)^6$.
@@ -45,22 +45,22 @@ Applying \ref{Qij}, we get that
 &=
 \sum_{k=1}^6 s_k(\nabla f^1_n,\dots \nabla f^6_n)\cdot\Str(\nabla f^k_n,\nabla f^k_n).
 \end{align*}
-Hence the measure $\Str_n(e_{i},e_{j})\cdot\vol_n$ are weakly delta-converging for all $i$ and $j$,
+Hence the measure $\Str_n(e_{i},e_{j})\cdot\vol^3_n$ are weakly delta-converging for all $i$ and $j$,
 where $e_1,\dots,e_3$ is the standard basis in $\RR^3$.
 
 By Lemma~\ref{lem:scalprod}, the sequence metric tensors $g_n$ of $M_n$ on $\Omega$ is uniforly delta-converging.
 Since the following equality
 \[\operatorname{Tr}\Str_n=g^{ij}_n\Str_n(e_{i},e_{j})\cdot \sqrt {\det (g_{ij,n})}\]
-holds almost everywhere, we get that the sequence of measures $\operatorname{Tr}\Str_n\cdot\vol_n$ is weakly delta-converging.
+holds almost everywhere, we get that the sequence of measures $\operatorname{Tr}\Str_n\cdot\vol^3_n$ is weakly delta-converging.
 
 Note, that for $3$-dimensional manifold we have
 $$q_n(v,v)=\Str_n(v,v)-|v|^2\Tr \Str_n/4.\eqlbl{Q}$$
-Hence the measures $q_n(e_i, e_j)\cdot\vol_3$ are weakly delta-converging for all $i$ and $j$.
+Hence the measures $q_n(e_i, e_j)\cdot\vol^3_n$ are weakly delta-converging for all $i$ and $j$.
 
 Finally, according to ??? the components $\alpha^k_{n,i}$ of $\nabla f^k_n$ are uniformly delta-converging.
 The result follows since
-\[q(\nabla f^k_n, \nabla f^k_n)=
-\sum \alpha^k_{n,i} \alpha^k_{n,j} q(e_{i}, e_{j})\]
+\[\qm(f^k_n, f^k_n)=
+\sum_{i,j} \alpha^k_{n,i}\cdot \alpha^k_{n,j}\cdot \qm(e_{i}, e_{j})\]
 almost everywhere, here $e_1,\dots,e_3$ denotes the standard basis in $\RR^3$.
 \qeds
 
@@ -74,7 +74,7 @@ choose a common chart around $p$ and use it to identify points in $M_n$ and $A$ 
 The following observation plays a key role in the proof.
 
 \begin{thm}{Observation}
-Consider the sequence of coordinate level sets $\Omega=L_m\supset L_{m-1}\supset\dots\supset L_0$, 
+Consider the sequence of coordinate level sets $\Omega\zz=L_m\supset L_{m-1}\supset\dots\supset L_0$, 
 where $L_i=L_i(c_{i+1},\dots,c_m)$ is defined by setting the last $m-i$ coordinates to be $c_{i+1},\dots,c_m$ respectively.
 Then the level sets $L_i$ is a smooth convex hypersurface in $L_{i+1}$ in each $M_n$;
 in particular each $L_i$ has sectional curvature bounded below by $-1$.
