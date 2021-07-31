@@ -1,14 +1,14 @@
-\section{Formulation}
+\subsection{Formulation}
   
 \begin{thm}{Main theorem}\label{main}
-Let $M_n\smooths{} A$ be a smoothing of Alexandrov space $A$.
-Then there is a measure-valued tensor $\qm$ on $A$ such that $\qm_n\rightharpoonup \qm$, where $\qm_n$ denotes the dual measure-valued curvature tensor of $M_n$.
+Given a smoothing $M_n\smooths{} A$,
+there is a measure-valued tensor $\qm$ on $A$ such that $\qm_n\rightharpoonup \qm$, where $\qm_n$ denotes the dual measure-valued curvature tensor of $M_n$.
 \end{thm}
 
-\section{Plan of the proof}
+\subsection{Plan of the proof}
 
 Let $M$ be an $m$-dimensional Riemannian manifold.
-Denote by $[K_{max}(x)$ the maximal sectional curvature at $x\in M$.
+Denote by $K_{max}(x)$ the maximal sectional curvature at $x\in M$.
 The following statement is a direct corollary of the main result in \cite{petrunin-SC}:
 
 \begin{thm}{Corollary}\label{cor:Kmax}
@@ -21,13 +21,13 @@ $$\int_{B(p,r)_M} K_{max}\le \const(m)\cdot r^{m-2}.$$
 
 \end{thm}
 
-Observe that there is another constant $\const(m)$ such that 
+Observe that there is another constant $\const'(m)$ such that 
 \[
 \begin{aligned}
 |\Qm_n(X_1,&\dots,X_{m-2},Y_1,\dots,Y_{m-2})|
 \\
 &\le 
-\const(m)\cdot K_{max}\cdot|X_1\wedge\dots\wedge X_{m-2}|\cdot |Y_1\wedge\dots\wedge Y_{m-2}|
+\const'(m)\cdot K_{max}\cdot|X_1\wedge\dots\wedge X_{m-2}|\cdot |Y_1\wedge\dots\wedge Y_{m-2}|
 \end{aligned}
 \eqlbl{q=<K}
 \]
@@ -39,13 +39,14 @@ $f_{i,n}\testto f_i\:A\to \RR$ and $g_{i,n}\testto g_i\:A\to \RR$ the sequence o
 $\qm_n(f_{1,n},\dots f_{m-2,n},g_{1,n},\dots, g_{m-2,n})$ has a weakly converging subsequence.
 \end{thm}
 
-By Perelman's stability theorem, the space $A$ in the claim is a topological manifold;
-in particular, $A$ has no boundary.
-Together with the claim, it implies that the main theorem \ref{main} follows from the following statement.
+By Perelman's stability theorem, the space $A$ in the claim is a topological manifold.
+In particular, $A$ has no boundary;
+in other words the singular set in $A$ has codimension at least 2.
+Together with the claim, it implies that the main theorem \ref{main} follows from the following statement:
 
 \begin{thm}{Proposition}\label{prop:3parts}
 Let $M_n\smooths{} A$ and $\dim A=m$.
-Suppose $h_{1,n},\dots, h_{m-2,n}\:M_n\to\RR$ is a sequence of test functions
+Suppose $h_{1,n},\dots, h_{m-2,n}$ are test functions on $M_n$ 
 such that $h_{i,n}\zz\testto  h_i\:A\to \RR$ for each $i$.
 Let $\mathfrak m_1$ and $\mathfrak m_2$ be two measures on $A$ that are a weak partial limits of the sequence of measures $\qm_n( h_{1,n},\zz\dots,  h_{m,n}, h_{1,n},\zz\dots,  h_{m,n})$ on $M_n$.
 Then the following statements hold:

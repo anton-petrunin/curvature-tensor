@@ -1,6 +1,6 @@
-\part{Formulations}
+\section{Formulations}
 
-In this part we give necessary definitions for a precise formulation of the main theorem.
+In this section we give necessary definitions for a precise formulation of the main theorem.
 For simplicity  we will always assume that the lower
 curvature bound in main theorem is  $-1$;
 applying rescaling, we can get the general case.
@@ -9,23 +9,23 @@ We denote by
 $\Al^m$ the class of $m$-dimensional Alexandrov's spaces
 with curvature $\ge -1$.
 
-Suppose a sequence $A_n\in \Al^m$ that GH-converges without collapse to 
+Suppose a sequence $A_n\in \Al^m$ GH-converges without collapse to 
 $A\in \Al^m$.
 Denote by $a_n\:A_n\to A$ the Hausdorff approximations.
-By Perelman's stability theorem (see \cite{PerStab}, \cite{KapStab}) we can (and will) assume that $a_n$ is a homeomorphism for all sufficiently large $n$.
+By Perelman's stability theorem (see \cite{PerStab}, \cite{KapStab}) we can (and will) assume that $a_n$ is a homeomorphism for every sufficiently large $n$.
 
 We say that $A\in \Al^m$ is \emph{smoothable}
-if it can be presented as a Gromov--Hausdorff limit by a non-collapsing sequence of Riemannian manifolds $M_n$ with $\sec M_n\ge-1$.
+if it can be presented as a Gromov--Hausdorff limit of a non-collapsing sequence of Riemannian manifolds $M_n$ with $\sec M_n\ge-1$.
 Given a smoothable Alexandrov space $A$,
 a sequence of Riemannian manifolds $M_n$ as above
-together with a sequence of homeomorphism approximations $a_n\:M_n\to A$
+together with a sequence of approximations $a_n\:M_n\to A$
 will be called \emph{smoothing} of $A$
 (briefly $M_n\smooths{} A$, or $M_n\smooths{a_n} A$).
-By Perelman's stability theorem that any smoothable Alexandrov space is a topological manifold without boundary.
+By Perelman's stability theorem any smoothable Alexandrov space is a topological manifold without boundary.
 
-\section{Weak convergence of measures}
+\subsection{Weak convergence of measures}
 
-In this section we give formal definition of weak convergence of measures.
+In this subsection we give a formal definition of weak convergence of measures.
 For more detailed definitions and terminology we refer to
 \cite{GMS}.
 
@@ -42,7 +42,7 @@ Suppose $A_n\GHto A$ with Hausdorff approximations $a_n\:A_n\to A$ and
 $\mathfrak m_n$ is a measure on $A_n$.
 We say that $\mathfrak m_n$ weakly converge to a measure $\mathfrak m$ on $A$ (briefly $\mathfrak m_n\rightharpoonup \mathfrak m$) if the pushforwards $\mathfrak m_n'$ of $\mathfrak m_n$  by the Hausdorff approximations $a_n\:A_n\to A$ weakly converge to 
 $\mathfrak m$.
-If the condition $\langle \mathfrak m_n'|f\rangle \to \langle \mathfrak m|f\rangle $ holds for only for functions $f$ with support in an open subset $\Omega\subset A$, then we say that $\mathfrak m_n$ \emph{weakly converges to $\mathfrak m$ in $\Omega$}.
+If the condition $\langle \mathfrak m_n'|f\rangle \to \langle \mathfrak m|f\rangle $ holds only for functions $f$ with support in an open subset $\Omega\subset A$, then we say that $\mathfrak m_n$ \emph{weakly converges to $\mathfrak m$ in $\Omega$}.
 
 Equivalently, the weak convergence can be defined using uniform convergence of functions.
 We say that  a sequence $f_n\in C_c(A_n)$
@@ -57,16 +57,16 @@ we have $\langle \mathfrak m_n|f_n\rangle \to \langle \mathfrak m|f\rangle $.
 
 %We will denote by $\langle h|f\rangle $ the value of $h\in C^*(A)$ on $f\in C(A)$.
 
-\section{Test functions and their convergence}
+\subsection{Test functions and their convergence}
 
-In this section we introduce a class of \emph{test functions} that will be used to define  a notion of measure-valued tensor.
+In this subsection we introduce a class of \emph{test functions} that will be used to define  a notion of measure-valued tensor.
 
-Let $A\in \Al^m$, distance between $x,y\in A$ will be denoted by $|x-y|$;
+Let $A\in \Al^m$, distance between points $x,y\in A$ will be denoted by $|x-y|$;
 we will denote by $\dist_x\:A\to \RR$ the distance function $\dist_x\:y\mapsto |x-y|$.
 
 Suppose $A_n, A\in \Al^m$ and  $A_n\GHto A$.
-Then any distance function $\dist_p\:A\zz\to\RR$ can be lifted to $A_n$;
-we have to choose a convergent sequence $p_n\to p$ and take the
+Then any distance function $\dist_p\:A\zz\to\RR$ can be \emph{lifted} to $A_n$;
+it means that we can choose a convergent sequence $p_n\to p$ and take the
 sequence $\dist_{p_n}$.
 
 Choose $r>0$ and $p\in A$.
@@ -78,24 +78,25 @@ choosing some  sequence $A_n\ni p_n\to p\in A$.
 
 We say that $f$ is a \emph{test function} if it can be expressed by the formula
 $$f=\varphi( \widetilde{\dist}_{p_1,r_1}, \dots,   \widetilde{\dist}_{p_N,r_N}),$$
-where $\varphi:[0,\infty)^N\to\R$ is a $C^1$-smooth function.
-If for some sequences of points $A_n\ni p_{i,n}\to p_i\in A$ and $C^1$-smooth functions $\varphi_n$ that $C^1$-converge to $\varphi$ we have
+where $\varphi:[0,\infty)^N\to\R$ is a $C^1$-smooth function with compact support.
+If for some sequences of points $A_n\ni p_{i,n}\to p_i\in A$ and $C^1$-smooth functions $\varphi_n$ that $C^1$-converge to $\varphi$ with compact support we have
 $$f_n=\varphi_n( \widetilde{\dist}_{p_{1,n},r_1},\dots,   \widetilde{\dist}_{p_{N,n},r_N}),$$
 we will say that $f_n$ is a test sequence converging to $f$ and write $f_n\testto f$.
 
 \parbf{Remarks.}
 Test functions form an algebra.
-Further, a partition of unity for any open cover can be found from test functions.
 
-On a smooth Riemannian manifold test functions
-are exactly $C^1$-smooth functions.
+For any open cover of Riemannian manifold, there is a partition of unity with test functions.
+
+On a smooth complete Riemannian manifold test functions
+are exactly $C^1$-smooth functions with compact support.
 Indeed, around any point one can take a
 smoothed distance 
 coordinate chart, express $C^1$-smooth function in these 
-coordinates and then apply partition of unity. 
+coordinates, and then apply partition of unity. 
  
  
-\section{Tensors}
+\subsection{Tensors}
 
 
 
@@ -103,8 +104,9 @@ Let $A\in \Al^m$ and $\mathfrak M(A)$
 denotes the set of signed Radon measures on $A$.
 A \emph{measure-valued vector field} $\mathfrak{v}$  on $A$
 is a  continuous (with respect to test convergence) linear map
-$\mathfrak{v}$ that takes a test function, spits a measure in $\mathfrak M(A)$ and satisfies the
-chain rule;
+$\mathfrak{v}$ that takes a test function,
+spits a measure in $\mathfrak M(A)$,
+and satisfies the \emph{chain rule};
 that is, for any collection of test functions $f_1,f_2,\dots,f_k$
 and a $C^1$-smooth function $\phi\:\RR^k\to\RR$ we have
 $$\mathfrak{v}(\phi(f_1,f_2,\dots,f_n))
@@ -113,21 +115,20 @@ $$\mathfrak{v}(\phi(f_1,f_2,\dots,f_n))
 where $\partial_i$ denotes partial derivatives in $\RR^n$.
 
 Analogously, we define (contravariant) measure-valued tensor field.
-A \emph{measure-valued tensor field} $\mathfrak{t}$ of valence $k$ on $A$ is a multilinear map that takes $k$ test functions and spits a measure in $\mathfrak M(A)$ and satisfies the chain rule in each of its arguments.
+Namely, a \emph{measure-valued tensor field} $\mathfrak{t}$ of valence $k$ on $A$ is a multilinear map that takes $k$ test functions, spits a measure in $\mathfrak M(A)$, and satisfies the chain rule in each of its arguments.
 
-
-If $A$ is an $m$-dimensional Riemannian manifold measure-valued vector field $\mathfrak{v}$  in coordinates $x_1,\dots,x_m$
-is defined by $m$ components, these are measures $(\vv(x_1),\dots,\vv(x_m))$;
+Suppose that $x_1,\dots,x_m$ are local coordinates in an $m$-dimensional Riemannian manifold.
+Then measure-valued vector field $\mathfrak{v}$ can be described by $m$ components, these are measures $(\vv(x_1),\dots,\vv(x_m))$;
 these components transform by contravariant rule under change of coordinates.
 B the definition of measure-valued vector field, we get
 \[\mathfrak{v}(f)=\sum_{i}\frac{\partial f}{\partial x_i}\cdot \vv(x_i).\]
-Similarly for arbitrary $k$ measure-valued tensor field of valence $k$ is defined by $m^k$ components 
-$\mathfrak{t}(x_{i_1},\dots,x_{i_k})$
-and
+Similarly, for arbitrary $k$, a measure-valued tensor field of valence $k$ is defined by $m^k$ components 
+$\mathfrak{t}(x_{i_1},\dots,x_{i_k})$; namely,
 \[\mathfrak{t}(f_1,\dots,f_k)=\sum_{i_1,\dots,i_k}
 \frac{\partial f_1}{\partial x_{i_1}}\cdot 
  \cdots \cdot\frac{\partial f_k}{\partial x_{i_k}}
 \cdot \mathfrak{t}(x_{i_1},\dots,x_{i_k}).\]
+
 If one multiplies components of a smooth contravariant tensor field by the volume, we obtain a measure-valued tensor field.
 
 Let us mention some basic properties that follow 
@@ -138,16 +139,16 @@ then $\mathfrak{t}(f_1,\dots,f_k)=0.$
 Let us show it for $k=1$; the general case can be done the same way.
 Note that the chain rule implies the
 product rule:
-$\mathfrak{v}(fg)=\mathfrak{v}(f)g+f\mathfrak{v}(g)$.
+\[\mathfrak{v}(fg)=\mathfrak{v}(f)g+f\mathfrak{v}(g).\]
 Therefore 
-\[\vv(1)=\vv(1^2)=2\vv(1)=0
+\[\vv(1)=\vv(1^2)=2\vv(1)=0,
 \quad\text{and hence}\quad
 \vv(c\cdot 1)=c\cdot\vv(1)=0.
 \]
 
 The notion of vector-valued tensor field is local;
 that is, if $f_i|_{U}=\operatorname{const}$
-for some open $U\subset A$ and some $i\in\{1,\dots,k\}$ 
+for some open $U\subset A$ and some $i\in\{1,\dots,k\}$,
  then $\mathfrak{t}(f_1,\dots,f_k)|_U=0.$
 By above it suffices to show
 for the case when $\operatorname{const}=0$.
@@ -159,12 +160,6 @@ By the product rule,
  $0=\vv(fg)=f\vv(g)+g\vv(f)$;
  hence 
 $\vv(f)|_K=0$.
- 
-
-
-
-
-Now we define a weak convergence of measure-valued tensor field.
 
 \begin{rdef} {Definition}
 Let $M_n\smooths{} A$ be a smoothing.
@@ -172,18 +167,18 @@ Assume that $\mathfrak{t}_n$ is a sequence of %uniformly bounded
  measure-valued tensor fields on $M_n$  and $\mathfrak{t}$ is a
 measure-valued tensor field on $A$,
 all of the same valence $k$.
-We say that $\mathfrak{t}_n$ weakly converges to  $\mathfrak{t}$
+We say that $\mathfrak{t}_n$ \emph{weakly converges} to  $\mathfrak{t}$
 (briefly $\mathfrak{t}_n\rightharpoonup\mathfrak{t}$) if for arbitrary $k$
 test sequences 
 $f_{i,n}\testto f_i, i=1,\dots,k$, the measures $\mathfrak{t}_n(f_{1,n},f_{2,n},\dots,f_{k,n})$ weakly converge to $\mathfrak{t}(f_{1},f_{2},\dots,f_{k})$.
 \end{rdef}
 
-\section{Dual curvature tensor}
+\subsection{Dual curvature tensor}
 
 The curvature of Riemannian manifold $M$ usually described by tensor of valence 4 that will be denoted by $\Rm$.
 We will use \emph{dual curvature tensor} --- 
 a curvature tensor written in a dual form that is denoted by $\Qm$;
-it is a tensor field of valence $2\cdot(m-2)$ defined the following way.
+it is a tensor field of valence $2\cdot(m-2)$ defined the following way:
 
 Set
 \begin{multline*}
@@ -208,18 +203,18 @@ $$\Qm(X_1,\dots,X_{m-2},X_1,\dots,X_{m-2})
 |X_1\wedge\dots \wedge X_{m-2}|^2\cdot K_\sigma, $$
 where $K_\sigma$ is the sectional curvature of $M$ 
 on a plane $\sigma$ orthogonal to $(m-2)$-vector
-$X_1(x)\wedge\zz\dots \wedge X_{m-2}$.
-Hence, the sectional curvatures of $M$ and therefore its curvature tensor can  be computed using the tensor
+$X_1\wedge\zz\dots \wedge X_{m-2}$.
+Hence, the sectional curvatures of $M$ and therefore its curvature tensor $\Rm$ can  be computed using the tensor
 $\qm$.
-Also the density $\qm$ is defined by the sectional curvature,
-because of the symmetry:
+Since we have symmetry
 $$\qm(f_1,\dots,f_{m-2},g_1,\dots,g_{m-2})=
-\qm(g_1,\dots,g_{m-2},f_1,\dots,f_{m-2}).$$
+\qm(g_1,\dots,g_{m-2},f_1,\dots,f_{m-2}),$$
+the density of $\qm$ is defined by the sectional curvature.
 Therefore measure tensor $\qm$
 gives an equivalent description of curvature of Riemannian manifold.
 
 As you will see further, the described dual form of curvature tensor behaves better in the limit;
-in particular, it is possible to formulate ??? 
+in particular, it makes possible to formulate \ref{prop:3parts:codim2+}.
 
 In the 2-dimensional case the valence of $\qm$ is $0$;
 in this case $\qm$ coincides with the curvature measure --- the standard way to describe curvature of surfaces, 
@@ -228,18 +223,18 @@ For a smooth surface the density of this curvature measure with respect to the a
 is its Gauss curvature.
 The statement of our main theorem in this case
 is well-known \cite[Theorem 8.4.2]{R}, \cite{AZ};
-that is, curvature measures are stable under smoothing.
+that is, \emph{curvature measures are stable under smoothing}.
 
 
-\section{Partition into three sets}
+\subsection{Partition into three sets}
 
-Let $A$ be a $m$-dimensional Alexandrov space without boundary. 
+Let $A$ be an $m$-dimensional Alexandrov space without boundary. 
 Let us partition $A$ into three subsets $A^\circ$, $A'$ and $A''$:
 \begin{itemize}
 \item $A^\circ$ is the set of regular points in $A$; that is, the set of points with tangent cone isometric to the Euclidean space.
 \item $A'$ --- the set of points in $A\backslash A^\circ$ with a isometric copy of $\RR^{m-2}$ in their tangent space;
 in other words, for any $p\in A'$, the tangent space $\T_p$ is isometric to the product $\Cone(\theta)\times\RR^{m-2}$ where $\Cone(\theta)$ denotes the two-dimensional cone with total angle $\theta=\theta(p)<2\cdot \pi$.
-\item $A''$ --- the remaining set; this is the set of points with tangent space that does not an isometric copy of $\RR^{m-2}$.
+\item $A''$ --- the remaining set; this is the set of points with tangent space that does not contain an isometric copy of $\RR^{m-2}$.
 \end{itemize}
 According to \cite{li-naber}, $A'$ is countably $(m-2)$-rectifiable and $A''$ is a countably $(m-3)$-rectifiable. 
 

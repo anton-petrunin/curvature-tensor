@@ -7,18 +7,16 @@ for a more precise formulation see \ref{main}.
 Let $\kappa$ be a real number and 
 $M_n$ be a sequence of $m$-dimensional Riemannian manifolds with sectional curvature bounded below by~$\kappa$.
 Assume that $M_n$ converges to an Alexandrov space $A$ of the same dimension.
-Then the curvature tensors of $M_n$ converge weakly to a measured-valued tensor on $A$.
+Then the curvature tensors of $M_n$ weakly converge to a measured-valued tensor on $A$.
 \end{thm}
 
 This result is new and nontrivial even in the case if the limit space is a Riemannian manifold.
 
+The second statement in the following corollary requires no new definitions.
+It looks like a direct corollary of the main theorem, 
+and indeed, it follows from its proof, but strictly speaking it can not be deduced directly from the main theorem alone.
 
-The following statement looks like a direct corollary of the main theorem, 
-and indeed, it follows from its proof, but strictly it can not deduce it directly from its statement.
-Unlike the main theorem, the following corollary requires no new definitions.
- 
-Let us denote by $\Sc$ the scalar curvature of Riemannian manifold.
-
+Suppose $\Sc$ denotes the scalar curvature of Riemannian manifold and $\vol^m$ the $m$-dimensional volume; that is $m$-dimensional Hausdorff measure calibrated so that unit $m$-dimensional cube has unit measure.
 
 \begin{thm}{Corollary}\label{cor:Sc}
 In the assumption of the main theorem,
@@ -29,38 +27,56 @@ In particular, if $A$ is compact, then the sequence
 converges.
 \end{thm}
 
+The following corollary seems to be trivial, but it is not.
+
+\begin{thm}{Corollary}
+Let $\mathfrak{K}$ be a convex closed subset of curvature tensors on $\RR^m$ 
+such that 
+all sectional curvatures of tensors in $\mathfrak{K}$ are at least $-1$.
+Assume that $\mathfrak{K}$ is invariant with respect to the rotations of $\RR^m$.
+(For example, one can take $\mathfrak{K}$ the set of all curvature tensors with nonnegative curvature operator.)
+
+Suppose $M_n$ is a sequence of $m$-dimensional Riemannian manifolds that converges to a Riemannian manifold $M$ of the same dimension.
+Assume that all curvature tensors of $M_n$ belong to $\mathfrak{K}$ for any $n$,
+then the same holds for the curvature tensors of $M$.
+\end{thm}
+
+
 
 \paragraph{Remarks.}
 The limit measure $\mathfrak m$ in \ref{cor:Sc} has some specific properties;
-let us describe some of them:
-The measure $\mathfrak m$ vanish on any subset of $A$ with vanishing $(m-2)$-dimensional Hausdorff measure.
-In particular, the $\mathfrak m$-measure of the set of singularities
-of codimension $\ge 3$ vanishes.
-The measure can be explicitely described 
+let us describe couple of them:
+\begin{itemize}
+\item The measure $\mathfrak m$ vanish on any subset of $A$ with vanishing $(m-2)$-dimensional Hausdorff measure.
+In particular, the $\mathfrak m$-measure of the set of singularities of codimension 3.
+
+\item The measure can be explicitely described 
 on the set $A'$ of singularities
 of codimension $2$. That is, the set $A'\subset A$
 contains all points $x$ with tangent space
-$T_xA=\R^{m-2}\times \C$
-where $\C$ is a $2$-dimensional cone
-with the total angle $2\pi-\omega(x)$.
+$\T_xA=\R^{m-2}\times \Cone(\theta)$,
+where $\Cone(\theta)$ denotes a $2$-dimensional cone
+with the total angle $\theta=\theta(x)<2\cdot\pi$.
 Then 
-$$\mathfrak m|_{A'}=\omega\cdot \vol^{m-2},$$
-where $\vol^{m-2}$ denotes $(m-2)$-dimensional Hausdorff measure;
+$$\mathfrak m|_{A'}=(2\cdot \pi-\theta)\cdot \vol^{m-2};$$
 the latter follows from \ref{prop:3parts:codim2+}.
+\end{itemize}
 
 
 Note that the limit tensor of the sequence depends only on $A$ and does not depend on the choice of the sequence $M_n$.
 Indeed, if for another sequence $M_n'$ satisfying the assumptions of the corollary and converging to the same Alexandrov space $A$ we would get a different limits, 
 then a contradiction would occur for the alternated sequence $M_1,M_1',M_2,M_2',\dots$. This allows to define a curvature
-tensor for every smoothable Alexandrov space. 
+tensor for every \emph{smoothable} Alexandrov space.
+It is expected that the same can be done for general Alexandrov space.
+The construction of harmonic coordinates in a neighborhood of regular point of $\rcd$-space (in particular, Alexandrov space) given by Elia Bruè, Aaron Naber, and Daniele Semola \cite{BNS} might help to do it.
 
-The main theorem in \cite{petrunin-SC} states in particular that if a sequence of complete $m$-dimensional Riemannian  manifolds $M_n$ has uniformly bounded diameter and uniform lower curvature bound, then 
-the corresponding sequence $s_n$ is bounded; in particular it has a converging subsequence.
-However if $M_n$ is collapsing this sequence may not converge
-without the non-collapsing assumption.
-For example an alternating sequence of flat 2-toruses and round 2-spheres might collapse to the one-point space, in this case the sequence $s_n$ is $0,4\cdot\pi,0,4\cdot\pi,\dots$.
+The main theorem in \cite{petrunin-SC} implies that if a sequence of complete $m$-dimensional Riemannian  manifolds $M_n$ has uniformly bounded diameter and uniform lower curvature bound, then 
+the corresponding sequence $s_n$ is bounded;
+in particular, it has a converging subsequence.
+However, if $M_n$ is collapsing then this sequence may not converge.
+For example, an alternating sequence of flat 2-toruses and round 2-spheres might collapse to the one-point space, in this case the sequence $s_n$ is $0,4\cdot\pi,0,4\cdot\pi,\dots$.
 
-The result of the Main theorem in dimension 2 is well
+The result of the main theorem in dimension 2 is well
  known (Theorem 8.4.2 \cite{Resh}, \cite{AZ} ).
 
 The problem of introducing Ricci tensor
@@ -70,20 +86,21 @@ was studied in far more general settings of
 for some singular  spaces as well \cite{L}.
 Curvature tensor for  $\rcd$-spaces was defined by Nicola Gigli \cite{G}.
 It is expected that our definitions agree.
-Let us also mention that Elia Bruè, Aaron Naber, and Daniele Semola \cite{BNS} constructed harmonic coordinates in a neighborhood of regular point of $\rcd$-space (in particular, Alexandrov space).
-It is known that in Riemannian manifolds harmonic coordinates provide the atlas best smooth class of the metric tensor; so it is expected that they will play an important role in analysis on Alexandrov spaces.  
-
 
 The precise geometric meaning of our curvature tensor is not quite clear. 
 In particular, we do not know the answer to the following question which is closely related to imposed in \cite[Conjecture~1.1]{G}.
 
+\begin{thm}{Question}
 Suppose that Alexandrov space $A$ as in the main theorem has sectional curvature bounded below by $K>\kappa$.
 Does it mean that $A$ is an Alexandrov space with curvature bounded below by $K$?
+\end{thm}
 
 \paragraph{About the proof.}
-The most substantial case is for dimension $3$, higher dimensional case is reduced to it.
+As it was stated, the 2-dimensional case is well known.
+The proof of the 3-dimensional case is the main step in the proof;
+the higher dimensional case is reduced to it.
 
-We subdivide the limit Alexandrov space into
+We subdivide the limit space $A$ into
 three subsets: $A^\circ$ --- the subset of regular 
 points, $A'$ --- points with singularities of codimension 2,
 $A''$ points with higher codimension singularities at least 3.
@@ -98,5 +115,5 @@ In the proof we use a Bochner-type formula proved in Section~\ref{sec:bochner}.
 The $A^\circ$-case is proved by induction.
 The base is $2$-dimensional case; in the prove for dimension $3$ we apply the main theorem to level sets of special concave functions.
 These level sets have the same lower curvature bound provided by Gauss theorem. 
-In the proof we use a Bochner-type formula as well.
-Multidimensional case is reduced to dimension $3$, using special $3$-dimensional intersections of concave functions.
+In the proof we use the Bochner-type formula as well.
+The higher-dimensional case is reduced to dimension $3$.
