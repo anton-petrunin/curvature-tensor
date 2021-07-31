@@ -48,35 +48,39 @@ Whence $2\cdot \pi-\theta(p)$ is the $\vol^1$-density of $\mathfrak n$ at $p$ as
 
 
 Suppose $M_n\smooths{} \Cone(\theta)\times \RR^{m-2}$, where $\Cone(\theta)$ denotes the two-dimensional cone with total angle $\theta<2\cdot\pi$ around the tip.
-We will show that the sectional curvatures of $M_n$ in the vertical direction of $\Cone(\theta)\times \RR^{m-2}$ weakly converge to zero;
+First we will show that the sectional curvatures of $M_n$ in the vertical direction of $\Cone(\theta)\times \RR^{m-2}$ weakly converge to zero;
 an exact statement is given in the following proposition.
 
-\begin{thm}{Proposition}\label{prop:vert-vert}
-Let $M_n$ be a sequence of $m$-dimensional Riemannian manifolds
-and $f_n,h_n\: M_n\to \RR$ be sequences of strongly concave functions.
-Suppose that $\sec M_n\ge -\tfrac1n$ for each $n$, $M_n\smooths{} \Cone(\theta)\times\RR^{m-2} $ and $f_n$ and $h_n$ converges vertical affine functions  $f,h\:\RR^{m-2}\times \Cone(\theta)\to \RR$ as $n\to \infty$; that is, $f$ and $h$ can be obtained as compositions of the projection to $\RR^{m-2}$ and an affine function on $\RR^{m-2}$.
-Then the measures $K(\nabla f_n\wedge\nabla h_n)\cdot\vol^m$ on $M_n$ weakly converge to zero-measure on $\Cone(\theta)$;
-here $K(\nabla f_n\wedge\nabla h_n)$ denotes sectional curvature in the direction of $\nabla f_n\wedge\nabla h_n$.
-\end{thm}
+Let us denote by $K(X\wedge Y)$ the sectional curvature in the direction of $X\wedge Y$.
+A function $f\:\Cone(\theta)\times\RR^{m-2}$ will be called \emph{vertical affine function} if $f$ can be obtained as a composition of the projection to $\RR^{m-2}$ and an affine function on $\RR^{m-2}$.
 
-The higher-dimensional case of \ref{prop:3parts:codim2+} is proved using use the 3-dimensional case and the proposition.
+\begin{thm}{Proposition}\label{prop:vert-vert}
+Let $M_n\smooths{} \Cone(\theta)\times\RR^{m-2}$
+and $f_n,h_n\: M_n\to \RR$ be sequences of strongly concave functions.
+Suppose that $\sec M_n\ge -\tfrac1n$ for each $n$,
+and $f_n\to f$, 
+$h_n\to h$ where $f$ and $h$ are vertical affine functions on $\RR^{m-2}\times \Cone(\theta)$.; that is, 
+Then 
+\[K(\nabla f_n\wedge\nabla h_n)\cdot\vol^m \rightharpoonup0.\]
+
+\end{thm}
 
 Let $\Sigma$ be a convex surface in a Riemannian manifold $M$.
 Suppose $x$ is a smooth point of $\Sigma$; that is the tangent hyperplane $H_x$ of $\Sigma$ is defined at $x$;
 denote by $e_1,\dots,e_{m-1}$ an orthonormal basis of $H_p$.
 Set 
-\[\Sc^\top_\Sigma(x)= \sum_{i,j} K(e_i\wedge e_j)\]
+\[\Zc_\Sigma(x)= \sum_{i,j} K(e_i\wedge e_j)\]
 where $K(e_i\wedge e_j)$ denotes the sectional curvature in the direction of $e_i\wedge e_j$.
 In other words, 
-\[\Sc^\top_\Sigma=\Sc-2\cdot\Ric(n_\Sigma,n_\Sigma),\]
+\[\Zc_\Sigma=\Sc-2\cdot\Ric(n_\Sigma,n_\Sigma),\]
 where $n_\Sigma$ is the unit normal vector to $\Sigma$.
 
 \begin{thm}{Lemma}\label{lem:nonsmooth-convex}
-Let $\Sigma$ be a strongly convex surface in a Riemannian manifold with curvature $\ge -1$.
+Let $\Sigma$ be a strongly convex hypersurface in a Riemannian manifold with curvature $\ge -1$.
 Suppose that for some point $p\in \Sigma$ and $r<1$ the closed ball $\bar B(p,2\cdot r)$ in the intrinsic metric of $\Sigma$ is compact.
 
 Then 
-\[\int_{x\in B(p,r)}\Sc^\top_\Sigma(x)\cdot \vol^{m-1}\le (m-1)\cdot(m-2)\cdot\const(m-1)\cdot r^{m-3},\]
+\[\int_{x\in B(p,r)}\Zc_\Sigma(x)\cdot \vol^{m-1}\le (m-1)\cdot(m-2)\cdot\const(m-1)\cdot r^{m-3},\]
 where $\const(m-1)$ is the constant in \ref{cor:Kmax}.
 \end{thm}
 
@@ -88,22 +92,31 @@ It remains to pass to the limit.
 \qeds
 
 \parit{Proof \ref{prop:vert-vert}.}
-Choose points ... such that ...
-Consider the functions $s_i=...$ and their liftings $s_{i,n}$ to $M_n$.
+Let $p$ be a point on singularity of $\Cone(\theta)\times \RR^{m-2}$ and its liftings $p_n\in M_n$;
+we can assume that it corresponds to the origin of $\RR^{m-2}$.
+Choose points $a_{1,n},\zz\dots,a_{m-2,n}$, $b_{1,n},\zz\dots,b_{m-2,n}$ in $M_n$ such that the distance functions $f_{i,n}=\dist_{a_{i,n}}-|a_{i,n}-p|$ and $-h_{i,n}=-\dist_{b_{i,n}}+|b_{i,n}-p|$ converge to $i^{\text{th}}$ vertical coordinate function on $\Cone(\theta)\times \RR^{m-2}$.
+Further, choose points $c_{1,n},\dots c_{k,n}$ so that the functions $g_{i,n}=\dist_{c_{i,n}}-|c_{i,n}-p|$ converge to Busemann functions for different horizontal rays in $\Cone(\theta)\times \RR^{m-2}$ emerging from $p$.
 
-Note that for almost all points $x\in M_n$ sufficiently close to $p$ 
-we can choose one of the functions $s_i$ such that $d_xs_i$ is linear and $|d_xs_i|>\tfrac12$.
-Indeed, ...
+Observe that there is an increasing concave function $\phi$ defined in a neigbohood of zero in $\RR$ such that for any $\eps>0$ and $i\ne j$ the function 
+\[s_{ij,n}=\phi\circ g_{i,n} + \phi\circ g_{j,n}+\sum_i[\phi(\tfrac{f_{i,n}}\eps)+\phi(\tfrac{h_{i,n}}\eps)]\]
+is strongly concave in $B(p_n,R)$ for firxed $R>0$ and every large $n$.
 
-Set $\Sigma_{i,n}=\Sigma_{i,n}(c)=\set{x\in M_n}{s_{i,n}(x)=c}$;
-Note that \ref{lem:nonsmooth-convex} and the coarea formula we get that the sum integral curvatures of $M_n$ in the directions of $\Sigma_{i,n}$ at $x$ at the subsets where $|d_xs_i|>\tfrac12$ converges to zero as $n\to 0$.
-Note that the latter condition implies that least one of the tangent directions of $\Sigma_i$ is close to the sectional direction $\nabla f_n\wedge\nabla h_n$.
+Moreover given $h>0$ we can take $\eps$ small so that for all $i\ne j$ for the limit function $s_{ij}\:\Cone(\theta)\times \RR^{m-2}\to \RR$ the set $s_{ij}^{-1}[-h,h]$ coves the singular locus in $B(p,R)$. 
+
+Note that we can choose $\eps_0>0$ so that for almost all points $x\in B(p_n,R)$ 
+we can choose a functions $s_{ij,n}$ such that $d_xs_{ij,n}$ is linear and $|d_xs_{ij,n}|>\eps_0>0$.
+Indeed, these differentials are linear at almost all points;
+if the differential is too close to zero for $s_{ij,n}$ then, since the functions $g_{k,n}$ converge to Busemann functions for different rays, the differential of $s_{ik,n}$ cannot be too small for $k\ne j$.
+
+Set $\Sigma_{i,n}=\Sigma_{i,n}(c)=\set{x\in M_n}{s_{i,n}(x)=c}$.
+Note that \ref{lem:nonsmooth-convex} and the coarea formula we get that the sum integral curvatures of $M_n$ in the directions of $\Sigma_{i,n}$ at $x$ at the subsets where $|d_xs_i|>\eps_0$ is bounded by $\const\cdot h$ for some constant.
+Since $h$ can be taken arbitrary small and at least one of the tangent directions of $\Sigma_i$ is close to the sectional direction $\nabla f_n\wedge\nabla h_n$.
 Hence the statement follows.
 \qeds
 
 
 \parit{Proof of the general case of \ref{prop:3parts:codim2+}.}
-Let us choose a sequences of strongly concave functions $f_{1,n},\dots f_{m-2,n}\: M_n\to \RR$ that converge to vertical affine functions $f_1,\dots,f_n\to \Cone(\theta)\times \RR^{m-2}$ with orthonormal gradients.
+Choose a sequences of strongly concave functions $f_{1,n},\dots f_{m-2,n}\: M_n\to \RR$ that converge to vertical affine functions $f_1,\dots,f_n\to \Cone(\theta)\times \RR^{m-2}$ with orthonormal gradients.
 
 Note that the fields $e_{1,n}=\nabla f_1,\dots,e_{m-2,n}=\nabla f_{m-2}$ are nearly orthonormal;
 in particular they are linear independent for all large $n$.
@@ -114,19 +127,20 @@ Observe that \ref{prop:vert-vert} implies that $K(e_i\wedge e_j)\cdot\vol\righth
 
 Let us show that that $K(e_i\wedge e_j)\cdot\vol\rightharpoonup 0$ for $i\le m-2$ and $j\ge m-1$.
 The $3$-dimensional case is already proved; it is used as a base of induction.
-We can apply the induction hypothesis to the level surfaces of $f_{1,n}$.
-Since the curvature of convex hypersurface is larger that the curvature of the ambient manifold in the same direction we get the statement for $i\ne 1$.
+Let us apply the induction hypothesis to the level surfaces of $f_{1,n}$.
+Since the curvature of convex hypersurface is larger than the curvature of the ambient manifold in the same direction we get the statement for $i\ne 1$.
 Applying the same argument for the level surfaces of $f_{2,n}$, we get the result.
 
-Now let us show that $K(e_{m-1}\wedge e_m)\cdot\vol^m\rightharpoonup \kappa\oplus h_{m-2}$.
-Consider the level sets $L_n$ defined by $f_{1,n}=c_1,\dots,f_{m-2,n}=c_{m-2}$.
+Now let us show that $K(e_{m-1}\wedge e_m)\cdot\vol^m\rightharpoonup \omega_{\Cone(\theta)\times \RR^{m-2}}$.
+Consider the level sets $L_n$ defined by 
+\[f_{1,n}=c_1,\ \dots,\ f_{m-2,n}=c_{m-2}.\eqlbl{eq:fi=ci}\]
 Note that $L_n\smooths{} \Cone(\theta)$.
-Applying the 2-dimensional case to $L_n$ and the coarea formula we get that curvatures of $L_n$ weakly converge to $\kappa\oplus h_{m-2}$.
+Applying the 2-dimensional case to $L_n$ and the coarea formula we get that curvatures of $L_n$ weakly converge to $\omega_{\Cone(\theta)\times \RR^{m-2}}$.
 It remains to show that extra term in the Gauss formula for curvature of $L_n$ weakly converges to zero; 
 in other words the difference between curvature of $L_n$ and sectional curvature of $M_n$ in the direction tangent to $L_n$ weakly converges to zero.
 
-In dimension 3, the latter follows from the 3-dimensional case.
-To prove the general case we apply 3-dimensional case to the 3-dimensional level sets dafined by $m-3$ equations from the following $m-2$ equations defining $L$.
+The 3-dimensional case is already proved.
+To prove the general case we apply 3-dimensional case to the 3-dimensional level sets dafined by $m-3$ equations from the following $m-2$ equations in \ref{eq:fi=ci}.
 (The same argument written is used in the proof of \ref{A^0} and it is written with more details.)
 
 The same argument as in \ref{cor:Ricci} shows that $\langle\Rm(e_i,e_j)e_q,e_r\rangle\cdot\vol^m\rightharpoonup0$ is at least one of the indices $i,j,q,r$ is at most $m-2$.

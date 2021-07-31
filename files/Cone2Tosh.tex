@@ -1,16 +1,14 @@
 \section{Singularities of codimension 2}\label{sec:codmi=2}
 
 Consider the measure $\omega$ on $A'$ defined by
-\[\omega=(2\cdot\pi-\theta)\cdot \vol^{m-2},\eqlbl{eq:omega}\]
-where $\vol^\alpha$ denotes $\alpha$-dimensional Hausdorff measure normalized as volume;
-that is, we assume that $m$-dimensional unit cube has unit $m$-dimensional Hausdorff measure.
+\[\omega=(2\cdot\pi-\theta)\cdot \vol^{m-2}.\eqlbl{eq:omega}\]
 Let us extend $\omega$ to the whole space by setting $\omega(S)=\omega(S\cap A')$ for any Borel set $S\subset A$.
 
 The function $\theta$ can be extended to the whole $A$ by setting
 \[\theta(p)=2\cdot\pi\cdot \tfrac{\vol^{m-1} \Sigma_p}{\vol^{m-1} \mathbb{S}^{m-1}}.\]
 According to \cite[7.14]{BGP}, $\theta\:A\to \RR$ is upper-semicontinuous.
 The right-hand side of the last equality vanish in $A^\circ$.
-Further since $\vol^1(A'')=0$, the measure $\omega$ could be also defined as a measure on whole $A$ that is defined by~\ref{eq:omega}.
+Further since $\vol^{m-2}(A'')=0$, the measure $\omega$ could be also defined as a measure on whole $A$ that is defined by~\ref{eq:omega}.
 
 Note that \ref{prop:3parts}(\ref{prop:3parts:codim2}) follows from the following more exact statement;
 it will be proved in this section.
@@ -170,30 +168,32 @@ H(x)&=k_1(x)+ k_2(x);
 \end{align*}
 that is, $G(x)$ and $H(x)$ are Gauss and mean curvature of $L_c$ at $x$.
 
+Recall that $\Cone(\theta)$ denotes 2-dimensional cone with total angle $\theta$.
+
 \begin{thm}{Theorem}\label{thm:HG-converge}
-Let $M_n$ be a sequence of $3$-dimensional Riemannian manifolds
+Let $M_n\smooths{}\Cone(\theta)\times \RR$ and 
 and $f_n\: M_n\to \RR$ be a sequence of strongly concave functions.
-Suppose that $\sec M_n\ge -\tfrac1n$ for each $n$, $M_n\zz\to \RR\times A$ without collapsing and $f_n$ converges to the $\RR$-coordinate in $\RR\times A$ as $n\to \infty$.
+Suppose that $\sec M_n\ge -\tfrac1n$ for each $n$, and $f_n$ converges to the $\RR$-coordinate in $\Cone(\theta)\times \RR$ as $n\to \infty$.
 Then $G_n$ and $H_n$ (the Gauss and mean curvatures of the level sets of $f_n$) weakly converge to zero.
 \end{thm}
 
 \parit{Proof.}
-Choose $p\in \RR\times A$; set $a=f(p)$.
+Choose $p\in \Cone(\theta)\times \RR$; set $a=f(p)$.
 
 By theorem of Artem Nepechiy \cite{Nepechiy},
 there is a $(-2)$-concave function $\rho$ defined in an $r$-neighborhood of $p$ such that $\rho(x)=-|p-x|^2+o(|p-x|^2)$.
 Moreover, the function $\rho$ is \emph{liftable};
 that is, there is a sequence of $(-2)$-concave $\rho_n\:M_n\to\RR$ that converges to $\rho$.
 
-Consider a point $q\in \RR\times A$ above $p$; that is, its $\RR$-coordinate is larger and its $A$-coordinate is the same.
+Consider a point $q\in \Cone(\theta)\times \RR$ above $p$; that is, its $\RR$-coordinate is larger and its $ \Cone(\theta)$-coordinate is the same.
 If $\RR$-coordinate of $q$ is large, then $\dist_q+f$ is $\lambda$-concave for small $\lambda>0$ and it has a nonstrict minimum at $p$.
 Therefore, given $\lambda>0$, we can find $q$ so that the sum $s=f+\dist_q+\lambda\cdot \rho$ is $(-\lambda)$-concave and has strict maximum at $p$.
 Moreover
-\[-\lambda\cdot|p-x|_A^2\ge s(x)-s(p)\ge -\tfrac12\cdot\lambda\cdot|p-x|_A^2\]
+\[-\lambda\cdot|p-x|_{\Cone(\theta)\times \RR}^2\ge s(x)-s(p)\ge -\tfrac12\cdot\lambda\cdot|p-x|_{\Cone(\theta)\times \RR}^2\]
 and therefore
-\[|\nabla_xs|\le 10\cdot\lambda\cdot|p-x|_A
+\[|\nabla_xs|\le 10\cdot\lambda\cdot|p-x|_{\Cone(\theta)\times \RR}
 \eqlbl{O(p-x)}\]
-if $|p-x|_A$ is sufficiently small; say if $|p-x|_A\le \tfrac r{10}$.
+if $|p-x|_{\Cone(\theta)\times \RR}$ is sufficiently small; say if $|p-x|_{\Cone(\theta)\times \RR}\le \tfrac r{10}$.
 
 Choose a sequence of points $q_n\in M_n$ that converges to $q$ and set $h_n\zz=\dist_{q_n}+\lambda\cdot \rho_n$;
 this is a sequence of liftings of $h=\dist_q+\lambda\cdot \rho$. 
@@ -210,7 +210,7 @@ It remains to integrate the obtained inequalities by $a$ and pass to a limit as 
 \qeds
 
 \begin{thm}{Corollary}\label{cor:Ricci}
-Suppose that $M_n\to  \RR\times A$ and $f_n\: M_n\to \RR$ be as in \ref{thm:HG-converge}.
+Suppose that $M_n\to  \Cone(\theta)\times \RR$ and $f_n\: M_n\to \RR$ be as in \ref{thm:HG-converge}.
 Set $u_n=\tfrac{\nabla f_n}{|\nabla f_n|}$.
 Then 
 
@@ -220,15 +220,15 @@ Then
 Let $v_n$ and $w_n$ are sequences of uniformly bounded, continuous vector fields on $M_n$.
 Suppose that $\langle v_n,u_n\rangle$ and $\langle w_n,u_n\rangle$ converge uniformly as $n\to \infty$ to some constants $a$ and $b$ respectively.
 Then 
-\[\Qm(v_n,w_n)\rightharpoonup a\cdot b\cdot \vol^1\oplus \kappa,\]
-where $\kappa$ is the curvature measure on $A$ and $\vol^1$ is 1-dimensional Haudorff mearure on $\RR$.
+\[\Qm(v_n,w_n)\rightharpoonup a\cdot b\cdot \omega,\]
+where $\omega$ is the measure on $\Cone(\theta)\times \RR$  described above.
 
 \end{enumerate}
 
 \end{thm}
 
 \parit{Proof; (\ref{cor:Ricci:Ricci}).}
-Passing to a subsequence if nesessary, we can assume weak convergence $\langle \Ric u_n,u_n\rangle\cdot\vol^m$ to a measure $\mu$ on $A$.
+Passing to a subsequence if nesessary, we can assume weak convergence $\langle \Ric u_n,u_n\rangle\cdot\vol^m$ to a measure $\mu$ on $\Cone(\theta)\times \RR$.
 Since $\sec M_n\ge -\tfrac1n$, we have that $\mu\ge 0$.
 Therefore it is sufficient to show that $\mu\le 0$.
 
@@ -241,7 +241,7 @@ assuming that all expressions in the formula have sense.
 
 It is remains to find a sequence of nonnegative function $\phi_n\:M_n\to \RR$ 
 with compact support 
-that converge to a $\phi\:A\to \RR$ such that (1) $\phi$ is unit in a neighborhood of a given point $p\in A$ and (2) we have a control the three terms on the right hand side of the formula; that is, we have the following weak convergences:
+that converge to a $\phi\:\Cone(\theta)\times \RR\to \RR$ such that (1) $\phi$ is unit in a neighborhood of a given point $p\in \Cone(\theta)\times \RR$ and (2) we have a control the three terms on the right hand side of the formula; that is, we have the following weak convergences:
 \[
 \begin{aligned}
 \phi_n \cdot G_n&\rightharpoonup 0,
@@ -254,20 +254,19 @@ H_n\cdot\<u_n,\nabla\phi_n\>&\rightharpoonup 0,
 \]
 
 For the first convergence, it is sufficient to choose the sequence $\phi_n$ so that in addition it is universally bounded.
-Indeed, according to \ref{lem:smooth-covergence}, $|\nabla f_n|\to 1$.
-Therefore \ref{thm:HG-converge} and the coarea formula %???coarea formula
+Indeed, since $|\nabla f_n|\to 1$, we have that \ref{thm:HG-converge} and the coarea formula %???coarea formula
 implies the first convergence in \ref{eq:3->0}.
 
 Similarly, to prove the second convergence in \ref{eq:3->0}, it is sufficient to assume in addition that $|\nabla\phi_n|$ is universally bounded and apply \ref{thm:HG-converge} together with the coarea formula.
 
-To prove the last convergence in \ref{eq:3->0}, note that \ref{lem:smooth-covergence} implies weak convergence
+To prove the last convergence in \ref{eq:3->0}, note that
 $|\nabla u|\rightharpoonup 0$ away from the singular locus.
-This observation is used to control the term $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>$ at the points far from the singular locus of $A$ --- we only need to assume that $|\nabla\phi_n|$ is bounded.
+This observation is used to control the term $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>$ at the points far from the singular locus of $\Cone(\theta)\times \RR$ --- we only need to assume that $|\nabla\phi_n|$ is bounded.
 
 Further, since $|u_n|=1$, we have $\nabla_{u_n} u_n\perp \nabla f_n$.
 Therefore if $\nabla \phi_n$ is proportional to $\nabla f_n$ at some point, then at this point we have $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>=0$.
-This observation makes it possible to choose $\phi_n$ so that the term $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>$ vanish around the singular locus of $A$.
-Namely in addition to the above conditions on $\phi_n$ we have to assume that the identity $\phi_n=\psi\circ f_n$ holds at the points of $M_n$ that are sufficiently close to the singular locus of $A$.
+This observation makes it possible to choose $\phi_n$ so that the term $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>$ vanish around the singular locus of $\Cone(\theta)\times \RR$.
+Namely in addition to the above conditions on $\phi_n$ we have to assume that the identity $\phi_n=\psi\circ f_n$ holds at the points of $M_n$ that are sufficiently close to the singular locus of $\Cone(\theta)\times \RR$.
 
 Finally observe that the needed sequence exists.
 Indeed, one can take 
@@ -275,9 +274,9 @@ Indeed, one can take
 for appropriately chosen fixed mollifiers $\sigma,\psi\:\RR\to \RR$.
 
 \parit{(\ref{cor:Ricci:vw}).}
-Since $G_n\rightharpoonup 0$, we get that curvature measure of level sets of $f_n$ weakly converges to the curvaure of $A$.
+Since $G_n\rightharpoonup 0$, we get that curvature measure of level sets of $f_n$ weakly converges to the curvaure of $\Cone(\theta)$.
 It follows that 
-\[\qm(u_n,u_n)\rightharpoonup \vol^1\oplus \kappa.\]
+\[\qm(u_n,u_n)\rightharpoonup \omega.\]
 
 Suppose $v'_n\perp u_n$ for all $n$.
 Part (\ref{cor:Ricci:Ricci}) implies that  $\qm(v'_n,v'_n)\rightharpoonup 0$.
