@@ -1,7 +1,7 @@
 \section{Introduction}
 
 The weak convergence and measure-valued tensor used in the following theorem are defined in the next section;
-for a more precise formulation see \ref{main}.
+a more precise formulation is given in \ref{main}.
 
 \begin{thm}{Main theorem}
 Let $\kappa$ be a real number and 
@@ -10,24 +10,46 @@ Assume that $M_n$ converges to an Alexandrov space $A$ of the same dimension.
 Then the curvature tensors of $M_n$ weakly converge to a measured-valued tensor on $A$.
 \end{thm}
 
-This result is new and nontrivial even in the case if the limit space is a Riemannian manifold.
+This result is nontrivial, even if the limit space $A$ is a Riemannian manifold.
+Note that the limit tensor of the sequence depends only on $A$ and does not depend on the choice of the sequence $M_n$.
+Indeed, suppose another sequence $M_n'$ satisfies the assumptions of the theorem.
+If the limit tensor is different, 
+then a contradiction would occur for the alternated sequence $M_1,M_1',M_2,M_2',\dots$ 
+In particular, if the limit space is Riemannian, then the limit curvature tensor is the curvature tensor of the limit space.
 
-The second statement in the following corollary requires no new definitions.
-It looks like a direct corollary of the main theorem, 
+Analogous statements about metric tensor and Levi-Citita connection were nearly proved by Perelman \cite{PerDC},
+we only had to tie his argument with appropriate type of convergence.
+This part is one of the main ingradients in the proof;
+it is discussed in Section~\ref{sec:DC}. 
+It provides a technique that should be used elsewhere as well.
+For curvature tensor (which has higher order of derivative), this argument can not extended directly;
+we found a way around applying a Bochner-type formulas as in \cite{petrunin-SC}.
+
+The following corollary might look like a direct corollary of the main theorem, 
 and indeed, it follows from its proof, but strictly speaking it can not be deduced directly from the main theorem alone.
-
-Suppose $\Sc$ denotes the scalar curvature of Riemannian manifold and $\vol^m$ the $m$-dimensional volume; that is $m$-dimensional Hausdorff measure calibrated so that unit $m$-dimensional cube has unit measure.
+We will denote by $\Sc$ the scalar curvature and $\vol^m$ the $m$-dimensional volume; that is $m$-dimensional Hausdorff measure calibrated so that the unit $m$-dimensional cube has unit measure.
 
 \begin{thm}{Corollary}\label{cor:Sc}
 In the assumption of the main theorem,
 the measures $\Sc\cdot \vol^m$ on $M_n$ weakly converges to a locally finite signed measure $\mathfrak m$  on $A$.
+\end{thm}
 
-In particular, if $A$ is compact, then the sequence
+The following subcorollary requires no new definitions.
+
+\begin{thm}{Subcorollary}\label{cor:cor:Sc}
+In the assumption of the main theorem, suppose $A$ is compact.
+Then the sequence
 \[s_n=\int_{M_n}\Sc \cdot\vol^m\]
 converges.
 \end{thm}
 
-The following corollary seems to be trivial, but it is not.
+The main theorem in \cite{petrunin-SC} implies that if a sequence of complete $m$-dimensional Riemannian  manifolds $M_n$ has uniformly bounded diameter and uniform lower curvature bound, then 
+the corresponding sequence $s_n$ is bounded;
+in particular, it has a converging subsequence.
+However, if $M_n$ is collapsing, then this sequence may not converge.
+For example, an alternating sequence of flat 2-toruses and round 2-spheres might collapse to the one-point space, in this case the sequence $s_n$ is $0,4\cdot\pi,0,4\cdot\pi,\dots$.
+
+From the main theorem (and the definition of weak convergence) we get the following corollary.
 
 \begin{thm}{Corollary}
 Let $\mathfrak{K}$ be a convex closed subset of curvature tensors on $\RR^m$ 
@@ -37,7 +59,7 @@ Assume that $\mathfrak{K}$ is invariant with respect to the rotations of $\RR^m$
 (For example, one can take $\mathfrak{K}$ the set of all curvature tensors with nonnegative curvature operator.)
 
 Suppose $M_n$ is a sequence of $m$-dimensional Riemannian manifolds that converges to a Riemannian manifold $M$ of the same dimension.
-Assume that all curvature tensors of $M_n$ belong to $\mathfrak{K}$ for any $n$,
+Assume that for any $n$, all curvature tensors of $M_n$ belong to $\mathfrak{K}$, 
 then the same holds for the curvature tensors of $M$.
 \end{thm}
 
@@ -45,60 +67,65 @@ then the same holds for the curvature tensors of $M$.
 
 \paragraph{Remarks.}
 The limit measure $\mathfrak m$ in \ref{cor:Sc} has some specific properties;
-let us describe couple of them:
+let us describe a couple of them:
 \begin{itemize}
 \item The measure $\mathfrak m$ vanish on any subset of $A$ with vanishing $(m-2)$-dimensional Hausdorff measure.
-In particular, the $\mathfrak m$-measure of the set of singularities of codimension 3.
+In particular, the $\mathfrak m$ vanishes on the set of singularities of codimension 3.
+This is an easy corollary of \cite{petrunin-SC}.
 
-\item The measure can be explicitely described 
-on the set $A'$ of singularities
-of codimension $2$. That is, the set $A'\subset A$
-contains all points $x$ with tangent space
-$\T_xA=\R^{m-2}\times \Cone(\theta)$,
-where $\Cone(\theta)$ denotes a $2$-dimensional cone
+\item The measure can be explicitly described on the set $A'$ of singularities
+of codimension $2$ as 
+$$\mathfrak m|_{A'}=(2\cdot \pi-\theta)\cdot \vol^{m-2},$$
+here $A'\subset A$
+denotess the set of all points $x$ with tangent space
+$\T_xA\zz=\R^{m-2}\zz\times \Cone(\theta)$,
+where $\Cone(\theta)$ is a $2$-dimensional cone
 with the total angle $\theta=\theta(x)<2\cdot\pi$.
-Then 
-$$\mathfrak m|_{A'}=(2\cdot \pi-\theta)\cdot \vol^{m-2};$$
-the latter follows from \ref{prop:3parts:codim2+}.
+This statement follows from \ref{prop:3parts:codim2+}.
 \end{itemize}
 
+Let us mention that the precise geometric meaning of our curvature tensor is not quite clear. 
+In particular, we cannot prove to the following highly plausible statement; compare to \cite[Conjecture~1.1]{G}.
 
-Note that the limit tensor of the sequence depends only on $A$ and does not depend on the choice of the sequence $M_n$.
-Indeed, if for another sequence $M_n'$ satisfying the assumptions of the corollary and converging to the same Alexandrov space $A$ we would get a different limits, 
-then a contradiction would occur for the alternated sequence $M_1,M_1',M_2,M_2',\dots$. This allows to define a curvature
-tensor for every \emph{smoothable} Alexandrov space.
-It is expected that the same can be done for general Alexandrov space.
-The construction of harmonic coordinates in a neighborhood of regular point of $\rcd$-space (in particular, Alexandrov space) given by Elia Bruè, Aaron Naber, and Daniele Semola \cite{BNS} might help to do it.
+\begin{thm}{Problem}
+Suppose that the limit curvature tensor of Alexandrov space $A$ as in the main theorem has sectional curvature bounded below by $K>\kappa$.
+Show that it implies that $A$ is an Alexandrov space with curvature bounded below by $K$.
+\end{thm}
 
-The main theorem in \cite{petrunin-SC} implies that if a sequence of complete $m$-dimensional Riemannian  manifolds $M_n$ has uniformly bounded diameter and uniform lower curvature bound, then 
-the corresponding sequence $s_n$ is bounded;
-in particular, it has a converging subsequence.
-However, if $M_n$ is collapsing then this sequence may not converge.
-For example, an alternating sequence of flat 2-toruses and round 2-spheres might collapse to the one-point space, in this case the sequence $s_n$ is $0,4\cdot\pi,0,4\cdot\pi,\dots$.
+The theorem makes possible to define a curvature tensor for every \emph{smoothable} Alexandrov space.
+It is expected that the same can be done for general Alexandrov space; so the following problem has to have a solution:
 
-The result of the main theorem in dimension 2 is well
- known (Theorem 8.4.2 \cite{Resh}, \cite{AZ} ).
+\begin{thm}{Problem}\label{prob:curvature}
+Extend the definition of measure-valued curvature tensor to general Alexandrov space.
+\end{thm}
+
+If this is the case, then one may expect to have a generalization of Gauss formula for curvature of convex hypersurface, which in turn might lead to a solution of the following open problems in Alexandrov geometry.
+This conjecture is open even for convex sets in \emph{smoothable} Alexandrov space.
+
+\begin{thm}{Conjecture}
+Boundary of Alexandrov space equipped with its intrinsic metric is an Alexandrov space with the same lower curvature bound.
+\end{thm}
+
+More importantly, a solution of \ref{prob:curvature} might provide nontrivial ways to deform Alexandrov space; see \cite[Section 9]{petrunin-conc}. 
+
+\parbf{Related results.}
+The construction of harmonic coordinates in a neighborhood of regular point of $\rcd$-space (in particular, Alexandrov space) given by Elia Bruè, Aaron Naber, and Daniele Semola \cite{BNS} might help to solve \ref{prob:curvature}.
+
+The result of the main theorem in dimension 2 is well known (Theorem 8.4.2 \cite{Resh}, \cite{AZ}).
 
 The problem of introducing Ricci tensor
 was studied in far more general settings of 
  $\rcd$-spaces \cite{G1,St,H}
  and
 for some singular  spaces as well \cite{L}.
-Curvature tensor for  $\rcd$-spaces was defined by Nicola Gigli \cite{G}.
-It is expected that our definitions agree.
-
-The precise geometric meaning of our curvature tensor is not quite clear. 
-In particular, we do not know the answer to the following question which is closely related to imposed in \cite[Conjecture~1.1]{G}.
-
-\begin{thm}{Question}
-Suppose that Alexandrov space $A$ as in the main theorem has sectional curvature bounded below by $K>\kappa$.
-Does it mean that $A$ is an Alexandrov space with curvature bounded below by $K$?
-\end{thm}
+Curvature tensor for  $\rcd$-spaces was defined by Nicola Gigli \cite{G};
+it works for more general class of spaces, but this approach does not see the curvature of singularities.
+It is expected that our definitions agree on the regular locus.
 
 \paragraph{About the proof.}
 As it was stated, the 2-dimensional case is well known.
 The proof of the 3-dimensional case is the main step in the proof;
-the higher dimensional case is reduced to it.
+the higher dimensional require only minor modifications.
 
 We subdivide the limit space $A$ into
 three subsets: $A^\circ$ --- the subset of regular 
@@ -106,14 +133,18 @@ points, $A'$ --- points with singularities of codimension 2,
 $A''$ points with higher codimension singularities at least 3.
 These sets are treated independently.
 
-First we show that limit curvature vanish on $A''$; 
-this part is an application of the main result in \cite{petrunin-SC}.
+First, we show that limit curvature vanish on $A''$; 
+this part is an easy application of the main result in \cite{petrunin-SC}.
 
-The $A'$-case is reduced to its partial case, when the limit is isometric to the product of two-dimensional cone and Euclidean spase.
+The $A'$-case is reduced to its partial case, when the limit is isometric to the product of two-dimensional cone and Euclidean space.
 In the proof we use a Bochner-type formula proved in Section~\ref{sec:bochner}.
 
 The $A^\circ$-case is proved by induction.
-The base is $2$-dimensional case; in the prove for dimension $3$ we apply the main theorem to level sets of special concave functions.
-These level sets have the same lower curvature bound provided by Gauss theorem. 
-In the proof we use the Bochner-type formula as well.
-The higher-dimensional case is reduced to dimension $3$.
+The base is $2$-dimensional case; in the proof for dimension $3$ we apply the main theorem to level sets of special concave functions.
+By Gauss formula, these level sets have the same lower curvature bound. 
+In the proof, we use the Bochner-type formula together with DC-calculus developed by Grigory Perelman \cite{PerDC}.
+The higher-dimensional case is use the proof of three-dimensional case plus an extra estimate.
+
+\parbf{Acknolegements.}
+These results were announced more than 15 years ago, and all this time John Lott was kipping to express his interest in a written version.
+We wish to thank him for doing this --- without him the paper would not be written. 

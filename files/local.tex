@@ -1,154 +1,165 @@
 \section{Local version of the main theorem}\label{sec:local}
 
-\subsection{Locally defined Alexandrov space structure}
+The more general case for
+notions described below can be found in
+\ref{LNep}
 
 \begin{rdef}{Definition}
-Let $A$ be a metric space. 
-We say that an open  $U\subset A$
-is a \emph{strongly inner domain} if
-for some 
-$R>0$ we have
-$U\subset B(x,R)$
-and $\overline{B}(x_n,10R)$ is compact.
+Let $A$ be a locally compact metric space. 
+We say that a point  $p\in A$
+is  \emph{ $\epsilon$-inner point} if
+the closed ball $\bar B(x,2\cdot\epsilon)$ is compact.
 
 \end{rdef}
 
 \begin{rdef}{Definition}
 We say that
- a locally compact inner metric space $A$
-is an \emph{ Alexandrov region}
+ a locally compact inner metric space $A$ of finite Hausdorff dimension
+is an \emph{ Alexandrov region} if
 any point has a neighborhood where Alexandrov
 comparison for curvature $\ge -1$ holds.
-We say that $U\subset A$
-is an \emph{ Alexandrov domain}
- if $U$ is 
- a strongly inner domain.
+We call a comparison 
+radius (and denote it $r_c(p)$) a maximal number $r$ such that
+$p$ is $r$-inner point and 
+ Alexandrov
+comparison for curvature $\ge -1$ holds in
+$B(x,r)$.
+
+%We say that $U\subset A$ is an \emph{ Alexandrov domain} if $U$ is a strongly inner domain.
 
 \end{rdef}
+It is possible to show the following uniform estimate for
+comparison radius and convex neighborhood (for the proof, see \ref{LNep}).
 
-It is possible to show  that 
-Toponogov comparison holds for sets with local structure of Alexandrov space and most of arguments and constructions for Alexandorov spaces could be applied to Alexandrov domain.
-In particular we need main result from
- \cite{petrunin-SC}, where complete manifold can be replaced by 
-strongly inner domain in a possibly open manifold. 
- 
- 
- 
- Next we describe smoothing for Alexandrov domains.
- We denote by
+\begin{thm}{Proposition}
+Let $A$ be an $m$-dimensional Alexandrov region
+and $x$ be a $\varepsilon$-inner
+point. Then 
+ $r_c(x)\ge 0.01\varepsilon$.
+Moreover,  for some constant $c_{conv}(m)$,
+the ball $B(x, c_{conv}(m)r(p))$ is a subset of some
+convex
+neighborhood of $x$ in $A$.
+
+\end{thm}
+
+Note that a compact convex subset in an Alexandrov region is an Alexandrov space.
+So the above proposition
+makes possible 
+to apply most of the arguments and constructions for Alexandorov spaces to
+spaces
+  with local structure of Alexandrov space. 
+  Moreover, in the case when Alexandrov region
+  is a Riemannian 
+manifold (possibly noncomplete) it is possible
+to take the doubling of convex neighborhood from the Proposition
+and smooth it with almost the same lower curvature bound.
+This allows us to apply the main result from
+ \cite{petrunin-SC}, where the complete manifold can be replaced by a convex domain  in a possibly open manifold. 
+
+Further, let us define a local version of smoothing.
+Let us denote by
 $\M_{\ge -1}^m$ a class of $m$-dimensional Riemannian 
 manifolds without boundary, but possibly non-complete, with sectional curvature bounded
 from below by $-1$.
 
 \begin{rdef}{Definition}
-Let sequence
+Let 
 $M_n\in\M_{\ge -1}^m$ (with corresponding intrinsic metric)
-converges in Gromov--Hausdorff sense to some metric space $A$.
-We say that an open $U\subset A$ is \emph{good} with respect to this convergence
- if
-$\dim U=m$ and for some 
-$R>0$, $M_n\ni x_n\to x\in A$ we have
-$U\subset B(x,R)$
-and ${B(x_n,R)}$ is a strongly inner domain in
-$ M_n$
-. 
+converges in Gromov--Hausdorff sense to some metric space $A$ via
+approximation.
+Suppose that $M_n\ni x_n\to x\in A$
+and $r_c(x_n)\ge c_0>0$. Let $c_{conv}(m)c_0 > R>0$ and set
+$U_n=B(x_n,R)_{M_n}$.
+Then we say that $U_n$ is a local smoothing of $U=B(x,R)_A$ (briefly, $U_n\smooths{} U$).
 \end{rdef}
- Let note that in this case $B(x,10R)$ is Alexandrov region
- and $U$ is an Alexandrov domain.
+
+It is straightforward to redefine test functions and weak convergence for local smoothings.
+Using this language we can make local version for each statement in this paper, the proofs go without changes.
+A couple of times we had to use these local versions, so in a perfect world we had to rewire the whole paper using this language.
+However, this is not a principle moment,
+so we decided to keep paper more readable at the cost of being not fully rigorous. 
+
+As a result, we get the following local version of the main theorem \ref{main}.
  
- We will say that open $U_n\subset M_n$
-approximates good subset $U$ and write $U_n\to U$
-if $U_n\GHto U$ and for any $p\in U$ there is $M_n\ni p_n\to p$
-and $r>0$ such that $B(p_n,r)\subset U_n$.
- 
- \subsection{Rough $C^1$ structure }\label{sec:rC}
- 
- 
-Let $f$ be a continuous semiconcave function defined on an open subset of Alexandrov space $A$.
-Given $p\in \Dom f$, set 
-\begin{align*}
-\mathfrak{a}_f(p)&=\limsup_{x\to p}\frac{f(x)-f(p)}{|x-p|},
-&
-\mathfrak{b}_f(p)&=\limsup_{x\to p}\frac{f(p)-f(x)}{|p-x|}.
-\end{align*}
-Note that $\mathfrak{a}_f(p)=|\nabla_pf|$.
-
-
-
-Recall that a function $f$ defined on Alexandrov space is called differentable at $p\in \Dom f$ if its differential at $p$ is a linear function;
-that is, $d_pf\:\T_p\to\RR$ is concave and convex at the same time.
-
-\begin{thm}{Claim} Let $f$ be a continuous semiconcave function defined on an open subset of Alexandrov space $A$.
-Then  $f$ is differentiable at $p\in\Dom f$ if and only if $\mathfrak{a}_f(p)=\mathfrak{b}_f(p)$.
-\end{thm}
-
-
-
-
-
-\begin{thm}{Definition}
-We say that a continuous semiconcave function $f$  defined
-on an open subset $U$ of an Alexandrov space $A$
-is \emph { roughly smooth}
-and write $f\in rC^1(U)$
-if 
-for any compact $K\subset A$ there
-is a constant $c(K)>0$, such that
-$|\mathfrak{a}_f(p)-\mathfrak{b}_f(p)|< c(K)   $
-for $p\in A^\delta\cap K$.
-\end{thm}
-
-\begin{thm}{Proposition}\label{prop:ab}
-Let $A_n\to A$ be a convergence of Alexandrov spaces with uniform lower curvature bound
-and $f_n$ be a sequence of continuous $\lambda$-concave functions defined on open domains in  $A_n$ that converges to a function $f$ defined on open domains in  $A$.
-
-Then for any sequence of points $A_n\ni p_n\to p\in A$ we have
-that 
-\[\liminf_{n\to\infty}|\nabla_{p_n}f_n|\ge \mathfrak{a}_{f}(p)\]
-and 
-\[\limsup_{n\to\infty}|\nabla_{p_n}f_n|\le \mathfrak{b}_{f}(p)\]
-
-In particular, if $f$ is differentiable at $p$, then 
-\[\lim_{n\to\infty}|\nabla_{p_n}f_n|= |\nabla_{p}f|\]
-
-
-and for   roughly smooth function $f$
-and $p\in K$ we have
-\[
-\limsup_{n\to\infty}|\nabla_{p_n}f_n|-
-\liminf_{n\to\infty}|\nabla_{p_n}f_n|
-\le c(K)\delta. \]
- 
-
-\end{thm}
-
-
-
-
-%Let    $M_n\in\M_{\ge -1}^m$,
-% $M_n\GHto A$  and  $U\subset A$ be a good domain for this convergence.
-
-
- 
- 
- 
- \subsection{Local version of the main theorem }\label{sec:loc}
- 
- 
-\begin{thm}{Main theorem (local)}\label{mainloc}
+\begin{thm}{Local version of the main theorem}\label{mainloc}
 Let   
 $M_n\in\M_{\ge -1}^m$,
-$M_n\GHto A$, 
-  $U\subset A$ be a good domain for this convergence
-  and $U_n\to U$.
-  Let sequences $f_{1,n},\dots,f_{m-2,n},\\ g_{1,n},\dots,g_{m-2,n}\in C^1(U_n)$ 
- converge to
-   $f_1,\dots, f_{m-2}, g_1,\dots, g_{m-2}\in rC^1(U)$ correspondingly.
-Then measures 
-$$\Qm_n(\nabla f_{1,n},\nabla f_{2,n},\dots,\nabla f_{m-2,n},
-\nabla g_{1,n},\nabla g_{2,n},\dots,\nabla g_{m-2,n})\cdot\vol^m_n$$ weakly converges to some
-measure on $U$.
+$M_n\GHto A$, $U_n\subset M_m$,
+  $U\subset A$, and $U_n\smooths{} U$.
+  
+Denote by $\qm_n$ the dual measure-valued curvature tensor on $U_n$.
+Then there is a measure-valued tensor $\qm$ on $U$ such that $\qm_n\rightharpoonup \qm$.
 \end{thm}
 
-Theorem~\ref{main} could be reduced to the local version
-in view of Lemma~\ref{testrC}.
+\section{A more conceptual definition of convergence}
+
+Here we will describe a more natural definition of convergence that is equivalent to our definition.
+It is given only for aesthetic purposes, we do not see its application so far.
+By that reason, we give definitions and do not prove equivalence.
+
+\parbf{Convergence of vectors.}
+Let $A$ be an Alexandrov space, we denote by $\T A$ the set of all tangent vectors at all points.
+So far $\T A$ is a disjoint union of all tangent cones;
+let us define convergence on it.
+
+Recall that gradient exponent $\gexp\: \T A\to A$ is defined in \cite{AKP}.
+Given a vector $V\in \T A$, it defines its gradient curve $\gamma_{V}\:t\mapsto \gexp (t\cdot V)$.
+We say that a sequence of vectors $V_n\in \T A$ converges to $V\in \T A$ if $\gamma_{V_n}$ converges to $\gamma_V$ pointwise.
+Since the gradient curve $\gamma_V$ is $|V|$-Lipschitz, we get that for any bounded sequence of vectors with base points in a bounded set have a converging subsequence of $\gamma_{V_n}$.
+Further, the pointwise limit of such curves is a gradient curve as well.
+Therefore, any bounded sequence of tangent vectors with base points in a bounded set has a converging sequence.
+
+A direct analog holds for sequences of Alexandrov spaces $A_n$ that converge to $A$.
+That is if $V_n\in \T A_n$ is a bounded sequence of tangent vectors with bounded set of base points, then it has a subsequence that converges to some vector $V\in \T A$.
+
+Note that 
+\[|V|\le \lim |V_n|\]
+and the inequality might be strict.
+
+
+
+
+\parbf{$\bm{C^1}$-delta smoothfunctions and their convergence.}
+Given a function $f\:A\to \RR$ and a vector $V\in \T A$, set
+\[Vf=(f\circ\gamma_V(t))'|_{t=0}.\]
+Note that $Vf$ is defined for all DC-functions.
+
+Two vectors $V,W\in \T_pA$ will be called $\delta$-opposite if
+$1-\delta< |V|\le 1$,
+$1-\delta< |W|\le 1$,
+and $|\langle X,V\rangle +\langle X,W\rangle|<\delta$ for any unit vector $X\in T_p A$.
+We say that $V,W\in \T_pA$ are opposite if they are $\delta$-opposite for any $\delta>0$;
+in this case they are both unit vectors and make angle $\pi$ to each other.  
+
+A Lipschitz function $f\:A\to \RR$ will be called \emph{$C^1$-delta smooth} if $Vf$ is defined for any unit vector $V$ and it satisfies the following continuity property:
+for any $\eps>0$ there is $\delta>0$ such that if unit vectors $V_n$ converge to $V$ and $V$ has a $\delta$-opposite vector, then 
+\[|Vf-\lim V_nf|<\eps.\eqlbl{eq:Vf}\]
+
+Similarly, we can define $C^1$-delta converging sequence. Namely, suppose $A_n\GHto A$, then a sequence of $C^1$-delta smooth functions $f_n\:A_n\to\RR$ \emph{$C^1$-delta converges} to $f\:A\to \RR$ if for any $\eps>0$ there is $\delta>0$ such that any sequence of unit vectors $V_n\in \T A_n$ that converges to a vector $V\in \T A$ that has a $\delta$-opposite vector \ref{eq:Vf} holds. 
+
+\parbf{Weak convergence of tensor fields}
+It is easy to see that test-convergence implies $C^1$-delta convergence.
+The latter notion seems to be more natural.
+If we replace test convergence
+by $C^1$-delta convergence
+in the definition of the weak convergence of tensor fields and
+formulate our Main theorem using this definition we get formally stronger
+statement but in fact our proof 
+still works for this.
+
+For the part with DC-calculus and 
+Key lemma we still use test sequences
+(note that $C^1$-delta smooth functions are not DC in general).
+Then we need only
+the following property. 
+For any test sequence $f_n$
+and any $C^1$-delta converging
+sequence $g_n$ the function
+$\langle \nabla f_n , \nabla g_n
+\rangle$ delta-converges.
+
+
+%It is possible to redefine weak convergence using $C^1$-delta convergence instead of test-convergence.
+
+The main part of the proof of this statement is analogous to differentiability of a function with continuous partial derivatives. 

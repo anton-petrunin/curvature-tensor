@@ -1,5 +1,6 @@
-\subsection{3-dimensional case}
-In this section we prove Lemma~\ref{A^0} for 3-dimensional case.
+\subsection{3-dimensional case}\label{sec:3D-smooth}
+
+In this section we prove Lemma~\ref{A^0} in the 3-dimensional case.
 
 Vectors $w_1,\dots,w_{m(m-1)/2}\in\R^m$ are said to be \emph{in general position}
 if the vectors $w_i\otimes w_i$ form a basis in $\RR^{m\cdot(m-1)/2}$ --- the symmetric square of $\RR^m$.
@@ -14,8 +15,7 @@ $$Q=\sum_{k=1}^{m(m-1)/2}s_k(w_1,\dots,w_{m(m-1)/2})\cdot Q(w_k,w_k).
 
 Note that the vectors $w_1,\dots,w_{m(m-1)/2}\in\R^m$  are  in general position if and only if 
 $s_k(w_1,\dots,w_{m(m-1)/2})$ are finite for all $k$.
-Since 
-$s_k$ are rational functions we get the following:
+Since $s_k$ are rational functions, we get the following:
 
 \begin{thm}{Observation.}\label{obs:genpos}
 Suppose that vectors $w_1,\dots,w_{m(m-1)/2}\in\R^m$ are in general position.
@@ -24,78 +24,72 @@ Then the functions $s_1,\dots,s_{m(m-1)/2}$ are Lipschitz in a neighborhood of $
 
 
 \parit{Proof of the 3-dimensional case of \ref{A^0}.} 
-Choose a common chart in
+Choose a common chart
 \[M_n\supset U_n\to\Omega,
 \quad\text{and}\quad
 A_n\supset U\to\Omega.\]
 Let us use it to identify tangent spaces of $M_n$ and $A$ with $\RR^3$.
  
-Choose vectors $w_1,\dots,w_6\in \R^3$  in general position.
-We can choose 6 sequences of test concave functions $f^1_n\testto f^1,\dots, f^6_n\testto f^6$, such that
-$\nabla f^1,\zz\dots,\nabla f^6$ are sufficiently close to
-$w_1,\dots,w_6$.
-We can assume $U$ to be sufficiently small, so by Proposition~\ref{strconvergence}
-the measures $\Str_n(\nabla f^k_n, \nabla f^k_n)\cdot\vol^3_n$ weakly delta-converges
-on $U\cap A^\delta$ for $k=1,\dots,6$.
+We can choose 6 sequences of convex combinations of coordinate functions $f_1,\dots,  f_6$, such that
+$\nabla f_1,\zz\dots,\nabla f_6$ are in general position at $p\in \Omega$.
+We can assume that $\Omega$ is a small neighborhood of $p$, so by Proposition~\ref{strconvergence}
+the measures $\Str_n(\nabla_n f_k, \nabla_n f_k)\cdot\vol^3_n$ weakly delta-converges
+on $A^\delta_\Omega$ for $k=1,\dots,6$.
 
-By \ref{obs:genpos}, the functions $s_i$ are Lipschitz in a neighborhood of $(w_1,\dots,w_6)\zz\in (\R^3)^6$.
+By \ref{obs:genpos}, the functions $s_i$ are Lipschitz in a neighborhood of $(\nabla f_1,\zz\dots,\nabla f_6)\zz\in (\R^3)^6$.
 Applying \ref{Qij}, we get that 
 \begin{align*}
 \Str
 &=
-\sum_{k=1}^6 s_k(\nabla f^1_n,\dots \nabla f^6_n)\cdot\Str(\nabla f^k_n,\nabla f^k_n).
+\sum_{k=1}^6 s_k(\nabla_n f_1,\dots, \nabla_n f_6)\cdot\Str_n(\nabla_n f_k,\nabla_n f_k).
 \end{align*}
-Hence the measure $\Str_n(e_{i},e_{j})\cdot\vol^3_n$ are weakly delta-converging for all $i$ and $j$,
-where $e_1,\dots,e_3$ is the standard basis in $\RR^3$.
+Hence the measure $\Str_n(dx_i,dx_j)\cdot\vol^3_n$ are weakly delta-converging for all $i$ and $j$,
+where $x_1,x_2,x_3$ is the standard coordinates in $\RR^3$.
 
-By Lemma~\ref{lem:scalprod}, the sequence metric tensors $g_n$ of $M_n$ on $\Omega$ is uniforly delta-converging.
+By Lemma~\ref{lem:test-delta}, the sequence metric tensors $g_n$ of $M_n$ on $\Omega$ is uniformly delta-converging.
 Since the following equality
-\[\operatorname{Tr}\Str_n=g^{ij}_n\Str_n(e_{i},e_{j})\cdot \sqrt {\det (g_{ij,n})}\]
+\[\operatorname{Tr}\Str_n=\sum_{i,j}g^{ij}_n\Str_n(e_{i},e_{j})\cdot \sqrt {\det g_n}\]
 holds almost everywhere, we get that the sequence of measures $\operatorname{Tr}\Str_n\cdot\vol^3_n$ is weakly delta-converging.
 
 Note, that for $3$-dimensional manifold we have
-$$q_n(v,v)=\Str_n(v,v)-|v|^2\Tr \Str_n/4.\eqlbl{Q}$$
-Hence the measures $q_n(e_i, e_j)\cdot\vol^3_n$ are weakly delta-converging for all $i$ and $j$.
+$$\Qm_n(V,V)=\Str_n(V,V)-\tfrac14\cdot |V|^2\cdot \Tr \Str_n.\eqlbl{Q}$$
+Hence the measures $\Qm_n(d x_i, d x_j)\cdot\vol^3_n$ are weakly delta-converging for all $i$ and~$j$.
 
-Finally, according to ??? the components $\alpha^k_{n,i}$ of $\nabla f^k_n$ are uniformly delta-converging.
+Finally, according to \ref{lem:test-delta}(\ref{lem:test-delta-partial}) the components $\alpha_{ik,n}$ of $\nabla_n f_k$ are uniformly delta-converging.
 The result follows since
-\[\qm(f^k_n, f^k_n)=
-\sum_{i,j} \alpha^k_{n,i}\cdot \alpha^k_{n,j}\cdot \qm(e_{i}, e_{j})\]
-almost everywhere, here $e_1,\dots,e_3$ denotes the standard basis in $\RR^3$.
+\[\qm(f_k, f_k)=
+\sum_{i,j} \alpha_{ik,n}\cdot \alpha_{jk,n}\cdot \qm(x_{i}, x_{j}).\]
 \qeds
 
 \subsection{Higher-dimensional case}
 
 
-Choose sufficiently small positive $\delta$.
-Let $p\in A$ be a $\delta$-strained point;
-choose a common chart around $p$ and use it to identify points in $M_n$ and $A$ near $p$ with an open domain $\Omega\subset\RR^m$.
-
-The following observation plays a key role in the proof.
-
-\begin{thm}{Observation}
+\begin{thm}{Observation}\label{obs:nested-convex}
+Choose a common chart with the range $\Omega\subset\RR^m$ for a smoothing $M_n\smooths{} A$.
 Consider the sequence of coordinate level sets $\Omega\zz=L_m\supset L_{m-1}\supset\dots\supset L_0$, 
 where $L_i=L_i(c_{i+1},\dots,c_m)$ is defined by setting the last $m-i$ coordinates to be $c_{i+1},\dots,c_m$ respectively.
 Then the level sets $L_i$ is a smooth convex hypersurface in $L_{i+1}$ in each $M_n$;
-in particular each $L_i$ has sectional curvature bounded below by $-1$.
+in particular, each $L_i$ has sectional curvature bounded below by $-1$.
 
 Moreover, the same holds after applying any linear transformation to $\Omega$ that is close to the identity.  
 \end{thm}
 
 
 
-\parit{Proof of \ref{A^0}.}
-By the lemma in dimensionals $2$ and $3$,  we get delta-convergence of curvature tenors on $L_2$ and $L_3$.
+\parit{Proof of the key lemma (\ref{A^0}).}
+Let us use notations as in the observation.
+By the key lemma (\ref{A^0}) in dimension $2$ and $3$,  we get weak delta-convergence of curvature tenors on $L_2$ and $L_3$.
+(Again, we apply the local version of these statements as described in Section~\ref{sec:local}.)
 In particular, applying the coarea formula, we get convergence of sectional curvature of $L_3$ in the directions of $L_2$ as well as 
 the sectional curvature of $L_2$ 
 for all values $c_3,\dots,c_m$.
 The difference of these curvatures is the Gauss curvature $G_n$ of $L_2$ as submanifold in $L_3$.
-Therefore $G_n$ is delta-converging as well.
+Therefore, $G_n$ is weakly delta-converging as well.
 
-Consider a liner transformations of $\Omega$ that preserves the direction of $L_2$.
-By the last statement in the observation,
-the above argument shows delta-convergence of $G_n(w)$, where the direction $w$ of $L_3$ on $L_2$ can be chosen in an open set of $\RR^{m-2}$ --- the space transversal to $L_2$.
-In particular, we may choose directions $w_1,\dots, w_{(m-2)\cdot(m-3)/2}$ in $\RR^{m-2}$ that form a generic set.
+Consider a liner transformation of $\Omega$ that preserves the direction of $L_2$.
+By the last statement in \ref{obs:nested-convex},
+the above argument shows weak delta-convergence of $G_n(w)$, where the direction $w$ of $L_3$ on $L_2$ can be chosen in an open set of $\RR^{m-2}$ --- the space transversal to $L_2$.
+In particular, we may choose directions $w_1,\dots, w_{(m-2)\cdot(m-3)/2}$ in $\RR^{m-2}$ that form a generic set (see the  definition in Subsection~\ref{sec:3D-smooth}).
 
 Denote by $G_n^+$ the term in Gauss formula for $L_2$ in $M_n$;
 that is, $G_n^+$ is the difference of curvature of $L_2$ and the sectional curvature of $M_n$ in the same direction.
@@ -103,12 +97,13 @@ Denote by $g_n$ the Riemannian metric of $M_n$ in $\Omega$.
 Note that 
 \[G_n^+=\sum\alpha_{k,n}\cdot G_n(w_k),\]
 where the coefficients $\alpha_{k,n}$ depend continuously on the components of $g_n$ and $w_1,\zz\dots, w_{(m-2)\cdot(m-3)/2}$. 
-It follows that delta-convergence of $G_n(w_k)$ implies delta-convergence of $G_n^+$ as $n\to\infty$.
-Since the curvature of $L_2$ is delta-converging, it implies delta-convergence of sectional curvature in the direction of $L_2$.
+It follows that weak delta-convergence of $G_n(w_k)$ implies weak delta-convergence of $G_n^+$ as $n\to\infty$.
+Since the curvature of $L_2$ is weakly delta-converging, it implies weak delta-convergence of sectional curvature in the direction of $L_2$.
 
-The above argument can be repeated after applying a linear transformation of $\Omega$ that changes the direction of $L_2$ slightly and keeps the properties of common chart.
-It follows that sectional curvatures converge to a generic array of simple bivectors in $\RR^m$.
-Note the curvature tensor can be expressed from these sectional curvatures and metric tensor.
-Hence the delta-convergence of components of curvature tensor and therefore dual curvature tensor follows.
+By the second statement in the observation,
+the above argument can be repeated after applying a linear transformation of $\Omega$ that changes the direction of $L_2$ slightly.
+It follows that sectional curvatures converge for a generic array of simple bivectors in $\RR^m$.
+Note that the curvature tensor can be expressed from these sectional curvatures and the metric tensor.
+Hence, the weak delta-convergence of components of curvature tensor and therefore dual curvature tensor follows.
 \qeds
 

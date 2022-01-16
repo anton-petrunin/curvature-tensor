@@ -1,14 +1,15 @@
 \section{Singularities of codimension 2}\label{sec:codmi=2}
 
-Consider the measure $\omega$ on $A'$ defined by
+Recall that tangent space of a point $p\in A'$ is isometric to the product space $\Cone(\theta)\times\RR^{m-2}$, where $\theta=\theta(p)<2\cdot\pi$. 
+Consider the measure $\omega=\omega_A$ on $A'$ defined by
 \[\omega=(2\cdot\pi-\theta)\cdot \vol^{m-2}.\eqlbl{eq:omega}\]
 Let us extend $\omega$ to the whole space by setting $\omega(S)=\omega(S\cap A')$ for any Borel set $S\subset A$.
 
 The function $\theta$ can be extended to the whole $A$ by setting
-\[\theta(p)=2\cdot\pi\cdot \tfrac{\vol^{m-1} \Sigma_p}{\vol^{m-1} \mathbb{S}^{m-1}}.\]
+\[\theta(p)=2\cdot\pi\cdot \tfrac{\vol^{m-1} \Sigma_p}{\vol^{m-1} \mathbb{S}^{m-1}}.\eqlbl{eq:theta}\]
 According to \cite[7.14]{BGP}, $\theta\:A\to \RR$ is upper-semicontinuous.
 The right-hand side of the last equality vanish in $A^\circ$.
-Further since $\vol^{m-2}(A'')=0$, the measure $\omega$ could be also defined as a measure on whole $A$ that is defined by~\ref{eq:omega}.
+Further, since $\vol^{m-2}(A'')=0$, the measure $\omega$ could be also defined as a measure on whole $A$ that is defined by~\ref{eq:omega} with $\theta$ defined in \ref{eq:theta}.
 
 Note that \ref{prop:3parts}(\ref{prop:3parts:codim2}) follows from the following more exact statement;
 it will be proved in this section.
@@ -64,7 +65,9 @@ where $H$ denotes mean curvature of $\partial \Omega$.
 
 \parit{Proof of \ref{thm:extimage-of-G-and-H}.}
 Equip $W_{a,b}$ with unit normal vector field $n=\tfrac{\nabla f}{|\nabla f|}$.
-Let $S_p\:\T_pW_{a,b}\zz\to \T_pW_{a,b}$ be the corresponding shape operator, so $S_p\:v\mapsto\nabla_vn$.
+Let 
+\[S_p\:\T_pW_{a,b}\zz\to \T_pW_{a,b}\]
+be the corresponding shape operator, so $S_p\:v\mapsto\nabla_vn$.
 Since $f$ is strongly convex, we have that 
 \[\langle S_p(v),v\rangle\ge \delta\cdot|v|^2\]
 for a fixed value $\delta>0$ and any tangent vector $v\in \T_pW_{a,b}$. 
@@ -73,7 +76,6 @@ Note that the restriction of $u=h|_{W_{a,b}}$ is strongly convex.
 Moreover 
 \[\Hess_pu(v,v)\ge (1-\eps)\cdot \langle S_p(v),v\rangle\eqlbl{Hess=<shape}\]
 for any $p\in W_{a,b}$ and $v\in\T_pW_{a,b}$.
-
 Indeed, consider the geodesic $\gamma$ in $W_{a,b}$ such $\gamma(0)=p$ and $\gamma'(0)=v$.
 Set $a=\gamma''(t)$.
 Note that 
@@ -102,12 +104,12 @@ Denote by  $\lambda_1(p),\lambda_2(p)$ the eigenvalues of  $\Hess_p u$, so
 \\
 |\Hess u|^2&=\lambda_1^2+\lambda_2^2,
 \\
-\det(\Hess u)&=\lambda_1\cdot\lambda_2.
+\det(\Hess u)&=\lambda_1\cdot\lambda_2,
+\intertext{and hence}
+2\cdot\det(\Hess u)
+&=|\Delta u|^2
+-|\Hess u|^2.
 \end{align*}
-Therefore 
-\[2\cdot\det(\Hess u)
-=|\Delta u|^2
--|\Hess u|^2.\] 
 
 Since $W_{a,b}$ is two-dimensional, by Proposition~\ref{prop:bochner-dirichle} we get that
 \[\int\limits_{W_{a,b}} 
@@ -155,9 +157,7 @@ Whence \ref{eq:trace>=H} implies
 
 Let $M$ be a 3-dimensional Riemannian manifold.
 Choose a smooth function $f$.
-Denote by $L_c$ the level set of $f$;
-that is,
-\[L_c=\set{x\in M}{f(x)=c}.\]
+Denote by $L_c$ the level set defined by $f(x)=c$.
 If the level set $L_c$ is a smooth surface in a neighborhood of $x\in L_c$,
 then denote by $k_1(x)\le k_2(x)$ the principle curvatures of $L_c$ at $x$.
 In this case, set 
@@ -210,7 +210,7 @@ It remains to integrate the obtained inequalities by $a$ and pass to a limit as 
 \qeds
 
 \begin{thm}{Corollary}\label{cor:Ricci}
-Suppose that $M_n\to  \Cone(\theta)\times \RR$ and $f_n\: M_n\to \RR$ be as in \ref{thm:HG-converge}.
+Suppose that $M_n\smooths{}  \Cone(\theta)\times \RR$ and $f_n\: M_n\to \RR$ be as in \ref{thm:HG-converge}.
 Set $u_n=\tfrac{\nabla f_n}{|\nabla f_n|}$.
 Then 
 
@@ -239,9 +239,9 @@ By \ref{thm:bochner-formula} we have that the following equality
 holds for any function $\phi_n$ with compact support on $M_n$,
 assuming that all expressions in the formula have sense.
 
-It is remains to find a sequence of nonnegative function $\phi_n\:M_n\to \RR$ 
+It remains to find a sequence of nonnegative functions $\phi_n\:M_n\to \RR$ 
 with compact support 
-that converge to a $\phi\:\Cone(\theta)\times \RR\to \RR$ such that (1) $\phi$ is unit in a neighborhood of a given point $p\in \Cone(\theta)\times \RR$ and (2) we have a control the three terms on the right hand side of the formula; that is, we have the following weak convergences:
+that converge to a $\phi\:\Cone(\theta)\times \RR\to \RR$ such that (1) $\phi$ is unit in a neighborhood of a given point $p\in \Cone(\theta)\times \RR$ and (2) we have a control the three terms on the right-hand side of the formula; the latter means that we have the following weak convergences:
 \[
 \begin{aligned}
 \phi_n \cdot G_n&\rightharpoonup 0,
@@ -260,8 +260,15 @@ implies the first convergence in \ref{eq:3->0}.
 Similarly, to prove the second convergence in \ref{eq:3->0}, it is sufficient to assume in addition that $|\nabla\phi_n|$ is universally bounded and apply \ref{thm:HG-converge} together with the coarea formula.
 
 To prove the last convergence in \ref{eq:3->0}, note that
-$|\nabla u|\rightharpoonup 0$ away from the singular locus.
-This observation is used to control the term $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>$ at the points far from the singular locus of $\Cone(\theta)\times \RR$ --- we only need to assume that $|\nabla\phi_n|$ is bounded.
+$|\nabla u_n|\rightharpoonup 0$ away from the singular locus.
+The latter follows from Lemma~\ref{lem:test-delta}, mostly part (\ref{lem:test-delta-partial-g}).
+Indeed, $\nabla_{u_n} u_n$ can be written in a common chart away from the singular locus. 
+The lemma implies that its components converge to the components of $\nabla_u u$ in the limit space.
+By assumption $u$ is parallel in the limit space; in particular $\nabla_uu=0$.
+
+The observation above will used to control the term $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>$ at the points far from the singular locus of $\Cone(\theta)\times \RR$.
+To do this we only need to assume that $|\nabla\phi_n|$ is bounded.
+Next, we describe how to control it near the singularity.
 
 Further, since $|u_n|=1$, we have $\nabla_{u_n} u_n\perp \nabla f_n$.
 Therefore if $\nabla \phi_n$ is proportional to $\nabla f_n$ at some point, then at this point we have $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>=0$.
