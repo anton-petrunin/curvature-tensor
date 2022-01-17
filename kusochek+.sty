@@ -11,9 +11,32 @@
 
 \usepackage{enumerate}
 
+\usepackage[
+sorting=debug,
+bibencoding=auto,
+backend=biber,
+maxnames=10,
+%babel=other,
+autolang=other,
+doi=false,
+url=false,
+style=numeric-comp,
+isbn=false]{biblatex}
+\usepackage{csquotes}
+\AtEveryBibitem{\clearlist{language}}
+\AtEveryBibitem{\clearlist{note}}
+\renewbibmacro{in:}{}
+\renewcommand*{\bibfont}{\scriptsize}
+\addbibresource{library.bib}
+
+\DeclareFieldFormat{postnote}{#1}
+\DeclareFieldFormat{multipostnote}{#1}
+\DeclareFieldFormat{pages}{#1}
 
 \hypersetup{colorlinks=true,citecolor=black,linkcolor=black,anchorcolor=black,filecolor=black,menucolor=black,urlcolor=black
 }
+
+
 
 \newcounter{thm}[section]
 \renewcommand{\thethm}{\thesection.\arabic{thm}}
@@ -121,7 +144,7 @@
 \def\test{\mathrm{Test\,}}
 \def\meas{\mathrm{Meas\,}}
 \def\DC{\mathrm{DC\,}}
-\newcommand{\testto}{\stackrel{\tiny\rm test}{\longrightarrow}}
+\newcommand{\testto}{\stackrel{\text{\tiny\rm test}}{\longrightarrow}}
 \newcommand*{\set}[2]{\l\{\,\l.{#1}\vphantom{#2}\,\r|\,{#2}\,\r\}}
 
 \newcommand{\Al}{\mathcal{A}lex} 

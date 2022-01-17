@@ -25,8 +25,7 @@ Then the measures
 The definition of strange curvature tensor is motivated by the following integral expression from \ref{thm:bochner-formula}:
 $$\int\limits_\Omega \phi\cdot \Str(u, u)
 =\int\limits_\Omega \phi\cdot \Int+
-\int\limits_\Omega \l[H\cdot\<u,\nabla\phi\>- \<\nabla\phi,\nabla_{u} u\> \r],
-\eqlbl{Bochner}$$
+\int\limits_\Omega \l[H\cdot\<u,\nabla\phi\>- \<\nabla\phi,\nabla_{u} u\> \r],\eqlbl{eq:Bochner2}$$
 where 
 \begin{itemize}
 \item $u=\nabla f/|\nabla f|$,
@@ -35,7 +34,7 @@ where
 \end{itemize}
 This formula is the main tool in the proof of the proposition.
 It reduces the proposition to the following two lemmas;
-each lemma provides the convergence of an integral term in the right-hand-side of \ref{Bochner}.
+each lemma provides the convergence of an integral term in the right-hand-side of \ref{eq:Bochner2}.
 
 \begin{thm} {Lemma}\label{Int}
 In condition of Proposition~\ref{strconvergence}, $\Int_n\cdot \vol^3_n$ is a delta-converging sequence of measures on $\Omega$.
@@ -116,20 +115,20 @@ Since $\Int_n\cdot \vol^2$ is weakly converging measures on $L_n$, we get
 that $\Int_n\cdot\vol^3_n$ is weakly delta-converging measures on $M_n$.
 \qeds
 
-The following lemma is related to the convergence of the second integral in \ref{Bochner}, the proof uses
+The following lemma is related to the convergence of the second integral in \ref{eq:Bochner2}, the proof uses
 DC-calculus in a common chart; see Section~\ref{sec:DC}.
 
 \begin{thm}{Lemma}\label{HnablaU}
 In condition of Proposition~\ref{strconvergence}, 
-suppose $\psi\:\Omega\to\RR$ is a smooth function with compact support. Then
-\[\int\limits_\Omega \l[H_n\cdot\<u_n,\nabla_n\phi\>_n- \<\nabla_{u_n} u_n,\nabla_n\phi\>_n \r]\cdot\vol^3_n
-\eqlbl{Bochner}\]
-converges, where $H_n$ and $u_n$ as in  \ref{Bochner}.
+suppose $\psi\:\Omega\to\RR$ is a smooth function with compact support.
+Then
+\[\int\limits_\Omega \l[H_n\cdot\<u_n,\nabla_n\phi\>_n- \<\nabla_{u_n} u_n,\nabla_n\phi\>_n \r]\cdot\vol^3_n\]
+converges, where $H_n$ and $u_n$ as in  \ref{eq:Bochner2}.
 \end{thm}
 
 \parit{Proof.}
 Note that $H_n=\div u_n$.
-Let us rewrite the first term of \ref{Bochner} in coordinates:
+Let us rewrite the first term of \ref{eq:Bochner2} in coordinates:
 $$\int\limits_{\Omega}
 \biggl[
 \sum_{i}
@@ -159,7 +158,7 @@ $\partial_i \phi$.
 Applying \ref{lem:test-delta}, we get that 
 the integral converges.
 
-Further, for the second term in \ref{Bochner}
+Further, for the second term in \ref{eq:Bochner2}
 we have
 \begin{align*}
 \int\limits_{M_n}&\<\nabla\psi_n,\nabla_{u_n} u_n\>\cdot\vol^3_n=\\
@@ -190,7 +189,7 @@ The convergence follows by the same argument.
 \qeds
 
 \parit{Proof of Proposition~\ref{strconvergence}.}
-By \ref{Bochner}, \ref{Int}, and \ref{HnablaU} we get that $\Str_n(u_n,u_n)\cdot \vol^3_n$ is a weakly delta-converging sequence of measures.
+By \ref{eq:Bochner2}, \ref{Int}, and \ref{HnablaU} we get that $\Str_n(u_n,u_n)\cdot \vol^3_n$ is a weakly delta-converging sequence of measures.
 It remains to apply \ref{lem:test-delta}(\ref{lem:test-delta|nabla|}),
 \ref{obs:delta-weak-uniform},
 and the fact that $\Rm$ can be expresses from $\Str$.
