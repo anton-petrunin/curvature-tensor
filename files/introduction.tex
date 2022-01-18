@@ -17,15 +17,15 @@ If the limit tensor is different,
 then a contradiction would occur for the alternated sequence $M_1,M_1',M_2,M_2',\dots$ 
 In particular, if the limit space is Riemannian, then the limit curvature tensor is the curvature tensor of the limit space.
 
-Analogous statements about metric tensor and Levi-Citita connection were nearly proved by Perelman \cite{PerDC},
+Analogous statements about metric tensor and Levi-Citita connection were essentially proved by Perelman \cite{PerDC},
 we only had to tie his argument with appropriate type of convergence.
 This part is one of the main ingradients in the proof;
 it is discussed in Section~\ref{sec:DC}. 
-It provides a technique that should be used elsewhere as well.
+It provides a technique that could be useful elsewhere as well.
 For curvature tensor (which has higher order of derivative), this argument can not extended directly;
 we found a way around applying a Bochner-type formulas as in \cite{petrunin-SC}.
 
-The following corollary might look like a direct corollary of the main theorem, 
+The following statement looks like a direct corollary of the main theorem, 
 and indeed, it follows from its proof, but strictly speaking it can not be deduced directly from the main theorem alone.
 We will denote by $\Sc$ the scalar curvature and $\vol^m$ the $m$-dimensional volume; that is $m$-dimensional Hausdorff measure calibrated so that the unit $m$-dimensional cube has unit measure.
 
@@ -56,7 +56,7 @@ Let $\mathfrak{K}$ be a convex closed subset of curvature tensors on $\RR^m$
 such that 
 all sectional curvatures of tensors in $\mathfrak{K}$ are at least $-1$.
 Assume that $\mathfrak{K}$ is invariant with respect to the rotations of $\RR^m$.
-(For example, one can take $\mathfrak{K}$ the set of all curvature tensors with nonnegative curvature operator.)
+(For example, one can take as $\mathfrak{K}$ the set of all curvature tensors with nonnegative curvature operator.)
 
 Suppose $M_n$ is a sequence of $m$-dimensional Riemannian manifolds that converges to a Riemannian manifold $M$ of the same dimension.
 Assume that for any $n$, all curvature tensors of $M_n$ belong to $\mathfrak{K}$, 
@@ -70,7 +70,7 @@ The limit measure $\mathfrak m$ in \ref{cor:Sc} has some specific properties;
 let us describe a couple of them:
 \begin{itemize}
 \item The measure $\mathfrak m$ vanish on any subset of $A$ with vanishing $(m-2)$-dimensional Hausdorff measure.
-In particular, the $\mathfrak m$ vanishes on the set of singularities of codimension 3.
+In particular, $\mathfrak m$ vanishes on the set of singularities of codimension 3.
 This is an easy corollary of \cite{petrunin-SC}.
 
 \item The measure can be explicitly described on the set $A'$ of singularities
@@ -84,12 +84,13 @@ with the total angle $\theta=\theta(x)<2\cdot\pi$.
 This statement follows from \ref{prop:3parts:codim2+}.
 \end{itemize}
 
-Let us mention that the precise geometric meaning of our curvature tensor is not quite clear. 
-In particular, we cannot prove to the following highly plausible statement; compare to \cite[Conjecture~1.1]{G}.
+A precise geometric meaning of our curvature tensor is not quite clear. 
+In particular, we do not see a solution to the following problem;
+compare to \cite[Conjecture~1.1]{G}.
 
 \begin{thm}{Problem}
 Suppose that the limit curvature tensor of Alexandrov space $A$ as in the main theorem has sectional curvature bounded below by $K>\kappa$.
-Show that it implies that $A$ is an Alexandrov space with curvature bounded below by $K$.
+Show that $A$ is an Alexandrov space with curvature bounded below by~$K$.
 \end{thm}
 
 The theorem makes possible to define a curvature tensor for every \emph{smoothable} Alexandrov space.
@@ -109,15 +110,12 @@ Boundary of Alexandrov space equipped with its intrinsic metric is an Alexandrov
 More importantly, a solution of \ref{prob:curvature} might provide nontrivial ways to deform Alexandrov space; see \cite[Section 9]{petrunin-conc}. 
 
 \parbf{Related results.}
-The construction of harmonic coordinates in a neighborhood of regular point of $\rcd$-space (in particular, Alexandrov space) given by Elia Bruè, Aaron Naber, and Daniele Semola \cite{BNS} might help to solve \ref{prob:curvature}.
-
 The result of the main theorem in dimension 2 is well known \cite[VII \S13]{AZ}.
 
+The construction of harmonic coordinates in a neighborhood of regular point of $\rcd$-space (in particular, Alexandrov space) given by Elia Bruè, Aaron Naber, and Daniele Semola \cite{BNS} might help to solve \ref{prob:curvature}.
+
 The problem of introducing Ricci tensor
-was studied in far more general settings of 
- $\rcd$-spaces \cite{G1,St,H}
- and
-for some singular  spaces as well \cite{L}.
+was studied in far more general settings \cite{G1,St,H,L}.
 Curvature tensor for  $\rcd$-spaces was defined by Nicola Gigli \cite{G};
 it works for more general class of spaces, but this approach does not see the curvature of singularities.
 It is expected that our definitions agree on the regular locus.
@@ -130,7 +128,7 @@ the higher dimensional require only minor modifications.
 We subdivide the limit space $A$ into
 three subsets: $A^\circ$ --- the subset of regular 
 points, $A'$ --- points with singularities of codimension 2,
-$A''$ points with higher codimension singularities at least 3.
+$A''$ --- singularities of higher codimension.
 These sets are treated independently.
 
 First, we show that limit curvature vanish on $A''$; 
@@ -140,11 +138,12 @@ The $A'$-case is reduced to its partial case, when the limit is isometric to the
 In the proof we use a Bochner-type formula proved in Section~\ref{sec:bochner}.
 
 The $A^\circ$-case is proved by induction.
-The base is $2$-dimensional case; in the proof for dimension $3$ we apply the main theorem to level sets of special concave functions.
+The base is $2$-dimensional case.
+Further, we apply the main theorem to level sets of special concave functions.
 By Gauss formula, these level sets have the same lower curvature bound. 
 In the proof, we use the Bochner-type formula together with DC-calculus developed by Grigory Perelman \cite{PerDC}.
-The higher-dimensional case is use the proof of three-dimensional case plus an extra estimate.
+The higher-dimensional case uses the proof of three-dimensional case plus an extra estimate.
 
 \parbf{Acknolegements.}
-These results were announced more than 15 years ago, and all this time John Lott was kipping to express his interest in a written version.
-We wish to thank him for doing this --- without him the paper would not be written. 
+We wish to thank John Lott; without him the paper would not be written ---
+these results were announced more than 15 years ago, and all this time John Lott was kipping to express his interest in a written version.
