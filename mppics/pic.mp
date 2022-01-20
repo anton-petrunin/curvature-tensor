@@ -42,8 +42,8 @@ dOt z.o;
 
 label.ulft(btex $\RR^{m-2}$ etex rotated 90, z.r);
 label.rt(btex $p$ etex, z.o);
-label.rt(btex $s_{ij}=-h$ etex rotated 90, z.bbig);
-label.lft(btex $s_{ij}=h$ etex rotated 90, z.bsmall);
+label.rt(btex $s_{ij}=-w$ etex rotated 90, z.bbig);
+label.lft(btex $s_{ij}=w$ etex rotated 90, z.bsmall);
 
 endfig;
 

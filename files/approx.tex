@@ -45,12 +45,12 @@ Whence $2\cdot \pi-\theta(p)$ is the $\vol^1$-density of $\mathfrak n$ at $p$ as
 \subsection{Higher-dimensional case}
 
 
-Suppose $M_n\smooths{} \Cone(\theta)\times \RR^{m-2}$, where $\Cone(\theta)$ denotes the two-dimensional cone with total angle $\theta<2\cdot\pi$ around the tip.
-First, we will show that the sectional curvatures of $M_n$ in the vertical sectional directions of $\Cone(\theta)\times \RR^{m-2}$ weakly converge to zero;
+Suppose $M_n\smooths{} \Cone(\theta)\times \RR^{m-2}$, where $\Cone(\theta)$ denotes the two-dimensional cone with total angle $\theta<2\cdot\pi$.
+First, we will show that the curvatures of $M_n$ in the vertical sectional directions of $\Cone(\theta)\times \RR^{m-2}$ weakly converge to zero;
 an exact statement is given in the following proposition.
-Further, we show that this result combined with the 3-dimensional case implies \ref{prop:3parts:codim2+} in higher dimensions.
+By combining this result with the 3-dimensional case we get \ref{prop:3parts:codim2+} in higher dimensions.
 
-Let us denote by $K(X\wedge Y)$ the sectional curvature in the direction of $X\wedge Y$.
+For $X,Y\in \T_p$, denote by $K(X\wedge Y)$ the curvature in the sectional direction of $X\wedge Y$.
 A function $f\:\Cone(\theta)\times\RR^{m-2}$ will be called \emph{vertical affine function} if $f$ can be obtained as a composition of the projection to $\RR^{m-2}$ and an affine function on $\RR^{m-2}$.
 
 \begin{thm}{Proposition}\label{prop:vert-vert}
@@ -65,7 +65,7 @@ Then
 \end{thm}
 
 Let $\Sigma$ be a convex surface in a Riemannian manifold $M$.
-Suppose $x$ is a smooth point of $\Sigma$; that is the tangent hyperplane $H_x$ of $\Sigma$ is defined at $x$;
+Suppose $x$ is a smooth point of $\Sigma$; that is, the tangent hyperplane $H_x$ of $\Sigma$ is defined at $x$;
 denote by $e_1,\dots,e_{m-1}$ an orthonormal basis of $H_p$.
 Set 
 \[\Zc_\Sigma(x)= \sum_{i,j} K(e_i\wedge e_j).\]
@@ -93,15 +93,21 @@ It remains to pass to the limit.
 Let $p$ be a point on singularity of $\Cone(\theta)\times \RR^{m-2}$;
 let us denote its liftings by $p_n\in M_n$.
 We can assume that $p$ corresponds to the origin of $\RR^{m-2}$.
-Choose points $a_{1,n},\zz\dots,a_{m-2,n}$, $b_{1,n},\zz\dots,b_{m-2,n}$ in $M_n$ such that the distance functions $f_{i,n}=\dist_{a_{i,n}}-|a_{i,n}-p|$ and $-h_{i,n}=-\dist_{b_{i,n}}+|b_{i,n}-p|$ converge to $i^{\text{th}}$ vertical coordinate function on $\Cone(\theta)\times \RR^{m-2}$.
+Choose points $a_{1,n},\zz\dots,a_{m-2,n}$, $b_{1,n},\zz\dots,b_{m-2,n}$ in $M_n$ such that the functions $f_{i,n}=\dist_{a_{i,n}}-|a_{i,n}-p|$ and $-h_{i,n}=-\dist_{b_{i,n}}+|b_{i,n}-p|$ converge to $i^{\text{th}}$ vertical coordinate function on $\Cone(\theta)\times \RR^{m-2}$.
 Further, choose points $c_{1,n},c_{2,n},c_{3,n}$ so that the functions $g_{i,n}=\dist_{c_{i,n}}-|c_{i,n}-p|$ converge to Busemann functions for different horizontal rays in $\Cone(\theta)\times \RR^{m-2}$ emerging from $p$.
 Note that the latter implies that the angles $\angk{p_n}{c_{i,n}}{c_{j,n}}$ are bounded away from zero for all large $n$.
 
 By \cite[Lemma 7.2.1]{petrunin-conc}, there is an increasing concave function $\phi$ defined in a neighborhood of zero in $\RR$ such that $\phi'$ is close to 1 and for any $\eps>0$ and $i\ne j$ the function 
-\[s_{ij,n}=\phi\circ g_{i,n} + \phi\circ g_{j,n}+\sum_i[\phi(\tfrac{f_{i,n}}\eps)+\phi(\tfrac{h_{i,n}}\eps)]\]
+\[s_{ij,n}
+=
+\phi\circ g_{i,n}
++
+\phi\circ g_{j,n}
++
+\sum_i\left[\phi\left(\tfrac{f_{i,n}}\eps\right)+\phi\left(\tfrac{h_{i,n}}\eps\right)\right]\]
 is strongly concave in $B(p_n,R)$ for fixed $R>0$ and every large $n$.
 
-\begin{wrapfigure}{r}{40 mm}
+\begin{wrapfigure}{r}{35 mm}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-100}
@@ -109,7 +115,7 @@ is strongly concave in $B(p_n,R)$ for fixed $R>0$ and every large $n$.
 \end{wrapfigure}
 
 
-Moreover, given $h>0$, we can take small $\eps>0$ so that for all $i\ne j$ for the limit function $s_{ij}\:\Cone(\theta)\times \RR^{m-2}\to \RR$ the set $s_{ij}^{-1}[-h,h]$ covers the singular locus in $B(p,R)$. 
+Moreover, given $w>0$, we can take small $\eps>0$ so that for all $i\ne j$ for the limit function $s_{ij}\:\Cone(\theta)\zz\times \RR^{m-2}\to \RR$ the set $s_{ij}^{-1}[-w,w]$ covers the singular locus in $B(p,R)$. 
 
 Note that we can choose $\eps_0>0$ so that for almost all points $x\in B(p_n,R)$ 
 the differential $d_xs_{ij,n}$ is linear and $|d_xs_{ij,n}|>\eps_0>0$ for some $i$ and $j$.
@@ -126,9 +132,9 @@ Then gradients $\nabla_{x_n}f_n$ and $\nabla_{x_n}h_n$ are nearly orthogonal to 
 Set $\Sigma_{ij,n}=\Sigma_{ij,n}(c)=\set{x\in M_n}{s_{ij,n}(x)=c}$.
 The argument above implies that for almost all points $x\in B(p_n,R)$ one of the sectional directions of the tangent directions of $\Sigma_{ij,n}$ is close to the sectional direction $\nabla f_n\wedge\nabla h_n$.
 
-Note that \ref{lem:nonsmooth-convex} and the coarea formula we get that the sum integral curvatures of $M_n$ in the directions of $\Sigma_{ij,n}$ at $x_n$ at the subsets where $|d_{x_n}s_{ij,n}|>\eps_0$ is bounded by $\const\cdot h$ for some constant.
+By \ref{lem:nonsmooth-convex} and the coarea formula, the sum integral curvatures of $M_n$ in the directions of $\Sigma_{ij,n}$ at $x_n$ at the subsets where $|d_{x_n}s_{ij,n}|>\eps_0$ is bounded by $\const\cdot w$.
 Therefore, the same holds for the integral of $K(\nabla f_n\zz\wedge\nabla h_n)$.
-The proposition follows since $h$ can be taken arbitrary small.
+The proposition follows since $w$ can be taken arbitrary small.
 \qeds
 
 
@@ -137,7 +143,7 @@ Choose sequences of strongly concave functions $f_{1,n},\dots f_{m-2,n}\: M_n\to
 
 Note that the fields $e_{1,n}=\nabla f_1,\dots,e_{m-2,n}=\nabla f_{m-2}$ are nearly orthonormal;
 in particular, they are linear independent for all large $n$.
-Let us add two fields $e_{m-1,n}$ and $e_{m,n}$  so that $e_{1,n},\dots e_{m,n}$ form a nearly orthonormal frame in $M_n$;
+Let us add two fields $e_{m-1,n}$ and $e_{m,n}$  so that $e_{1,n},\dots e_{m,n}$ form a nearly orthonormal frame in~$M_n$;
 that is, $\langle e_{i,n}, e_{j,n}\rangle\to 0$ for $i\ne j$ and $\langle e_{i,n}, e_{i,n}\rangle\to 1$ for any $i$ as $n\to\infty$.
 
 Observe that \ref{prop:vert-vert} implies that $K(e_i\wedge e_j)\cdot\vol\rightharpoonup 0$ if $i,j\le m-2$.

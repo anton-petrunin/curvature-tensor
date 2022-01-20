@@ -159,7 +159,7 @@ Whence \ref{eq:trace>=H} implies
 
 Let $M$ be a 3-dimensional Riemannian manifold.
 Choose a smooth function $f$.
-Denote by $L_c$ the level set defined by $f(x)=c$.
+Conside its level sets $L_c=\set{x\in M}{f(x)=c}$.
 If the level set $L_c$ is a smooth surface in a neighborhood of $x\in L_c$,
 then denote by $k_1(x)\le k_2(x)$ the principle curvatures of $L_c$ at $x$.
 In this case, set 
@@ -187,7 +187,7 @@ there is a $(-2)$-concave function $\rho$ defined in an $r$-neighborhood of $p$ 
 Moreover, the function $\rho$ is \emph{liftable};
 that is, there is a sequence of $(-2)$-concave $\rho_n\:M_n\to\RR$ that converges to $\rho$.
 
-Consider a point $q\in \Cone(\theta)\times \RR$ above $p$; that is, its $\RR$-coordinate is larger and its $ \Cone(\theta)$-coordinate is the same.
+Consider a point $q\in \Cone(\theta)\times \RR$ \emph{above} $p$; that is, its $\RR$-coordinate is larger and its $ \Cone(\theta)$-coordinate is the same.
 If $\RR$-coordinate of $q$ is large, then $\dist_q+f$ is $\lambda$-concave for small $\lambda>0$ and it has a nonstrict minimum at $p$.
 Therefore, given $\lambda>0$, we can find $q$ so that the sum $s=f+\dist_q+\lambda\cdot \rho$ is $(-\lambda)$-concave and has strict maximum at $p$.
 Moreover
@@ -268,11 +268,11 @@ Indeed, $\nabla_{u_n} u_n$ can be written in a common chart away from the singul
 The lemma implies that its components converge to the components of $\nabla_u u$ in the limit space.
 By assumption $u$ is parallel in the limit space; in particular $\nabla_uu=0$.
 
-The observation above will used to control the term $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>$ at the points far from the singular locus of $\Cone(\theta)\times \RR$.
+The observation above will be used to control the term $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>$ at the points far from the singular locus of $\Cone(\theta)\times \RR$.
 To do this we only need to assume that $|\nabla\phi_n|$ is bounded.
 Next, we describe how to control it near the singularity.
 
-Further, since $|u_n|=1$, we have $\nabla_{u_n} u_n\perp \nabla f_n$.
+Since $|u_n|=1$, we have $\nabla_{u_n} u_n\perp \nabla f_n$.
 Therefore if $\nabla \phi_n$ is proportional to $\nabla f_n$ at some point, then at this point we have $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>=0$.
 This observation makes it possible to choose $\phi_n$ so that the term $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>$ vanish around the singular locus of $\Cone(\theta)\times \RR$.
 Namely in addition to the above conditions on $\phi_n$ we have to assume that the identity $\phi_n=\psi\circ f_n$ holds at the points of $M_n$ that are sufficiently close to the singular locus of $\Cone(\theta)\times \RR$.
