@@ -1,125 +1,13 @@
 \section{Bochner formula}\label{sec:bochner}
 
-
-We will need few integral formulas based on the Bochner formula.
-We made these calculations based on \cite[Chapter II]{lawson-michelsohn}.
-First let us state the Bochner formula for function with Dirichlet boundary condition.
-
-\begin{thm}{Proposition}\label{prop:bochner-dirichle-old}
-Assume $\Omega$ is a compact domain with smooth boundary $\partial \Omega$ in a Riemannian manifold
-and $f$ is a smooth function that vanish on $\partial \Omega$.
-Then
-\[\int\limits_\Omega |\Delta f|^2
--|\mathrm{Hess}f|^2
--\langle\mathrm{Ric}(\nabla f),\nabla f\rangle
-=\int\limits_{\partial\Omega}
-H\cdot|\nabla f|^2,\]
-where $H$ denotes mean curvature of $\partial \Omega$.
-\end{thm}
- 
-\begin{thm}{Corollary}
-Assume $\Omega$ is a compact domain with smooth boundary $\partial \Omega$ in a 2-dimensional Riemannian manifold with nonnegaive curvature
-and $f$ is a smooth concave function that vanish on $\partial \Omega$.
-Then
-\[\int\limits_\Omega 
-\det(\mathrm{Hess}f)
-\le\pi\cdot\sup_{x\in\partial\Omega}|\nabla_x f|^2.\]
-
-\end{thm}
-
-
-
-
-In this section we give necessary versions of the Bochner formula.
-The calculations are based on \cite[Chapter II]{lawson-michelsohn}.
-We use Riemannian metric to identify differential forms and multivector fields on $M$.
-Therefore the statement about differential forms can be also formulated in terms of multivector fields and the other way around.
-
-
-Let $M$ be a Riemannian manifold.
-Denote by $\nabla$ the Levi-Cevitta connection on $M$.
-The bundle $\LT M$ of multivectors over $M$ is equipped with Clifford product, denoted by $\,\bullet \,$.
-We will denote by $e_i$ is an orthonormal frame at a point; the following definitions will not depend on its choice.
-
-\parbf{Laplasians.}
-The Dirac operator on differential forms forms will be denoted by $D$;
-it is defined as
-\[D=\sum_i e_i\bullet \nabla_{e_i}.\]
-Its square 
-\[D^2=\sum_i e_i\bullet e_j\bullet \nabla^2_{e_i,e_j}\]
-is called Hodge laplacian.
-
-The Dirac operator if \emph{formally self-adjoint}, in particular,
-\[\int_M \langle D^2\phi,\psi\rangle=\int_M \langle D\phi,D\psi\rangle\]
-for any two vector fields $\phi$ and $\psi$ with compact support.
-
-Further, define the connection laplacian
-\[\nabla^*\nabla\phi =-\sum_i\nabla^2_{e_i,e_i}\phi\]
-and the gradient
-\[\nabla \phi=\sum e_i\otimes \nabla_{e_i}\phi.\]
-
-For the connection laplacian we also have the identity
-\[\int_M \langle \nabla^*\nabla\phi,\psi\rangle
-=
-\int_M \langle \nabla\phi,\nabla\psi\rangle.\]
-If $\phi$ and $\psi$ have support in the domain where the frame is defined, then the right handside can be written as 
-\[\int_M \langle \nabla\phi,\nabla\psi\rangle=\sum_i\int_M\langle \nabla_{e_i}\phi,\nabla_{e_i}\psi\rangle;\]
-using the a partition of unity, one can use the latter expression to redefine the left hand side. 
-
-\parbf{Bochner formula.}
-The difference $D^2-\nabla^*\nabla$ between two laplasians described above is a 0-order differential operator which can be written in terms of curvature.
-For a vector field $v$, the formula is 
-\[D^2v-\nabla^*\nabla v=\Ric(v).\]
-
-Using the identities above, the formula can be written in an integral form
-\[\int_M \langle Dv,Dw\rangle -\langle \nabla v,\nabla w\rangle=\langle \Ric(v),w\rangle\]
-In particular, if $w=\phi \cdot v$ for a smooth function $\phi$;
-we get
-\[\int_M \langle Dv,D(\phi\cdot v)\rangle -\langle \nabla v,\nabla(\phi\cdot v) \rangle=\phi\cdot\langle \Ric(v), v\rangle,\]
-or, equivalently
-\[\int_M \phi\cdot(\langle Dv,D v\rangle -\langle \nabla v,\nabla v \rangle)
-+
-\int_M (\langle Dv,\nabla \phi \bullet v\rangle -\langle \nabla v,\nabla v \rangle)
-=
-\phi\cdot\langle \Ric(v), v\rangle,\]
-\parbf{Relative formulas.}
-For a domain $\Omega$ with boundary $\partial \Omega$, the formula above takes form
-\[\int_\Omega (\langle D^2\phi,\psi\rangle- \langle D\phi,D\psi\rangle)
-=
-\int_{\partial \Omega}\langle \nu\bullet D\phi,\psi\rangle,\]
-where $\nu$ is the outer normal field on $\partial \Omega$.
-
-The square $D^2$ of the Dirac operator is called Hodge laplacian.
-
-
-For a domain $\Omega$ with boundary $\partial \Omega$, the formula above takes form
-\[\int_\Omega (\langle \nabla^*\nabla\phi,\psi\rangle-\langle \nabla\phi,\nabla\psi\rangle)
-=
-\int_{\partial \Omega}\langle \nabla_\nu \phi,\psi\rangle,\]
-where $\nu$ is the outer normal field on $\partial \Omega$.
-
-The Bochner's identity for a vector field $u$ can be written as
-\[D^2 u-\nabla^*\nabla u=\Ric(u).\]
-relates the Dirac's laplasian $D^2$ and the connection laplasian $\nabla^*\nabla$
-
-In this section we will write an integral version of the Bochner formula \cite[8.3]{lawson-michelsohn}
-\[D^2-\nabla^*\nabla=\Ric\]
-in such a way that each term has geometric meaning.
-
-
-Further $\nabla^*\nabla=-\sum_i\nabla^2_{e_i,e_i}$ is the connection Laplacian.
-
-
-
 Let $M$ be Riemannian $m$-manifold and $f\:M\to\R$ be a smooth function without critical points on an open domain $\Omega\i M$.
-Assume $\phi\:\Omega\to\R$ be a smooth function with compact support.
 Set $u=\nabla f/|\nabla f|$.
 Let us define $\Int_f(x)$ (or just $\Int$) to be scalar curvature of the level set $L_x=f^{-1}(f(x))$ at $x\in L_x\i M$.
 Set
 \begin{enumerate}
  \item $\kappa_1(x)\le\kappa_2(x)\le\dots\le\kappa_{m-1}(x)$ the principle curvatures of $L_x$ at $x$;
- \item $H_f=H_f(x)=\kappa_1+\kappa_2+\dots+\kappa_{m-1}$ is mean curvature of $L_x$ at $x$
-\item $G_f=G_f(x)=2\sum_{i<j}\kappa_i\cdot\kappa_j$ is the extrinsic term
+ \item $H=H_f(x)=\kappa_1+\kappa_2+\dots+\kappa_{m-1}$ is mean curvature of $L_x$ at $x$
+\item $G=G_f(x)=2\sum_{i<j}\kappa_i\cdot\kappa_j$ is the extrinsic term
  in the Gauss formula for $\Int_f(x)$. 
 \end{enumerate}
 
@@ -132,15 +20,21 @@ Let $M$ be an $m$-dimensional Riemannian manifold,
  $f\:M\to\R$ be a smooth function without critical points on an open domain $\Omega\subset M$ and $u=\nabla f/|\nabla f|$.
 Assume $\phi\:\Omega\to\R$ is a smooth function with compact support.
 Then 
-$$\int\limits_\Omega \phi\cdot \Str(u)
+\[\int\limits_\Omega \phi\cdot \langle \Ric u,u\rangle =
+\int\limits_\Omega [\phi \cdot G+H\cdot\<u,\nabla\phi\>-\<\nabla\phi,\nabla_{u} {u}\>]
+\eqlbl{eq:Bochner(-1)}
+\]
+and
+\[\int\limits_\Omega \phi\cdot \Str(u)
 =
 \int\limits_\Omega \l[H\cdot\<u,\nabla\phi\>- \<\nabla\phi,\nabla_u u\> \r]+
 \int\limits_\Omega \phi\cdot \Int_f.
-\eqlbl{eq:Bochner0}$$
+\eqlbl{eq:Bochner0}\]
 \end{thm}
 
-In the proof of the main result we will 
-
+The following calculations are based on \cite[Chapter II]{lawson-michelsohn}.
+We use Riemannian metric to identify differential forms and multivector fields on $M$.
+Therefore the statement about differential forms can be also formulated in terms of multivector fields and the other way around.
 
 \parit{Proof.}
 Assume $b_1,\dots, b_m$ is an orthonormal frame such that $b_m=u$, 
@@ -149,14 +43,14 @@ then
 Therefore the Gauss formula can be written as
 \[
 \begin{aligned}
-\Int_f&=G_f+\Sc-2\cdot \<\Ric(u),u\>=
+\Int&=G+\Sc-2\cdot \<\Ric(u),u\>=
 \\
-&=G_f+\Str(u)+ \<\Ric(u),u\>.
+&=G+\Str(u)+ \<\Ric(u),u\>.
 \end{aligned}
 \eqlbl{eq:gauss}
 \]
 
-We can choose the frame $b_i$ so that $b_m=u$ and such that $b_i$ points in the principle directions of the level set $L_x$ for $i<m$.
+We can assume that $b_i(x)$ point in the principle directions of $L_x$ for $i<m$.
 Note that $\<\nabla_u u,u\>=0$, therefore
 \begin{align*}
 Du&=\sum_{i} b_i\bullet  \nabla_{b_i}u=
@@ -169,7 +63,7 @@ Du&=\sum_{i} b_i\bullet  \nabla_{b_i}u=
 here ``$\,\bullet \,$'' denotes the Clifford multiplication.
 Applying again that $\<\nabla_u u,u\>=0$, we get that
 $$ \langle Du,Du \rangle=
-\l(\sum_{i<m}\kappa_i\r)^2+|\nabla_{u}u|^2=H_f^2+|\nabla_{u}u|^2.$$
+\l(\sum_{i<m}\kappa_i\r)^2+|\nabla_{u}u|^2=H^2+|\nabla_{u}u|^2.$$
 On the other hand
 $$\nabla u=\sum_{i<m}\kappa_i\cdot b_i\otimes b_i+\nabla_u u\otimes u,$$
 hence
@@ -177,7 +71,7 @@ $$\langle\nabla u,\nabla u\rangle =
 \sum_{i<m}\kappa_i^2+|\nabla_{u}u|^2.$$
 
 Therefore
-$$\langle D u,D u\rangle-\langle \nabla u,\nabla u \rangle =2\cdot\sum_{i<j}\kappa_i\cdot\kappa_j=G_f.$$
+$$\langle D u,D u\rangle-\langle \nabla u,\nabla u \rangle =2\cdot\sum_{i<j}\kappa_i\cdot\kappa_j=G.$$
 
 Further,
 \begin{align*}
@@ -187,29 +81,28 @@ Further,
 =
 \\
 &=
--\int\limits_\Omega\l[H\cdot\<\nabla\phi,u\>- \<\nabla\phi,\nabla_u u\> \r],
+-\int\limits_\Omega\l[H\cdot\<\nabla\phi,u\>- \<\nabla\phi,\nabla_u u\> \r].
 \end{align*}
-here ``$\bullet $'' denotes Kliford's multiplication.
 
-Since $| u|\equiv 1$, we have $\<\nabla_{\nabla\phi}  u, u\>=0$.
+Since $|u|\equiv 1$, we have $\<\nabla_{\nabla\phi}  u, u\>=0$.
 Therefore
 $$\int\limits_\Omega\phi\cdot\l[\<\nabla u,\nabla u\>-\<\nabla^*\nabla u, u\>\r]
 =
 \int\limits_\Omega\<\nabla_{\nabla\phi}  u, u\>=0.$$
 
-Let us write Bochner formula \cite[8.3]{lawson-michelsohn} for field $u$:
+By Bochner formula \cite[8.3]{lawson-michelsohn},
 $$D^2u-\nabla^*\nabla u=\Ric(u);$$
 in particular, 
 $$\phi\cdot \<D^2u,u\>-\phi\cdot \<\nabla^*\nabla u,u\>=\phi\cdot \<\Ric(u),u\>.\eqlbl{eq:prebochner}$$
-Integrating \ref{eq:prebochner}, using the given calculations we get that
+Integrating \ref{eq:prebochner} and applying the derived formulas we get
 \begin{align*}
-\int\limits_\Omega \phi \cdot G_f
-&=\int\limits_\Omega\phi\cdot(\<D u,D u\>-\<\nabla u,\nabla u\>)
+\int\limits_\Omega \phi \cdot G
+&=\int\limits_\Omega\phi\cdot\left[\<D u,D u\>-\<\nabla u,\nabla u\>\right]
 =
 \\
 &=\int\limits_\Omega \phi\cdot \Ric(u,u) 
 -
-\int\limits_\Omega H_f\cdot\<u,\nabla\phi\>- \<\nabla\phi,\nabla_u u\> .
+\int\limits_\Omega\left[ H\cdot\<u,\nabla\phi\>- \<\nabla\phi,\nabla_u u\>\right].
 \end{align*}
 
 It remains to apply the Gauss formula \ref{eq:gauss}.

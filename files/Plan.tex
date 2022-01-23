@@ -6,7 +6,7 @@ Choose a smoothing $M_n\smooths{} A$ of an $m$-dimensional Alexandrov space $A$.
 Let $p\in A$ be a point of rank $m$; that is, there are $m+1$ points $a_0,\dots, a_m\in A$ such that 
 $\angk p{a_i}{a_j}>\tfrac\pi2$ for all $i\ne j$.
 
-Recall that we can choose a small $r>0$,
+Recall \cite[Sec. 7]{petrunin-conc} that we can choose a small $r>0$,
 finite set of points $\bm{a}_i$ near $a_i$,
 and a smooth concave increasing real-to-real function $\phi$ defined on an open interval such that 
 \[f_i=\sum_{x\in \bm{a}_i}\phi\circ\widetilde{\dist}_{x,r}\]
@@ -18,7 +18,7 @@ In particular, the map $U\to\RR^m$ defined by $x\mapsto (f_1(x),\dots,f_m(x))$ i
 The presented construction can be lifted to $M_n$.
 As a result we obtain a chart of an open set $U_n\subset M_n$.
 Passing to smaller sets we may assume that $U$ and each $U_n$ is mapped to a fixed open set $\Omega\subset\RR^m$ for all large $n$.
-Further, we assume that it holds for all $n$; it could be achieved by cutting off the beginning of the sequence $(M_n)$.
+Further, we assume that it holds for all $n$; it could be achieved by cutting off the beginning of the sequence $M_n$.
 
 The obtained collection of charts $\bm{x}_n\:U_n\to \Omega$ and $\bm{x}\:U\to \Omega$ will be called \emph{common chart} at $p$.
 It will be used to identify points of $\Omega$, $M_n$ and $A$; 
@@ -28,7 +28,7 @@ We will use index $n$ or skip it to indicate that the calculations are performed
 For example, given a function $f\:\Omega\to \RR$, we denote by $\nabla_nf$ and $\nabla f$ the gradients of $f\circ \bm{x}_n$ in $M_n$ and $f\circ \bm{x}$ in $A$ respectively.
 
 Recall that $A^\delta$ denotes the set of $\delta$-strained points in $A$.
-For a fixed common chart $\bm{x}$ we will use notation $A^\delta$ and $A^\delta_\Omega$ for the image $\bm{x}(A^\delta)\subset \Omega$.
+For a fixed common chart $\bm{x}$ we will use notation $A^\delta_\Omega$ for the image $\bm{x}(A^\delta)\subset \Omega$.
 
 The part \ref{prop:3parts}(\ref{prop:3parts:reg}) will be reduced to certain estimates in one common chart.
 
@@ -36,10 +36,10 @@ The part \ref{prop:3parts}(\ref{prop:3parts:reg}) will be reduced to certain est
 Let $M_n\smooths{} A$, $\dim A=m$;
 choose a common chart with range $\Omega\subset \RR^m$.
 
-A sequence of measures $(\mathfrak n_n)$ defined on $\Omega$ is called \emph{weakly delta-converging}
+A sequence of measures $\mathfrak n_n$ defined on $\Omega$ is called \emph{weakly delta-converging}
 if the following conditions hold:
 \begin{itemize}
- \item Every subsequence of $(\mathfrak n_n)$ has a weak partial limit.
+ \item Every subsequence of $\mathfrak n_n$ has a weak partial limit.
  \item For any $\eps>0$ there is $\delta>0$ such that for any two weak partial limits $\mathfrak m_1$ and $\mathfrak m_2$ of $(\mathfrak n_n)$ we have  
 \[|(\mathfrak m_1-\mathfrak m_2)(S)|<\eps\]
 for any Borel set $S\subset A^\delta_\Omega$.
@@ -189,7 +189,7 @@ By \ref{lem:test-delta}, we have delta-convergence of the partial derivatives $\
 $\partial_ih_{j,n}$ to $\partial_if_{j}$ and 
 $\partial_ih_{j}$ respectively.
 The measures $\qm_n(f_{1,n},\dots,f_{m-2,n},h_{1,n},\zz\dots,h_{m-2,n})$ 
-as a linear combination of the components of $\qm_n$ with coefficients that expressed in terms of $\partial_if_{j,n}$.
+can be expressed as a linear combination of the components of $\qm_n$ with coefficients that expressed in terms of $\partial_if_{j,n}$.
 By \ref{obs:delta-weak-uniform}, it follows that the sequence of measures 
 \[\mathfrak m_n=\qm_n(f_{1,n},\dots,f_{m-2,n},h_{1,n},\zz\dots,h_{m-2,n})\]
 is delta-converging.

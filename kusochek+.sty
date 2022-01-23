@@ -33,10 +33,16 @@ isbn=false]{biblatex}
 \DeclareFieldFormat{multipostnote}{#1}
 \DeclareFieldFormat{pages}{#1}
 
+\usepackage{titletoc}% http://ctan.org/pkg/titletoc
+\titlecontents*{subsection}[.5em]
+  {\small}
+  {\thecontentslabel.~{}}
+  {}
+  { \textbf{\thecontentspage}}
+  [; ][.]
+
 \hypersetup{colorlinks=true,citecolor=black,linkcolor=black,anchorcolor=black,filecolor=black,menucolor=black,urlcolor=black
 }
-
-
 
 \newcounter{thm}[section]
 \renewcommand{\thethm}{\thesection.\arabic{thm}}
@@ -212,3 +218,6 @@ isbn=false]{biblatex}
 \renewcommand{\@eqnnum}{\theeqtn}
 \renewcommand{\theeqtn}{\numform{eqtn}}
 \newcommand{\eqlbl}[1]{\refstepcounter{eqtn}\eqno\text{\numform{eqtn}\label{#1}}}
+
+\makeatletter\renewcommand{\p@subsection}{\thesection}\makeatother
+\renewcommand{\thesubsection}{\Alph{subsection}}

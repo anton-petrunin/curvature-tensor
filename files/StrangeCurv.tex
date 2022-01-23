@@ -8,10 +8,10 @@ Note that $\Str$ completely describes the Ricci curvature tensor $\Ric$.
 Further, since $M$ is 3-dimensional, $\Str$ completely describes the curvature tensor $\Rm$ of $M$.
 
 In Riemannian manifold we can (and will) use the metric tensor to identify tangent and cotangent bundle.
-Therefore the tensor $\Str$ can be applied equally to vector fields and forms;
+Therefore the tensor $\Str$ can be applied to vector fields and forms;
 in particular, for any smooth function $f$ we have
 \[\Str(df,df)
-\df
+=
 \Str(\nabla f,\nabla f).\]
 
 \begin{thm} {Proposition}\label{strconvergence}
@@ -64,7 +64,7 @@ L_{t,n}&=f^{-1}(t)\cap V_n,&
 C_{t,n}&=f^{-1}[t,\infty)\cap \bar V_n,
 \\
 L_{t}&=f^{-1}(t)\cap V,&
-C_{t}&=f^{-1}[t,\infty)\cap \bar V,
+C_{t}&=f^{-1}[t,\infty)\cap \bar V.
 \end{align*}
 
 
@@ -111,7 +111,7 @@ $$\int\limits_{s\in \Omega}\Int_n(s)\cdot\phi(s)\cdot\vol^3_n
  
 Note that $\nabla_n f$ is bounded away from zero.
 By \ref{lem:test-delta}(\ref{lem:test-delta|nabla|}), $\frac{1}{|\nabla_n f(s)|}$ is weakly delta-converging.
-Since $\Int_n\cdot \vol^2$ is weakly converging measures on $L_n$, we get 
+Since $\Int_n\cdot \vol^2$ is weakly converging measures on $L_n$, \ref{obs:delta-weak-uniform} implies
 that $\Int_n\cdot\vol^3_n$ is weakly delta-converging measures on $M_n$.
 \qeds
 
