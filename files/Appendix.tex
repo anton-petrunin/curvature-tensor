@@ -1,4 +1,4 @@
-\section{Bochner formula}\label{sec:bochner}
+\subsection{Bochner formula}\label{sec:bochner}
 
 Let $M$ be Riemannian $m$-manifold and $f\:M\to\R$ be a smooth function without critical points on an open domain $\Omega\i M$.
 Set $u=\nabla f/|\nabla f|$.
@@ -118,12 +118,12 @@ It remains to apply the Gauss formula \ref{eq:gauss}.
 
   
  
-\section{DC-calculus}\label{sec:DC}
+\subsection{DC-calculus}\label{sec:DC}
 
-Let $A$ be a finite dimensional Alexandrov space and $f$ be a continuous function defined on an open domain in $A$.
+Let $f$ be a continuous function defined on an open domain of a finite dimensional Alexandrov space $A$.
 Recall that a function $f$ is called \emph{DC} if it can be presented locally as a difference of two concave functions.
-Since any point in $A$ has a $(-1)$-concave function defined in its neighborhood \cite[3.6]{PerMorse},
-we can say that $f$ is DC if and only if it can be presented locally as a difference of two semiconcave functions. 
+Recall that for any point $p\zz\in A$ there is a $(-1)$-concave function defined in a  neighborhood  of $p$ \cite[3.6]{PerMorse}.
+Therefore we can say that $f$ is DC if and only if it can be presented locally as a difference of two semiconcave functions. 
 
 Suppose that a sequence of Alexandrov spaces $A_n$ converges to an Alexandrov space $A$ without collapse.
 Let $f_n$ and $f$ be DC functions defined on open domains $\Dom f_n\subset A_n$ and $\Dom f \subset A$.
@@ -131,7 +131,7 @@ Suppose that for any $p\in \Dom f$ there is a sequence $p_n\in \Dom f_n$ and $R>
 and for some fixed $\lambda\in\RR$, and each large $n$ we have $\lambda$-concave functions $a_n$ and $b_n$ defined in $B(p_n,R)_{A_n}$ and $\lambda$-concave functions $a$ and $b$ defined in $B(p,R)_{A}$
 such that $f_n=a_n-b_n$ and $f=a-b$ and the sequences
 $a_n$ and $b_n$ converge to functions $a$ and $b$ respectively.
-In this case, we say that $f_n$ is DC-converging to $f=a-b\:A\to \RR$ as $n\to\infty$; briefly $f_n\DCto f$.
+In this case, we say that $f_n$ is \emph{DC-converging} to $f=a-b\:A\to \RR$ as $n\to\infty$; briefly $f_n\DCto f$.
 
 \begin{thm}{Observation}\label{obs:test-DC}
 Any test function is DC. Moreover, test-convergence implies DC-convergence. 
@@ -177,7 +177,6 @@ that is, if $\mathfrak{m}$ is a limit measure, then $\frac{\mathfrak{m}(B(p,r))}
 
 {\it Proof of the Theorem~\ref{metricBV}.}
 Let's start with the partial derivatives of metric tenors.
-
 In \cite[Section 4.2]{PerDC}, it was shown that components of metric tensors can be expressed as rational function from partial derivatives of distance functions to a finite collection of distance functions.
 The distance functions are semiconcave, in particular DC.
 
