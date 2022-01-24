@@ -41,7 +41,7 @@ is compact.
 Denote by $k_1(p)\le k_2(p)$, 
 $H(p)\zz=k_1(p)+ k_2(p)$
 and
-$G(p)=k_1(p)\cdot k_2(p)$, the principle, mean, and Gauss curvatures of $W_{a,b}$ at $p$.
+$G(p)=k_1(p)\cdot k_2(p)$, the principal, mean, and Gauss curvatures of $W_{a,b}$ at $p$.
 Then
 \[\int_{W_{a,b}}G\le 100\cdot\eps
 \eqlbl{intG<100eps}\]
@@ -50,12 +50,12 @@ and
 \eqlbl{intH<eps}\]
 \end{thm}
 
-The proof is based on the 2-dimesional case  following statement,
+The proof is based on the 2-dimensional case  following statement,
 which is the integral Bochner formula written for function with Dirichlet boundary condition.
 
 \begin{thm}{Proposition}\label{prop:bochner-dirichle}
 Assume $\Omega$ is a compact domain with smooth boundary $\partial \Omega$ in a Riemannian manifold
-and $f$ is a smooth function that vanish on $\partial \Omega$.
+and $f$ is a smooth function that vanishes on $\partial \Omega$.
 Then
 \[\int\limits_\Omega |\Delta f|^2
 -|\Hess f|^2
@@ -75,7 +75,7 @@ Since $f$ is strongly convex, we have that
 for a fixed value $\delta>0$ and any tangent vector $v\in \T_pW_{a,b}$. 
 
 Note that the restriction of $u=h|_{W_{a,b}}$ is strongly convex.
-Moreover 
+Moreover, 
 \[\Hess_pu(v,v)\ge (1-\eps)\cdot \langle S_p(v),v\rangle\eqlbl{Hess=<shape}\]
 for any $p\in W_{a,b}$ and $v\in\T_pW_{a,b}$.
 Indeed, consider the geodesic $\gamma$ in $W_{a,b}$ such $\gamma(0)=p$ and $\gamma'(0)=v$.
@@ -124,17 +124,17 @@ K\cdot|\nabla u|^2
 where $\kappa\ge 0$ is the geodesic curvature of $\partial W_{a,b}$
 and $K$ is the curvature of $W_{a,b}$.
 
-Since $u$ is convex and vanish on the boundary of $W_{a,b}$,
+Since $u$ is a convex function that vanishes on the boundary of $W_{a,b}$,
 it has unique critical point, which is its minimum.
 By Morse lemma,  $W_{a,b}$ is a disc.
-Therefore, by Gauss--Bonnet formula, we get that
+Therefore, by the Gauss--Bonnet formula, we get that
 \[\int_{W_{a,b}} K+\int_{\partial{W_{a,b}}}\kappa=2\cdot\pi.\]
 Whence 
 \[\int\limits_{W_{a,b}} 
 \det(\Hess u)
 \le\pi\cdot\sup_{p\in{W_{a,b}}}|\nabla_p u|^2.\]
 
-Note that $\nabla_p u$ is projection of $\nabla_ph$ to $\T_pW_{a,b}$.
+Note that $\nabla_p u$ is the projection of $\nabla_ph$ to $\T_pW_{a,b}$.
 Therefore
 \begin{align*}
 |\nabla_p u|^2&=|\nabla_p h|^2-\langle\nabla_p h,n\rangle^2\le
@@ -161,7 +161,7 @@ Let $M$ be a 3-dimensional Riemannian manifold.
 Choose a smooth function $f$.
 Conside its level sets $L_c=\set{x\in M}{f(x)=c}$.
 If the level set $L_c$ is a smooth surface in a neighborhood of $x\in L_c$,
-then denote by $k_1(x)\le k_2(x)$ the principle curvatures of $L_c$ at $x$.
+then denote by $k_1(x)\le k_2(x)$ the principal curvatures of $L_c$ at $x$.
 In this case, set 
 \begin{align*}
 G(x)&=k_1(x)\cdot k_2(x),
@@ -170,11 +170,10 @@ H(x)&=k_1(x)+ k_2(x);
 \end{align*}
 that is, $G(x)$ and $H(x)$ are Gauss and mean curvature of $L_c$ at $x$.
 
-Recall that $\Cone(\theta)$ denotes 2-dimensional cone with total angle $\theta$.
+Recall that $\Cone(\theta)$ denotes a 2-dimensional cone with total angle $\theta$.
 
 \begin{thm}{Theorem}\label{thm:HG-converge}
-Let $M_n\smooths{}\Cone(\theta)\times \RR$ and 
-and $f_n\: M_n\to \RR$ be a sequence of strongly concave functions.
+Let $M_n\smooths{}\Cone(\theta)\times \RR$ and $f_n\: M_n\to \RR$ be a sequence of strongly concave functions.
 Suppose that $\sec M_n\ge -\tfrac1n$ for each $n$, and $f_n$ converges to the $\RR$-coordinate in $\Cone(\theta)\times \RR$ as $n\to \infty$.
 Then $G_n$ and $H_n$ (the Gauss and mean curvatures of the level sets of $f_n$) weakly converge to zero.
 \end{thm}
@@ -188,8 +187,8 @@ Moreover, the function $\rho$ is \emph{liftable};
 that is, there is a sequence of $(-2)$-concave $\rho_n\:M_n\to\RR$ that converges to $\rho$.
 
 Consider a point $q\in \Cone(\theta)\times \RR$ \emph{above} $p$; that is, its $\RR$-coordinate is larger and its $ \Cone(\theta)$-coordinate is the same.
-If $\RR$-coordinate of $q$ is large, then $\dist_q+f$ is $\lambda$-concave for small $\lambda>0$ and it has a nonstrict minimum at $p$.
-Therefore, given $\lambda>0$, we can find $q$ so that the sum $s=f+\dist_q+\lambda\cdot \rho$ is $(-\lambda)$-concave and has strict maximum at $p$.
+If the $\RR$-coordinate of $q$ is large, then $\dist_q+f$ is $\lambda$-concave for small $\lambda>0$ and it has a nonstrict minimum at $p$.
+Therefore, given $\lambda>0$, we can find $q$ so that the sum $s=f+\dist_q+\lambda\cdot \rho$ is $(-\lambda)$-concave and has a strict maximum at $p$.
 Moreover
 \[-\lambda\cdot|p-x|_{\Cone(\theta)\times \RR}^2\ge s(x)-s(p)\ge -\tfrac12\cdot\lambda\cdot|p-x|_{\Cone(\theta)\times \RR}^2\]
 and therefore
@@ -230,7 +229,7 @@ where $\omega$ is the measure on $\Cone(\theta)\times \RR$  described above.
 \end{thm}
 
 \parit{Proof; (\ref{cor:Ricci:Ricci}).}
-Passing to a subsequence if nesessary, we can assume weak convergence $\langle \Ric u_n,u_n\rangle\cdot\vol^m$ to a measure $\mu$ on $\Cone(\theta)\times \RR$.
+Passing to a subsequence if necessary, we can assume weak convergence $\langle \Ric u_n,u_n\rangle\cdot\vol^m$ to a measure $\mu$ on $\Cone(\theta)\times \RR$.
 Since $\sec M_n\ge -\tfrac1n$, we have that $\mu\ge 0$.
 Therefore it is sufficient to show that $\mu\le 0$.
 
@@ -241,9 +240,7 @@ By \ref{thm:bochner-formula} we have that the following equality
 holds for any function $\phi_n$ with compact support on $M_n$,
 assuming that all expressions in the formula have sense.
 
-It remains to find a sequence of nonnegative functions $\phi_n\:M_n\to \RR$ 
-with compact support 
-that converge to a $\phi\:\Cone(\theta)\times \RR\to \RR$ such that (1) $\phi$ is unit in a neighborhood of a given point $p\in \Cone(\theta)\times \RR$ and (2) we have a control the three terms on the right-hand side of the formula; the latter means that we have the following weak convergences:
+It remains to find a sequence of nonnegative functions $\phi_n\:M_n\to \RR$ with compact support that converges to a $\phi\:\Cone(\theta)\times \RR\to \RR$ such that (1) $\phi$ is unit in a neighborhood of a given point $p\in \Cone(\theta)\times \RR$ and (2) we have control on the three terms on the right-hand side of the formula; the latter means that we have the following weak convergences:
 \[
 \begin{aligned}
 \phi_n \cdot G_n&\rightharpoonup 0,
@@ -275,15 +272,15 @@ Next, we describe how to control it near the singularity.
 Since $|u_n|=1$, we have $\nabla_{u_n} u_n\perp \nabla f_n$.
 Therefore if $\nabla \phi_n$ is proportional to $\nabla f_n$ at some point, then at this point we have $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>=0$.
 This observation makes it possible to choose $\phi_n$ so that the term $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>$ vanish around the singular locus of $\Cone(\theta)\times \RR$.
-Namely in addition to the above conditions on $\phi_n$ we have to assume that the identity $\phi_n=\psi\circ f_n$ holds at the points of $M_n$ that are sufficiently close to the singular locus of $\Cone(\theta)\times \RR$.
+Namely, in addition to the above conditions on $\phi_n$ we have to assume that the identity $\phi_n=\psi\circ f_n$ holds at the points of $M_n$ that are sufficiently close to the singular locus of $\Cone(\theta)\times \RR$.
 
-Finally observe that the needed sequence exists.
+Finally, observe that the needed sequence exists.
 Indeed, one can take 
 \[\phi_n=(\sigma\circ \dist_q)\cdot \psi\cdot f_n\]
 for appropriately chosen fixed mollifiers $\sigma,\psi\:\RR\to \RR$.
 
 \parit{(\ref{cor:Ricci:vw}).}
-Since $G_n\rightharpoonup 0$, we get that curvature measure of level sets of $f_n$ weakly converges to the curvaure of $\Cone(\theta)$.
+Since $G_n\rightharpoonup 0$, we get that curvature measure of level sets of $f_n$ weakly converges to the curvature of $\Cone(\theta)$.
 It follows that 
 \[\qm(u_n,u_n)\rightharpoonup \omega.\]
 

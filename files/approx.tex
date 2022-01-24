@@ -7,8 +7,8 @@ According to \cite{li-naber}, $A'$ is countably 1-rectifiable and $A''$ is a cou
 
 Let us split $\mathfrak m$ into negative and positive part $\mathfrak m=\mathfrak m^+-\mathfrak m^-$; that is,
 \[\mathfrak m^\pm(X)\df\sup\set{\pm\mathfrak m(Y)}{Y\subset X}.\]
-Since the sectional curvature of $M_n$ is bounded below, we get that $\mathfrak m^-$ has bounded density; in other words $\mathfrak m^-$ is regular measure on $A$.
-Since $A'$ has vanishing volume, we get $\mathfrak m^-(A')=0$.
+Since the sectional curvature of $M_n$ is bounded below, we get that $\mathfrak m^-$ has bounded density; in other words, $\mathfrak m^-$ is a regular measure on $A$.
+Since $A'$ has zero volume, we get $\mathfrak m^-(A')=0$.
 
 Set $\mathfrak n=\mathfrak m|_{A'}$; from above we have $\mathfrak n\ge 0$.
 By \cite{petrunin-SC}, $\mathfrak n$ is a regular with respect to $\vol^1$ on $A'$.
@@ -19,11 +19,11 @@ at $\vol^1$-almost all $p\in A'$.
 
 Since $A'$ is countably 1-rectifiable \cite{li-naber}, we can cover it by a countable number of images of Lipschitz maps $s_i\:\mathbb{I}_i\to A$, where $\mathbb{I}_i$ is a real interval for each~$i$.
 Since $s_i$ and $h\circ s_i$ are Lipschitz for any $i$, for $\vol^1$-almost all $p\in A'$ we can choose $s_i$ such that $p\in s_i(x)$ for some $x\in \mathbb{I}_i$.
-By Rademacher's theorem we can assume that $s_i$ and $h\circ s_i$ are differentiable at $x$.
-Moreover we can assume that $d_xs_i=\lambda\cdot u$ for some $\lambda\ne 0$ and the $\vol^1$-density of $\mathfrak n$ at $p$ is defined.
+By Rademacher's theorem, we can assume that $s_i$ and $h\circ s_i$ are differentiable at $x$.
+Moreover, we can assume that $d_xs_i=\lambda\cdot u$ for some $\lambda\ne 0$ and the $\vol^1$-density of $\mathfrak n$ at $p$ is defined.
 
 Shifting and scaling the interval $\mathbb{I}_i$, we may assume that $x=0$ and $\lambda=1$.
-In this case $|d_ph(u)|=|d_0(h\circ s_i)|$.
+In this case, $|d_ph(u)|=|d_0(h\circ s_i)|$.
 
 Note that we can choose a sequence of points $p_n\in M_n$ and a sequence of factors $c_n\to \infty$ such that $(c_n\cdot M_n,p_n)$ converges to the tangent space~$\T_pA$.
 Since $p\in A'$, the space $\T_p$ is a product space $\Cone(\theta)\times\RR$, where $\Cone(\theta)$ is a 2-dimensional cone with total angle $\theta(p)<2\cdot\pi$.
@@ -45,7 +45,7 @@ Whence $2\cdot \pi-\theta(p)$ is the $\vol^1$-density of $\mathfrak n$ at $p$ as
 \subsection{Higher-dimensional case}
 
 
-Suppose $M_n\smooths{} \Cone(\theta)\times \RR^{m-2}$, where $\Cone(\theta)$ denotes the two-dimensional cone with total angle $\theta<2\cdot\pi$.
+Suppose $M_n\smooths{} \Cone(\theta)\times \RR^{m-2}$, where $\Cone(\theta)$ denotes a two-dimensional cone with total angle $\theta<2\cdot\pi$.
 First, we will show that the curvatures of $M_n$ in the vertical sectional directions of $\Cone(\theta)\times \RR^{m-2}$ weakly converge to zero;
 an exact statement is given in the following proposition.
 By combining this result with the 3-dimensional case we get \ref{prop:3parts:codim2+} in higher dimensions.
@@ -84,13 +84,13 @@ where $\const(m-1)$ is the constant in \ref{cor:Kmax}.
 
 \parit{Proof.} If $\Sigma$ is smooth, then the inequality follows from \ref{cor:Kmax}, and the fact that sectional curvature  cannot exceed sectional curvature of a convex hypersurface in the same direction.
 
-In general case, the surface $\Sigma$ can be approximated by a smooth convex surface;
-this can be done applying the Green-Wu smoothing procedure; compare to \cite{AKP-buyalo}.
+In the general case, the surface $\Sigma$ can be approximated by a smooth convex surface;
+this can be done by applying the Green-Wu smoothing procedure; compare to \cite{AKP-buyalo}.
 It remains to pass to the limit.
 \qeds
 
 \parit{Proof of \ref{prop:vert-vert}.}
-Let $p$ be a point on singularity of $\Cone(\theta)\times \RR^{m-2}$;
+Let $p$ be a singular point on $\Cone(\theta)\times \RR^{m-2}$;
 let us denote its liftings by $p_n\in M_n$.
 We can assume that $p$ corresponds to the origin of $\RR^{m-2}$.
 Choose points $a_{1,n},\zz\dots,a_{m-2,n}$, $b_{1,n},\zz\dots,b_{m-2,n}$ in $M_n$ such that the functions $f_{i,n}=\dist_{a_{i,n}}-|a_{i,n}-p|$ and $-h_{i,n}=-\dist_{b_{i,n}}+|b_{i,n}-p|$ converge to $i^{\text{th}}$ vertical coordinate function on $\Cone(\theta)\times \RR^{m-2}$.
@@ -149,9 +149,9 @@ that is, $\langle e_{i,n}, e_{j,n}\rangle\to 0$ for $i\ne j$ and $\langle e_{i,n
 Observe that \ref{prop:vert-vert} implies that $K(e_i\wedge e_j)\cdot\vol\rightharpoonup 0$ if $i,j\le m-2$.
 
 Let us show that $K(e_i\wedge e_j)\cdot\vol\rightharpoonup 0$ for $i\le m-2$ and $j\ge m-1$.
-The $3$-dimensional case is already proved; it is used as a base of the induction.
+The $3$-dimensional case is already proved; it is used as a base of induction.
 Let us apply the induction hypothesis to the level surfaces of $f_{1,n}$.
-(Formally speaking, we apply the local version of induction hypothesis described in Section~\ref{sec:local}.)
+(Formally speaking, we apply the local version of the induction hypothesis described in Section~\ref{sec:local}.)
 Since the curvature of convex hypersurfaces is larger than the curvature of the ambient manifold in the same direction, we get the statement for $i\ne 1$.
 Applying the same argument for the level surfaces of $f_{2,n}$, we get the claim.
 
@@ -160,18 +160,18 @@ Consider the level sets $L_n$ defined by
 \[f_{1,n}=c_1,\ \dots,\ f_{m-2,n}=c_{m-2}.\eqlbl{eq:fi=ci}\]
 Note that $L_n\smooths{} \Cone(\theta)$.
 Applying the 2-dimensional case to $L_n$ and the coarea formula, we get that curvatures of $L_n$ weakly converge to $\omega_{\Cone(\theta)\times \RR^{m-2}}$.
-It remains to show that the extra term in the Gauss formula for curvature of $L_n$ weakly converges to zero; 
+It remains to show that the extra term in the Gauss formula for the curvature of $L_n$ weakly converges to zero; 
 in other words, the difference between curvature of $L_n$ and sectional curvature of $M_n$ in the direction tangent to $L_n$ weakly converges to zero.
 
 The 3-dimensional case is already proved.
-To prove the general case, we apply 3-dimensional case to the 3-dimensional level sets defined by $m-3$ equations from the following $m-2$ equations in \ref{eq:fi=ci}.
+To prove the general case, we apply the 3-dimensional case to the 3-dimensional level sets defined by $m-3$ equations from the following $m-2$ equations in \ref{eq:fi=ci}.
 (The same argument is used in the proof of \ref{A^0}, and it is written with more details.)
 
 Note that for $\theta=0$, the last argument implies the following:
 
 \begin{thm}{Claim}
 Let $M_n\smooths{} A$.
-If $A$ has flat open set $U$,
+If $A$ has a flat open set $U$,
 then $|K_{\max}|\cdot\vol_n\zz\rightharpoonup0$ on $U$. 
 \end{thm}
 

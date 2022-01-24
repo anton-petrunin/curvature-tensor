@@ -16,7 +16,7 @@ since $A\in \Al^m$, we have no collapse.
 Denote by $a_n\:A_n\to A$ the Hausdorff approximations.
 If $A$ is compact, then
 by Perelman's stability theorem (see \cite{PerStab}, \cite{KapStab}) we can (and will) assume that $a_n$ is a homeomorphism for every sufficiently large $n$.
-In case of noncompact limit, we assume that for any $R$, the restriction of $a_n$ to $R$-neighborhood of the marked point is a homeomorphism to its image for every sufficiently large $n$.
+In the case of noncompact limit, we assume that for any $R$, the restriction of $a_n$ to an $R$-neighborhood of the marked point is a homeomorphism to its image for every sufficiently large $n$.
 
 We say that $A\in \Al^m$ is \emph{smoothable}
 if it can be presented as a Gromov--Hausdorff limit of a non-collapsing sequence of Riemannian manifolds $M_n$ with $\sec M_n\ge-1$.
@@ -30,7 +30,7 @@ By Perelman's stability theorem any smoothable Alexandrov space is a topological
 \subsection{Weak convergence of measures}
 
 In this subsection we give a formal definition of weak convergence of measures.
-For more detailed definitions and terminology we refer to
+For more detailed definitions and terminology, we refer to
 \cite{GMS}.
 
 Let $X$ be a Hausdorff topological space.
@@ -44,7 +44,7 @@ $\mathfrak m_n\rightharpoonup \mathfrak m$) if $\langle \mathfrak m_n|f\rangle \
 
 Suppose $A_n\GHto A$ with Hausdorff approximations $a_n\:A_n\to A$ and
 $\mathfrak m_n$ is a measure on $A_n$.
-We say that $\mathfrak m_n$ \emph{weakly converge} to a measure $\mathfrak m$ on $A$ (briefly $\mathfrak m_n\rightharpoonup \mathfrak m$) if the pushforwards $\mathfrak m_n'$ of $\mathfrak m_n$ to $A$  by the Hausdorff approximations $a_n\:A_n\to A$ weakly converge to 
+We say that $\mathfrak m_n$ \emph{weakly converges} to a measure $\mathfrak m$ on $A$ (briefly $\mathfrak m_n\rightharpoonup \mathfrak m$) if the pushforwards $\mathfrak m_n'$ of $\mathfrak m_n$ to $A$  by the Hausdorff approximations $a_n\:A_n\to A$ weakly converge to 
 $\mathfrak m$.
 If the condition $\langle \mathfrak m_n'|f\rangle \to \langle \mathfrak m|f\rangle $ holds only for functions $f$ with support in an open subset $\Omega\subset A$, then we say that $\mathfrak m_n$ \emph{weakly converges to $\mathfrak m$ in $\Omega$}.
 
@@ -66,7 +66,7 @@ we have $\langle \mathfrak m_n|f_n\rangle \to \langle \mathfrak m|f\rangle $.
 In this subsection, we introduce a class of \emph{test functions} and define their convergence.
 These definitions will be used to define measure-valued tensors and their convergence.
 
-Test functions form a narrow class of functions defined via certain type of formulas.
+Test functions form a narrow class of functions defined via a formula.
 It is just one possible choice of a class containing sufficiently  smooth DC-functions (see Section~\ref{sec:DC}); we could use other definitions as well.
 
 Recall that the distance between points $x,y$ in a metric space is denoted by $|x-y|$;
@@ -145,7 +145,7 @@ $\mathfrak{t}(x_{i_1},\dots,x_{i_k})$; namely,
 \partial_{i_k} f_k
 \cdot \mathfrak{t}(x_{i_1},\dots,x_{i_k}).\]
 
-Note that if $T$ is a smooth contravariant tensor field then $\mathfrak{t}=T\cdot \vol$ is measure-values tensor field.
+Note that if $T$ is a smooth contravariant tensor field then $\mathfrak{t}=T\cdot \vol$ is measure-valued tensor field.
 In other words, usual tensor fields naturally form a subspace of measure-valued tensor fields.
 
 \begin{rdef} {Definition}
@@ -162,8 +162,8 @@ $f_{i,n}\testto f_i$, the measures $\mathfrak{t}_n(f_{1,n},f_{2,n},\dots,f_{k,n}
 
 \subsection{Dual curvature tensor}
 
-The curvature of Riemannian manifold $M$ usually described by tensor of valence 4 that will be denoted by $\Rm$.
-We will use \emph{dual curvature tensor} --- 
+The curvature of Riemannian manifold $M$ is usually described by a tensor of valence 4 that will be denoted by $\Rm$.
+We will use a \emph{dual curvature tensor} --- 
 a curvature tensor written in a dual form that is denoted by $\Qm$;
 it is a tensor field of valence $2\cdot(m-2)$ defined the following way:
 \[
@@ -174,7 +174,7 @@ it is a tensor field of valence $2\cdot(m-2)$ defined the following way:
 where $X_i,Y_i$ are vector fields on $M$ and  ${*}\:(\bigwedge^{m-2}\T)M\to(\bigwedge^2\T)M$ is the  Hodge star operator.
 This definition will be used further mostly for gradient vector fields of test functions.
 
-In addition we will need a measure-valued version of $\Qm$ denoted by $\qm$;
+In addition, we will need a measure-valued version of $\Qm$ denoted by $\qm$;
 it will be called \emph{dual measure-valued curvature tensor}.
 Namely, we define $\qm(f_1,\zz\dots,f_{m-2},g_1,\zz\dots,g_{m-2})$ as the measure with density
 \[\Qm(\nabla f_1,\dots,\nabla f_{m-2},\nabla g_1,\dots,\nabla g_{m-2}): M\to\R.\]
@@ -199,14 +199,13 @@ gives an equivalent description of curvature of Riemannian manifold.
 As you will see further, the described dual form of curvature tensor behaves better in the limit;
 in particular, it makes possible to formulate \ref{prop:3parts:codim2+}.
 
-In the 2-dimensional case the valence of $\qm$ is $0$;
-in this case $\qm$ coincides with the curvature measure --- the standard way to describe curvature of surfaces, 
+In the 2-dimensional case, the valence of $\qm$ is $0$;
+in this case, $\qm$ coincides with the curvature measure --- the standard way to describe the curvature of surfaces, 
 \cite{Resh,AZ}.
-For a smooth surface the density of this curvature measure with respect to the area
+For a smooth surface, the density of this curvature measure with respect to the area
 is its Gauss curvature.
-In this case \emph{curvature measures are stable under smoothing} \cite[VII \S13]{AZ};
-in other words, the statement of our main theorem in this case
-is known in this case.
+In this case, \emph{curvature measures are stable under smoothing} \cite[VII \S13]{AZ};
+in other words, the statement of our main theorem is known in this case.
 
 
 \subsection{Partition into three sets}\label{subsec:AAA}
@@ -215,8 +214,8 @@ Let $A$ be an $m$-dimensional Alexandrov space without boundary.
 Let us partition $A$ into three subsets $A^\circ$, $A'$ and $A''$:
 \begin{itemize}
 \item $A^\circ$ is the set of regular points in $A$; that is, the set of points with tangent cone isometric to the Euclidean space.
-\item $A'$ --- the set of points in $A\backslash A^\circ$ with a isometric copy of $\RR^{m-2}$ in their tangent space;
-in other words, for any $p\in A'$, the tangent space $\T_p$ is isometric to the product $\Cone(\theta)\times\RR^{m-2}$ where $\Cone(\theta)$ denotes the two-dimensional cone with total angle $\theta=\theta(p)<2\cdot \pi$.
+\item $A'$ --- the set of points in $A\backslash A^\circ$ with an isometric copy of $\RR^{m-2}$ in their tangent space;
+in other words, for any $p\in A'$, the tangent space $\T_p$ is isometric to the product $\Cone(\theta)\times\RR^{m-2}$ where $\Cone(\theta)$ denotes a two-dimensional cone with total angle $\theta=\theta(p)<2\cdot \pi$.
 \item $A''$ --- the remaining set; this is the set of points with tangent space that does \emph{not} contain an isometric copy of $\RR^{m-2}$.
 \end{itemize}
 According to \cite{li-naber}, $A'$ is countably $(m-2)$-rectifiable and $A''$ is a countably $(m-3)$-rectifiable. 

@@ -10,18 +10,18 @@ Recall \cite[Sec. 7]{petrunin-conc} that we can choose a small $r>0$,
 finite set of points $\bm{a}_i$ near $a_i$,
 and a smooth concave increasing real-to-real function $\phi$ defined on an open interval such that 
 \[f_i=\sum_{x\in \bm{a}_i}\phi\circ\widetilde{\dist}_{x,r}\]
-is strongly concave function that is defined in a neighborhood $U\ni p$.
+is strongly a concave function that is defined in a neighborhood $U\ni p$.
 
 Since $r$ is small and $\bm{a}_i$ is near $a_i$ we get that the functions $f_0, \dots, f_m$ are tight in $U$; see the definition in \cite{petrunin-conc}.
 In particular, the map $U\to\RR^m$ defined by $x\mapsto (f_1(x),\dots,f_m(x))$ is a coordinate system in $U$.
 
 The presented construction can be lifted to $M_n$.
-As a result we obtain a chart of an open set $U_n\subset M_n$.
+As a result, we obtain a chart of an open set $U_n\subset M_n$.
 Passing to smaller sets we may assume that $U$ and each $U_n$ is mapped to a fixed open set $\Omega\subset\RR^m$ for all large $n$.
 Further, we assume that it holds for all $n$; it could be achieved by cutting off the beginning of the sequence $M_n$.
 
-The obtained collection of charts $\bm{x}_n\:U_n\to \Omega$ and $\bm{x}\:U\to \Omega$ will be called \emph{common chart} at $p$.
-It will be used to identify points of $\Omega$, $M_n$ and $A$; 
+The obtained collection of charts $\bm{x}_n\:U_n\to \Omega$ and $\bm{x}\:U\to \Omega$ will be called a \emph{common chart} at $p$.
+It will be used to identify points of $\Omega$, $M_n$, and $A$; 
 in addition we will use it to identify the tangent spaces $\T M_n$ and $\T A$ with $\RR^m$.
 For example, we will use the same notation for function $M_n\to \RR$ and its composition $\Omega\to \RR$ with the inverse of the chart $U_n\to \Omega$.
 We will use index $n$ or skip it to indicate that the calculations are performed in $M_n$ or $A$ respectively.
@@ -130,7 +130,7 @@ moreover, $\det g_{ij,n}$ is bounded away from zero;
 
 \parit{(\ref{lem:test-delta-partial}).}
 Note that for any point $p\in A$ and almost all points $y,z\in A$ the geodesics $[py]$ and $[pz]$ are uniquely defined.
-In this case for any sequence of points $p_n,y_n,z_n\in M_n$ such that $p_n$, $y_n$, and $z_n$ converge to $p$, $y$, and $z$ respectively we have
+In this case, for any sequence of points $p_n,y_n,z_n\in M_n$ such that $p_n$, $y_n$, and $z_n$ converge to $p$, $y$, and $z$ respectively we have
 \[\lim_{n\to\infty}\measuredangle \hinge{p_n}{y_n}{z_n}\ge \measuredangle \hinge{p}{y}{z}.\]
 
 If $\T_p$ is Euclidean, then we can choose a point $x\in A$ so that $[px]$ is unique, and the sum 
@@ -163,8 +163,8 @@ Since these quantities delta-converging, so is $|\nabla_n f_n|$.
 follows from \ref{metricBV}.
 By Observation~\ref{obs:delta-weak-uniform}, the products of these partial derivatives to uniforly delta-converging sequences of functions is weakly delta-converging.
 
-By \ref{metricBV}, the limit measures of $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$, and $\partial_j\partial_if_n$ have vanishing $(m-1)$-density.
-Further, a limit of delta-converging sequence is might be discontinues only at the singular set which has vanishing $(m-1)$-Hausdorff measure.
+By \ref{metricBV}, the limit measures of $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$, and $\partial_j\partial_if_n$ have a vanishing $(m-1)$-density.
+Further, a limit of delta-converging sequence is might be discontinues only at the singular set which has a vanishing $(m-1)$-Hausdorff measure.
 It follows that the measure $\mathfrak{m}_1-\mathfrak{m}_2$ in the definition of weak delta-convergence is vanishing. 
 Whence the weak convergence follows.
 \qeds
@@ -189,7 +189,7 @@ By \ref{lem:test-delta}, we have delta-convergence of the partial derivatives $\
 $\partial_ih_{j,n}$ to $\partial_if_{j}$ and 
 $\partial_ih_{j}$ respectively.
 The measures $\qm_n(f_{1,n},\dots,f_{m-2,n},h_{1,n},\zz\dots,h_{m-2,n})$ 
-can be expressed as a linear combination of the components of $\qm_n$ with coefficients that expressed in terms of $\partial_if_{j,n}$.
+can be expressed as a linear combination of the components of $\qm_n$ with coefficients expressed in terms of $\partial_if_{j,n}$.
 By \ref{obs:delta-weak-uniform}, it follows that the sequence of measures 
 \[\mathfrak m_n=\qm_n(f_{1,n},\dots,f_{m-2,n},h_{1,n},\zz\dots,h_{m-2,n})\]
 is delta-converging.

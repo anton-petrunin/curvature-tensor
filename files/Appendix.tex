@@ -5,7 +5,7 @@ Set $u=\nabla f/|\nabla f|$.
 Let us define $\Int_f(x)$ (or just $\Int$) to be scalar curvature of the level set $L_x=f^{-1}(f(x))$ at $x\in L_x\i M$.
 Set
 \begin{enumerate}
- \item $\kappa_1(x)\le\kappa_2(x)\le\dots\le\kappa_{m-1}(x)$ the principle curvatures of $L_x$ at $x$;
+ \item $\kappa_1(x)\le\kappa_2(x)\le\dots\le\kappa_{m-1}(x)$ the principal curvatures of $L_x$ at $x$;
  \item $H=H_f(x)=\kappa_1+\kappa_2+\dots+\kappa_{m-1}$ is mean curvature of $L_x$ at $x$
 \item $G=G_f(x)=2\sum_{i<j}\kappa_i\cdot\kappa_j$ is the extrinsic term
  in the Gauss formula for $\Int_f(x)$. 
@@ -33,7 +33,7 @@ and
 \end{thm}
 
 The following calculations are based on \cite[Chapter II]{lawson-michelsohn}.
-We use Riemannian metric to identify differential forms and multivector fields on $M$.
+We use the Riemannian metric to identify differential forms and multivector fields on $M$.
 Therefore the statement about differential forms can be also formulated in terms of multivector fields and the other way around.
 
 \parit{Proof.}
@@ -50,7 +50,7 @@ Therefore the Gauss formula can be written as
 \eqlbl{eq:gauss}
 \]
 
-We can assume that $b_i(x)$ point in the principle directions of $L_x$ for $i<m$.
+We can assume that $b_i(x)$ point in the principal directions of $L_x$ for $i<m$.
 Note that $\<\nabla_u u,u\>=0$, therefore
 \begin{align*}
 Du&=\sum_{i} b_i\bullet  \nabla_{b_i}u=
@@ -120,10 +120,10 @@ It remains to apply the Gauss formula \ref{eq:gauss}.
  
 \subsection{DC-calculus}\label{sec:DC}
 
-Let $f$ be a continuous function defined on an open domain of a finite dimensional Alexandrov space $A$.
-Recall that a function $f$ is called \emph{DC} if it can be presented locally as a difference of two concave functions.
+Let $f$ be a continuous function defined on an open domain of a finite-dimensional Alexandrov space $A$.
+Recall that a function $f$ is called \emph{DC} if it can be presented locally as a difference between two concave functions.
 Recall that for any point $p\zz\in A$ there is a $(-1)$-concave function defined in a  neighborhood  of $p$ \cite[3.6]{PerMorse}.
-Therefore we can say that $f$ is DC if and only if it can be presented locally as a difference of two semiconcave functions. 
+Therefore we can say that $f$ is DC if and only if it can be presented locally as a difference between two semiconcave functions. 
 
 Suppose that a sequence of Alexandrov spaces $A_n$ converges to an Alexandrov space $A$ without collapse.
 Let $f_n$ and $f$ be DC functions defined on open domains $\Dom f_n\subset A_n$ and $\Dom f \subset A$.
@@ -139,7 +139,7 @@ Any test function is DC. Moreover, test-convergence implies DC-convergence.
 
 \parit{Proof.}
 Choose a test-function $f=\phi(\widetilde\dist_{p_1,r},\dots,\widetilde\dist_{p_n,r})$.
-Note that the function $\phi$ can be presented locally as a difference of $C^2$-smooth concave functions increasing in each argument; say $\phi=\psi-\chi$.
+Note that the function $\phi$ can be presented locally as a difference between $C^2$-smooth concave functions increasing in each argument; say $\phi=\psi-\chi$.
 
 For the first part of the observation, it remains to observe that the functions $a=\psi(\widetilde\dist_{p_1,r},\dots,\widetilde\dist_{p_n,r})$ and $b=\chi(\widetilde\dist_{p_1,r},\dots,\widetilde\dist_{p_n,r})$ are semiconcave.
 
@@ -147,7 +147,7 @@ Suppose that a sequence of functions $\phi_i$ is $C^2$-converging to $\phi$.
 Choose $x=(x_1,\dots,x_n)$ in the domain of definition of $\phi$.
 Note that $\phi_n$ and its partial derivatives up to order 2 are bounded;
 fix a bound $C$.
-Then in a neighborhood of $(x_1,\dots,x_n)$ we may choose $\psi_n$ that is uniquely defined by $\psi_n(x)=0$, $\partial_i\psi_n(x)=2\cdot C$ and $\partial_i^2\psi_n\equiv -C$ in this case $\chi_n=\psi_n-\phi_n$ is concave.
+Then in a neighborhood of $(x_1,\dots,x_n)$ we may choose $\psi_n$ that is uniquely defined by $\psi_n(x)=0$, $\partial_i\psi_n(x)=2\cdot C$ and $\partial_i^2\psi_n\equiv -C$; in this case, $\chi_n=\psi_n-\phi_n$ is concave.
 Moreover, $C^2$-convergence of $\phi_n$ implies convergence of $\psi_n$ and $\chi_n$.
 Hence, the second statement follows.
 \qeds
@@ -170,14 +170,14 @@ Let $M_n\smooths{} A$, $\dim A=m$; choose a common chart $\bm{x}_n$ defined on $
 Denote by $g_{ij,n}$ components of metric tensors in this chart
 and by $g^{ij}_n$ coordinates of the inverse matrix. 
 Let $f_n\:U_n\to \RR$ be a test-converging sequence of functions.
-Then partial derivatives $\partial_k g_{ij,n}$, $\partial_k g^{ij}_n$, $\partial_i\partial_jf_n$ weakly converge to measures on $A$ that has vanishing $(m-1)$-density;
+Then partial derivatives $\partial_k g_{ij,n}$, $\partial_k g^{ij}_n$, $\partial_i\partial_jf_n$ weakly converge to measures on $A$ that has a vanishing $(m-1)$-density;
 that is, if $\mathfrak{m}$ is a limit measure, then $\frac{\mathfrak{m}(B(p,r))}{r^{m-1}}\to 0$ as $r\to 0$.
 \end{thm}
 
 
 {\it Proof of the Theorem~\ref{metricBV}.}
 Let's start with the partial derivatives of metric tenors.
-In \cite[Section 4.2]{PerDC}, it was shown that components of metric tensors can be expressed as rational function from partial derivatives of distance functions to a finite collection of distance functions.
+In \cite[Section 4.2]{PerDC}, it was shown that components of metric tensors can be expressed as a rational function from partial derivatives of distance functions to a finite collection of distance functions.
 The distance functions are semiconcave, in particular DC.
 
 The base points $p_{i,n}\in M_n$ of these distance functions can be chosen so that they converge to some point $p_i\in A$.
