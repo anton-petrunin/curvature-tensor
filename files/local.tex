@@ -1,58 +1,45 @@
 \subsection{Localization}\label{sec:local}
 
-The more general case for notions below is described in \cite{LNep}.
+In this subsection we formulate a local version of the main theorem.
+This version is more general, but its proof require just slight change of language.
+A couple of times we had to use this local version in the proof;
+so in a perfect world we had to rewire the whole paper using this language.
+However, this is not a principle moment,
+so we decided to keep paper more readable at the cost of being not fully rigorous.
+A more systematic discussion of the this topic is given in \cite{LNep}.
 
-\begin{rdef}{Definition}
+First we need to define Alexandrov region;
+its main example is an open set in Alexandrov space.
+
+\begin{thm}{Definition}
 Let $A$ be a locally compact metric space. 
 We say that a point  $p\in A$
 is  \emph{ $\eps$-inner point} if
 the closed ball $\bar B(x,2\cdot\eps)$ is compact.
-
-\end{rdef}
-
-\begin{rdef}{Definition}
-We say that
- a locally compact inner metric space $A$ of finite Hausdorff dimension
-is an \emph{ Alexandrov region} if
-any point has a neighborhood where Alexandrov
-comparison for curvature $\ge -1$ holds.
-We call a comparison 
-radius (and denote it $r_c(p)$) a maximal number $r$ such that
-$p$ is $r$-inner point and 
- Alexandrov
-comparison for curvature $\ge -1$ holds in
-$B(x,r)$.
-
-%We say that $U\subset A$ is an \emph{ Alexandrov domain} if $U$ is a strongly inner domain.
-
-\end{rdef}
-It is possible to show the following uniform estimate for
-comparison radius and convex neighborhood (for the proof, see \cite{LNep}).
-
-\begin{thm}{Proposition}
-Let $A$ be an $m$-dimensional Alexandrov region
-and $x$ be a $\varepsilon$-inner
-point. Then 
- $r_c(x)\ge 0.01\varepsilon$.
-Moreover,  for some constant $c_{conv}(m)$,
-the ball $B(x, c_{conv}(m)r(p))$ is a subset of some
-convex
-neighborhood of $x$ in $A$.
-
 \end{thm}
 
-Note that a compact convex subset in an Alexandrov region is an Alexandrov space.
-So the above proposition
-makes it possible 
-to apply most of the arguments and constructions for Alexandrov spaces to
- \emph{locally} Alexandrov spaces. 
-  Moreover, in the case when Alexandrov region
-  is a Riemannian 
-manifold (possibly noncomplete) it is possible
-to take the doubling of convex neighborhood from the Proposition
+\begin{thm}{Definition}
+We say that a locally compact inner metric space $A$ of finite Hausdorff dimension
+is an \emph{Alexandrov region} if
+any point has a neighborhood where Alexandrov
+comparison for curvature $\ge -1$ holds.
+
+The \emph{comprison radius} $r_c(p)$ for $p\in A$ is defined as 
+the maximal number $r$ such that
+$p$ is $r$-inner point and Alexandrov
+comparison for curvature $\ge -1$ holds in
+$B(x,r)$.
+\end{thm}
+
+Any point $p$ in an Alexandrov region admits a convex neighborhood.
+Moreover, its size can be controlled in terms of dimension, $r_c(p)$ and lower bound on volume of the ball $B(p,r_c)$.
+The construction is the same as for Alexandrov space \cite[4.3]{perelman-petrunin}.
+
+By the globalization theorem (see, for example, \cite{AKP}), a compact convex subset in an Alexandrov region is an Alexandrov space.
+So the statement above makes it possible to apply most of the arguments and constructions for Alexandrov spaces to Alexandrov regions. 
+Moreover, in the case when Alexandrov region is a Riemannian manifold (possibly noncomplete) it is possible to take the doubling of convex neighborhood from the Proposition
 and smooth it with almost the same lower curvature bound.
-This allows us to apply the main result from
- \cite{petrunin-SC}, where the complete manifold can be replaced by a convex domain  in a possibly open manifold. 
+This allows us to apply the main result from \cite{petrunin-SC}, where the complete manifold can be replaced by a convex domain in a possibly open manifold. 
 
 Further, let us define a local version of smoothing.
 Let us denote by
@@ -60,7 +47,7 @@ $\M_{\ge -1}^m$ a class of $m$-dimensional Riemannian
 manifolds without boundary, but possibly non-complete, with sectional curvature bounded
 from below by $-1$.
 
-\begin{rdef}{Definition}
+\begin{thm}{Definition}
 Let 
 $M_n\in\M_{\ge -1}^m$ (with corresponding intrinsic metric)
 converges in Gromov--Hausdorff sense to some metric space $A$ via
@@ -69,25 +56,25 @@ Suppose that $M_n\ni x_n\to x\in A$
 and $r_c(x_n)\ge c_0>0$. Let $c_{conv}(m)c_0 > R>0$ and set
 $U_n=B(x_n,R)_{M_n}$.
 Then we say that $U_n$ is a local smoothing of $U=B(x,R)_A$ (briefly, $U_n\smooths{} U$).
-\end{rdef}
+\end{thm}
 
 It is straightforward to redefine test functions and weak convergence for local smoothings.
 Using this language we can make local version for each statement in this paper, the proofs go without changes.
-A couple of times we had to use these local versions, so in a perfect world we had to rewire the whole paper using this language.
-However, this is not a principle moment,
-so we decided to keep paper more readable at the cost of being not fully rigorous. 
-
 As a result, we get the following local version of the main theorem \ref{main}.
  
 \begin{thm}{Local version of the main theorem}\label{mainloc}
 Let   
 $M_n\in\M_{\ge -1}^m$,
 $M_n\GHto A$, $U_n\subset M_m$,
-  $U\subset A$, and $U_n\smooths{} U$.
+  $U\subset A$, and $U_n\smooths{} U$ be a local smoothing.
   
 Denote by $\qm_n$ the dual measure-valued curvature tensor on $U_n$.
 Then there is a measure-valued tensor $\qm$ on $U$ such that $\qm_n\rightharpoonup \qm$.
 \end{thm}
+
+
+
+
 
 \subsection{A more conceptual definition of convergence}
 
