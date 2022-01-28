@@ -79,8 +79,8 @@ Then there is a measure-valued tensor $\qm$ on $U$ such that $\qm_n\rightharpoon
 \subsection{A more conceptual definition of convergence}
 
 Here we will describe a more natural definition of convergence that is equivalent to our definition.
-It is given only for aesthetic purposes, we do not see its application so far.
-By that reason, we give definitions and do not prove equivalence.
+It is given for purely aesthetic purposes --- we did not use it and do not see its application.
+By that reason, we give only definitions and do not prove equivalence.
 
 \parbf{Convergence of vectors.}
 Let $A$ be an Alexandrov space, we denote by $\T A$ the set of all tangent vectors at all points.
@@ -104,7 +104,7 @@ and the inequality might be strict.
 
 
 
-\parbf{$\bm{C^1}$-delta smoothfunctions and their convergence.}
+\parbf{$\bm{C^1}$-delta smooth functions and their convergence.}
 Given a function $f\:A\to \RR$ and a vector $V\in \T A$, set
 \[Vf=(f\circ\gamma_V(t))'|_{t=0}.\]
 Note that $Vf$ is defined for all DC-functions.
@@ -120,30 +120,26 @@ A Lipschitz function $f\:A\to \RR$ will be called \emph{$C^1$-delta smooth} if $
 for any $\eps>0$ there is $\delta>0$ such that if unit vectors $V_n$ converge to $V$ and $V$ has a $\delta$-opposite vector, then 
 \[|Vf-\lim V_nf|<\eps.\eqlbl{eq:Vf}\]
 
-Similarly, we can define $C^1$-delta converging sequence. Namely, suppose $A_n\GHto A$, then a sequence of $C^1$-delta smooth functions $f_n\:A_n\to\RR$ \emph{$C^1$-delta converges} to $f\:A\to \RR$ if for any $\eps>0$ there is $\delta>0$ such that any sequence of unit vectors $V_n\in \T A_n$ that converges to a vector $V\in \T A$ that has a $\delta$-opposite vector \ref{eq:Vf} holds. 
+Similarly, we can define $C^1$-delta converging sequence of functions.
+Namely, suppose $A_n\GHto A$, then a sequence of $C^1$-delta smooth functions $f_n\:A_n\to\RR$ \emph{$C^1$-delta converges} to $f\:A\to \RR$ if for any $\eps>0$ there is $\delta>0$ such that any sequence of unit vectors $V_n\in \T A_n$ that converges to a vector $V\in \T A$ that has a $\delta$-opposite vector \ref{eq:Vf} holds. 
 
-\parbf{Weak convergence of tensor fields}
+\parbf{Weak convergence of tensor fields.}
 It is easy to see that test-convergence implies $C^1$-delta convergence.
 The latter notion seems to be more natural.
 If we replace test convergence
 by $C^1$-delta convergence
 in the definition of the weak convergence of tensor fields and
-formulate our Main theorem using this definition we get formally stronger
+formulate the main theorem using this definition, we get formally stronger
 statement but in fact our proof 
 still works for this.
 
 For the part with DC-calculus and 
 Key lemma we still use test sequences
 (note that $C^1$-delta smooth functions are not DC in general).
-Then we need only
-the following property. 
-For any test sequence $f_n$
-and any $C^1$-delta converging
-sequence $g_n$ the function
+Then we need the following property:
+\begin{itemize}
+ \item \textit{For any test sequence $f_n$ and any $C^1$-delta converging sequence $g_n$ the function
 $\langle \nabla f_n , \nabla g_n
-\rangle$ delta-converges.
-
-
-%It is possible to redefine weak convergence using $C^1$-delta convergence instead of test-convergence.
-
-The main part of the proof of this statement is analogous to differentiability of a function with continuous partial derivatives. 
+\rangle$ delta-converges.}
+\end{itemize}
+Its proof reminds the proof of differentiability of a function that has continuous partial derivatives. 
