@@ -1,4 +1,4 @@
-\subsection{Formulation}
+\subsection{Formulation and plan}
   
 \begin{thm}{Main theorem}\label{main}
 Consider a smoothing $M_n\smooths{} A$.
@@ -6,7 +6,19 @@ Denote by $\qm_n$ the dual measure-valued curvature tensor on $M_n$.
 Then there is a measure-valued tensor $\qm$ on $A$ such that $\qm_n\rightharpoonup \qm$.
 \end{thm}
 
-\subsection{Plan of the proof}
+Let $A$ be an $m$-dimensional Alexandrov space without boundary. 
+Let us partition $A$ into three subsets $A^\circ$, $A'$ and $A''$:
+\begin{itemize}
+\item $A^\circ$ is the set of regular points in $A$; that is, the set of points with tangent cone isometric to the Euclidean space.
+\item $A'$ --- the set of points in $A\backslash A^\circ$ with an isometric copy of $\RR^{m-2}$ in their tangent space;
+in other words, for any $p\in A'$, the tangent space $\T_p$ is isometric to the product $\Cone(\theta)\times\RR^{m-2}$ where $\Cone(\theta)$ denotes a two-dimensional cone with total angle $\theta=\theta(p)<2\cdot \pi$.
+\item $A''$ --- the remaining set; this is the set of points with tangent space that does \emph{not} contain an isometric copy of $\RR^{m-2}$.
+\end{itemize}
+According to \cite{li-naber}, $A'$ is countably $(m-2)$-rectifiable and $A''$ is a countably $(m-3)$-rectifiable. 
+
+Observe that the set of regular points $A^\circ$ can be presented as
+$$A^{\circ}=\bigcap_{\delta>0} A^\delta,$$
+where $A^\delta$ denotes the set of $\delta$-strained points of $A$.
 
 Let $M$ be an $m$-dimensional Riemannian manifold.
 Denote by $K_{max}(x)$ the maximal sectional curvature at $x\in M$.
@@ -22,16 +34,17 @@ $$\int_{B(p,r)_M} K_{max}\le \const(m)\cdot r^{m-2}.$$
 
 \end{thm}
 
-Observe that there is another constant $\const'(m)$ such that 
-\[
-\begin{aligned}
+\begin{thm}{Observation}\label{q=<K}
+There is another constant $\const'(m)$ such that 
+\begin{align*}
 |\Qm(X_1,&\dots,X_{m-2},Y_1,\dots,Y_{m-2})|
 \\
 &\le 
 \const'(m)\cdot K_{max}\cdot|X_1\wedge\dots\wedge X_{m-2}|\cdot |Y_1\wedge\dots\wedge Y_{m-2}|
-\end{aligned}
-\eqlbl{q=<K}
-\]
+\end{align*}
+
+\end{thm}
+
 Therefore \ref{cor:Kmax} and \ref{q=<K} imply the following:
 
 \begin{thm}{Claim}\label{clm:weak-partial-limit}

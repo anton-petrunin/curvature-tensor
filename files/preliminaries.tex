@@ -15,13 +15,13 @@ $A$ in the sense of Gromov--Hausdorff;
 since $A\in \Al^m$, we have no collapse.
 Denote by $a_n\:A_n\to A$ the Hausdorff approximations.
 If $A$ is compact, then
-by Perelman's stability theorem (see \cite{PerStab}, \cite{KapStab}) we can (and will) assume that $a_n$ is a homeomorphism for every sufficiently large $n$.
+by Perelman's stability theorem \cite{PerStab,KapStab} we can (and will) assume that $a_n$ is a homeomorphism for every sufficiently large $n$.
 In the case of noncompact limit, we assume that for any $R$, the restriction of $a_n$ to an $R$-neighborhood of the marked point is a homeomorphism to its image for every sufficiently large $n$.
 
 We say that $A\in \Al^m$ is \emph{smoothable}
 if it can be presented as a Gromov--Hausdorff limit of a non-collapsing sequence of Riemannian manifolds $M_n$ with $\sec M_n\ge-1$.
 Given a smoothable Alexandrov space $A$,
-a sequence of Riemannian manifolds $M_n$ as above
+a sequence of complete Riemannian manifolds $M_n$ as above
 together with a sequence of approximations $a_n\:M_n\to A$
 will be called \emph{smoothing} of $A$
 (briefly, $M_n\smooths{} A$, or $M_n\smooths{a_n} A$).
@@ -67,7 +67,8 @@ In this subsection, we introduce a class of \emph{test functions} and define the
 These definitions will be used to define measure-valued tensors and their convergence.
 
 Test functions form a narrow class of functions defined via a formula.
-It is just one possible choice of a class containing sufficiently  smooth DC-functions (see Section~\ref{sec:DC}); we could use other definitions as well.
+It is just one possible choice of a class containing sufficiently  smooth DC-functions; see Section~\ref{sec:DC}.
+We could use other definitions as well; see Section~\ref{sec:concept}.
 
 Recall that the distance between points $x,y$ in a metric space is denoted by $|x-y|$;
 we will denote by $\dist_x$ the distance function $\dist_x\:y\mapsto |x-y|$.
@@ -81,7 +82,7 @@ Choose $r>0$ and $p\in A$.
 Let us define \emph{smoothed distance function} as the average:
 $$\widetilde{\dist}_{p,r} =\oint_{B(p,r)} \dist_{x}dx.$$ 
 We can lift this function to
-$\widetilde{\dist}_{p_n,r}:A_n\to [0,\infty)$
+$\widetilde{\dist}_{p_n,r}\:A_n\to [0,\infty)$
 choosing some  sequence $A_n\ni p_n\to p\in A$.
 
 We say that $f$ is a \emph{test function} if it can be expressed by the formula
@@ -109,7 +110,7 @@ include $C^2$-smooth functions with compact support.
  
 \subsection{Tensors}
 
-In this section, we define measure-valued tensors on Alexandrov spaces.
+In this subsection, we define measure-valued tensors on Alexandrov spaces.
 Basically, we reuse the \emph{derivation} approach to vector fields in classical differential geometry. 
 
 Let $A\in \Al^m$.
@@ -206,20 +207,3 @@ For a smooth surface, the density of this curvature measure with respect to the 
 is its Gauss curvature.
 In this case, \emph{curvature measures are stable under smoothing} \cite[VII \S13]{AZ};
 in other words, the statement of our main theorem is known in this case.
-
-
-\subsection{Partition into three sets}\label{subsec:AAA}
-
-Let $A$ be an $m$-dimensional Alexandrov space without boundary. 
-Let us partition $A$ into three subsets $A^\circ$, $A'$ and $A''$:
-\begin{itemize}
-\item $A^\circ$ is the set of regular points in $A$; that is, the set of points with tangent cone isometric to the Euclidean space.
-\item $A'$ --- the set of points in $A\backslash A^\circ$ with an isometric copy of $\RR^{m-2}$ in their tangent space;
-in other words, for any $p\in A'$, the tangent space $\T_p$ is isometric to the product $\Cone(\theta)\times\RR^{m-2}$ where $\Cone(\theta)$ denotes a two-dimensional cone with total angle $\theta=\theta(p)<2\cdot \pi$.
-\item $A''$ --- the remaining set; this is the set of points with tangent space that does \emph{not} contain an isometric copy of $\RR^{m-2}$.
-\end{itemize}
-According to \cite{li-naber}, $A'$ is countably $(m-2)$-rectifiable and $A''$ is a countably $(m-3)$-rectifiable. 
-
-Observe that the set of regular points $A^\circ$ can be presented as
-$$A^{\circ}=\bigcap_{\delta>0} A^\delta,$$
-where $A^\delta$ denotes the set of $\delta$-strained points of $A$.
