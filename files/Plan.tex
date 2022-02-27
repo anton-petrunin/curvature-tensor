@@ -6,7 +6,7 @@ Choose a smoothing $M_n\smooths{} A$ of an $m$-dimensional Alexandrov space $A$.
 Let $p\in A$ be a point of rank $m$; that is, there are $m+1$ points $a_0,\dots, a_m\in A$ such that 
 $\angk p{a_i}{a_j}>\tfrac\pi2$ for all $i\ne j$.
 
-Recall \cite[Sec. 7]{petrunin-conc} that we can choose a small $r>0$,
+Recall \cite[Sec. 7]{petrunin-conc} that we can choose small $r>0$,
 finite set of points $\bm{a}_i$ near $a_i$,
 and a smooth concave increasing real-to-real function $\phi$ defined on an open interval such that 
 \[f_i=\sum_{x\in \bm{a}_i}\phi\circ\widetilde{\dist}_{x,r}\]
@@ -22,7 +22,7 @@ Further, we assume that it holds for all $n$; it could be achieved by cutting of
 
 The obtained collection of charts $\bm{x}_n\:U_n\to \Omega$ and $\bm{x}\:U\to \Omega$ will be called a \emph{common chart} at $p$.
 It will be used to identify points of $\Omega$, $M_n$, and $A$; 
-in addition we will use it to identify the tangent spaces $\T M_n$ and $\T A$ with $\RR^m$.
+in addition, we will use it to identify the tangent spaces $\T M_n$ and $\T A$ with $\RR^m$.
 For example, we will use the same notation for function $M_n\to \RR$ and its composition $\Omega\to \RR$ with the inverse of the chart $U_n\to \Omega$.
 We will use index $n$ or skip it to indicate that the calculations are performed in $M_n$ or $A$ respectively.
 For example, given a function $f\:\Omega\to \RR$, we denote by $\nabla_nf$ and $\nabla f$ the gradients of $f\circ \bm{x}_n$ in $M_n$ and $f\circ \bm{x}$ in $A$ respectively.
@@ -30,7 +30,7 @@ For example, given a function $f\:\Omega\to \RR$, we denote by $\nabla_nf$ and $
 Recall that $A^\delta$ denotes the set of $\delta$-strained points in $A$.
 For a fixed common chart $\bm{x}$ we will use notation $A^\delta_\Omega$ for the image $\bm{x}(A^\delta)\subset \Omega$.
 
-The part \ref{prop:3parts}(\ref{prop:3parts:reg}) will be reduced to certain estimates in one common chart.
+The part \ref{prop:3parts}(\ref{prop:3parts:reg}) will follow from certain estimates in one common chart.
 
 \begin{thm}{Definitions}\label{def:delta-converge}
 Let $M_n\smooths{} A$, $\dim A=m$;
@@ -111,7 +111,7 @@ The following lemma relies on DC-calculus that is discussed Section~\ref{sec:DC}
 \begin{thm}{Lemma}\label{lem:test-delta}
 Let $M_n\smooths{} A$, $\dim A=m$;
 choose a common chart with range $\Omega\subset \RR^m$.
-Let $f_n\: M_n\to\RR$ be a sequence of test function such that $f_n\zz\testto f\:A\to \RR$.
+Let $f_n\: M_n\to\RR$ be a sequence of test functions such that $f_n\zz\testto f\:A\to \RR$.
 Let us denote by $\partial_1,\dots,\partial_m$ the partial derivatives on $\Omega\subset \RR^m$.
 Denote by $g_{ij,n}$ and $g^{ij}_n$ the components of the metric tensors on $M_n$.
 Then 
@@ -157,11 +157,11 @@ Whence the statement follows.
 
 \parit{(\ref{lem:test-delta|nabla|}).}
 Note that $|\nabla_n f_n|$ can be expressed from $g^{ij}_n$ and $\partial_if_n$.
-Since these quantities delta-converging, so is $|\nabla_n f_n|$.
+Since these quantities are delta-converging, so is $|\nabla_n f_n|$.
 
 \parit{(\ref{lem:test-delta-partial-g}).} The weak convergence of $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$, and $\partial_j\partial_if_n$
 follows from \ref{metricBV}.
-By Observation~\ref{obs:delta-weak-uniform}, the products of these partial derivatives to uniforly delta-converging sequences of functions is weakly delta-converging.
+By Observation~\ref{obs:delta-weak-uniform}, the products of these partial derivatives to uniformly delta-converging sequences of functions is weakly delta-converging.
 
 By \ref{metricBV}, the limit measures of $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$, and $\partial_j\partial_if_n$ have a vanishing $(m-1)$-density.
 Further, a limit of delta-converging sequence is might be discontinues only at the singular set which has a vanishing $(m-1)$-Hausdorff measure.
@@ -178,7 +178,7 @@ Then $\Rm_{ijsr,n}\cdot \vol^m_n$ is a weakly delta-converging sequence of measu
 \end{thm}
 
 The proof of the key lemma will take the remaining part of this section;
-in the current subsection we show that it implies \ref{prop:3parts}(\ref{prop:3parts:reg}).
+in the current subsection, we show that it implies \ref{prop:3parts}(\ref{prop:3parts:reg}).
 
 \parit{Proof of \ref{prop:3parts}(\ref{prop:3parts:reg}) modulo \ref{lem:test-delta} and \ref{A^0}.}
 Recall that components of $\qm_n$ can be expressed from the components of $\Rm_n$.

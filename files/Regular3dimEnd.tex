@@ -1,11 +1,11 @@
 \subsection{Three-dimensional case}\label{sec:3D-smooth}
 
-In this section we prove Lemma~\ref{A^0} in the 3-dimensional case.
+In this section, we prove Lemma~\ref{A^0} in the 3-dimensional case.
 
 Vectors $w_1,\dots,w_{m(m-1)/2}\in\R^m$ are said to be \emph{in general position}
 if the vectors $w_i\otimes w_i$ form a basis in $\RR^{m\cdot(m-1)/2}$ --- the symmetric square of $\RR^m$.
 In this case, any quadratic form $Q$ on $\R^m$
-can be computed from the $m(m-1)/$ values 
+can be computed from the $\tfrac{m(m-1)}2$ values 
 \[Q(w_1, w_1),\ \dots,\ Q(w_{m(m-1)/2}, w_{m(m-1)/2}).\] 
 More precisely, there are rational functions 
 $s_1,\dots,s_{m(m-1)/2}$ that take $\tfrac{m(m-1)}2$ vectors in $\R^m$ and returns a quadratic form on $\R^m$
@@ -30,7 +30,7 @@ Choose a common chart
 A_n\supset U\to\Omega.\]
 Let us use it to identify tangent spaces of $M_n$ and $A$ with $\RR^3$.
  
-We can choose 6 sequences of convex combinations of coordinate functions $f_1,\dots,  f_6$, such that
+Choose 6 sequences of convex combinations of coordinate functions $f_1,\dots,  f_6$, such that
 $\nabla f_1,\zz\dots,\nabla f_6$ are in general position at $p\in \Omega$.
 We can assume that $\Omega$ is a small neighborhood of $p$, so by Proposition~\ref{strconvergence}
 the measures $\Str_n(\nabla_n f_k, \nabla_n f_k)\cdot\vol^3_n$ weakly delta-converges
@@ -48,14 +48,14 @@ where $x_1,x_2,x_3$ is the standard coordinates in $\RR^3$.
 
 By Lemma~\ref{lem:test-delta}, the sequence metric tensors $g_n$ of $M_n$ on $\Omega$ is uniformly delta-converging.
 Since the following equality
-\[\operatorname{Tr}\Str_n=\sum_{i,j}g^{ij}_n\Str_n(e_{i},e_{j})\cdot \sqrt {\det g_n}\]
+\[\operatorname{Tr}\Str_n=\sum_{i,j}g^{ij}_n\cdot\Str_n(e_{i},e_{j})\cdot \sqrt {\det g_n}\]
 holds almost everywhere, we get that the sequence of measures $\operatorname{Tr}\Str_n\cdot\vol^3_n$ is weakly delta-converging.
 
-Note, that for $3$-dimensional manifold we have
+Note that for $3$-dimensional manifolds we have
 $$\Qm_n(V,V)=\Str_n(V,V)-\tfrac14\cdot |V|^2\cdot \Tr \Str_n.\eqlbl{Q}$$
 Hence the measures $\Qm_n(d x_i, d x_j)\cdot\vol^3_n$ are weakly delta-converging for all $i$ and~$j$.
 
-Finally, according to \ref{lem:test-delta}(\ref{lem:test-delta-partial}) the components $\alpha_{ik,n}$ of $\nabla_n f_k$ are uniformly delta-converging.
+Finally, according to \ref{lem:test-delta}(\ref{lem:test-delta-partial}), the components $\alpha_{ik,n}$ of $\nabla_n f_k$ are uniformly delta-converging.
 The result follows since
 \[\qm(f_k, f_k)=
 \sum_{i,j} \alpha_{ik,n}\cdot \alpha_{jk,n}\cdot \qm(x_{i}, x_{j}).\]
@@ -66,7 +66,7 @@ The result follows since
 
 \begin{thm}{Observation}\label{obs:nested-convex}
 Choose a common chart with the range $\Omega\subset\RR^m$ for a smoothing $M_n\smooths{} A$.
-Consider the sequence of coordinate level sets $\Omega\zz=L_m\supset L_{m-1}\supset\dots\supset L_0$, 
+Consider the sequence of coordinate level sets $\Omega\zz=L_m\zz\supset L_{m-1}\zz\supset\zz\dots\zz\supset L_0$, 
 where $L_i=L_i(c_{i+1},\dots,c_m)$ is defined by setting the last $m-i$ coordinates to be $c_{i+1},\dots,c_m$ respectively.
 Then the level sets $L_i$ is a smooth convex hypersurface in $L_{i+1}$ in each $M_n$;
 in particular, each $L_i$ has sectional curvature bounded below by $-1$.

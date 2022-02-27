@@ -1,14 +1,14 @@
 \subsection{Localization}\label{sec:local}
 
 In this subsection we formulate a local version of the main theorem.
-This version is more general, but its proof require just slight change of language.
-A couple of times we had to use this local version in the proof;
-so in a perfect world we had to rewire the whole paper using this language.
+This version is more general, but its proof requires just slight change of language.
+A couple of times we had to use this local version in the proof.
+In a perfect world, we had to rewire the whole paper using this language.
 However, this is not a principle moment,
-so we decided to keep paper more readable at the cost of being not fully rigorous.
+so we decided to keep the paper more readable at the cost of being not fully rigorous.
 A more systematic discussion of the this topic is given in \cite{LNep}.
 
-First we need to define Alexandrov region;
+First, we need to define Alexandrov region;
 its main example is an open set in Alexandrov space.
 
 \begin{thm}{Definition}
@@ -24,7 +24,7 @@ is an \emph{Alexandrov region} if
 any point has a neighborhood where Alexandrov
 comparison for curvature $\ge -1$ holds.
 
-The \emph{comprison radius} $r_c(p)$ for $p\in A$ is defined as 
+The \emph{comparison radius} $r_c(p)$ for $p\in A$ is defined as 
 the maximal number $r$ such that
 $p$ is $r$-inner point and Alexandrov
 comparison for curvature $\ge -1$ holds in
@@ -32,12 +32,12 @@ $B(x,r)$.
 \end{thm}
 
 Any point $p$ in an Alexandrov region admits a convex neighborhood.
-Moreover, its size can be controlled in terms of dimension, $r_c(p)$ and lower bound on volume of the ball $B(p,r_c)$.
+Moreover, its size can be controlled in terms of dimension, $r_c(p)$ and lower bound on the volume of ball $B(p,r_c)$.
 The construction is the same as for Alexandrov space \cite[4.3]{perelman-petrunin}.
 
 By the globalization theorem (see, for example, \cite{AKP}), a compact convex subset in an Alexandrov region is an Alexandrov space.
 So the statement above makes it possible to apply most of the arguments and constructions for Alexandrov spaces to Alexandrov regions. 
-Moreover, in the case when Alexandrov region is a Riemannian manifold (possibly noncomplete) it is possible to take the doubling of convex neighborhood from the Proposition
+Moreover, in the case when Alexandrov region is a Riemannian manifold (possibly noncomplete) it is possible to take the doubling of a convex neighborhood from the proposition
 and smooth it with almost the same lower curvature bound.
 This allows us to apply the main result from \cite{petrunin-SC}, where the complete manifold can be replaced by a convex domain in a possibly open manifold. 
 
@@ -50,7 +50,7 @@ from below by $-1$.
 \begin{thm}{Definition}
 Let 
 $M_n\in\M_{\ge -1}^m$ (with corresponding intrinsic metric)
-converges in Gromov--Hausdorff sense to some metric space $A$ via
+converge in Gromov--Hausdorff sense to some metric space $A$ via
 approximation.
 Suppose that $M_n\ni x_n\to x\in A$
 and $r_c(x_n)\ge c_0>0$. Let $c_{conv}(m)c_0 > R>0$ and set
@@ -59,7 +59,7 @@ Then we say that $U_n$ is a local smoothing of $U=B(x,R)_A$ (briefly, $U_n\smoot
 \end{thm}
 
 It is straightforward to redefine test functions and weak convergence for local smoothings.
-Using this language we can make local version for each statement in this paper, the proofs go without changes.
+Using this language we can make a local version for each statement in this paper, the proofs go without changes.
 As a result, we get the following local version of the main theorem \ref{main}.
  
 \begin{thm}{Local version of the main theorem}\label{mainloc}
@@ -73,14 +73,11 @@ Then there is a measure-valued tensor $\qm$ on $U$ such that $\qm_n\rightharpoon
 \end{thm}
 
 
-
-
-
 \subsection{A more conceptual definition of convergence}\label{sec:concept}
 
 Here we will describe a more natural definition of convergence that is equivalent to our definition.
 It is given for purely aesthetic purposes --- we did not use it and do not see its application.
-By that reason, we give only definitions and do not prove equivalence.
+By that reason, we give only definitions and do not prove the equivalence.
 
 \parbf{Convergence of vectors.}
 Let $A$ be an Alexandrov space, we denote by $\T A$ the set of all tangent vectors at all points.
@@ -95,7 +92,7 @@ Further, the pointwise limit of such curves is a gradient curve as well.
 Therefore, any bounded sequence of tangent vectors with base points in a bounded set has a converging sequence.
 
 A direct analog holds for sequences of Alexandrov spaces $A_n$ that converge to $A$.
-That is, if $V_n\in \T A_n$ is a bounded sequence of tangent vectors with bounded set of base points, then it has a subsequence that converges to some vector $V\in \T A$.
+That is, if $V_n\in \T A_n$ is a bounded sequence of tangent vectors with a bounded set of base points, then it has a subsequence that converges to some vector $V\in \T A$.
 
 Note that 
 \[|V|\le \lim |V_n|\]
@@ -107,7 +104,7 @@ and the inequality might be strict.
 \parbf{$\bm{C^1}$-delta smooth functions and their convergence.}
 Given a function $f\:A\to \RR$ and a vector $V\in \T A$, set
 \[Vf=(f\circ\gamma_V(t))'|_{t=0}.\]
-Note that $Vf$ is defined for all DC-functions.
+Note that $Vf$ is defined for all DC functions.
 
 Two vectors $V,W\in \T_pA$ will be called $\delta$-opposite if
 $1-\delta< |V|\le 1$,
@@ -129,9 +126,8 @@ The latter notion seems to be more natural.
 If we replace test convergence
 by $C^1$-delta convergence
 in the definition of the weak convergence of tensor fields and
-formulate the main theorem using this definition, we get formally stronger
-statement but in fact our proof 
-still works for this.
+formulate the main theorem using this definition, we get a formally stronger
+statement; plus our proof still works.
 
 For the part with DC-calculus and 
 Key lemma we still use test sequences
