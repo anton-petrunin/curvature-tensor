@@ -27,7 +27,9 @@ The following statement is a direct corollary of the main result in \cite{petrun
 \begin{thm}{Corollary}\label{cor:Kmax}
 Given an integer $m\ge 0$, there is a constant $\const(m)$ such that the following holds:
 
-Let $M$ be an $m$-dimensional Riemannian manifold with sectional curvature bounded below by $-1$.
+Let $M$ be an $m$-dimensional Riemannian manifold 
+(possibly noncomplete)
+with sectional curvature bounded below by $-1$.
 If for some $r<1$ the closed ball $\bar B(p,2\cdot r)_M$ is compact,
 then 
 $$\int_{B(p,r)_M} K_{max}\le \const(m)\cdot r^{m-2}.$$
@@ -45,7 +47,7 @@ There is another constant $\const'(m)$ such that
 
 \end{thm}
 
-Therefore \ref{cor:Kmax} and \ref{q=<K} imply the following:
+Note that \ref{cor:Kmax} and \ref{q=<K} imply the following:
 
 \begin{thm}{Claim}\label{clm:weak-partial-limit}
 Given a smoothing $M_n\smooths{} A$ and a sequence of test functions $f_{i,n},g_{i,n}\:M_n\to \RR$ such that 
@@ -56,7 +58,7 @@ $\qm_n(f_{1,n},\dots f_{m-2,n},g_{1,n},\dots, g_{m-2,n})$ has a weakly convergin
 By Perelman's stability theorem, the space $A$ in the claim is a topological manifold.
 In particular, $A$ has no boundary;
 in other words, the singular set in $A$ has codimension at least 2.
-Together with the claim, it implies that the main theorem (\ref{main}) follows from the following statement:
+Together with the claim, it implies that the main theorem (\ref{main}) follows from the next statement:
 
 \begin{thm}{Proposition}\label{prop:3parts}
 Let $M_n\smooths{} A$ and $\dim A=m$.

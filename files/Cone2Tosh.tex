@@ -10,7 +10,7 @@ Equivalently, the function $\theta$ can be extended by
 \eqlbl{eq:theta}\]
 where $\Sigma_p$ denotes the space of directions at $p$.
 According to \cite[7.14]{BGP}, $\theta\:A\to \RR$ is upper-semicontinuous.
-The right-hand side of the last equality vanish in $A^\circ$.
+The right-hand side of the last equality is identiacally $2\cdot\pi$ in $A^\circ$.
 Further, since $\vol^{m-2}(A'')=0$, the measure $\omega$ could be also defined as a measure on whole $A$ that is defined by~\ref{eq:omega} with $\theta$ defined in \ref{eq:theta}.
 
 Note that \ref{prop:3parts}(\ref{prop:3parts:codim2}) follows from the following more exact statement;
@@ -35,7 +35,7 @@ Suppose that
 \[|\nabla (f+h)|<\eps\cdot|\nabla f|\] 
 for some fixed positive $\eps<\tfrac12$;
 \item for some $a,b\in \RR$, the set
-\[W_{a,b}=\set{p\in M}{f(p)=a, h(p)\le b}\]
+\[W_{a,b}=\set{p\in M}{f(p)=a,\  h(p)\le b}\]
 is compact.
 \end{enumerate}
 Denote by $k_1(p)\le k_2(p)$, 
@@ -51,15 +51,15 @@ and
 \end{thm}
 
 The proof is based on the 2-dimensional case of the following statement,
-which is the integral Bochner formula written for function with Dirichlet boundary condition.
+which is the integral Bochner formula with Dirichlet boundary condition.
 
 \begin{thm}{Proposition}\label{prop:bochner-dirichle}
 Assume $\Omega$ is a compact domain with smooth boundary $\partial \Omega$ in a Riemannian manifold
 and $f$ is a smooth function that vanishes on $\partial \Omega$.
 Then
-\[\int\limits_\Omega |\Delta f|^2
+\[\int\limits_\Omega \left(|\Delta f|^2
 -|\Hess f|^2
--\langle\mathrm{Ric}(\nabla f),\nabla f\rangle
+-\langle\mathrm{Ric}(\nabla f),\nabla f\rangle\right)
 =\int\limits_{\partial\Omega}
 H\cdot|\nabla f|^2,\]
 where $H$ denotes mean curvature of $\partial \Omega$.

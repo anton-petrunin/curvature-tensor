@@ -19,7 +19,7 @@ by Perelman's stability theorem \cite{PerStab,KapStab} we can (and will) assume 
 In the case of noncompact limit, we assume that for any $R$, the restriction of $a_n$ to an $R$-neighborhood of the marked point is a homeomorphism to its image for every sufficiently large $n$.
 
 We say that $A\in \Al^m$ is \emph{smoothable}
-if it can be presented as a Gromov--Hausdorff limit of a non-collapsing sequence of Riemannian manifolds $M_n$ with $\sec M_n\ge-1$.
+if it can be presented as a Gromov--Hausdorff limit of a non-collapsing sequence of Riemannian manifolds $M_n$ with $\sec M_n\ge-1$; here $\sec$ denotes sectional curvature.
 Given a smoothable Alexandrov space $A$,
 a sequence of complete Riemannian manifolds $M_n$ as above
 together with a sequence of approximations $a_n\:M_n\to A$
@@ -51,7 +51,7 @@ If the condition $\langle \mathfrak m_n'|f\rangle \to \langle \mathfrak m|f\rang
 Equivalently, the weak convergence can be defined using the uniform convergence of functions.
 We say that  a sequence $f_n\in C_c(A_n)$
 \emph{uniformly converges} to $f\in C_c(A)$
-if 
+if their supports are uniformly bounded and
 \[\sup_{x\in A_n}\{\,|f_n(x)-f\circ a_n(x)|\,\}\to 0.\]
 Then  $\mathfrak m_n\rightharpoonup \mathfrak m$
 if for any sequence $f_n\in C_c(A_n)$
@@ -73,17 +73,21 @@ We could use other definitions as well; see Section~\ref{sec:concept}.
 Recall that the distance between points $x,y$ in a metric space is denoted by $|x-y|$;
 we will denote by $\dist_x$ the distance function $\dist_x\:y\mapsto |x-y|$.
 
+{\sloppy 
+
 Suppose $A_n, A\in \Al^m$ and  $A_n\GHto A$.
 Then any distance function $\dist_p\:A\zz\to\RR$ can be \emph{lifted} to $A_n$;
 it means that we can choose a convergent sequence $p_n\to p$ and take the
 sequence $\dist_{p_n}$.
+
+}
 
 Choose $r>0$ and $p\in A$.
 Let us define \emph{smoothed distance function} as the average:
 $$\widetilde{\dist}_{p,r} =\oint_{B(p,r)} \dist_{x}dx.$$ 
 We can lift this function to
 $\widetilde{\dist}_{p_n,r}\:A_n\to [0,\infty)$
-choosing some  sequence $A_n\ni p_n\to p\in A$.
+by choosing some  sequence $A_n\ni p_n\to p\in A$.
 
 We say that $f$ is a \emph{test function} if it can be expressed by the formula
 $$f=\varphi( \widetilde{\dist}_{p_1,r_1}, \dots,   \widetilde{\dist}_{p_N,r_N}),$$
@@ -105,7 +109,7 @@ This way, we get the following:
 
 \begin{thm}{Claim}
 On a smooth complete Riemannian manifold, test functions
-include $C^2$-smooth functions with compact support.
+include all $C^2$-smooth functions with compact support.
 \end{thm}
  
 \subsection{Tensors}
@@ -121,11 +125,11 @@ is a  continuous (with respect to test convergence) linear map
 $\mathfrak{v}$ that takes a test function,
 spits a measure in $\mathfrak M(A)$,
 and satisfies the \emph{chain rule};
-that is, for any collection of test functions $f_1,f_2,\dots,f_k$
+that is, for any collection of test functions $f_1,\dots,f_k$
 and a $C^2$-smooth function $\phi\:\RR^k\to\RR$ we have
-$$\mathfrak{v}(\phi(f_1,f_2,\dots,f_n))
+$$\mathfrak{v}(\phi(f_1,\dots,f_n))
 =
-\sum_{i=1}^n (\partial_i\phi)(f_1,f_2,\dots,f_n)\cdot\mathfrak{v}(f_i)$$
+\sum_{i=1}^n (\partial_i\phi)(f_1,\dots,f_n)\cdot\mathfrak{v}(f_i)$$
 where $\partial_i$ denotes partial derivatives in $\RR^n$.
 
 In the same way, we define \emph{(contravariant)} measure-valued tensor fields.
@@ -134,6 +138,7 @@ Namely, a \emph{measure-valued tensor field} $\mathfrak{t}$ of valence $k$ on $A
 Suppose that $x_1,\dots,x_m$ are local coordinates in an $m$-dimensional Riemannian manifold $M$.
 Then a measure-valued vector field $\mathfrak{v}$ on $M$ can be described by $m$ components, these are measures $(\vv(x_1),\dots,\vv(x_m))$;
 these components transform by contravariant rule under change of coordinates.
+
 By the definition of measure-valued vector field, we get
 \[\mathfrak{v}(f)=\sum_{i}\partial_i f\cdot \vv(x_i).\]
 Similarly, for arbitrary $k$, a measure-valued tensor field of valence $k$ is defined by $m^k$ components 
@@ -158,7 +163,7 @@ all of the same valence $k$.
 We say that $\mathfrak{t}_n$ \emph{weakly converges} to  $\mathfrak{t}$
 (briefly $\mathfrak{t}_n\rightharpoonup\mathfrak{t}$) if for arbitrary $k$
 sequences of test functions
-$f_{i,n}\testto f_i$, the measures $\mathfrak{t}_n(f_{1,n},f_{2,n},\dots,f_{k,n})$ weakly converge to $\mathfrak{t}(f_{1},f_{2},\dots,f_{k})$.
+$f_{i,n}\testto f_i$, the measures $\mathfrak{t}_n(f_{1,n},\dots,f_{k,n})$ weakly converge to $\mathfrak{t}(f_{1},\dots,f_{k})$.
 \end{rdef}
 
 \subsection{Dual curvature tensor}
@@ -177,7 +182,9 @@ This definition will be used further mostly for gradient vector fields of test f
 
 In addition, we will need a measure-valued version of $\Qm$ denoted by $\qm$;
 it will be called \emph{dual measure-valued curvature tensor}.
-Namely, we define $\qm(f_1,\zz\dots,f_{m-2},g_1,\zz\dots,g_{m-2})$ as the measure with density
+Namely, we define 
+\[\qm(f_1,\zz\dots,f_{m-2},g_1,\zz\dots,g_{m-2})\]
+as the measure with density
 \[\Qm(\nabla f_1,\dots,\nabla f_{m-2},\nabla g_1,\dots,\nabla g_{m-2}): M\to\R.\]
 
 \parbf{Remarks.}
@@ -190,7 +197,7 @@ on a plane $\sigma$ orthogonal to $(m-2)$-vector
 $X_1\wedge\zz\dots \wedge X_{m-2}$.
 Hence, the sectional curvatures of $M$ and therefore its curvature tensor $\Rm$ can  be computed from
 $\qm$.
-Since we have symmetry
+By the symmetry
 $$\qm(f_1,\dots,f_{m-2},g_1,\dots,g_{m-2})=
 \qm(g_1,\dots,g_{m-2},f_1,\dots,f_{m-2}),$$
 the density of $\qm$ is defined by the sectional curvature.
@@ -205,5 +212,5 @@ in this case, $\qm$ coincides with the curvature measure --- the standard way to
 \cite{Resh,AZ}.
 For a smooth surface, the density of this curvature measure with respect to the area
 is its Gauss curvature.
-In this case, \emph{curvature measures are stable under smoothing} \cite[VII \S13]{AZ};
-in other words, the statement of our main theorem is known in this case.
+In this case, it is known that \emph{curvature measures are stable under smoothing} \cite[VII \S13]{AZ};
+in other words, our main theorem is known in the two-dimensional case.
