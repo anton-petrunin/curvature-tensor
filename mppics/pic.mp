@@ -47,5 +47,33 @@ label.lft(btex $s_{ij}=w$ etex rotated 90, z.bsmall);
 
 endfig;
 
+beginfig(200) 
+save u,p;
+path p[];
+u:=1.4cm;
+
+z.x=origin;
+z.yy= (1,0)*u rotated 35;
+z.y=.3*z.yy;
+z.l=z.yy rotated 10;
+z.r=z.l reflectedabout(z.x, z.y);
+
+p0=circle(z.x,z.yy-z.x) rotated angle(z.y) cutbefore z.l cutafter z.r;
+
+draw p0;
+draw circle(.85*z.yy,.1*z.yy);
+draw ddline(z.y,z.l)(0,.4);
+draw ddline(z.y,z.r)(0,.4);
+
+hatchfill p0--z.y--cycle  withcolor (87, 2mm, -.5bp);
+
+dOt z.x,z.y;
+
+label(btex $C$ etex, 1.2*z.yy);
+label(btex $\T_x$ etex, (1.2*z.yy) xscaled -1);
+whitelabel.bot(btex $\tilde y$ etex, z.y);
+whitelabel.llft(btex $0$ etex, z.x);
+endfig;
+
 
 end

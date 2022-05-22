@@ -1,0 +1,96 @@
+\section{Bi-Lipschitz covering}\label{sec:bilip}
+
+In this section we will prove Lemma~\ref{lem:A-prime-Q};
+note that it follows from the next proposition.
+
+\begin{thm}{Proposition}\label{prop:Q-covering}
+Let $A$ be an $m$-dimensional Alexandrov space with curvature at least $-1$ and $p\in A'$.
+Then there is a compact set $Q$ such that 
+\begin{enumerate}[(i)]
+ \item $Q$ admits a bi-Lipschitz embedding into $\RR^{m-2}$ and
+ \item there is a neighborhood $U\ni p$ and $\eps>0$ such that $q\in Q\cap A'$ for any point $q\in U$ such that 
+ \[\theta(q)<\theta(p)+\eps.\]
+\end{enumerate}
+\end{thm}
+
+Let $x$ be a point in an Alexandrov space $A$ with curvature at least $-1$.
+Recall that Bishop--Gromov inequality implies that 
+\[\frac{\vol^m B(x,R)_A}{\vol^m B(\tilde x,R)_{\HH^m}}\le \frac{\vol^{m-1} \Sigma_x}{\vol^{m-1} \SS^m}\]
+for any $R>0$; here $\HH^m$ denotes the $m$-dimensional hyperbolic space.
+The following lemma makes this inequality more precise. 
+
+\begin{thm}{Lemma}
+Let $x$ be a point in an $m$-dimensional Alexandrov space $A$ with curvature at least $-1$.
+Suppose $y\in A$ is a point such that $|x-y|<R$ and $\measuredangle\hinge yxz<\pi-\eps$.
+Then
+\[\frac{\vol^m B(x,R)_A}{\vol^m B(R)_{\HH^m}}\le \frac{\vol^{m-1} \Sigma_x}{\vol^{m-1} \SS^m}-\delta,\]
+where $\delta$ is a positive number that depends on $m$, $|x-y|$, $R$ and $\eps$.
+ 
+\end{thm}
+
+\parit{Proof.}
+To simplify presentaition we will assume that $A$ is nonnegatively curved;
+it is straightforward to adapt the proof to the general case.
+That is, we need to show that 
+\[\frac{\vol^m B(x,R)_A}{\vol^m B(R)_{\RR^m}}\le \frac{\vol^{m-1} \Sigma_x}{\vol^{m-1} \SS^m}-\delta,\]
+
+Let us denote by $\tilde p$ a vector in $\T_x$ that is tangent to a geodesic path $\gamma\:[0,1]\zz\to A$ from $x$ to $p$.
+By comparison, the map $p\mapsto \tilde p$ is a distance-noncontracting map.
+
+\begin{wrapfigure}{r}{35 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-200}
+\vskip0mm
+\end{wrapfigure}
+
+Since $\measuredangle\hinge yxz<\pi-\eps$ for any $z$, the image of the map $p\mapsto \tilde p$ does not include points in a cone $C$ behind $\tilde y$ of angle $\eps$.
+It follows that 
+\[\vol^m(B(0,R)_{\T_p}\setminus C)\ge \vol^m(B(x,R)_A\]
+for any $R>0$.
+
+Since $R>|x-y|$, the intersection $C\cap B(0,R)_{\T_p}$ includes a ball of certain radius $r>0$ that can be found in terms of $|x-y|$, $R$ and $\eps$.
+By Bishop--Gromov inequality, we get a positive lower bound on $\vol^m(C\cap B(0,R)_{\T_p})$ in terms of $m$, $|x-y|$, $R$, $\eps$ and $\vol^mB(0,R)_{\T_p}$.
+
+Further, observe that 
+\[\frac{\vol^m(B(0,R)_{\T_p})}{\vol^m(B(0,R)_{\RR^m})}
+=
+\frac{\vol^{m-1} \Sigma_x}{\vol^{m-1} \SS^m}.
+\]
+--- whence the lemma.
+\qeds
+
+
+
+
+
+
+
+\parit{Proof of \ref{prop:Q-covering}.}
+Since the tangent cone at $p$ has $\RR^{m-2}$-factor, 
+we can choose points $a_1,\zz\dots,a_{m-2},b_1,\zz\dots,b_{m-2}$ that are $\delta$-strainers of $p$ for arbitrary $\delta>0$.
+The corresponding distance map $s\:x\mapsto (|a_1-x|,\dots,|x-a_{m-2}|)$ is almost submersion of a neighborhood $U\ni p$ to $\RR^{m-2}$.
+Choose small $\eps>0$ and set 
+\[Q'=\set{x\in U\cap A'}{\theta(x)<\theta(p)+\eps}.\]
+Let us show that $s|_{Q'}$ is bi-Lipschitz.
+Once it is done, passing to the closure $Q=\bar Q'$ gives the required set. 
+
+Note that for some $R>0$ the ball $B(p,10\cdot R)_A$ is almost isometric to the ball $B(0,10\cdot R)_{\T_p}$
+and we can assume that $U\subset B(p,R)_A$.
+By Bishop--Gromov inequality, we can assume that 
+\[\vol^m B(x,R)_A>\tfrac{\theta(p)-\eps}{2\cdot \pi}\vol^m B(0,R)_{\HH^m}\]
+for any $x\in U$; here $\HH^m$ denotes the $m$-dimensional hyperbolic space. 
+
+Assume $x\in Q'$, in this case the Bishop--Gromov inequality implies that 
+\[\vol^m B(x,R)_A< \tfrac{\theta(p)+\eps}{2\cdot \pi}\vol^m B(0,R)_{\HH^m}.\]
+
+Choose $y\in Q'$.
+Since $\eps$ is small, the lemma implies that there is $z\in A$ such that $\measuredangle\hinge yxz$ is near $\pi$.
+It follows that $\dir yx$ lies very close to the $\RR^{m-2}$-factor in~$\T_y$.
+The same way we can show that $\dir xy$ lies very close to the $\RR^{m-2}$-factor in~$\T_x$.
+In other words $[xy]$ lies nearly horisontally with respect to almost submetry $s$.
+In particular,  
+\[|s(x)-s(y)|_{\RR^{m-2}} \lessgtr \lambda^{\pm1}|x-y|_{A}\]
+some constant $\lambda>1$.
+(In fact, we can take $\lambda$ arbitrary close to $1$, but we do not need it.)
+\qeds

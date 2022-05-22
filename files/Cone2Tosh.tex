@@ -1,26 +1,40 @@
 \section{Singularities of codimension 2}\label{sec:codmi=2}
 
-Recall that tangent space of a point $p\in A'$ is isometric to the product space $\Cone(\theta)\times\RR^{m-2}$, where $\theta=\theta(p)<2\cdot\pi$. 
-Consider the measure $\omega=\omega_A$ on $A'$ defined by
-\[\omega=(2\cdot\pi-\theta)\cdot \vol^{m-2}.\eqlbl{eq:omega}\]
-Let us extend $\omega$ to the whole space by setting $\omega(S)=\omega(S\cap A')$ for any Borel set $S\subset A$.
+The following lemma will be proved in Section~\ref{sec:bilip}.
 
-Equivalently, the function $\theta$ can be extended by
+\begin{thm}{Lemma}\label{lem:A-prime-Q}
+Let $A$ be an $m$-dimensional Alexandrov space without boundary.
+Then the subset $A'\subset A$ can be covered by a countable set of compact sets $Q_i$ such that each $Q_i$ admits a bi-Lipschitz embedding into $\RR^{m-2}$.
+\end{thm}
+
+Let $\bm{h}\:A\to \RR^k$ be a Lipschitz map defined on an $m$-dimensional Alexandrov space without boundary.
+Suppose $Q\subset A$ is a closed subset such that there is a bi-Lipschitz empbedding $s\:Q\to\RR^k$.
+By the generalized Rademacher theorem, the metric differential of $s^{-1}$ is defined almost everywhere in the domain of definition of $s^{-1}$.
+Moreover the metric differential is defined by a bilinear form; 
+its determinant is the Jacobian of $s^{-1}$, briefly $\jac s^{-1}$.
+The same way we can define $\jac (\bm{h}\circ s^{-1})$ (we can apply the standard Rademacher theorem this time).
+Further, set $\jac(\bm{h}|_Q)=\jac (\bm{h}\circ s^{-1})/\jac s^{-1}$.
+It is straightforward to check that this definition is $\vol^k$-almost independent on the choice of $s$.
+
+Consider the function
 \[\theta(p)=2\cdot\pi\cdot \tfrac{\vol^{m-1} \Sigma_p}{\vol^{m-1} \mathbb{S}^{m-1}},
 \eqlbl{eq:theta}\]
 where $\Sigma_p$ denotes the space of directions at $p$.
 According to \cite[7.14]{BGP}, $\theta\:A\to \RR$ is upper-semicontinuous.
-The right-hand side of the last equality is identiacally $2\cdot\pi$ in $A^\circ$.
-Further, since $\vol^{m-2}(A'')=0$, the measure $\omega$ could be also defined as a measure on whole $A$ that is defined by~\ref{eq:omega} with $\theta$ defined in \ref{eq:theta}.
 
-Note that \ref{prop:3parts}(\ref{prop:3parts:codim2}) follows from the following more exact statement;
+Note that $\theta$ is identiacally $2\cdot\pi$ on $A^\circ$.
+Further note that for any point $p\in A'$, its tangent cone is isometric to the product space 
+$\Cone(\theta)\times\RR^{m-2}$, where $\theta=\theta(p)<2\cdot\pi$. 
+Since $\vol^{m-2}(A'')=0$, the measure $(2\pi-\theta)\cdot\vol^{m-2}$ vanish on $A''$.
+
+Note that \ref{prop:3parts}(\ref{prop:3parts:codim2}) follows from the following Lemma~\ref{lem:A-prime-Q} and the following statement;
 it will be proved in this section.
 
 \begin{thm}{Proposition}\label{prop:3parts:codim2+}
-Let $\mathfrak m$ be one of two limit measures $\mathfrak m_i$ in \ref{prop:3parts}.
+Let $\mathfrak m$ be one of two limit measures $\mathfrak m_i$ in \ref{prop:3parts} and $\bm{h}\zz=(h_1,\dots,h_{m-2})\:A\to \RR^{m-2}$.
+Suppose that $Q\subset A$ is compact subset that admits a bi-Lipschitz embedding into $\RR^{m-2}$.
 Then
-\[\mathfrak m|_{A'}=\omega\cdot |(d h_{1,n}\wedge\dots\wedge d h_{m,n})(u)|^2,\]
-where $u=u(p)$ is a choice of unit $(m-2)$-vector at any point $p\in A'$ in the vertical direction of $\T_p=\Cone(\theta)\times \RR^{m-2}$;
+\[\mathfrak m|_{Q}=(2\cdot\pi-\theta)\cdot (\jac(\bm{h}|_Q))^2\cdot \vol^{m-2}.\]
 \end{thm}
 
 
