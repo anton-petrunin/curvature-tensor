@@ -3,35 +3,36 @@
 
 \parit{Proof of the 3-dimensional case in \ref{prop:3parts:codim2+}.}
 Suppose $M_n\smooths{}A$ and $\dim A=3$.
-According to \cite{li-naber}, $A'$ is countably 1-rectifiable and $A''$ is a countable set. 
+Choose a set $Q\subset A$ that admits a bi-Lipschitz embedding into $\RR$. 
 
 Let us split $\mathfrak m$ into negative and positive part $\mathfrak m=\mathfrak m^+-\mathfrak m^-$; that is,
 \[\mathfrak m^\pm(X)\df\sup\set{\pm\mathfrak m(Y)}{Y\subset X}.\]
 Since the sectional curvature of $M_n$ is bounded below, we get that $\mathfrak m^-$ has bounded density; in other words, $\mathfrak m^-$ is a regular measure on $A$.
-Since $A'$ has zero volume, we get $\mathfrak m^-(A')=0$.
+Since $Q$ has zero volume, we get $\mathfrak m^-(Q)=0$.
 
-Set $\mathfrak n=\mathfrak m|_{A'}$; from above we have $\mathfrak n\ge 0$.
-By \cite{petrunin-SC}, $\mathfrak n$ is a regular with respect to $\vol^1$ on $A'$.
+Set $\mathfrak n=\mathfrak m|_{Q}$; from above we have $\mathfrak n\ge 0$.
+By \cite{petrunin-SC}, $\mathfrak n$ is a regular with respect to $\vol^1$ on $Q$.
 Therefore it is sufficient to show that 
-\[|d_ph(u)|^2\cdot (2\pi-\theta)\]
+\[(2\cdot\pi-\theta)\cdot (\jac(\bm{h}|_Q))^2\]
 is the $\vol^1$-density of $\mathfrak n$
-at $\vol^1$-almost all $p\in A'$.
+at $\vol^1$-almost all $p\in Q$.
 
-Since $A'$ is countably 1-rectifiable \cite{li-naber}, we can cover it by a countable number of images of Lipschitz maps $s_i\:\mathbb{I}_i\to A$, where $\mathbb{I}_i$ is a real interval for each~$i$.
-Since $s_i$ and $h\circ s_i$ are Lipschitz for any $i$, for $\vol^1$-almost all $p\in A'$ we can choose $s_i$ such that $p\in s_i(x)$ for some $x\in \mathbb{I}_i$.
-By Rademacher's theorem, we can assume that $s_i$ and $h\circ s_i$ are differentiable at $x$.
-Moreover, we can assume that $d_xs_i=\lambda\cdot u$ for some $\lambda\ne 0$ and the $\vol^1$-density of $\mathfrak n$ at $p$ is defined.
+Chosse a bi-Lipschitz embedding $s\:Q\to \RR$;
+set $K=s(Q)$.
+Since $s^{-1}$ and $h\circ s^{-1}$ are Lipschitz, 
+by Rademacher's theorem, we can assume that $s^{-1}$ and $h\circ s^{-1}$ are differentiable at almost all $x\in K$.
+Moreover, we can assume that $d_xs^{-1}(y)=(\lambda\cdot y,0)\in \RR\times \Cone(\theta)=\T_p$ and the $\vol^1$-density of $\mathfrak n$ at $p=s^{-1}(x)$ is defined.
 
-Shifting and scaling the interval $\mathbb{I}_i$, we may assume that $x=0$ and $\lambda=1$.
-In this case, $|d_ph(u)|=|d_0(h\circ s_i)|$.
+Shifting and scaling the interval $K$, we may assume that $x=0$ and $\lambda=1$.
+In this case, $|\jac_p(h|_Q)|=|d_0(h\circ s^{-1})|$.
 
 Note that we can choose a sequence of points $p_n\in M_n$ and a sequence of factors $c_n\to \infty$ such that $(c_n\cdot M_n,p_n)$ converges to the tangent space~$\T_pA$.
-Since $p\in A'$, the space $\T_p$ is a product space $\Cone(\theta)\times\RR$, where $\Cone(\theta)$ is a 2-dimensional cone with total angle $\theta(p)<2\cdot\pi$.
+Since $p\in A'$, the space $\T_p$ is a product space $\Cone(\theta)\times\RR$, where $\Cone(\theta)$ is a 2-dimensional cone with total angle $\theta(p)\le2\cdot\pi$.
 
 Let $f_n\:c_n\cdot M_n\to \RR$ be as in \ref{thm:HG-converge} and $u_n=\nabla f_n/|\nabla f_n|$.
 Consider the sequence of functions $\hat h_n\:c_n\cdot M_n\to \RR$ defined by 
 \[\hat h_n(x)=c_n\cdot(h_n(x)-h_n(p_n)).\]
-Note that $\langle\nabla \hat h_n,u_n\rangle$ uniformly converges to  $|d_0(h\circ s_i)|$.
+Note that $\langle\nabla \hat h_n,u_n\rangle$ uniformly converges to  $|d_0(h\circ s^{-1})|$.
 By \ref{cor:Ricci}(\ref{cor:Ricci:vw}), the sequence of measures $\qm(\hat h_n, \hat h_n)$ on $c_n\cdot M_n\to \RR$ weakly converges to $\omega_{\Cone(\theta)\times\RR}$.
 Recall that $\vol^1$-density of $\omega_{\Cone(\theta)\times\RR}$ on the singular line is $2\cdot \pi-\theta(p)$.
 
