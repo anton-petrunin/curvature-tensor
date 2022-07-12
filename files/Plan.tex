@@ -60,8 +60,8 @@ If $f_n$ is uniformly delta-converging and $\mathfrak n_n$ is weakly delta-conve
 then $f_n\cdot \mathfrak n_n$ is weakly delta-converging.
 \end{thm}
 
-
-
+{\color{blue}
+Weakly delta converging function means... density??}
 
 
 %The following proposition lists the properties of the common charts.
@@ -103,6 +103,62 @@ then $f_n\cdot \mathfrak n_n$ is weakly delta-converging.
 %
 %\end{enumerate}
 %\end{thm}
+
+\subsection{Test functions}
+
+In this subsection, we introduce a class of \emph{test functions} and define their convergence.
+These definitions will be used to define measure-valued tensors and their convergence.
+
+Test functions form a narrow class of functions defined via a formula.
+It is just one possible choice of a class containing sufficiently smooth DC functions; see Section~\ref{sec:DC}.
+We could use other definitions as well; see Section~\ref{sec:concept}.
+
+Recall that the distance between points $x,y$ in a metric space is denoted by $|x-y|$;
+we will denote by $\dist_x$ the distance function $\dist_x\:y\mapsto |x-y|$.
+
+{\sloppy 
+
+Suppose $A_n, A\in \Al^m$ and  $A_n\GHto A$.
+Then any distance function $\dist_p\:A\zz\to\RR$ can be \emph{lifted} to $A_n$;
+it means that we can choose a convergent sequence $p_n\to p$ and take the
+sequence $\dist_{p_n}$.
+
+}
+
+Choose $r>0$ and $p\in A$.
+Let us define \emph{smoothed distance function} as the average:
+$$\widetilde{\dist}_{p,r} =\oint_{B(p,r)} \dist_{x}dx.$$ 
+We can lift this function to
+$\widetilde{\dist}_{p_n,r}\:A_n\to [0,\infty)$
+by choosing some  sequence $A_n\ni p_n\to p\in A$.
+
+We say that $f$ is a \emph{test function} if it can be expressed by the formula
+$$f=\varphi( \widetilde{\dist}_{p_1,r_1}, \dots,   \widetilde{\dist}_{p_N,r_N}),$$
+where $\varphi:(0,\infty)^N\to\R$ is a $C^2$-smooth function with compact support.
+If for some sequences of points $A_n\ni p_{i,n}\to p_i\in A$ and $C^2$-smooth functions $\varphi_n$ that $C^2$-converge to $\varphi$ with compact support we have
+$$f_n=\varphi_n( \widetilde{\dist}_{p_{1,n},r_1},\dots,   \widetilde{\dist}_{p_{N,n},r_N}),$$
+then we say that $f_n$ is \emph{test-converging} to $f$ (briefly, $f_n\testto f$).
+
+\parbf{Remarks.}
+ {\color{blue} test-convergence implies $C^1$-delta convergence.
+}
+
+Note that test functions form an algebra.
+
+Let $M$ be a Riemannian manifold.
+Note that for any open cover of $M$, there is a subordinate partition of unity of test functions.
+Further, around any point of $M$ one can take a smoothed distance 
+coordinate chart.
+One can express any $C^2$-smooth function in these 
+coordinates, and then apply partition of unity for a covering by charts.
+This way, we get the following:
+
+\begin{thm}{Claim}
+On a smooth complete Riemannian manifold, test functions
+include all $C^2$-smooth functions with compact support.
+\end{thm}
+
+
 
 \subsection{Test convergence}
 

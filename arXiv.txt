@@ -1,3 +1,4 @@
+arXiv.txt
 files/Appendix.tex
 files/ChartMetric.tex
 files/Cone2Tosh.tex
@@ -10,9 +11,10 @@ files/codim3.tex
 files/introduction.tex
 files/local.tex
 files/preliminaries.tex
+files/bilip.tex
 kusochek+.sty
 library.bib
 main.tex
 main.bbl
 mppics/pic-100.mps
-
+mppics/pic-200.mps

@@ -51,19 +51,21 @@ Note that \ref{cor:Kmax} and \ref{q=<K} imply the following:
 
 \begin{thm}{Claim}\label{clm:weak-partial-limit}
 Given a smoothing $M_n\smooths{} A$ and a sequence of test functions $f_{i,n},g_{i,n}\:M_n\to \RR$ such that 
-$f_{i,n}\testto f_i\:A\to \RR$ and $g_{i,n}\testto g_i\:A\to \RR$ the sequence of measures 
+$f_{i,n}\smoothto f_i\:A\to \RR$ and $g_{i,n}\smoothto g_i\:A\to \RR$ the sequence of measures 
 $\qm_n(f_{1,n},\dots f_{m-2,n},g_{1,n},\dots, g_{m-2,n})$ has a weakly converging subsequence.
 \end{thm}
 
+{\color{blue}
 By Perelman's stability theorem, the space $A$ in the claim is a topological manifold.
 In particular, $A$ has no boundary;
 in other words, the singular set in $A$ has codimension at least 2.
-Together with the claim, it implies that the main theorem (\ref{main}) follows from the next statement:
+Together with the claim, it implies that the main theorem (\ref{main}) follows from the next statement:}
 
 \begin{thm}{Proposition}\label{prop:3parts}
 Let $M_n\smooths{} A$ and $\dim A=m$.
-Suppose $h_{1,n},\dots, h_{m-2,n}$ are test functions on $M_n$ 
-such that $h_{i,n}\zz\testto  h_i\:A\to \RR$ for each $i$.
+Suppose $h_{1,n},\dots, h_{m-2,n}$ are 
+$C^1$-smooth functions on $M_n$ 
+such that $h_{i,n}\zz\smoothto  h_i\:A\to \RR$ for each $i$.
 Let $\mathfrak m_1$ and $\mathfrak m_2$ be two measures on $A$ that are weak partial limits of the sequence of measures $\qm_n( h_{1,n},\zz\dots,  h_{m,n}, h_{1,n},\zz\dots,  h_{m,n})$ on $M_n$.
 Then the following statements hold:
 \begin{enumerate}[(i)]
@@ -74,5 +76,40 @@ Then the following statements hold:
 \item\label{prop:3parts:reg} $\mathfrak m_1|_{A^\circ}=\mathfrak m_2|_{A^\circ}$.
 \end{enumerate}
 \end{thm}
+{\color{blue}
+Actually it follows from our  prove the following:
 
+
+For any point $x\in A^\circ$
+and basis $e_1,\dots, e_n$
+there are measures
+$T_{ij}(x)$ such that
+for any $C^1$-delta converging sequences
+$f_{n}, g_n\zz\smoothto  f,g\:A\to \RR$
+for any $\delta$
+there is a small neighbourhood of $x$ where
+$$q(f,g)=(1\pm \delta)\sum T_{ij}(x)df(e_j)dg(e_j).$$ ($T_{ij}$ are
+not canonically defined and contra-vary with a change of basis at $x$) 
+
+For $x\in A'$ similar holds ???
+
+For $x\in A''$  ???
+
+This allows to define a value of the limit 
+tensor for smoothable $C^1$-delta smooth
+function,
+to show continuity of limit tensor w.r.t.
+$C^1$-delta convergence,
+ define a value of the limit 
+tensor for nonsmoothable $C^1$-delta smooth
+function on $A$, and verify
+the chain rule.
+
+
+
+
+
+
+
+}
 The three parts of the proposition will be proved below in sections \ref{sec:codmi=3}, \ref{sec:codmi=2}, and \ref{sec:ref} respectively.

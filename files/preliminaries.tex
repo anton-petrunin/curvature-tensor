@@ -61,56 +61,82 @@ we have $\langle \mathfrak m_n|f_n\rangle \to \langle \mathfrak m|f\rangle $.
 
 %We will denote by $\langle h|f\rangle $ the value of $h\in C^*(A)$ on $f\in C(A)$.
 
-\subsection{Test functions}
 
-In this subsection, we introduce a class of \emph{test functions} and define their convergence.
-These definitions will be used to define measure-valued tensors and their convergence.
 
-Test functions form a narrow class of functions defined via a formula.
-It is just one possible choice of a class containing sufficiently smooth DC functions; see Section~\ref{sec:DC}.
-We could use other definitions as well; see Section~\ref{sec:concept}.
 
-Recall that the distance between points $x,y$ in a metric space is denoted by $|x-y|$;
-we will denote by $\dist_x$ the distance function $\dist_x\:y\mapsto |x-y|$.
 
-{\sloppy 
 
-Suppose $A_n, A\in \Al^m$ and  $A_n\GHto A$.
-Then any distance function $\dist_p\:A\zz\to\RR$ can be \emph{lifted} to $A_n$;
-it means that we can choose a convergent sequence $p_n\to p$ and take the
-sequence $\dist_{p_n}$.
 
+\subsection{ $C^1$ structure and convergence}\label{sec:concept}. 
+
+$\smoothto$
+
+%Here we will describe a more natural definition of convergence that is equivalent to our definition. It is given for purely aesthetic purposes --- we did not use it and do not see its application. By that reason, we give only definitions and do not prove the equivalence.
+
+\parbf{Convergence of vectors.}
+Let $A$ be an Alexandrov space, we denote by $\T A$ the set of all tangent vectors at all points.
+So far $\T A$ is a disjoint union of all tangent cones;
+let us define convergence on it.
+
+Recall that gradient exponent $\gexp\: \T A\to A$ is defined in \cite{AKP}.
+Given a vector $V\in \T A$, it defines its gradient curve $\gamma_{V}\:t\mapsto \gexp (t\cdot V)$.
+We say that a sequence of vectors $V_n\in \T A$ converges to $V\in \T A$ if $\gamma_{V_n}$ converges to $\gamma_V$ pointwise.
+Since the gradient curve $\gamma_V$ is $|V|$-Lipschitz, we get that for any bounded sequence of vectors with base points in a bounded set have a converging subsequence of $\gamma_{V_n}$.
+Further, the pointwise limit of such curves is a gradient curve as well.
+Therefore, any bounded sequence of tangent vectors with base points in a bounded set has a converging sequence.
+
+A direct analog holds for sequences of Alexandrov spaces $A_n$ that converge to $A$.
+That is, if $V_n\in \T A_n$ is a bounded sequence of tangent vectors with a bounded set of base points, then it has a subsequence that converges to some vector $V\in \T A$.
+
+Note that 
+\[|V|\le \lim |V_n|\]
+and the inequality might be strict.
+
+
+
+
+\parbf{$\bm{C^1}$-delta smooth functions and their convergence.}
+Given a function $f\:A\to \RR$ and a vector $V\in \T A$, set
+\[Vf=(f\circ\gamma_V(t))'|_{t=0}.\]
+Note that $Vf$ is defined for all DC functions.
+
+Two vectors $V,W\in \T_pA$ will be called $\delta$-opposite if
+$1-\delta< |V|\le 1$,
+$1-\delta< |W|\le 1$,
+and $|\langle X,V\rangle +\langle X,W\rangle|<\delta$ for any unit vector $X\in T_p A$.
+We say that $V,W\in \T_pA$ are opposite if they are $\delta$-opposite for any $\delta>0$;
+in this case, they are both unit vectors and make angle $\pi$ to each other.  
+
+A Lipschitz function $f\:A\to \RR$ will be called \emph{$C^1$-delta smooth} if $Vf$ is defined for any unit vector $V$ and it satisfies the following continuity property:
+for any $\eps>0$ there is $\delta>0$ such that if unit vectors $V_n$ converge to $V$ and $V$ has a $\delta$-opposite vector, then 
+\[|Vf-\lim V_nf|<\eps.\eqlbl{eq:Vf}\]
+
+Similarly, we can define $C^1$-delta converging sequence of functions.
+Namely, suppose $A_n\GHto A$, then a sequence of $C^1$-delta smooth functions $f_n\:A_n\to\RR$ \emph{$C^1$-delta converges} to $f\:A\to \RR$ if for any $\eps>0$ there is $\delta>0$ such that any sequence of unit vectors $V_n\in \T A_n$ that converges to a vector $V\in \T A$ that has a $\delta$-opposite vector \ref{eq:Vf} holds. 
+
+\parbf{Weak convergence of tensor fields.}
+{\color{blue} DELETE THIS Paragraf? It is easy to see that test-convergence implies $C^1$-delta convergence.
+The latter notion seems to be more natural.
+If we replace test convergence
+by $C^1$-delta convergence
+in the definition of the weak convergence of tensor fields and
+formulate the main theorem using this definition, we get a formally stronger
+statement; plus our proof still works.
+
+For the part with DC-calculus and 
+Key lemma we still use test sequences
+(note that $C^1$-delta smooth functions are not DC in general).
 }
-
-Choose $r>0$ and $p\in A$.
-Let us define \emph{smoothed distance function} as the average:
-$$\widetilde{\dist}_{p,r} =\oint_{B(p,r)} \dist_{x}dx.$$ 
-We can lift this function to
-$\widetilde{\dist}_{p_n,r}\:A_n\to [0,\infty)$
-by choosing some  sequence $A_n\ni p_n\to p\in A$.
-
-We say that $f$ is a \emph{test function} if it can be expressed by the formula
-$$f=\varphi( \widetilde{\dist}_{p_1,r_1}, \dots,   \widetilde{\dist}_{p_N,r_N}),$$
-where $\varphi:(0,\infty)^N\to\R$ is a $C^2$-smooth function with compact support.
-If for some sequences of points $A_n\ni p_{i,n}\to p_i\in A$ and $C^2$-smooth functions $\varphi_n$ that $C^2$-converge to $\varphi$ with compact support we have
-$$f_n=\varphi_n( \widetilde{\dist}_{p_{1,n},r_1},\dots,   \widetilde{\dist}_{p_{N,n},r_N}),$$
-then we say that $f_n$ is \emph{test-converging} to $f$ (briefly, $f_n\testto f$).
-
-\parbf{Remarks.}
-Note that test functions form an algebra.
-
-Let $M$ be a Riemannian manifold.
-Note that for any open cover of $M$, there is a subordinate partition of unity of test functions.
-Further, around any point of $M$ one can take a smoothed distance 
-coordinate chart.
-One can express any $C^2$-smooth function in these 
-coordinates, and then apply partition of unity for a covering by charts.
-This way, we get the following:
-
-\begin{thm}{Claim}
-On a smooth complete Riemannian manifold, test functions
-include all $C^2$-smooth functions with compact support.
+Then we need the following property:
+\begin{thm}{Proposition}
+\begin{itemize}
+ \item \textit{For any  $C^1$-delta converging sequences $f_n, g_n$ the function
+$\langle \nabla f_n , \nabla g_n
+\rangle$ delta-converges.}
+\end{itemize}
 \end{thm}
+Its proof reminds the proof of differentiability of a function that has continuous partial derivatives. 
+
  
 \subsection{Tensors}
 
@@ -121,19 +147,21 @@ Let $A\in \Al^m$.
 Recall that $\mathfrak M(A)$
 denotes the set of signed Radon measures on $A$.
 A \emph{measure-valued vector field} $\mathfrak{v}$  on $A$
-is a  continuous (with respect to test convergence) linear map
-$\mathfrak{v}$ that takes a test function,
+is a  continuous (with respect to 
+$C^1$-delta 
+convergence) linear map
+$\mathfrak{v}$ that takes a $C^1$-delta smooth function,
 spits a measure in $\mathfrak M(A)$,
 and satisfies the \emph{chain rule};
-that is, for any collection of test functions $f_1,\dots,f_k$
-and a $C^2$-smooth function $\phi\:\RR^k\to\RR$ we have
+that is, for any collection of $C^1$-delta smooth functions  $f_1,\dots,f_k$
+and a $C^1$-smooth function $\phi\:\RR^k\to\RR$ we have
 $$\mathfrak{v}(\phi(f_1,\dots,f_n))
 =
 \sum_{i=1}^n (\partial_i\phi)(f_1,\dots,f_n)\cdot\mathfrak{v}(f_i)$$
 where $\partial_i$ denotes partial derivatives in $\RR^n$.
 
 In the same way, we define \emph{(contravariant)} measure-valued tensor fields.
-Namely, a \emph{measure-valued tensor field} $\mathfrak{t}$ of valence $k$ on $A$ is a multilinear map that takes $k$ test functions, spits a measure in $\mathfrak M(A)$, and satisfies the chain rule in each of its arguments.
+Namely, a \emph{measure-valued tensor field} $\mathfrak{t}$ of valence $k$ on $A$ is a multilinear map that takes $k$ $C^1$-delta smooth  functions, spits a measure in $\mathfrak M(A)$, and satisfies the chain rule in each of its arguments.
 
 Suppose that $x_1,\dots,x_m$ are local coordinates in an $m$-dimensional Riemannian manifold $M$.
 Then a measure-valued vector field $\mathfrak{v}$ on $M$ can be described by $m$ components, these are measures $(\vv(x_1),\dots,\vv(x_m))$;
@@ -162,8 +190,8 @@ measure-valued tensor field on $A$,
 all of the same valence $k$.
 We say that $\mathfrak{t}_n$ \emph{weakly converges} to  $\mathfrak{t}$
 (briefly $\mathfrak{t}_n\rightharpoonup\mathfrak{t}$) if for arbitrary $k$
-sequences of test functions
-$f_{i,n}\testto f_i$, the measures $\mathfrak{t}_n(f_{1,n},\dots,f_{k,n})$ weakly converge to $\mathfrak{t}(f_{1},\dots,f_{k})$.
+sequences of $C^1$-delta smooth functions 
+$f_{i,n}\smoothto f_i$, the measures $\mathfrak{t}_n(f_{1,n},\dots,f_{k,n})$ weakly converge to $\mathfrak{t}(f_{1},\dots,f_{k})$.
 \end{rdef}
 
 \subsection{Dual curvature tensor}
@@ -178,7 +206,8 @@ it is a tensor field of valence $2\cdot(m-2)$ defined the following way:
 \Rm(*(X_1\wedge\dots\wedge X_{m-2}),*(Y_1\wedge\dots\wedge Y_{m-2})),
 \]
 where $X_i,Y_i$ are vector fields on $M$ and  ${*}\:(\bigwedge^{m-2}\T)M\to(\bigwedge^2\T)M$ is the  Hodge star operator.
-This definition will be used further mostly for gradient vector fields of test functions.
+{\color{blue}
+This definition will be used further mostly for gradient vector fields of ??? test functions.}
 
 In addition, we will need a measure-valued version of $\Qm$ denoted by $\qm$;
 it will be called \emph{dual measure-valued curvature tensor}.

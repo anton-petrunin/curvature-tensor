@@ -29,10 +29,14 @@ In this case, $|\jac_p(h|_Q)|=|d_0(h\circ s^{-1})|$.
 Note that we can choose a sequence of points $p_n\in M_n$ and a sequence of factors $c_n\to \infty$ such that $(c_n\cdot M_n,p_n)$ converges to the tangent space~$\T_pA$.
 Since $p\in A'$, the space $\T_p$ is a product space $\Cone(\theta)\times\RR$, where $\Cone(\theta)$ is a 2-dimensional cone with total angle $\theta(p)\le2\cdot\pi$.
 
-Let $f_n\:c_n\cdot M_n\to \RR$ be as in \ref{thm:HG-converge} and $u_n=\nabla f_n/|\nabla f_n|$.
+Let $f_n\:c_n\cdot M_n\to \RR$ 
+{\color{blue} REF for existence of such f}
+be as in \ref{thm:HG-converge} and $u_n=\nabla f_n/|\nabla f_n|$.
 Consider the sequence of functions $\hat h_n\:c_n\cdot M_n\to \RR$ defined by 
 \[\hat h_n(x)=c_n\cdot(h_n(x)-h_n(p_n)).\]
-Note that $\langle\nabla \hat h_n,u_n\rangle$ uniformly converges to  $|d_0(h\circ s^{-1})|$.
+Note that $\langle\nabla \hat h_n,u_n\rangle$ uniformly converges
+{\color{blue} WHY }
+to  $|d_0(h\circ s^{-1})|$.
 By \ref{cor:Ricci}(\ref{cor:Ricci:vw}), the sequence of measures $\qm(\hat h_n, \hat h_n)$ on $c_n\cdot M_n\to \RR$ weakly converges to $\omega_{\Cone(\theta)\times\RR}$.
 Recall that $\vol^1$-density of $\omega_{\Cone(\theta)\times\RR}$ on the singular line is $2\cdot \pi-\theta(p)$.
 
