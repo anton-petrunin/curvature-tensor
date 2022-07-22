@@ -9,7 +9,7 @@ We denote by
 $\Al^m$ the class of $m$-dimensional Alexandrov's spaces
 with curvature $\ge -1$.
 
-Suppose $A_n, A\in \Al^m$ and $A_n\GHto A$.
+Suppose $A,A_1,A_2,\dots{} \in \Al^m$ and $A_n\GHto A$.
 That is, $A_n$ converges to 
 $A$ in the sense of Gromov--Hausdorff;
 since $A\in \Al^m$, we have no collapse.
@@ -19,7 +19,7 @@ by Perelman's stability theorem \cite{PerStab,KapStab} we can (and will) assume 
 In the case of noncompact limit, we assume that for any $R$, the restriction of $a_n$ to an $R$-neighborhood of the marked point is a homeomorphism to its image for every sufficiently large $n$.
 
 We say that $A\in \Al^m$ is \emph{smoothable}
-if it can be presented as a Gromov--Hausdorff limit of a non-collapsing sequence of Riemannian manifolds $M_n$ with $\sec M_n\ge-1$; here $\sec$ denotes sectional curvature.
+if it can be presented as a Gromov--Hausdorff limit of a non-collapsing sequence of Riemannian manifolds $M_n$ with $\sec M_n\ge-1$; here $\sec$ stands for sectional curvature.
 Given a smoothable Alexandrov space $A$,
 a sequence of complete Riemannian manifolds $M_n$ as above
 together with a sequence of approximations $a_n\:M_n\to A$
@@ -42,7 +42,7 @@ We  denote by $\langle \mathfrak m|f\rangle $ the value of $\mathfrak m\in\mathf
 We say that measures $\mathfrak m_n\in \mathfrak M(X)$ \emph{weakly converge} to $\mathfrak m\in \mathfrak M(X)$ (briefly
 $\mathfrak m_n\rightharpoonup \mathfrak m$) if $\langle \mathfrak m_n|f\rangle \to \langle \mathfrak m|f\rangle $ for any $f\in C_c(A)$.
 
-Suppose $A_n\GHto A$ with Hausdorff approximations $a_n\:A_n\to A$ and
+Suppose $A_n\GHto A$ with Hausdorff approximations $a_n\:A_n\zz\to A$ and
 $\mathfrak m_n$ is a measure on $A_n$.
 We say that $\mathfrak m_n$ \emph{weakly converges} to a measure $\mathfrak m$ on $A$ (briefly $\mathfrak m_n\rightharpoonup \mathfrak m$) if the pushforwards $\mathfrak m_n'$ of $\mathfrak m_n$ to $A$  by the Hausdorff approximations $a_n\:A_n\to A$ weakly converge to 
 $\mathfrak m$.
@@ -56,115 +56,169 @@ if their supports are uniformly bounded and
 Then  $\mathfrak m_n\rightharpoonup \mathfrak m$
 if for any sequence $f_n\in C_c(A_n)$
 with uniformly bounded supports and
-uniformly converging to $f\in C_c(A)$
+uniformly converging to $f\zz\in C_c(A)$
 we have $\langle \mathfrak m_n|f_n\rangle \to \langle \mathfrak m|f\rangle $.
 
-%We will denote by $\langle h|f\rangle $ the value of $h\in C^*(A)$ on $f\in C(A)$.
+\subsection{Test functions}\label{sec:test-functions}
+
+In this subsection, we introduce a class of \emph{test functions} and define their convergence.
+
+Test functions form a narrow class of functions defined via a formula.
+It is just one possible choice of a class containing sufficiently smooth DC functions; see Section~\ref{sec:DC}.
+We could use other definitions as well; see Section~\ref{sec:concept}.
+
+Recall that the distance between points $x,y$ in a metric space is denoted by $|x-y|$;
+we will denote by $\dist_x$ the distance function $\dist_x\:y\mapsto |x-y|$.
+
+{\sloppy 
+
+Suppose $A_n, A\in \Al^m$ and  $A_n\GHto A$.
+Then any distance function $\dist_p\:A\zz\to\RR$ can be \emph{lifted} to $A_n$;
+it means that we can choose a convergent sequence $p_n\to p$ and take the
+sequence $\dist_{p_n}$.
+
+}
+
+Choose $r>0$ and $p\in A$.
+Let us define \emph{smoothed distance function} as the average:
+$$\widetilde{\dist}_{p,r} =\oint_{B(p,r)} \dist_{x}dx.$$ 
+We can lift this function to
+$\widetilde{\dist}_{p_n,r}\:A_n\to [0,\infty)$
+by choosing some  sequence $A_n\ni p_n\to p\in A$.
+
+We say that $f$ is a \emph{test function} if it can be expressed by the formula
+$$f=\varphi( \widetilde{\dist}_{p_1,r_1}, \dots,   \widetilde{\dist}_{p_N,r_N}),$$
+where $\varphi:(0,\infty)^N\to\R$ is a $C^2$-smooth function with compact support.
+If for some sequences of points $A_n\ni p_{i,n}\to p_i\in A$ and $C^2$-smooth functions $\varphi_n$ that $C^2$-converge to $\varphi$ with compact support we have
+$$f_n=\varphi_n( \widetilde{\dist}_{p_{1,n},r_1},\dots,   \widetilde{\dist}_{p_{N,n},r_N}),$$
+then we say that $f_n$ is \emph{test-converging} to $f$ (briefly, $f_n\zz\testto f$).
+
+\parbf{Remarks.}
+Note that test functions form an algebra.
+
+Let $M$ be a Riemannian manifold.
+Note that for any open cover of $M$, there is a subordinate partition of unity of test functions.
+Further, around any point of $M$ one can take a smoothed distance 
+coordinate chart.
+One can express any $C^2$-smooth function in these 
+coordinates, and then apply partition of unity for a covering by charts.
+This way, we get the following:
+
+\begin{thm}{Claim}
+On a smooth complete Riemannian manifold, test functions
+include all $C^2$-smooth functions with compact support.
+\end{thm}
 
 
+\subsection[$C^1$-delta convergence]{$\bm{C^1}$-delta convergence}\label{sec:concept}
 
+Here we introduce $C^1$-delta convergence.
+It will be necessary to formulate the main theorem in an invariant way, but, except for a short passage in \ref{sec:test-convergence}, everywhere in the proofs we will use test convergence instead.
+(As it claimed in \ref{clm:test=>smooth} test convergence implies $C^1$-delta convergence.)
 
-
-
-
-\subsection{ $C^1$ structure and convergence}\label{sec:concept}. 
-
-$\smoothto$
-
-%Here we will describe a more natural definition of convergence that is equivalent to our definition. It is given for purely aesthetic purposes --- we did not use it and do not see its application. By that reason, we give only definitions and do not prove the equivalence.
+The $C^1$-delta convergence will be used together with other delta convergence introduced in \ref{subsec:chart+delta}.
 
 \parbf{Convergence of vectors.}
 Let $A$ be an Alexandrov space, we denote by $\T A$ the set of all tangent vectors at all points.
 So far $\T A$ is a disjoint union of all tangent cones;
 let us define convergence on it.
 
-Recall that gradient exponent $\gexp\: \T A\to A$ is defined in \cite{AKP}.
-Given a vector $V\in \T A$, it defines its gradient curve $\gamma_{V}\:t\mapsto \gexp (t\cdot V)$.
-We say that a sequence of vectors $V_n\in \T A$ converges to $V\in \T A$ if $\gamma_{V_n}$ converges to $\gamma_V$ pointwise.
-Since the gradient curve $\gamma_V$ is $|V|$-Lipschitz, we get that for any bounded sequence of vectors with base points in a bounded set have a converging subsequence of $\gamma_{V_n}$.
-Further, the pointwise limit of such curves is a gradient curve as well.
+We will use gradient exponent $\gexp\: \T A\to A$ which is defined in \cite{AKP}.
+Given a vector $V\in \T A$, it defines its radial curve $\gamma_{V}\:t\zz\mapsto \gexp (t\cdot V)$.
+We say that a sequence of vectors $V_n\in \T A$ \emph{converges} to $V\in \T A$ (briefly, $V_n\to V$) if $\gamma_{V_n}$ converges to $\gamma_V$ pointwise.
+Since the radial curve $\gamma_V$ is $|V|$-Lipschitz, we get that for any bounded sequence of vectors with base points in a bounded set have a converging subsequence of $\gamma_{V_n}$.
+Further, the pointwise limit of such curves is a radial curve as well.
 Therefore, any bounded sequence of tangent vectors with base points in a bounded set has a converging sequence.
 
-A direct analog holds for sequences of Alexandrov spaces $A_n$ that converge to $A$.
-That is, if $V_n\in \T A_n$ is a bounded sequence of tangent vectors with a bounded set of base points, then it has a subsequence that converges to some vector $V\in \T A$.
+In a similar fashion we can define convergence of tangent vectors to sequences of Alexandrov spaces $A_n$ that converge to $A$.
+That is, if $V_n\in \T A_n$ is a bounded sequence of tangent vectors at points on a bounded distance to the base points, then it has a subsequence that converges to some vector $V\in \T A$.
 
 Note that 
-\[|V|\le \lim |V_n|\]
+\[|V|\le \liminf_{n\to\infty} |V_n|\]
 and the inequality might be strict.
 
+Recall that if $V\in \T_p$ is the unit vector in the direction of $[pq]$, then $\gamma_V$ is a unit-speed parametrization of $[pq]$.
+Using this we get the following observation;
+it provides a way to apply the convergence.
+
+\begin{thm}{Observation}
+Let $M_n\smooths{} A$ be a smoothing, $p_n,q_n\in M_n$, and $p_n\to p$, $q_n\to q$ as $n\to \infty$.
+Denote by $V_n\in \T_{p_n}$ and $V\in \T_p$ the directions of a geodesics $[p_nq_n]$ and $[pq]$.
+Suppose that there is unique geodesic $[pq]$ in $A$.
+Then $V_n\zz\to V$.
+\end{thm}
 
 
 
-\parbf{$\bm{C^1}$-delta smooth functions and their convergence.}
+\parbf{$\bm{C^1}$-delta smoothness.}
 Given a function $f\:A\to \RR$ and a vector $V\in \T A$, set
 \[Vf=(f\circ\gamma_V(t))'|_{t=0}.\]
-Note that $Vf$ is defined for all DC functions.
+Note that $Vf$ is defined for all DC functions and, in particular, all test functions.
 
 Two vectors $V,W\in \T_pA$ will be called $\delta$-opposite if
 $1-\delta< |V|\le 1$,
 $1-\delta< |W|\le 1$,
-and $|\langle X,V\rangle +\langle X,W\rangle|<\delta$ for any unit vector $X\in T_p A$.
+and $|\langle X,V\rangle +\langle X,W\rangle|<\delta$ for any unit vector $X\in \T_p A$.
 We say that $V,W\in \T_pA$ are opposite if they are $\delta$-opposite for any $\delta>0$;
-in this case, they are both unit vectors and make angle $\pi$ to each other.  
+in this case, they are both unit vectors and make angle $\pi$ to each other.
 
-A Lipschitz function $f\:A\to \RR$ will be called \emph{$C^1$-delta smooth} if $Vf$ is defined for any unit vector $V$ and it satisfies the following continuity property:
-for any $\eps>0$ there is $\delta>0$ such that if unit vectors $V_n$ converge to $V$ and $V$ has a $\delta$-opposite vector, then 
-\[|Vf-\lim V_nf|<\eps.\eqlbl{eq:Vf}\]
+A function $f\:A\to\RR$ is called $C^1$-delta smooth if for any compact set $K\subset A$ and $\eps>0$ there is $\delta>0$ such that any sequence of points $p_n\to p\in K$ and unit vectors $V_n\in \T_{p_n} A$ that converges to a vector $V\in \T_p A$ that has a $\delta$-opposite vector we have
+\[|Vf-\lim_{n\to\infty} V_nf|<\eps.\]
 
-Similarly, we can define $C^1$-delta converging sequence of functions.
-Namely, suppose $A_n\GHto A$, then a sequence of $C^1$-delta smooth functions $f_n\:A_n\to\RR$ \emph{$C^1$-delta converges} to $f\:A\to \RR$ if for any $\eps>0$ there is $\delta>0$ such that any sequence of unit vectors $V_n\in \T A_n$ that converges to a vector $V\in \T A$ that has a $\delta$-opposite vector \ref{eq:Vf} holds. 
+Suppose $M_n\smooths{} A$, a sequence of $C^1$-smooth functions $f_n\:M_n\zz\to\RR$ is called \emph{$C^1$-delta converging} to $f\:A\to \RR$ if for for any compact set $K\subset A$ and any $\eps>0$ there is $\delta>0$ such that any sequence of unit vectors $V_n\in \T_{p_n} M_n$ that converges to a vector $V\zz\in \T_p A$ and has a $\delta$-opposite vector and such that $p\in K$ we have
+\[|Vf-\lim_{n\to\infty} V_nf_n|<\eps.\]
 
-\parbf{Weak convergence of tensor fields.}
-{\color{blue} DELETE THIS Paragraf? It is easy to see that test-convergence implies $C^1$-delta convergence.
-The latter notion seems to be more natural.
-If we replace test convergence
-by $C^1$-delta convergence
-in the definition of the weak convergence of tensor fields and
-formulate the main theorem using this definition, we get a formally stronger
-statement; plus our proof still works.
+The following statement is straightforward.
 
-For the part with DC-calculus and 
-Key lemma we still use test sequences
-(note that $C^1$-delta smooth functions are not DC in general).
-}
-Then we need the following property:
-\begin{thm}{Proposition}
-\begin{itemize}
- \item \textit{For any  $C^1$-delta converging sequences $f_n, g_n$ the function
-$\langle \nabla f_n , \nabla g_n
-\rangle$ delta-converges.}
-\end{itemize}
+\begin{thm}{Claim}\label{clm:test=>smooth}
+Any test function is $C^1$-delta smooth.
+Moreover 
+\[f_n\testto f
+\qquad\Longrightarrow\qquad
+f_n\smoothto f\]
+for any smoothing $M_n\smooths{} A$,
+sequence of test functions $f_n\:M_n\zz\to\RR$,
+and a test function $f\:A\to\RR$.
 \end{thm}
-Its proof reminds the proof of differentiability of a function that has continuous partial derivatives. 
+
+Recall (\ref{sec:test-functions}) that for any smoothing $M_n\smooths{} A$ and a test function $f\:A\to\RR$ there are test functions  $f_n\:M_n\to \RR$ such that $f_n\testto f$.
+
+\begin{thm}{Corollary}\label{cor:liftability}
+Given a smoothing $M_n\smooths{} A$ and a test function $f\:A\to\RR$,
+there is a sequence of $C^1$-smooth functions $f_n\:M_n\to \RR$ such that $f_n\smoothto f$.
+\end{thm}
+
+\parbf{Remark.}
+The test functions with $C^1$-delta smooth convergence will be used to define convergence of measure-valued tensors.
+Instead of test functions we could use another class of functions that meets \ref{cor:liftability}.
 
  
-\subsection{Tensors}
+\subsection{Tensors}\label{subsec:tensors}
 
 In this subsection, we define measure-valued tensors on Alexandrov spaces.
-Basically, we reuse the \emph{derivation} approach to vector fields in classical differential geometry. 
+Basically, we reuse the derivation approach to vector fields in classical differential geometry.
+This definition will be used in Claim \ref{clm:weak-partial-limit} that reduces the main theorem to Proposition~\ref{prop:3parts} and will not show up ever after.
 
 Let $A\in \Al^m$.
 Recall that $\mathfrak M(A)$
-denotes the set of signed Radon measures on $A$.
+denotes the space of signed Radon measures on $A$.
 A \emph{measure-valued vector field} $\mathfrak{v}$  on $A$
-is a  continuous (with respect to 
-$C^1$-delta 
-convergence) linear map
-$\mathfrak{v}$ that takes a $C^1$-delta smooth function,
+is a linear map
+$\mathfrak{v}$ that takes a test function,
 spits a measure in $\mathfrak M(A)$,
-and satisfies the \emph{chain rule};
-that is, for any collection of $C^1$-delta smooth functions  $f_1,\dots,f_k$
-and a $C^1$-smooth function $\phi\:\RR^k\to\RR$ we have
+and satisfies the \emph{chain rule}:
+for any collection of test functions $f_1,\dots,f_k$
+and a $C^1$-smooth function $\phi\:\RR^k\to\RR$, we have
 $$\mathfrak{v}(\phi(f_1,\dots,f_n))
 =
-\sum_{i=1}^n (\partial_i\phi)(f_1,\dots,f_n)\cdot\mathfrak{v}(f_i)$$
-where $\partial_i$ denotes partial derivatives in $\RR^n$.
+\sum_{i=1}^n (\partial_i\phi)(f_1,\dots,f_n)\cdot\mathfrak{v}(f_i).
+$$
 
-In the same way, we define \emph{(contravariant)} measure-valued tensor fields.
-Namely, a \emph{measure-valued tensor field} $\mathfrak{t}$ of valence $k$ on $A$ is a multilinear map that takes $k$ $C^1$-delta smooth  functions, spits a measure in $\mathfrak M(A)$, and satisfies the chain rule in each of its arguments.
+In the same way, we define (contravariant) measure-valued tensor fields.
+Namely, a \emph{measure-valued tensor field} $\mathfrak{t}$ of valence $k$ on $A$ is a multilinear map that takes a $k$-array of test  functions, spits a measure in $\mathfrak M(A)$, and satisfies the chain rule in each of its arguments.
 
 Suppose that $x_1,\dots,x_m$ are local coordinates in an $m$-dimensional Riemannian manifold $M$.
-Then a measure-valued vector field $\mathfrak{v}$ on $M$ can be described by $m$ components, these are measures $(\vv(x_1),\dots,\vv(x_m))$;
+Then a measure-valued vector field $\mathfrak{v}$ on $M$ can be described by $m$ components, these are measures $(\vv(x_1),\zz\dots,\vv(x_m))$;
 these components transform by contravariant rule under change of coordinates.
 
 By the definition of measure-valued vector field, we get
@@ -180,34 +234,37 @@ $\mathfrak{t}(x_{i_1},\dots,x_{i_k})$; namely,
 \cdot \mathfrak{t}(x_{i_1},\dots,x_{i_k}).\]
 
 Note that if $T$ is a smooth contravariant tensor field then $\mathfrak{t}=T\cdot \vol$ is measure-valued tensor field.
-In other words, usual tensor fields naturally form a subspace of measure-valued tensor fields.
+In other words, usual tensor fields might be considered as a subspace of measure-valued tensor fields.
 
-\begin{rdef} {Definition}
+\begin{rdef}{Definition}
 Let $M_n\smooths{} A$ be a smoothing.
 Assume that $\mathfrak{t}_n$ is a sequence of %uniformly bounded
  measure-valued tensor fields on $M_n$  and $\mathfrak{t}$ is a
 measure-valued tensor field on $A$,
 all of the same valence $k$.
 We say that $\mathfrak{t}_n$ \emph{weakly converges} to  $\mathfrak{t}$
-(briefly $\mathfrak{t}_n\rightharpoonup\mathfrak{t}$) if for arbitrary $k$
-sequences of $C^1$-delta smooth functions 
-$f_{i,n}\smoothto f_i$, the measures $\mathfrak{t}_n(f_{1,n},\dots,f_{k,n})$ weakly converge to $\mathfrak{t}(f_{1},\dots,f_{k})$.
+(briefly $\mathfrak{t}_n\rightharpoonup\mathfrak{t}$) if
+\[f_{i,n}\smoothto f_i\quad\text{for all\ } i
+\quad\Longrightarrow\quad
+\mathfrak{t}_n(f_{1,n},\dots,f_{k,n})\zz\rightharpoonup\mathfrak{t}(f_{1},\dots,f_{k})\]
+for arbitrary $k$ sequences $f_{1,n},\dots,f_{k,n}$ of $C^1$-smooth functions and test functions $f_1,\dots,f_n\:A\to\RR$.
 \end{rdef}
 
 \subsection{Dual curvature tensor}
 
 The curvature of Riemannian manifold $M$ is usually described by a tensor of valence 4 that will be denoted by $\Rm$.
 We will use a \emph{dual curvature tensor} --- 
-a curvature tensor written in a dual form that is denoted by $\Qm$;
+a curvature tensor written in a dual form that will be denoted by $\Qm$;
 it is a tensor field of valence $2\cdot(m-2)$ defined the following way:
-\[
-\Qm(X_1,\dots,X_{m-2},Y_1,\dots,Y_{m-2})
+\begin{align*}
+\Qm(X_1,&\dots,X_{m-2},Y_1,\dots,Y_{m-2})
 = 
+\\
+&=
 \Rm(*(X_1\wedge\dots\wedge X_{m-2}),*(Y_1\wedge\dots\wedge Y_{m-2})),
-\]
-where $X_i,Y_i$ are vector fields on $M$ and  ${*}\:(\bigwedge^{m-2}\T)M\to(\bigwedge^2\T)M$ is the  Hodge star operator.
-{\color{blue}
-This definition will be used further mostly for gradient vector fields of ??? test functions.}
+\end{align*}
+where $X_i,Y_i$ are vector fields on $M$ and  ${*}\:(\bigwedge^{m-2}\T)M\zz\to(\bigwedge^2\T)M$ is the  Hodge star operator.
+This definition will be used further mostly for gradient vector fields of semiconcave functions.
 
 In addition, we will need a measure-valued version of $\Qm$ denoted by $\qm$;
 it will be called \emph{dual measure-valued curvature tensor}.
@@ -227,8 +284,12 @@ $X_1\wedge\zz\dots \wedge X_{m-2}$.
 Hence, the sectional curvatures of $M$ and therefore its curvature tensor $\Rm$ can  be computed from
 $\qm$.
 By the symmetry
-$$\qm(f_1,\dots,f_{m-2},g_1,\dots,g_{m-2})=
-\qm(g_1,\dots,g_{m-2},f_1,\dots,f_{m-2}),$$
+\begin{align*}
+\qm(f_1,&\dots,f_{m-2},g_1,\dots,g_{m-2})
+\\
+&=
+\qm(g_1,\dots,g_{m-2},f_1,\dots,f_{m-2}),
+\end{align*}
 the density of $\qm$ is defined by the sectional curvature.
 Therefore measure tensor $\qm$
 gives an equivalent description of curvature of Riemannian manifold.
@@ -241,5 +302,5 @@ in this case, $\qm$ coincides with the curvature measure --- the standard way to
 \cite{Resh,AZ}.
 For a smooth surface, the density of this curvature measure with respect to the area
 is its Gauss curvature.
-In this case, it is known that \emph{curvature measures are stable under smoothing} \cite[VII \S13]{AZ};
+In this case, it is known that \textit{curvature measures are stable under smoothing} \cite[VII \S13]{AZ};
 in other words, our main theorem is known in the two-dimensional case.

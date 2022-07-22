@@ -1,7 +1,10 @@
 \section{Bi-Lipschitz covering}\label{sec:bilip}
 
-In this section we will prove Lemma~\ref{lem:A-prime-Q};
-note that it follows from the next proposition.
+In this section we will prove Lemma~\ref{lem:A-prime-Q}.
+It seems that a more general version of the lemma can be proved along the same lines as Lemma~11.1 in \cite{simon}.
+
+Note that the lemma follows from the next proposition.
+
 
 \begin{thm}{Proposition}\label{prop:Q-covering}
 Let $A$ be an $m$-dimensional Alexandrov space with curvature at least $-1$ and $p\in A'$.
@@ -49,7 +52,7 @@ It follows that
 \[\vol^m(B(0,R)_{\T_p}\setminus C)\ge \vol^m(B(x,R)_A\]
 for any $R>0$.
 
-Since $R>|x-y|$, the intersection $C\cap B(0,R)_{\T_p}$ includes a ball of certain radius $r>0$ that can be found in terms of $|x-y|$, $R$ and $\eps$.
+Since $R>|x-y|$, the intersection $C\zz\cap B(0,R)_{\T_p}$ includes a ball of certain radius $r>0$ that can be found in terms of $|x-y|$, $R$ and $\eps$.
 By Bishop--Gromov inequality, we get a positive lower bound on $\vol^m(C\cap B(0,R)_{\T_p})$ in terms of $m$, $|x-y|$, $R$, $\eps$ and $\vol^mB(0,R)_{\T_p}$.
 
 Further, observe that 
@@ -69,7 +72,7 @@ Further, observe that
 \parit{Proof of \ref{prop:Q-covering}.}
 Since the tangent cone at $p$ has $\RR^{m-2}$-factor, 
 we can choose points $a_1,\zz\dots,a_{m-2},b_1,\zz\dots,b_{m-2}$ that are $\delta$-strainers of $p$ for arbitrary $\delta>0$.
-The corresponding distance map $s\:x\mapsto (|a_1-x|,\dots,|x-a_{m-2}|)$ is almost submersion of a neighborhood $U\ni p$ to $\RR^{m-2}$.
+The corresponding distance map $s\:x\zz\mapsto (|a_1-x|,\zz\dots,|x-a_{m-2}|)$ is almost submersion of a neighborhood $U\ni p$ to $\RR^{m-2}$.
 Choose small $\eps>0$ and set 
 \[Q'=\set{x\in U\cap A'}{\theta(x)<\theta(p)+\eps}.\]
 Let us show that $s|_{Q'}$ is bi-Lipschitz.

@@ -4,28 +4,27 @@ The weak convergence and measure-valued tensor used in the following theorem are
 a more precise formulation is given in \ref{main}.
 
 \begin{thm}{Main theorem}
-Let $\kappa$ be a real number and 
-$M_n$ be a sequence of complete $m$-dimensional Riemannian manifolds with sectional curvature bounded below by~$\kappa$.
-Assume that $M_n$ Gromov--Hausdrorff converges to an Alexandrov space $A$ of the same dimension.
+Let $M_1,M_2,\dots$ be a sequence of complete $m$-dimensional Riemannian manifolds with sectional curvature bounded below by~$\kappa$.
+Assume that the sequence $M_n$ Gromov--Hausdrorff converges to an Alexandrov space $A$ of the same dimension.
 Then the curvature tensors of $M_n$ weakly converge to a measured-valued tensor on $A$.
 \end{thm}
 
-This result is nontrivial, even if the limit space $A$ is a Riemannian manifold.
-Note that the limit tensor of the sequence depends only on $A$ and does not depend on the choice of the sequence $M_n$.
+Note that from the theorem we get that the limit tensor of the sequence depends only on $A$ and does not depend on the choice of the sequence $M_n$.
 Indeed, suppose another sequence $M_n'$ satisfies the assumptions of the theorem.
 If the limit tensor is different, 
 then a contradiction would occur for the alternated sequence $M_1,M_1',M_2,M_2',\dots$ 
 In~particular, if the limit space is Riemannian, then the limit curvature tensor is the curvature tensor of the limit space.
+The latter statement was announced by the second author \cite{petrunin-poly}.
 
 Analogous statements about metric tensor and Levi-Citita connection were essentially proved by Perelman \cite{PerDC},
 we only had to tie his argument with an appropriate convergence.
 This part is discussed in Section~\ref{sec:DC}. 
 It provides a technique that could be useful elsewhere as well.
-For curvature tensor (which has a higher order of derivative), this argument can not be extended directly;
+For curvature tensor (which has a higher order of derivative), this argument cannot be extended directly;
 we found a way around applying Bochner-type formulas as in \cite{petrunin-SC}.
 
 The following statement looks like a direct corollary of the main theorem, 
-and indeed, it follows from its proof, but strictly speaking it can not be deduced directly from the main theorem alone.
+and indeed, it follows from its proof, but strictly speaking it cannot be deduced directly from the main theorem alone.
 We will denote by $\Sc$ the scalar curvature and $\vol^m$ the $m$-dimensional volume; that is, $m$-dimensional Hausdorff measure calibrated so that the unit $m$-dimensional cube has unit measure.
 
 \begin{thm}{Corollary}\label{cor:Sc}
@@ -48,7 +47,7 @@ in particular, it has a converging subsequence.
 However, if $M_n$ is collapsing, then this sequence may not converge.
 For example, an alternating sequence of flat 2-toruses and round 2-spheres might collapse to the one-point space; in this case, the sequence $s_n$ is $0,4\cdot\pi,0,4\cdot\pi,\dots$
 
-From the main theorem (and the definition of weak convergence) we get the following corollary.
+From the main theorem (and the definition of weak convergence) we get the following.
 
 \begin{thm}{Corollary}
 Let $\mathfrak{K}$ be a convex closed subset of curvature tensors on $\RR^m$ 
@@ -68,18 +67,19 @@ then the same holds for the curvature tensors of $M$.
 The limit measure $\mathfrak m$ in \ref{cor:Sc} has some specific properties;
 let us describe a couple of them:
 \begin{itemize}
-\item The measure $\mathfrak m$ vanish on any subset of $A$ with a vanishing $(m-2)$-dimensional Hausdorff measure.
+\item The measure $\mathfrak m$ vanish on any subset of $A$ with a vanishing $(m\zz-2)$-dimensional Hausdorff measure.
 In particular, $\mathfrak m$ vanishes on the set of singularities of codimension 3.
 This is an easy corollary of \cite{petrunin-SC}.
 
-\item The measure can be explicitly described on the set $A'$ of singularities
-of codimension $2$ as 
-$$\mathfrak m|_{A'}=(2\cdot \pi-\theta)\cdot \vol^{m-2},$$
-here $A'\subset A$
+\item The measure can be explicitly described on the set of singularities
+of codimension~$2$.
+Namely, suppose $A'\subset A$
 denotes the set of all points $x$ with tangent space
 $\T_xA\zz=\R^{m-2}\zz\times \Cone(\theta)$,
 where $\Cone(\theta)$ is a $2$-dimensional cone
-with the total angle $\theta=\theta(x)<2\cdot\pi$.
+with the total angle $\theta\zz=\theta(x)\zz<2\cdot\pi$.
+Then 
+$$\mathfrak m|_{A'}=(2\cdot \pi-\theta)\cdot \vol^{m-2}.$$
 This statement follows from \ref{prop:3parts:codim2+}.
 \end{itemize}
 
@@ -120,7 +120,7 @@ it works for a more general class of spaces, but this approach does not see the 
 It is expected that our definitions agree on the regular locus.
 
 \paragraph{About the proof.}
-As it was stated, the 2-dimensional case is well known.
+As it was stated, the 2-dimensional case is proved in \cite[VII \S13]{AZ}.
 The 3-dimensional case is the main step in the proof;
 the higher dimensional case requires only minor modifications.
 
@@ -137,17 +137,17 @@ The $A'$-case is reduced to its partial case when the limit is isometric to the 
 In the proof, we use a Bochner-type formula proved in Section~\ref{sec:bochner}.
 
 The $A^\circ$-case is proved by induction.
-The base is dimension $2$.
+The base is the 2-dimensional case.
 Further, we apply the main theorem to level sets of special concave functions.
 By Gauss formula, these level sets have the same lower curvature bound. 
-In the proof, we use the Bochner-type formula together with DC-calculus developed by Grigory Perelman \cite{PerDC}.
+In the proof, we use the Bochner-type formula together with DC-calculus developed in \cite{PerDC}.
 
 The higher-dimensional case uses the dimension 3 plus an extra estimate.
 
 \parbf{Acknowledgments.}
-We wish to thank Sergei Ivanov for pointing out an error in in a preliminary version of this paper,
+We wish to thank Sergei Ivanov for pointing out a gap in a preliminary version of this paper,
 John Lott for expressing his interest in a written version for many years,
 and Alexander Lytchak for helped us to write this paper in a more readable way.
 
-Anton Petrunin was partially supported
-by the NSF grant, DMS-2005279
+The first author was partially supported by Russian Foundation for Basic Research grant 20-01-00070, 
+the second author was partially supported by National Science Foundation grant DMS-2005279.

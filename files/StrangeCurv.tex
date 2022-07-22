@@ -37,7 +37,7 @@ It reduces the proposition to the following two lemmas;
 each lemma provides the convergence of an integral term in the right-hand side of \ref{eq:Bochner2}.
 
 \begin{thm} {Lemma}\label{Int}
-In the assumptions of Proposition~\ref{strconvergence}, $\Int_n\cdot \vol^3_n$ is a delta-converging sequence of measures on $\Omega$.
+In the assumptions of Proposition~\ref{strconvergence}, $\Int_n\zz\cdot \vol^3_n$ is a delta-converging sequence of measures on $\Omega$.
 \end{thm}
 
 The proof of this lemma uses 
@@ -81,7 +81,7 @@ By \cite[Theorem 1.2]{petrunin-QG}, $\partial C_{t, n}$ converges to $\partial C
 By \cite{AKP-buyalo},
 $\partial C_{t,n}$ is
 an Alexandrov space 
-with curvature $\ge -1$;
+with curvature $\zz\ge -1$;
 hence, so is the limit
 $\partial C_{t}$.
 
@@ -111,9 +111,8 @@ $$\int\limits_{s\in \Omega}\Int_n(s)\cdot\phi(s)\cdot\vol^3_n
  
 Note that $\nabla_n f$ is bounded away from zero.
 By \ref{lem:test-delta}(\ref{lem:test-delta|nabla|}), $\frac{1}{|\nabla_n f(s)|}$ is weakly delta-converging.
-Since $\Int_n\cdot \vol^2$ is weakly converging measures
-{\color{blue} ???REF}
-on $L_n$, \ref{obs:delta-weak-uniform} implies
+Recall that $\Int_n\cdot \vol^2$ are weakly converging measures on $L_n$ \cite[VII \S13]{AZ}.
+Therefore \ref{obs:delta-weak-uniform} implies
 that $\Int_n\cdot\vol^3_n$ is weakly delta-converging measures on $M_n$.
 \qeds
 
@@ -122,7 +121,7 @@ DC-calculus in a common chart; see Section~\ref{sec:DC}.
 
 \begin{thm}{Lemma}\label{HnablaU}
 In the assumptions of Proposition~\ref{strconvergence}, 
-suppose $\psi\:\Omega\to\RR$ is a smooth function with compact support.
+suppose $\psi\:\Omega\zz\to\RR$ is a smooth function with compact support.
 Then
 \[\int\limits_\Omega \l[H_n\cdot\<u_n,\nabla_n\phi\>_n- \<\nabla_{u_n} u_n,\nabla_n\phi\>_n \r]\cdot\vol^3_n\]
 converges, where $H_n$ and $u_n$ as in  \ref{eq:Bochner2}.
@@ -131,16 +130,20 @@ converges, where $H_n$ and $u_n$ as in  \ref{eq:Bochner2}.
 \parit{Proof.}
 Note that $H_n=\div u_n$.
 Let us rewrite the first term of \ref{eq:Bochner2} in coordinates:
-$$\int\limits_{\Omega}
-\biggl[
+\begin{align*}
+\int\limits_{\Omega}
+&\biggl[
 \sum_{i}
 \Bigl(\partial_i u_n^i
 +
 \tfrac{u^i_n}{2}\cdot\partial_i \log \det g_{n}\Bigr)\biggr]
 \cdot
+\\
+&\cdot
 \biggl[\sum_{i,j} g_{ij,n} \cdot u_n^i\cdot \partial_j \phi\biggr]
 \cdot\sqrt {\det g_n}
-\cdot dx^1 dx^2 dx^3$$
+\cdot dx^1 dx^2 dx^3.
+\end{align*}
 We also have
 $$u_n^i
 =
@@ -166,11 +169,12 @@ we have
 \int\limits_{M_n}&\<\nabla\psi_n,\nabla_{u_n} u_n\>\cdot\vol^3_n=\\
 &=
 \int\limits_{\Omega}
+dx^1 dx^2 dx^3\cdot
 \sum_{i,j,k}
-u^i_n \partial_k \phi
-\left(
-\partial_i u^k_n
-+
+u^i_n\cdot \partial_k \phi\cdot\sqrt{\op{det}g_{n}}\cdot
+\\
+\cdot\biggl(
+\partial_i u^k_n&+
 \tfrac{u^j_n}2
 \cdot
 \sum_s
@@ -182,16 +186,13 @@ u^i_n \partial_k \phi
 \partial_s g_{i j,n}\right)
 \cdot
 g^{ks}_n
-\right)
-\cdot 
-\\
-&\quad\cdot\sqrt{\op{det}g_{n}}\cdot dx^1 dx^2 dx^3.
+\biggr).
 \end{align*}
 The convergence follows by the same argument.
 \qeds
 
 \parit{Proof of Proposition~\ref{strconvergence}.}
-By \ref{eq:Bochner2}, \ref{Int}, and \ref{HnablaU} we get that $\Str_n(u_n,u_n)\cdot \vol^3_n$ is a weakly delta-converging sequence of measures.
+By \ref{eq:Bochner2}, \ref{Int}, and \ref{HnablaU} we get that $\Str_n(u_n,u_n)\zz\cdot \vol^3_n$ is a weakly delta-converging sequence of measures.
 It remains to apply \ref{lem:test-delta}(\ref{lem:test-delta|nabla|}),
 \ref{obs:delta-weak-uniform},
 and the fact that $\Rm$ can be expressed from $\Str$.

@@ -2,7 +2,7 @@
 
 
 \parit{Proof of the 3-dimensional case in \ref{prop:3parts:codim2+}.}
-Suppose $M_n\smooths{}A$ and $\dim A=3$.
+Suppose $M_n\smooths{}A$ and $A$ is 3-dimensional.
 Choose a set $Q\subset A$ that admits a bi-Lipschitz embedding into $\RR$. 
 
 Let us split $\mathfrak m$ into negative and positive part $\mathfrak m=\mathfrak m^+-\mathfrak m^-$; that is,
@@ -18,7 +18,7 @@ is the $\vol^1$-density of $\mathfrak n$
 at $\vol^1$-almost all $p\in Q$.
 
 Chosse a bi-Lipschitz embedding $s\:Q\to \RR$;
-set $K=s(Q)$.
+set $K\zz=s(Q)$.
 Since $s^{-1}$ and $h\circ s^{-1}$ are Lipschitz, 
 by Rademacher's theorem, we can assume that $s^{-1}$ and $h\circ s^{-1}$ are differentiable at almost all $x\in K$.
 Moreover, we can assume that $d_xs^{-1}(y)=(\lambda\cdot y,0)\in \RR\times \Cone(\theta)=\T_p$ and the $\vol^1$-density of $\mathfrak n$ at $p=s^{-1}(x)$ is defined.
@@ -29,14 +29,10 @@ In this case, $|\jac_p(h|_Q)|=|d_0(h\circ s^{-1})|$.
 Note that we can choose a sequence of points $p_n\in M_n$ and a sequence of factors $c_n\to \infty$ such that $(c_n\cdot M_n,p_n)$ converges to the tangent space~$\T_pA$.
 Since $p\in A'$, the space $\T_p$ is a product space $\Cone(\theta)\times\RR$, where $\Cone(\theta)$ is a 2-dimensional cone with total angle $\theta(p)\le2\cdot\pi$.
 
-Let $f_n\:c_n\cdot M_n\to \RR$ 
-{\color{blue} REF for existence of such f}
-be as in \ref{thm:HG-converge} and $u_n=\nabla f_n/|\nabla f_n|$.
+Let $f_n\:c_n\cdot M_n\to \RR$ be as in \ref{thm:HG-converge} and $u_n=\nabla f_n/|\nabla f_n|$.
 Consider the sequence of functions $\hat h_n\:c_n\cdot M_n\to \RR$ defined by 
 \[\hat h_n(x)=c_n\cdot(h_n(x)-h_n(p_n)).\]
-Note that $\langle\nabla \hat h_n,u_n\rangle$ uniformly converges
-{\color{blue} WHY }
-to  $|d_0(h\circ s^{-1})|$.
+Since $\lambda=1$, we have that $|\langle\nabla \hat h_n,u_n\rangle|$ uniformly converges to $|d_0(h\zz\circ s^{-1})|$.
 By \ref{cor:Ricci}(\ref{cor:Ricci:vw}), the sequence of measures $\qm(\hat h_n, \hat h_n)$ on $c_n\cdot M_n\to \RR$ weakly converges to $\omega_{\Cone(\theta)\times\RR}$.
 Recall that $\vol^1$-density of $\omega_{\Cone(\theta)\times\RR}$ on the singular line is $2\cdot \pi-\theta(p)$.
 
@@ -60,7 +56,7 @@ A function $f\:\Cone(\theta)\times\RR^{m-2}$ will be called \emph{vertical affin
 
 \begin{thm}{Proposition}\label{prop:vert-vert}
 Let $M_n\smooths{} \Cone(\theta)\times\RR^{m-2}$
-and $f_n,h_n\: M_n\to \RR$ be sequences of strongly concave functions.
+and $f_n,h_n\: M_n\zz\to \RR$ be sequences of strongly concave functions.
 Suppose that $\sec M_n\ge -\tfrac1n$ for each $n$,
 and $f_n\to f$, 
 $h_n\to h$ where $f$ and $h$ are vertical affine functions on $\RR^{m-2}\times \Cone(\theta)$.
@@ -94,12 +90,19 @@ this can be done by applying the Green--Wu smoothing procedure; compare to \cite
 It remains to pass to the limit.
 \qeds
 
+\begin{wrapfigure}{r}{35 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-100}
+\vskip0mm
+\end{wrapfigure}
+
 \parit{Proof of \ref{prop:vert-vert}.}
 Let $p$ be a singular point on $\Cone(\theta)\times \RR^{m-2}$;
 let us denote its liftings by $p_n\in M_n$.
 We can assume that $p$ corresponds to the origin of $\RR^{m-2}$.
-Choose points $a_{1,n},\zz\dots,a_{m-2,n}$, $b_{1,n},\zz\dots,b_{m-2,n}$ in $M_n$ such that the functions $f_{i,n}=\dist_{a_{i,n}}-|a_{i,n}-p|$ and $-h_{i,n}=-\dist_{b_{i,n}}+|b_{i,n}-p|$ converge to $i^{\text{th}}$ vertical coordinate function on $\Cone(\theta)\times \RR^{m-2}$.
-Further, choose points $c_{1,n},c_{2,n},c_{3,n}$ so that the functions $g_{i,n}=\dist_{c_{i,n}}-|c_{i,n}-p|$ converge to Busemann functions for different horizontal rays in $\Cone(\theta)\times \RR^{m-2}$ emerging from $p$.
+Choose points $a_{1,n},\zz\dots,a_{m-2,n}$, $b_{1,n},\zz\dots,b_{m-2,n}$ in $M_n$ such that the functions $f_{i,n}\zz=\dist_{a_{i,n}}\zz-|a_{i,n}-p|$ and $-h_{i,n}\zz=-\dist_{b_{i,n}}+|b_{i,n}-p|$ converge to $i^{\text{th}}$ vertical coordinate function on $\Cone(\theta)\zz\times \RR^{m-2}$.
+Further, choose points $c_{1,n},c_{2,n},c_{3,n}$ so that the functions $g_{i,n}\zz=\dist_{c_{i,n}}-|c_{i,n}-p|$ converge to Busemann functions for different horizontal rays in $\Cone(\theta)\times \RR^{m-2}$ emerging from $p$.
 Note that the latter implies that the angles $\angk{p_n}{c_{i,n}}{c_{j,n}}$ are bounded away from zero for all large~$n$.
 
 By \cite[Lemma 7.2.1]{petrunin-conc}, there is an increasing concave function $\phi$ defined in a neighborhood of zero in $\RR$ such that $\phi'$ is close to 1 and for any $\eps>0$ and $i\ne j$ the function 
@@ -112,17 +115,10 @@ By \cite[Lemma 7.2.1]{petrunin-conc}, there is an increasing concave function $\
 \sum_i\left[\phi\left(\tfrac{f_{i,n}}\eps\right)+\phi\left(\tfrac{h_{i,n}}\eps\right)\right]\]
 is strongly concave in $B(p_n,R)$ for fixed $R>0$ and every large $n$.
 
-\begin{wrapfigure}{r}{35 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-100}
-\vskip0mm
-\end{wrapfigure}
-
-Denote by $s_{ij}\:\Cone(\theta)\zz\times \RR^{m-2}\to \RR$ the limits of $s_{ij,n}$.
+Denote by $s_{ij}\:\Cone(\theta)\zz\times \RR^{m-2}\zz\to \RR$ the limits of $s_{ij,n}$.
 Note that given $w>0$, we can take small $\eps>0$ so that for all $i\ne j$ for the set $s_{ij}^{-1}[-w,w]$ covers the singular locus in $B(p,R)$. 
 
-Note that we can choose $\eps_0>0$ so that for almost all points $x\in B(p_n,R)$ 
+Note that we can choose $\eps_0>0$ so that for almost all points $x\zz\in B(p_n,R)$ 
 the differential $d_xs_{ij,n}$ is linear and $|d_xs_{ij,n}|>\eps_0>0$ for some $i$ and $j$.
 Indeed, these differentials are linear outside cutlocuses of $a_{i,n}$, $b_{i,n}$, and $c_{i,n}$;
 in particular, they are linear at almost any point $x_n\in M_n$.
@@ -151,9 +147,9 @@ in particular, they are linear independent for all large $n$.
 Let us add two fields $e_{m-1,n}$ and $e_{m,n}$  so that $e_{1,n},\dots e_{m,n}$ form a nearly orthonormal frame in~$M_n$;
 that is, $\langle e_{i,n}, e_{j,n}\rangle\to 0$ for $i\ne j$ and $\langle e_{i,n}, e_{i,n}\rangle\to 1$ for any $i$ as $n\to\infty$.
 
-Observe that \ref{prop:vert-vert} implies that $K(e_i\wedge e_j)\cdot\vol\rightharpoonup 0$ if $i,j\le m-2$.
+Observe that \ref{prop:vert-vert} implies that $K(e_i\wedge e_j)\cdot\vol\rightharpoonup 0$ if $i,j\zz\le m-2$.
 
-Let us show that $K(e_i\wedge e_j)\cdot\vol\rightharpoonup 0$ for $i\le m-2$ and $j\ge m-1$.
+Let us show that $K(e_i\wedge e_j)\cdot\vol\rightharpoonup 0$ for $i\le m-2$ and $j\zz\ge m\zz-1$.
 The $3$-dimensional case is already proved; it is used as a base of induction.
 Let us apply the induction hypothesis to the level surfaces of $f_{1,n}$.
 (Formally speaking, we apply the local version of the induction hypothesis described in Section~\ref{sec:local}.)
@@ -177,11 +173,11 @@ Note that for $\theta=0$, the last argument implies the following:
 \begin{thm}{Claim}
 Let $M_n\smooths{} A$.
 If $A$ has a flat open set $U$,
-then $|K_{\max}|\cdot\vol_n\zz\rightharpoonup0$ on $U$. 
+then $|K_{\max}|\zz\cdot\vol_n\zz\rightharpoonup0$ on $U$. 
 \end{thm}
 
 In particular, the weak limit of dual curvature tensor has support on the singularity of $\Cone(\theta)\times \RR^{m-2}$.
 
-The same argument as in \ref{cor:Ricci} shows that $\langle\Rm(e_i,e_j)e_q,e_r\rangle\cdot\vol^m\rightharpoonup0$ is at least one of the indices $i,j,q,r$ is at most $m-2$.
+The same argument as in \ref{cor:Ricci} shows that $\langle\Rm(e_i,e_j)e_q,e_r\rangle\zz\cdot\vol^m\zz\rightharpoonup0$ is at least one of the indices $i,j,q,r$ is at most $m-2$.
 The latter statement implies the result.
 \qeds

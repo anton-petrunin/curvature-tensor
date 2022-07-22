@@ -11,7 +11,7 @@ Let us partition $A$ into three subsets $A^\circ$, $A'$ and $A''$:
 \begin{itemize}
 \item $A^\circ$ is the set of regular points in $A$; that is, the set of points with tangent cone isometric to the Euclidean space.
 \item $A'$ --- the set of points in $A\backslash A^\circ$ with an isometric copy of $\RR^{m-2}$ in their tangent space;
-in other words, for any $p\in A'$, the tangent space $\T_p$ is isometric to the product $\Cone(\theta)\times\RR^{m-2}$ where $\Cone(\theta)$ denotes a two-dimensional cone with total angle $\theta=\theta(p)<2\cdot \pi$.
+in other words, for any $p\in A'$, the tangent space $\T_p$ is isometric to the product $\Cone(\theta)\times\RR^{m-2}$ where $\Cone(\theta)$ denotes a two-dimensional cone with total angle $\theta\zz=\theta(p)<2\cdot \pi$.
 \item $A''$ --- the remaining set; this is the set of points with tangent space that does \emph{not} contain an isometric copy of $\RR^{m-2}$.
 \end{itemize}
 According to \cite{li-naber}, $A'$ is countably $(m-2)$-rectifiable and $A''$ is a countably $(m-3)$-rectifiable. 
@@ -39,7 +39,7 @@ $$\int_{B(p,r)_M} K_{max}\le \const(m)\cdot r^{m-2}.$$
 \begin{thm}{Observation}\label{q=<K}
 There is another constant $\const'(m)$ such that 
 \begin{align*}
-|\Qm(X_1,&\dots,X_{m-2},Y_1,\dots,Y_{m-2})|
+|\Qm(X_1,&\dots,X_{m-2},Y_1,\dots,Y_{m-2})|\le
 \\
 &\le 
 \const'(m)\cdot K_{max}\cdot|X_1\wedge\dots\wedge X_{m-2}|\cdot |Y_1\wedge\dots\wedge Y_{m-2}|
@@ -50,22 +50,38 @@ There is another constant $\const'(m)$ such that
 Note that \ref{cor:Kmax} and \ref{q=<K} imply the following:
 
 \begin{thm}{Claim}\label{clm:weak-partial-limit}
-Given a smoothing $M_n\smooths{} A$ and a sequence of test functions $f_{i,n},g_{i,n}\:M_n\to \RR$ such that 
-$f_{i,n}\smoothto f_i\:A\to \RR$ and $g_{i,n}\smoothto g_i\:A\to \RR$ the sequence of measures 
-$\qm_n(f_{1,n},\dots f_{m-2,n},g_{1,n},\dots, g_{m-2,n})$ has a weakly converging subsequence.
+Given a smoothing $M_n\smooths{} A$,
+test functions $f_i\:A\zz\to \RR$,
+and sequences of $C^1$-smooth functions $f_{i,n}\:M_n\to \RR$ such that 
+$f_{i,n}\zz\smoothto f_i$ the sequence of measures 
+$\qm_n(f_{1,n},\zz\dots f_{2\cdot m-4,n})$ has a weakly converging subsequence.
+
+Moreover, the subsequence can be chosen simultaneously for several choices of function arrays so that it meets the chain rule.
+More precisely, choose $i$; fix all functions $f_{1,n},\zz\dots f_{2\cdot m-4,n}$ except $f_i$;
+suppose $\hat\qm_{i,n}(f_{i,n})=\qm_n(f_{1,n},\zz\dots, f_{2\cdot m-4,n})$.
+Assume $h_{j,n}\:M_n\to \RR$ are $C^1$-smooth functions such that 
+$h_{j,n}\zz\smoothto h_j$ and 
+\[h_{0,n}=\phi(h_{1,n},\dots,h_{k,n})\]
+for a fixed $C^1$-function $\phi\:\RR^k\to\RR$.
+Then the sequence of measure arrays $\hat\qm_{i,n}(h_{0,n}),\dots,\hat\qm_{i,n}(h_{k,n})$
+has a partial limit $\hat\qm_{i}(h_0),\zz\dots,\hat\qm_{i}(h_k)$ and
+\[\hat\qm_{i}(h_0)=\sum_{j=1}^k (\partial_j\phi)(f_1,\dots,f_n)\cdot\hat\qm_{i}(h_j).\]
+
 \end{thm}
 
-{\color{blue}
+
 By Perelman's stability theorem, the space $A$ in the claim is a topological manifold.
 In particular, $A$ has no boundary;
-in other words, the singular set in $A$ has codimension at least 2.
-Together with the claim, it implies that the main theorem (\ref{main}) follows from the next statement:}
+in other words, the singular set in $A$ has codimension at least~2.
+Together with the claim, it implies that the main theorem (\ref{main}) follows from the next statement:
 
 \begin{thm}{Proposition}\label{prop:3parts}
 Let $M_n\smooths{} A$ and $\dim A=m$.
-Suppose $h_{1,n},\dots, h_{m-2,n}$ are 
+Suppose $h_{1},\zz\dots, h_{m-2}$ are 
+test functions on $A$ and
+$h_{1,n},\dots, h_{m-2,n}$ are 
 $C^1$-smooth functions on $M_n$ 
-such that $h_{i,n}\zz\smoothto  h_i\:A\to \RR$ for each $i$.
+such that $h_{i,n}\zz\smoothto  h_i$ for each $i$.
 Let $\mathfrak m_1$ and $\mathfrak m_2$ be two measures on $A$ that are weak partial limits of the sequence of measures $\qm_n( h_{1,n},\zz\dots,  h_{m,n}, h_{1,n},\zz\dots,  h_{m,n})$ on $M_n$.
 Then the following statements hold:
 \begin{enumerate}[(i)]
@@ -76,40 +92,5 @@ Then the following statements hold:
 \item\label{prop:3parts:reg} $\mathfrak m_1|_{A^\circ}=\mathfrak m_2|_{A^\circ}$.
 \end{enumerate}
 \end{thm}
-{\color{blue}
-Actually it follows from our  prove the following:
 
-
-For any point $x\in A^\circ$
-and basis $e_1,\dots, e_n$
-there are measures
-$T_{ij}(x)$ such that
-for any $C^1$-delta converging sequences
-$f_{n}, g_n\zz\smoothto  f,g\:A\to \RR$
-for any $\delta$
-there is a small neighbourhood of $x$ where
-$$q(f,g)=(1\pm \delta)\sum T_{ij}(x)df(e_j)dg(e_j).$$ ($T_{ij}$ are
-not canonically defined and contra-vary with a change of basis at $x$) 
-
-For $x\in A'$ similar holds ???
-
-For $x\in A''$  ???
-
-This allows to define a value of the limit 
-tensor for smoothable $C^1$-delta smooth
-function,
-to show continuity of limit tensor w.r.t.
-$C^1$-delta convergence,
- define a value of the limit 
-tensor for nonsmoothable $C^1$-delta smooth
-function on $A$, and verify
-the chain rule.
-
-
-
-
-
-
-
-}
 The three parts of the proposition will be proved below in sections \ref{sec:codmi=3}, \ref{sec:codmi=2}, and \ref{sec:ref} respectively.

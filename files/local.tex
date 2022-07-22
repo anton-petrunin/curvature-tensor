@@ -53,7 +53,7 @@ $M_n\in\M_{\ge -1}^m$ (with corresponding intrinsic metric)
 converge in Gromov--Hausdorff sense to some metric space $A$ via
 approximation.
 Suppose that $M_n\ni x_n\to x\in A$
-and $r_c(x_n)\ge c_0>0$. Let $c_{conv}(m)c_0 > R>0$ and set
+and $r_c(x_n)\zz\ge c_0>0$. Let $c_{conv}(m)c_0 > R>0$ and set
 $U_n=B(x_n,R)_{M_n}$.
 Then we say that $U_n$ is a local smoothing of $U=B(x,R)_A$ (briefly, $U_n\smooths{} U$).
 \end{thm}
@@ -70,72 +70,4 @@ $M_n\GHto A$, $U_n\subset M_m$,
   
 Denote by $\qm_n$ the dual measure-valued curvature tensor on $U_n$.
 Then there is a measure-valued tensor $\qm$ on $U$ such that $\qm_n\rightharpoonup \qm$.
-\end{thm}
-
-
-\section{A more conceptual definition of convergence}\label{sec:concept}
-
-Here we will describe a more natural definition of convergence that is equivalent to our definition.
-It is given for purely aesthetic purposes --- we did not use it and do not see its application.
-By that reason, we give only definitions and do not prove the equivalence.
-
-\parbf{Convergence of vectors.}
-Let $A$ be an Alexandrov space, we denote by $\T A$ the set of all tangent vectors at all points.
-So far $\T A$ is a disjoint union of all tangent cones;
-let us define convergence on it.
-
-Recall that gradient exponent $\gexp\: \T A\to A$ is defined in \cite{AKP}.
-Given a vector $V\in \T A$, it defines its gradient curve $\gamma_{V}\:t\mapsto \gexp (t\cdot V)$.
-We say that a sequence of vectors $V_n\in \T A$ converges to $V\in \T A$ if $\gamma_{V_n}$ converges to $\gamma_V$ pointwise.
-Since the gradient curve $\gamma_V$ is $|V|$-Lipschitz, we get that for any bounded sequence of vectors with base points in a bounded set have a converging subsequence of $\gamma_{V_n}$.
-Further, the pointwise limit of such curves is a gradient curve as well.
-Therefore, any bounded sequence of tangent vectors with base points in a bounded set has a converging sequence.
-
-A direct analog holds for sequences of Alexandrov spaces $A_n$ that converge to $A$.
-That is, if $V_n\in \T A_n$ is a bounded sequence of tangent vectors with a bounded set of base points, then it has a subsequence that converges to some vector $V\in \T A$.
-
-Note that 
-\[|V|\le \lim |V_n|\]
-and the inequality might be strict.
-
-
-
-
-\parbf{$\bm{C^1}$-delta smooth functions and their convergence.}
-Given a function $f\:A\to \RR$ and a vector $V\in \T A$, set
-\[Vf=(f\circ\gamma_V(t))'|_{t=0}.\]
-Note that $Vf$ is defined for all DC functions.
-
-Two vectors $V,W\in \T_pA$ will be called $\delta$-opposite if
-$1-\delta< |V|\le 1$,
-$1-\delta< |W|\le 1$,
-and $|\langle X,V\rangle +\langle X,W\rangle|<\delta$ for any unit vector $X\in T_p A$.
-We say that $V,W\in \T_pA$ are opposite if they are $\delta$-opposite for any $\delta>0$;
-in this case, they are both unit vectors and make angle $\pi$ to each other.  
-
-A Lipschitz function $f\:A\to \RR$ will be called \emph{$C^1$-delta smooth} if $Vf$ is defined for any unit vector $V$ and it satisfies the following continuity property:
-for any $\eps>0$ there is $\delta>0$ such that if unit vectors $V_n$ converge to $V$ and $V$ has a $\delta$-opposite vector, then 
-\[|Vf-\lim V_nf|<\eps.\eqlbl{eq:Vf}\]
-
-Similarly, we can define $C^1$-delta converging sequence of functions.
-Namely, suppose $A_n\GHto A$, then a sequence of $C^1$-delta smooth functions $f_n\:A_n\to\RR$ \emph{$C^1$-delta converges} to $f\:A\to \RR$ if for any $\eps>0$ there is $\delta>0$ such that any sequence of unit vectors $V_n\in \T A_n$ that converges to a vector $V\in \T A$ that has a $\delta$-opposite vector \ref{eq:Vf} holds. 
-
-\parbf{Weak convergence of tensor fields.}
-It is easy to see that test-convergence implies $C^1$-delta convergence.
-The latter notion seems to be more natural.
-If we replace test convergence
-by $C^1$-delta convergence
-in the definition of the weak convergence of tensor fields and
-formulate the main theorem using this definition, we get a formally stronger
-statement; plus our proof still works.
-
-For the part with DC-calculus and 
-Key lemma we still use test sequences
-(note that $C^1$-delta smooth functions are not DC in general).
-Then we need the following property:
-\begin{itemize}
- \item \textit{For any test sequence $f_n$ and any $C^1$-delta converging sequence $g_n$ the function
-$\langle \nabla f_n , \nabla g_n
-\rangle$ delta-converges.}
-\end{itemize}
-Its proof reminds the proof of differentiability of a function that has continuous partial derivatives. 
+\end{thm} 

@@ -1,6 +1,6 @@
 \section{Regular points}\label{sec:ref}
 
-\subsection{Common chart and delta-convergence}
+\subsection{Common chart and delta-convergence}\label{subsec:chart+delta}
 
 Choose a smoothing $M_n\smooths{} A$ of an $m$-dimensional Alexandrov space $A$.
 Let $p\in A$ be a point of rank $m$; that is, there are $m+1$ points $a_0,\dots, a_m\in A$ such that 
@@ -20,7 +20,7 @@ As a result, we obtain a chart of an open set $U_n\subset M_n$.
 Passing to smaller sets we may assume that $U$ and each $U_n$ is mapped to a fixed open set $\Omega\subset\RR^m$ for all large $n$.
 Further, we assume that it holds for all $n$; it could be achieved by cutting off the beginning of the sequence $M_n$.
 
-The obtained collection of charts $\bm{x}_n\:U_n\to \Omega$ and $\bm{x}\:U\to \Omega$ will be called a \emph{common chart} at $p$.
+The obtained collection of charts $\bm{x}_n\:U_n\zz\to \Omega$ and $\bm{x}\:U\zz\to \Omega$ will be called a \emph{common chart} at $p$.
 It will be used to identify points of $\Omega$, $M_n$, and $A$; 
 in addition, we will use it to identify the tangent spaces $\T M_n$ and $\T A$ with $\RR^m$.
 For example, we will use the same notation for function $M_n\to \RR$ and its composition $\Omega\to \RR$ with the inverse of the chart $U_n\to \Omega$.
@@ -44,6 +44,7 @@ if the following conditions hold:
 \[|(\mathfrak m_1-\mathfrak m_2)(S)|<\eps\]
 for any Borel set $S\subset A^\delta_\Omega$.
 \end{itemize}
+A sequence of functions $f_n$ on $\Omega$ is called \emph{weakly delta-converging} if the measures $f_n\cdot \vol_n$ are weakly delta-converging.
 
 A sequence of functions $f_n$ defined on $\Omega$ is called \emph{uniformly delta-converging}
 if the following conditions hold:
@@ -60,114 +61,12 @@ If $f_n$ is uniformly delta-converging and $\mathfrak n_n$ is weakly delta-conve
 then $f_n\cdot \mathfrak n_n$ is weakly delta-converging.
 \end{thm}
 
-{\color{blue}
-Weakly delta converging function means... density??}
-
-
-%The following proposition lists the properties of the common charts.
-
-%\begin{thm}{ Proposition}\label{Prop:chart}
-%Let $M_n\smooths{} A$, $\dim A=m$, and
-%$\bm{x}_n\: U_n\zz\to \Omega$ and $\bm{x}\: U\zz\to \Omega$ is a common chart.
-%
-%\begin{enumerate}[(a)]
-%
-%\item\label{obtuse}
-%The coordinates functions $x_i$ are tight concave function in $M_n$ and $A$;
-%in addition, $x_i$ smooth in $M_n$.
-%
-%\item The charts are bi-Lipschitz  with uniform  bi-Lipschitz 
-%constants.
-%
-%\item\label{metric} 
-%Denote by $S_\Omega$ the image of singular locus of $A$ in $\Omega$.
-%There exists a continuous Riemannian metric
-%$g$ on $\Omega\setminus S_\Omega$ which locally 
-%realizes distance on $A$.
-%Moreover, $g$ has bounded variation
-%on $\Omega$. 
-%
-%\item\label{metricseq}
-%$(g_{ij,n}, g_{ij})\in BV_0^{seq}(\Omega, S_\Omega)$, where $g_n$ is the metric tensor of $M_n$ on $\Omega$.
-%Moreover, $\det(g_n)$ is bounded and bounded away from 0.
-%
-%
-%\item\label{funktioninchart}
-%For any
-%sequence
-%of concave smooth functions
-%$f_n:B(p_n,r_n)\to\R$ 
-%which roughly $C^1$-converges to  $f:B(p,r)\to\R$ we have for its coordinate
-%expression
-%$(f_n\circ\bm{x}^{-1}, f\circ\bm{x}^{-1})\in DC_0^{seq}(\Omega, S_\Omega)$
-%
-%\end{enumerate}
-%\end{thm}
-
-\subsection{Test functions}
-
-In this subsection, we introduce a class of \emph{test functions} and define their convergence.
-These definitions will be used to define measure-valued tensors and their convergence.
-
-Test functions form a narrow class of functions defined via a formula.
-It is just one possible choice of a class containing sufficiently smooth DC functions; see Section~\ref{sec:DC}.
-We could use other definitions as well; see Section~\ref{sec:concept}.
-
-Recall that the distance between points $x,y$ in a metric space is denoted by $|x-y|$;
-we will denote by $\dist_x$ the distance function $\dist_x\:y\mapsto |x-y|$.
-
-{\sloppy 
-
-Suppose $A_n, A\in \Al^m$ and  $A_n\GHto A$.
-Then any distance function $\dist_p\:A\zz\to\RR$ can be \emph{lifted} to $A_n$;
-it means that we can choose a convergent sequence $p_n\to p$ and take the
-sequence $\dist_{p_n}$.
-
-}
-
-Choose $r>0$ and $p\in A$.
-Let us define \emph{smoothed distance function} as the average:
-$$\widetilde{\dist}_{p,r} =\oint_{B(p,r)} \dist_{x}dx.$$ 
-We can lift this function to
-$\widetilde{\dist}_{p_n,r}\:A_n\to [0,\infty)$
-by choosing some  sequence $A_n\ni p_n\to p\in A$.
-
-We say that $f$ is a \emph{test function} if it can be expressed by the formula
-$$f=\varphi( \widetilde{\dist}_{p_1,r_1}, \dots,   \widetilde{\dist}_{p_N,r_N}),$$
-where $\varphi:(0,\infty)^N\to\R$ is a $C^2$-smooth function with compact support.
-If for some sequences of points $A_n\ni p_{i,n}\to p_i\in A$ and $C^2$-smooth functions $\varphi_n$ that $C^2$-converge to $\varphi$ with compact support we have
-$$f_n=\varphi_n( \widetilde{\dist}_{p_{1,n},r_1},\dots,   \widetilde{\dist}_{p_{N,n},r_N}),$$
-then we say that $f_n$ is \emph{test-converging} to $f$ (briefly, $f_n\testto f$).
-
-\parbf{Remarks.}
- {\color{blue} test-convergence implies $C^1$-delta convergence.
-}
-
-Note that test functions form an algebra.
-
-Let $M$ be a Riemannian manifold.
-Note that for any open cover of $M$, there is a subordinate partition of unity of test functions.
-Further, around any point of $M$ one can take a smoothed distance 
-coordinate chart.
-One can express any $C^2$-smooth function in these 
-coordinates, and then apply partition of unity for a covering by charts.
-This way, we get the following:
-
-\begin{thm}{Claim}
-On a smooth complete Riemannian manifold, test functions
-include all $C^2$-smooth functions with compact support.
-\end{thm}
-
-
-
-\subsection{Test convergence}
-
-The following lemma relies on DC-calculus that is discussed Section~\ref{sec:DC}.
+\subsection{Convergences}\label{sec:test-convergence}
 
 \begin{thm}{Lemma}\label{lem:test-delta}
 Let $M_n\smooths{} A$, $\dim A=m$;
 choose a common chart with range $\Omega\subset \RR^m$.
-Let $f_n\: M_n\to\RR$ be a sequence of test functions such that $f_n\zz\testto f\:A\to \RR$.
+Let $f_n\: M_n\to\RR$ be a sequence of $C^1$-functions such that $f_n\zz\smoothto f\:A\to \RR$.
 Let us denote by $\partial_1,\dots,\partial_m$ the partial derivatives on $\Omega\subset \RR^m$.
 Denote by $g_{ij,n}$ and $g^{ij}_n$ the components of the metric tensors on $M_n$.
 Then 
@@ -177,30 +76,27 @@ Then
 \item\label{lem:test-delta-g}  $g_{ij,n}$ and $g^{ij}_n$ are uniformly delta-converging for all $i,j$;
 moreover, $\det g_{ij,n}$ is bounded away from zero;
 \item\label{lem:test-delta|nabla|} $|\nabla_n f_n|$ uniformly delta-converges on $\Omega$; %???do we need it???
-\item\label{lem:test-delta-partial-g} the partial derivatives $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$,  $\partial_j\partial_if_n$, as well as their products to uniformly delta-converging functions,  are weakly converging.
 \end{enumerate}
 
 \end{thm}
 
-\parit{Proof.} Part (\ref{lem:test-delta-f}) is trivial.
+\parit{Proof.}
+Part (\ref{lem:test-delta-f}) is trivial.
 
 \parit{(\ref{lem:test-delta-partial}).}
-Note that for any point $p\in A$ and almost all points $y,z\in A$ the geodesics $[py]$ and $[pz]$ are uniquely defined.
-In this case, for any sequence of points $p_n,y_n,z_n\in M_n$ such that $p_n$, $y_n$, and $z_n$ converge to $p$, $y$, and $z$ respectively we have
-\[\lim_{n\to\infty}\measuredangle \hinge{p_n}{y_n}{z_n}\ge \measuredangle \hinge{p}{y}{z}.\]
+Suppose $a_0, a_1,\dots,a_m$ struts $p$ (see the definition in \cite{AKP}) and such that the geodesics $[pa_i]$ are uniquely defined.
 
-If $\T_p$ is Euclidean, then we can choose a point $x\in A$ so that $[px]$ is unique, and the sum 
-\[\measuredangle \hinge{p}{x}{y}+\measuredangle \hinge{p}{y}{z}+\measuredangle \hinge{p}{z}{x}\]
-is arbitrarily close to $2\cdot\pi$.
-Applying the comparison, we get that $\lim\measuredangle \hinge{p_n}{y_n}{z_n}$ is arbitrary close to $\measuredangle \hinge{p}{y}{z}$; therefore
-\[\measuredangle \hinge{p_n}{y_n}{z_n}\to\measuredangle \hinge{p}{y}{z}\]
-as $n\to\infty$.
-The latter implies that
-\[\langle d_p\widetilde\dist_{y_n,r},d_p\widetilde\dist_{z_n,r}\rangle\to \langle d_p\widetilde\dist_{y,r},d_p\widetilde\dist_{z,r}\rangle\]
-for \emph{any} choice of sequences $p_n$, $y_n$, and $z_n$ that converge to $p$, $y$, and $z$ respectively.
-Hence,
-\[\langle d_pf_n,d_ph_n\rangle\to \langle d_pf,d_ph\rangle\]
-if $f_n,h_n\:M_n\to\RR$ are sequences of test functions such that $f_n\testto f$ and $h_n\testto h$.
+In this case, for any sequence of points $a_{i,n}, p_n\in M_n$ such that $a_{i,n}\to a_i$, and $p_n\to p$ as $n\to\infty$, we have
+\[\lim_{n\to\infty}\measuredangle \hinge{p_n}{a_{i,n}}{a_{j,n}}\ge \measuredangle \hinge{p}{a_i}{a_j}.\]
+
+If $\T_p$ is Euclidean, then ($n$+1)-point comparison implies that an equality holds in the last inequality.
+
+Note that the angles $\measuredangle \hinge{p_n}{a_{i,n}}{a_{j,n}}$ for all $i,j>0$ completely desicribe the metric tensor at $p_n$ in the basis $V_{1,n},\dots,V_{m,n}$, where $V_{i,n}$ is the unit vector in the direction of $[p_n,a_{i,n}]$.
+
+If $f_n\zz\smoothto f$, then $V_{i,n}f_n$ completely describes $\nabla_{p_n}f_n$ in thebasis $V_{1,n},\zz\dots,V_{m,n}$.
+From above, we can express $|\nabla_{p_n}f_n|$ in terms of $V_{i,n}f_n$ and the angles $\measuredangle \hinge{p_n}{a_{i,n}}{a_{j,n}}$.
+Whence we get convergence $|\nabla_{p_n} f_n|\zz\to |\nabla_{p} f|$ and therefore 
+\[\langle \nabla_{p_n} f_n,\nabla_{p_n} h_n\rangle\zz\to \langle \nabla_p f,\nabla_p h\rangle\] if $h_n\smoothto h$; the latter follows by identity $4\cdot B(x,y)\zz=B(x\zz+y,x\zz+y)\zz-B(x\zz-y,x\zz-y)$ for any bilinear form $B$.
 
 Note that the partial derivatives $\partial_if_n$ at a regular point $p$ can be expressed in terms of $\langle d_pf_n,d_px_j\rangle_n$ and $\langle d_px_j,d_px_k\rangle_n$, where $x_1,\dots,x_m$ are the coordinate functions of the chart.
 Therefore, we get that $\partial_if_n$ converge at any regular point.
@@ -209,23 +105,38 @@ Finally, observe that if $p$ is a $\delta$-strained point for sufficiently small
 then the calculations above go thru with a small error.
 Whence the statement follows.
 
-\parit{(\ref{lem:test-delta-g}).} This part follows from the proof of (\ref{lem:test-delta-partial}) since $g^{ij}_n=\langle d_px_j,d_px_k\rangle_n$ and $g_{ij,n}$ can be expressed thru~$g^{ij}_n$.
+\parit{(\ref{lem:test-delta-g}).} This part follows from the proof of (\ref{lem:test-delta-partial}) since $g^{ij}_n\zz=\langle d_px_j,d_px_k\rangle_n$ and $g_{ij,n}$ can be expressed thru~$g^{ij}_n$.
 
 \parit{(\ref{lem:test-delta|nabla|}).}
 Note that $|\nabla_n f_n|$ can be expressed from $g^{ij}_n$ and $\partial_if_n$.
 Since these quantities are delta-converging, so is $|\nabla_n f_n|$.
+\qeds
 
-\parit{(\ref{lem:test-delta-partial-g}).} The weak convergence of $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$, and $\partial_j\partial_if_n$
+The following lemma relies on DC-calculus that is discussed Section~\ref{sec:DC}.
+
+\begin{thm}{Lemma}\label{lem:test-delta-partial-g}
+Let $M_n\smooths{} A$, $\dim A=m$;
+choose a common chart with range $\Omega\subset \RR^m$.
+Let $f_n\: M_n\to\RR$ be a sequence of test functions such that $f_n\zz\testto f\:A\to \RR$.
+Let us denote by $\partial_1,\dots,\partial_m$ the partial derivatives on $\Omega\subset \RR^m$.
+Denote by $g_{ij,n}$ and $g^{ij}_n$ the components of the metric tensors on $M_n$.
+Then  the partial derivatives $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$,  $\partial_j\partial_if_n$, as well as their products to uniformly delta-converging functions,  are weakly converging.
+
+
+\end{thm}
+
+\parit{Proof.} 
+The weak convergence of $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$, and $\partial_j\partial_if_n$
 follows from \ref{metricBV}.
 By Observation~\ref{obs:delta-weak-uniform}, the products of these partial derivatives to uniformly delta-converging sequences of functions is weakly delta-converging.
 
-By \ref{metricBV}, the limit measures of $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$, and $\partial_j\partial_if_n$ have a vanishing $(m-1)$-density.
+By \ref{metricBV}, the limit measures of $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$, and $\partial_j\partial_if_n$ have a vanishing $(m\zz-1)$-density.
 Further, a limit of delta-converging sequence is might be discontinues only at the singular set which has a vanishing $(m-1)$-Hausdorff measure.
 It follows that the measure $\mathfrak{m}_1-\mathfrak{m}_2$ in the definition of weak delta-convergence is vanishing. 
 Whence the weak convergence follows.
 \qeds
 
-\subsection{Proof modulo key lemma}
+\subsection{Proof modulo key lemma}\label{subsec:modulo-key}
 
 \begin{thm}{Key lemma}\label{A^0}
 Choose a common chart with range $\Omega\subset \RR^m$ for a smoothing $M_n\smooths{} A$.
@@ -236,15 +147,15 @@ Then $\Rm_{ijsr,n}\cdot \vol^m_n$ is a weakly delta-converging sequence of measu
 The proof of the key lemma will take the remaining part of this section;
 in the current subsection, we show that it implies \ref{prop:3parts}(\ref{prop:3parts:reg}).
 
-\parit{Proof of \ref{prop:3parts}(\ref{prop:3parts:reg}) modulo \ref{lem:test-delta} and \ref{A^0}.}
+\parit{Proof of \ref{prop:3parts}(\ref{prop:3parts:reg}) modulo \ref{lem:test-delta}, \ref{lem:test-delta-partial-g}, and \ref{A^0}.}
 Recall that components of $\qm_n$ can be expressed from the components of $\Rm_n$.
 Therefore, the key lemma implies delta-convergence of components of $\qm_n$.
 
-Choose sequences of test functions $f_{1,n},\dots,f_{m-2,n},h_{1,n},\zz\dots,h_{m-2,n}$ on $M_n$ that test-converge to $f_{1},\dots,f_{m-2},h_{1},\dots,h_{m-2}\:A\to \RR$.
+Choose sequences of test functions $f_{1,n},\zz\dots,f_{m-2,n},h_{1,n},\zz\dots,h_{m-2,n}$ on $M_n$ that test-converge to $f_{1},\zz\dots,f_{m-2},h_{1},\zz\dots,h_{m-2}\:A\to \RR$.
 By \ref{lem:test-delta}, we have delta-convergence of the partial derivatives $\partial_if_{j,n}$ and 
 $\partial_ih_{j,n}$ to $\partial_if_{j}$ and 
 $\partial_ih_{j}$ respectively.
-The measures $\qm_n(f_{1,n},\dots,f_{m-2,n},h_{1,n},\zz\dots,h_{m-2,n})$ 
+The measures $\qm_n(f_{1,n},\zz\dots,f_{m-2,n},\zz{}h_{1,n},\zz\dots,h_{m-2,n})$ 
 can be expressed as a linear combination of the components of $\qm_n$ with coefficients expressed in terms of $\partial_if_{j,n}$.
 By \ref{obs:delta-weak-uniform}, it follows that the sequence of measures 
 \[\mathfrak m_n=\qm_n(f_{1,n},\dots,f_{m-2,n},h_{1,n},\zz\dots,h_{m-2,n})\]
@@ -253,4 +164,5 @@ is delta-converging.
 Finally, recall that 
 \[A^\circ=\bigcap_{\delta>0}A^\delta.\]
 Therefore delta-convergence of $\qm_n(f_{1,n},\dots,f_{m-2,n},h_{1,n},\zz\dots,h_{m-2,n})$ implies \ref{prop:3parts}(\ref{prop:3parts:reg}).
+%??? надо добавить про C^1-delta...
 \qeds
