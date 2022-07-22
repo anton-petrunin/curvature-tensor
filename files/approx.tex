@@ -27,7 +27,7 @@ Shifting and scaling the interval $K$, we may assume that $x=0$ and $\lambda=1$.
 In this case, $|\jac_p(h|_Q)|=|d_0(h\circ s^{-1})|$.
 
 Note that we can choose a sequence of points $p_n\in M_n$ and a sequence of factors $c_n\to \infty$ such that $(c_n\cdot M_n,p_n)$ converges to the tangent space~$\T_pA$.
-Since $p\in A'$, the space $\T_p$ is a product space $\Cone(\theta)\times\RR$, where $\Cone(\theta)$ is a 2-dimensional cone with total angle $\theta(p)\le2\cdot\pi$.
+Since $p\in A'$, the space $\T_p$ is a product space $\Cone(\theta)\times\RR$, where $\Cone(\theta)$ is a 2-dimensional cone with the total angle $\theta(p)\le2\cdot\pi$.
 
 Let $f_n\:c_n\cdot M_n\to \RR$ be as in \ref{thm:HG-converge} and $u_n=\nabla f_n/|\nabla f_n|$.
 Consider the sequence of functions $\hat h_n\:c_n\cdot M_n\to \RR$ defined by 
@@ -46,13 +46,13 @@ Whence $2\cdot \pi-\theta(p)$ is the $\vol^1$-density of $\mathfrak n$ at $p$ as
 \subsection{Higher-dimensional case}
 
 
-Suppose $M_n\smooths{} \Cone(\theta)\times \RR^{m-2}$, where $\Cone(\theta)$ denotes a two-dimensional cone with total angle $\theta<2\cdot\pi$.
+Suppose $M_n\smooths{} \Cone(\theta)\times \RR^{m-2}$, where $\Cone(\theta)$ denotes a two-dimensional cone with the total angle $\theta<2\cdot\pi$.
 First, we will show that the curvatures of $M_n$ in the vertical sectional directions of $\Cone(\theta)\times \RR^{m-2}$ weakly converge to zero;
 an exact statement is given in the following proposition.
 By combining this result with the 3-dimensional case we get \ref{prop:3parts:codim2+} in all dimensions.
 
 For $X,Y\in \T_p$, denote by $K(X\wedge Y)$ the curvature in the sectional direction of $X\wedge Y$.
-A function $f\:\Cone(\theta)\times\RR^{m-2}$ will be called \emph{vertical affine function} if $f$ can be obtained as a composition of the projection to $\RR^{m-2}$ and an affine function on $\RR^{m-2}$.
+A function $f\:\Cone(\theta)\times\RR^{m-2}$ will be called a \emph{vertical affine function} if $f$ can be obtained as a composition of the projection to $\RR^{m-2}$ and an affine function on $\RR^{m-2}$.
 
 \begin{thm}{Proposition}\label{prop:vert-vert}
 Let $M_n\smooths{} \Cone(\theta)\times\RR^{m-2}$
@@ -140,11 +140,11 @@ The proposition follows since $w$ can be taken arbitrarily small.
 
 
 \parit{Proof of the general case of \ref{prop:3parts:codim2+}.}
-Choose sequences of strongly concave functions $f_{1,n},\dots f_{m-2,n}\: M_n\to \RR$ that converge to vertical affine functions $f_1,\zz\dots,f_n$ on  $\Cone(\theta)\times \RR^{m-2}$ with orthonormal gradients.
+Choose sequences of strongly concave functions $f_{1,n},\dots, f_{m-2,n}\: M_n\to \RR$ that converge to vertical affine functions $f_1,\zz\dots,f_n$ on  $\Cone(\theta)\times \RR^{m-2}$ with orthonormal gradients.
 
 Note that the fields $e_{1,n}=\nabla f_1,\dots,e_{m-2,n}=\nabla f_{m-2}$ are nearly orthonormal;
 in particular, they are linear independent for all large $n$.
-Let us add two fields $e_{m-1,n}$ and $e_{m,n}$  so that $e_{1,n},\dots e_{m,n}$ form a nearly orthonormal frame in~$M_n$;
+Let us add two fields $e_{m-1,n}$ and $e_{m,n}$  so that $e_{1,n},\dots, e_{m,n}$ form a nearly orthonormal frame in~$M_n$;
 that is, $\langle e_{i,n}, e_{j,n}\rangle\to 0$ for $i\ne j$ and $\langle e_{i,n}, e_{i,n}\rangle\to 1$ for any $i$ as $n\to\infty$.
 
 Observe that \ref{prop:vert-vert} implies that $K(e_i\wedge e_j)\cdot\vol\rightharpoonup 0$ if $i,j\zz\le m-2$.
@@ -162,7 +162,7 @@ Consider the level sets $L_n$ defined by
 Note that $L_n\smooths{} \Cone(\theta)$.
 Applying the 2-dimensional case to $L_n$ and the coarea formula, we get that curvatures of $L_n$ weakly converge to $\omega_{\Cone(\theta)\times \RR^{m-2}}$.
 It remains to show that the extra term in the Gauss formula for the curvature of $L_n$ weakly converges to zero; 
-in other words, the difference between curvature of $L_n$ and sectional curvature of $M_n$ in the direction tangent to $L_n$ weakly converges to zero.
+in other words, the difference between the curvature of $L_n$ and sectional curvature of $M_n$ in the direction tangent to $L_n$ weakly converges to zero.
 
 The 3-dimensional case is already proved.
 To prove the general case, we apply the 3-dimensional case to the 3-dimensional level sets defined by $m-3$ equations from the following $m-2$ equations in \ref{eq:fi=ci}.

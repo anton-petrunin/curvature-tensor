@@ -30,7 +30,7 @@ For example, given a function $f\:\Omega\to \RR$, we denote by $\nabla_nf$ and $
 Recall that $A^\delta$ denotes the set of $\delta$-strained points in $A$.
 For a fixed common chart $\bm{x}$ we will use notation $A^\delta_\Omega$ for the image $\bm{x}(A^\delta)\subset \Omega$.
 
-The part \ref{prop:3parts}(\ref{prop:3parts:reg}) will follow from certain estimates in one common chart.
+Part \ref{prop:3parts}(\ref{prop:3parts:reg}) will follow from certain estimates in one common chart.
 
 \begin{thm}{Definitions}\label{def:delta-converge}
 Let $M_n\smooths{} A$, $\dim A=m$;
@@ -93,13 +93,13 @@ If $\T_p$ is Euclidean, then ($n$+1)-point comparison implies that an equality h
 
 Note that the angles $\measuredangle \hinge{p_n}{a_{i,n}}{a_{j,n}}$ for all $i,j>0$ completely desicribe the metric tensor at $p_n$ in the basis $V_{1,n},\dots,V_{m,n}$, where $V_{i,n}$ is the unit vector in the direction of $[p_n,a_{i,n}]$.
 
-If $f_n\zz\smoothto f$, then $V_{i,n}f_n$ completely describes $\nabla_{p_n}f_n$ in thebasis $V_{1,n},\zz\dots,V_{m,n}$.
+If $f_n\zz\smoothto f$, then $V_{i,n}f_n$ completely describes $\nabla_{p_n}f_n$ in the basis $V_{1,n},\zz\dots,V_{m,n}$.
 From above, we can express $|\nabla_{p_n}f_n|$ in terms of $V_{i,n}f_n$ and the angles $\measuredangle \hinge{p_n}{a_{i,n}}{a_{j,n}}$.
 Whence we get convergence $|\nabla_{p_n} f_n|\zz\to |\nabla_{p} f|$ and therefore 
 \[\langle \nabla_{p_n} f_n,\nabla_{p_n} h_n\rangle\zz\to \langle \nabla_p f,\nabla_p h\rangle\] if $h_n\smoothto h$; the latter follows by identity $4\cdot B(x,y)\zz=B(x\zz+y,x\zz+y)\zz-B(x\zz-y,x\zz-y)$ for any bilinear form $B$.
 
 Note that the partial derivatives $\partial_if_n$ at a regular point $p$ can be expressed in terms of $\langle d_pf_n,d_px_j\rangle_n$ and $\langle d_px_j,d_px_k\rangle_n$, where $x_1,\dots,x_m$ are the coordinate functions of the chart.
-Therefore, we get that $\partial_if_n$ converge at any regular point.
+Therefore, we get that all $\partial_if_n$ converge at any regular point.
 
 Finally, observe that if $p$ is a $\delta$-strained point for sufficiently small $\delta>0$,
 then the calculations above go thru with a small error.
@@ -112,7 +112,7 @@ Note that $|\nabla_n f_n|$ can be expressed from $g^{ij}_n$ and $\partial_if_n$.
 Since these quantities are delta-converging, so is $|\nabla_n f_n|$.
 \qeds
 
-The following lemma relies on DC-calculus that is discussed Section~\ref{sec:DC}.
+The following lemma relies on the DC-calculus which is discussed in Section~\ref{sec:DC}.
 
 \begin{thm}{Lemma}\label{lem:test-delta-partial-g}
 Let $M_n\smooths{} A$, $\dim A=m$;
@@ -128,10 +128,10 @@ Then  the partial derivatives $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$,  $\pa
 \parit{Proof.} 
 The weak convergence of $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$, and $\partial_j\partial_if_n$
 follows from \ref{metricBV}.
-By Observation~\ref{obs:delta-weak-uniform}, the products of these partial derivatives to uniformly delta-converging sequences of functions is weakly delta-converging.
+By Observation~\ref{obs:delta-weak-uniform}, products of these partial derivatives to uniformly delta-converging sequences of functions is weakly delta-converging.
 
 By \ref{metricBV}, the limit measures of $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$, and $\partial_j\partial_if_n$ have a vanishing $(m\zz-1)$-density.
-Further, a limit of delta-converging sequence is might be discontinues only at the singular set which has a vanishing $(m-1)$-Hausdorff measure.
+Further, a limit of delta-converging sequence might be discontinues only at the singular set which has a vanishing $(m-1)$-Hausdorff measure.
 It follows that the measure $\mathfrak{m}_1-\mathfrak{m}_2$ in the definition of weak delta-convergence is vanishing. 
 Whence the weak convergence follows.
 \qeds

@@ -1,6 +1,6 @@
 \section{Formulations}
 
-In this section, we give necessary definitions for a precise formulation of the main theorem.
+In this section, we give the necessary definitions for a precise formulation of the main theorem.
 For simplicity  we will always assume that the lower
 curvature bound is  $-1$;
 applying rescaling, we can get the general case.
@@ -113,7 +113,7 @@ include all $C^2$-smooth functions with compact support.
 \subsection[$C^1$-delta convergence]{$\bm{C^1}$-delta convergence}\label{sec:concept}
 
 Here we introduce $C^1$-delta convergence.
-It will be necessary to formulate the main theorem in an invariant way, but, except for a short passage in \ref{sec:test-convergence}, everywhere in the proofs we will use test convergence instead.
+It will be necessary to formulate the main theorem in an invariant way, but, except for \ref{sec:test-convergence}, everywhere in the proofs we will use test convergence instead.
 (As it claimed in \ref{clm:test=>smooth} test convergence implies $C^1$-delta convergence.)
 
 The $C^1$-delta convergence will be used together with other delta convergence introduced in \ref{subsec:chart+delta}.
@@ -121,16 +121,16 @@ The $C^1$-delta convergence will be used together with other delta convergence i
 \parbf{Convergence of vectors.}
 Let $A$ be an Alexandrov space, we denote by $\T A$ the set of all tangent vectors at all points.
 So far $\T A$ is a disjoint union of all tangent cones;
-let us define convergence on it.
+let us define a convergence on it.
 
 We will use gradient exponent $\gexp\: \T A\to A$ which is defined in \cite{AKP}.
 Given a vector $V\in \T A$, it defines its radial curve $\gamma_{V}\:t\zz\mapsto \gexp (t\cdot V)$.
 We say that a sequence of vectors $V_n\in \T A$ \emph{converges} to $V\in \T A$ (briefly, $V_n\to V$) if $\gamma_{V_n}$ converges to $\gamma_V$ pointwise.
-Since the radial curve $\gamma_V$ is $|V|$-Lipschitz, we get that for any bounded sequence of vectors with base points in a bounded set have a converging subsequence of $\gamma_{V_n}$.
+Since the radial curve $\gamma_V$ is $|V|$-Lipschitz, we get that any bounded sequence of vectors with base points in a bounded set has a converging subsequence of $\gamma_{V_n}$.
 Further, the pointwise limit of such curves is a radial curve as well.
 Therefore, any bounded sequence of tangent vectors with base points in a bounded set has a converging sequence.
 
-In a similar fashion we can define convergence of tangent vectors to sequences of Alexandrov spaces $A_n$ that converge to $A$.
+In a similar fashion, we can define the convergence of tangent vectors to sequences of Alexandrov spaces $A_n$ that converge to $A$.
 That is, if $V_n\in \T A_n$ is a bounded sequence of tangent vectors at points on a bounded distance to the base points, then it has a subsequence that converges to some vector $V\in \T A$.
 
 Note that 
@@ -143,8 +143,8 @@ it provides a way to apply the convergence.
 
 \begin{thm}{Observation}
 Let $M_n\smooths{} A$ be a smoothing, $p_n,q_n\in M_n$, and $p_n\to p$, $q_n\to q$ as $n\to \infty$.
-Denote by $V_n\in \T_{p_n}$ and $V\in \T_p$ the directions of a geodesics $[p_nq_n]$ and $[pq]$.
-Suppose that there is unique geodesic $[pq]$ in $A$.
+Denote by $V_n\in \T_{p_n}$ and $V\in \T_p$ the directions of geodesics $[p_nq_n]$ and $[pq]$.
+Suppose that there is a unique geodesic $[pq]$ in $A$.
 Then $V_n\zz\to V$.
 \end{thm}
 
@@ -165,14 +165,14 @@ in this case, they are both unit vectors and make angle $\pi$ to each other.
 A function $f\:A\to\RR$ is called $C^1$-delta smooth if for any compact set $K\subset A$ and $\eps>0$ there is $\delta>0$ such that any sequence of points $p_n\to p\in K$ and unit vectors $V_n\in \T_{p_n} A$ that converges to a vector $V\in \T_p A$ that has a $\delta$-opposite vector we have
 \[|Vf-\lim_{n\to\infty} V_nf|<\eps.\]
 
-Suppose $M_n\smooths{} A$, a sequence of $C^1$-smooth functions $f_n\:M_n\zz\to\RR$ is called \emph{$C^1$-delta converging} to $f\:A\to \RR$ if for for any compact set $K\subset A$ and any $\eps>0$ there is $\delta>0$ such that any sequence of unit vectors $V_n\in \T_{p_n} M_n$ that converges to a vector $V\zz\in \T_p A$ and has a $\delta$-opposite vector and such that $p\in K$ we have
+Suppose $M_n\smooths{} A$, a sequence of $C^1$-smooth functions $f_n\:M_n\zz\to\RR$ is called \emph{$C^1$-delta converging} to $f\:A\to \RR$ if for any compact set $K\subset A$ and any $\eps>0$ there is $\delta>0$ such that any sequence of unit vectors $V_n\in \T_{p_n} M_n$ that converges to a vector $V\zz\in \T_p A$ and has a $\delta$-opposite vector and such that $p\in K$ we have
 \[|Vf-\lim_{n\to\infty} V_nf_n|<\eps.\]
 
 The following statement is straightforward.
 
 \begin{thm}{Claim}\label{clm:test=>smooth}
 Any test function is $C^1$-delta smooth.
-Moreover 
+Moreover, 
 \[f_n\testto f
 \qquad\Longrightarrow\qquad
 f_n\smoothto f\]
@@ -189,8 +189,8 @@ there is a sequence of $C^1$-smooth functions $f_n\:M_n\to \RR$ such that $f_n\s
 \end{thm}
 
 \parbf{Remark.}
-The test functions with $C^1$-delta smooth convergence will be used to define convergence of measure-valued tensors.
-Instead of test functions we could use another class of functions that meets \ref{cor:liftability}.
+The test functions with $C^1$-delta smooth convergence will be used to define the convergence of measure-valued tensors.
+Instead of test functions, we could use another class of functions that meets \ref{cor:liftability}.
 
  
 \subsection{Tensors}\label{subsec:tensors}
@@ -233,14 +233,13 @@ $\mathfrak{t}(x_{i_1},\dots,x_{i_k})$; namely,
 \partial_{i_k} f_k
 \cdot \mathfrak{t}(x_{i_1},\dots,x_{i_k}).\]
 
-Note that if $T$ is a smooth contravariant tensor field then $\mathfrak{t}=T\cdot \vol$ is measure-valued tensor field.
+Note that if $T$ is a smooth contravariant tensor field then $\mathfrak{t}=T\cdot \vol$ is a measure-valued tensor field.
 In other words, usual tensor fields might be considered as a subspace of measure-valued tensor fields.
 
 \begin{rdef}{Definition}
 Let $M_n\smooths{} A$ be a smoothing.
 Assume that $\mathfrak{t}_n$ is a sequence of %uniformly bounded
- measure-valued tensor fields on $M_n$  and $\mathfrak{t}$ is a
-measure-valued tensor field on $A$,
+ measure-valued tensor fields on $M_n$  and $\mathfrak{t}$ is a measure-valued tensor field on $A$,
 all of the same valence $k$.
 We say that $\mathfrak{t}_n$ \emph{weakly converges} to  $\mathfrak{t}$
 (briefly $\mathfrak{t}_n\rightharpoonup\mathfrak{t}$) if
@@ -291,8 +290,8 @@ By the symmetry
 \qm(g_1,\dots,g_{m-2},f_1,\dots,f_{m-2}),
 \end{align*}
 the density of $\qm$ is defined by the sectional curvature.
-Therefore measure tensor $\qm$
-gives an equivalent description of curvature of Riemannian manifold.
+Therefore measure-valued tensor $\qm$
+gives an equivalent description of curvature of Riemannian manifolds.
 
 As you will see further, the described dual form of curvature tensor behaves better in the limit;
 in particular, it makes it possible to formulate \ref{prop:3parts:codim2+}.
