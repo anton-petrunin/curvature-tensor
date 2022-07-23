@@ -13,8 +13,8 @@ such that
 $$Q=\sum_{k=1}^{m(m-1)/2}s_k(w_1,\dots,w_{m(m-1)/2})\cdot Q(w_k,w_k).
 \eqlbl{Qij}$$
 
-Note that the vectors $w_1,\dots,w_{m(m-1)/2}\in\R^m$  are  in general position if and only if 
-$s_k(w_1,\dots,w_{m(m-1)/2})$ are finite for all $k$.
+Note that the vectors $w_1,\zz\dots,w_{m(m-1)/2}\in\R^m$  are  in general position if and only if 
+$s_k(w_1,\zz\dots,w_{m(m-1)/2})$ are finite for all $k$.
 Since $s_k$ are rational functions, we get the following:
 
 \begin{thm}{Observation}\label{obs:genpos}
@@ -67,7 +67,7 @@ The result follows since
 \begin{thm}{Observation}\label{obs:nested-convex}
 Choose a common chart with the range $\Omega\subset\RR^m$ for a smoothing $M_n\smooths{} A$.
 Consider the sequence of coordinate level sets $\Omega\zz=L_m\zz\supset L_{m-1}\zz\supset\zz\dots\zz\supset L_0$, 
-where $L_i=L_i(c_{i+1},\dots,c_m)$ is defined by setting the last $m-i$ coordinates to be $c_{i+1},\dots,c_m$ respectively.
+where $L_i\zz=L_i(c_{i+1},\dots,c_m)$ is defined by setting the last $m-i$ coordinates to be $c_{i+1},\dots,c_m$ respectively.
 Then the level sets $L_i$ is a smooth convex hypersurface in $L_{i+1}$ in each $M_n$;
 in particular, each $L_i$ has sectional curvature bounded below by $-1$.
 
@@ -96,7 +96,7 @@ that is, $G_n^+$ is the difference between the curvature of $L_2$ and the sectio
 Denote by $g_n$ the Riemannian metric of $M_n$ in $\Omega$.
 Note that 
 \[G_n^+=\sum\alpha_{k,n}\cdot G_n(w_k),\]
-where the coefficients $\alpha_{k,n}$ depend continuously on the components of $g_n$ and $w_1,\zz\dots, w_{(m-2)\cdot(m-3)/2}$. 
+where the coefficients $\alpha_{k,n}$ depend continuously on $w_1,\zz\dots, w_{(m-2)\cdot(m-3)/2}$, and the components of $g_n$. 
 It follows that weak delta-convergence of $G_n(w_k)$ implies weak delta-convergence of $G_n^+$ as $n\to\infty$.
 Since the curvature of $L_2$ is weakly delta-converging, it implies weak delta-convergence of sectional curvature in the direction of $L_2$.
 
