@@ -21,8 +21,7 @@ In the case of noncompact limit, we assume that for any $R$, the restriction of 
 We say that $A\in \Al^m$ is \emph{smoothable}
 if it can be presented as a Gromov--Hausdorff limit of a non-collapsing sequence of Riemannian manifolds $M_n$ with $\sec M_n\ge-1$; here $\sec$ stands for sectional curvature.
 Given a smoothable Alexandrov space $A$,
-a sequence of complete Riemannian manifolds $M_n$ as above
-together with a sequence of approximations $a_n\:M_n\to A$
+a sequence of complete Riemannian manifolds $M_n$ as above together with a sequence of approximations $a_n\:M_n\to A$
 will be called \emph{smoothing} of $A$
 (briefly, $M_n\smooths{} A$, or $M_n\smooths{a_n} A$).
 By Perelman's stability theorem any smoothable Alexandrov space is a topological manifold without boundary.
@@ -110,11 +109,13 @@ include all $C^2$-smooth functions with compact support.
 \end{thm}
 
 
-\subsection[$C^1$-delta convergence]{$\bm{C^1}$-delta convergence}\label{sec:concept}
+\subsection[\texorpdfstring{$C^1$-delta convergence}{C¹-delta convergence}]%
+{$\bm{C^1}$-delta convergence}\label{sec:concept}
 
 Here we introduce $C^1$-delta convergence.
 It will be necessary to formulate the main theorem in an invariant way, but, except for \ref{sec:test-convergence}, everywhere in the proofs we will use test convergence instead.
 (As it claimed in \ref{clm:test=>smooth} test convergence implies $C^1$-delta convergence.)
+By that reason, \textit{it would be wise to skip this section for the first reading}.
 
 The $C^1$-delta convergence will be used together with other delta convergence introduced in \ref{subsec:chart+delta}.
 
@@ -141,7 +142,7 @@ Recall that if $V\in \T_p$ is the unit vector in the direction of $[pq]$, then $
 Using this we get the following observation;
 it provides a way to apply the convergence.
 
-\begin{thm}{Observation}
+\begin{thm}{Observation}\label{obs:unique-geod}
 Let $M_n\smooths{} A$ be a smoothing, $p_n,q_n\in M_n$, and $p_n\to p$, $q_n\to q$ as $n\to \infty$.
 Denote by $V_n\in \T_{p_n}$ and $V\in \T_p$ the directions of geodesics $[p_nq_n]$ and $[pq]$.
 Suppose that there is a unique geodesic $[pq]$ in $A$.
@@ -168,8 +169,6 @@ A function $f\:A\to\RR$ is called $C^1$-delta smooth if for any compact set $K\s
 Suppose $M_n\smooths{} A$, a sequence of $C^1$-smooth functions $f_n\:M_n\zz\to\RR$ is called \emph{$C^1$-delta converging} to $f\:A\to \RR$ if for any compact set $K\subset A$ and any $\eps>0$ there is $\delta>0$ such that any sequence of unit vectors $V_n\in \T_{p_n} M_n$ that converges to a vector $V\zz\in \T_p A$ and has a $\delta$-opposite vector and such that $p\in K$ we have
 \[|Vf-\lim_{n\to\infty} V_nf_n|<\eps.\]
 
-The following statement is straightforward.
-
 \begin{thm}{Claim}\label{clm:test=>smooth}
 Any test function is $C^1$-delta smooth.
 Moreover, 
@@ -180,6 +179,33 @@ for any smoothing $M_n\smooths{} A$,
 sequence of test functions $f_n\:M_n\zz\to\RR$,
 and a test function $f\:A\zz\to\RR$.
 \end{thm}
+
+\parit{Proof.}
+Let $V$ and $W$ be $\delta$-opposite vectors in $\T_pA$.
+Note that for almost all points $q\in A$, we have 
+\[|V\dist_{q}+W\dist_{q}|<\delta.\]
+It follows that 
+\[|V\widetilde{\dist}_{q,r}+W\widetilde{\dist}_{q,r}|<\delta\eqlbl{eq:|(V+W)tildedist|<delata}\]
+for any $q\in A$ and $r>0$.
+
+Suppose $V_n\to V$; that is, $\gamma_{V_n}\to \gamma_V$ as $n\to\infty$.
+By monotonicity of radial curves \cite[16.31]{AKP}, we get 
+\[V\dist_{q}\le  V_n\dist_{q_n}\]
+if $q_n\to q$.
+Integrating, we get 
+\[V\widetilde{\dist}_{q,r}\le  V_n\widetilde{\dist}_{q_n,r}.\]
+
+Suppose $V$ has a $\delta$-opposite vector $W$.
+We can assume that $W$ is a unit geodesic vector; that is, there is a geodesic $[ps]$ in the direction of $W$.
+Choose points $s_n$ and $p_n$ that converge to $s$ and $p$ respectively.
+By \ref{obs:unique-geod}, the directions $W_n$ of $[p_ns_n]$ converge to $W$.
+Note that $W_n$ is $\delta$-opposite to $V_n$ for all large $n$.
+
+Repeating the above argument we get 
+\[W\widetilde{\dist}_{q,r}\le  W_n\widetilde{\dist}_{q_n,r}.\]
+Applying \ref{eq:|(V+W)tildedist|<delata} we get $C^1$-delta convergence of $\widetilde{\dist}_{q_n,r}$ and, in particular, $C^1$-delta smoothness of $\widetilde{\dist}_{q,r}$.
+Applying the definition of test function, we get the result.
+\qeds
 
 Recall (\ref{sec:test-functions}) that for any smoothing $M_n\smooths{} A$ and a test function $f\:A\to\RR$ there are test functions  $f_n\:M_n\to \RR$ such that $f_n\testto f$.
 
