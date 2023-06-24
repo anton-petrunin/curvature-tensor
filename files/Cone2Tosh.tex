@@ -186,8 +186,8 @@ that is, $G(x)$ and $H(x)$ are Gauss and mean curvature of $L_c$ at $x$.
 Recall that $\Cone(\theta)$ denotes a 2-dimensional cone with the total angle $\theta$.
 
 \begin{thm}{Theorem}\label{thm:HG-converge}
-Let $M_n\smooths{}\Cone(\theta)\times \RR$ and $f_n\: M_n\to \RR$ be a sequence of strongly concave functions.
-Suppose that $\sec M_n\ge -\tfrac1n$ for each $n$, and $f_n$ converges to the $\RR$-coordinate in $\Cone(\theta)\times \RR$ as $n\to \infty$.
+Let $M_n\smooths{}\Cone(\theta)\times \RR$ and $f_n\: M_n\to \RR$ be a sequence of strongly concave smooth 1-Lipschitz functions.
+Suppose that $\sec M_n\ge -\tfrac1n$ for each $n$, and $f_n$ converges as $n\to \infty$ to the $\RR$-coordinate $f\:(x,t)\mapsto t$ on $\Cone(\theta)\times \RR$.
 Then $G_n$ and $H_n$ (the Gauss and mean curvatures of the level sets of $f_n$) weakly converge to zero.
 \end{thm}
 
@@ -203,14 +203,15 @@ Consider a point $q\in \Cone(\theta)\times \RR$ \emph{above} $p$; that is, its $
 If the $\RR$-coordinate of $q$ is large, then $\dist_q+f$ is $\lambda$-concave for small $\lambda>0$ and it has a nonstrict minimum at $p$.
 Therefore, given $\lambda>0$, we can find $q$ so that the sum $s=f+\dist_q+\lambda\cdot \rho$ is $(-\lambda)$-concave and has a strict maximum at $p$.
 Moreover
-\[-\lambda\cdot|p-x|_{\Cone(\theta)\times \RR}^2\ge s(x)-s(p)\ge -\tfrac12\cdot\lambda\cdot|p-x|_{\Cone(\theta)\times \RR}^2\]
+\[-\tfrac12\cdot\lambda\cdot|p-x|_{\Cone(\theta)\times \RR}^2\ge s(x)-s(p)\ge -\tfrac32\cdot\lambda\cdot|p-x|_{\Cone(\theta)\times \RR}^2\]
 and therefore
 \[|\nabla_xs|\le 10\cdot\lambda\cdot|p-x|_{\Cone(\theta)\times \RR}
 \eqlbl{O(p-x)}\]
 if $|p-x|_{\Cone(\theta)\times \RR}$ is sufficiently small; say if $|p-x|_{\Cone(\theta)\times \RR}\zz\le \tfrac r{10}$.
 
-Choose a sequence of points $q_n\in M_n$ that converges to $q$ and set $h_n\zz=\dist_{q_n}+\lambda\cdot \rho_n$;
-this is, a sequence of liftings of $h=\dist_q+\lambda\cdot \rho$. 
+Choose a sequence of points $q_n\in M_n$ that converges to $q$.
+Let us apply the Green--Wu smoothing procedure to $\dist_{q_n}+\lambda\cdot \rho_n$;
+denote by $h_n$ the obtained function; we can assume that $|h_n-\dist_{q_n}-\lambda\cdot \rho_n|\to 0$.
 Observe that \ref{O(p-x)} implies that the first condition in \ref{thm:extimage-of-G-and-H} is met for all large $n$ in an $\tfrac r2$-neighborhood of $p_n$ with $\eps=10\cdot\lambda\cdot r$.
 Moreover, one can choose $b$ so that the second condition is satisfied and $B_n=B(p_n,r/10)\cap L_a\zz\subset W_{a,b}$.
 Applying \ref{thm:extimage-of-G-and-H}, we get that for any $\delta>0$, we have 
@@ -223,7 +224,7 @@ for all large $n$.
 It remains to integrate the obtained inequalities by $a$ and pass to a limit as $n\to\infty$.
 \qeds
 
-For a product $\RR^{m-2}\times \Cone(\theta)$, denote by $\mathcal{V}$ the $\vol^{m-2}$-measure on the vertical line $\RR^{m-2}\times \{0\}$.
+For a product $\RR^{m-2}\times \Cone(\theta)$, denote by $\mathcal{V}$ the $\vol^{m-2}$-measure on the vertical line $\RR^{m-2}\zz\times \{0\}$.
 Further, consider the \emph{curvature measure} 
 \[\omega=(2\cdot\pi-\theta)\cdot \mathcal{V}\]
 on $\RR^{m-2}\times \Cone(\theta)$. 
@@ -275,10 +276,10 @@ H_n\cdot\<u_n,\nabla\phi_n\>&\rightharpoonup 0,
 \]
 
 For the first convergence, it is sufficient to choose the sequence $\phi_n$ so that in addition it is universally bounded.
-Indeed, since $|\nabla f_n|\to 1$, we have that \ref{thm:HG-converge} and the coarea formula %???coarea formula
+Indeed, since $|\nabla f_n|\to 1$, we have that \ref{thm:HG-converge}
 implies the first convergence in \ref{eq:3->0}.
 
-Similarly, to prove the second convergence in \ref{eq:3->0}, it is sufficient to assume in addition that $|\nabla\phi_n|$ is universally bounded and apply \ref{thm:HG-converge} together with the coarea formula.
+Similarly, to prove the second convergence in \ref{eq:3->0}, it is sufficient to assume in addition that $|\nabla\phi_n|$ is universally bounded and apply \ref{thm:HG-converge}.
 
 To prove the last convergence in \ref{eq:3->0}, note that
 $|\nabla_{u_n} u_n|\zz\rightharpoonup 0$ away from the singular locus.

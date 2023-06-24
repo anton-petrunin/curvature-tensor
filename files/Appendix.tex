@@ -51,30 +51,35 @@ Therefore the Gauss formula can be written as
 \eqlbl{eq:gauss}
 \]
 
-We can assume that $b_i(x)$ points in the principal directions of $L_x$ for $i<m$.
-Note that $\<\nabla_u u,u\>=0$, therefore
+We can assume that $b_i(x)$ points in the principal directions of $L_x$ for $i<m$;
+so we have $\nabla_{b_i}u=\kappa_i\cdot b_i$ at $x$.
+We will denote by ``$\,\bullet \,$'' the Clifford multiplication;
+recall that $b_i\bullet  b_i=-1$.
+Note that 
 \begin{align*}
 Du&=\sum_{i} b_i\bullet  \nabla_{b_i}u=
 \\
 &=\sum_{i<m}\kappa_i\cdot  b_i\bullet  b_i+u\bullet  \nabla_{u}u=
 \\
-&=
-\sum_{i<m}\kappa_i+u\wedge\nabla_{u}u=H+u\wedge\nabla_{u}u,
+&=-H+u\bullet  \nabla_{u}u.
 \end{align*}
-here ``$\,\bullet \,$'' denotes the Clifford multiplication.
-Applying again that $\<\nabla_u u,u\>=0$, we get that
-$$ \langle Du,Du \rangle=
-\l(\sum_{i<m}\kappa_i\r)^2+|\nabla_{u}u|^2=H^2+|\nabla_{u}u|^2.$$
+Since $\<\nabla_u u,u\>=0$, we get $H\perp (u\bullet  \nabla_{u}u)$.
+Therefore
+\begin{align*}
+\langle Du,Du \rangle&=
+\l(\sum_{i<m}\kappa_i\r)^2+|u\bullet  \nabla_{u}u|^2=
+\\
+&=H^2+|\nabla_{u}u|^2.
+\end{align*}
 On the other hand
 $$\nabla u=\sum_{i<m}\kappa_i\cdot b_i\otimes b_i+\nabla_u u\otimes u,$$
 hence
 $$\langle\nabla u,\nabla u\rangle =
 \sum_{i<m}\kappa_i^2+|\nabla_{u}u|^2.$$
-
 Therefore
 $$\langle D u,D u\rangle-\langle \nabla u,\nabla u \rangle =2\cdot\sum_{i<j}\kappa_i\cdot\kappa_j=G.$$
 
-Further,
+Following the calculations in \cite[II.5.3]{lawson-michelsohn}, we get
 \begin{align*}
 \int\limits_\Omega\phi\cdot\l[\<D u,D u\>-\<D^2 u, u\>\r]
 &=
@@ -91,7 +96,7 @@ $$\int\limits_\Omega\phi\cdot\l[\<\nabla u,\nabla u\>-\<\nabla^*\nabla u, u\>\r]
 =
 \int\limits_\Omega\<\nabla_{\nabla\phi}  u, u\>=0.$$
 
-By Bochner formula \cite[8.3]{lawson-michelsohn},
+By Bochner formula \cite[II.8.3]{lawson-michelsohn},
 $$D^2u-\nabla^*\nabla u=\Ric(u);$$
 in particular, 
 $$\phi\cdot \<D^2u,u\>-\phi\cdot \<\nabla^*\nabla u,u\>=\phi\cdot \<\Ric(u),u\>.\eqlbl{eq:prebochner}$$
@@ -143,7 +148,8 @@ Moreover, test convergence implies DC-convergence.
 Choose a test-function $f=\phi(\widetilde\dist_{p_1,r},\dots,\widetilde\dist_{p_n,r})$.
 Note that the function $\phi$ can be presented locally as a difference between $C^2$-smooth concave functions increasing in each argument; say $\phi=\psi-\chi$.
 
-For the first part of the observation, it remains to observe that the functions $a=\psi(\widetilde\dist_{p_1,r},\zz\dots,\widetilde\dist_{p_n,r})$ and $b=\chi(\widetilde\dist_{p_1,r},\zz\dots,\widetilde\dist_{p_n,r})$ are semiconcave.
+For the first part of the observation, it remains to observe that the functions \[a=\psi(\widetilde\dist_{p_1,r},\zz\dots,\widetilde\dist_{p_n,r}),\qquad b=\chi(\widetilde\dist_{p_1,r},\zz\dots,\widetilde\dist_{p_n,r})\]
+are semiconcave.
 
 Suppose that a sequence of functions $\phi_i$ is $C^2$-converging to $\phi$.
 Choose $x=(x_1,\dots,x_n)$ in the domain of definition of $\phi$.

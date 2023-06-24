@@ -156,7 +156,7 @@ Given a function $f\:A\to \RR$ and a vector $V\in \T A$, set
 \[Vf=(f\circ\gamma_V(t))'|_{t=0}.\]
 Note that $Vf$ is defined for all DC functions and, in particular, all test functions.
 
-Two vectors $V,W\in \T_pA$ will be called $\delta$-opposite if
+Two vectors $V,W\in \T_pA$ will be called \emph{$\delta$-opposite} if
 $1-\delta< |V|\le 1$,
 $1-\delta< |W|\le 1$,
 and $|\langle X,V\rangle +\langle X,W\rangle|<\delta$ for any unit vector $X\in \T_p A$.
@@ -164,20 +164,23 @@ We say that $V,W\in \T_pA$ are opposite if they are $\delta$-opposite for any $\
 in this case, they are both unit vectors and make angle $\pi$ to each other.
 
 A function $f\:A\to\RR$ is called $C^1$-delta smooth if for any compact set $K\subset A$ and $\eps>0$ there is $\delta>0$ such that any sequence of points $p_n\to p\in K$ and unit vectors $V_n\in \T_{p_n} A$ that converges to a vector $V\in \T_p A$ that has a $\delta$-opposite vector we have
-\[|Vf-\lim_{n\to\infty} V_nf|<\eps.\]
+\[|Vf-\acute{\lim_{n\to\infty}} V_nf|<\eps,\]
+where ``\,$\acute{\lim}$\,'' stands for an arbitrary partial limit.
 
-Suppose $M_n\smooths{} A$, a sequence of $C^1$-smooth functions $f_n\:M_n\zz\to\RR$ is called \emph{$C^1$-delta converging} to $f\:A\to \RR$ if for any compact set $K\subset A$ and any $\eps>0$ there is $\delta>0$ such that any sequence of unit vectors $V_n\in \T_{p_n} M_n$ that converges to a vector $V\zz\in \T_p A$ and has a $\delta$-opposite vector and such that $p\in K$ we have
-\[|Vf-\lim_{n\to\infty} V_nf_n|<\eps.\]
+Suppose $M_n\smooths{} A$, a sequence of $C^1$-smooth functions $f_n\:M_n\zz\to\RR$ is called \emph{$C^1$-delta converging} to $f\:A\to \RR$ if  $f_n$ converges to $f$ pointwise and
+for any compact set $K\subset A$ and any $\eps>0$ there is $\delta>0$
+such that any sequence of unit vectors $V_n\in \T_{p_n} M_n$ that converges to a vector $V\zz\in \T_p A$ and has a $\delta$-opposite vector and such that $p\in K$ we have
+\[|Vf-\acute{\lim_{n\to\infty}} V_nf_n|<\eps.\]
 
 \begin{thm}{Claim}\label{clm:test=>smooth}
 Any test function is $C^1$-delta smooth.
-Moreover, 
+Moreover, for any smoothing $M_n\smooths{} A$,
+sequence of test functions $f_n\:M_n\zz\to\RR$,
+and a test function $f\:A\zz\to\RR$ we have
 \[f_n\testto f
 \qquad\Longrightarrow\qquad
-f_n\smoothto f\]
-for any smoothing $M_n\smooths{} A$,
-sequence of test functions $f_n\:M_n\zz\to\RR$,
-and a test function $f\:A\zz\to\RR$.
+f_n\smoothto f.\]
+
 \end{thm}
 
 \parit{Proof.}
@@ -188,21 +191,22 @@ It follows that
 \[|V\widetilde{\dist}_{q,r}+W\widetilde{\dist}_{q,r}|<\delta\eqlbl{eq:|(V+W)tildedist|<delata}\]
 for any $q\in A$ and $r>0$.
 
-Suppose $V_n\to V$; that is, $\gamma_{V_n}\to \gamma_V$ as $n\to\infty$.
-By monotonicity of radial curves \cite[16.31]{AKP}, we get 
-\[V\dist_{q}\le  V_n\dist_{q_n}\]
+Suppose $V_n$ is a sequence of unit tangent vectors on $M_n$ such that $V_n\to V$; that is, $\gamma_{V_n}\to \gamma_V$ as $n\to\infty$.
+By monotonicity of radial curves \cite[16.32]{AKP}, we get 
+\[V\dist_{q}\le  \liminf_{n\to\infty} V_n\dist_{q_n}\]
 if $q_n\to q$.
 Integrating, we get 
-\[V\widetilde{\dist}_{q,r}\le  V_n\widetilde{\dist}_{q_n,r}.\]
+\[V\widetilde{\dist}_{q,r}\le  \liminf_{n\to\infty}V_n\widetilde{\dist}_{q_n,r}.\]
 
 Suppose $V$ has a $\delta$-opposite vector $W$.
 We can assume that $W$ is a unit geodesic vector; that is, there is a geodesic $[ps]$ in the direction of $W$.
+Moreover, we can assume that $[ps]$ is a unique geodesic from $p$ to $s$.
 Choose points $s_n$ and $p_n$ that converge to $s$ and $p$ respectively.
 By \ref{obs:unique-geod}, the directions $W_n$ of $[p_ns_n]$ converge to $W$.
 Note that $W_n$ is $\delta$-opposite to $V_n$ for all large $n$.
 
 Repeating the above argument we get 
-\[W\widetilde{\dist}_{q,r}\le  W_n\widetilde{\dist}_{q_n,r}.\]
+\[W\widetilde{\dist}_{q,r}\le  \liminf_{n\to\infty}W_n\widetilde{\dist}_{q_n,r}.\]
 Applying \ref{eq:|(V+W)tildedist|<delata} we get $C^1$-delta convergence of $\widetilde{\dist}_{q_n,r}$ and, in particular, $C^1$-delta smoothness of $\widetilde{\dist}_{q,r}$.
 Applying the definition of test function, we get the result.
 \qeds

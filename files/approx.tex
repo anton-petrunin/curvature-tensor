@@ -17,7 +17,7 @@ Therefore it is sufficient to show that
 is the $\vol^1$-density of $\mathfrak n$
 at $\vol^1$-almost all $p\in Q$.
 
-Chose a bi-Lipschitz embedding $s\:Q\to \RR$;
+Choose a bi-Lipschitz embedding $s\:Q\to \RR$;
 set $K\zz=s(Q)$.
 Since $s^{-1}$ and $h\circ s^{-1}$ are Lipschitz, 
 by Rademacher's theorem, we can assume that $s^{-1}$ and $h\circ s^{-1}$ are differentiable at almost all $x\in K$.
@@ -26,8 +26,7 @@ Moreover, we can assume that $d_xs^{-1}(y)=(\lambda\cdot y,0)\in \RR\times \Cone
 Shifting and scaling the interval $K$, we may assume that $x=0$ and $\lambda=1$.
 In this case, $|\jac_p(h|_Q)|=|d_0(h\circ s^{-1})|$.
 
-Note that we can choose a sequence of points $p_n\in M_n$ and a sequence of factors $c_n\to \infty$ such that $(c_n\cdot M_n,p_n)$ converges to the tangent space~$\T_pA$.
-Since $p\in A'$, the space $\T_p$ is a product space $\Cone(\theta)\times\RR$, where $\Cone(\theta)$ is a 2-dimensional cone with the total angle $\theta(p)\le2\cdot\pi$.
+Note that we can choose a sequence of points $p_n\in M_n$ and a sequence of factors $c_n\to \infty$ such that $(c_n\cdot M_n,p_n)$ converges to the tangent space~$\T_p=\RR\times \Cone(\theta)$.
 
 Let $f_n\:c_n\cdot M_n\to \RR$ be as in \ref{thm:HG-converge} and $u_n=\nabla f_n/|\nabla f_n|$.
 Consider the sequence of functions $\hat h_n\:c_n\cdot M_n\to \RR$ defined by 
@@ -65,7 +64,7 @@ Then
 
 \end{thm}
 
-Let $\Sigma$ be a convex surface in a Riemannian manifold $M$.
+Let $\Sigma$ be a convex surface in an $m$-dimensional Riemannian manifold $M$.
 Suppose $x$ is a smooth point of $\Sigma$; that is, the tangent hyperplane $H_x$ of $\Sigma$ is defined at $x$;
 denote by $e_1,\dots,e_{m-1}$ an orthonormal basis of $H_x$.
 Set 
@@ -112,7 +111,7 @@ By \cite[Lemma 7.2.1]{petrunin-conc}, there is an increasing concave function $\
 +
 \phi\circ g_{j,n}
 +
-\sum_i\left[\phi\left(\tfrac{f_{i,n}}\eps\right)+\phi\left(\tfrac{h_{i,n}}\eps\right)\right]\]
+\sum_i\left[\phi\left(\eps\cdot f_{i,n}\right)+\phi\left(\eps\cdot h_{i,n}\right)\right]\]
 is strongly concave in $B(p_n,R)$ for fixed $R>0$ and every large $n$.
 
 Denote by $s_{ij}\:\Cone(\theta)\zz\times \RR^{m-2}\zz\to \RR$ the limits of $s_{ij,n}$.
