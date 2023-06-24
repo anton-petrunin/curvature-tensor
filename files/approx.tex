@@ -11,13 +11,13 @@ Since the sectional curvature of $M_n$ is bounded below, we get that $\mathfrak 
 Since $Q$ has zero volume, we get $\mathfrak m^-(Q)=0$.
 
 Set $\mathfrak n=\mathfrak m|_{Q}$; from above we have $\mathfrak n\ge 0$.
-By \cite{petrunin-SC}, $\mathfrak n$ is a regular with respect to $\vol^1$ on $Q$.
+By \cite{petrunin-SC}, $\mathfrak n$ is regular with respect to $\vol^1$ on $Q$.
 Therefore it is sufficient to show that 
 \[(2\cdot\pi-\theta)\cdot (\jac(\bm{h}|_Q))^2\]
 is the $\vol^1$-density of $\mathfrak n$
 at $\vol^1$-almost all $p\in Q$.
 
-Chosse a bi-Lipschitz embedding $s\:Q\to \RR$;
+Chose a bi-Lipschitz embedding $s\:Q\to \RR$;
 set $K\zz=s(Q)$.
 Since $s^{-1}$ and $h\circ s^{-1}$ are Lipschitz, 
 by Rademacher's theorem, we can assume that $s^{-1}$ and $h\circ s^{-1}$ are differentiable at almost all $x\in K$.
@@ -33,14 +33,14 @@ Let $f_n\:c_n\cdot M_n\to \RR$ be as in \ref{thm:HG-converge} and $u_n=\nabla f_
 Consider the sequence of functions $\hat h_n\:c_n\cdot M_n\to \RR$ defined by 
 \[\hat h_n(x)=c_n\cdot(h_n(x)-h_n(p_n)).\]
 Since $\lambda=1$, we have that $|\langle\nabla \hat h_n,u_n\rangle|$ uniformly converges to $|d_0(h\zz\circ s^{-1})|$.
-By \ref{cor:Ricci}(\ref{cor:Ricci:vw}), the sequence of measures $\qm(\hat h_n, \hat h_n)$ on $c_n\cdot M_n\to \RR$ weakly converges to $\omega_{\Cone(\theta)\times\RR}$.
+By \ref{cor:Ricci}(\ref{cor:Ricci:vw}), the sequence of measures $\qm(\hat h_n, \hat h_n)$ on $c_n\cdot M_n\to \RR$ weakly converges to $|d_0(h\zz\circ s^{-1})|^2\cdot\omega_{\Cone(\theta)\times\RR}$.
 Recall that $\vol^1$-density of $\omega_{\Cone(\theta)\times\RR}$ on the singular line is $2\cdot \pi-\theta(p)$.
 
 Observe that 
 \[\qm(\hat h_n, \hat h_n)[B(p_n,1)_{c_n\cdot M_n}]
 =
 c_n\cdot \qm(h_n, h_n)[B(p_n,\tfrac1{c_n})_{M_n}]\]
-Whence $2\cdot \pi-\theta(p)$ is the $\vol^1$-density of $\mathfrak n$ at $p$ as required.
+Whence $(2\cdot \pi-\theta(p))\cdot(\jac_p(h|_Q))^2$ is the $\vol^1$-density of $\mathfrak n$ at $p$ as required.
 \qeds
 
 \subsection{Higher-dimensional case}
@@ -52,7 +52,7 @@ an exact statement is given in the following proposition.
 By combining this result with the 3-dimensional case we get \ref{prop:3parts:codim2+} in all dimensions.
 
 For $X,Y\in \T_p$, denote by $K(X\wedge Y)$ the curvature in the sectional direction of $X\wedge Y$.
-A function $f\:\Cone(\theta)\times\RR^{m-2}$ will be called a \emph{vertical affine function} if $f$ can be obtained as a composition of the projection to $\RR^{m-2}$ and an affine function on $\RR^{m-2}$.
+A function $f\:\Cone(\theta)\times\RR^{m-2}\to\RR$ will be called a \emph{vertical affine function} if $f$ can be obtained as a composition of the projection to $\RR^{m-2}$ and an affine function on $\RR^{m-2}$.
 
 \begin{thm}{Proposition}\label{prop:vert-vert}
 Let $M_n\smooths{} \Cone(\theta)\times\RR^{m-2}$
@@ -67,7 +67,7 @@ Then
 
 Let $\Sigma$ be a convex surface in a Riemannian manifold $M$.
 Suppose $x$ is a smooth point of $\Sigma$; that is, the tangent hyperplane $H_x$ of $\Sigma$ is defined at $x$;
-denote by $e_1,\dots,e_{m-1}$ an orthonormal basis of $H_p$.
+denote by $e_1,\dots,e_{m-1}$ an orthonormal basis of $H_x$.
 Set 
 \[\Zc_\Sigma(x)= \sum_{i,j} K(e_i\wedge e_j).\]
 In other words, 
@@ -116,7 +116,7 @@ By \cite[Lemma 7.2.1]{petrunin-conc}, there is an increasing concave function $\
 is strongly concave in $B(p_n,R)$ for fixed $R>0$ and every large $n$.
 
 Denote by $s_{ij}\:\Cone(\theta)\zz\times \RR^{m-2}\zz\to \RR$ the limits of $s_{ij,n}$.
-Note that given $w>0$, we can take small $\eps>0$ so that for all $i\ne j$ for the set $s_{ij}^{-1}[-w,w]$ covers the singular locus in $B(p,R)$. 
+Note that given $w>0$, we can take small $\eps>0$ so that for all $i\ne j$ the set $s_{ij}^{-1}[-w,w]$ covers the singular locus in $B(p,R)$. 
 
 Note that we can choose $\eps_0>0$ so that for almost all points $x\zz\in B(p_n,R)$ 
 the differential $d_xs_{ij,n}$ is linear and $|d_xs_{ij,n}|>\eps_0>0$ for some $i$ and $j$.
@@ -133,16 +133,16 @@ Then gradients $\nabla_{x_n}f_n$ and $\nabla_{x_n}h_n$ are nearly orthogonal to 
 Set $\Sigma_{ij,n}=\Sigma_{ij,n}(c)=\set{x\in M_n}{s_{ij,n}(x)=c}$.
 The argument above implies that for almost all points $x\in B(p_n,R)$ one of the sectional directions of the tangent directions of $\Sigma_{ij,n}$ is close to the sectional direction $\nabla f_n\wedge\nabla h_n$.
 
-By \ref{lem:nonsmooth-convex} and the coarea formula, the sum integral curvatures of $M_n$ in the directions of $\Sigma_{ij,n}$ at $x_n$ at the subsets where $|d_{x_n}s_{ij,n}|>\eps_0$ is bounded by $\const\cdot w$.
+By \ref{lem:nonsmooth-convex} and the coarea formula, the sum of integral curvatures of $M_n$ in the directions of $\Sigma_{ij,n}$ at $x_n$ at the subsets where $|d_{x_n}s_{ij,n}|>\eps_0$ is bounded by $\const\cdot w$.
 Therefore, the same holds for the integral of $K(\nabla f_n\zz\wedge\nabla h_n)$.
 The proposition follows since $w$ can be taken arbitrarily small.
 \qeds
 
 
 \parit{Proof of the general case of \ref{prop:3parts:codim2+}.}
-Choose $m-2$ sequences of strongly concave functions $f_{1,n},\zz\dots, f_{m-2,n}\: M_n\to \RR$ that converge to vertical affine functions $f_1,\zz\dots,f_n$ on  $\Cone(\theta)\times \RR^{m-2}$ with orthonormal gradients.
+Choose $m-2$ sequences of strongly concave functions $f_{1,n},\zz\dots, f_{m-2,n}\: M_n\to \RR$ that converge to vertical affine functions $f_1,\zz\dots,f_{m-2}$ on  $\Cone(\theta)\times \RR^{m-2}$ with orthonormal gradients.
 
-Note that the fields $e_{1,n}=\nabla f_1,\dots,e_{m-2,n}=\nabla f_{m-2}$ are nearly orthonormal;
+Note that the fields $e_{1,n}=\nabla f_{1,n}$, $\dots$, $e_{m-2,n}=\nabla f_{m-2,n}$ are nearly orthonormal;
 in particular, they are linear independent for all large $n$.
 Let us add two fields $e_{m-1,n}$ and $e_{m,n}$  so that $e_{1,n},\dots, e_{m,n}$ form a nearly orthonormal frame in~$M_n$;
 that is, $\langle e_{i,n}, e_{j,n}\rangle\to 0$ for $i\ne j$ and $\langle e_{i,n}, e_{i,n}\rangle\to 1$ for any $i$ as $n\to\infty$.
@@ -165,7 +165,7 @@ It remains to show that the extra term in the Gauss formula for the curvature of
 in other words, the difference between the curvature of $L_n$ and sectional curvature of $M_n$ in the direction tangent to $L_n$ weakly converges to zero.
 
 The 3-dimensional case is already proved.
-To prove the general case, we apply the 3-dimensional case to the 3-dimensional level sets defined by $m-3$ equations from the following $m-2$ equations in \ref{eq:fi=ci}.
+To prove the general case, we apply the 3-dimensional case to the 3-dimensional level sets defined by $m-3$ equations from the $m-2$ equations in \ref{eq:fi=ci}.
 (The same argument is used in the proof of \ref{A^0}, and it is written with more details.)
 
 Note that for $\theta=0$, the last argument implies the following:
@@ -178,6 +178,6 @@ then $|K_{\max}|\zz\cdot\vol_n\zz\rightharpoonup0$ on $U$.
 
 In particular, the weak limit of dual curvature tensor has support on the singularity of $\Cone(\theta)\times \RR^{m-2}$.
 
-The same argument as in \ref{cor:Ricci} shows that $\langle\Rm(e_i,e_j)e_q,e_r\rangle\zz\cdot\vol^m\zz\rightharpoonup0$ is at least one of the indices $i,j,q,r$ is at most $m-2$.
+The same argument as in \ref{cor:Ricci} shows that $\langle\Rm(e_i,e_j)e_q,e_r\rangle\zz\cdot\vol^m\zz\rightharpoonup0$ if at least one of the indices $i,j,q,r$ is at most $m-2$.
 The latter statement implies the result.
 \qeds

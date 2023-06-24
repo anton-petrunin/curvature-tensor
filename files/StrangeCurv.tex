@@ -109,7 +109,7 @@ $$\int\limits_{s\in \Omega}\Int_n(s)\cdot\phi(s)\cdot\vol^3_n
  \frac{\phi_n(s)}{|\nabla_n f(s)|}\cdot\Int_n(s)\cdot \vol^2.\eqlbl{eq:Int-coarea}$$
  
 Note that $\nabla_n f$ is bounded away from zero.
-By \ref{lem:test-delta}(\ref{lem:test-delta|nabla|}), $\frac{1}{|\nabla_n f(s)|}$ is weakly delta-converging.
+By \ref{lem:test-delta}(\ref{lem:test-delta|nabla|}), $\frac{1}{|\nabla_n f(s)|}$ is uniformly delta-converging.
 Recall that $\Int_n\cdot \vol^2$ are weakly converging measures on $L_n$ \cite[VII \S13]{AZ}.
 Therefore \ref{obs:delta-weak-uniform} implies
 that $\Int_n\cdot\vol^3_n$ is weakly delta-converging measures on $M_n$.
@@ -120,15 +120,16 @@ the DC-calculus in a common chart; see Section~\ref{sec:DC}.
 
 \begin{thm}{Lemma}\label{HnablaU}
 In the assumptions of Proposition~\ref{strconvergence}, 
-suppose $\psi\:\Omega\zz\to\RR$ is a smooth function with compact support.
+suppose $\phi\:\Omega\zz\to\RR$ is a smooth function with compact support.
 Then
-\[\int\limits_\Omega \l[H_n\cdot\<u_n,\nabla_n\phi\>_n- \<\nabla_{u_n} u_n,\nabla_n\phi\>_n \r]\cdot\vol^3_n\]
-converges, where $H_n$ and $u_n$ as in  \ref{eq:Bochner2}.
+\[\int\limits_\Omega \l[H_n\cdot\<u_n,\nabla_n\phi\>_n- \<\nabla_{u_n} u_n,\nabla_n\phi\>_n \r]\cdot\vol^3_n
+\eqlbl{eq:HnablaU}\]
+converges, where $H_n$ and $u_n$ as in \ref{eq:Bochner2}.
 \end{thm}
 
 \parit{Proof.}
 Note that $H_n=\div u_n$.
-Let us rewrite the first term of \ref{eq:Bochner2} in coordinates:
+Let us rewrite the first term of \ref{eq:HnablaU} in coordinates:
 \begin{align*}
 \int\limits_{\Omega}
 &\biggl[
@@ -139,7 +140,7 @@ Let us rewrite the first term of \ref{eq:Bochner2} in coordinates:
 \cdot
 \\
 &\cdot
-\biggl[\sum_{i,j} g_{ij,n} \cdot u_n^i\cdot \partial_j \phi\biggr]
+\biggl[\sum_{i,j}  u_n^i\cdot \partial_i \phi\biggr]
 \cdot\sqrt {\det g_n}
 \cdot dx^1 dx^2 dx^3.
 \end{align*}
@@ -159,13 +160,13 @@ $g_{ij,n}$,
 $g^{ij}_n$,
 $\partial_i f$,
 $\partial_i \phi$.
-Applying \ref{lem:test-delta}, we get that 
+Applying \ref{lem:test-delta} and \ref{lem:test-delta-partial-g}, we get that 
 the integral converges.
 
-Further, for the second term in \ref{eq:Bochner2}
+Further, for the second term in \ref{eq:HnablaU}
 we have
 \begin{align*}
-\int\limits_{M_n}&\<\nabla\psi_n,\nabla_{u_n} u_n\>\cdot\vol^3_n=\\
+\int\limits_{M_n}&\<\nabla\phi_n,\nabla_{u_n} u_n\>\cdot\vol^3_n=\\
 &=
 \int\limits_{\Omega}
 dx^1 dx^2 dx^3\cdot

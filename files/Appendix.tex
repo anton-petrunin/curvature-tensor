@@ -7,13 +7,13 @@ Set
 \begin{enumerate}
  \item $\kappa_1(x)\le\kappa_2(x)\le\dots\le\kappa_{m-1}(x)$ the principal curvatures of $L_x$ at $x$;
  \item $H=H_f(x)=\kappa_1+\kappa_2+\dots+\kappa_{m-1}$ is mean curvature of $L_x$ at $x$
-\item $G=G_f(x)=2\sum_{i<j}\kappa_i\cdot\kappa_j$ is the extrinsic term
+\item $G=G_f(x)=2\cdot\sum_{i<j}\kappa_i\cdot\kappa_j$ is the extrinsic term
  in the Gauss formula for $\Int_f(x)$. 
 \end{enumerate}
 
 Recall that the strange curvature $\Str$ is defined as
 \[\Str(u)=\Sc-\<\Ric(u),u\>,\]
-where $\Sc$ and $\Ric$ denote scalar and Ricci curvature correspondingly.
+where $\Sc$ and $\Ric$ denote scalar and Ricci curvature respectively.
 
 \begin{thm}{Bochner's formula}\label{thm:bochner-formula}
 Let $M$ be an $m$-dimensional Riemannian manifold,
@@ -46,7 +46,7 @@ Therefore the Gauss formula can be written as
 \begin{aligned}
 \Int&=G+\Sc-2\cdot \<\Ric(u),u\>=
 \\
-&=G+\Str(u)+ \<\Ric(u),u\>.
+&=G+\Str(u)- \<\Ric(u),u\>.
 \end{aligned}
 \eqlbl{eq:gauss}
 \]
@@ -59,7 +59,7 @@ Du&=\sum_{i} b_i\bullet  \nabla_{b_i}u=
 &=\sum_{i<m}\kappa_i\cdot  b_i\bullet  b_i+u\bullet  \nabla_{u}u=
 \\
 &=
-\sum_{i=1}^{m}\kappa_i+u\wedge\nabla_{u}u=H+u\wedge\nabla_{u}u,
+\sum_{i<m}\kappa_i+u\wedge\nabla_{u}u=H+u\wedge\nabla_{u}u,
 \end{align*}
 here ``$\,\bullet \,$'' denotes the Clifford multiplication.
 Applying again that $\<\nabla_u u,u\>=0$, we get that
@@ -78,7 +78,7 @@ Further,
 \begin{align*}
 \int\limits_\Omega\phi\cdot\l[\<D u,D u\>-\<D^2 u, u\>\r]
 &=
-\int\limits_\Omega\<\nabla\phi\bullet u,D u\>
+-\int\limits_\Omega\<\nabla\phi\bullet u,D u\>
 =
 \\
 &=
@@ -178,8 +178,8 @@ that is, if $\mathfrak{m}$ is a limit measure, then $\frac{\mathfrak{m}(B(p,r))}
 
 
 {\it Proof of the Theorem~\ref{metricBV}.}
-Let's start with the partial derivatives of metric tenors.
-In \cite[Section 4.2]{PerDC}, it was shown that components of metric tensors can be expressed as a rational function from partial derivatives of distance functions to a finite collection of distance functions.
+Let's start with the partial derivatives of metric tensors.
+In \cite[Section 4.2]{PerDC}, it was shown that components of metric tensors can be expressed as a rational function of partial derivatives of distance functions to a finite collection of points.
 The distance functions are semiconcave, in particular DC.
 
 The base points $p_{i,n}\in M_n$ of these distance functions can be chosen so that they converge to some point $p_i\in A$.

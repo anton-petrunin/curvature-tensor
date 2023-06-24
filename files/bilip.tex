@@ -11,7 +11,7 @@ Let $A$ be an $m$-dimensional Alexandrov space with curvature at least $-1$ and 
 Then there is a compact set $Q$ such that 
 \begin{enumerate}[(i)]
  \item $Q$ admits a bi-Lipschitz embedding into $\RR^{m-2}$ and
- \item there is a neighborhood $U\ni p$ and $\eps>0$ such that $q\in Q\cap A'$ for any point $q\in U$ such that 
+ \item there is a neighborhood $U\ni p$ and $\eps>0$ such that $q\in Q\cap A'$ for any point $q\in U\cap A'$ such that 
  \[\theta(q)<\theta(p)+\eps.\]
 \end{enumerate}
 \end{thm}
@@ -41,7 +41,7 @@ where $\delta$ is a positive number that depends on $m$, $|x-y|$, $R$ and $\eps$
 \parit{Proof.}
 To simplify the presentation we will assume that $A$ is nonnegatively curved;
 it is straightforward to adapt the proof to the general case.
-That is, we need to show that 
+In this case, we need to show that 
 \[\frac{\vol^m B(x,R)_A}{\vol^m B(R)_{\RR^m}}\le \frac{\vol^{m-1} \Sigma_x}{\vol^{m-1} \SS^m}-\delta,\]
 
 Let us denote by $\tilde p$ a vector in $\T_x$ that is tangent to a geodesic path $\gamma\:[0,1]\zz\to A$ from $x$ to $p$.
@@ -50,14 +50,14 @@ By comparison, the map $p\mapsto \tilde p$ is a distance-noncontracting map.
 
 Since $\measuredangle\hinge yxz<\pi-\eps$ for any $z$, the image of the map $p\mapsto \tilde p$ does not include points in a cone $C$ behind $\tilde y$ of angle $\eps$.
 It follows that 
-\[\vol^m(B(0,R)_{\T_p}\setminus C)\ge \vol^m(B(x,R)_A\]
+\[\vol^m(B(0,R)_{\T_x}\setminus C)\ge \vol^m(B(x,R)_A\]
 for any $R>0$.
 
-Since $R>|x-y|$, the intersection $C\zz\cap B(0,R)_{\T_p}$ includes a ball of a certain radius $r>0$ that can be found in terms of $|x-y|$, $R$ and $\eps$.
-By Bishop--Gromov inequality, we get a positive lower bound on $\vol^m(C\cap B(0,R)_{\T_p})$ in terms of $m$, $|x-y|$, $R$, $\eps$ and $\vol^mB(0,R)_{\T_p}$.
+Since $R>|x-y|$, the intersection $C\zz\cap B(0,R)_{\T_x}$ includes a ball of a certain radius $r>0$ that can be found in terms of $|x-y|$, $R$ and $\eps$.
+By Bishop--Gromov inequality, we get a positive lower bound on $\vol^m(C\cap B(0,R)_{\T_x})$ in terms of $m$, $|x-y|$, $R$, $\eps$ and $\vol^mB(0,R)_{\T_x}$.
 
 Further, observe that 
-\[\frac{\vol^m(B(0,R)_{\T_p})}{\vol^m(B(0,R)_{\RR^m})}
+\[\frac{\vol^m(B(0,R)_{\T_x})}{\vol^m(B(0,R)_{\RR^m})}
 =
 \frac{\vol^{m-1} \Sigma_x}{\vol^{m-1} \SS^m}.
 \]
