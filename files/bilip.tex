@@ -11,7 +11,7 @@ Let $A$ be an $m$-dimensional Alexandrov space with curvature at least $-1$ and 
 Then there is a compact set $Q$ such that 
 \begin{enumerate}[(i)]
  \item $Q$ admits a bi-Lipschitz embedding into $\RR^{m-2}$ and
- \item there is a neighborhood $U\ni p$ and $\eps>0$ such that $q\in Q\cap A'$ for any point $q\in U\cap A'$ such that 
+ \item there is a neighborhood $U\ni p$ and $\eps>0$ such that $q\in Q$ for any point $q\in U\cap A'$ such that 
  \[\theta(q)<\theta(p)+\eps.\]
 \end{enumerate}
 \end{thm}
@@ -31,13 +31,6 @@ where $\delta$ is a positive number that depends on $m$, $|x-y|$, $R$ and $\eps$
  
 \end{thm}
 
-\begin{wrapfigure}{r}{35 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-200}
-\vskip0mm
-\end{wrapfigure}
-
 \parit{Proof.}
 To simplify the presentation we will assume that $A$ is nonnegatively curved;
 it is straightforward to adapt the proof to the general case.
@@ -47,14 +40,22 @@ In this case, we need to show that
 Let us denote by $\tilde p$ a vector in $\T_x$ that is tangent to a geodesic path $\gamma\:[0,1]\zz\to A$ from $x$ to $p$.
 By comparison, the map $p\mapsto \tilde p$ is a distance-noncontracting map.
 
-
 Since $\measuredangle\hinge yxz<\pi-\eps$ for any $z$, the image of the map $p\mapsto \tilde p$ does not include points in a cone $C$ behind $\tilde y$ of angle $\eps$.
 It follows that 
 \[\vol^m(B(0,R)_{\T_x}\setminus C)\ge \vol^m(B(x,R)_A\]
 for any $R>0$.
 
+\begin{wrapfigure}{r}{35 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-200}
+\vskip0mm
+\end{wrapfigure}
+
 Since $R>|x-y|$, the intersection $C\zz\cap B(0,R)_{\T_x}$ includes a ball of a certain radius $r>0$ that can be found in terms of $|x-y|$, $R$ and $\eps$.
-By Bishop--Gromov inequality, we get a positive lower bound on $\vol^m(C\cap B(0,R)_{\T_x})$ in terms of $m$, $|x-y|$, $R$, $\eps$ and $\vol^mB(0,R)_{\T_x}$.
+By Bishop--Gromov inequality, we get $\delta=\delta( m, |x-y|, R, \eps)>0$ such that 
+\[\frac{\vol^m(C\cap B(0,R)_{\T_x})}{\vol^m(B(0,R)_{\T_x})}>\delta.\]
+
 
 Further, observe that 
 \[\frac{\vol^m(B(0,R)_{\T_x})}{\vol^m(B(0,R)_{\RR^m})}
@@ -81,20 +82,17 @@ Once it is done, passing to the closure $Q=\bar Q'$ gives the required set.
 
 Note that for some $R>0$ the ball $B(p,10\cdot R)_A$ is almost isometric to the ball $B(0,10\cdot R)_{\T_p}$
 and we can assume that $U\subset B(p,R)_A$.
-By Bishop--Gromov inequality, we can assume that 
-\[\vol^m B(x,R)_A>\tfrac{\theta(p)-\eps}{2\cdot \pi}\vol^m B(0,R)_{\HH^m}\]
+By the volume convergence (see \cite[10.8]{BGP}) and Bishop--Gromov inequality, we can assume that 
+\[\vol^m B(x,R)_A>\tfrac{\theta(p)-\eps}{2\cdot \pi}\cdot\vol^m B(0,R)_{\HH^m}\]
 for any $x\in U$; here $\HH^m$ denotes the $m$-dimensional hyperbolic space. 
 
-Assume $x\in Q'$, in this case the Bishop--Gromov inequality implies that 
-\[\vol^m B(x,R)_A< \tfrac{\theta(p)+\eps}{2\cdot \pi}\vol^m B(0,R)_{\HH^m}.\]
-
-Choose $y\in Q'$.
+Assume $x$ and $y$ in $Q'$.
 Since $\eps$ is small, the lemma implies that there is $z\in A$ such that $\measuredangle\hinge yxz$ is near $\pi$.
 It follows that $\dir yx$ lies very close to the $\RR^{m-2}$-factor in~$\T_y$.
 The same way we can show that $\dir xy$ lies very close to the $\RR^{m-2}$-factor in~$\T_x$.
 In other words $[xy]$ lies nearly horizontally with respect to almost submetry $s$.
 In particular,  
-\[|s(x)-s(y)|_{\RR^{m-2}} \lessgtr \lambda^{\pm1}|x-y|_{A}\]
+\[|s(x)-s(y)|_{\RR^{m-2}} \lessgtr \lambda^{\pm1}\cdot |x-y|_{A}\]
 some constant $\lambda>1$.
 (In fact, we can take $\lambda$ arbitrarily close to $1$, but we do not need it.)
 \qeds

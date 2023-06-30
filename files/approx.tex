@@ -28,7 +28,10 @@ In this case, $|\jac_p(h|_Q)|=|d_0(h\circ s^{-1})|$.
 
 Note that we can choose a sequence of points $p_n\in M_n$ and a sequence of factors $c_n\to \infty$ such that $(c_n\cdot M_n,p_n)$ converges to the tangent space~$\T_p=\RR\times \Cone(\theta)$.
 
-Let $f_n\:c_n\cdot M_n\to \RR$ be as in \ref{thm:HG-converge} and $u_n=\nabla f_n/|\nabla f_n|$.
+
+Applying Perelman's construction \cite[7.1.1 and 7.2.3]{petrunin-conc} for a vertical vector in $\T_p=\RR\zz\times \Cone(\theta)$,
+we can choose a sequence of functions $f_n\:c_n\cdot M_n\to \RR$ satisfying the assumptions in~\ref{thm:HG-converge}; 
+let $u_n=\nabla f_n/|\nabla f_n|$.
 Consider the sequence of functions $\hat h_n\:c_n\cdot M_n\to \RR$ defined by 
 \[\hat h_n(x)=c_n\cdot(h_n(x)-h_n(p_n)).\]
 Since $\lambda=1$, we have that $|\langle\nabla \hat h_n,u_n\rangle|$ uniformly converges to $|d_0(h\zz\circ s^{-1})|$.
@@ -55,16 +58,16 @@ A function $f\:\Cone(\theta)\times\RR^{m-2}\to\RR$ will be called a \emph{vertic
 
 \begin{thm}{Proposition}\label{prop:vert-vert}
 Let $M_n\smooths{} \Cone(\theta)\times\RR^{m-2}$
-and $f_n,h_n\: M_n\zz\to \RR$ be sequences of strongly concave functions.
+and $f_n,h_n\: M_n\zz\to \RR$ be sequences of strongly concave smooth Lipschitz functions.
 Suppose that $\sec M_n\ge -\tfrac1n$ for each $n$,
-and $f_n\to f$, 
+and $f_n\to f$, and we have pointwise convergences
 $h_n\to h$ where $f$ and $h$ are vertical affine functions on $\RR^{m-2}\times \Cone(\theta)$.
 Then 
 \[K(\nabla f_n\wedge\nabla h_n)\cdot\vol^m \rightharpoonup0.\]
 
 \end{thm}
 
-Let $\Sigma$ be a convex surface in an $m$-dimensional Riemannian manifold $M$.
+Let $\Sigma$ be a convex hypersurface in an $m$-dimensional Riemannian manifold $M$.
 Suppose $x$ is a smooth point of $\Sigma$; that is, the tangent hyperplane $H_x$ of $\Sigma$ is defined at $x$;
 denote by $e_1,\dots,e_{m-1}$ an orthonormal basis of $H_x$.
 Set 
@@ -73,8 +76,11 @@ In other words,
 \[\Zc_\Sigma=\Sc-2\cdot\Ric(n_\Sigma,n_\Sigma),\]
 where $n_\Sigma$ is the unit normal vector to $\Sigma$.
 
+Since tangent hyperplane is defined at almost all points of convex hypersurface,
+ $\Zc_\Sigma(x)$ is defined almost everywhere on $\Sigma$.
+
 \begin{thm}{Lemma}\label{lem:nonsmooth-convex}
-Let $\Sigma$ be a strongly convex hypersurface in a Riemannian manifold with curvature $\ge -1$.
+Let $\Sigma$ be a strongly convex hypersurface in an $m$-dimensional Riemannian manifold with curvature $\ge -1$.
 Suppose that for some point $p\in \Sigma$ and $r<1$ the closed ball $\bar B(p,2\cdot r)$ in the intrinsic metric of $\Sigma$ is compact.
 
 Then, 
@@ -86,8 +92,40 @@ where $\const(m-1)$ is the constant in \ref{cor:Kmax}.
 
 In the general case, the surface $\Sigma$ can be approximated by a smooth convex surface;
 this can be done by applying the Green--Wu smoothing procedure; compare to \cite{AKP-buyalo}.
+
 It remains to pass to the limit.
+More precisely, suppose $\Sigma_n$ is a sequence of smooth  strongly convex hypersurfaces that converges to $\Sigma$.
+For each $n$, choose a point $p_n\in\Sigma_n$ such that $p_n\to p$. 
+By \cite[Theorem 1.2]{petrunin-QG}, $(\Sigma_n,p_n)$ converges to $(\Sigma,p)$ as in the pointed Gromov--Hausdorff convergence.
+
+Choose a point $x\in \Sigma$ with defined tangent plane $H_x$.
+Note that for any $\eps>0$ there is $\delta>0$ such that if $|x_n-x|<\delta$ for large $n$ and $x_n\in \Sigma_n$, then 
+\[|\Zc_{\Sigma_n}(x_n)-\Zc_{\Sigma}(x)|<\eps.\]
+Since $M$ is smooth, $\Zc_{\Sigma_n}$ is bounded in $B(p_n,r)_{\Sigma_n}$.
+Since $\vol_{m-1}$ on $\Sigma_n$ weakly converges to $\vol_{m-1}$ on $\Sigma$ (see \cite[10.8]{BGP}) we get that 
+\[\int_{x\in B(p_n,r)_{\Sigma_n}}\Zc_{\Sigma_n}(x)\cdot \vol^{m-1}\to \int_{x\in B(p,r)}\Zc_{\Sigma}(x)\cdot \vol^{m-1}\]
+as $n\to\infty$,
+whence the nonsmooth case follows.
 \qeds
+
+\parit{Proof of \ref{prop:vert-vert}.}
+Passing to a subsequence, we can assume that
+\[K(\nabla f_n\wedge\nabla h_n)\cdot\vol^m \rightharpoonup\mathfrak m\]
+for some measure $\mathfrak m$ on $\RR^{m-2}\times \Cone(\theta)$.
+
+First let us show that $\mathfrak m$ is supported on the singular locus.
+If $p$ is not singular, then it has a flat neighborhood.
+Therefore by a local version of \ref{A^0} (see also Section~\ref{sec:local})
+we get that $\mathfrak m$ vanisehes in a neighborhood $U\ni p$.
+Indeed, we can include in the sequence $M_n$ a subsequence of flat metrics and argue as in the introduction.
+
+
+Let $p$ be a singular point on $\Cone(\theta)\times \RR^{m-2}$;
+let us denote its liftings by $p_n\in M_n$.
+We can assume that $p$ corresponds to the origin of $\RR^{m-2}$.
+Choose points $a_{1,n},\zz\dots,a_{m-2,n}$, $b_{1,n},\zz\dots,b_{m-2,n}$ in $M_n$ such that the functions $f_{i,n}\zz=\dist_{a_{i,n}}\zz-|a_{i,n}-p|$ and $-h_{i,n}\zz=-\dist_{b_{i,n}}+|b_{i,n}-p|$ converge to $i^{\text{th}}$ vertical coordinate function on $\Cone(\theta)\zz\times \RR^{m-2}$.
+Further, choose points $c_{1,n},c_{2,n},c_{3,n}$ so that the functions $g_{i,n}\zz=\dist_{c_{i,n}}-|c_{i,n}-p|$ converge to Busemann functions for different horizontal rays in $\Cone(\theta)\times \RR^{m-2}$ emerging from $p$.
+Note that the latter implies that the angles $\angk{p_n}{c_{i,n}}{c_{j,n}}$ are bounded away from zero for all large~$n$.
 
 \begin{wrapfigure}{r}{35 mm}
 \vskip-0mm
@@ -95,14 +133,6 @@ It remains to pass to the limit.
 \includegraphics{mppics/pic-100}
 \vskip0mm
 \end{wrapfigure}
-
-\parit{Proof of \ref{prop:vert-vert}.}
-Let $p$ be a singular point on $\Cone(\theta)\times \RR^{m-2}$;
-let us denote its liftings by $p_n\in M_n$.
-We can assume that $p$ corresponds to the origin of $\RR^{m-2}$.
-Choose points $a_{1,n},\zz\dots,a_{m-2,n}$, $b_{1,n},\zz\dots,b_{m-2,n}$ in $M_n$ such that the functions $f_{i,n}\zz=\dist_{a_{i,n}}\zz-|a_{i,n}-p|$ and $-h_{i,n}\zz=-\dist_{b_{i,n}}+|b_{i,n}-p|$ converge to $i^{\text{th}}$ vertical coordinate function on $\Cone(\theta)\zz\times \RR^{m-2}$.
-Further, choose points $c_{1,n},c_{2,n},c_{3,n}$ so that the functions $g_{i,n}\zz=\dist_{c_{i,n}}-|c_{i,n}-p|$ converge to Busemann functions for different horizontal rays in $\Cone(\theta)\times \RR^{m-2}$ emerging from $p$.
-Note that the latter implies that the angles $\angk{p_n}{c_{i,n}}{c_{j,n}}$ are bounded away from zero for all large~$n$.
 
 By \cite[Lemma 7.2.1]{petrunin-conc}, there is an increasing concave function $\phi$ defined in a neighborhood of zero in $\RR$ such that $\phi'$ is close to 1 and for any $\eps>0$ and $i\ne j$ the function 
 \[s_{ij,n}
@@ -130,16 +160,20 @@ Suppose $d_xs_{ij,n}$ is linear and $|d_xs_{ij,n}|>\eps_0>0$.
 Then gradients $\nabla_{x_n}f_n$ and $\nabla_{x_n}h_n$ are nearly orthogonal to $\nabla_x s_{ij,n}$.
 
 Set $\Sigma_{ij,n}=\Sigma_{ij,n}(c)=\set{x\in M_n}{s_{ij,n}(x)=c}$.
-The argument above implies that for almost all points $x\in B(p_n,R)$ one of the sectional directions of the tangent directions of $\Sigma_{ij,n}$ is close to the sectional direction $\nabla f_n\wedge\nabla h_n$.
+The argument above implies that for almost all points $x\in B(p_n,R)$ one of the sectional directions of the tangent directions $\sigma$ of $\Sigma_{ij,n}$ is close to the sectional direction $\nabla f_n\wedge\nabla h_n$.
+In particular, given $\delta>0$, we have 
+\[K(\nabla f_n\wedge\nabla h_n)(x)\le K(\sigma)+\delta\cdot|\Rm(x)|\]
+for all large $n$.
 
 By \ref{lem:nonsmooth-convex} and the coarea formula, the sum of integral curvatures of $M_n$ in the directions of $\Sigma_{ij,n}$ at $x_n$ at the subsets where $|d_{x_n}s_{ij,n}|>\eps_0$ is bounded by $\const\cdot w$.
-Therefore, the same holds for the integral of $K(\nabla f_n\zz\wedge\nabla h_n)$.
+By \ref{cor:Kmax}, the same holds for the integral of $K(\nabla f_n\zz\wedge\nabla h_n)$ if $n$ is large.
 The proposition follows since $w$ can be taken arbitrarily small.
 \qeds
 
 
 \parit{Proof of the general case of \ref{prop:3parts:codim2+}.}
 Choose $m-2$ sequences of strongly concave functions $f_{1,n},\zz\dots, f_{m-2,n}\: M_n\to \RR$ that converge to vertical affine functions $f_1,\zz\dots,f_{m-2}$ on  $\Cone(\theta)\times \RR^{m-2}$ with orthonormal gradients.
+It is done using Perelman's construction \cite[7.1.1 and 7.2.3]{petrunin-conc} for the corresponding vertical vectors in $\Cone(\theta)\times \RR^{m-2}$.
 
 Note that the fields $e_{1,n}=\nabla f_{1,n}$, $\dots$, $e_{m-2,n}=\nabla f_{m-2,n}$ are nearly orthonormal;
 in particular, they are linear independent for all large $n$.

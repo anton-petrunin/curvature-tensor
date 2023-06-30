@@ -10,7 +10,8 @@ Recall \cite[Sec. 7]{petrunin-conc} that we can choose small $r>0$,
 finite set of points $\bm{a}_i$ near $a_i$,
 and a smooth concave increasing real-to-real function $\phi$ defined on an open interval such that 
 \[f_i=\sum_{x\in \bm{a}_i}\phi\circ\widetilde{\dist}_{x,r}\]
-is strongly a concave function that is defined in a neighborhood $U\ni p$.
+is strongly a concave function that is defined in a neighborhood $U\ni p$;
+it will be called \emph{smoothed distance chart}.
 
 Since $r$ is small and $\bm{a}_i$ is near $a_i$ we get that the functions $f_0, \dots, f_m$ are tight in $U$; see the definition in \cite{petrunin-conc}.
 In particular, the map $U\to\RR^m$ defined by $x\mapsto (f_1(x),\dots,f_m(x))$ is a coordinate system in $U$.
@@ -113,16 +114,20 @@ Note that $|\nabla_n f_n|$ can be expressed from $g^{ij}_n$ and $\partial_if_n$.
 Since these quantities are delta-converging, so is $|\nabla_n f_n|$.
 \qeds
 
-The following lemma relies on the DC-calculus which is discussed in Section~\ref{sec:DC}.
+The following lemma relies on the DC-calculus which is discussed in Section~\ref{sec:DC};
+this section includes the definition of DC and DC$_0$ functions, as well as DC convergence.
+Since \textit{test convergence implies DC convergence} (see \ref{obs:test-DC}),
+the lemma also holds for test-converging sequences of functions.
+
 
 \begin{thm}{Lemma}\label{lem:test-delta-partial-g}
-Let $M_n\smooths{} A$, $\dim A=m$;
-choose a common chart with range $\Omega\subset \RR^m$.
-Let $f_n\: M_n\to\RR$ be a sequence of test functions such that $f_n\zz\testto f\:A\to \RR$.
+Let $M_n\smooths{} A$.
+Choose a common chart $\bm{x}_n\:U_n\subset M_n\zz\to \Omega$ and $\bm{x}\:U\subset A\zz\to \Omega$ with range $\Omega\subset \RR^m$.
+Let $f_n\: M_n\to\RR$ be a sequence of smooth functions that DC connverges to a DC$_0$ function $f\:A\to \RR$.
+%Let $f_n\: M_n\to\RR$ be a sequence of test functions such that $f_n\zz\testto f\:A\to \RR$.
 Let us denote by $\partial_1,\dots,\partial_m$ the partial derivatives on $\Omega\subset \RR^m$.
 Denote by $g_{ij,n}$ and $g^{ij}_n$ the components of the metric tensors on $M_n$.
 Then  the partial derivatives $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$,  $\partial_j\partial_if_n$, as well as their products to uniformly delta-converging functions,  are weakly converging.
-
 
 \end{thm}
 
@@ -131,10 +136,32 @@ The weak convergence of $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$, and $\parti
 follows from \ref{metricBV}.
 By Observation~\ref{obs:delta-weak-uniform}, products of these partial derivatives to uniformly delta-converging sequences of functions is weakly delta-converging.
 
-By \ref{metricBV}, the limit measures of $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$, and $\partial_j\partial_if_n$ have a vanishing $(m\zz-1)$-density.
-Further, a limit of delta-converging sequence might be discontinues only at the singular set which has a vanishing $(m-1)$-Hausdorff measure.
-It follows that the measure $\mathfrak{m}_1-\mathfrak{m}_2$ in the definition of weak delta-convergence is vanishing. 
-Whence the weak convergence follows.
+Let $h_n\:M_n\to\RR$ be a uniformly delta-converging sequence.
+Note that its limit is well defined in $A^\circ$; denote it by $h$;
+let us extend it by $0$ to the whole $A$.
+
+Denote by $\mathfrak m_n$ one of the measures on $\Omega$ with the density $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$, or $\partial_j\partial_if_n$.
+Let $\mathfrak m$ be the corresponding limit measure $\partial_kg_{ij}$, $\partial_k g^{ij}$, or $\partial_j\partial_if$.
+We need to show that 
+\[\int_{\Omega} (h_n\circ\bm{x}_n^{-1}) \cdot \phi\cdot \mathfrak m_n
+\to
+\int_{\Omega} (h\circ\bm{x}^{-1}) \cdot \phi\cdot \mathfrak m\quad\text{as}\quad n\to\infty
+\eqlbl{eq:convegence}\]
+for any continuous function $\phi\:\Omega\to\RR$ with compact support.
+
+Choose $\eps>0$; let $\delta>0$ be as in \ref{def:delta-converge}.
+The set $S^\delta_\Omega=\Omega\setminus A^\delta_\Omega$ is a closed subset of $\Omega$.
+By~\ref{metricBV+}, $|\mathfrak m|(S^\delta_\Omega)=0$.
+Therefore we can choose an open neighborhood $N\subset \Omega$ of $S^\delta_\Omega$ such that $|\mathfrak m|(N)<\eps$.
+Choose two functions $\phi_0$ and $\phi_1$ with compact supports such that 
+$\supp \phi_0\subset N$,
+$\supp \phi_1\subset A^\delta_\Omega=\Omega\setminus S^\delta_\Omega$,
+and $\phi=\phi_0+\phi_1$.
+
+Note that the sequence $a_n=\int_{\Omega} \phi_0\cdot h_n\circ\bm{x}_n$ \emph{converges with error} $\eps_0=\eps\cdot \max\{\,|\phi_0|\,\}$;
+that is, the upper and lower limits of $a_n$ differ by at most $\eps_0$.
+Similarly $b_n=\int_{\Omega} \phi_1\cdot h_n\circ\bm{x}_n$ converges with error $\eps_1=\eps\cdot |\mathfrak m|\cdot \max\{\,|\phi_1|\,\}$.
+Since $\eps>0$ is arbitrary, we get \ref{eq:convegence}.
 \qeds
 
 \subsection{Proof modulo key lemma}\label{subsec:modulo-key}

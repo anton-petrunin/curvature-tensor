@@ -249,9 +249,9 @@ where $\omega$ is the measure on $\Cone(\theta)\times \RR$  described above.
 \end{thm}
 
 \parit{Proof; (\ref{cor:Ricci:Ricci}).}
-Passing to a subsequence if necessary, we can assume weak convergence of $\langle \Ric u_n,u_n\rangle\zz\cdot\vol^3$ to a measure $\mu$ on $\Cone(\theta)\times \RR$.
-Since $\sec M_n\ge -\tfrac1n$, we have that $\mu\ge 0$.
-Therefore it is sufficient to show that $\mu\le 0$.
+Passing to a subsequence if necessary, we can assume weak convergence of $\langle \Ric u_n,u_n\rangle\zz\cdot\vol^3$ to a measure $\mathfrak m$ on $\Cone(\theta)\times \RR$.
+Since $\sec M_n\ge -\tfrac1n$, we have that $\mathfrak m\ge 0$.
+Therefore it is sufficient to show that $\mathfrak m\le 0$.
 
 By \ref{thm:bochner-formula} we have that the following equality
 \begin{align*}
@@ -277,7 +277,7 @@ H_n\cdot\<u_n,\nabla\phi_n\>&\rightharpoonup 0,
 
 For the first convergence, it is sufficient to choose the sequence $\phi_n$ so that in addition it is universally bounded.
 Indeed, since $|\nabla f_n|\to 1$, we have that \ref{thm:HG-converge}
-implies the first convergence in \ref{eq:3->0}.
+implies the first convergence in~\ref{eq:3->0}.
 
 Similarly, to prove the second convergence in \ref{eq:3->0}, it is sufficient to assume in addition that $|\nabla\phi_n|$ is universally bounded and apply \ref{thm:HG-converge}.
 
@@ -299,8 +299,8 @@ Namely, in addition to the above conditions on $\phi_n$ we have to assume that t
 
 Finally, observe that the needed sequence exists.
 Indeed, one can take 
-\[\phi_n=(\sigma\circ \dist_q)\cdot (\psi\circ f_n)\]
-for appropriately chosen fixed mollifiers $\sigma,\psi\:\RR\to \RR$.
+\[\phi_n=(\sigma\circ \dist_{p_n})\cdot (\psi\circ f_n)\]
+for appropriately chosen fixed mollifiers $\sigma,\psi\:\RR\to \RR$ and $M_n\ni p_n\to p$.
 
 \parit{(\ref{cor:Ricci:vw}).}
 Since $G_n\rightharpoonup 0$, we get that curvature measure of level sets of $f_n$ weakly converges to the curvature of $\Cone(\theta)$.

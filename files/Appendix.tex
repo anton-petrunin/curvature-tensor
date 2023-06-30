@@ -126,8 +126,8 @@ It remains to apply the Gauss formula \ref{eq:gauss}.
  
 \section{DC-calculus}\label{sec:DC}
 
-Let $f$ be a continuous function defined on an open domain of a finite-dimensional Alexandrov space $A$.
-Recall that a function $f$ is called \emph{DC} if it can be presented locally as a difference between two concave functions.
+Let $f$ be a continuous function defined on an open domain of an $m$-dimensional Alexandrov space $A$.
+Recall that $f$ is \emph{DC} if it can be presented locally as a difference between two concave functions.
 Recall that for any point $p\zz\in A$ there is a $(-1)$-concave function defined in a  neighborhood  of $p$ \cite[3.6]{PerMorse}.
 Therefore we can say that $f$ is DC if and only if it can be presented locally as a difference between two semiconcave functions. 
 
@@ -139,23 +139,31 @@ such that $f_n=a_n-b_n$ and $f=a-b$ and the sequences
 $a_n$ and $b_n$ converge to functions $a$ and $b$ respectively.
 In this case, we say that $f_n$ is \emph{DC-converging} to $f=a-b\:A\to \RR$ as $n\to\infty$; briefly $f_n\DCto f$.
 
+A DC function $f\:A\to \RR$ is called \emph{DC$_0$} if it is continuously differentiable in $A^\circ$.
+More preciously, for any smoothed distance chart $\bm{x}\:U\subset A \to \RR^m$ (see Section~\ref{subsec:chart+delta}) the restriction $f\circ\bm{x}^{-1}|_{\bm{x}(A^\circ)}$ is continuously differentiable.
+
+{\sloppy
+
 \begin{thm}{Observation}\label{obs:test-DC}
-Any test function is DC.
+Any test function is DC$_0$.
 Moreover, test convergence implies DC-convergence. 
 \end{thm}
+
+}
 
 \parit{Proof.}
 Choose a test-function $f=\phi(\widetilde\dist_{p_1,r},\dots,\widetilde\dist_{p_n,r})$.
 Note that the function $\phi$ can be presented locally as a difference between $C^2$-smooth concave functions increasing in each argument; say $\phi=\psi-\chi$.
 
 For the first part of the observation, it remains to observe that the functions \[a=\psi(\widetilde\dist_{p_1,r},\zz\dots,\widetilde\dist_{p_n,r}),\qquad b=\chi(\widetilde\dist_{p_1,r},\zz\dots,\widetilde\dist_{p_n,r})\]
-are semiconcave.
+are semiconcave and continuously differentiable in $A^\circ$.
 
 Suppose that a sequence of functions $\phi_i$ is $C^2$-converging to $\phi$.
 Choose $x=(x_1,\dots,x_n)$ in the domain of definition of $\phi$.
 Note that $\phi_n$ and its partial derivatives up to order 2 are bounded;
-fix a bound $C$.
-Then in a neighborhood of $(x_1,\dots,x_n)$ we may choose $\psi_n$ that is uniquely defined by $\psi_n(x)=0$, $\partial_i\psi_n(x)=2\cdot C$ and $\partial_i^2\psi_n\equiv -C$; in this case, $\chi_n=\psi_n-\phi_n$ is concave.
+fix a bound $c$.
+Then in a neighborhood of $(x_1,\dots,x_n)$ we may choose $\psi_n$ that is uniquely defined by $\psi_n(x)=0$, $\partial_i\psi_n(x)=2\cdot c$, $\partial_i\partial_j\psi_n\equiv 0$ for $i\ne j$, and $\partial_i^2\psi_n\equiv -d$ for a large constant $d$. 
+In this case, $\chi_n=\psi_n-\phi_n$ is concave.
 Moreover, $C^2$-convergence of $\phi_n$ implies convergence of $\psi_n$ and $\chi_n$.
 Hence, the second statement follows.
 \qeds
@@ -171,28 +179,40 @@ Consider functions $f_n$ and $f$ defined on $U_n$ and $U$ respectively.
 Then $f_n\DCto f$ if and only if $f_n\circ \bm{x}_n^{-1}\DCto f\circ \bm{x}^{-1}$
 \end{thm}
 
-Further, straightforward modifications of \cite[Section 4]{PerDC} produce the following statement.
+The following statement is follows from the lemma in \cite[Section 3]{PerDC}.
+
+\begin{thm}{Proposition}\label{metricBV+}
+Let $A$ be an $m$-dimensional Alexandrov space and $\bm{x}\:U\to \RR^m$ --- a smoothed chart for $U\subset A$.
+Denote by $g_{ij}$ components of metric tensors in this chart
+and by $g^{ij}$ components of the inverse matrix. 
+Let $f\:U\to \RR$ be a DC$_0$ function.
+
+Then the partial derivatives $\partial_k g_{ij}$, $\partial_k g^{ij}$, $\partial_i\partial_jf_n$ are Radon measures on $A$ that has a vanishing on $\bm{x}^{-1}(A'\cup A'')$.
+\end{thm}
+
+
 
 \begin{thm}{Theorem}\label{metricBV}
 Let $M_n\smooths{} A$, $\dim A=m$; choose a common chart $\bm{x}_n$ defined on $U_n\subset M_n$, $\bm{x}$ defined on $U\subset A$ with a common range $\Omega\subset \RR^m$.
 Denote by $g_{ij,n}$ components of metric tensors in this chart
 and by $g^{ij}_n$ components of the inverse matrix. 
 Let $f_n\:U_n\to \RR$ be a test-converging sequence of functions.
-Then partial derivatives $\partial_k g_{ij,n}$, $\partial_k g^{ij}_n$, $\partial_i\partial_jf_n$ weakly converge to measures on $A$ that has a vanishing $(m-1)$-density;
-that is, if $\mathfrak{m}$ is a limit measure, then $\frac{\mathfrak{m}(B(p,r))}{r^{m-1}}\to 0$ as $r\to 0$.
+Then partial derivatives $\partial_k g_{ij,n}$, $\partial_k g^{ij}_n$, $\partial_i\partial_jf_n$ weakly converge to the Radon measures $\partial_k g_{ij}$, $\partial_k g^{ij}$, $\partial_i\partial_jf_n$ described in \ref{metricBV+}.
 \end{thm}
 
+We will modify the argument in \cite[Section 4]{PerDC} slightly.
 
-{\it Proof of the Theorem~\ref{metricBV}.}
+
+\parit{Proof.}
 Let's start with the partial derivatives of metric tensors.
 In \cite[Section 4.2]{PerDC}, it was shown that components of metric tensors can be expressed as a rational function of partial derivatives of distance functions to a finite collection of points.
 The distance functions are semiconcave, in particular DC.
 
 The base points $p_{i,n}\in M_n$ of these distance functions can be chosen so that they converge to some point $p_i\in A$.
 In this case, the distance functions are DC-converging.
-Now, applying \ref{prop:DC-conv} and repeating the argument in \cite[Section 4.3]{PerDC} we get the statement.
+Now, applying \ref{prop:DC-conv}, we get the statement.
 
-The case of $\partial_i\partial_jf_n$ is done by similar modifications of \cite[Section 4.4]{PerDC}.
+The case of $\partial_i\partial_jf_n$ is similarly.
 \qeds
 
 
