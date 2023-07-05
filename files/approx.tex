@@ -1,13 +1,13 @@
-\subsection{Three-dimensional case}
+\subsection{Three-dimensional case}\label{subsec:3d}
 
 
 \parit{Proof of the 3-dimensional case in \ref{prop:3parts:codim2+}.}
-Suppose $M_n\smooths{}A$ and $A$ is 3-dimensional.
+Suppose $M_n\smooths{}A$ and $\dim A=3$.
 Choose a set $Q\subset A$ that admits a bi-Lipschitz embedding into $\RR$. 
 
 Let us split $\mathfrak m$ into negative and positive part $\mathfrak m=\mathfrak m^+-\mathfrak m^-$; that is,
 \[\mathfrak m^\pm(X)\df\sup\set{\pm\mathfrak m(Y)}{Y\subset X}.\]
-Since the sectional curvature of $M_n$ is bounded below, we get that $\mathfrak m^-$ has bounded density; in other words, $\mathfrak m^-$ is a regular measure on $A$.
+Since the sectional curvature of $M_n$ is bounded below, we get that $\mathfrak m^-$ has bounded density; in other words, $\mathfrak m^-$ is a regular measure with respect to $\vol^3$ on $A$.
 Since $Q$ has zero volume, we get $\mathfrak m^-(Q)=0$.
 
 Set $\mathfrak n=\mathfrak m|_{Q}$; from above we have $\mathfrak n\ge 0$.
@@ -35,7 +35,7 @@ let $u_n=\nabla f_n/|\nabla f_n|$.
 Consider the sequence of functions $\hat h_n\:c_n\cdot M_n\to \RR$ defined by 
 \[\hat h_n(x)=c_n\cdot(h_n(x)-h_n(p_n)).\]
 Since $\lambda=1$, we have that $|\langle\nabla \hat h_n,u_n\rangle|$ uniformly converges to $|d_0(h\zz\circ s^{-1})|$.
-By \ref{cor:Ricci}(\ref{cor:Ricci:vw}), the sequence of measures $\qm(\hat h_n, \hat h_n)$ on $c_n\cdot M_n\to \RR$ weakly converges to $|d_0(h\zz\circ s^{-1})|^2\cdot\omega_{\Cone(\theta)\times\RR}$.
+By \ref{cor:Ricci}\textit{(\ref{cor:Ricci:vw})}, the sequence of measures $\qm(\hat h_n, \hat h_n)$ on $c_n\cdot M_n\to \RR$ weakly converges to $|d_0(h\zz\circ s^{-1})|^2\cdot\omega_{\Cone(\theta)\times\RR}$.
 Recall that $\vol^1$-density of $\omega_{\Cone(\theta)\times\RR}$ on the singular line is $2\cdot \pi-\theta(p)$.
 
 Observe that 
@@ -45,7 +45,7 @@ c_n\cdot \qm(h_n, h_n)[B(p_n,\tfrac1{c_n})_{M_n}]\]
 Whence $(2\cdot \pi-\theta(p))\cdot(\jac_p(h|_Q))^2$ is the $\vol^1$-density of $\mathfrak n$ at $p$ as required.
 \qeds
 
-\subsection{Higher-dimensional case}
+\subsection{Higher-dimensional case}\label{subsec:4d}
 
 
 Suppose $M_n\smooths{} \Cone(\theta)\times \RR^{m-2}$, where $\Cone(\theta)$ denotes a two-dimensional cone with the total angle $\theta<2\cdot\pi$.
@@ -60,8 +60,7 @@ A function $f\:\Cone(\theta)\times\RR^{m-2}\to\RR$ will be called a \emph{vertic
 Let $M_n\smooths{} \Cone(\theta)\times\RR^{m-2}$
 and $f_n,h_n\: M_n\zz\to \RR$ be sequences of strongly concave smooth Lipschitz functions.
 Suppose that $\sec M_n\ge -\tfrac1n$ for each $n$,
-and $f_n\to f$, and we have pointwise convergences
-$h_n\to h$ where $f$ and $h$ are vertical affine functions on $\RR^{m-2}\times \Cone(\theta)$.
+and we have pointwise convergences $f_n\to f$ and $h_n\to h$, where $f$ and $h$ are vertical affine functions on $\RR^{m-2}\times \Cone(\theta)$.
 Then 
 \[K(\nabla f_n\wedge\nabla h_n)\cdot\vol^m \rightharpoonup0.\]
 
@@ -98,14 +97,17 @@ More precisely, suppose $\Sigma_n$ is a sequence of smooth  strongly convex hype
 For each $n$, choose a point $p_n\in\Sigma_n$ such that $p_n\to p$. 
 By \cite[Theorem 1.2]{petrunin-QG}, $(\Sigma_n,p_n)$ converges to $(\Sigma,p)$ as in the pointed Gromov--Hausdorff convergence.
 
-Choose a point $x\in \Sigma$ with defined tangent plane $H_x$.
-Note that for any $\eps>0$ there is $\delta>0$ such that if $|x_n-x|<\delta$ for large $n$ and $x_n\in \Sigma_n$, then 
+Recall that $\vol_{m-1}$ on $\Sigma_n$ weakly converges to $\vol_{m-1}$ on $\Sigma$ (see \cite[10.8]{BGP}).
+Further, since $M$ is smooth, $\Zc_{\Sigma_n}$ is bounded in $B(p_n,r)_{\Sigma_n}$.
+Therefore, 
+\[\int_{x\in B(p_n,r)_{\Sigma_n}}\Zc_{\Sigma_n}(x)\cdot \vol^{m-1}\to \int_{x\in B(p,r)_{\Sigma}}\Zc_{\Sigma}(x)\cdot \vol^{m-1}\qquad\text{as}\qquad n\to\infty\]
+follows if for almost all $x\in \Sigma$ we have that
+\textit{for any $\eps>0$ there is $\delta>0$ such that
+if $x_n\in \Sigma_n$ and $|x_n-x|<\delta$ for large $n$,
+then}
 \[|\Zc_{\Sigma_n}(x_n)-\Zc_{\Sigma}(x)|<\eps.\]
-Since $M$ is smooth, $\Zc_{\Sigma_n}$ is bounded in $B(p_n,r)_{\Sigma_n}$.
-Since $\vol_{m-1}$ on $\Sigma_n$ weakly converges to $\vol_{m-1}$ on $\Sigma$ (see \cite[10.8]{BGP}) we get that 
-\[\int_{x\in B(p_n,r)_{\Sigma_n}}\Zc_{\Sigma_n}(x)\cdot \vol^{m-1}\to \int_{x\in B(p,r)}\Zc_{\Sigma}(x)\cdot \vol^{m-1}\]
-as $n\to\infty$,
-whence the nonsmooth case follows.
+This condition holds if the tangent plane $H_x$ is defied.
+Whence the nonsmooth case follows.
 \qeds
 
 \parit{Proof of \ref{prop:vert-vert}.}
@@ -116,8 +118,8 @@ for some measure $\mathfrak m$ on $\RR^{m-2}\times \Cone(\theta)$.
 First let us show that $\mathfrak m$ is supported on the singular locus.
 If $p$ is not singular, then it has a flat neighborhood.
 Therefore by a local version of \ref{A^0} (see also Section~\ref{sec:local})
-we get that $\mathfrak m$ vanisehes in a neighborhood $U\ni p$.
-Indeed, we can include in the sequence $M_n$ a subsequence of flat metrics and argue as in the introduction.
+we get that $\mathfrak m$ vanishes in a neighborhood $U\ni p$.
+Indeed, we can include copies of $U$ (which is flat) in the approximating sequence sequence $U_n\subset M_n$ of $U$ and argue as in the introduction.
 
 
 Let $p$ be a singular point on $\Cone(\theta)\times \RR^{m-2}$;
@@ -162,8 +164,8 @@ Then gradients $\nabla_{x_n}f_n$ and $\nabla_{x_n}h_n$ are nearly orthogonal to 
 Set $\Sigma_{ij,n}=\Sigma_{ij,n}(c)=\set{x\in M_n}{s_{ij,n}(x)=c}$.
 The argument above implies that for almost all points $x\in B(p_n,R)$ one of the sectional directions of the tangent directions $\sigma$ of $\Sigma_{ij,n}$ is close to the sectional direction $\nabla f_n\wedge\nabla h_n$.
 In particular, given $\delta>0$, we have 
-\[K(\nabla f_n\wedge\nabla h_n)(x)\le K(\sigma)+\delta\cdot|\Rm(x)|\]
-for all large $n$.
+\[K(\nabla f_n\wedge\nabla h_n)(x)\le K(\sigma)+\delta\cdot|K_{max}(x)|\]
+for all large $n$ ($K_{max}$ is defined in \ref{cor:Kmax}).
 
 By \ref{lem:nonsmooth-convex} and the coarea formula, the sum of integral curvatures of $M_n$ in the directions of $\Sigma_{ij,n}$ at $x_n$ at the subsets where $|d_{x_n}s_{ij,n}|>\eps_0$ is bounded by $\const\cdot w$.
 By \ref{cor:Kmax}, the same holds for the integral of $K(\nabla f_n\zz\wedge\nabla h_n)$ if $n$ is large.
@@ -206,7 +208,7 @@ Note that for $\theta=0$, the last argument implies the following:
 \begin{thm}{Claim}
 Let $M_n\smooths{} A$.
 If $A$ has a flat open set $U$,
-then $|K_{\max}|\zz\cdot\vol_n\zz\rightharpoonup0$ on $U$. 
+then $|K_{max}|\zz\cdot\vol_n\zz\rightharpoonup0$ on $U$. 
 \end{thm}
 
 In particular, the weak limit of dual curvature tensor has support on the singularity of $\Cone(\theta)\times \RR^{m-2}$.

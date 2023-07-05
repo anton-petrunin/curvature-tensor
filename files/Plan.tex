@@ -13,7 +13,7 @@ and a smooth concave increasing real-to-real function $\phi$ defined on an open 
 is strongly a concave function that is defined in a neighborhood $U\ni p$;
 it will be called \emph{smoothed distance chart}.
 
-Since $r$ is small and $\bm{a}_i$ is near $a_i$ we get that the functions $f_0, \dots, f_m$ are tight in $U$; see the definition in \cite{petrunin-conc}.
+Since $r$ is small, and all points in $\bm{a}_i$ are near $a_i$ we get that the functions $f_0, \dots, f_m$ are tight in $U$; see the definition in \cite{petrunin-conc}.
 In particular, the map $U\to\RR^m$ defined by $x\mapsto (f_1(x),\dots,f_m(x))$ is a coordinate system in $U$.
 
 The presented construction can be lifted to $M_n$.
@@ -31,7 +31,7 @@ For example, given a function $f\:\Omega\to \RR$, we denote by $\nabla_nf$ and $
 Recall that $A^\delta$ denotes the set of $\delta$-strained points in $A$.
 For a fixed common chart $\bm{x}$ we will use notation $A^\delta_\Omega$ for the image $\bm{x}(A^\delta)\subset \Omega$.
 
-Part \ref{prop:3parts}(\ref{prop:3parts:reg}) will follow from certain estimates in one common chart.
+Part \ref{prop:3parts}\textit{(\ref{prop:3parts:reg})} will follow from certain estimates in one common chart.
 
 \begin{thm}{Definitions}\label{def:delta-converge}
 Let $M_n\smooths{} A$, $\dim A=m$;
@@ -45,7 +45,7 @@ if the following conditions hold:
 \[|(\mathfrak m_1-\mathfrak m_2)(S)|<\eps\]
 for any Borel set $S\subset A^\delta_\Omega$.
 \end{itemize}
-A sequence of functions $f_n$ on $\Omega$ is called \emph{weakly delta-converging} if the measures $f_n\cdot \vol_n$ are weakly delta-converging.
+A sequence of bounded functions $f_n$ on $\Omega$ is called \emph{weakly delta-converging} if the measures $f_n\cdot \vol_n$ are weakly delta-converging.
 
 A sequence of functions $f_n$ defined on $\Omega$ is called \emph{uniformly delta-converging}
 if the following conditions hold:
@@ -82,11 +82,10 @@ moreover, $\det g_{ij,n}$ is bounded away from zero;
 \end{thm}
 
 \parit{Proof.}
-Part (\ref{lem:test-delta-f}) is trivial.
+Part \textit{(\ref{lem:test-delta-f})} is trivial.
 
 \parit{(\ref{lem:test-delta-partial}).}
-Suppose $a_0, a_1,\dots,a_m$ struts $p$ (see the definition in \cite{AKP}) and such that the geodesics $[pa_i]$ are uniquely defined.
-
+Suppose $a_0, a_1,\dots,a_m$ struts $p$ (see the definition in \cite{AKP}), and the geodesics $[pa_i]$ are uniquely defined.
 In this case, for any sequence of points $a_{i,n}, p_n\in M_n$ such that $a_{i,n}\to a_i$, and $p_n\to p$ as $n\to\infty$, we have
 \[\lim_{n\to\infty}\measuredangle \hinge{p_n}{a_{i,n}}{a_{j,n}}\ge \measuredangle \hinge{p}{a_i}{a_j}.\]
 
@@ -107,7 +106,7 @@ then the calculations above go thru with a small error.
 Whence the statement follows.
 
 \parit{(\ref{lem:test-delta-g}).}
-This part follows from the proof of (\ref{lem:test-delta-partial}) since $g^{ij}_n\zz=\langle d_px_i,d_px_j\rangle_n$ and $g_{ij,n}$ can be expressed thru~$g^{ij}_n$.
+This part follows from the proof of \textit{(\ref{lem:test-delta-partial})} since $g^{ij}_n\zz=\langle d_px_i,d_px_j\rangle_n$ and $g_{ij,n}$ can be expressed thru~$g^{ij}_n$.
 
 \parit{(\ref{lem:test-delta|nabla|}).}
 Note that $|\nabla_n f_n|$ can be expressed from $g^{ij}_n$ and $\partial_if_n$.
@@ -149,18 +148,21 @@ We need to show that
 \eqlbl{eq:convegence}\]
 for any continuous function $\phi\:\Omega\to\RR$ with compact support.
 
-Choose $\eps>0$; let $\delta>0$ be as in \ref{def:delta-converge}.
+Choose $\eps>0$; let $\delta>0$ be as in \ref{def:delta-converge} (for $h_n$).
 The set $S^\delta_\Omega=\Omega\setminus A^\delta_\Omega$ is a closed subset of $\Omega$.
 By~\ref{metricBV+}, $|\mathfrak m|(S^\delta_\Omega)=0$.
 Therefore we can choose an open neighborhood $N\subset \Omega$ of $S^\delta_\Omega$ such that $|\mathfrak m|(N)<\eps$.
-Choose two functions $\phi_0$ and $\phi_1$ with compact supports such that 
-$\supp \phi_0\subset N$,
-$\supp \phi_1\subset A^\delta_\Omega=\Omega\setminus S^\delta_\Omega$,
-and $\phi=\phi_0+\phi_1$.
+Choose two nonnegative continuous functions $\phi_0$ and $\phi_1$ such that 
+\[\phi=\phi_0+\phi_1,
+\qquad
+\supp \phi_0\subset N,
+\qquad
+\supp \phi_1\subset A^\delta_\Omega=\Omega\setminus S^\delta_\Omega.\]
 
-Note that the sequence $a_n=\int_{\Omega} \phi_0\cdot h_n\circ\bm{x}_n$ \emph{converges with error} $\eps_0=\eps\cdot \max\{\,|\phi_0|\,\}$;
-that is, the upper and lower limits of $a_n$ differ by at most $\eps_0$.
-Similarly $b_n=\int_{\Omega} \phi_1\cdot h_n\circ\bm{x}_n$ converges with error $\eps_1=\eps\cdot |\mathfrak m|\cdot \max\{\,|\phi_1|\,\}$.
+Note that the sequence $a_n=\int_{\Omega} (h_n\circ\bm{x}_n^{-1}) \cdot \phi_0\cdot \mathfrak m_n$ \textit{converges with error} 
+$\eps_0=\eps\cdot c \cdot\max\{\,|\phi|\,\}$, where $c$ is a bound on $|h_n|$. 
+In other words, the upper and lower limits of $a_n$ differ by at most~$\eps_0$.
+Similarly, $b_n=\int_{\Omega} (h_n\circ\bm{x}_n^{-1}) \cdot \phi_1\cdot \mathfrak m_n$ converges with error $\eps_1=\eps\cdot |\mathfrak m|\cdot c \cdot\max\{\,|\phi|\,\}\,\}$.
 Since $\eps>0$ is arbitrary, we get \ref{eq:convegence}.
 \qeds
 
@@ -173,7 +175,7 @@ Then $\Rm_{ijsr,n}\cdot \vol^m_n$ is a weakly delta-converging sequence of measu
 \end{thm}
 
 The proof of the key lemma will take the remaining part of this section;
-in the current subsection, we show that it implies \ref{prop:3parts}(\ref{prop:3parts:reg}).
+in the current subsection, we show that it implies \ref{prop:3parts}\textit{(\ref{prop:3parts:reg})}.
 
 \parit{Proof of \ref{prop:3parts}(\ref{prop:3parts:reg}) modulo \ref{A^0}.}
 Recall that components of $\qm_n$ can be expressed from the components of $\Rm_n$.
@@ -191,6 +193,5 @@ is delta-converging.
 
 Finally, recall that 
 \[A^\circ=\bigcap_{\delta>0}A^\delta.\]
-Therefore delta-convergence of $\qm_n(f_{1,n},\dots,f_{m-2,n},h_{1,n},\zz\dots,h_{m-2,n})$ implies \ref{prop:3parts}(\ref{prop:3parts:reg}).
-%??? надо добавить про C^1-delta...
+Therefore delta-convergence of $\qm_n(f_{1,n},\dots,f_{m-2,n},h_{1,n},\zz\dots,h_{m-2,n})$ implies \ref{prop:3parts}\textit{(\ref{prop:3parts:reg})}.
 \qeds

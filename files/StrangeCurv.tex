@@ -43,7 +43,7 @@ In the assumptions of Proposition~\ref{strconvergence}, $\Int_n\zz\cdot \vol^3_n
 The proof of this lemma uses the convergence of curvature measures
 $\Int_n\cdot \vol^2$
 on  the 2-dimension level sets of concave functions $f$ and the coarea formula.
-Recall that the sequence $|\nabla_n f|$ is only weakly delta-converge (see \ref{lem:test-delta}(\ref{lem:test-delta|nabla|})).
+Recall that the sequence $|\nabla_n f|$ is only weakly delta-converge (see \ref{lem:test-delta}\textit{(\ref{lem:test-delta|nabla|})}).
 Since the factor $|\nabla_n f|$ appears in the coarea formula,
 we get that only weak delta-convergence of $\Int_n\cdot \vol^3_n$.
 
@@ -109,7 +109,7 @@ $$\int\limits_{s\in \Omega}\Int_n(s)\cdot\phi(s)\cdot\vol^3_n
  \frac{\phi_n(s)}{|\nabla_n f(s)|}\cdot\Int_n(s)\cdot \vol^2.\eqlbl{eq:Int-coarea}$$
  
 Note that $\nabla_n f$ is bounded away from zero.
-By \ref{lem:test-delta}(\ref{lem:test-delta|nabla|}), $\frac{1}{|\nabla_n f(s)|}$ is uniformly delta-converging.
+By \ref{lem:test-delta}\textit{(\ref{lem:test-delta|nabla|})}, $\frac{1}{|\nabla_n f(s)|}$ is uniformly delta-converging.
 Recall that $\Int_n\cdot \vol^2$ are weakly converging measures on $L_n$ \cite[VII \S13]{AZ}.
 Therefore \ref{obs:delta-weak-uniform} implies
 that $\Int_n\cdot\vol^3_n$ is weakly delta-converging measures on $M_n$.
@@ -138,8 +138,6 @@ Let us rewrite the first term of \ref{eq:HnablaU} in coordinates:
 +
 \tfrac{u^i_n}{2}\cdot\partial_i \log \det g_{n}\Bigr)\biggr]
 \cdot
-\\
-&\cdot
 \biggl[\sum_{i,j}  u_n^i\cdot \partial_i \phi\biggr]
 \cdot\sqrt {\det g_n}
 \cdot dx^1 dx^2 dx^3.
@@ -172,9 +170,8 @@ we have
 dx^1 dx^2 dx^3\cdot
 \sum_{i,j,k}
 u^i_n\cdot \partial_k \phi\cdot\sqrt{\op{det}g_{n}}\cdot
-\\
-\cdot\biggl(
-\partial_i u^k_n&+
+\biggl(
+\partial_i u^k_n+
 \tfrac{u^j_n}2
 \cdot
 \sum_s
@@ -193,6 +190,6 @@ The convergence follows by the same argument.
 
 \parit{Proof of Proposition~\ref{strconvergence}.}
 By \ref{eq:Bochner2}, \ref{Int}, and \ref{HnablaU} we get that $\Str_n(u_n,u_n)\zz\cdot \vol^3_n$ is a weakly delta-converging sequence of measures.
-It remains to apply \ref{lem:test-delta}(\ref{lem:test-delta|nabla|}) and
+It remains to apply \ref{lem:test-delta}\textit{(\ref{lem:test-delta|nabla|})} and
 \ref{obs:delta-weak-uniform}.
 \qeds

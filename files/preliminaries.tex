@@ -13,7 +13,7 @@ Suppose $A,A_1,A_2,\dots{} \in \Al^m$ and $A_n\GHto A$.
 That is, $A_n$ converges to 
 $A$ in the sense of Gromov--Hausdorff;
 since $A\in \Al^m$, we have no collapse.
-Denote by $a_n\:A_n\to A$ the Hausdorff approximations.
+Denote by $a_n\:A_n\to A$ the corresponding Hausdorff approximations.
 If $A$ is compact, then
 by Perelman's stability theorem \cite{PerStab,KapStab} we can (and will) assume that $a_n$ is a homeomorphism for every sufficiently large $n$.
 In the case of noncompact limit, we assume that for any $R$, the restriction of $a_n$ to an $R$-neighborhood of the marked point is a homeomorphism to its image for every sufficiently large $n$.
@@ -28,7 +28,7 @@ By Perelman's stability theorem any smoothable Alexandrov space is a topological
 
 \subsection{Weak convergence of measures}
 
-In this subsection we give a formal definition of weak convergence of measures.
+In this subsection we define weak convergence of measures.
 For more detailed definitions and terminology, we refer to
 \cite{GMS}.
 
@@ -45,7 +45,7 @@ Suppose $A_n\GHto A$ with Hausdorff approximations $a_n\:A_n\zz\to A$ and
 $\mathfrak m_n$ is a measure on $A_n$.
 We say that $\mathfrak m_n$ \emph{weakly converges} to a measure $\mathfrak m$ on $A$ (briefly $\mathfrak m_n\rightharpoonup \mathfrak m$) if the pushforwards $\mathfrak m_n'$ of $\mathfrak m_n$ to $A$  by the Hausdorff approximations $a_n\:A_n\to A$ weakly converge to 
 $\mathfrak m$.
-If the condition $\langle \mathfrak m_n'|f\rangle \to \langle \mathfrak m|f\rangle $ holds only for functions $f$ with support in an open subset $\Omega\subset A$, then we say that $\mathfrak m_n$ \emph{weakly converges to $\mathfrak m$ in $\Omega$}.
+If the condition $\langle \mathfrak m_n'|f\rangle \to \langle \mathfrak m|f\rangle $ holds only for functions $f$ with support in an open subset $\Omega\subset A$, then we say that $\mathfrak m_n$ \emph{weakly converges} to $\mathfrak m$ in $\Omega$.
 
 Equivalently, the weak convergence can be defined using the uniform convergence of functions.
 We say that  a sequence $f_n\in C_c(A_n)$
@@ -60,10 +60,10 @@ we have $\langle \mathfrak m_n|f_n\rangle \to \langle \mathfrak m|f\rangle $.
 
 \subsection{Test functions}\label{sec:test-functions}
 
-In this subsection, we introduce a class of \emph{test functions} and define their convergence.
+In this subsection, we introduce a class of test functions and define their convergence.
 
 Test functions form a narrow class of functions defined via a formula.
-It is just one possible choice of a class containing sufficiently smooth DC functions; see Section~\ref{sec:DC}.
+It is just one possible choice of a class containing sufficiently smooth DC functions; see the remarks in the next section.
 
 Recall that the distance between points $x,y$ in a metric space is denoted by $|x-y|$;
 we will denote by $\dist_x$ the distance function $\dist_x\:y\mapsto |x-y|$.
@@ -107,26 +107,15 @@ On a smooth complete Riemannian manifold, test functions
 include all $C^2$-smooth functions with compact support.
 \end{thm}
 
-The test functions are liftable;
-in other words any test function on Alexandrov space can be approximated by a test function on a nearby Riemannian manifold.
-This is the main reason to use test functions as the main class.
-On the other hand, one test function might be have very different presentations that lead to different test convergences.
-Thus to prove invariance of a functional defined on test functions we need to use the $C^1$-delta convergence which is more general.
-We could use other classes of functions as well. 
-For example, a subclass of DC$_0$ functions (see Section \ref{sec:DC})
-or a subclass of $C^1$-delta function (see Section \ref{sec:concept}).
-Of cause we have to guarantee the the choosen subclass is liftable.
-Hope more natural settings will be found eventually.
-
 \subsection[\texorpdfstring{$C^1$-delta convergence}{C¹-delta convergence}]%
 {$\bm{C^1}$-delta convergence}\label{sec:concept}
 
 Here we introduce $C^1$-delta convergence.
-It will be necessary to formulate the main theorem in an invariant way, but, except for \ref{sec:test-convergence}, everywhere in the proofs we will use test convergence instead.
+It will be necessary to formulate the main theorem in an invariant way, but, except for \ref{sec:test-convergence}, everywhere in the proofs we will use test convergence and occasionally DC convergence instead.
 (As it claimed in \ref{clm:test=>smooth} test convergence implies $C^1$-delta convergence.)
 By that reason, \textit{it would be wise to skip this section for the first reading}.
 
-The $C^1$-delta convergence will be used together with other delta convergence introduced in~\ref{subsec:chart+delta}.
+The $C^1$-delta convergence will be used together with other delta convergences introduced in~\ref{subsec:chart+delta}.
 
 \parbf{Convergence of vectors.}
 Let $A$ be an Alexandrov space, we denote by $\T A$ the set of all tangent vectors at all points.
@@ -176,9 +165,10 @@ A function $f\:A\to\RR$ is called $C^1$-delta smooth if for any compact set $K\s
 \[|Vf-\acute{\lim_{n\to\infty}} V_nf|<\eps,\]
 where ``\,$\acute{\lim}$\,'' stands for an arbitrary partial limit.
 
-Suppose $M_n\smooths{} A$, a sequence of $C^1$-smooth functions $f_n\:M_n\zz\to\RR$ is called \emph{$C^1$-delta converging} to $f\:A\to \RR$ if  $f_n$ converges to $f$ pointwise and
+Suppose $M_n\smooths{} A$.
+A sequence of $C^1$-smooth functions $f_n\:M_n\zz\to\RR$ is called \emph{$C^1$-delta converging} to $f\:A\to \RR$ if  $f_n$ converges to $f$ pointwise and
 for any compact set $K\subset A$ and any $\eps>0$ there is $\delta>0$
-such that any sequence of unit vectors $V_n\in \T_{p_n} M_n$ that converges to a vector $V\zz\in \T_p A$ and has a $\delta$-opposite vector and such that $p\in K$ we have
+such that if a sequence of unit vectors $V_n\in \T_{p_n} M_n$ converges to a vector $V\zz\in \T_p A$ such that $p\in K$ and $V$ has a $\delta$-opposite vector, then we have
 \[|Vf-\acute{\lim_{n\to\infty}} V_nf_n|<\eps.\]
 
 \begin{thm}{Claim}\label{clm:test=>smooth}
@@ -214,7 +204,7 @@ Choose points $s_n$ and $p_n$ that converge to $s$ and $p$ respectively.
 By \ref{obs:unique-geod}, the directions $W_n$ of $[p_ns_n]$ converge to $W$.
 Note that $W_n$ is $\delta$-opposite to $V_n$ for all large $n$.
 
-Repeating the above argument we get 
+Repeating the above argument, we get 
 \[W\widetilde{\dist}_{q,r}\le  \liminf_{n\to\infty}W_n\widetilde{\dist}_{q_n,r}.\]
 Applying \ref{eq:|(V+W)tildedist|<delata} we get $C^1$-delta convergence of $\widetilde{\dist}_{q_n,r}$ and, in particular, $C^1$-delta smoothness of $\widetilde{\dist}_{q,r}$.
 Applying the definition of test function, we get the result.
@@ -227,11 +217,16 @@ Given a smoothing $M_n\smooths{} A$ and a test function $f\:A\to\RR$,
 there is a sequence of $C^1$-smooth functions $f_n\:M_n\to \RR$ such that $f_n\smoothto f$.
 \end{thm}
 
-\parbf{Remark.}
-The test functions with $C^1$-delta smooth convergence will be used to define the convergence of measure-valued tensors.
-Instead of test functions, we could use another class of functions that meets \ref{cor:liftability}.
+\parbf{Remarks.}
+In the next section we define measure-valued tensor as a functional on an array of test functions.
+Note that, one test function might be have very different presentations that lead to different test convergences.
+Thus to prove invariance of measure-valued curvature tensor we need to use the $C^1$-delta convergence which is more general than test convergence.
+We could use other classes of functions as well. 
+For example, a subclass of DC$_0$ functions (see Section \ref{sec:DC})
+or a subclass of $C^1$-delta function (see Section \ref{sec:concept}).
+Of cause we have to have an analog of \ref{cor:liftability} for the chosen class.
+Hope a more natural settings will be found eventually.
 
- 
 \subsection{Tensors}\label{subsec:tensors}
 
 In this subsection, we define measure-valued tensors on Alexandrov spaces.

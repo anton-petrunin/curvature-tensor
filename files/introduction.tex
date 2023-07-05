@@ -92,7 +92,7 @@ Suppose that the limit curvature tensor of Alexandrov space $A$ as in the main t
 Show that $A$ is an Alexandrov space with curvature bounded below by~$K$.
 \end{thm}
 
-The theorem makes it possible to define a curvature tensor for every \emph{smoothable} Alexandrov space.
+The theorem makes it possible to define a curvature tensor for every \textit{smoothable} Alexandrov space.
 It is expected that the same can be done for general Alexandrov space; so the following problem has to have a solution:
 
 \begin{thm}{Problem}\label{prob:curvature}
@@ -100,7 +100,7 @@ Extend the definition of measure-valued curvature tensor to general Alexandrov s
 \end{thm}
 
 If this is the case, then one may expect to have a generalization of the Gauss formula for the curvature of a convex hypersurface, which in turn might lead to a solution of the following open problems in Alexandrov geometry.
-This conjecture is open even for convex sets in \emph{smoothable} Alexandrov space.
+This conjecture is open even for convex sets in \textit{smoothable} Alexandrov space.
 
 \begin{thm}{Conjecture}
 The boundary of an Alexandrov space equipped with its intrinsic metric is an Alexandrov space with the same lower curvature bound.
@@ -134,20 +134,42 @@ First, we show that limit curvature vanishes on $A''$;
 this part is an easy application of the main result in \cite{petrunin-SC}.
 
 The $A'$-case is reduced to its partial case when the limit is isometric to the product of the real line and a two-dimensional cone.
-In the proof, we use a Bochner-type formula proved in Section~\ref{sec:bochner}.
+The proof uses a Bochner-type formula (\ref{thm:bochner-formula}) and Theorem \ref{thm:extimage-of-G-and-H} which is a more exact version of the following problem from \cite{petrunin-PIGTIKAL}.
+
+{
+
+\begin{wrapfigure}{r}{35 mm}
+\vskip-7mm
+\centering
+\includegraphics{mppics/pic-25}
+\vskip0mm
+\end{wrapfigure}
+
+\begin{thm}{Convex-lens problem}
+Let $D$ and $D'$ be two smooth discs with a common boundary that bound a convex set (a lens) $L$ in a positively-curved 3-dimensional Riemannian manifold $M$.
+Assume that the discs meet at a small angle.
+Show that the integral $\int_{D}k_1\cdot k_2$
+is small; here $k_1$ and $k_2$ denote the principal curvatures of $D$.
+\end{thm}
+
 
 The $A^\circ$-case is proved by induction.
 The base is the 2-dimensional case.
-Further, we apply the main theorem to level sets of special concave functions.
+Further, we apply the induction hypothesis to level sets of special concave functions.
 By the Gauss formula, these level sets have the same lower curvature bound. 
 In the proof, we use the Bochner-type formula together with the DC-calculus developed in \cite{PerDC}.
+The first step in the induction is slightly simpler.
 
-The higher-dimensional case uses the dimension 3 plus an extra estimate.
+}
+
+As a rule, the calculus is done in the approximating sequence of Riemannian manifolds.
 
 \parbf{Acknowledgments.}
 We wish to thank Sergei Ivanov for pointing out a gap in a preliminary version of this paper,
 John Lott for expressing his interest in a written version for many years,
 and Alexander Lytchak for helping us to write this paper in a more readable way.
+Our very special thanks to an anonymous referee, who suggested several dozens of refinements. 
 
 The first author was partially supported by the Russian Foundation for Basic Research grant 20-01-00070, 
-the second author was partially supported by the National Science Foundation grant DMS-2005279.
+the second author was partially supported by the National Science Foundation grant DMS-2005279
+and the Ministry of Education and Science of the Russian Federation, grant 075-15-2022-289.

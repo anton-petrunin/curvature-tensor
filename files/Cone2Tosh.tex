@@ -14,7 +14,7 @@ Moreover, the metric differential is defined by a bilinear form;
 its determinant is the Jacobian of $s^{-1}$, briefly $\jac s^{-1}$.
 The same way we can define $\jac (\bm{h}\circ s^{-1})$ (we can apply the standard Rademacher theorem this time).
 Further, set $\jac(\bm{h}|_Q)\zz=\jac (\bm{h}\circ s^{-1})/\jac s^{-1}$.
-It is straightforward to check that this definition is $\vol^k$-almost independent on the choice of $s$.
+It is straightforward to check that this definition is $\vol^k$-almost-everywhere independent on the choice of $s$.
 
 Consider the function
 \[\theta(p)=2\cdot\pi\cdot \tfrac{\vol^{m-1} \Sigma_p}{\vol^{m-1} \mathbb{S}^{m-1}},
@@ -27,11 +27,11 @@ Further note that for any point $p\in A'$, its tangent cone is isometric to the 
 $\Cone(\theta)\times\RR^{m-2}$, where $\theta=\theta(p)<2\cdot\pi$. 
 Since $\vol^{m-2}(A'')=0$, the measure $(2\pi-\theta)\cdot\vol^{m-2}$ vanishes on $A''$.
 
-Note that \ref{prop:3parts}(\ref{prop:3parts:codim2}) follows from Lemma~\ref{lem:A-prime-Q} and the following statement;
-it will be proved in this section.
+Note that \ref{prop:3parts}\textit{(\ref{prop:3parts:codim2})} follows from Lemma~\ref{lem:A-prime-Q} and the following statement;
+it will be proved in \ref{subsec:3d}--\ref{subsec:4d}.
 
 \begin{thm}{Proposition}\label{prop:3parts:codim2+}
-Let $\mathfrak m$ be one of two limit measures $\mathfrak m_i$ in \ref{prop:3parts} and $\bm{h}\zz=(h_1,\zz\dots,h_{m-2})\:A\zz\to \RR^{m-2}$.
+Let $\mathfrak m$ be one of two limit measures $\mathfrak m_i$ in \ref{prop:3parts} and $\bm{h}\zz=(h_1,\zz\dots,h_{m-2})\:A\zz\to \RR^{m-2}$ is an array of test functions.
 Suppose that $Q\subset A$ is a compact subset that admits a bi-Lipschitz embedding into $\RR^{m-2}$.
 Then
 \[\mathfrak m|_{Q}=(2\cdot\pi-\theta)\cdot (\jac(\bm{h}|_Q))^2\cdot \vol^{m-2}.\]
@@ -91,12 +91,12 @@ Moreover,
 \[\Hess_pu(v,v)\ge (1-\eps)\cdot \langle S_p(v),v\rangle\eqlbl{Hess=<shape}\]
 for any $p\in W_{a,b}$ and $v\in\T_pW_{a,b}$.
 Indeed, consider the geodesic $\gamma$ in $W_{a,b}$ such $\gamma(0)=p$ and $\gamma'(0)=v$.
-Set $a\zz=\gamma''(t)$.
+Set $w\zz=\gamma''(t)$.
 Note that 
 \begin{align*}
-a&=-\langle S_p(v),v\rangle \cdot n,
+w&=-\langle S_p(v),v\rangle \cdot n,
 \intertext{Since $h$ is strongly convex, $\Hess_p h\ge 0$; therefore}
-(\Hess_pu)(v,v)&=(\Hess_p h)(v,v)+\langle \nabla_p h,a\rangle\ge
+(\Hess_pu)(v,v)&=(\Hess_p h)(v,v)+\langle \nabla_p h,w\rangle\ge
 \\
 &\ge-\tfrac{\langle\nabla_p h,\nabla_p f\rangle}{|\nabla_p f|}\cdot\langle S_p(v),v\rangle\ge
 \\
@@ -170,7 +170,7 @@ Whence \ref{eq:trace>=H} implies
 \subsection{Curvature of level sets}
 
 Let $M$ be a 3-dimensional Riemannian manifold.
-Choose a smooth function $f$.
+Choose a smooth function $f\:M\to\RR$.
 Consider its level sets 
 \[L_c=\set{x\in M}{f(x)=c}.\]
 If the level set $L_c$ is a smooth surface in a neighborhood of $x\in L_c$,
@@ -199,7 +199,7 @@ there is a $(-2)$-concave function $\rho$ defined in an $r$-neighborhood of $p$ 
 Moreover, the function $\rho$ is \emph{liftable};
 that is, there is a sequence of $(-2)$-concave $\rho_n\:M_n\to\RR$ that converges to $\rho$.
 
-Consider a point $q\in \Cone(\theta)\times \RR$ \emph{above} $p$; that is, its $\RR$-coordinate is larger and its $ \Cone(\theta)$-coordinate is the same.
+Consider a point $q\in \Cone(\theta)\times \RR$ \textit{above} $p$; that is, its $\RR$-coordinate is larger and its $ \Cone(\theta)$-coordinate is the same.
 If the $\RR$-coordinate of $q$ is large, then $\dist_q+f$ is $\lambda$-concave for small $\lambda>0$ and it has a nonstrict minimum at $p$.
 Therefore, given $\lambda>0$, we can find $q$ so that the sum $s=f+\dist_q+\lambda\cdot \rho$ is $(-\lambda)$-concave and has a strict maximum at $p$.
 Moreover
@@ -297,10 +297,17 @@ Therefore if $\nabla \phi_n$ is proportional to $\nabla f_n$ at some point, then
 This observation makes it possible to choose $\phi_n$ so that the term $\<\nabla\phi_n,\nabla_{u_n} {u_n}\>$ vanish around the singular locus of $\Cone(\theta)\times \RR$.
 Namely, in addition to the above conditions on $\phi_n$ we have to assume that the identity $\phi_n=\psi\circ f_n$ holds at the points of $M_n$ that are sufficiently close to the singular locus of $\Cone(\theta)\times \RR$.
 
+\begin{wrapfigure}{r}{40 mm}
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-50}
+\vskip0mm
+\end{wrapfigure}
+
 Finally, observe that the needed sequence exists.
 Indeed, one can take 
 \[\phi_n=(\sigma\circ \dist_{p_n})\cdot (\psi\circ f_n)\]
-for appropriately chosen fixed mollifiers $\sigma,\psi\:\RR\to \RR$ and $M_n\ni p_n\to p$.
+for appropriately chosen fixed mollifiers $\sigma,\psi\:\RR\to \RR$ and $M_n\zz\ni p_n\to p$.
 
 \parit{(\ref{cor:Ricci:vw}).}
 Since $G_n\rightharpoonup 0$, we get that curvature measure of level sets of $f_n$ weakly converges to the curvature of $\Cone(\theta)$.
@@ -308,7 +315,7 @@ It follows that
 \[\Qm(u_n,u_n)\rightharpoonup \omega.\]
 
 Suppose $v'_n\perp u_n$ for all $n$.
-Part (\ref{cor:Ricci:Ricci}) implies that  $\Qm(v'_n,v'_n)\zz\rightharpoonup 0$.
+Part \textit{(\ref{cor:Ricci:Ricci})} implies that  $\Qm(v'_n,v'_n)\zz\rightharpoonup 0$.
 
 Fix $t\in \RR$.
 Since the lower bound on sectional curvature of $M_n$ converges to $0$, any partial weak limit of $\Qm(v'_n\zz+t\cdot w_n,v'_n\zz+t\cdot w_n)$ is nonnegative.
