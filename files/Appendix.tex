@@ -17,7 +17,7 @@ where $\Sc$ and $\Ric$ denote scalar and Ricci curvature respectively.
 
 \begin{thm}{Bochner's formula}\label{thm:bochner-formula}
 Let $M$ be an $m$-dimensional Riemannian manifold,
- $f\:M\to\R$ be a smooth function without critical points on an open domain $\Omega\subset M$ and $u=\nabla f/|\nabla f|$.
+ $f\:M\to\R$ be a smooth function without critical points on an open domain $\Omega\subset M$, and $u=\nabla f/|\nabla f|$.
 Assume $\phi\:\Omega\to\R$ is a smooth function with compact support.
 Then 
 \[\int\limits_\Omega \phi\cdot \langle \Ric u,u\rangle =
@@ -131,7 +131,7 @@ Recall that $f$ is \emph{DC} if it can be presented locally as a difference betw
 Recall that for any point $p\zz\in A$ there is a $(-1)$-concave function defined in a  neighborhood  of~$p$ \cite[3.6]{PerMorse}.
 Therefore we can say that \textit{$f$ is DC if and only if it can be presented locally as a difference between two semiconcave functions.} 
 
-Suppose that a sequence of Alexandrov spaces $A_n$ converges to an Alexandrov space $A$ without collapse.
+Suppose that a sequence of Alexandrov spaces $A_n$ converges to Alexandrov space $A$ without collapse.
 Let $f_n$ and $f$ be DC functions defined on open domains $\Dom f_n\zz\subset A_n$ and $\Dom f \zz\subset A$.
 Suppose that for any $p\in \Dom f$ there is a sequence $p_n\in \Dom f_n$ and $R>0$ such that $p_n\to p$ and $B(p_n,R)_{A_n}\subset \Dom f_n$, $B(p,R)_{A}\subset\Dom f$
 and for some fixed $\lambda\in\RR$, and each large $n$ we have $\lambda$-concave functions $a_n$ and $b_n$ defined in $B(p_n,R)_{A_n}$ and $\lambda$-concave functions $a$ and $b$ defined in $B(p,R)_{A}$
@@ -152,7 +152,7 @@ Moreover, test convergence implies DC-convergence.
 }
 
 \parit{Proof.}
-Choose a test-function $f=\phi(\widetilde\dist_{p_1,r},\dots,\widetilde\dist_{p_n,r})$.
+Choose a test function $f=\phi(\widetilde\dist_{p_1,r},\dots,\widetilde\dist_{p_n,r})$.
 Note that the function $\phi$ can be presented locally as a difference between $C^2$-smooth concave functions increasing in each argument; say $\phi=\psi-\chi$.
 
 For the first part of the observation, it remains to observe that the functions \[a=\psi(\widetilde\dist_{p_1,r},\zz\dots,\widetilde\dist_{p_n,r}),\qquad b=\chi(\widetilde\dist_{p_1,r},\zz\dots,\widetilde\dist_{p_n,r})\]
@@ -179,7 +179,7 @@ Consider functions $f_n$ and $f$ defined on $U_n$ and $U$ respectively.
 Then $f_n\DCto f$ if and only if $f_n\circ \bm{x}_n^{-1}\DCto f\circ \bm{x}^{-1}$
 \end{thm}
 
-The following statement follows from the lemma in \cite[Section 3]{PerDC}.
+The following statement follows from the lemma in \cite[Section 4]{PerDC}.
 
 \begin{thm}{Proposition}\label{metricBV+}
 Let $A$ be an $m$-dimensional Alexandrov space and $\bm{x}\:U\to \RR^m$ --- a smoothed chart for $U\subset A$.
@@ -187,32 +187,31 @@ Denote by $g_{ij}$ components of metric tensors in this chart
 and by $g^{ij}$ components of the inverse matrix. 
 Let $f\:U\to \RR$ be a DC$_0$ function.
 
-Then the partial derivatives $\partial_k g_{ij}$, $\partial_k g^{ij}$, $\partial_i\partial_jf_n$ are Radon measures on $A$ that has a vanishing on $\bm{x}^{-1}(A'\cup A'')$.
+Then the partial derivatives $\partial_k g_{ij}$, $\partial_k g^{ij}$, $\partial_i\partial_jf$ are Radon measures on $A$ that vanish on $\bm{x}^{-1}(A'\cup A'')$.
 \end{thm}
-
-
 
 \begin{thm}{Theorem}\label{metricBV}
 Let $M_n\smooths{} A$, $\dim A=m$; choose a common chart $\bm{x}_n$ defined on $U_n\subset M_n$, $\bm{x}$ defined on $U\subset A$ with a common range $\Omega\subset \RR^m$.
 Denote by $g_{ij,n}$ components of metric tensors in this chart
 and by $g^{ij}_n$ components of the inverse matrix. 
-Let $f_n\:U_n\to \RR$ be a test-converging sequence of functions.
-Then partial derivatives $\partial_k g_{ij,n}$, $\partial_k g^{ij}_n$, $\partial_i\partial_jf_n$ weakly converge to the Radon measures $\partial_k g_{ij}$, $\partial_k g^{ij}$, $\partial_i\partial_jf_n$ described in \ref{metricBV+}.
+Let $f_n\:U_n\to \RR$ be a sequence of DC function that DC-converges to a DC$_0$ function $f\:U\to \RR$.
+Then partial derivatives $\partial_k g_{ij,n}$, $\partial_k g^{ij}_n$, $\partial_i\partial_jf_n$ weakly converge to the Radon measures $\partial_k g_{ij}$, $\partial_k g^{ij}$, $\partial_i\partial_jf$ described in \ref{metricBV+}.
 \end{thm}
 
+By \ref{obs:test-DC}, the theorem applies to any test-converging sequence $f_n\zz\testto f$.
 We will modify the argument in \cite[Section 4]{PerDC} slightly.
 
 
 \parit{Proof.}
 Let's start with the partial derivatives of metric tensors.
-In \cite[Section 4.2]{PerDC}, it was shown that components of metric tensors can be expressed as a rational function of partial derivatives of distance functions to a finite collection of points.
+In \cite[Subsection 4.2]{PerDC}, it was shown that components of metric tensors can be expressed as a rational function of partial derivatives of distance functions to a finite collection of points.
 The distance functions are semiconcave, in particular DC.
 
 The base points $p_{i,n}\in M_n$ of these distance functions can be chosen so that they converge to some point $p_i\in A$.
 In this case, the distance functions are DC-converging.
 Now, applying \ref{prop:DC-conv}, we get the statement.
 
-The case of $\partial_i\partial_jf_n$ is similarly.
+The case of $\partial_i\partial_jf_n$ is similar.
 \qeds
 
 

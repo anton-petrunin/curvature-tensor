@@ -5,7 +5,7 @@
 Suppose $M_n\smooths{}A$ and $\dim A=3$.
 Choose a set $Q\subset A$ that admits a bi-Lipschitz embedding into $\RR$. 
 
-Let us split $\mathfrak m$ into negative and positive part $\mathfrak m=\mathfrak m^+-\mathfrak m^-$; that is,
+Let us split $\mathfrak m$ into negative and positive parts $\mathfrak m=\mathfrak m^+-\mathfrak m^-$; that is,
 \[\mathfrak m^\pm(X)\df\sup\set{\pm\mathfrak m(Y)}{Y\subset X}.\]
 Since the sectional curvature of $M_n$ is bounded below, we get that $\mathfrak m^-$ has bounded density; in other words, $\mathfrak m^-$ is a regular measure with respect to $\vol^3$ on $A$.
 Since $Q$ has zero volume, we get $\mathfrak m^-(Q)=0$.
@@ -29,7 +29,7 @@ In this case, $|\jac_p(h|_Q)|=|d_0(h\circ s^{-1})|$.
 Note that we can choose a sequence of points $p_n\in M_n$ and a sequence of factors $c_n\to \infty$ such that $(c_n\cdot M_n,p_n)$ converges to the tangent space~$\T_p=\RR\times \Cone(\theta)$.
 
 
-Applying Perelman's construction \cite[7.1.1 and 7.2.3]{petrunin-conc} for a vertical vector in $\T_p=\RR\zz\times \Cone(\theta)$,
+Applying Perelman's construction \cite[7.1.1 and 7.2.3]{petrunin-conc} for a horizontal vector in $\T_p=\RR\zz\times \Cone(\theta)$,
 we can choose a sequence of functions $f_n\:c_n\cdot M_n\to \RR$ satisfying the assumptions in~\ref{thm:HG-converge}; 
 let $u_n=\nabla f_n/|\nabla f_n|$.
 Consider the sequence of functions $\hat h_n\:c_n\cdot M_n\to \RR$ defined by 
@@ -75,11 +75,11 @@ In other words,
 \[\Zc_\Sigma=\Sc-2\cdot\Ric(n_\Sigma,n_\Sigma),\]
 where $n_\Sigma$ is the unit normal vector to $\Sigma$.
 
-Since tangent hyperplane is defined at almost all points of convex hypersurface,
+Since tangent hyperplanes are defined at almost all points of convex hypersurfaces,
  $\Zc_\Sigma(x)$ is defined almost everywhere on $\Sigma$.
 
 \begin{thm}{Lemma}\label{lem:nonsmooth-convex}
-Let $\Sigma$ be a strongly convex hypersurface in an $m$-dimensional Riemannian manifold with curvature $\ge -1$.
+Let $\Sigma$ be a strongly convex hypersurface in an $m$-dimensional Riemannian manifold $M$ with curvature $\ge -1$.
 Suppose that for some point $p\in \Sigma$ and $r<1$ the closed ball $\bar B(p,2\cdot r)$ in the intrinsic metric of $\Sigma$ is compact.
 
 Then, 
@@ -106,7 +106,7 @@ follows if for almost all $x\in \Sigma$ we have that
 if $x_n\in \Sigma_n$ and $|x_n-x|<\delta$ for large $n$,
 then}
 \[|\Zc_{\Sigma_n}(x_n)-\Zc_{\Sigma}(x)|<\eps.\]
-This condition holds if the tangent plane $H_x$ is defied.
+This condition holds if the tangent plane $H_x$ is defined.
 Whence the nonsmooth case follows.
 \qeds
 
@@ -115,11 +115,11 @@ Passing to a subsequence, we can assume that
 \[K(\nabla f_n\wedge\nabla h_n)\cdot\vol^m \rightharpoonup\mathfrak m\]
 for some measure $\mathfrak m$ on $\RR^{m-2}\times \Cone(\theta)$.
 
-First let us show that $\mathfrak m$ is supported on the singular locus.
+First, let us show that $\mathfrak m$ is supported on the singular locus.
 If $p$ is not singular, then it has a flat neighborhood.
 Therefore by a local version of \ref{A^0} (see also Section~\ref{sec:local})
 we get that $\mathfrak m$ vanishes in a neighborhood $U\ni p$.
-Indeed, we can include copies of $U$ (which is flat) in the approximating sequence sequence $U_n\subset M_n$ of $U$ and argue as in the introduction.
+Indeed, we can include copies of $U$ (which is flat) in the approximating sequence $U_n\subset M_n$ of $U$ and argue as in the introduction.
 
 
 Let $p$ be a singular point on $\Cone(\theta)\times \RR^{m-2}$;
@@ -178,14 +178,14 @@ Choose $m-2$ sequences of strongly concave functions $f_{1,n},\zz\dots, f_{m-2,n
 It is done using Perelman's construction \cite[7.1.1 and 7.2.3]{petrunin-conc} for the corresponding vertical vectors in $\Cone(\theta)\times \RR^{m-2}$.
 
 Note that the fields $e_{1,n}=\nabla f_{1,n}$, $\dots$, $e_{m-2,n}=\nabla f_{m-2,n}$ are nearly orthonormal;
-in particular, they are linear independent for all large $n$.
+in particular, they are linearly independent for all large $n$.
 Let us add two fields $e_{m-1,n}$ and $e_{m,n}$  so that $e_{1,n},\dots, e_{m,n}$ form a nearly orthonormal frame in~$M_n$;
 that is, $\langle e_{i,n}, e_{j,n}\rangle\to 0$ for $i\ne j$ and $\langle e_{i,n}, e_{i,n}\rangle\to 1$ for any $i$ as $n\to\infty$.
 
 Observe that \ref{prop:vert-vert} implies that $K(e_i\wedge e_j)\cdot\vol\rightharpoonup 0$ if $i,j\zz\le m-2$.
 
 Let us show that $K(e_i\wedge e_j)\cdot\vol\rightharpoonup 0$ for $i\le m-2$ and $j\zz\ge m\zz-1$.
-The $3$-dimensional case is already proved; it is used as a base of induction.
+The $3$-dimensional case is done already; it is used as a base of induction.
 Let us apply the induction hypothesis to the level surfaces of $f_{1,n}$.
 (Formally speaking, we apply the local version of the induction hypothesis described in Section~\ref{sec:local}.)
 Since the curvature of convex hypersurfaces is larger than the curvature of the ambient manifold in the same direction, we get the statement for $i\ne 1$.
@@ -199,7 +199,7 @@ Applying the 2-dimensional case to $L_n$ and the coarea formula, we get that cur
 It remains to show that the extra term in the Gauss formula for the curvature of $L_n$ weakly converges to zero; 
 in other words, the difference between the curvature of $L_n$ and sectional curvature of $M_n$ in the direction tangent to $L_n$ weakly converges to zero.
 
-The 3-dimensional case is already proved.
+The 3-dimensional case is done already.
 To prove the general case, we apply the 3-dimensional case to the 3-dimensional level sets defined by $m-3$ equations from the $m-2$ equations in \ref{eq:fi=ci}.
 (The same argument is used in the proof of \ref{A^0}, and it is written with more details.)
 

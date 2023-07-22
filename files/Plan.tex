@@ -29,7 +29,7 @@ We will use index $n$ or skip it to indicate that the calculations are performed
 For example, given a function $f\:\Omega\to \RR$, we denote by $\nabla_nf$ and $\nabla f$ the gradients of $f\circ \bm{x}_n$ in $M_n$ and $f\circ \bm{x}$ in $A$ respectively.
 
 Recall that $A^\delta$ denotes the set of $\delta$-strained points in $A$.
-For a fixed common chart $\bm{x}$ we will use notation $A^\delta_\Omega$ for the image $\bm{x}(A^\delta)\subset \Omega$.
+For a fixed common chart $\bm{x}$ we will use the notation $A^\delta_\Omega$ for the image $\bm{x}(A^\delta)\subset \Omega$.
 
 Part \ref{prop:3parts}\textit{(\ref{prop:3parts:reg})} will follow from certain estimates in one common chart.
 
@@ -91,7 +91,7 @@ In this case, for any sequence of points $a_{i,n}, p_n\in M_n$ such that $a_{i,n
 
 If $\T_p$ is Euclidean, then ($n$+1)-point comparison implies that equality holds in the last inequality.
 
-Note that the angles $\measuredangle \hinge{p_n}{a_{i,n}}{a_{j,n}}$ for all $i,j>0$ completely desicribe the metric tensor at $p_n$ in the basis $V_{1,n},\dots,V_{m,n}$, where $V_{i,n}$ is the unit vector in the direction of $[p_n,a_{i,n}]$.
+Note that the angles $\measuredangle \hinge{p_n}{a_{i,n}}{a_{j,n}}$ for all $i,j>0$ completely describe the metric tensor at $p_n$ in the basis $V_{1,n},\dots,V_{m,n}$, where $V_{i,n}$ is the unit vector in the direction of $[p_n,a_{i,n}]$.
 
 If $f_n\zz\smoothto f$, then $V_{i,n}f_n$ completely describes $\nabla_{p_n}f_n$ in the basis $V_{1,n},\zz\dots,V_{m,n}$.
 From above, we can express $|\nabla_{p_n}f_n|$ in terms of $V_{i,n}f_n$ and the angles $\measuredangle \hinge{p_n}{a_{i,n}}{a_{j,n}}$.
@@ -122,7 +122,7 @@ the lemma also holds for test-converging sequences of functions.
 \begin{thm}{Lemma}\label{lem:test-delta-partial-g}
 Let $M_n\smooths{} A$.
 Choose a common chart $\bm{x}_n\:U_n\subset M_n\zz\to \Omega$ and $\bm{x}\:U\subset A\zz\to \Omega$ with range $\Omega\subset \RR^m$.
-Let $f_n\: M_n\to\RR$ be a sequence of smooth functions that DC connverges to a DC$_0$ function $f\:A\to \RR$.
+Let $f_n\: M_n\to\RR$ be a sequence of smooth functions that DC converges to a DC$_0$ function $f\:A\to \RR$.
 %Let $f_n\: M_n\to\RR$ be a sequence of test functions such that $f_n\zz\testto f\:A\to \RR$.
 Let us denote by $\partial_1,\dots,\partial_m$ the partial derivatives on $\Omega\subset \RR^m$.
 Denote by $g_{ij,n}$ and $g^{ij}_n$ the components of the metric tensors on $M_n$.
@@ -133,7 +133,7 @@ Then  the partial derivatives $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$,  $\pa
 \parit{Proof.} 
 The weak convergence of $\partial_kg_{ij,n}$, $\partial_k g^{ij}_n$, and $\partial_j\partial_if_n$
 follows from \ref{metricBV}.
-By Observation~\ref{obs:delta-weak-uniform}, products of these partial derivatives to uniformly delta-converging sequences of functions is weakly delta-converging.
+By Observation~\ref{obs:delta-weak-uniform}, products of these partial derivatives to uniformly delta-converging sequences of functions are weakly delta-converging.
 
 Let $h_n\:M_n\to\RR$ be a uniformly delta-converging sequence.
 Note that its limit is well defined in $A^\circ$; denote it by $h$;
@@ -162,7 +162,7 @@ Choose two nonnegative continuous functions $\phi_0$ and $\phi_1$ such that
 Note that the sequence $a_n=\int_{\Omega} (h_n\circ\bm{x}_n^{-1}) \cdot \phi_0\cdot \mathfrak m_n$ \textit{converges with error} 
 $\eps_0=\eps\cdot c \cdot\max\{\,|\phi|\,\}$, where $c$ is a bound on $|h_n|$. 
 In other words, the upper and lower limits of $a_n$ differ by at most~$\eps_0$.
-Similarly, $b_n=\int_{\Omega} (h_n\circ\bm{x}_n^{-1}) \cdot \phi_1\cdot \mathfrak m_n$ converges with error $\eps_1=\eps\cdot |\mathfrak m|\cdot c \cdot\max\{\,|\phi|\,\}\,\}$.
+Similarly, $b_n=\int_{\Omega} (h_n\circ\bm{x}_n^{-1}) \cdot \phi_1\cdot \mathfrak m_n$ converges with error $\eps_1=\eps\cdot |\mathfrak m|\cdot c \cdot\max\{\,|\phi|\,\}$.
 Since $\eps>0$ is arbitrary, we get \ref{eq:convegence}.
 \qeds
 

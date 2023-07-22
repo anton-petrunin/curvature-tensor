@@ -18,7 +18,9 @@ Then there is a compact set $Q$ such that
 
 Let $x$ be a point in an Alexandrov space $A$ with curvature at least $-1$.
 Recall that Bishop--Gromov inequality implies that 
-\[\frac{\vol^m B(x,R)_A}{\vol^m B(\tilde x,R)_{\HH^m}}\le \frac{\vol^{m-1} \Sigma_x}{\vol^{m-1} \SS^m}\]
+\[\frac{\vol^m B(x,R)_A}{\vol^m B(\tilde x,R)_{\HH^m}}
+\le
+\frac{\vol^{m-1} \Sigma_x}{\vol^{m-1} \SS^{m-1}}\]
 for any $R>0$; here $\HH^m$ denotes the $m$-dimensional hyperbolic space.
 The following lemma makes this inequality more precise. 
 
@@ -26,7 +28,9 @@ The following lemma makes this inequality more precise.
 Let $x$ be a point in an $m$-dimensional Alexandrov space $A$ with curvature at least $-1$.
 Suppose $y\in A$ is a point such that $|x-y|<R$ and $\measuredangle\hinge yxz<\pi-\eps$ for any point $z$.
 Then
-\[\frac{\vol^m B(x,R)_A}{\vol^m B(R)_{\HH^m}}\le \frac{\vol^{m-1} \Sigma_x}{\vol^{m-1} \SS^m}-\delta,\]
+\[\frac{\vol^m B(x,R)_A}{\vol^m B(R)_{\HH^m}}
+\le
+(1-\delta)\cdot\frac{\vol^{m-1} \Sigma_x}{\vol^{m-1} \SS^{m-1}},\]
 where $\delta$ is a positive number that depends on $m$, $|x-y|$, $R$ and $\eps$.
  
 \end{thm}
@@ -35,14 +39,16 @@ where $\delta$ is a positive number that depends on $m$, $|x-y|$, $R$ and $\eps$
 To simplify the presentation we will assume that $A$ is nonnegatively curved;
 it is straightforward to adapt the proof to the general case.
 In this case, we need to show that 
-\[\frac{\vol^m B(x,R)_A}{\vol^m B(R)_{\RR^m}}\le \frac{\vol^{m-1} \Sigma_x}{\vol^{m-1} \SS^m}-\delta,\]
+\[\frac{\vol^m B(x,R)_A}{\vol^m B(R)_{\RR^m}}
+\le 
+(1-\delta)\cdot\frac{\vol^{m-1} \Sigma_x}{\vol^{m-1} \SS^{m-1}},\]
 
-Let us denote by $\tilde p$ a vector in $\T_x$ that is tangent to a geodesic path $\gamma\:[0,1]\zz\to A$ from $x$ to $p$.
+Let us denote by $\tilde p$ a vector in $\T_x$ that is tangent to a geodesic path $\gamma\:[0,1]\zz\to A$ from $x$ to~$p$.
 By comparison, the map $p\mapsto \tilde p$ is a distance-noncontracting map.
 
 Since $\measuredangle\hinge yxz<\pi-\eps$ for any $z$, the image of the map $p\mapsto \tilde p$ does not include points in a cone $C$ behind $\tilde y$ of angle $\eps$.
 It follows that 
-\[\vol^m(B(0,R)_{\T_x}\setminus C)\ge \vol^m(B(x,R)_A\]
+\[\vol^m(B(0,R)_{\T_x}\setminus C)\ge \vol^m(B(x,R)_A)\]
 for any $R>0$.
 
 \begin{wrapfigure}{r}{35 mm}
@@ -60,7 +66,7 @@ By Bishop--Gromov inequality, we get $\delta=\delta( m, |x-y|, R, \eps)>0$ such 
 Further, observe that 
 \[\frac{\vol^m(B(0,R)_{\T_x})}{\vol^m(B(0,R)_{\RR^m})}
 =
-\frac{\vol^{m-1} \Sigma_x}{\vol^{m-1} \SS^m}.
+\frac{\vol^{m-1} \Sigma_x}{\vol^{m-1} \SS^{m-1}}.
 \]
 --- whence the lemma.
 \qeds
@@ -74,7 +80,7 @@ Further, observe that
 \parit{Proof of \ref{prop:Q-covering}.}
 Since the tangent cone at $p$ has $\RR^{m-2}$-factor, 
 we can choose points $a_1,\zz\dots,a_{m-2},b_1,\zz\dots,b_{m-2}$ that are $\delta$-strainers of $p$ for arbitrary $\delta>0$.
-The corresponding distance map $s\:x\zz\mapsto (|a_1-x|,\zz\dots,|x-a_{m-2}|)$ is almost submersion of a neighborhood $U\ni p$ to $\RR^{m-2}$.
+The corresponding distance map $s\:x\zz\mapsto (|a_1-x|,\zz\dots,|x-a_{m-2}|)$ is an almost submersion of a neighborhood $U\ni p$ to $\RR^{m-2}$.
 Choose small $\eps>0$ and set 
 \[Q'=\set{x\in U\cap A'}{\theta(x)<\theta(p)+\eps}.\]
 Let us show that $s|_{Q'}$ is bi-Lipschitz.
