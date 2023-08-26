@@ -16,5 +16,7 @@ kusochek+.sty
 library.bib
 main.tex
 main.bbl
+mppics/pic-25.mps
+mppics/pic-50.mps
 mppics/pic-100.mps
 mppics/pic-200.mps
