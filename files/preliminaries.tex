@@ -165,7 +165,7 @@ A function $f\:A\to\RR$ is called $C^1$-delta smooth if for any compact set $K\s
 where ``\,$\acute{\lim}$\,'' stands for an arbitrary partial limit.
 
 Suppose $M_n\smooths{} A$.
-A sequence of $C^1$-smooth functions $f_n\:M_n\zz\to\RR$ is called \emph{$C^1$-delta converging} to $f\:A\to \RR$ if  $f_n$ converges to $f$ pointwise and
+A sequence of $C^1$-smooth functions $f_n\:M_n\zz\to\RR$ is called \emph{$C^1$-delta converging} to $f\:A\to \RR$ (briefly, $f_n\smoothto f$) if $f_n$ converges to $f$ pointwise and
 for any compact set $K\subset A$ and any $\eps>0$ there is $\delta>0$
 such that if a sequence of unit vectors $V_n\in \T_{p_n} M_n$ converges to a vector $V\zz\in \T_p A$ such that $p\in K$ and $V$ has a $\delta$-opposite vector, then we have
 \[|Vf-\acute{\lim_{n\to\infty}} V_nf_n|<\eps.\]
@@ -235,9 +235,8 @@ This definition will be used in Claim \ref{clm:weak-partial-limit} that reduces 
 Let $A\in \Al^m$.
 Recall that $\mathfrak M(A)$
 denotes the space of signed Radon measures on $A$.
-A \emph{measure-valued vector field} $\mathfrak{v}$  on $A$
-is a linear map
-$\mathfrak{v}$ that takes a test function,
+A \emph{measure-valued vector field} $\mathfrak{v}$ on $A$
+is a linear map that takes a test function,
 spits a measure in $\mathfrak M(A)$,
 and satisfies the \emph{chain rule}:
 for any collection of test functions $f_1,\dots,f_k$
